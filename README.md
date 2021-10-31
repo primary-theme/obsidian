@@ -4,11 +4,18 @@
 
 A combination of Bauhaus, Scandinavian and yellowing magazine pages as palette inspiration—Primary is a theme for people looking for a certain nostalgic warmness.
 
-It is toppled with functional pop of red blue yellow colors. he perfect mix of loud and reserved.
+It is toppled with functional pop of red blue yellow colors. The perfect mix of loud and reserved.
 
 Playful, reminiscing, productive.
 
 Available in both Light and Dark modes.
+
+
+### Plugins Supported
+- Calendar
+- Dataview
+- Outliner
+- Sliding Panes
 
 - - -
 ## Light Mode
