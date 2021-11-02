@@ -8,7 +8,7 @@ It is toppled with functional pop of red blue yellow colors. The perfect mix of 
 
 Playful, reminiscing, productive.
 
-Available in both ⚪Light and ⚪Dark modes.
+Available in both ⚪Light and ⚫Dark modes.
 
 ## 📌 Plugins Supported
 More plugins will be supported in the coming weeks! For now, I've checked the theme for these:
@@ -36,6 +36,10 @@ More plugins will be supported in the coming weeks! For now, I've checked the th
 - [ ] Day Planner
 - [ ] Spaced Repetition
 - [ ] Style Settings
+
+**Other TODO**
+- [ ] Mobile 
+- [ ] Optimizing/Minifying the File
 
 These are on the radar as I'm using these myself. If you have a particular plugin you want supported, please drop it in and I'll catch up on it!
 I'm also looking to optimize the theme. It's really usable but I believe the file is still huge.
@@ -82,7 +86,7 @@ All of these design choices and *coincidences* tied perfectly to this feeling of
 
 Thus, 3 personal problems solved through this theme. I really enjoyed making this. I hope it'll give you joy too.
 
-I'm planning update it as best as I can and create more themes hopefully with a different design.
+I'm planning to update it as best as I can and create more themes hopefully with a different design.
 
 If you've read all the way down here, well, what the heck. Thank you for listening to my TED talk. Please go back to writing your notes or whatever was more important than my rambles. Hahaha!
 
