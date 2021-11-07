@@ -33,6 +33,8 @@ Icons: Flaticon UIcons Rounded Regular
 
 ────────────────────────────────────
 
+TABLE OF CONTENTS
+
     * General (Containers, Paddings, etc.) ->
     * Specific (Icons, Colors, etc.) ->
     * Light Theme Specific -> 
@@ -65,15 +67,14 @@ Workspace
         Vault Title
         Starred Files
         View Content
-        Outgoing Links Tab
-        Backlinks Tab
+        Contaner for Outgoing Links and Backlinks Tab
         Tags Tab
         Outline Tab
         Search Results Container
         Tree Items for Tab (Links in Tabs)
     File Explorer (Specifcs of Tab Contents)
         File and Folder Icons for File Title - COMING SOON
-        $ File and Folder Relationship Lines - COMING SOON
+        File and Folder Relationship Lines - COMING SOON
         Starred Files
         Search Tab
         File Explorer for Light Theme
@@ -103,7 +104,7 @@ Content / Active Note
         Lists
             Ordered List/Number List
             Unordered List/Bullet List
-            Relationship Lines (in Preview Mode, not Outliner)
+            Relationship Lines (in Preview Mode, not Outliner) - COMING SOON
             Edit Mode -> Gutter Collapse Icons
         Checkboxes
         Inline Code/Codeblocks
@@ -113,7 +114,6 @@ Content / Active Note
         Gutter Line Numbers
         Active Line
         Horizontal Rule
-        Pure Text Block
         Embeds
             Images
             Markdown Embed
@@ -122,6 +122,7 @@ Content / Active Note
         YAML/Metadata
             YAML in Preview Mode
             YAML in Edit Mode
+        Document Search
 
 Graph View
     Graph View Nodes
@@ -141,7 +142,7 @@ Other Components
     Slider
     Dropdown
     Empty Page
-    $ Notification
+    Notification
     Popover
     Resize Handles
         Vertical Handles
@@ -417,6 +418,7 @@ Settings - COMING SOON
 
 --interactive-hover:        var(--color-l-gray-10);
 --interactive-accent:       var(--color-l-gray-60);
+--interactive-accent-rgb:   207, 182, 150;
 --interactive-accent-hover: var(--color-l-gray-70);
 --interactive-success:      var(--color-l-green-500);
 
@@ -447,25 +449,25 @@ Settings - COMING SOON
 --color-l-yellow: var(--color-l-yellow-500);
 --color-l-yellow-300: hsl(43, 71%, 67%);
 --color-l-yellow-500: hsl(43, 78%, 52%);
---color-l-yellow-900: hsl(43, 100%, 42%);
+--color-l-yellow-700: hsl(43, 100%, 42%);
 --color-l-yellow-900: hsl(43, 100%, 35%);
 
 --color-l-red: var(--color-l-red-500);
 --color-l-red-300: hsl(4, 54%, 61%);
 --color-l-red-500: hsl(4, 74%, 53%);
---color-l-red-900: hsl(4, 78%, 42%);
+--color-l-red-700: hsl(4, 78%, 42%);
 --color-l-red-900: hsl(4, 100%, 24%);
 
 --color-l-blue: var(--color-l-blue-500);
 --color-l-blue-300: hsl(198, 39%, 56%);
 --color-l-blue-500: hsl(205, 66%, 46%);
---color-l-blue-900: hsl(205, 79%, 36%);
+--color-l-blue-700: hsl(205, 79%, 36%);
 --color-l-blue-900: hsl(205, 95%, 25%);
 
 --color-l-green: var(--color-l-green-500);
 --color-l-green-300: hsl(154, 50%, 58%);
 --color-l-green-500: hsl(154, 47%, 49%);
---color-l-green-900: hsl(155, 57%, 37%);
+--color-l-green-700: hsl(155, 57%, 37%);
 --color-l-green-900: hsl(155, 79%, 27%);
 
 --color-l-highlight-yellow: hsla(43, 85%, 79%, 1);
@@ -520,6 +522,7 @@ Settings - COMING SOON
 
 --interactive-hover:        var(--color-d-gray-60);
 --interactive-accent:       var(--color-d-gray-40);
+--interactive-accent-rgb:   92, 78, 61;
 --interactive-accent-hover: var(--color-d-gray-50);
 --interactive-success:      var(--color-d-green-700);
 
@@ -1156,46 +1159,30 @@ body .nav-action-button svg {
     padding:    var(--scale-2-4)
                 var(--scale-2-4)
                 var(--scale-2-4)
-                var(--scale-2-4);
+                var(--scale-2-4) !important;
 }
 
-/*─────────Outgoing Links Tab──────────*/
+/*─────────Contaner for Outgoing Links and Backlinks Tab──────────*/
 
-.outgoing-link-pane {
-    padding:    var(--scale-0-0)
-                var(--scale-2-6)
-                var(--scale-2-6)
-                var(--scale-2-6);
-    margin-top: var(--scale-2-8);
-}
-
-/*─────────Backlinks Tab──────────*/
-
-.backlink-pane {
-    padding:    var(--scale-0-0)
-                var(--scale-2-6)
-                var(--scale-2-6)
-                var(--scale-2-6);
+.node-insert-event {
+    padding-right: var(--scale-2-2);
 }
 
 /*─────────Tags Tab──────────*/
 
 .tag-container {
     font-size: var(--font-scale-1);
-    padding:    var(--scale-0-0)
-                var(--scale-2-6)
-                var(--scale-2-6)
-                var(--scale-2-6);
+    padding:    var(--scale-2-4)
+                var(--scale-2-4)
+                var(--scale-2-4)
+                var(--scale-2-4);
     overflow: auto;
 }
 
 /*─────────Outline Tab──────────*/
 
 .outline {
-    padding:    var(--scale-2-6)
-                var(--scale-2-6)
-                var(--scale-2-6)
-                var(--scale-2-6);
+    font-size: var(--font-scale-1);
 }
 
 /*─────────Search Results Container──────────*/
@@ -2150,11 +2137,11 @@ blockquote p {
 
 /*──────────Tags/Tag Pill──────────*/
 
-/* Tag Pill for Light Theme*/
+/* Tag Pill in Preview Mode for Light Theme*/
 
 .theme-light .tag:not(.token) {
     background: transparent;
-    color: var(--color-l-blue-900);
+    color: var(--color-l-blue-700);
     font-size: var(--font-scale-0-5);
     font-weight: var(--font-bold);
     line-height: var(--line-height-1);
@@ -2189,7 +2176,43 @@ blockquote p {
                 var(--motion-smooth);
 }
 
-/* Tag Pill for Dark Theme*/
+/* Tag Pill in Edit Mode for Light Theme */
+
+.theme-light .CodeMirror-line .cm-hashtag {
+    background: transparent;
+    font-size: var(--font-scale-0-5);
+    font-weight: var(--font-bold);
+    line-height: var(--line-height-1);
+    vertical-align: baseline;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    box-shadow: 0px -1px 0px 0px
+                rgba(100, 100, 100, 0.1) inset,
+                0px 1px 1px 0px rgba(100, 100, 100, 0.1);
+    transition: var(--duration-fast-1)
+                var(--motion-smooth);
+}
+
+.theme-light .cm-s-obsidian span.cm-hashtag.cm-meta {
+    color: var(--color-l-blue-700);
+}
+
+.theme-light .CodeMirror-line span.cm-hashtag-begin {
+    border-top-left-radius: var(--scale-2-8);
+    border-bottom-left-radius: var(--scale-2-8);
+    padding-left: var(--scale-2-4);
+    border-right:none;
+}
+  
+.theme-light .CodeMirror-line span.cm-hashtag-end {
+    border-top-right-radius: var(--scale-2-8);
+    border-bottom-right-radius: var(--scale-2-8);
+    padding-right: var(--scale-2-4);
+    border-left:none;
+}
+
+/* Tag Pill in Preview Mode for Dark Theme*/
 
 .theme-dark .tag:not(.token) {
     background: transparent;
@@ -2226,6 +2249,42 @@ blockquote p {
                 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
     transition: var(--duration-fast-1)
                 var(--motion-smooth);
+}
+
+/* Tag Pill in Edit Mode for Dark Theme */
+
+.theme-dark .CodeMirror-line .cm-hashtag {
+    background: transparent;
+    font-size: var(--font-scale-0-5);
+    font-weight: var(--font-bold);
+    line-height: var(--line-height-1);
+    vertical-align: baseline;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0px -2px 0px 0px
+                rgba(0, 0, 0, 0.15) inset,
+                0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    transition: var(--duration-fast-1)
+                var(--motion-smooth);
+}
+
+.theme-dark .cm-s-obsidian span.cm-hashtag.cm-meta {
+    color: var(--color-d-blue-500);
+}
+
+.theme-dark .CodeMirror-line span.cm-hashtag-begin {
+    border-top-left-radius: var(--scale-2-8);
+    border-bottom-left-radius: var(--scale-2-8);
+    padding-left: var(--scale-2-4);
+    border-right:none;
+}
+  
+.theme-dark .CodeMirror-line span.cm-hashtag-end {
+    border-top-right-radius: var(--scale-2-8);
+    border-bottom-right-radius: var(--scale-2-8);
+    padding-right: var(--scale-2-4);
+    border-left:none;
 }
 
 /* Version 1 of Tag Pills / No Beveling / Flat Design
@@ -2416,9 +2475,12 @@ ol {
 input[type=checkbox] {
     -webkit-appearance: none;
     appearance: none;
+    height: var(--scale-8-2) !important;
+    width: var(--scale-8-2) !important;
     border-radius: 50%;
     border: 1px solid var(--text-faint);
     padding: 0;
+    margin-right: var(--scale-2-3);
     vertical-align: -0.17rem;
 }
 
@@ -2531,7 +2593,7 @@ input[type=checkbox]:checked {
 .theme-light .CodeMirror-line span.cm-math.cm-keyword,
 .theme-light .CodeMirror-line span.cm-comment,
 .theme-light .markdown-preview-view code .token.comment {
-    color: var(--color-l-gray-60) !important;
+    color: var(--text-muted);
 }
 
 .theme-light .CodeMirror-line span .cm-math.cm-variable-2,
@@ -2545,7 +2607,7 @@ input[type=checkbox]:checked {
 .theme-light .token.constant,
 .theme-light .token.symbol,
 .theme-light .token.deleted {
-    color: var(--color-l-red-300) !important;
+    color: var(--color-l-red-300);
     font-weight: var(--font-regular);
     background: transparent;
     text-shadow: none;
@@ -2556,8 +2618,10 @@ input[type=checkbox]:checked {
 .theme-light .markdown-preview-view code .token.string,
 .theme-light .markdown-preview-view code .token.parameter,
 .theme-light .markdown-preview-view code .token.important,
-.theme-light .markdown-preview-view span .token.attr-name {
-    color: var(--color-l-yellow-900) !important;
+.theme-light .markdown-preview-view span .token.attr-name,
+.theme-light .token.regex,
+.theme-light .token.variable {
+    color: var(--color-l-yellow-700);
     font-weight: var(--font-regular);
     text-shadow: none;
 }
@@ -2566,7 +2630,7 @@ input[type=checkbox]:checked {
 .theme-light .markdown-preview-view span.token.function,
 .theme-light .markdown-preview-view code .token.url,
 .theme-light .markdown-preview-view span .token.tag {
-    color: var(--color-l-blue-300) !important;
+    color: var(--color-l-blue-300);
     font-weight: var(--font-regular);
     background: transparent;
     text-shadow: none;
@@ -2574,7 +2638,7 @@ input[type=checkbox]:checked {
 
 .theme-light .markdown-preview-view code .token.operator,
 .theme-light .markdown-preview-view code .token.punctuation {
-    color: var(--color-l-gray-50) !important;
+    color: var(--color-l-gray-50);
     font-weight: var(--font-regular);
     background: transparent;
     text-shadow: none;
@@ -2612,7 +2676,7 @@ input[type=checkbox]:checked {
 .theme-dark .CodeMirror-line span.cm-math.cm-keyword,
 .theme-dark .CodeMirror-line span.cm-comment,
 .theme-dark .markdown-preview-view code .token.comment {
-    color: var(--color-d-gray-60) !important;
+    color: var(--text-muted);
 }
 
 .theme-dark .CodeMirror-line span .cm-math.cm-variable-2,
@@ -2621,7 +2685,7 @@ input[type=checkbox]:checked {
 .theme-dark .markdown-preview-view span.token.datetime.number,
 .theme-dark .token.boolean,
 .theme-dark .token.number {
-    color: var(--color-d-red-500) !important;
+    color: var(--color-d-red-500);
     font-weight: var(--font-regular);
     background: transparent;
     text-shadow: none;
@@ -2632,8 +2696,10 @@ input[type=checkbox]:checked {
 .theme-dark .markdown-preview-view code .token.string,
 .theme-dark .markdown-preview-view code .token.parameter,
 .theme-dark .markdown-preview-view span .token.attr-name,
-.theme-dark .markdown-preview-view code .token.important {
-    color: var(--color-d-yellow-700) !important;
+.theme-dark .markdown-preview-view code .token.important,
+.theme-dark .token.regex,
+.theme-dark .token.variable {
+    color: var(--color-d-yellow-700);
     font-weight: var(--font-regular);
     text-shadow: none;
 }
@@ -2646,7 +2712,7 @@ input[type=checkbox]:checked {
 .theme-dark .token.attr-value,
 .theme-dark .token.function,
 .theme-dark .token.class-name {
-    color: var(--color-d-blue-300) !important;
+    color: var(--color-d-blue-300);
     font-weight: var(--font-regular);
     background: transparent;
     text-shadow: none;
@@ -2654,7 +2720,7 @@ input[type=checkbox]:checked {
 
 .theme-dark .markdown-preview-view code .token.operator,
 .theme-dark .markdown-preview-view code .token.punctuation {
-    color: var(--color-d-gray-40) !important;
+    color: var(--color-d-gray-40);
     font-weight: var(--font-regular);
     background: transparent;
     text-shadow: none;
@@ -2753,25 +2819,6 @@ span.cm-link.cm-hmd-footnote {
     border-color: var(--background-modifier-border);
 }
 
-/*──────────Pure Text Block──────────*/
-
-code[class*=language-pure-text],
-.markdown-preview-view pre[class*=language-pure-text],
-.markdown-preview-view pre[class*=language-pure-text]
-.language-pure-text.is-loaded {
-    color: var(--text-normal) !important;
-    font-family: var(--font-monospace) !important;
-    white-space: normal !important;
-    hyphens: auto !important;
-    background-color: var(--background-primary) !important;
-    padding-left: 0 !important;
-}
-
-code.language-pure-text.is-loaded,
-.has-copy-button pre.language-pure-text {
-    background-color: var(--background-primary) !important;
-}
-
 /*────────────────────────────────────
                 Embeds
 ────────────────────────────────────*/
@@ -2813,7 +2860,7 @@ code.language-pure-text.is-loaded,
 }
 
 /*────────────────────────────────────
-            YAML / Metadata
+            YAML/Metadata
 ────────────────────────────────────*/
 
 /* YAML Preview Mode */
@@ -2841,18 +2888,18 @@ svg.forward-arrow {
 /* YAML Preview for Dark Theme */
 
 .theme-dark .frontmatter-container span.frontmatter-alias {
-    background: var(--color-d-gray-90) !important;
+    background: var(--color-d-gray-90);
 }
 
 .theme-dark .frontmatter-container span.frontmatter-alias
 svg.forward-arrow {
-    color: var(--color-d-gray-30) !important;
+    color: var(--color-d-gray-30);
 }
 
 /* YAML Edit Mode */
 
 span.cm-hmd-frontmatter {
-    font-size: var(--font-scale-0) !important;
+    font-size: var(--font-scale-0);
 }
 
 /* YAML Edit for Light Theme */
@@ -2862,35 +2909,92 @@ span.cm-hmd-frontmatter {
 }
 
 .theme-light .cm-s-obsidian span.cm-hmd-frontmatter.cm-atom {
-    color: var(--color-l-blue-300) !important;
+    color: var(--color-l-blue-300);
 }
 
 .theme-light .cm-s-obsidian span.cm-hmd-frontmatter.cm-string {
-    color: var(--color-l-yellow-500) !important;
+    color: var(--color-l-yellow-500);
 }
 
 .theme-light .cm-s-obsidian span.cm-def,
 .theme-light .cm-s-obsidian span.cm-meta {
-    color: var(--color-l-gray-50) !important;
+    color: var(--color-l-gray-50);
 }
 
 /* YAML Edit for Dark Theme */
 
 .theme-dark span.cm-hmd-frontmatter {
-    color: var(--color-d-red-500) !important;
+    color: var(--color-d-red-500);
 }
 
 .theme-dark .cm-s-obsidian span.cm-atom {
-    color: var(--color-d-blue-300) !important;
+    color: var(--color-d-blue-300);
 }
 
 .theme-dark .cm-s-obsidian span.cm-string {
-    color: var(--color-d-yellow-700) !important;
+    color: var(--color-d-yellow-700);
 }
 
 .theme-dark .cm-s-obsidian span.cm-def,
 .theme-dark .cm-s-obsidian span.cm-meta {
-    color: var(--color-d-gray-30) !important;
+    color: var(--color-d-gray-30);
+}
+
+/*────────────────────────────────────
+            Document Search
+────────────────────────────────────*/
+
+.document-search-container {
+    top: 0;
+    height: 43px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.document-search-container.mod-replace-mode {
+    height: 83px;
+}
+
+.document-search-button {
+    border-radius: var(--scale-2-3);
+}
+
+body:not(.no-svg-replace) .document-search-close-button:before {
+    background: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' id='Outline' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z'/%3E%3C/svg%3E%0A");
+    vertical-align: -10px;
+}
+
+/* Document Search for Light Theme */
+
+.theme-light .document-search-container {
+    background: var(--color-l-gray-20);
+}
+
+.theme-light .workspace .document-search-button {
+    color: var(--text-on-accent);
+    background: var(--interactive-accent);
+}
+
+.theme-light .workspace .document-search-button:hover {
+    color: var(--text-on-accent);
+    background: var(--interactive-accent-hover) !important;
+}
+
+/* Document Search for Dark Theme */
+
+.theme-dark .document-search-container {
+    background: var(--color-d-black);
+}
+
+.theme-dark .workspace .document-search-button {
+    color: var(--text-on-accent);
+    background: var(--interactive-accent);
+}
+
+.theme-dark .workspace .document-search-button:hover {
+    color: var(--text-on-accent-hover);
+    background: var(--interactive-accent-hover) !important;
 }
 
 /*────────────────────────────────────
@@ -3080,10 +3184,6 @@ span.cm-hmd-frontmatter {
 
 /*~ File Explorer Search Modal ~*/
 .suggestion-container.mod-search-suggestion {
-    padding:    var(--scale-2-2)
-                var(--scale-2-4)
-                var(--scale-2-4)
-                var(--scale-2-4) !important;
     border-radius: var(--scale-2-4);
 }
 
@@ -3094,8 +3194,7 @@ span.cm-hmd-frontmatter {
     top: var(--scale-2-4);
 }
 
-body:not(.no-svg-replace) .modal-close-button:before,
-body:not(.no-svg-replace) .document-search-close-button:before {
+body:not(.no-svg-replace) .modal-close-button:before {
     content: " ";
 }
 
@@ -3375,7 +3474,8 @@ button {
 
 /*~ Buttons for Light Theme ~*/
 
-.theme-light .modal button:not(.mod-cta):not(.mod-warning) {
+.theme-light .modal button:not(.mod-cta):not(.mod-warning),
+.theme-light .workspace button:not(.graph-controls button) {
     color: var(--color-l-gray-80);
     background: var(--color-l-whiter) !important;
     border: 1px solid rgba(100, 100, 100, 0.3);
@@ -3383,7 +3483,10 @@ button {
                 0px 2px 4px 0px rgba(100, 100, 100, 0.1);
 }
 
-.theme-light .modal button:not(.mod-cta):not(.mod-warning):hover {
+.theme-light .modal button:not(.mod-cta):not(.mod-warning):focus,
+.theme-light .workspace button:not(.graph-controls button):focus,
+.theme-light .modal button:not(.mod-cta):not(.mod-warning):hover,
+.theme-light .workspace button:not(.graph-controls button):hover {
     background: var(--color-l-gray-40) !important;
 }
 
@@ -3394,7 +3497,10 @@ button {
                 0px 2px 4px 0px rgba(100, 100, 100, 0.3);
 }
 
-.theme-light .modal button:active {
+.theme-light .modal button:active,
+.theme-light .modal button:not(.mod-cta):not(.mod-warning):active,
+.theme-light .workspace button:not(.graph-controls button):active,
+.theme-light .graph-controls button:active {
     box-shadow: 0px 1px 0px 0px
                 rgba(100, 100, 100, 0.1) inset,
                 0px 1px 1px 0px rgba(100, 100, 100, 0.1);
@@ -3405,7 +3511,8 @@ button {
 
 /*~ Buttons for Dark Theme ~*/
 
-.theme-dark .modal button:not(.mod-cta):not(.mod-warning) {
+.theme-dark .modal button:not(.mod-cta):not(.mod-warning),
+.theme-dark .workspace button:not(.graph-controls button) {
     color: var(--color-d-white);
     background: var(--color-d-gray-80) !important;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -3414,7 +3521,10 @@ button {
                 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-.theme-dark .modal button:not(.mod-cta):not(.mod-warning):hover {
+.theme-dark .modal button:not(.mod-cta):not(.mod-warning):focus,
+.theme-dark .workspace button:not(.graph-controls button):focus,
+.theme-dark .modal button:not(.mod-cta):not(.mod-warning):hover,
+.theme-dark .workspace button:not(.graph-controls button):hover {
     background: var(--color-d-blacker) !important;
 }
 
@@ -3427,7 +3537,10 @@ button {
                 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-.theme-dark .modal button:active {
+.theme-dark .modal button:active,
+.theme-dark .modal button:not(.mod-cta):not(.mod-warning):active,
+.theme-dark .workspace button:not(.graph-controls button):active,
+.theme-dark .graph-controls button:active {
     box-shadow: 0px 1px 0px 0px
                 rgba(0, 0, 0, 0.1) inset,
                 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
@@ -3459,6 +3572,7 @@ input[type='number'] {
 .theme-light input[type='password'],
 .theme-light input[type='number'] {
     background: var(--color-l-gray-10);
+    border: 1px solid var(--background-modifier-border);
 }
 
 .theme-light textarea:focus,
@@ -3481,6 +3595,7 @@ input[type='number'] {
 .theme-dark input[type='password'],
 .theme-dark input[type='number'] {
     background: var(--color-d-blacker);
+    border: 1px solid var(--background-modifier-border);
 }
 
 .theme-dark textarea:focus,
@@ -3820,7 +3935,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 /* Scrollbar for Dark Theme */
 .theme-dark ::-webkit-scrollbar-thumb:active {
-    background: var(--color-d-gray-70);
+    background: var(--color-d-gray-40);
 }
 
 /*────────────────────────────────────
