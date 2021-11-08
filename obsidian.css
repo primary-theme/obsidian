@@ -2790,6 +2790,14 @@ span.cm-link.cm-hmd-footnote {
 
 /*──────────Active Line Background──────────*/
 
+.workspace-leaf:not(.workspace-leaf.mod-active)
+.CodeMirror-activeline
+.CodeMirror-linebackground,
+.workspace-leaf:not(.workspace-leaf.mod-active)
+.CodeMirror-activeline-gutter {
+    background: transparent;
+}
+
 /* Active Line for Light Theme */
 
 .theme-light .CodeMirror-activeline
