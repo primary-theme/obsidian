@@ -1159,7 +1159,7 @@ body .nav-action-button svg {
     padding:    var(--scale-2-4)
                 var(--scale-2-4)
                 var(--scale-2-4)
-                var(--scale-2-4) !important;
+                var(--scale-2-4);
 }
 
 /*─────────Contaner for Outgoing Links and Backlinks Tab──────────*/
@@ -3002,6 +3002,11 @@ body:not(.no-svg-replace) .document-search-close-button:before {
             Graph View
 ++++++++++++++++++++++++++++++++++++++
 ──────────────────────────────────────*/
+
+.workspace-leaf-content[data-type="graph"]
+.view-content {
+    padding: 0;
+}
 
 .graph-controls {
     padding:    var(--scale-8-1)
