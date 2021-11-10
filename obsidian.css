@@ -4442,6 +4442,8 @@ Tablet (min-width: 400pt)
 
     /* iOS Modal extending to Status Bar fix */
     .is-mobile.is-ios .modal.mod-settings {
+        top: auto;
+        bottom: 0;
         max-height: calc(100% - 42px);
         box-shadow: none;
     }
