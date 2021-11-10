@@ -8,7 +8,7 @@ It is toppled with functional pop of red blue yellow colors. The perfect mix of 
 
 Playful, reminiscing, productive.
 
-Available in both ⚪Light and ⚫Dark modes.
+Available in both ⚪Light and ⚫Dark modes, for both Mobile and Desktop!
 
 ## 📌 Plugins Supported
 More plugins will be supported in the coming weeks! For now, I've checked the theme for these:
@@ -38,7 +38,7 @@ More plugins will be supported in the coming weeks! For now, I've checked the th
 - [ ] Style Settings
 
 **Other TODO**
-- [ ] Mobile 
+- [x] Mobile 
 - [ ] Optimizing/Minifying the File
 
 These are on the radar as I'm using these myself. If you have a particular plugin you want supported, please drop it in and I'll catch up on it!
