@@ -4355,6 +4355,14 @@ Tablet (min-width: 400pt)
     margin: 5px;
 }
 
+/*────────────────────────────────────
+        Vault Launch Progress
+────────────────────────────────────*/
+
+.is-mobile .progress-bar-message {
+    font-size: var(--font-scale-1);
+}
+
 /* Phone */
 
 @media (max-width: 400pt) {
