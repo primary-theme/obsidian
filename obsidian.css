@@ -2,7 +2,7 @@
 
 ✦ P R I M A R Y ✦
 
-Obsidian Theme v0.1.3 by Cecilia May
+Obsidian Theme v0.2.0 by Cecilia May
 
 ────────────────────────────────────
 
@@ -151,7 +151,7 @@ Other Components
     Tooltips
     Vault Launch Progress
 
-Mobile - COMING SOON
+Mobile
 
 Community Plugins
     Calendar by Lian Cain
@@ -3490,7 +3490,7 @@ button {
 .theme-light .modal button:not(.mod-cta):not(.mod-warning),
 .theme-light .workspace button:not(.graph-controls button) {
     color: var(--color-l-gray-80);
-    background: var(--color-l-whiter) !important;
+    background: var(--color-l-whiter);
     border: 1px solid rgba(100, 100, 100, 0.3);
     box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.3) inset,
                 0px 2px 4px 0px rgba(100, 100, 100, 0.1);
@@ -3500,7 +3500,7 @@ button {
 .theme-light .workspace button:not(.graph-controls button):focus,
 .theme-light .modal button:not(.mod-cta):not(.mod-warning):hover,
 .theme-light .workspace button:not(.graph-controls button):hover {
-    background: var(--color-l-gray-40) !important;
+    background: var(--color-l-gray-40);
 }
 
 .theme-light .modal button,
@@ -3527,7 +3527,7 @@ button {
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning),
 .theme-dark .workspace button:not(.graph-controls button) {
     color: var(--color-d-white);
-    background: var(--color-d-gray-80) !important;
+    background: var(--color-d-gray-80);
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 0px -2px 0px 0px
                 rgba(0, 0, 0, 0.15) inset,
@@ -3538,7 +3538,7 @@ button {
 .theme-dark .workspace button:not(.graph-controls button):focus,
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):hover,
 .theme-dark .workspace button:not(.graph-controls button):hover {
-    background: var(--color-d-blacker) !important;
+    background: var(--color-d-blacker);
 }
 
 .theme-dark .modal button,
@@ -4053,7 +4053,528 @@ input[type="range"]::-webkit-slider-thumb:active {
 ++++++++++++++++++++++++++++++++++++++
 ──────────────────────────────────────*/
 
-/* Not Done — COMMING SOON */
+
+/*
+
+MOBILE STYLING
+TABLE OF CONTENTS
+
+For All Sizes
+    Workspace
+        Side Dock Ribbon
+        Tab Header (in Workspace Drawer)
+        Nav Header (in Workspace Drawer)
+        Tab Content
+    Content / Active Note
+        Typography
+    Other Components
+        Modals
+        Buttons
+
+Phone (max-width: 400pt)
+    Variables
+        Typography Modular Scale
+    Other Components
+        Modals
+
+Mid-size (max-width: 600pt)
+    Editor
+
+Tablet (min-width: 400pt)
+    Variables
+        Typography Modular Scale
+    Workspace
+        Workspace Sidebar
+    Other Components
+        Modals
+        Pull Down Action
+
+*/
+
+/*────────────────────────────────────
++++++++++++++++Workspace++++++++++++++
+────────────────────────────────────*/
+
+/*────────────────────────────────────
+            Side Dock Ribbon
+────────────────────────────────────*/
+
+.is-mobile .workspace-drawer-ribbon {
+    width: var(--scale-8-8);
+    border-right: 1px solid var(--background-modifier-border);
+}
+
+/*────────────────────────────────────
+    Tab Header in Workspace Drawer
+────────────────────────────────────*/
+
+.is-mobile .workspace-drawer-header {
+    padding:    var(--scale-8-3)
+                var(--scale-8-3)
+                var(--scale-0-0)
+                var(--scale-8-3);
+}
+
+.is-mobile .workspace-drawer-active-tab-header {
+    padding:    var(--scale-2-4)
+                var(--scale-2-2)
+                var(--scale-2-8)
+                var(--scale-2-8);
+    margin: 0;
+}
+
+.is-mobile .workspace-drawer-tab-container > * {
+    padding:    var(--scale-0-0)
+                var(--scale-8-1)
+                var(--scale-0-0)
+                var(--scale-8-1);
+}
+
+/*────────────────────────────────────
+    Nav Header in Workspace Drawer
+────────────────────────────────────*/
+
+.is-mobile .workspace-drawer-actions,
+.is-mobile .nav-buttons-container {
+    margin: var(--scale-2-10)
+            var(--scale-0-0)
+            var(--scale-2-6)
+            var(--scale-0-0);
+}
+
+.is-mobile .nav-action-button {
+    padding: 0;
+    margin: var(--scale-0-0)
+            var(--scale-2-6)
+            var(--scale-0-0)
+            var(--scale-2-6);
+}
+
+/*────────────────────────────────────
+            Tab Content
+────────────────────────────────────*/
+
+/*──────────Tab Content Container──────────*/
+
+.is-mobile .workspace-drawer {
+    width: 100%;
+}
+
+.is-mobile .workspace-drawer.mod-left .workspace-drawer-inner {
+    padding-left: var(--scale-8-8);
+    padding-right: var(--scale-0-0);
+}
+
+.is-mobile .workspace-drawer .workspace-drawer-inner {
+    background: var(--background-secondary);
+}
+
+.is-mobile .workspace-drawer-tab-options {
+    padding:    var(--scale-0-0)
+                var(--scale-8-1)
+                var(--scale-0-0)
+                var(--scale-8-1);
+}
+
+/*────────────────────────────────────
++++++++++Content / Active Note++++++++
+────────────────────────────────────*/
+
+/*────────────────────────────────────
+            Note Header
+────────────────────────────────────*/
+
+.is-mobile .view-header,
+.is-mobile .workspace-leaf.mod-active .view-header, 
+.is-mobile .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+    height: var(--scale-2-24);
+}
+
+.is-mobile .view-header .view-header-icon {
+    top: 4px;
+    margin-left: 6px;
+}
+
+.is-mobile .view-header-title {
+    line-height: 50px;
+}
+
+.is-mobile .view-header .view-actions a {
+    top: 6px;
+}
+
+/*────────────────────────────────────
+            Typography
+────────────────────────────────────*/
+
+/*──────────Headings──────────*/
+
+.is-mobile .markdown-preview-view h1,
+.is-mobile .HyperMD-header-1 .cm-header-1,
+.is-mobile .markdown-preview-view h2,
+.is-mobile .HyperMD-header-2 .cm-header-2,
+.is-mobile .markdown-preview-view h3,
+.is-mobile .HyperMD-header-3 .cm-header-3,
+.is-mobile .markdown-preview-view h4,
+.is-mobile .HyperMD-header-4 .cm-header-4,
+.is-mobile .markdown-preview-view h5,
+.is-mobile .HyperMD-header-5 .cm-header-5,
+.is-mobile .markdown-preview-view h6,
+.is-mobile .HyperMD-header-6 .cm-header-6 {
+    font-size: 1em;
+    font-family: var(--font-heading);
+}
+
+.is-mobile .markdown-preview-view h1,
+.is-mobile .HyperMD-header-1,
+.is-mobile .cm-header-1 {
+    font-size: var(--font-scale-7);
+    line-height: var(--line-height-7);
+}
+
+.is-mobile .markdown-preview-view h2,
+.is-mobile .HyperMD-header-2,
+.is-mobile .cm-header-2 {
+    font-size: var(--font-scale-6);
+    line-height: var(--line-height-6);
+}
+
+.is-mobile .markdown-preview-view h3,
+.is-mobile .HyperMD-header-3,
+.is-mobile .cm-header-3 {
+    font-size: var(--font-scale-5);
+    line-height: var(--line-height-5);
+}
+
+.is-mobile .markdown-preview-view h4,
+.is-mobile .HyperMD-header-4,
+.is-mobile .cm-header-4 {
+    font-size: var(--font-scale-4);
+    line-height: var(--line-height-4);
+}
+
+.is-mobile .markdown-preview-view h5,
+.is-mobile .HyperMD-header-5,
+.is-mobile .cm-header-5 {
+    font-size: var(--font-scale-3);
+    line-height: var(--line-height-3);
+}
+
+.is-mobile .markdown-preview-view h6,
+.is-mobile .HyperMD-header-6,
+.is-mobile .cm-header-6 {
+    color: var(--text-muted);
+    font-size: var(--font-scale-2);
+    line-height: var(--line-height-2);
+}
+
+/*────────────────────────────────────
++++++++++++Other Components+++++++++++
+────────────────────────────────────*/
+
+/*────────────────────────────────────
+                Modals
+────────────────────────────────────*/
+
+/*─────────Modal CLose Button──────────*/
+
+.is-mobile .vertical-tab-header::before {
+    content: "Settings";
+    font-family: var(--font-ui);
+    font-weight: var(--font-semi-bold);
+    color: var(--text-muted);
+    background: var(--background-secondary);
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--background-modifier-border);
+    z-index: 1;
+}
+
+.is-mobile .modal-setting-back-button span {
+    font-weight: var(--font-semi-bold);
+    color: var(--text-muted);
+}
+
+.is-mobile .modal-close-button {
+    margin: var(--scale-2-4);
+    display: block;
+    z-index: 2;
+}
+
+/*─────────Settings Modal──────────*/
+
+.is-mobile .workspace {
+    transform: none !important;
+}
+
+.is-mobile .modal,
+.is-mobile .prompt {
+    padding:    var(--scale-2-8)
+                var(--scale-2-8);
+}
+
+.is-mobile ::-webkit-scrollbar {
+    display: none;
+}
+
+.is-mobile .modal .modal-content .vertical-tab-content {
+    border: none;
+}
+
+.is-mobile .modal .modal-content
+.vertical-tab-header-group
+.vertical-tab-header-group-title:first-of-type {
+    margin-top: 2px;
+}
+
+.is-mobile .modal-setting-back-button {
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.is-mobile .modal-content {
+    padding:    var(--scale-0-0)
+                var(--scale-8-4);
+}
+
+.is-mobile .community-theme-screenshot {
+    max-width: 100%;
+}
+
+/*────────────────────────────────────
+            Buttons
+────────────────────────────────────*/
+
+.is-mobile button {
+    margin: 5px;
+}
+
+/* Phone */
+
+@media (max-width: 400pt) {
+
+    /*────────────────────────────────────
+    ++++++++++++++Variables+++++++++++++++
+    ────────────────────────────────────*/
+
+    .is-mobile {
+
+    /*──────────Typography Modular Scale──────────*/
+        
+    /*  Based on Standard 16px  */
+    --line-width: 400pt;
+    --scale-ratio: 1.23;
+        
+    --font-scale-000: 0.652em;
+    --font-scale-00: 0.694em;
+    --font-scale-0: 0.783em;
+    --font-scale-0-5: 0.875em;
+    --font-scale-1: 1em;
+    --font-scale-2: 1.12em;
+    --font-scale-3: 1.23em;
+    --font-scale-4: 1.378em;
+    --font-scale-5: 1.513em;
+    --font-scale-6: 1.695em;
+    --font-scale-7: 1.861em;
+    --font-scale-8: 2.085em;
+    --font-scale-9: 2.289em;
+    --font-scale-10: 2.564em;
+    }
+
+    /*────────────────────────────────────
+    +++++++++++Other Components+++++++++++
+    ────────────────────────────────────*/
+
+    /*────────────────────────────────────
+                    Modals
+    ────────────────────────────────────*/
+
+    /*─────────Settings Modal──────────*/
+
+    .is-mobile .modal:not(.modal.mod-settings),
+    .is-mobile .prompt,
+    .is-mobile .suggestion-container,
+    .is-mobile .menu {
+        border-top-left-radius: var(--scale-2-8);
+        border-top-right-radius: var(--scale-2-8);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: 0px 0px 16px 0px
+                    rgba(0, 0, 0, 0.3);
+    }
+
+    .is-mobile .modal:not(.modal.mod-settings),
+    .is-mobile .prompt {
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .is-mobile .suggestion-container {
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .is-mobile .modal.mod-settings {
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+    }
+
+    .is-mobile .modal.mod-community-theme .modal-content {
+        padding:    var(--scale-0-0)
+                    var(--scale-2-3);
+    }
+
+    .is-mobile .prompt kbd {
+        display: none;
+    }
+
+}
+
+/* Mid-size between Phone and Tablet */
+
+@media (max-width: 600pt) {
+
+    /*────────────────────────────────────
+                    Editor
+    ────────────────────────────────────*/
+
+    .is-mobile .markdown-preview-view.is-readable-line-width,
+    .is-mobile .cm-s-obisidian.is-readable-line-width {
+        padding: 0 0;
+    }
+
+}
+
+/* Tablet */
+
+@media (min-width: 400pt) {
+
+    /*────────────────────────────────────
+    ++++++++++++++Variables+++++++++++++++
+    ────────────────────────────────────*/
+
+    .is-mobile {
+
+    /*──────────Typography Modular Scale──────────*/
+        
+    /*  Based on Standard 16px  */
+    --line-width: 400pt;
+    --scale-ratio: 1.32;
+        
+    --font-scale-000: 0.652em;
+    --font-scale-00: 0.694em;
+    --font-scale-0: 0.783em;
+    --font-scale-0-5: 0.875em;
+    --font-scale-1: 1em;
+    --font-scale-2: 1.179em;
+    --font-scale-3: 1.32em;
+    --font-scale-4: 1.557em;
+    --font-scale-5: 1.742em;
+    --font-scale-6: 2.055em;
+    --font-scale-7: 2.3em;
+    --font-scale-8: 2.712em;
+    --font-scale-9: 3.036em;
+    --font-scale-10: 3.58em;
+    }
+
+    /*────────────────────────────────────
+    +++++++++++++++Workspace++++++++++++++
+    ────────────────────────────────────*/
+
+    /*────────────────────────────────────
+                Workspace Sidebar
+    ────────────────────────────────────*/
+
+    .is-mobile .workspace-drawer:not(.is-pinned) {
+        width: 100vw;
+        max-width: 360pt;
+        height: calc(100vh - var(--scale-8-6));
+        margin: var(--scale-8-3)
+                var(--scale-8-3);
+        border-radius: var(--scale-2-8);
+        border: 1px solid var(--background-modifier-border);
+        box-shadow: 0px 0px 16px 0px
+                    var(--background-modifier-box-shadow);
+    }
+
+    /*────────────────────────────────────
+    +++++++++++Other Components+++++++++++
+    ────────────────────────────────────*/
+
+    /*────────────────────────────────────
+                    Modals
+    ────────────────────────────────────*/
+
+    /*─────────Settings Modal──────────*/
+
+    .is-mobile .modal,
+    .is-mobile .prompt {
+        top: auto;
+        bottom: auto;
+        width: 100%;
+        max-width: 75%;
+        border-radius: var(--scale-2-8);
+        box-shadow: 0px 0px 16px 0px
+                    rgba(0, 0, 0, 0.3);
+    }
+
+    .is-mobile .modal.mod-settings {
+        height: 100%;
+    }
+
+    .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) {
+        flex-direction: unset;
+    }
+
+    .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
+        width: 300px;
+    }
+
+    
+    /*─────────Menu/Options Modal──────────*/
+
+    .is-mobile .menu {
+        border-top-left-radius: var(--scale-2-8);
+        border-top-right-radius: var(--scale-2-8);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: 0px 0px 16px 0px
+                    rgba(0, 0, 0, 0.3);
+    }
+
+    /*────────────────────────────────────
+                Pull Down Action
+    ────────────────────────────────────*/
+
+    .pull-down-action {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 75%;
+        margin: var(--scale-2-8) auto;
+        padding:    var(--scale-2-8)
+                    var(--scale-2-8)
+                    var(--scale-2-8)
+                    var(--scale-2-8);
+        text-align: center;
+        border-radius: var(--scale-2-8);
+        border: none;
+    }
+
+}
 
 /*────────────────────────────────────
 ++++++++++++++++++++++++++++++++++++++
