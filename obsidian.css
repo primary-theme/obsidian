@@ -277,20 +277,20 @@ Settings - COMING SOON
 --line-width: 42em;
 --scale-ratio: 1.48;
 
---font-scale-000: 0.547em;
---font-scale-00: 0.676em;
---font-scale-0: 0.81em;
---font-scale-0-5: 0.875em;
---font-scale-1: 1em;
---font-scale-2: 1.198em;
---font-scale-3: 1.48em;
---font-scale-4: 1.774em;
---font-scale-5: 2.19em;
---font-scale-6: 2.625em;
---font-scale-7: 3.242em;
---font-scale-8: 3.885em;
---font-scale-9: 4.798em;
---font-scale-10: 5.75em;
+--font-scale-000: 0.547rem;
+--font-scale-00: 0.676rem;
+--font-scale-0: 0.81rem;
+--font-scale-0-5: 0.875rem;
+--font-scale-1: 1rem;
+--font-scale-2: 1.198rem;
+--font-scale-3: 1.48rem;
+--font-scale-4: 1.774rem;
+--font-scale-5: 2.19rem;
+--font-scale-6: 2.625rem;
+--font-scale-7: 3.242rem;
+--font-scale-8: 3.885rem;
+--font-scale-9: 4.798rem;
+--font-scale-10: 5.75rem;
 
 --line-height-000: 0.673em;
 --line-height-00: 0.748em;
@@ -4204,71 +4204,6 @@ Tablet (min-width: 400pt)
 }
 
 /*────────────────────────────────────
-            Typography
-────────────────────────────────────*/
-
-/*──────────Headings──────────*/
-
-.is-mobile .markdown-preview-view h1,
-.is-mobile .HyperMD-header-1 .cm-header-1,
-.is-mobile .markdown-preview-view h2,
-.is-mobile .HyperMD-header-2 .cm-header-2,
-.is-mobile .markdown-preview-view h3,
-.is-mobile .HyperMD-header-3 .cm-header-3,
-.is-mobile .markdown-preview-view h4,
-.is-mobile .HyperMD-header-4 .cm-header-4,
-.is-mobile .markdown-preview-view h5,
-.is-mobile .HyperMD-header-5 .cm-header-5,
-.is-mobile .markdown-preview-view h6,
-.is-mobile .HyperMD-header-6 .cm-header-6 {
-    font-size: 1em;
-    font-family: var(--font-heading);
-}
-
-.is-mobile .markdown-preview-view h1,
-.is-mobile .HyperMD-header-1,
-.is-mobile .cm-header-1 {
-    font-size: var(--font-scale-7);
-    line-height: var(--line-height-7);
-}
-
-.is-mobile .markdown-preview-view h2,
-.is-mobile .HyperMD-header-2,
-.is-mobile .cm-header-2 {
-    font-size: var(--font-scale-6);
-    line-height: var(--line-height-6);
-}
-
-.is-mobile .markdown-preview-view h3,
-.is-mobile .HyperMD-header-3,
-.is-mobile .cm-header-3 {
-    font-size: var(--font-scale-5);
-    line-height: var(--line-height-5);
-}
-
-.is-mobile .markdown-preview-view h4,
-.is-mobile .HyperMD-header-4,
-.is-mobile .cm-header-4 {
-    font-size: var(--font-scale-4);
-    line-height: var(--line-height-4);
-}
-
-.is-mobile .markdown-preview-view h5,
-.is-mobile .HyperMD-header-5,
-.is-mobile .cm-header-5 {
-    font-size: var(--font-scale-3);
-    line-height: var(--line-height-3);
-}
-
-.is-mobile .markdown-preview-view h6,
-.is-mobile .HyperMD-header-6,
-.is-mobile .cm-header-6 {
-    color: var(--text-muted);
-    font-size: var(--font-scale-2);
-    line-height: var(--line-height-2);
-}
-
-/*────────────────────────────────────
 +++++++++++Other Components+++++++++++
 ────────────────────────────────────*/
 
@@ -4379,20 +4314,20 @@ Tablet (min-width: 400pt)
     --line-width: 400pt;
     --scale-ratio: 1.23;
         
-    --font-scale-000: 0.652em;
-    --font-scale-00: 0.694em;
-    --font-scale-0: 0.783em;
-    --font-scale-0-5: 0.875em;
-    --font-scale-1: 1em;
-    --font-scale-2: 1.12em;
-    --font-scale-3: 1.23em;
-    --font-scale-4: 1.378em;
-    --font-scale-5: 1.513em;
-    --font-scale-6: 1.695em;
-    --font-scale-7: 1.861em;
-    --font-scale-8: 2.085em;
-    --font-scale-9: 2.289em;
-    --font-scale-10: 2.564em;
+    --font-scale-000: 0.652rem;
+    --font-scale-00: 0.694rem;
+    --font-scale-0: 0.783rem;
+    --font-scale-0-5: 0.875rem;
+    --font-scale-1: 1rem;
+    --font-scale-2: 1.12rem;
+    --font-scale-3: 1.23rem;
+    --font-scale-4: 1.378rem;
+    --font-scale-5: 1.513rem;
+    --font-scale-6: 1.695rem;
+    --font-scale-7: 1.861rem;
+    --font-scale-8: 2.085rem;
+    --font-scale-9: 2.289rem;
+    --font-scale-10: 2.564rem;
     }
 
     /*────────────────────────────────────
@@ -4495,20 +4430,20 @@ Tablet (min-width: 400pt)
     --line-width: 400pt;
     --scale-ratio: 1.32;
         
-    --font-scale-000: 0.652em;
-    --font-scale-00: 0.694em;
-    --font-scale-0: 0.783em;
-    --font-scale-0-5: 0.875em;
-    --font-scale-1: 1em;
-    --font-scale-2: 1.179em;
-    --font-scale-3: 1.32em;
-    --font-scale-4: 1.557em;
-    --font-scale-5: 1.742em;
-    --font-scale-6: 2.055em;
-    --font-scale-7: 2.3em;
-    --font-scale-8: 2.712em;
-    --font-scale-9: 3.036em;
-    --font-scale-10: 3.58em;
+    --font-scale-000: 0.652rem;
+    --font-scale-00: 0.694rem;
+    --font-scale-0: 0.783rem;
+    --font-scale-0-5: 0.875rem;
+    --font-scale-1: 1rem;
+    --font-scale-2: 1.179rem;
+    --font-scale-3: 1.32rem;
+    --font-scale-4: 1.557rem;
+    --font-scale-5: 1.742rem;
+    --font-scale-6: 2.055rem;
+    --font-scale-7: 2.3rem;
+    --font-scale-8: 2.712rem;
+    --font-scale-9: 3.036rem;
+    --font-scale-10: 3.58rem;
     }
 
     /*────────────────────────────────────
