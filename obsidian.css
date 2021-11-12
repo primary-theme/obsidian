@@ -2417,7 +2417,7 @@ ul {
     list-style-type: "–  ";
 }
 ul ul {
-    list-style-type: ccirlc;
+    list-style-type: disc;
 }
 ul ul ul {
     list-style-type: circle;
@@ -2432,7 +2432,7 @@ ul ul ul ul ul ul {
     list-style-type: "–  ";
 }
 ul ul ul ul ul ul ul {
-    list-style-type: ccirlc;
+    list-style-type: disc;
 }
 ul ul ul ul ul ul ul ul {
     list-style-type: circle;
@@ -2447,7 +2447,7 @@ ul ul ul ul ul ul ul ul ul ul ul {
     list-style-type: "–  ";
 }
 ul ul ul ul ul ul ul ul ul ul ul ul {
-    list-style-type: ccirlc;
+    list-style-type: disc;
 }
 ul ul ul ul ul ul ul ul ul ul ul ul ul {
     list-style-type: circle;
