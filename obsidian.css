@@ -412,7 +412,7 @@ Settings - COMING SOON
 --text-highlight-bg-active: var(--color-l-highlight-yellow);
 --highlight-mix-blend-mode: darken;
 
---text-selection:   var(--color-l-gray-20);
+--text-selection:   var(--color-l-gray-40);
 
 --text-on-accent:   var(--color-l-gray-10);
 
@@ -2585,7 +2585,6 @@ input[type=checkbox]:checked {
 .theme-light .markdown-preview-view span.cm-inline-code,
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-    background-color: var(--color-l-gray-10);
     color: var(--color-l-red-300);
     text-shadow: none;
 }
@@ -2668,7 +2667,6 @@ input[type=checkbox]:checked {
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-    background-color: var(--color-d-gray-90);
     color: var(--color-d-red-500);
     text-shadow: none;
 }
@@ -2884,6 +2882,11 @@ span.cm-link.cm-hmd-footnote {
 
 /* YAML Preview for Light Theme */
 
+.theme-light code[class*=language-yaml],
+.theme-light pre[class*=language-yaml] {
+    background: var(--color-l-gray-10);
+}
+
 .theme-light .frontmatter-container span.frontmatter-alias {
     background: var(--color-l-gray-40);
 }
@@ -2894,6 +2897,11 @@ svg.forward-arrow {
 }
 
 /* YAML Preview for Dark Theme */
+
+.theme-dark code[class*=language-yaml],
+.theme-dark pre[class*=language-yaml] {
+    background: var(--color-d-gray-90);
+}
 
 .theme-dark .frontmatter-container span.frontmatter-alias {
     background: var(--color-d-gray-90);
