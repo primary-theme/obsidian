@@ -2051,7 +2051,8 @@ blockquote p {
                 var(--scale-2-18);
     border-radius: var(--scale-2-4);
     border: 1px solid var(--background-modifier-border);
-    margin: var(--scale-0-0);
+    margin-left: var(--scale-0-0);
+    margin-right: var(--scale-0-0);
 }
 
 .HyperMD-quote.CodeMirror-line {
@@ -4238,6 +4239,12 @@ Tablet (min-width: 400pt)
     text-align: center;
     border-bottom: 1px solid var(--background-modifier-border);
     z-index: 1;
+}
+
+.is-mobile .modal-setting-back-button {
+    border-top-left-radius: var(--scale-2-8);
+    border-top-right-radius: var(--scale-2-8);
+    box-shadow: none;
 }
 
 .is-mobile .modal-setting-back-button span {
