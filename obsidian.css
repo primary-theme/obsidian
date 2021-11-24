@@ -1925,6 +1925,7 @@ Content / Active Note / Opened Notes
 .markdown-preview-view h6,
 .HyperMD-header-6,
 .cm-header-6 {
+    color: var(--text-muted);
     font-family: var(--font-header);
     font-size: var(--font-scale-2);
     line-height: var(--line-height-2);
