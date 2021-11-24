@@ -2,7 +2,7 @@
 
 ✦ P R I M A R Y ✦
 
-Obsidian Theme v0.2.0 by Cecilia May
+Obsidian Theme v0.2.7 by Cecilia May
 
 ────────────────────────────────────
 
@@ -109,7 +109,7 @@ Content / Active Note
         Checkboxes
         Inline Code/Codeblocks
             Copy Code Button
-        Aside/Sidenotes - COMING SOON
+        Aside/Sidenotes
         Footnotes
         Gutter Line Numbers
         Active Line
@@ -159,18 +159,11 @@ Community Plugins
     Dataview by Michael Brenan
     Outliner Plugin (Edit Mode Relationship Lines) by Viacheslav Slinko
 
-    (No CSS but Checked)
-    Recent Files by Tony Grosinger
-    Contextual Typography by mgmeyers
-    Advanced Tables by Tony Grosinger
-
     * More Plugins to Support - COMING SOON (See README)
     * Submit a Plugin Support Request on Github
     * and I'll try looking into it ;)
 
 Custom Icons
-
-Settings - COMING SOON
 
 */
 
@@ -252,13 +245,13 @@ Settings - COMING SOON
 
 --font-preview: var(--font-sans);
 --font-editor:  var(--font-sans);
---font-ui:      var(--font-sans);
---font-heading: var(--font-sans);
+--font-header:  var(--font-sans);
+--font-code:    var(--font-monospace);
 
 /* Original Obsidian Font Variables */
 --default-font: var(--font-sans);
---mermaid-font: var(--default-font);
---reveal-font:  var(--default-font);
+--mermaid-font: var(--font-preview);
+--reveal-font:  var(--font-preview);
 
 /*──────────Font Weight──────────*/
 
@@ -464,16 +457,30 @@ Settings - COMING SOON
 --color-l-blue-700: hsl(205, 79%, 36%);
 --color-l-blue-900: hsl(205, 95%, 25%);
 
+--color-l-orange: var(--color-l-orange-500);
+--color-l-orange-300: hsl(33, 87%, 56%);
+--color-l-orange-500: hsl(28, 89%, 50%);
+--color-l-orange-700: hsl(20, 76%, 46%);
+--color-l-orange-900: hsl(17, 91%, 36%);
+
 --color-l-green: var(--color-l-green-500);
 --color-l-green-300: hsl(154, 50%, 58%);
 --color-l-green-500: hsl(154, 47%, 49%);
---color-l-green-700: hsl(155, 57%, 37%);
---color-l-green-900: hsl(155, 79%, 27%);
+--color-l-green-700: hsl(160, 57%, 37%);
+--color-l-green-900: hsl(170, 80%, 27%);
+
+--color-l-violet: var(--color-l-violet-500);
+--color-l-violet-300: hsl(269, 47%, 71%);
+--color-l-violet-500: hsl(262, 34%, 55%);
+--color-l-violet-700: hsl(253, 41%, 42%);
+--color-l-violet-900: hsl(246, 70%, 30%);
 
 --color-l-highlight-yellow: hsla(43, 85%, 79%, 1);
 --color-l-highlight-red:    hsla(0, 91%, 87%, 1);
 --color-l-highlight-blue:   hsla(182, 66%, 84%, 1);
+--color-l-highlight-orange:  hsla(19, 100%, 79%, 1);
 --color-l-highlight-green:  hsla(124, 65%, 87%, 1);
+--color-l-highlight-violet:  hsla(245, 65%, 87%, 1);
 
 }
 
@@ -499,7 +506,7 @@ Settings - COMING SOON
 
 --background-modifier-success:      var(--color-d-green-300);
 --background-modifier-error:        var(--color-d-red-900);
---background-modifier-error-hover:  var(--color-d-red-900);
+--background-modifier-error-hover:  var(--color-d-red-700);
 --background-modifier-cover:        var(--color-d-shadow-50);
 
 --text-normal:  var(--color-d-white);
@@ -567,16 +574,30 @@ Settings - COMING SOON
 --color-d-blue-700: hsl(198, 57%, 55%);
 --color-d-blue-900: hsl(198, 55%, 47%);
 
+--color-d-orange: var(--color-d-orange-500);
+--color-d-orange-300: hsl(27, 100%, 67%);
+--color-d-orange-500: hsl(24, 71%, 57%);
+--color-d-orange-700: hsl(21, 60%, 51%);
+--color-d-orange-900: hsl(20, 77%, 41%);
+
 --color-d-green: var(--color-d-green-500);
 --color-d-green-300: hsl(154, 66%, 72%);
 --color-d-green-500: hsl(154, 52%, 46%);
 --color-d-green-700: hsl(154, 38%, 40%);
 --color-d-green-900: hsl(155, 81%, 24%);
 
+--color-d-violet: var(--color-d-violet-500);
+--color-d-violet-300: hsl(246, 100%, 83%);
+--color-d-violet-500: hsl(244, 60%, 67%);
+--color-d-violet-700: hsl(244, 52%, 57%);
+--color-d-violet-900: hsl(239, 61%, 54%);
+
 --color-d-highlight-yellow: rgb(109, 86, 17);
 --color-d-highlight-red:    hsl(4, 65%, 27%);
 --color-d-highlight-blue:   hsl(201, 79%, 23%);
+--color-d-highlight-orange:  hsl(27, 94%, 25%);
 --color-d-highlight-green:  hsl(115, 61%, 15%);
+--color-d-highlight-violet:  hsl(281, 39%, 24%);
 
 }
 
@@ -599,7 +620,6 @@ Settings - COMING SOON
 
 .theme-light .titlebar {
     background: var(--color-l-white);
-    border-bottom: none !important;
 }
 
 .theme-light .titlebar-text {
@@ -638,7 +658,6 @@ Settings - COMING SOON
 
 .theme-dark .titlebar {
     background: var(--color-d-gray-70);
-    border-bottom: none !important;
 }
 
 .theme-dark .titlebar-text {
@@ -831,10 +850,6 @@ Tabs from the right (right -> center)
     justify-content: flex-end;
 }
 
-.workspace-tab-header-container {
-    border: none !important;
-}
-
 .workspace-tabs {
     padding-right: 0;
 }
@@ -928,8 +943,8 @@ body .workspace-tab-header
 /*~ Tab Header Icons on Hover (except Active Tab) ~*/
 
 .theme-light .workspace-tab-header:not(.workspace-tab-header.is-active):hover {
-    color:  var(--color-l-gray-60) !important;
-    border: 1px solid var(--color-l-gray-60) !important;
+    color:  var(--color-l-gray-60);
+    border: 1px solid var(--color-l-gray-60);
 }
 
 /*~ Alternating Colored Headers (for Active Tab) — Left Panel ~*/
@@ -988,8 +1003,8 @@ body .workspace-tab-header
 /*~ Tab Header Icons on Hover (except Active Tab) ~*/
 
 .theme-dark .workspace-tab-header:not(.workspace-tab-header.is-active):hover {
-    color:  var(--color-d-gray-40) !important;
-    border: 1px solid var(--color-d-gray-40) !important;
+    color:  var(--color-d-gray-40);
+    border: 1px solid var(--color-d-gray-40);
 }
 
 /*~ Alternating Colored Headers (for Active Tab) — Left Panel ~*/
@@ -1130,16 +1145,23 @@ body .nav-action-button svg {
 /*─────────Vault Title──────────*/
 
 .nav-folder.mod-root > .nav-folder-title {
-    display: none; /* Remove display: if you want to see the Vault Title */
-    color: var(--text-muted);
-    font-size: var(--font-scale-0);
-    letter-spacing: var(--tracking-2);
-    margin-left: none;
+    display: none; /* Remove display: to show Vault Title */
+    top: 0;
+    position: sticky;
+    justify-content: center;
+    background: var(--background-secondary);
+    padding: 0;
+    padding-bottom: var(--scale-2-4);
+    border-bottom: 1px solid var(--background-modifier-border);
+    border-radius: 0;
+    margin-bottom: var(--scale-2-4);
 }
 
+/* don't remove !important */
 .nav-folder.mod-root > .nav-folder-title:hover {
-    color: none;
-    cursor: pointer;
+    color: var(--text-normal) !important;
+    background: transparent !important;
+    cursor: default;
 }
 
 /*─────────Starred Files──────────*/
@@ -1204,7 +1226,7 @@ body .nav-action-button svg {
 /*─────────Tree Items for Tabs──────────*/
 
 .tree-item-self {
-    font-size: var(--font-scale-0-5) !important;
+    font-size: var(--font-scale-0-5);
     border-radius: var(--scale-2-2);
 }
 
@@ -1309,7 +1331,8 @@ body .nav-action-button svg {
 }
 
 .nav-file-title-content,
-.search-result-file-title {
+.search-result-file-title,
+.nav-folder-title {
   text-overflow: unset;
   white-space: normal;
 }
@@ -1381,7 +1404,7 @@ File Explorer
 .workspace-leaf-content[data-type="search"]
 .tree-item.search-result.is-collapsed
 .tree-item-self {
-    font-size: var(--font-scale-0-5) !important;
+    font-size: var(--font-scale-0-5);
     line-height: calc(var(--line-height-1) - 1px);
     font-weight: var(--font-regular);
     transition: font-weight
@@ -1391,14 +1414,14 @@ File Explorer
 
 .workspace-leaf-content[data-type="search"]
 .tree-item-self {
-    font-size: var(--font-scale-0-5) !important;
+    font-size: var(--font-scale-0-5);
     line-height: calc(var(--line-height-1) - 1px);
     font-weight: var(--font-semi-bold);
 }
 
 .workspace-leaf-content[data-type="search"]
 .search-result-file-match {
-    font-size: var(--font-scale-0-5) !important;
+    font-size: var(--font-scale-0-5);
     font-style: italic;
     line-height: var(--line-height-1);
 }
@@ -1413,6 +1436,7 @@ File Explorer
     background: transparent;
 }
 
+/* don't remove !important */
 .theme-light .nav-file-title:hover,
 .theme-light .nav-folder-title:hover,
 .theme-light .nav-vault-title:hover,
@@ -1421,6 +1445,7 @@ File Explorer
     background: var(--color-l-gray-40) !important;
 }
 
+/* don't remove !important */
 .theme-light .nav-file-title:active,
 .theme-light .nav-folder-title:active,
 .theme-light .nav-vault-title:active,
@@ -1443,20 +1468,20 @@ File Explorer
 
 .theme-light .workspace-leaf-content[data-type="search"]
 .tree-item.search-result .search-result-file-match:hover {
-    color: var(--color-l-gray-80) !important;
-    background: var(--color-l-gray-40) !important;
+    color: var(--color-l-gray-80);
+    background: var(--color-l-gray-40);
 }
 
 .theme-light span.search-result-file-matched-text {
-    color: var(--color-l-black) !important;
+    color: var(--color-l-black);
     font-weight: var(--font-semi-bold);
-    background: var(--color-l-highlight-yellow) !important;
+    background: var(--color-l-highlight-yellow);
 }
 
 .theme-light .workspace-leaf-content[data-type="search"]
 .tree-item.search-result .search-result-file-match:hover
 span.search-result-file-matched-text {
-    background: var(--color-l-yellow-300) !important;
+    background: var(--color-l-yellow-300);
 }
 
 /*─────────File Explorer for Dark Theme──────────*/
@@ -1469,6 +1494,7 @@ span.search-result-file-matched-text {
     background: transparent;
 }
 
+/* don't remove !important */
 .theme-dark .nav-file-title:hover,
 .theme-dark .nav-folder-title:hover,
 .theme-dark .nav-vault-title:hover,
@@ -1477,6 +1503,7 @@ span.search-result-file-matched-text {
     background: var(--color-d-gray-60) !important;
 }
 
+/* don't remove !important */
 .theme-dark .nav-file-title:active,
 .theme-dark .nav-folder-title:active,
 .theme-dark .nav-vault-title:active,
@@ -1499,20 +1526,20 @@ span.search-result-file-matched-text {
 
 .theme-dark .workspace-leaf-content[data-type="search"]
 .tree-item.search-result .search-result-file-match:hover {
-    color: var(--color-d-gray-20) !important;
-    background: var(--color-d-gray-60) !important;
+    color: var(--color-d-gray-20);
+    background: var(--color-d-gray-60);
 }
 
 .theme-dark span.search-result-file-matched-text {
-    color: var(--color-d-black) !important;
+    color: var(--color-d-black);
     font-weight: var(--font-semi-bold);
-    background: var(--color-d-yellow-700) !important;
+    background: var(--color-d-yellow-700);
 }
 
 .theme-dark .workspace-leaf-content[data-type="search"]
 .tree-item.search-result .search-result-file-match:hover
 span.search-result-file-matched-text {
-    background: var(--color-d-yellow-500) !important;
+    background: var(--color-d-yellow-500);
 }
 
 /*────────────────────────────────────
@@ -1652,8 +1679,10 @@ Content / Active Note / Opened Notes
     display: none;
 }
 
-.view-header-icon[aria-label="Drag to rearrange"] {
-    top: 2px;
+.view-header-icon,
+.view-header-title,
+.view-action {
+    margin-top: 2px;
 }
 
 /* Some Fixes on Tiny Padding Issues */
@@ -1664,20 +1693,21 @@ Content / Active Note / Opened Notes
 
 /*─────────Note Header for Light Theme─────────*/
 
+/* don't remove !important */
 .theme-light .view-header,
 .theme-light .workspace-leaf.mod-active .view-header,
 .theme-light .worksapce-split.mod-root >
 .theme-light .workspace-leaf:first-of-type:last-of-type
 .view-header {
-    border-top: none !important;
+    border-top: none;
     border-left: none !important;
-    border-right: none !important;
+    border-right: none;
     border-bottom: 1px solid var(--color-l-gray-40) !important;
     background: var(--color-l-white) !important;
 }
 
 .theme-light .view-header-title {
-    color: var(--color-l-gray-50) !important;
+    color: var(--color-l-gray-50);
 }
 
 /* Non-active Notes Icon Colors */
@@ -1685,52 +1715,53 @@ Content / Active Note / Opened Notes
 .view-header .view-header-icon,
 .theme-light .workspace-leaf:not(.workspace-leaf.mod-active)
 .view-header .view-action {
-    color: var(--color-l-gray-50) !important;
+    color: var(--color-l-gray-50);
 }
 
 /* Non-active Notes "Drag to Rearrange Icon on Hover */
 .theme-light .workspace-leaf:not(.workspace-leaf.mod-active)
 .view-header .view-header-icon:hover {
-    color: var(--color-l-gray-80) !important;
+    color: var(--color-l-gray-80);
 }
 
 /* Action Icons for All Notes */
 .theme-light .workspace-leaf.mod-active .view-header-title,
 .theme-light .workspace-leaf.mod-active .view-action {
-    color: var(--color-l-gray-80) !important;
+    color: var(--color-l-gray-80);
 }
 
 .theme-light .workspace-leaf .view-header
 .view-action:nth-child(3n+1):hover {
-    color: var(--color-l-yellow-500) !important;
+    color: var(--color-l-yellow-500);
 }
 
 .theme-light .workspace-leaf .view-header
 .view-action:nth-child(3n+2):hover {
-    color: var(--color-l-red-500) !important;
+    color: var(--color-l-red-500);
 }
 
 .theme-light .workspace-leaf .view-header
 .view-action:nth-child(3n+3):hover {
-    color: var(--color-l-blue-500) !important;
+    color: var(--color-l-blue-500);
 }
 
 /*─────────Note Header for Dark Theme─────────*/
 
+/* don't remove !important */
 .theme-dark .view-header,
 .theme-dark .workspace-leaf.mod-active .view-header,
 .theme-dark .worksapce-split.mod-root >
 .theme-dark .workspace-leaf:first-of-type:last-of-type
 .view-header {
-    border-top: none !important;
+    border-top: none;
     border-left: none !important;
-    border-right: none !important;
+    border-right: none;
     border-bottom: 1px solid var(--color-d-gray-50) !important;
     background: var(--color-d-gray-70) !important;
 }
 
 .theme-dark .view-header-title {
-    color: var(--color-d-gray-20) !important;
+    color: var(--color-d-gray-20);
 }
 
 /* Non-active Notes Icon Colors */
@@ -1738,38 +1769,38 @@ Content / Active Note / Opened Notes
 .view-header .view-header-icon,
 .theme-dark .workspace-leaf:not(.workspace-leaf.mod-active)
 .view-header .view-action {
-    color: var(--color-d-gray-30) !important;
+    color: var(--color-d-gray-30);
 }
 
 .theme-dark .workspace-leaf:not(.workspace-leaf.mod-active) .view-header-title {
-    color: var(--color-d-gray-30) !important;
+    color: var(--color-d-gray-30);
 }
 
 /* Non-active Notes "Drag to Rearrange Icon on Hover */
 .theme-dark .workspace-leaf:not(.workspace-leaf.mod-active)
 .view-header .view-header-icon:hover {
-    color: var(--color-d-gray-20) !important;
+    color: var(--color-d-gray-20);
 }
 
 /* Action Icons for All Notes */
 .theme-dark .workspace-leaf.mod-active .view-header-title,
 .theme-dark .workspace-leaf.mod-active .view-action {
-    color: var(--color-d-gray-20) !important;
+    color: var(--color-d-gray-20);
 }
 
 .theme-dark .workspace-leaf .view-header
 .view-action:nth-child(3n+1):hover {
-    color: var(--color-d-yellow-700) !important;
+    color: var(--color-d-yellow-700);
 }
 
 .theme-dark .workspace-leaf .view-header
 .view-action:nth-child(3n+2):hover {
-    color: var(--color-d-red-700) !important;
+    color: var(--color-d-red-700);
 }
 
 .theme-dark .workspace-leaf .view-header
 .view-action:nth-child(3n+3):hover {
-    color: var(--color-d-blue-700) !important;
+    color: var(--color-d-blue-700);
 }
 
 /*────────────────────────────────────
@@ -1778,7 +1809,7 @@ Content / Active Note / Opened Notes
 
 .markdown-source-view.is-readable-line-width
 .CodeMirror {
-    max-width: var(--line-width);
+    max-width: calc(var(--line-width) + 48px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -1787,6 +1818,17 @@ Content / Active Note / Opened Notes
 .markdown-preview-sizer {
     width: var(--line-width);
     max-width: 80%;
+}
+
+.CodeMirror .CodeMirror-line {
+    padding:    var(--scale-0-0)
+                var(--scale-0-0)
+                var(--scale-0-0)
+                5px;
+}
+
+.CodeMirror-lines {
+    padding-top: calc(20px + var(--scale-2-8));
 }
 
 /*────────────────────────────────────
@@ -1805,7 +1847,7 @@ Content / Active Note / Opened Notes
 
 .cm-s-obsidian {
     font-optical-sizing: auto;
-    font-family: var(--font-preview);
+    font-family: var(--font-editor);
     line-height: var(--line-height-1);
     letter-spacing: var(--tracking-0);
     text-shadow: none;
@@ -1813,13 +1855,15 @@ Content / Active Note / Opened Notes
 
 /*──────────Headings──────────*/
 
+/* Header Sizing */
+
 .markdown-preview-view h1,
 .HyperMD-header-1,
 .cm-header-1 {
-    font-family: var(--font-heading);
+    font-family: var(--font-header);
     font-size: var(--font-scale-7);
     line-height: var(--line-height-7);
-    font-weight: var(--font-extra-bold) !important;
+    font-weight: var(--font-semi-bold);
     margin: var(--scale-8-2)
             var(--scale-0-0)
             var(--scale-8-2)
@@ -1829,10 +1873,10 @@ Content / Active Note / Opened Notes
 .markdown-preview-view h2,
 .HyperMD-header-2,
 .cm-header-2 {
-    font-family: var(--font-heading);
+    font-family: var(--font-header);
     font-size: var(--font-scale-6);
     line-height: var(--line-height-6);
-    font-weight: var(--font-extra-bold) !important;
+    font-weight: var(--font-semi-bold);
     margin: var(--scale-8-2)
             var(--scale-0-0)
             var(--scale-8-2)
@@ -1842,10 +1886,10 @@ Content / Active Note / Opened Notes
 .markdown-preview-view h3,
 .HyperMD-header-3,
 .cm-header-3 {
-    font-family: var(--font-heading);
+    font-family: var(--font-header);
     font-size: var(--font-scale-5);
     line-height: var(--line-height-5);
-    font-weight: var(--font-extra-bold) !important;
+    font-weight: var(--font-semi-bold);
     margin: var(--scale-8-2)
             var(--scale-0-0)
             var(--scale-8-2)
@@ -1855,10 +1899,10 @@ Content / Active Note / Opened Notes
 .markdown-preview-view h4,
 .HyperMD-header-4,
 .cm-header-4 {
-    font-family: var(--font-heading);
+    font-family: var(--font-header);
     font-size: var(--font-scale-4);
     line-height: var(--line-height-4);
-    font-weight: var(--font-extra-bold) !important;
+    font-weight: var(--font-semi-bold);
     margin: var(--scale-8-2)
             var(--scale-0-0)
             var(--scale-8-2)
@@ -1868,10 +1912,10 @@ Content / Active Note / Opened Notes
 .markdown-preview-view h5,
 .HyperMD-header-5,
 .cm-header-5 {
-    font-family: var(--font-heading);
+    font-family: var(--font-header);
     font-size: var(--font-scale-3);
     line-height: var(--line-height-3);
-    font-weight: var(--font-extra-bold) !important;
+    font-weight: var(--font-semi-bold);
     margin: var(--scale-8-2)
             var(--scale-0-0)
             var(--scale-8-2)
@@ -1881,15 +1925,88 @@ Content / Active Note / Opened Notes
 .markdown-preview-view h6,
 .HyperMD-header-6,
 .cm-header-6 {
-    color: var(--text-muted);
-    font-family: var(--font-heading);
+    font-family: var(--font-header);
     font-size: var(--font-scale-2);
     line-height: var(--line-height-2);
-    font-weight: var(--font-extra-bold) !important;
+    font-weight: var(--font-semi-bold);
     margin: var(--scale-8-2)
             var(--scale-0-0)
             var(--scale-8-2)
             var(--scale-0-0);
+}
+
+/* +++ Heading Size +++ */
+
+/* Heading Large Size */
+
+:root .primary-header-large-size {
+    /*──────────Typography Modular Scale──────────*/
+
+    /*  Based on Standard 16px  */
+    --scale-ratio: 1.48;
+
+    --font-scale-000: 0.547rem;
+    --font-scale-00: 0.676rem;
+    --font-scale-0: 0.81rem;
+    --font-scale-0-5: 0.875rem;
+    --font-scale-1: 1rem;
+    --font-scale-2: 1.198rem;
+    --font-scale-3: 1.48rem;
+    --font-scale-4: 1.774rem;
+    --font-scale-5: 2.19rem;
+    --font-scale-6: 2.625rem;
+    --font-scale-7: 3.242rem;
+    --font-scale-8: 3.885rem;
+    --font-scale-9: 4.798rem;
+    --font-scale-10: 5.75rem;
+}
+
+/* Heading Medium Size */
+
+:root .primary-header-medium-size {
+    /*──────────Typography Modular Scale──────────*/
+        
+    /*  Based on Standard 16px  */
+    --scale-ratio: 1.32;
+        
+    --font-scale-000: 0.652rem;
+    --font-scale-00: 0.694rem;
+    --font-scale-0: 0.783rem;
+    --font-scale-0-5: 0.875rem;
+    --font-scale-1: 1rem;
+    --font-scale-2: 1.179rem;
+    --font-scale-3: 1.32rem;
+    --font-scale-4: 1.557rem;
+    --font-scale-5: 1.742rem;
+    --font-scale-6: 2.055rem;
+    --font-scale-7: 2.3rem;
+    --font-scale-8: 2.712rem;
+    --font-scale-9: 3.036rem;
+    --font-scale-10: 3.58rem;
+}
+
+/* Heading Small Size */
+
+:root .primary-header-small-size {
+    /*──────────Typography Modular Scale──────────*/
+        
+    /*  Based on Standard 16px  */
+    --scale-ratio: 1.23;
+        
+    --font-scale-000: 0.652rem;
+    --font-scale-00: 0.694rem;
+    --font-scale-0: 0.783rem;
+    --font-scale-0-5: 0.875rem;
+    --font-scale-1: 1rem;
+    --font-scale-2: 1.12rem;
+    --font-scale-3: 1.23rem;
+    --font-scale-4: 1.378rem;
+    --font-scale-5: 1.513rem;
+    --font-scale-6: 1.695rem;
+    --font-scale-7: 1.861rem;
+    --font-scale-8: 2.085rem;
+    --font-scale-9: 2.289rem;
+    --font-scale-10: 2.564rem;
 }
 
 /*────────────────────────────────────
@@ -2055,6 +2172,7 @@ blockquote p {
     margin-right: var(--scale-0-0);
 }
 
+/* don't remove !important */
 .HyperMD-quote.CodeMirror-line {
     font-style: italic;
     padding:    var(--scale-0-0)
@@ -2336,10 +2454,10 @@ blockquote p {
     padding-bottom: var(--scale-0-0);
 }
 
-
 /*~ Ordered List / Number List ~*/
 
-ol > li::marker {
+ol > li::marker,
+.cm-s-obsidian span.cm-formatting-list {
     font-weight: var(--font-regular);
     font-size: var(--font-scale-0-5);
     color: var(--text-muted);
@@ -2473,6 +2591,7 @@ ol {
 
 /*──────────Checkboxes──────────*/
 
+/* don't remove !important */
 input[type=checkbox] {
     -webkit-appearance: none;
     appearance: none;
@@ -2539,7 +2658,7 @@ input[type=checkbox]:checked {
 .theme-light pre[class*=language-],
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-    font-family: var(--font-monospace);
+    font-family: var(--font-code);
     font-weight: var(--font-regular);
     font-size: var(--font-scale-0-5);
     line-height: var(--line-height-2);
@@ -2571,13 +2690,21 @@ input[type=checkbox]:checked {
 .copy-code-button {
     display: inline-block;
     font-family: var(--default-font);
-    font-size: var(--font-scale-0-5) !important;
+    font-size: var(--font-scale-0-5);
     top: var(--scale-2-1);
     right: var(--scale-2-2);
-    border-radius: var(--scale-2-3);
+    border-radius: var(--scale-2-4);
 }
 
 /* Codeblock/Inline Code Formatting for Light Theme */
+
+.theme-light .markdown-preview-view code,
+.theme-light .markdown-preview-view pre,
+.theme-light .markdown-preview-view span.cm-inline-code,
+.theme-light code[class*=language-],
+.theme-light pre[class*=language-] {
+    background: var(--color-l-gray-10);
+}
 
 .theme-light .cm-s-obsidian .HyperMD-codeblock,
 .theme-light .CodeMirror-line span .cm-inline-code,
@@ -2644,22 +2771,15 @@ input[type=checkbox]:checked {
     text-shadow: none;
 }
 
-/* Copy Code Button for Light Theme */
-
-.theme-light .copy-code-button {
-    color: var(--color-l-gray-60);
-    background: var(--color-l-white);
-}
-
-.theme-light .copy-code-button:hover {
-    background: var(--color-l-gray-40);
-}
-
-.theme-light .copy-code-button:active {
-    background: var(--color-l-whiter);
-}
-
 /* Codeblock/Inline Code Formatting for Dark Theme */
+
+.theme-dark .markdown-preview-view code,
+.theme-dark .markdown-preview-view pre,
+.theme-dark .markdown-preview-view span.cm-inline-code,
+.theme-dark code[class*=language-],
+.theme-dark pre[class*=language-] {
+    background: var(--color-d-gray-90);
+}
 
 .theme-dark .cm-s-obsidian .HyperMD-codeblock,
 .theme-dark .CodeMirror-line span .cm-inline-code,
@@ -2725,31 +2845,167 @@ input[type=checkbox]:checked {
     text-shadow: none;
 }
 
-/* Copy Code Button for Dark Theme */
-
-.theme-dark .copy-code-button {
-    color: var(--color-d-gray-20);
-    background: var(--color-d-gray-60);
-}
-
-.theme-dark .copy-code-button:hover {
-    background: var(--color-d-gray-50);
-}
-
-.theme-dark .copy-code-button:active {
-    background: var(--color-d-blacker);
-}
-
 /*──────────Aside HTML / Sidenotes──────────*/
 
-/* Not Done - COMING SOON */
+:root {
+    --aside-width: calc(var(--line-width) * 0.38);
+    --aside-margin: calc(-1 * (var(--aside-width)
+                    + var(--scale-8-3)));
+    --aside-header: "💭 Note";
+    --aside-hide-icon: "✨";
+}
+
+aside,
+.aside-show,
+.aside-hide,
+.aside-in {
+    font-size: inherit;
+    padding:    var(--scale-2-8)
+                var(--scale-2-10)
+                var(--scale-2-8)
+                var(--scale-2-10);
+    margin: 0em 0em 1em var(--scale-2-8);
+    border-radius: var(--scale-2-4);
+    z-index: 0;
+}
+
+.is-readable-line-width aside,
+.is-readable-line-width .aside-show,
+.is-readable-line-width .aside-hide:hover {
+    margin-right: var(--aside-margin);
+}
+
+aside .internal-embed.is-loaded:not(.image-embed),
+aside .markdown-embed,
+.aside-show .internal-embed.is-loaded:not(.image-embed),
+.aside-show .markdown-embed,
+.aside-hide .internal-embed.is-loaded:not(.image-embed),
+.aside-hide .markdown-embed,
+.aside-in .internal-embed.is-loaded:not(.image-embed),
+.aside-in .markdown-embed {
+    width: 100%;
+    margin: var(--scale-8-1)
+            var(--scale-0-0)
+            var(--scale-8-1)
+            var(--scale-0-0);
+}
+
+aside .markdown-embed .markdown-preview-view,
+.aside-show .markdown-embed .markdown-preview-view,
+.aside-hide .markdown-embed .markdown-preview-view,
+.aside-in .markdown-embed .markdown-preview-view {
+    max-height: 200px;
+}
+
+aside:before,
+.aside-show:before,
+.aside-hide:hover:before,
+.aside-in:before {
+    content: var(--aside-header);
+    color: var(--text-muted);
+    font-size: inherit;
+    font-weight: var(--font-semi-bold);
+    display: block;
+    padding-bottom: var(--scale-2-3);
+    border-bottom: 1px solid var(--background-modifier-border);
+    margin-bottom: var(--scale-2-4);
+}
+
+/* <aside> Tag */
+
+aside {
+    background: var(--background-primary-alt);
+    width: var(--aside-width);
+    position: relative;
+    float: right;
+}
+
+/* Show Aside for Readable Line Width: OFF */
+.aside-show {
+    background: var(--background-primary-alt);
+    width: var(--aside-width);
+    position: relative;
+    float: right;
+    clear: right;
+}
+
+/* Hide and Hover */
+.aside-hide {
+    background: var(--background-primary-alt);
+    position: relative;
+    float: right;
+    clear: right;
+    width: 2.8em;
+    height: 2.8em;
+    overflow: hidden;
+    padding:    0.55em
+                0
+                0
+                0.7em;
+}
+
+.is-readable-line-width .aside-hide {
+    margin-right: calc(-4.25em - 1px);
+}
+
+.aside-hide:before {
+    display: block;
+    content: var(--aside-hide-icon);
+    padding-bottom: 1em;
+}
+
+.aside-hide:hover {
+    background-color: var(--background-primary-alt);
+    width: var(--aside-width);
+    height: auto;
+    white-space: normal;
+    text-overflow: unset;
+    padding:    var(--scale-2-8)
+                var(--scale-2-10)
+                var(--scale-2-8)
+                var(--scale-2-10);
+    z-index: 3;
+}
+
+/* Aside Inside the Note for Readable Line Width: OFF */
+
+.aside-in {
+    background-color: var(--background-primary-alt);
+    width: var(--aside-width);
+    position: relative;
+    float: right;
+}
+
+/* Aside for Light Theme */
+.theme-light aside,
+.theme-light .aside-show,
+.theme-light .aside-hide,
+.theme-light .aside-in {
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    box-shadow: 0px -2px 0px 0px
+                rgba(100, 100, 100, 0.15) inset,
+                0px 2px 4px 0px 
+                rgba(100, 100, 100, 0.1);
+}
+
+/* Aside for Dark Theme */
+.theme-dark aside,
+.theme-dark .aside-show,
+.theme-dark .aside-hide,
+.theme-dark .aside-in {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0px -2px 0px 0px
+                rgba(0, 0, 0, 0.15) inset,
+                0px 2px 4px 0px 
+                rgba(0, 0, 0, 0.1);
+}
 
 /*──────────Footnotes──────────*/
 
 /* Footnotes for Preview Mode */
 
 .markdown-preview-view .footnotes hr {
-    margin-bottom: var(--scale-8-2) !important;
+    margin-bottom: var(--scale-8-2);
 }
 
 .markdown-preview-section .footnotes {
@@ -2761,7 +3017,7 @@ input[type=checkbox]:checked {
 /* Footnotes for Edit Mode */
 
 span.cm-link.cm-hmd-footnote {
-    color: var(--text-muted) !important;
+    color: var(--text-muted);
     vertical-align: top;
 }
 
@@ -2769,7 +3025,7 @@ span.cm-link.cm-hmd-footnote {
 .cm-s-obsidian span.cm-blockid {
     display: inline-block;
     color: var(--text-muted);
-    font-weight: var(--font-semi-bold) !important;
+    font-weight: var(--font-semi-bold);
     vertical-align: text-top;
     margin-top: -0.1rem;
 }
@@ -2777,14 +3033,14 @@ span.cm-link.cm-hmd-footnote {
 /*──────────Gutter/Line Number──────────*/
 
 .CodeMirror-linenumber {
-    font-family: var(--font-monospace);
+    font-family: var(--font-code);
     font-size: var(--font-scale-0);
     min-width: var(--scale-2-4);
     text-align: right;
 }
 
 .cm-s-obsidian .CodeMirror-linenumber {
-    color: var(--text-faint) !important;
+    color: var(--text-faint);
 }
 
 /*──────────Active Line Background──────────*/
@@ -2840,12 +3096,55 @@ span.cm-link.cm-hmd-footnote {
 /*──────────Markdown Embed──────────*/
 
 .markdown-embed {
-    border: 1px solid var(--background-modifier-border) !important;
+    border: 1px solid var(--background-modifier-border);
     border-radius: var(--scale-2-6);
+}
+
+/* Markdown Embed Padding with Readable Line Width OFF */
+.markdown-embed .markdown-preview-view {
+    padding:    var(--scale-0-0)
+                var(--scale-8-4)
+                var(--scale-0-0)
+                var(--scale-8-4);
+}
+
+/* Markdown Embed Padding with Readable Line Width ON */
+.is-readable-line-width .markdown-embed
+.markdown-preview-view {
+    padding:    var(--scale-0-0)
+                var(--scale-0-0)
+                var(--scale-0-0)
+                var(--scale-0-0);
+}
+
+.markdown-embed-title {
+    height: auto;
+    color: var(--text-muted);
+    font-size: var(--font-scale-1);
+    line-height: var(--line-height-1);
+    text-align: left;
+    padding:    calc(var(--scale-8-1) - 4px)
+                var(--scale-8-5)
+                var(--scale-8-1)
+                var(--scale-2-6);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.markdown-embed-link {
+    top: 0;
+    right: 0;
+    margin: calc(var(--scale-2-6) - 1px)
+            var(--scale-2-6)
+            var(--scale-8-1)
+            var(--scale-0-0);
 }
 
 .theme-light .markdown-embed {
     background: var(--color-l-gray-10);
+}
+
+.theme-dark .markdown-embed {
+    background: var(--color-d-gray-90);
 }
 
 /*──────────Mermaid JS (Diagram Generator)──────────*/
@@ -2856,13 +3155,13 @@ span.cm-link.cm-hmd-footnote {
 
 .mermaid .node .label {
     font-size: var(--font-scale-0);
-    text-align: left !important;
+    text-align: left;
 }
 
 /*──────────Edit Mode Markdown Table──────────*/
 
 .cm-s-obsidian .HyperMD-table-row {
-    font-size: var(--font-scale-0);
+    font-size: var(--font-scale-0-5);
     font-weight: var(--font-regular);
 }
 
@@ -2905,7 +3204,7 @@ svg.forward-arrow {
 }
 
 .theme-dark .frontmatter-container span.frontmatter-alias {
-    background: var(--color-d-gray-90);
+    background: var(--color-d-gray-70);
 }
 
 .theme-dark .frontmatter-container span.frontmatter-alias
@@ -2916,7 +3215,7 @@ svg.forward-arrow {
 /* YAML Edit Mode */
 
 span.cm-hmd-frontmatter {
-    font-size: var(--font-scale-0);
+    font-size: var(--font-scale-0-5);
 }
 
 /* YAML Edit for Light Theme */
@@ -2972,7 +3271,8 @@ span.cm-hmd-frontmatter {
 }
 
 .document-search-button {
-    border-radius: var(--scale-2-3);
+    line-height: var(--line-height-0);
+    border-radius: var(--scale-2-2);
 }
 
 body:not(.no-svg-replace) .document-search-close-button:before {
@@ -2989,12 +3289,11 @@ body:not(.no-svg-replace) .document-search-close-button:before {
 }
 
 .theme-light .workspace .document-search-button {
-    color: var(--text-on-accent);
-    background: var(--interactive-accent);
+    color: var(--text-on-accent) !important;
+    background: var(--interactive-accent) !important;
 }
 
 .theme-light .workspace .document-search-button:hover {
-    color: var(--text-on-accent);
     background: var(--interactive-accent-hover) !important;
 }
 
@@ -3010,7 +3309,6 @@ body:not(.no-svg-replace) .document-search-close-button:before {
 }
 
 .theme-dark .workspace .document-search-button:hover {
-    color: var(--text-on-accent-hover);
     background: var(--interactive-accent-hover) !important;
 }
 
@@ -3278,7 +3576,8 @@ body:not(.no-svg-replace) .search-input-clear-button {
                 var(--scale-8-4)
                 var(--scale-8-4)
                 var(--scale-8-4);
-    border: 1px solid var(--background-modifier-border);
+    border-left: 1px solid 
+                var(--background-modifier-border);
 }
 
 .modal .vertical-tab-header-group-items
@@ -3423,7 +3722,7 @@ body:not(.no-svg-replace) .search-input-clear-button {
 }
 
 .menu .menu-item .menu-item-icon {
-    vertical-align: -1px !important;
+    vertical-align: -1px;
 }
 
 /*─────────Community Plugin Search Modal──────────*/
@@ -3475,8 +3774,9 @@ Search Part Modal */
         Buttons Component
 ────────────────────────────────────*/
 
+/* don't remove !important */
 button {
-    font-family: var(--font-ui) !important;
+    font-family: var(--default-font);
     padding:    var(--scale-2-3)
                 var(--scale-2-8)
                 var(--scale-2-4)
@@ -3651,8 +3951,8 @@ input[type='number'] {
 }
 
 .theme-light .checkbox-container.is-enabled {
-    border: var(--color-l-green-300) !important;
-    background: var(--color-l-green-300) !important;
+    border: var(--color-l-green-300);
+    background: var(--color-l-green-300);
 }
 
 /* Toggles in Modal for Dark Theme */
@@ -3678,14 +3978,14 @@ input[type='number'] {
 input[type="range"] {
     background-color: transparent;
     height: 24px;
-    padding: 0px !important;
+    padding: 0px;
     -webkit-appearance: none;
     cursor: default;
 }
   
 input[type="range"]::-webkit-slider-runnable-track {
     background: var(--background-modifier-border);
-    height: 2px !important;
+    height: 2px;
 }
   
 input[type="range"]::-webkit-slider-thumb {
@@ -3718,7 +4018,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 ────────────────────────────────────*/
 
 .dropdown {
-    font-family: var(--font-ui);
+    font-family: var(--default-font);
     font-size: var(--font-scale-0-5);
     line-height: var(--line-height-1);
     width: 215px;
@@ -3798,7 +4098,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 ────────────────────────────────────*/
 
 .notice {
-    font-family: var(--font-monospace);
+    font-family: var(--font-code);
     border-radius: var(--scale-2-4);
     transition: var(--duration-moderate-2)
                 var(--motion-jumpy);
@@ -3849,7 +4149,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     width: 1px;
-    height: 105% !important;
+    height: 105%;
     top: -24px;
     background: var(--background-modifier-border);
     transition: var(--duration-fast-2)
@@ -3935,6 +4235,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .graph-controls::-webkit-scrollbar {
     visibility: visible;
     width: var(--scale-2-2);
+    height: var(--scale-2-2);
     border-radius: 0;
     display: inherit;
     background: transparent;
@@ -4017,20 +4318,20 @@ input[type="range"]::-webkit-slider-thumb:active {
 .progress-bar-line {
     width: 150%;
     position: absolute;
-    border-radius: var(--scale-2-4) !important;
+    border-radius: var(--scale-2-4);
     height: var(--scale-8-2);
     background: var(--background-modifier-border);
 }
 
 .progress-bar-subline {
-    border-radius: var(--scale-2-4) !important;
+    border-radius: var(--scale-2-4);
     height: var(--scale-8-1);
 }
 
 .progress-bar-message {
     font-size: var(--font-scale-3);
     color: var(--text-muted);
-    font-family: var(--font-monospace);
+    font-family: var(--font-code);
     text-transform: uppercase;
     letter-spacing: var(--tracking-2);
     animation: blinkingText 0.4s infinite;
@@ -4083,6 +4384,8 @@ For All Sizes
 Phone (max-width: 400pt)
     Variables
         Typography Modular Scale
+    Content / Active Note
+        Aside/Sidenotes
     Other Components
         Modals
 
@@ -4094,6 +4397,8 @@ Tablet (min-width: 400pt)
         Typography Modular Scale
     Workspace
         Workspace Sidebar
+    Content / Active Note
+        Aside/Sidenotes
     Other Components
         Modals
         Pull Down Action
@@ -4213,6 +4518,33 @@ Tablet (min-width: 400pt)
 }
 
 /*────────────────────────────────────
+                Editor
+────────────────────────────────────*/
+
+.is-mobile .cm-line {
+    margin: 0;
+    padding:    var(--scale-0-0)
+                var(--scale-0-0);
+}
+
+.is-mobile .markdown-source-view .cm-scroller {
+    padding:    var(--scale-2-8)
+                var(--scale-2-10);
+}
+
+.is-mobile .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+    max-width: var(--line-width);
+}
+
+.is-mobile .cm-scroller {
+    line-height: var(--line-height-1);
+}
+
+.is-mobile .cm-content {
+    padding-top: 0;
+}
+
+/*────────────────────────────────────
 +++++++++++Other Components+++++++++++
 ────────────────────────────────────*/
 
@@ -4224,7 +4556,7 @@ Tablet (min-width: 400pt)
 
 .is-mobile .vertical-tab-header::before {
     content: "Settings";
-    font-family: var(--font-ui);
+    font-family: var(--default-font);
     font-weight: var(--font-semi-bold);
     color: var(--text-muted);
     background: var(--background-secondary);
@@ -4260,6 +4592,7 @@ Tablet (min-width: 400pt)
 
 /*─────────Settings Modal──────────*/
 
+/* don't remove !important */
 .is-mobile .workspace {
     transform: none !important;
 }
@@ -4346,6 +4679,50 @@ Tablet (min-width: 400pt)
     }
 
     /*────────────────────────────────────
+    +++++++++Content / Active Note++++++++
+    ────────────────────────────────────*/
+
+    /*────────────────────────────────────
+                    Editor
+    ────────────────────────────────────*/
+
+    .is-mobile .markdown-preview-view.is-readable-line-width {
+        padding: 0 0;
+    }
+
+    .is-mobile .is-readable-line-width .cm-scroller {
+        width: var(--line-width);
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 16px 0px;
+    }
+
+    /*──────────Aside HTML / Sidenotes──────────*/
+
+    .is-mobile aside,
+    .is-mobile .aside-show,
+    .is-mobile .aside-in {
+        width: unset;
+        clear: both;
+        margin: 0
+                auto
+                1em
+                auto;
+        z-index: 0;
+    }
+
+    .is-mobile .aside-hide:hover {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .is-mobile .is-readable-line-width .aside-hide {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    /*────────────────────────────────────
     +++++++++++Other Components+++++++++++
     ────────────────────────────────────*/
 
@@ -4378,6 +4755,8 @@ Tablet (min-width: 400pt)
         left: 0;
         width: 100%;
         max-width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
     }
 
     .is-mobile .modal.mod-settings {
@@ -4418,14 +4797,7 @@ Tablet (min-width: 400pt)
 
 @media (max-width: 600pt) {
 
-    /*────────────────────────────────────
-                    Editor
-    ────────────────────────────────────*/
 
-    .is-mobile .markdown-preview-view.is-readable-line-width,
-    .is-mobile .cm-s-obisidian.is-readable-line-width {
-        padding: 0 0;
-    }
 
 }
 
@@ -4479,6 +4851,31 @@ Tablet (min-width: 400pt)
         border: 1px solid var(--background-modifier-border);
         box-shadow: 0px 0px 16px 0px
                     var(--background-modifier-box-shadow);
+    }
+
+    /*────────────────────────────────────
+    +++++++++Content / Active Note++++++++
+    ────────────────────────────────────*/
+
+    /*──────────Aside HTML / Sidenotes──────────*/
+
+    .is-mobile aside,
+    .is-mobile .aside-show,
+    .is-mobile .aside-in {
+        width: var(--aside-width);
+        clear: both;
+        margin: 0em 0em 1em var(--scale-2-8);
+        z-index: 0;
+    }
+
+    .is-mobile .aside-hide:hover {
+        width: var(--aside-width);
+        margin-left: var(--scale-2-8);
+    }
+
+    .is-mobile .is-readable-line-width .aside-hide {
+        margin-right: 0;
+        margin-bottom: 1em;
     }
 
     /*────────────────────────────────────
@@ -4547,6 +4944,29 @@ Tablet (min-width: 400pt)
 
 }
 
+@media (min-width: 1000pt) {
+    
+    /*──────────Aside HTML / Sidenotes──────────*/
+
+    .is-mobile aside,
+    .is-mobile .aside-show,
+    .is-mobile .aside-in {
+        width: var(--aside-width);
+        clear: both;
+        z-index: 0;
+    }
+
+    .is-mobile .is-readable-line-width aside,
+    .is-mobile .is-readable-line-width .aside-show,
+    .is-mobile .is-readable-line-width .aside-hide:hover {
+        margin-right: var(--aside-margin);
+    }
+
+    .is-mobile .is-readable-line-width .aside-hide {
+        margin-right: calc(-4.25em - 1px);
+    }
+}
+
 /*────────────────────────────────────
 ++++++++++++++++++++++++++++++++++++++
             Community Plugins
@@ -4606,7 +5026,7 @@ Tablet (min-width: 400pt)
 /* Removes Scrollbar in Calendar */
 .workspace-leaf-content[data-type="calendar"]
 ::-webkit-scrollbar {
-    display: none !important;
+    display: none;
 }
 
 /*─────────Calendar Plugin for Light Theme──────────*/
@@ -4702,6 +5122,7 @@ Tablet (min-width: 400pt)
     Sliding Panes (Andy's Mode)
 ────────────────────────────────────*/
 
+/* don't remove !important */
 body.plugin-sliding-panes-rotate-header .workspace
 > .mod-root
 > .workspace-leaf
@@ -4710,6 +5131,7 @@ body.plugin-sliding-panes-rotate-header .workspace
     border-right: 1px solid var(--background-modifier-border) !important;
 }
 
+/* don't remove !important */
 body.plugin-sliding-panes-rotate-header .mod-root
 > .workspace-leaf {
     border-left: 1px solid var(--background-modifier-border) !important;
@@ -4726,8 +5148,9 @@ body.plugin-sliding-panes-rotate-header
     margin-bottom: var(--scale-2-2);
 }
 
+/* don't remove !important */
 body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
-    box-shadow: var(--color-l-shadow-100) !important;
+    box-shadow: none !important;
 }
 
 /*────────────────────────────────────
@@ -4741,12 +5164,12 @@ body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 .dataview.table-view-table > thead > tr > th {
     font-size: var(--font-scale-1);
     border-width: 0px;
-    border-bottom: 1px solid var(--background-modifier-border) !important;
+    border-bottom: 1px solid var(--background-modifier-border);
 }
 
 .dataview.table-view-table
 .table-view-tbody tr {
-    border-bottom: 1px solid var(--background-modifier-border) !important;
+    border-bottom: 1px solid var(--background-modifier-border);
 }
 
 .dataview.table-view-table
@@ -4789,23 +5212,24 @@ Outliner Plugin (Edit Mode Relationship Lines)
 
 .outliner-plugin-bls .cm-s-obsidian
 span.cm-formatting-list-ol {
-    margin-left: -2px !important;
+    margin-left: -2px;
     margin-right: -8px;
 }
 
 .outliner-plugin-bls .cm-s-obsidian
 span.cm-formatting-list-ol{
     color: var(--text-faint);
-    font-family: var(--font-monospace);
+    font-family: var(--font-code);
     font-size: var(--font-scale-0-5);
 }
 
 .outliner-plugin-bls .cm-s-obsidian
 span.cm-formatting-list-ul{
     color: var(--text-faint);
-    font-family: var(--font-sans);
+    font-family: var(--font-editor);
 }
 
+/* don't remove !important */
 .outliner-plugin-bls .cm-s-obsidian
 span.cm-formatting-list-ul:before {
     margin-top: -1.5px !important;
@@ -4822,9 +5246,8 @@ span .cm-hmd-list-indent::before {
     background-image:
         linear-gradient(
             to right, var(--background-modifier-border) 1px,
-            transparent 0px)
-            !important;
-    background-size: 1.6ch 1px !important;
+            transparent 0px);
+    background-size: 1.6ch 1px;
     width: 100%;
     top: -1.6em;
     left: -2px;
@@ -4983,8 +5406,8 @@ body:not(.no-svg-replace) svg.box-glyph,
 body:not(.no-svg-replace) svg.wand,
 body:not(.no-svg-replace) svg.longform,
 body:not(.no-svg-replace) svg.changelog {
-    height: var(--scale-8-2) !important;
-    width: var(--scale-8-2) !important;
+    height: var(--scale-8-2);
+    width: var(--scale-8-2);
     background-color: currentColor;
 }
 
