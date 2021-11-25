@@ -4571,7 +4571,13 @@ Tablet (min-width: 400pt)
     justify-content: center;
     text-align: center;
     border-bottom: 1px solid var(--background-modifier-border);
+    border-top-right-radius: var(--scale-2-8);
+    border-top-left-radius: var(--scale-2-8);
     z-index: 1;
+}
+
+.is-mobile .vertical-tab-header {
+    border-radius: var(--scale-2-8);
 }
 
 .is-mobile .modal-setting-back-button {
