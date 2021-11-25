@@ -3777,7 +3777,7 @@ Search Part Modal */
 
 /* don't remove !important */
 button {
-    font-family: var(--default-font);
+    font-family: var(--default-font) !important;
     padding:    var(--scale-2-3)
                 var(--scale-2-8)
                 var(--scale-2-4)
