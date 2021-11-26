@@ -1809,7 +1809,7 @@ Content / Active Note / Opened Notes
 
 .markdown-source-view.is-readable-line-width
 .CodeMirror {
-    max-width: calc(var(--line-width) + 48px);
+    max-width: 672px;
     margin-left: auto;
     margin-right: auto;
 }
