@@ -2921,6 +2921,13 @@ aside {
     float: right;
 }
 
+/* <s> Tag */
+s.aside-show,
+s.aside-hide,
+s.aside-in {
+    text-decoration: unset;
+}
+
 /* Show Aside for Readable Line Width: OFF */
 .aside-show {
     background: var(--background-primary-alt);
