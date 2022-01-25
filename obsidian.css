@@ -1879,55 +1879,55 @@ strong em, em strong,
 }
 
 /* Preview Resolved Links */
-.modal a:not(a.footnote-link, a.tag, button a), .view-content a:not(a.footnote-link, a.tag, button a) {
+.view-content a:not(a.footnote-link, a.tag) {
   word-break: break-all;
   color: var(--md-color-reslink);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-reslink);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-.modal a:not(a.footnote-link, a.tag, button a):hover, .view-content a:not(a.footnote-link, a.tag, button a):hover {
+.view-content a:not(a.footnote-link, a.tag):hover {
   color: var(--md-color-reslink-hover);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-reslink-hover);
   cursor: pointer;
 }
-.modal a:not(a.footnote-link, a.tag, button a):active, .view-content a:not(a.footnote-link, a.tag, button a):active {
+.view-content a:not(a.footnote-link, a.tag):active {
   color: var(--md-color-reslink-active);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-reslink-active);
 }
-.markdown-preview-view a:not(a.footnote-link, a.tag, button a).internal-link, .markdown-preview-view a:not(a.footnote-link, a.tag, button a).external-link {
+.markdown-preview-view a:not(a.footnote-link, a.tag).internal-link, .markdown-preview-view a:not(a.footnote-link, a.tag).external-link {
   word-break: break-all;
   color: var(--md-color-reslink);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-reslink);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-.markdown-preview-view a:not(a.footnote-link, a.tag, button a).internal-link:hover, .markdown-preview-view a:not(a.footnote-link, a.tag, button a).external-link:hover {
+.markdown-preview-view a:not(a.footnote-link, a.tag).internal-link:hover, .markdown-preview-view a:not(a.footnote-link, a.tag).external-link:hover {
   color: var(--md-color-reslink-hover);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-reslink-hover);
   cursor: pointer;
 }
-.markdown-preview-view a:not(a.footnote-link, a.tag, button a).internal-link:active, .markdown-preview-view a:not(a.footnote-link, a.tag, button a).external-link:active {
+.markdown-preview-view a:not(a.footnote-link, a.tag).internal-link:active, .markdown-preview-view a:not(a.footnote-link, a.tag).external-link:active {
   color: var(--md-color-reslink-active);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-reslink-active);
 }
-.markdown-preview-view a:not(a.footnote-link, a.tag, button a).internal-link.is-unresolved, .markdown-preview-view a:not(a.footnote-link, a.tag, button a).external-link.is-unresolved {
+.markdown-preview-view a:not(a.footnote-link, a.tag).internal-link.is-unresolved, .markdown-preview-view a:not(a.footnote-link, a.tag).external-link.is-unresolved {
   color: var(--md-color-unreslink);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-unreslink);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-.markdown-preview-view a:not(a.footnote-link, a.tag, button a).internal-link.is-unresolved:hover, .markdown-preview-view a:not(a.footnote-link, a.tag, button a).external-link.is-unresolved:hover {
+.markdown-preview-view a:not(a.footnote-link, a.tag).internal-link.is-unresolved:hover, .markdown-preview-view a:not(a.footnote-link, a.tag).external-link.is-unresolved:hover {
   color: var(--md-color-unreslink-hover);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-unreslink-hover);
   cursor: pointer;
 }
-.markdown-preview-view a:not(a.footnote-link, a.tag, button a).internal-link.is-unresolved:active, .markdown-preview-view a:not(a.footnote-link, a.tag, button a).external-link.is-unresolved:active {
+.markdown-preview-view a:not(a.footnote-link, a.tag).internal-link.is-unresolved:active, .markdown-preview-view a:not(a.footnote-link, a.tag).external-link.is-unresolved:active {
   color: var(--md-color-unreslink-active);
   text-decoration: none;
   border-bottom: 1px solid var(--md-color-unreslink-active);

@@ -79,8 +79,7 @@
 }
 
 /* Preview Resolved Links */
-a:not(a.footnote-link, a.tag, button a) {
-    .modal &,
+a:not(a.footnote-link, a.tag) {
     .view-content & {
         word-break: break-all;
         color: var(--md-color-reslink);
