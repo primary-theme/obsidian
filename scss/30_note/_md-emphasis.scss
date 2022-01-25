@@ -11,7 +11,7 @@ strong,
 em,
 .cm-em,
 .cm-s-obsidian span.cm-quote.cm-em,
-.markdown-preview-view em:not(mark em) {
+.markdown-preview-view em {
     color: var(--md-color-italic);
 }
 
