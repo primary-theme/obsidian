@@ -37,14 +37,11 @@ del,
 
 /* Highlight */
 mark,
-mark em,
-mark strong,
-mark strong em,
-mark em strong,
 .cm-s-obsidian span.cm-highlight,
 .markdown-source-view.is-live-preview
 .cm-header.cm-formatting-highlight,
 .cm-s-obsidian span.cm-quote.cm-highlight,
+.markdown-preview-view mark em,
 .markdown-preview-view mark {
     color: var(--md-color-highlight-text-yellow);
     background: var(--md-color-highlight-bg-yellow);
