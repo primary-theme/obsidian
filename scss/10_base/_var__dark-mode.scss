@@ -1,0 +1,132 @@
+/*────────────────────────────────────
+            Dark Theme
+────────────────────────────────────*/
+
+.theme-dark {
+
+    /*─────────Original Obsidian Variables──────────*/
+    
+    --background-primary:           var(--color-d-gray-70);
+    --background-primary-alt:       var(--color-d-gray-90);
+    
+    --background-secondary:         var(--color-d-black);
+    --background-secondary-alt:     var(--color-d-black);
+    
+    --background-modifier-border:   var(--color-d-gray-50);
+    
+    --background-modifier-form-field:               var(--color-d-blacker);
+    --background-modifier-form-field-highlighted:   var(--color-d-black);
+    --background-modifier-box-shadow:               var(--color-d-shadow-100);
+    
+    --background-modifier-success:      var(--color-d-green-300);
+    --background-modifier-error:        var(--color-d-red-500);
+    --background-modifier-error-hover:  var(--color-d-red-700);
+    --background-modifier-cover:        var(--color-d-shadow-cover);
+    
+    --text-normal:  var(--color-d-white);
+    --text-muted:   var(--color-d-gray-20);
+    --text-faint:   var(--color-d-gray-30);
+    
+    --text-accent:      var(--color-d-yellow-500);
+    --text-accent-hover:var(--color-d-yellow-300) ;
+    
+    --text-error:       var(--color-d-red-500);
+    --text-error-hover: var(--color-d-red-300);
+    
+    --text-highlight-bg:        var(--color-d-highlight-yellow);
+    --text-highlight-bg-active: var(--color-d-highlight-yellow);
+    --highlight-mix-blend-mode: lighten;
+    
+    --text-selection:   var(--color-d-gray-50);
+    
+    --text-on-accent:   var(--color-d-white);
+    
+    --interactive-hover:        var(--color-d-gray-60);
+    --interactive-accent:       var(--color-d-gray-40);
+    --interactive-accent-rgb:   92, 78, 61;
+    --interactive-accent-hover: var(--color-d-gray-50);
+    --interactive-success:      var(--color-d-green-700);
+    
+    /*──────────The PRIMARY Color Palette for Dark Theme──────────*/
+    
+    --color-d-whiter: hsl(33, 66%, 90%);
+    
+    --color-d-white: hsl(34, 50%, 80%);
+    
+    --color-d-gray: var(--color-d-gray-50);
+    --color-d-gray-10: hsl(34, 18%, 62%);
+    --color-d-gray-20: hsl(35, 27%, 55%);
+    --color-d-gray-30: hsl(34, 24%, 30%);
+    --color-d-gray-40: hsl(33, 20%, 30%);
+    --color-d-gray-50: hsl(33, 20%, 20%);
+    --color-d-gray-60: hsl(32, 22%, 15%);
+    --color-d-gray-70: hsl(27, 14%, 15%);
+    --color-d-gray-80: hsl(32, 19%, 13%);
+    --color-d-gray-90: hsl(30, 15%, 13%);
+    
+    --color-d-black: hsl(27, 15%, 12%);
+    
+    --color-d-blacker: hsl(26, 16%, 9%);
+    
+    --color-d-shadow-10:    rgba(29, 21, 13, 0.45);
+    --color-d-shadow-50:    rgba(29, 26, 22, 0.75);
+    --color-d-shadow-100:   rgba(19, 16, 13, 0.95);
+    --color-d-shadow-cover:   rgba(37, 34, 29, 0.74);
+    
+    --color-d-yellow: var(--color-d-yellow-500);
+    --color-d-yellow-300: hsl(50, 91%, 64%);
+    --color-d-yellow-500: hsl(50, 100%, 46%);
+    --color-d-yellow-700: hsl(43, 100%, 42%);
+    --color-d-yellow-900: hsl(39, 100%, 29%);
+    
+    --color-d-red: var(--color-d-red-500);
+    --color-d-red-300: hsl(4, 81%, 71%);
+    --color-d-red-500: hsl(4, 65%, 60%);
+    --color-d-red-700: hsl(4, 90%, 61%);
+    --color-d-red-900: hsl(4, 77%, 38%);
+    
+    --color-d-blue: var(--color-d-blue-500);
+    --color-d-blue-300: hsl(198, 39%, 56%);
+    --color-d-blue-500: hsl(198, 62%, 57%);
+    --color-d-blue-700: hsl(198, 57%, 55%);
+    --color-d-blue-900: hsl(198, 75%, 35%);
+    
+    --color-d-orange: var(--color-d-orange-500);
+    --color-d-orange-300: hsl(27, 100%, 67%);
+    --color-d-orange-500: hsl(24, 71%, 57%);
+    --color-d-orange-700: hsl(21, 60%, 51%);
+    --color-d-orange-900: hsl(20, 77%, 41%);
+    
+    --color-d-green: var(--color-d-green-500);
+    --color-d-green-300: hsl(154, 66%, 72%);
+    --color-d-green-500: hsl(154, 52%, 46%);
+    --color-d-green-700: hsl(154, 38%, 40%);
+    --color-d-green-900: hsl(155, 81%, 24%);
+    
+    --color-d-violet: var(--color-d-violet-500);
+    --color-d-violet-300: hsl(246, 100%, 83%);
+    --color-d-violet-500: hsl(244, 60%, 67%);
+    --color-d-violet-700: hsl(244, 52%, 57%);
+    --color-d-violet-900: hsl(239, 61%, 54%);
+    
+    --color-d-highlight-yellow: hsl(43, 61%, 56%);
+    --color-d-highlight-red:    hsl(4, 65%, 27%);
+    --color-d-highlight-blue:   hsl(201, 79%, 23%);
+    --color-d-highlight-orange:  hsl(27, 94%, 25%);
+    --color-d-highlight-green:  hsl(115, 61%, 15%);
+    --color-d-highlight-violet:  hsl(281, 39%, 24%);
+    
+    /*~ Graph View */
+    --graph-color-d-node-resolved: var(--color-d-blue-900);
+    --graph-color-d-node-unresolved: var(--color-d-yellow-700);
+    --graph-color-d-node-unresolved-opacity: 1;
+    --graph-color-d-node-tag: var(--color-d-red-500);
+    --graph-color-d-node-attachment: var(--color-d-green-500);
+    --graph-color-d-node-focused: var(--color-d-white);
+    --graph-color-d-node-border-hover: var(--color-d-gray-10);
+
+    --graph-color-d-node-arrow: var(--color-d-gray-40);
+    --graph-color-d-node-line: var(--color-d-gray-50);
+    --graph-color-d-node-line-hover: var(--color-d-gray-40);
+    --graph-color-d-node-text: var(--color-d-gray-10);
+}

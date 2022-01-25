@@ -1,0 +1,38 @@
+/*────────────────────────────────────
+            Markdown Table
+────────────────────────────────────*/
+/*──────────Edit Mode Markdown Table──────────*/
+.cm-s-obsidian .HyperMD-table-row {
+    font-family: var(--font-code);
+    font-size: var(--font-scale-0-5);
+
+    &-0 {
+        color: var(--md-color-code-yellow-2);
+        text-shadow: none;
+    }
+}
+
+.markdown-preview-view {
+    & table {
+        width: 100%;
+
+        & th,
+        & td {
+            border-color: var(--md-color-border);
+        }
+
+        & thead {
+            color: var(--md-color-code-red-1);
+            background: var(--background-secondary);
+        }
+
+        & tr > td {
+            .theme-light & {
+                background: var(--color-l-whiter);
+            }
+            .theme-dark & {
+                background: var(--color-d-blacker);
+            }
+        }
+    }
+}

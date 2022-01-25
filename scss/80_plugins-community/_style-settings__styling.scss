@@ -1,0 +1,44 @@
+/*────────────────────────────────────
+            Style Settings
+────────────────────────────────────*/
+.modal .style-settings-collapse-indicator {
+    top: 3px;
+}
+
+.modal
+.style-settings-heading[data-id="obsidianmd-primary-theme"] {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: unset;
+
+    &::before {
+        content: 
+        "Primary's support Style Settings will come soon! If you wanna know Primary's progress, head onto tinyurl.com/primary-board";
+
+        font-weight: var(--font-regular);
+
+        background: var(--background-secondary);
+        border: 1px solid var(--background-modifier-border);
+        border-radius: var(--scale-2-4);
+        padding:    var(--scale-2-4)
+                    var(--scale-2-8)
+                    var(--scale-2-4)
+                    var(--scale-2-8);
+        margin-bottom: var(--scale-2-8);
+        
+        height: fit-content;
+        width: 100%;
+        white-space: pre-wrap;
+    }
+}
+
+/* Tabular Nums all over Obsidian */
+body.primary-tabular-nums *,
+.primary-tabular-nums .app-container * {
+    -webkit-font-feature-settings: "tnum";
+    -moz-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+    -webkit-font-variant-numeric: tabular-nums;
+    -moz-font-variant-numeric: tabular-nums;
+    font-variant-numeric: tabular-nums;
+}

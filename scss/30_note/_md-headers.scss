@@ -1,0 +1,195 @@
+/*────────────────────────────────────
+            Note Markdown
+────────────────────────────────────*/
+/*──────────Headings──────────*/
+:root {
+    --h1-size: var(--font-scale-7);
+    --h2-size: var(--font-scale-6);
+    --h3-size: var(--font-scale-5);
+    --h4-size: var(--font-scale-4);
+    --h5-size: var(--font-scale-3);
+    --h6-size: var(--font-scale-2);
+    --header-line-height: 1.18;
+    
+    & .theme-light {
+        --h1-color: var(--text-normal);
+        --h2-color: var(--text-normal);
+        --h3-color: var(--text-normal);
+        --h4-color: var(--text-normal);
+        --h5-color: var(--text-normal);
+        --h6-color: var(--text-muted);
+    }
+
+    & .theme-dark {
+        --h1-color: var(--text-normal);
+        --h2-color: var(--text-normal);
+        --h3-color: var(--text-normal);
+        --h4-color: var(--text-normal);
+        --h5-color: var(--text-normal);
+        --h6-color: var(--text-muted);
+    }
+}
+
+.markdown-preview-view .heading-collapse-indicator {
+    padding-right: 0;
+    padding-left: var(--scale-2-4);
+}
+
+/* General Headings */
+h1, h2, h3, h4, h5, h6 {
+    line-height: var(--header-line-height);
+}
+
+h1 {
+    color: var(--h1-color);
+    font-size: var(--h1-size);
+}
+
+h2 {
+    color: var(--h2-color);
+    font-size: var(--h2-size);
+}
+
+h3 {
+    color: var(--h3-color);
+    font-size: var(--h3-size);
+}
+
+h4 {
+    color: var(--h4-color);
+    font-size: var(--h4-size);
+}
+
+h5 {
+    color: var(--h5-color);
+    font-size: var(--h5-size);
+}
+
+h6 {
+    color: var(--h6-color);
+    font-size: var(--h6-size);
+}
+
+/* Source View Headings */
+body .cm-s-obsidian .HyperMD-header {
+    line-height: var(--header-line-height);
+    padding-bottom: 0;
+}
+
+.cm-header {
+    &-1, &-2, &-3, &-4, &-5, &-6 {
+        font-family: var(--font-header);
+        font-weight: var(--font-bold);
+    }
+
+    &-1 {
+        color: var(--h1-color);
+        font-size: var(--h1-size);
+    }
+
+    &-2 {
+        color: var(--h2-color);
+        font-size: var(--h2-size);
+    }
+
+    &-3 {
+        color: var(--h3-color);
+        font-size: var(--h3-size);
+    }
+
+    &-4 {
+        color: var(--h4-color);
+        font-size: var(--h4-size);
+    }
+
+    &-5 {
+        color: var(--h5-color);
+        font-size: var(--h5-size);
+    }
+
+    &-6 {
+        color: var(--h6-color);
+        font-size: var(--h6-size);
+    }
+}
+
+/* Inline Code in Headers Fix */
+.cm-s-obsidian .cm-inline-code.cm-header {
+    font-family: var(--font-code);
+    font-weight: var(--font-bold);
+
+    &-1 {
+        font-size: calc(0.85 * var(--h1-size));
+    }
+
+    &-2 {
+        font-size: calc(0.85 * var(--h2-size));
+    }
+
+    &-3 {
+        font-size: calc(0.85 * var(--h3-size));
+    }
+
+    &-4 {
+        font-size: calc(0.85 * var(--h4-size));
+    }
+
+    &-5 {
+        font-size: calc(0.85 * var(--h5-size));
+    }
+
+    &-6 {
+        font-size: calc(0.85 * var(--h6-size));
+    }
+}
+
+.markdown-preview-view {
+    & h1 code,
+    & h2 code,
+    & h3 code,
+    & h4 code,
+    & h5 code,
+    & h6 code {
+        font-family: var(--font-code);
+        font-weight: var(--font-bold);
+    }
+}
+
+/* Preview View Headings */
+.markdown-preview-view {
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        font-family: var(--font-header);
+        font-weight: var(--font-bold);
+        line-height: var(--header-line-height);
+    }
+    
+    & h1 {
+        color: var(--h1-color);
+        font-size: var(--h1-size);
+    }
+
+    & h2 {
+        color: var(--h2-color);
+        font-size: var(--h2-size);
+    }
+
+    & h3 {
+        color: var(--h3-color);
+        font-size: var(--h3-size);
+    }
+
+    & h4 {
+        color: var(--h4-color);
+        font-size: var(--h4-size);
+    }
+
+    & h5 {
+        color: var(--h5-color);
+        font-size: var(--h5-size);
+    }
+
+    & h6 {
+        color: var(--h6-color);
+        font-size: var(--h6-size);
+    }
+}

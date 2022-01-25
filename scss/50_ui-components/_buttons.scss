@@ -1,0 +1,122 @@
+/*────────────────────────────────────
+        Buttons Component
+────────────────────────────────────*/
+/* don't remove !important */
+.theme-light button,
+.theme-dark button {
+    font-family: var(--default-font) !important;
+    padding:    var(--scale-2-3)
+                var(--scale-2-8)
+                var(--scale-2-4)
+                var(--scale-2-8) !important;
+    margin-right: var(--scale-2-4);
+    border-radius: var(--scale-2-10);
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:only-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mod-community-plugin .setting-item-control & {
+        box-shadow: none;
+    }
+
+    .graph-controls & {
+        font-size: var(--font-scale-0);
+    }
+
+    &.copy-code-button {
+        padding:    var(--scale-2-1)
+                    var(--scale-2-4)
+                    var(--scale-2-3)
+                    var(--scale-2-4) !important;
+        border-radius: var(--scale-2-2);
+        margin-top: var(--scale-2-2);
+        margin-right: var(--scale-2-2);
+    }
+}
+
+.modal button,
+.graph-controls button,
+.workspace button {
+    .theme-light & {
+        border: 1px solid rgba(100, 100, 100, 0.4);
+        box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.3) inset,
+                    0px 2px 4px 0px rgba(100, 100, 100, 0.3);
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px
+                        rgba(100, 100, 100, 0.3) inset,
+                        0px 1px 1px 0px rgba(100, 100, 100, 0.1);
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
+        }
+    }
+
+    .theme-dark & {
+        color: var(--color-d-white);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        box-shadow: 0px -2px 0px 0px
+                    rgba(0, 0, 0, 0.15) inset,
+                    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px
+                        rgba(0, 0, 0, 0.15) inset,
+                        0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
+        }
+    }
+}
+
+.modal button:not(.mod-cta, .mod-warning),
+.modal.mod-settings button:not(.mod-cta, .mod-warning),
+.workspace button:not(.graph-controls button, .document-search-button) {
+    .theme-light & {
+        color: var(--color-l-gray-80);
+        background: var(--color-l-whiter);
+        border: 1px solid rgba(100, 100, 100, 0.3);
+        box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.2) inset,
+                    0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+
+        &:hover, &:focus {
+            background: var(--color-l-gray-20);
+        }
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px
+                        rgba(100, 100, 100, 0.1) inset,
+                        0px 1px 1px 0px rgba(100, 100, 100, 0.1);
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
+        }
+    }
+
+    .theme-dark & {
+        color: var(--color-d-white);
+        background: var(--color-d-black);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        box-shadow: 0px -2px 0px 0px
+                    rgba(0, 0, 0, 0.3) inset,
+                    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        
+        &:hover {
+            background: var(--color-d-blacker);
+        }
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px
+                        rgba(0, 0, 0, 0.2) inset,
+                        0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
+        }
+    }
+}

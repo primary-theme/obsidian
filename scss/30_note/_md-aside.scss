@@ -1,0 +1,147 @@
+/*──────────Aside HTML / Sidenotes──────────*/
+:root {
+    --aside-width: calc(var(--line-width) * 0.38);
+    --aside-margin: calc(-1 * (var(--aside-width)
+                    + var(--scale-8-3)));
+    --aside-header: "✏️ Note";
+    --aside-hide-icon: "🔴";
+}
+
+aside,
+.aside-show,
+.aside-hide,
+.aside-in {
+    font-size: inherit;
+    padding:    var(--scale-2-8)
+                var(--scale-2-10)
+                var(--scale-2-8)
+                var(--scale-2-10);
+    margin: 0em 0em 1em var(--scale-2-8);
+    border-radius: var(--scale-2-4);
+    z-index: 0;
+
+    & .markdown-embed,
+    & .internal-embed.is-loaded:not(.image-embed) {
+        width: 100%;
+        margin: var(--scale-8-1)
+                var(--scale-0-0)
+                var(--scale-8-1)
+                var(--scale-0-0);
+    }
+
+    & .markdown-embed .markdown-preview-view {
+        max-height: 200px;
+    }
+
+    &:before {
+        content: var(--aside-header);
+        color: var(--text-muted);
+        font-size: inherit;
+        font-weight: var(--font-semi-bold);
+        display: block;
+        padding-bottom: var(--scale-2-3);
+        border-bottom: 1px solid var(--background-modifier-border);
+        margin-bottom: var(--scale-2-4);
+    }
+
+    /* Aside for Light Mode */
+    .theme-light & {
+        border: 1px solid rgba(100, 100, 100, 0.3);
+        box-shadow: 0px -2px 0px 0px
+                    rgba(100, 100, 100, 0.15) inset,
+                    0px 2px 4px 0px 
+                    rgba(100, 100, 100, 0.1);
+    }
+
+    /* Aside for Dark Mode */
+    .theme-dark & {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        box-shadow: 0px -2px 0px 0px
+                    rgba(0, 0, 0, 0.15) inset,
+                    0px 2px 4px 0px 
+                    rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+aside,
+.aside-show,
+.aside-hide:hover {
+    .is-readable-line-width & {
+        margin-right: var(--aside-margin);
+    }
+}
+
+/* <aside> Tag */
+aside {
+    background: var(--background-primary-alt);
+    width: var(--aside-width);
+    position: relative;
+    float: right;
+}
+
+/* <s> Tag */
+s {
+    .aside-show,
+    .aside-hide,
+    .aside-in {
+        text-decoration: unset;
+    }
+}
+
+.aside {
+    /* Show Aside for Readable Line Width: OFF */
+    &-show {
+        background: var(--background-primary-alt);
+        width: var(--aside-width);
+        position: relative;
+        float: right;
+        clear: right;
+    }
+
+    /* Hide and Hover */
+    &-hide {
+        background: var(--background-primary-alt);
+        position: relative;
+        float: right;
+        clear: right;
+        width: 2.8em;
+        height: 2.8em;
+        overflow: hidden;
+        padding:    0.55em
+                    0
+                    0
+                    0.7em;
+
+        .is-readable-line-width & {
+            margin-right: calc(-4.25em - 1px);
+        }
+
+        &:before {
+            display: block;
+            content: var(--aside-hide-icon);
+            padding-bottom: 1em;
+        }
+
+        &:hover {
+            background-color: var(--background-primary-alt);
+            width: var(--aside-width);
+            height: auto;
+            white-space: normal;
+            text-overflow: unset;
+            padding:    var(--scale-2-8)
+                        var(--scale-2-10)
+                        var(--scale-2-8)
+                        var(--scale-2-10);
+            z-index: 3;
+        }
+    }
+
+    /* Aside Inside the Note for Readable Line Width: OFF */
+    &-in {
+        background-color: var(--background-primary-alt);
+        width: var(--aside-width);
+        position: relative;
+        float: right;
+    }
+}

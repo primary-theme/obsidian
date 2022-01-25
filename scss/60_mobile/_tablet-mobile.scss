@@ -1,0 +1,122 @@
+@media (min-width: 400pt) {
+    /*────────────────────────────────────
+    ++++++++++++++Variables+++++++++++++++
+    ────────────────────────────────────*/
+    .is-mobile {
+        /*──────────Typography Modular Scale──────────*/
+        /*  Based on Standard 16px  */
+        --line-width: 400pt;
+        --scale-ratio: 1.32;
+            
+        --font-scale-000: 0.652em;
+        --font-scale-00: 0.694em;
+        --font-scale-0: 0.783em;
+        --font-scale-0-5: 0.875em;
+        --font-scale-1: 1em;
+        --font-scale-2: 1.179em;
+        --font-scale-3: 1.32em;
+        --font-scale-4: 1.557em;
+        --font-scale-5: 1.742em;
+        --font-scale-6: 2.055em;
+        --font-scale-7: 2.3em;
+        --font-scale-8: 2.712em;
+        --font-scale-9: 3.036em;
+        --font-scale-10: 3.58em;
+
+        /*────────────────────────────────────
+        +++++++++++++++Workspace++++++++++++++
+        ────────────────────────────────────*/
+        /*────────────────────────────────────
+                    Workspace Sidebar
+        ────────────────────────────────────*/
+        & .workspace-drawer:not(.is-pinned) {
+            width: 100vw;
+            max-width: 360pt;
+            height: calc(100vh - var(--scale-8-6));
+            margin: var(--scale-8-3)
+                    var(--scale-8-3);
+            border-radius: var(--scale-2-8);
+            border: 1px solid var(--background-modifier-border);
+            box-shadow: 0px 0px 16px 0px
+                        var(--background-modifier-box-shadow);
+        }
+        /*────────────────────────────────────
+        +++++++++Content / Active Note++++++++
+        ────────────────────────────────────*/
+        // /*──────────Aside HTML / Sidenotes──────────*/
+        // aside,
+        // .aside-show,
+        // .aside-in {
+        //     width: var(--aside-width);
+        //     clear: both;
+        //     margin: 0em 0em 1em var(--scale-2-8);
+        //     z-index: 0;
+        // }
+        // & .aside-hide:hover {
+        //     width: var(--aside-width);
+        //     margin-left: var(--scale-2-8);
+        // }
+        // & .is-readable-line-width .aside-hide {
+        //     margin-right: 0;
+        //     margin-bottom: 1em;
+        // }
+
+        /*────────────────────────────────────
+        +++++++++++Other Components+++++++++++
+        ────────────────────────────────────*/
+        /*────────────────────────────────────
+                        Modals
+        ────────────────────────────────────*/
+        /*─────────Settings Modal──────────*/
+        & .modal,
+        & .prompt {
+            top: auto;
+            bottom: auto;
+            width: 100%;
+            max-width: 75%;
+            border-radius: var(--scale-2-8);
+            box-shadow: var(--shadow-m)
+                        var(--background-modifier-box-shadow);
+        }
+
+        & .modal.mod-settings {
+            height: 100%;
+        }
+
+        & .setting-item:not(.mod-toggle):not(.setting-item-heading) {
+            flex-direction: unset;
+
+            & .setting-item-control {
+                width: 300px;
+            }
+        }
+
+        /*─────────Menu/Options Modal──────────*/
+        .menu {
+            border-top-left-radius: var(--scale-2-8);
+            border-top-right-radius: var(--scale-2-8);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            box-shadow: var(--shadow-m)
+                        var(--background-modifier-box-shadow);
+        }
+
+        /*────────────────────────────────────
+                    Pull Down Action
+        ────────────────────────────────────*/
+        .pull-down-action {
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 75%;
+            margin: var(--scale-2-8) auto;
+            padding:    var(--scale-2-8)
+                        var(--scale-2-8)
+                        var(--scale-2-8)
+                        var(--scale-2-8);
+            text-align: center;
+            border-radius: var(--scale-2-8);
+            border: none;
+        }
+    }
+}

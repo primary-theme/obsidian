@@ -1,0 +1,108 @@
+/*────────────────────────────────────
+++++++++++++Workspace++++++++++++++++
+────────────────────────────────────*/
+
+/*────────────────────────────────────
+            Title Bar
+────────────────────────────────────*/
+
+.titlebar-button-container.mod-left,
+.titlebar-text,
+.titlebar-button-container.mod-right,
+.titlebar-left {
+    margin-top: var(--scale-0-0);
+}
+
+/*─────────Titlebar for Light Theme──────────*/
+
+.theme-light {
+    & .titlebar {
+        background: var(--color-l-white);
+    }
+
+    & .titlebar-text {
+        color: var(--color-l-gray-50);
+        margin-top: 1px;
+    }
+
+    & .titlebar-button {
+        color: var(--color-l-gray-50);
+        display: inline-block;
+        -webkit-app-region: no-drag;
+
+        &.mod-back,
+        &.mod-forward {
+            &:hover {
+                color: var(--color-l-gray-80);
+                background: var(--color-l-gray-40);
+            }
+
+            &:active {
+                color: var(--color-l-gray-50);
+                background: var(--color-l-gray-20);
+            }
+        }
+
+        &.mod-minimize:hover {
+            color: var(--color-l-white);
+            background: var(--color-l-blue-500);
+        }
+
+        &.mod-maximize:hover {
+            color: var(--color-l-white);
+            background: var(--color-l-yellow-500);
+        }
+
+        &.mod-close:hover {
+            color: var(--color-l-white);
+            background: var(--color-l-red-500);
+        }
+    }
+}
+
+/*─────────Titlebar for Dark Theme──────────*/
+
+.theme-dark {
+    & .titlebar {
+        background: var(--color-d-gray-70);
+    }
+
+    & .titlebar-text {
+        color: var(--color-d-gray-20);
+        margin-top: 1px;
+    }
+
+    & .titlebar-button {
+        color: var(--color-d-gray-20);
+        display: inline-block;
+        -webkit-app-region: no-drag;
+
+        &.mod-back,
+        &.mod-forward {
+            &:hover {
+                color: var(--color-d-gray-10);
+                background: var(--color-d-gray-50);
+            }
+
+            &:active {
+                color: var(--color-d-gray-40);
+                background: var(--color-d-gray-80);
+            }
+        }
+
+        &.mod-minimize:hover {
+            color: var(--color-d-white);
+            background: var(--color-d-blue-700);
+        }
+
+        &.mod-maximize:hover {
+            color: var(--color-d-white);
+            background: var(--color-d-yellow-700);
+        }
+
+        &.mod-close:hover {
+            color: var(--color-d-white);
+            background: var(--color-d-red-700);
+        }
+    }
+}

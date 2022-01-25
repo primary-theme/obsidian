@@ -1,0 +1,31 @@
+/*──────────Active Line──────────*/
+.workspace-leaf:not(.workspace-leaf.mod-active) {
+    & .cm-active,
+    & .CodeMirror-activeline .CodeMirror-linebackground,
+    & .CodeMirror-activeline-gutter {
+        background: transparent;
+    }
+}
+
+.CodeMirror-activeline .CodeMirror-linebackground,
+.CodeMirror-activeline-gutter,
+.cm-active:not(.cm-gutterElement) {
+    .theme-light & {
+        background-color: var(--color-l-gray-10);
+    }
+    
+    .theme-dark & {
+        background-color: var(--color-d-black);
+    }
+}
+
+// Activeline on Gutter Color (Live Preview)
+.cm-active.cm-gutterElement { 
+    .theme-light & {
+        color: var(--color-l-gray-70);
+    }
+
+    .theme-dark & {
+        color: var(--color-d-gray-20);
+    }
+}

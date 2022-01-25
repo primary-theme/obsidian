@@ -1,0 +1,157 @@
+/*────────────────────────────────────
+                Embeds
+────────────────────────────────────*/
+/*──────────Live Preview──────────*/
+.markdown-source-view.mod-cm6 {
+    & .cm-embed-block {
+        border: 1px solid transparent;
+        border-radius: 0;
+
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+
+        &:hover {
+            border: 1px solid var(--background-modifier-border);
+        }
+
+        & .edit-block-button {
+            top: var(--scale-2-2);
+            right: var(--scale-2-2);
+            border: 1px solid var(--background-modifier-border);
+            border-radius: var(--scale-2-2);
+
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
+
+            .theme-light & {
+                color: var(--color-l-gray-60);
+                background: var(--color-l-gray-20);
+
+                &:hover {
+                    background: var(--color-l-gray-10);
+                }
+
+                &:active {
+                    color: var(--color-l-gray-50);
+                    background: var(--color-l-gray-40);
+                }
+            }
+
+            .theme-dark & {
+                color: var(--color-d-gray-30);
+                background: var(--color-d-gray-90);
+
+                &:hover {
+                    background: var(--color-d-gray-60);
+                }
+
+                &:active {
+                    color: var(--color-d-gray-50);
+                    background: var(--color-d-black);
+                }
+            }
+        }
+    }
+}
+
+/*──────────Images──────────*/
+.workspace-leaf-content img,
+.view-content .markdown-preview-view img,
+.popover img {
+    padding: 0;
+    border: 1px solid rgba(100, 100, 100, 0.25);
+    border-radius: var(--scale-2-4);
+    margin: 0;
+    transition: var(--duration-fast-1)
+                var(--motion-smooth);
+    
+    &:hover {
+        border-radius: var(--scale-0-0);
+        box-shadow: var(--shadow-m)
+                    var(--background-modifier-box-shadow);
+        transform: translateY(-2px);
+    }
+}
+
+/*──────────Markdown Embed──────────*/
+.markdown-embed {
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--scale-2-6);
+
+    & .markdown-preview-view {
+        /* Markdown Embed Padding with Readable Line Width OFF */
+        padding:    var(--scale-0-0)
+                    var(--scale-8-4)
+                    var(--scale-0-0)
+                    var(--scale-8-4);
+    }
+
+    .is-live-preview & {
+        padding:    var(--scale-0-0)
+                    var(--scale-0-0)
+                    var(--scale-0-0)
+                    var(--scale-0-0);
+        border: 1px solid var(--background-modifier-border);
+    }
+
+    &-title {
+        height: auto;
+        color: var(--text-muted);
+        font-size: var(--font-scale-1);
+        line-height: var(--line-height-1);
+        text-align: left;
+        padding:    calc(var(--scale-8-1) - 4px)
+                    var(--scale-8-5)
+                    var(--scale-8-1)
+                    var(--scale-2-6);
+        border-bottom: 1px solid var(--background-modifier-border);
+    }
+
+    &-link {
+        top: 0;
+        right: 0;
+        margin: calc(var(--scale-2-6) - 1px)
+                var(--scale-2-6)
+                var(--scale-8-1)
+                var(--scale-0-0);
+    }
+
+    .theme-light & {
+        background: var(--color-l-gray-10);
+    }
+
+    .theme-dark & {
+        background: var(--color-d-gray-90);
+    }
+}
+
+/*──────────Mermaid JS (Diagram Generator)──────────*/
+.mermaid {
+    & svg {
+        width: 100%;
+    }
+
+    & line {
+        stroke: var(--md-color-text-faint) !important;
+        fill: var(--md-color-text-faint) !important;
+    }
+
+    & rect.actor {
+        stroke: var(--md-color-border) !important;
+        fill: var(--background-secondary) !important;
+    }
+
+    & tspan,
+    & text.messageText {
+        font-size: var(--font-scale-1) !important;
+        font-family: var(--font-code) !important;
+        font-weight: var(--font-regular);
+        stroke: none !important;
+        fill: var(--color-gray-10) !important;
+    }
+
+    & .node .label {
+        font-size: var(--font-scale-0);
+        text-align: left;
+    }
+}

@@ -1,0 +1,64 @@
+/*──────────Emphasis──────────*/
+/* Bold */
+strong,
+.cm-strong,
+.cm-s-obsidian span.cm-quote.cm-strong,
+.markdown-preview-view strong {
+    color: var(--md-color-bold);
+} 
+
+/* Italic */
+em,
+.cm-em,
+.cm-s-obsidian span.cm-quote.cm-em,
+.markdown-preview-view em {
+    color: var(--md-color-italic);
+}
+
+/* Strikethrough */
+del,
+.cm-strikethrough,
+.cm-s-obsidian span.cm-quote.cm-strikethrough,
+.markdown-preview-view del {
+    color: var(--md-color-strikethrough);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.markdown-preview-view {
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        & del {
+            color: var(--md-color-strikethrough);
+        }
+    }
+}
+
+/* Highlight */
+mark,
+.cm-s-obsidian span.cm-highlight,
+.markdown-source-view.is-live-preview
+.cm-header.cm-formatting-highlight,
+.cm-s-obsidian span.cm-quote.cm-highlight,
+.markdown-preview-view mark {
+    color: var(--md-color-highlight-text-yellow);
+    background: var(--md-color-highlight-bg-yellow);
+    padding: 2px 2px;
+    border-radius: var(--scale-2-1);
+}
+
+/* Comments */
+.cm-s-obsidian span.cm-comment,
+.cm-s-obsidian span.cm-comment.cm-quote {
+    color: var(--md-color-comment);
+}
+
+/*──────────Mixed Emphasis──────────*/
+
+/* Bold & Italic */
+strong em, em strong,
+.cm-strong.cm-em,
+.markdown-preview-view strong em {
+    color: var(--md-color-bolditalic);
+}

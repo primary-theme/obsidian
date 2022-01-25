@@ -1,0 +1,176 @@
+/*────────────────────────────────────
+        Search Input Component
+────────────────────────────────────*/
+/*~ Global Search Input */
+.search-input-container.search-input-container {
+    margin: var(--scale-2-2)
+            var(--scale-2-6)
+            var(--scale-2-2)
+            var(--scale-2-6);
+
+    & input {
+        padding:    var(--scale-2-4)
+                    var(--scale-8-4)
+                    var(--scale-2-4)
+                    var(--scale-2-4);
+    }
+}
+
+textarea,
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    font-family: var(--default-font);
+    font-size: var(--font-scale-1);
+    border-radius: var(--scale-2-2);
+
+    padding:    var(--scale-2-4)
+                var(--scale-2-4)
+                var(--scale-2-4)
+                var(--scale-2-4);
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: var(--duration-fast-1)
+                var(--motion-delay);
+
+    .theme-light & {
+        background: var(--color-l-gray-10);
+        border: 1px solid var(--background-modifier-border);
+
+        &:focus {
+            background: var(--color-l-white);
+            border: 1px solid var(--color-l-gray-60);
+            box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    .theme-dark & {
+        background: var(--color-d-blacker);
+        border: 1px solid var(--background-modifier-border);
+
+        &:focus {
+            background: var(--color-d-gray-80);
+            border: 1px solid var(--color-d-gray-50);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+.search-input-clear-button {
+    right: 8px;
+    top: 8px;
+
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: var(--scale-2-8);
+
+    height: var(--scale-2-8);
+    width: var(--scale-2-8);
+    border-radius: var(--scale-8-3);
+    z-index: 9;
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+
+    &:before {
+        position: absolute;
+        right: 3px;
+        top: -3px;
+    }
+
+    &:hover {
+        color: var(--text-muted);
+    }
+
+    &:active {
+        color: var(--text-faint);
+    }
+}
+
+/*~ Document Search Input ~*/
+.document {
+    &-search-container {
+        position: absolute;
+        bottom: 0;
+
+        min-width: 20%;
+        width: 40vw;
+        height: 45px;
+
+        border-top-right-radius: var(--scale-2-4);
+        border-top: 1px solid var(--background-modifier-border);
+        border-right: 1px solid var(--background-modifier-border);
+
+        &.mod-replace-mode {
+            height: 80px;
+        }
+
+        & input {
+            margin-left: var(--scale-2-2);
+        }
+
+        .theme-light & {
+            background: var(--color-l-gray-10);
+        }
+
+        .theme-dark & {
+            background: var(--color-d-gray-80);
+        }
+    }
+
+    &-search-button.document-search-button {
+        line-height: var(--line-height-0);
+        border-radius: var(--scale-2-2);
+        margin: var(--scale-2-2)
+                var(--scale-2-1)
+                var(--scale-0-0)
+                var(--scale-2-1);
+
+        &:last-child {
+            margin-right: var(--scale-2-2);
+        }
+
+        // Styling for Light and Dark Mode
+        body.theme-light .workspace & {
+            color: var(--text-on-accent);
+            background: var(--interactive-accent);
+            
+            &:hover {
+                background: var(--interactive-accent-hover);
+            }
+        }
+
+        body.theme-dark .workspace & {
+            color: var(--text-on-accent);
+            background: var(--interactive-accent);
+            
+            &:hover {
+                background: var(--interactive-accent-hover);
+            }
+        }
+    }
+}
+
+.document-search-close-button {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: var(--scale-8-3);
+
+    height: var(--scale-2-8);
+    width: var(--scale-2-8);
+    border-radius: var(--scale-8-3);
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+    &:before {
+        &:hover {
+            color: var(--text-muted);
+        }
+    
+        &:active {
+            color: var(--text-faint);
+        }
+    }
+}

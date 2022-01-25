@@ -1,0 +1,56 @@
+/*────────────────────────────────────
+        Vault Launch Progress
+────────────────────────────────────*/
+.is-loading:before,
+.search-result-container.is-loading:before {
+    background-color: var(--background-primary);
+    animation:  var(--duration-slow-2)
+                var(--motion-smooth)
+                var(--duration-slow-2)
+                infinite
+                progress-bar;
+}
+
+/* Message Blink */
+@keyframes blinkingText{
+    0%      { color: var(--text-muted); }
+    49%     { color: var(--text-muted); }
+    60%     { color: transparent; }
+    99%     { color: transparent;}
+    100%    { color: var(--text-muted); }
+}
+
+.progress-bar {
+    background: var(--background-primary);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+
+    &-line {
+        width: 150%;
+        position: absolute;
+        border-radius: var(--scale-2-4);
+        height: var(--scale-8-2);
+        background: var(--background-modifier-border);
+    }
+
+    &-subline {
+        border-radius: var(--scale-2-4);
+        height: var(--scale-8-1);
+
+        .theme-light & { /* VLP for Light Mode */
+            background: var(--color-l-green-500);
+        }
+
+        .theme-dark & { /* VLP for Dark Mode */
+            background: var(--color-d-green-900);
+        }
+    }
+
+    &-message {
+        font-size: var(--font-scale-3);
+        color: var(--text-muted);
+        font-family: var(--font-code);
+        text-transform: uppercase;
+        letter-spacing: var(--tracking-2);
+        animation: blinkingText 0.4s infinite;
+    }
+}

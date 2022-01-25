@@ -1,0 +1,32 @@
+/*────────────────────────────────────
+            Scrollbars
+────────────────────────────────────*/
+::-webkit-scrollbar,
+.graph-controls::-webkit-scrollbar {
+    visibility: visible;
+    width: var(--scale-2-2);
+    height: var(--scale-2-2);
+    border-radius: 0;
+    display: inherit;
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    &-thumb {
+        visibility: visible;
+        background: var(--background-modifier-border);
+        border-radius: 0;
+
+        &:active {
+            border-radius: 0;  
+
+            .theme-light & { /* Scrollbar for Light Theme */
+                background: var(--color-l-gray-30);
+            }
+
+            .theme-dark & { /* Scrollbar for Dark Theme */
+                background: var(--color-d-gray-40);
+            }
+        }
+    }
+}
