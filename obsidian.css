@@ -2314,7 +2314,7 @@ Syntax Highlighting──────────*/
 }
 
 .cm-s-obsidian span.cm-tag,
-.cm-s-obsidian span.cm-property,
+.cm-s-obsidian span.cm-property:not(.cm-formatting-task),
 .markdown-preview-view span.token.property,
 .markdown-preview-view span.token.property-access {
   color: var(--md-color-code-yellow-1);
