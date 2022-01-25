@@ -3099,7 +3099,6 @@ span.cm-link.cm-hmd-footnote {
 .workspace-leaf-content img:not([width]),
 .view-content .markdown-preview-view img {
     max-width: 100%;
-    border-radius: var(--scale-8-2);
 }
 
 /*──────────Markdown Embed──────────*/
@@ -3182,7 +3181,6 @@ span.cm-link.cm-hmd-footnote {
 
 .frontmatter-container {
     font-size: var(--font-scale-0-5);
-    border-radius: var(--scale-8-2);
 }
 
 .frontmatter-container .frontmatter-section-label {
@@ -4148,10 +4146,6 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 .popover.hover-popover::-webkit-scrollbar {
     display: none;
-}
-
-.popover img {
-    border-radius: var(--scale-8-2);
 }
 
 /*────────────────────────────────────
