@@ -79,7 +79,7 @@
 }
 
 /* Preview Resolved Links */
-div a:not(a.footnote-link, a.tag) {
+a:not(a.footnote-link, a.tag, button a) {
     .modal &,
     .view-content & {
         word-break: break-all;
