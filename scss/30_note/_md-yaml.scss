@@ -24,6 +24,7 @@ code.language-yaml {
 }
 
 .cm-s-obsidian .cm-hmd-frontmatter,
+.markdown-preview-view span.token.datetime.number,
 .markdown-preview-view code.language-yaml.is-loaded {
     color: var(--md-color-code-red-1);
 }
