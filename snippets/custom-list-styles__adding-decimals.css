@@ -1,0 +1,39 @@
+/*
+Adding Decimals — Ordered List Style Type
+by Cecilia May (Primary Theme)
+*/
+
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+}
+
+ol > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+}
+
+ol > li:before {
+    color: var(--text-faint);
+    font-family: var(--font-code);
+    font-size: var(--font-scale-0-5);
+
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.6em;    
+}
+
+li ol > li {
+    margin: 0;
+}
+
+li ol > li:before {
+    content: counters(item, ".") " ";
+}
+
+.markdown-preview-view ol .list-collapse-indicator {
+    margin-left: -1ch;
+}
