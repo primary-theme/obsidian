@@ -304,6 +304,11 @@
             }
         }
 
+        &.is-selected .community-theme-info,
+        &.is-selected .community-theme-downloads {
+            color: var(--text-muted);
+        }
+
         .theme-light & {
             background: var(--background-primary);
 

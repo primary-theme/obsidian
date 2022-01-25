@@ -3971,6 +3971,9 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
 .modal .community-theme-filters-container .setting-item-control .search-input-container {
   width: 100%;
 }
+.modal .community-theme.is-selected .community-theme-info, .modal .community-theme.is-selected .community-theme-downloads {
+  color: var(--text-muted);
+}
 .theme-light .modal .community-theme {
   background: var(--background-primary);
 }
