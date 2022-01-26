@@ -6,14 +6,14 @@ _Winner of [Obsidian October](http://obsidian.md/october2021) 2021's Best Theme 
 
 > Primary is soft, chewy, comforting — like a chocolate chip cookie, or a warm brownie. Primary instantly puts you in a relaxed state that opens the door to creativity and exploration. Wonderfully executed down to the smallest details, Primary ran away with first place. — **O_O 2021 Judges**
 
-<center>
+<p align="center">
     <h3>Support Primary's Development ☕</h3>
     <a href='https://ko-fi.com/E1E76SQX8' target='_blank'><img height='48' style='border:0px;height:48px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
     <br>
     <a href="https://tinyurl.com/primary-board" target="_blank">📌 Primary Development Roadmap</a>
     <br><br>
     Primary is currently on the works to bring its  warm palette to other developer apps!
-</center>
+</p>
 
 ---
 
