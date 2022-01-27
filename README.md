@@ -1,4 +1,4 @@
-![Primary Theme Hero](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-heroimg.png)
+![Primary Main Promotional Image](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-heroimg.png)
 
 # Primary 🟨🟥🟦
 
@@ -6,14 +6,14 @@ _Winner of [Obsidian October](http://obsidian.md/october2021) 2021's Best Theme 
 
 > Primary is soft, chewy, comforting — like a chocolate chip cookie, or a warm brownie. Primary instantly puts you in a relaxed state that opens the door to creativity and exploration. Wonderfully executed down to the smallest details, Primary ran away with first place. — **O_O 2021 Judges**
 
-<p align="center">
+<center>
     <h3>Support Primary's Development ☕</h3>
     <a href='https://ko-fi.com/E1E76SQX8' target='_blank'><img height='48' style='border:0px;height:48px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
     <br>
     <a href="https://tinyurl.com/primary-board" target="_blank">📌 Primary Development Roadmap</a>
     <br><br>
     Primary is currently on the works to bring its  warm palette to other developer apps!
-</p>
+</center>
 
 ---
 
@@ -40,6 +40,16 @@ Primary was crafted with a "perfect fundamentals first, nail other features late
 - Dataview by Michael Brenan
 
 If you'd like to see what plugins I'm planning to support next, check out the roadmap linked above.
+
+## 🖼️ Screenshots
+
+![Primary Overall Preview — features markdown syntax styling as well as commonly used sidebars and other exclusive features](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-1.png)
+
+![Primary's Settings Modal](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-2.png)
+
+![Primary's Command Palette](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-3.png)
+
+![Primary's Graph View](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-4.png)
 
 ---
 
