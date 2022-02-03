@@ -38,6 +38,7 @@ Primary was crafted with a "perfect fundamentals first, nail other features late
 - Calendar by Liam Cain
 - Sliding Panes by death_au — recommended width of 36px
 - Dataview by Michael Brenan
+- Supercharged Links by mdelobelle
 
 If you'd like to see what plugins I'm planning to support next, check out the roadmap linked above.
 
