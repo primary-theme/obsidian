@@ -1833,64 +1833,64 @@ strong em, em strong,
 
 /*──────────Internal & External Links──────────*/
 /* Source View Resolved Links */
-.cm-s-obsidian span.cm-url, .cm-s-obsidian span.cm-link:not(.cm-formatting-link), .cm-s-obsidian span.cm-link span.cm-underline, .cm-s-obsidian span.cm-hmd-internal-link, .cm-s-obsidian span.cm-hmd-internal-link span.cm-underline, .cm-s-obsidian span.cm-hmd-footnote.cm-link, .cm-s-obsidian span.cm-header.cm-hmd-internal-link {
+span.cm-url.cm-url, span.cm-blockid, span.cm-link:not(.cm-formatting), span.cm-underline:not(span[data-link-tags] .cm-underline), span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting), span.cm-hmd-footnote, span.cm-header.cm-hmd-internal-link, span.cm-hmd-internal-link.cm-hmd-internal-link {
   color: var(--md-color-reslink);
+  text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-.cm-s-obsidian span.cm-url:hover, .cm-s-obsidian span.cm-link:not(.cm-formatting-link):hover, .cm-s-obsidian span.cm-link span.cm-underline:hover, .cm-s-obsidian span.cm-hmd-internal-link:hover, .cm-s-obsidian span.cm-hmd-internal-link span.cm-underline:hover, .cm-s-obsidian span.cm-hmd-footnote.cm-link:hover, .cm-s-obsidian span.cm-header.cm-hmd-internal-link:hover {
+span.cm-url.cm-url:hover, span.cm-blockid:hover, span.cm-link:not(.cm-formatting):hover, span.cm-underline:not(span[data-link-tags] .cm-underline):hover, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):hover, span.cm-hmd-footnote:hover, span.cm-header.cm-hmd-internal-link:hover, span.cm-hmd-internal-link.cm-hmd-internal-link:hover {
   color: var(--md-color-reslink-hover);
-  cursor: pointer;
-}
-.cm-s-obsidian span.cm-url:active, .cm-s-obsidian span.cm-link:not(.cm-formatting-link):active, .cm-s-obsidian span.cm-link span.cm-underline:active, .cm-s-obsidian span.cm-hmd-internal-link:active, .cm-s-obsidian span.cm-hmd-internal-link span.cm-underline:active, .cm-s-obsidian span.cm-hmd-footnote.cm-link:active, .cm-s-obsidian span.cm-header.cm-hmd-internal-link:active {
-  color: var(--md-color-reslink-active);
-}
-.cm-s-obsidian span.cm-blockid {
-  color: var(--md-color-reslink);
+  text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
-  transition: var(--duration-superfast) var(--motion-smooth);
 }
-.cm-s-obsidian span.cm-blockid:hover {
-  color: var(--md-color-reslink-hover);
-  cursor: pointer;
-}
-.cm-s-obsidian span.cm-blockid:active {
+span.cm-url.cm-url:active, span.cm-blockid:active, span.cm-link:not(.cm-formatting):active, span.cm-underline:not(span[data-link-tags] .cm-underline):active, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):active, span.cm-hmd-footnote:active, span.cm-header.cm-hmd-internal-link:active, span.cm-hmd-internal-link.cm-hmd-internal-link:active {
   color: var(--md-color-reslink-active);
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 
-/* Source View Unresolved Links */
-.cm-s-obsidian span.is-unresolved span.cm-link span.cm-underline, .cm-s-obsidian span.is-unresolved span.cm-hmd-internal-link, .cm-s-obsidian span.is-unresolved span.cm-hmd-internal-link span.cm-underline, .cm-s-obsidian span.is-unresolved span.cm-header.cm-hmd-internal-link {
+/* Source View Resolved Links */
+span.is-unresolved.is-unresolved span.cm-url, span.is-unresolved.is-unresolved span.cm-blockid, span.is-unresolved.is-unresolved span.cm-link, span.is-unresolved.is-unresolved span.cm-underline, span.is-unresolved.is-unresolved span.cm-hmd-internal-link, span.is-unresolved.is-unresolved span.cm-hmd-footnote {
   color: var(--md-color-unreslink);
+  text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-.cm-s-obsidian span.is-unresolved span.cm-link span.cm-underline:hover, .cm-s-obsidian span.is-unresolved span.cm-hmd-internal-link:hover, .cm-s-obsidian span.is-unresolved span.cm-hmd-internal-link span.cm-underline:hover, .cm-s-obsidian span.is-unresolved span.cm-header.cm-hmd-internal-link:hover {
+span.is-unresolved.is-unresolved span.cm-url:hover, span.is-unresolved.is-unresolved span.cm-blockid:hover, span.is-unresolved.is-unresolved span.cm-link:hover, span.is-unresolved.is-unresolved span.cm-underline:hover, span.is-unresolved.is-unresolved span.cm-hmd-internal-link:hover, span.is-unresolved.is-unresolved span.cm-hmd-footnote:hover {
   color: var(--md-color-unreslink-hover);
-  cursor: pointer;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
-.cm-s-obsidian span.is-unresolved span.cm-link span.cm-underline:active, .cm-s-obsidian span.is-unresolved span.cm-hmd-internal-link:active, .cm-s-obsidian span.is-unresolved span.cm-hmd-internal-link span.cm-underline:active, .cm-s-obsidian span.is-unresolved span.cm-header.cm-hmd-internal-link:active {
-  color: var(--md-color-unreslink-active);
+span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unresolved span.cm-blockid:active, span.is-unresolved.is-unresolved span.cm-link:active, span.is-unresolved.is-unresolved span.cm-underline:active, span.is-unresolved.is-unresolved span.cm-hmd-internal-link:active, span.is-unresolved.is-unresolved span.cm-hmd-footnote:active {
+  color: var(--md-color-unreslink-hover);
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 
 /* Preview Resolved Links */
-.modal a:not(a.footnote-link, a.tag, button.mod-cta a), .view-content a:not(a.footnote-link, a.tag, button.mod-cta a),
+.modal a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved), .view-content a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved),
 .modal a code,
 .view-content a code {
   color: var(--md-color-reslink);
+  text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-.modal a:not(a.footnote-link, a.tag, button.mod-cta a):hover, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a):hover,
+.modal a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):hover, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):hover,
 .modal a code:hover,
 .view-content a code:hover {
   color: var(--md-color-reslink-hover);
   cursor: pointer;
 }
-.modal a:not(a.footnote-link, a.tag, button.mod-cta a):active, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a):active,
+.modal a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):active, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):active,
 .modal a code:active,
 .view-content a code:active {
   color: var(--md-color-reslink-active);
@@ -1899,6 +1899,7 @@ strong em, em strong,
 .internal-link,
 .external-link {
   color: var(--md-color-reslink);
+  text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
@@ -5629,6 +5630,24 @@ body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
 .markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview ul.dataview.list-view-ul {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/*────────────────────────────────────
+        Supercharged Links
+────────────────────────────────────*/
+/* Supercharged Links Reset for Source View */
+.cm-s-obsidian span.cm-hmd-internal-link span[data-link-tags], .cm-s-obsidian span[data-link-tags] .cm-underline {
+  color: inherit;
+  text-decoration: inherit;
+  text-underline-position: inherit;
+  text-decoration-thickness: inherit;
+  transition: var(--duration-superfast) var(--motion-smooth);
+}
+
+/* Supercharged Links Reset for Preview View */
+.internal-link.data-link-icon {
+  color: inherit;
+  transition: var(--duration-superfast) var(--motion-smooth);
 }
 
 /* Style Settings Styling */

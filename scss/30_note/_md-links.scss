@@ -1,15 +1,16 @@
 /*──────────Internal & External Links──────────*/
 /* Source View Resolved Links */
-
-.cm-s-obsidian span.cm {
-    &-url,
-    &-link:not(.cm-formatting-link),
-    &-link span.cm-underline,
-    &-hmd-internal-link,
-    &-hmd-internal-link span.cm-underline,
-    &-hmd-footnote.cm-link,
-    &-header.cm-hmd-internal-link { 
+span.cm {
+    &-url.cm-url,
+    &-blockid,
+    &-link:not(.cm-formatting),
+    &-underline:not(span[data-link-tags] .cm-underline),
+    &-inline-code.cm-link:not(.cm-formatting-code.cm-formatting),
+    &-hmd-footnote,
+    &-header.cm-hmd-internal-link,
+    &-hmd-internal-link.cm-hmd-internal-link {
         color: var(--md-color-reslink);
+        text-decoration: underline;
         text-underline-position: under;
         text-decoration-thickness: 1px;
 
@@ -18,68 +19,66 @@
 
         &:hover {
             color: var(--md-color-reslink-hover);
-            cursor: pointer;
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-thickness: 1px;
         }
 
         &:active {
             color: var(--md-color-reslink-active);
-        }
-    }
-
-    &-blockid {
-        color: var(--md-color-reslink);
-        text-underline-position: under;
-        text-decoration-thickness: 1px;
-
-        transition: var(--duration-superfast)
-                    var(--motion-smooth);
-
-        &:hover {
-            color: var(--md-color-reslink-hover);
-            cursor: pointer;
-        }
-
-        &:active {
-            color: var(--md-color-reslink-active);
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-thickness: 1px;
         }
     }
 }
 
-/* Source View Unresolved Links */
-.cm-s-obsidian span.is-unresolved span.cm {
-    &-link span.cm-underline,
-    &-hmd-internal-link,
-    &-hmd-internal-link span.cm-underline,
-    &-header.cm-hmd-internal-link {
-        color: var(--md-color-unreslink);
-        text-underline-position: under;
-        text-decoration-thickness: 1px;
+/* Source View Resolved Links */
+span.is-unresolved.is-unresolved {
+    span.cm {
+        &-url,
+        &-blockid,
+        &-link,
+        &-underline,
+        &-hmd-internal-link,
+        &-hmd-footnote {
+            color: var(--md-color-unreslink);
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-thickness: 1px;
+    
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
 
-        transition: var(--duration-superfast)
-                    var(--motion-smooth);
+            &:hover {
+                color: var(--md-color-unreslink-hover);
+                text-decoration: underline;
+                text-underline-position: under;
+                text-decoration-thickness: 1px;
+            }
 
-        &:hover {
-            color: var(--md-color-unreslink-hover);
-            cursor: pointer;
-        }
-
-        &:active {
-            color: var(--md-color-unreslink-active);
+            &:active {
+                color: var(--md-color-unreslink-hover);
+                text-decoration: underline;
+                text-underline-position: under;
+                text-decoration-thickness: 1px;
+            }
         }
     }
 }
 
 /* Preview Resolved Links */
-a:not(a.footnote-link, a.tag, button.mod-cta a),
+a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved),
 a code {
     .modal &,
     .view-content & {
         color: var(--md-color-reslink);
+        text-decoration: underline;
         text-underline-position: under;
         text-decoration-thickness: 1px;
         
         transition: var(--duration-superfast)
-        var(--motion-smooth);
+                    var(--motion-smooth);
         
         &:hover {
             color: var(--md-color-reslink-hover);
@@ -95,6 +94,7 @@ a code {
 .internal-link,
 .external-link {
     color: var(--md-color-reslink);
+    text-decoration: underline;
     text-underline-position: under;
     text-decoration-thickness: 1px;
     
