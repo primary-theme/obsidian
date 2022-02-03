@@ -61,9 +61,9 @@
 
     .theme-dark & {
         color: var(--color-d-white);
-        border: 1px solid rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.55);
         box-shadow: 0px -2px 0px 0px
-                    rgba(0, 0, 0, 0.15) inset,
+                    rgba(0, 0, 0, 0.28) inset,
                     0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 
         &:active {

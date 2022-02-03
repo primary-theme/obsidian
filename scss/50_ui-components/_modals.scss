@@ -249,6 +249,11 @@
                             padding-bottom: 1px;
                             box-shadow: none;
                         }
+
+                        & .suggestion-flair,
+                        & .suggestion-note {
+                            color: var(--text-faint);
+                        }
                     }
                 }
 
@@ -271,9 +276,21 @@
                             padding-bottom: 1px;
                             box-shadow: none;
                         }
+
+                        & .suggestion-flair,
+                        & .suggestion-note {
+                            color: var(--text-faint);
+                        }
                     }
                 }
             }
+        }
+
+        & .suggestion-flair {
+            position: relative;
+            left: initial;
+            top: initial;
+            margin-right: var(--scale-2-3);
         }
     }
 
@@ -302,11 +319,6 @@
             & .search-input-container {
                 width: 100%;
             }
-        }
-
-        &.is-selected .community-theme-info,
-        &.is-selected .community-theme-downloads {
-            color: var(--text-muted);
         }
 
         .theme-light & {

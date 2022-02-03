@@ -1,15 +1,12 @@
 @use '00_meta/intro';
 @use '00_meta/TOC';
-
 @use '10_base/body-font__karla';
 @use '10_base/body-font__inter';
 @use '10_base/body-font__lora';
 @use '10_base/mono-font__cascadia-code';
-
 @use '10_base/var__global';
 @use '10_base/var__light-mode';
 @use '10_base/var__dark-mode';
-
 @use '20_workspace/title-bar';
 @use '20_workspace/side-dock-ribbon';
 @use '20_workspace/tab-header';
@@ -17,7 +14,6 @@
 @use '20_workspace/tab-content';
 @use '20_workspace/file-explorer';
 @use '20_workspace/status-bar';
-
 @use '30_note/note-header';
 @use '30_note/typography';
 @use '30_note/md-headers';
@@ -32,13 +28,10 @@
 @use '30_note/md-horizontal-rule';
 @use '30_note/md-embeds';
 @use '30_note/md-tables';
-// @use '30_note/md-aside'; #tofix
 @use '30_note/md-active-line';
 @use '30_note/md-gutter-line';
 @use '30_note/md-yaml';
-
 @use '40_special-features/custom-icons';
-
 @use '50_ui-components/modals';
 @use '50_ui-components/buttons';
 @use '50_ui-components/search-input';
@@ -53,17 +46,14 @@
 @use '50_ui-components/scrollbars';
 @use '50_ui-components/tooltips';
 @use '50_ui-components/vault-launch-progress';
-
 @use '60_mobile/general-mobile';
 @use '60_mobile/phone-mobile';
 @use '60_mobile/tablet-mobile';
 @use '60_mobile/big-tablet-mobile';
-
 @use '70_plugins-core/graph-view';
-
 @use '80_plugins-community/calendar';
 @use '80_plugins-community/sliding-panes';
 @use '80_plugins-community/dataview';
 @use '80_plugins-community/style-settings__styling';
 @use '80_plugins-community/style-settings__options';
-
+/*# sourceMappingURL=index.css.map */

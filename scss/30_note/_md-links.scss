@@ -3,49 +3,44 @@
 
 .cm-s-obsidian span.cm {
     &-url,
-    &-link,
+    &-link:not(.cm-formatting-link),
     &-link span.cm-underline,
     &-hmd-internal-link,
     &-hmd-internal-link span.cm-underline,
     &-hmd-footnote.cm-link,
     &-header.cm-hmd-internal-link { 
         color: var(--md-color-reslink);
-        text-decoration: none;
-        border-bottom: 1px solid var(--md-color-reslink);
+        text-underline-position: under;
+        text-decoration-thickness: 1px;
 
         transition: var(--duration-superfast)
                     var(--motion-smooth);
 
         &:hover {
             color: var(--md-color-reslink-hover);
-            text-decoration: none;
-            border-bottom: 1px solid var(--md-color-reslink-hover);
             cursor: pointer;
         }
 
         &:active {
             color: var(--md-color-reslink-active);
-            text-decoration: none;
-            border-bottom: 1px solid var(--md-color-reslink-active);
         }
     }
 
     &-blockid {
         color: var(--md-color-reslink);
-        text-decoration: none;
+        text-underline-position: under;
+        text-decoration-thickness: 1px;
 
         transition: var(--duration-superfast)
                     var(--motion-smooth);
 
         &:hover {
             color: var(--md-color-reslink-hover);
-            text-decoration: none;
             cursor: pointer;
         }
 
         &:active {
             color: var(--md-color-reslink-active);
-            text-decoration: none;
         }
     }
 }
@@ -57,97 +52,78 @@
     &-hmd-internal-link span.cm-underline,
     &-header.cm-hmd-internal-link {
         color: var(--md-color-unreslink);
-        text-decoration: none;
-        border-bottom: 1px solid var(--md-color-unreslink);
+        text-underline-position: under;
+        text-decoration-thickness: 1px;
 
         transition: var(--duration-superfast)
                     var(--motion-smooth);
 
         &:hover {
             color: var(--md-color-unreslink-hover);
-            text-decoration: none;
-            border-bottom: 1px solid var(--md-color-unreslink-hover);
             cursor: pointer;
         }
 
         &:active {
             color: var(--md-color-unreslink-active);
-            text-decoration: none;
-            border-bottom: 1px solid var(--md-color-unreslink-active);
         }
     }
 }
 
 /* Preview Resolved Links */
-a:not(a.footnote-link, a.tag) {
+a:not(a.footnote-link, a.tag, button.mod-cta a) {
+    .modal &,
     .view-content & {
-        word-break: break-all;
         color: var(--md-color-reslink);
-        text-decoration: none;
-        border-bottom: 1px solid var(--md-color-reslink);
+        text-underline-position: under;
+        text-decoration-thickness: 1px;
         
         transition: var(--duration-superfast)
         var(--motion-smooth);
         
         &:hover {
             color: var(--md-color-reslink-hover);
-            text-decoration: none;
-            border-bottom: 1px solid var(--md-color-reslink-hover);
             cursor: pointer;
         }
         
         &:active {
             color: var(--md-color-reslink-active);
-            text-decoration: none;
-            border-bottom: 1px solid var(--md-color-reslink-active);
         }
     }
+}    
 
-    .markdown-preview-view & {
-        &.internal-link,
-        &.external-link {
-            word-break: break-all;
-            color: var(--md-color-reslink);
-            text-decoration: none;
-            border-bottom: 1px solid var(--md-color-reslink);
-            
-            transition: var(--duration-superfast)
-            var(--motion-smooth);
-            
-            &:hover {
-                color: var(--md-color-reslink-hover);
-                text-decoration: none;
-                border-bottom: 1px solid var(--md-color-reslink-hover);
-                cursor: pointer;
-            }
-            
-            &:active {
-                color: var(--md-color-reslink-active);
-                text-decoration: none;
-                border-bottom: 1px solid var(--md-color-reslink-active);
-            }
+.internal-link,
+.external-link {
+    color: var(--md-color-reslink);
+    text-underline-position: under;
+    text-decoration-thickness: 1px;
+    
+    transition: var(--duration-superfast)
+    var(--motion-smooth);
+    
+    &:hover {
+        color: var(--md-color-reslink-hover);
+        cursor: pointer;
+    }
+    
+    &:active {
+        color: var(--md-color-reslink-active);
+    }
 
-            &.is-unresolved {
-                color: var(--md-color-unreslink);
-                text-decoration: none;
-                border-bottom: 1px solid var(--md-color-unreslink);
-        
-                transition: var(--duration-superfast)
-                            var(--motion-smooth);
-        
-                &:hover {
-                    color: var(--md-color-unreslink-hover);
-                    text-decoration: none;
-                    border-bottom: 1px solid var(--md-color-unreslink-hover);
-                    cursor: pointer;
-                }
-        
-                &:active {
-                    color: var(--md-color-unreslink-active);
-                    text-decoration: none;
-                    border-bottom: 1px solid var(--md-color-unreslink-active);
-                }
-            }
+    &.is-unresolved {
+        color: var(--md-color-unreslink);
+        text-underline-position: under;
+        text-decoration-thickness: 1px;
+
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+
+        &:hover {
+            color: var(--md-color-unreslink-hover);
+            cursor: pointer;
+        }
+
+        &:active {
+            color: var(--md-color-unreslink-active);
         }
     }
 }
@@ -156,7 +132,8 @@ a {
     .markdown-preview-view & {
         &.footnote-link {
             color: var(--md-color-reslink);
-            text-decoration: none;
+            text-underline-position: under;
+            text-decoration-thickness: 1px;
         }
     }
 }
