@@ -1876,17 +1876,23 @@ strong em, em strong,
 }
 
 /* Preview Resolved Links */
-.modal a:not(a.footnote-link, a.tag, button.mod-cta a), .view-content a:not(a.footnote-link, a.tag, button.mod-cta a) {
+.modal a:not(a.footnote-link, a.tag, button.mod-cta a), .view-content a:not(a.footnote-link, a.tag, button.mod-cta a),
+.modal a code,
+.view-content a code {
   color: var(--md-color-reslink);
   text-underline-position: under;
   text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-.modal a:not(a.footnote-link, a.tag, button.mod-cta a):hover, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a):hover {
+.modal a:not(a.footnote-link, a.tag, button.mod-cta a):hover, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a):hover,
+.modal a code:hover,
+.view-content a code:hover {
   color: var(--md-color-reslink-hover);
   cursor: pointer;
 }
-.modal a:not(a.footnote-link, a.tag, button.mod-cta a):active, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a):active {
+.modal a:not(a.footnote-link, a.tag, button.mod-cta a):active, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a):active,
+.modal a code:active,
+.view-content a code:active {
   color: var(--md-color-reslink-active);
 }
 

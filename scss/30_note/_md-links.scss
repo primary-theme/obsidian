@@ -70,7 +70,8 @@
 }
 
 /* Preview Resolved Links */
-a:not(a.footnote-link, a.tag, button.mod-cta a) {
+a:not(a.footnote-link, a.tag, button.mod-cta a),
+a code {
     .modal &,
     .view-content & {
         color: var(--md-color-reslink);
