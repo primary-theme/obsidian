@@ -214,7 +214,7 @@
             padding:    var(--scale-2-3)
                         var(--scale-2-1)
                         var(--scale-2-3)
-                        var(--scale-8-2);
+                        var(--scale-8-1);
             border-radius: var(--scale-2-2);
             border: 1px solid transparent;
 
@@ -286,11 +286,16 @@
             }
         }
 
-        & .suggestion-flair {
+        & .suggestion-flair { // For Quick Switcher and other Modals
             position: relative;
             left: initial;
             top: initial;
             margin-right: var(--scale-2-3);
+        }
+
+        & .prompt .suggestion-flair {
+            float: left;
+            margin-top: 1px;
         }
     }
 

@@ -3895,7 +3895,7 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
 .modal-container .suggestion-item {
   font-size: var(--font-scale-1);
   line-height: var(--line-height-0-5);
-  padding: var(--scale-2-3) var(--scale-2-1) var(--scale-2-3) var(--scale-8-2);
+  padding: var(--scale-2-3) var(--scale-2-1) var(--scale-2-3) var(--scale-8-1);
   border-radius: var(--scale-2-2);
   border: 1px solid transparent;
 }
@@ -3955,6 +3955,10 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
   left: initial;
   top: initial;
   margin-right: var(--scale-2-3);
+}
+.modal-container .prompt .suggestion-flair {
+  float: left;
+  margin-top: 1px;
 }
 .modal.mod-community-theme {
   background: var(--background-secondary);
