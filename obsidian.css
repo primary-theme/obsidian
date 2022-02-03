@@ -2373,32 +2373,6 @@ mjx-math {
   margin-right: var(--scale-2-2);
 }
 
-/*──────────Markdown Formatting──────────*/
-span.cm-formatting:not(.cm-header, .cm-formatting-hashtag, .cm-formatting-list),
-.cm-s-obsidian span.cm-formatting-math.cm-keyword,
-.cm-s-obsidian span.cm-formatting-link.cm-link,
-.cm-s-obsidian span.cm-formatting-escape,
-.cm-s-obsidian span.cm-formatting-link-string.cm-string.cm-url,
-.cm-s-obsidian span.cm-bracket,
-span.cm-formatting-header,
-span.cm-header.cm-formatting-link-start,
-span.cm-header.cm-formatting-link-end,
-span.cm-header.cm-formatting.cm-link,
-span.cm-header.cm-formatting.cm-string.cm-url,
-span.cm-formatting.cm-highlight,
-.markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight,
-.markdown-source-view .cm-header.cm-formatting-strong,
-.markdown-source-view .cm-header.cm-formatting-strikethrough,
-.markdown-source-view .cm-header.cm-formatting-em,
-span.cm-quote.cm-formatting.cm-strong,
-span.cm-quote.cm-formatting.cm-em,
-span.cm-quote.cm-formatting.cm-highlight,
-span.cm-quote.cm-formatting.cm-strikethrough,
-.cm-s-obsidian span.cm-quote.cm-formatting-quote {
-  filter: initial;
-  color: var(--md-color-formatting);
-}
-
 /*──────────Horizontal Rule──────────*/
 .theme-light span.cm-hr,
 .theme-dark span.cm-hr {
@@ -5537,18 +5511,15 @@ input[type=range]::-webkit-slider-thumb {
 /*────────────────────────────────────
     Sliding Panes (Andy's Mode)
 ────────────────────────────────────*/
-body.plugin-sliding-panes .mod-root > .workspace-leaf {
+body.plugin-sliding-panes:not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:not(:first-of-type) {
   border-left: 1px solid var(--background-modifier-border) !important;
 }
 body.plugin-sliding-panes-rotate-header {
   /* don't remove !important */
-  /* don't remove !important */
   /* Removes shadow inside of Note Header Title */
 }
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+body.plugin-sliding-panes-rotate-header .workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content .view-header, body.plugin-sliding-panes-rotate-header .workspace .mod-root .workspace-leaf:not(.workspace-leaf.mod-active) .workspace-leaf-content .view-header {
   border-right: 1px solid var(--background-modifier-border) !important;
-}
-body.plugin-sliding-panes-rotate-header .mod-root > .workspace-leaf {
   border-left: 1px solid var(--background-modifier-border) !important;
 }
 body.plugin-sliding-panes-rotate-header .view-header-title-container::before {

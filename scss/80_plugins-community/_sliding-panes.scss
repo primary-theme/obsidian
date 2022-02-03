@@ -3,20 +3,19 @@
 ────────────────────────────────────*/
 body {
     &.plugin-sliding-panes {
-        & .mod-root > .workspace-leaf {
+        &:not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:not(:first-of-type) {
             border-left: 1px solid var(--background-modifier-border) !important;
         }
     }
 
     &.plugin-sliding-panes-rotate-header {
         /* don't remove !important */
-        & .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+        & .workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content .view-header,
+        & .workspace .mod-root .workspace-leaf:not(.workspace-leaf.mod-active) .workspace-leaf-content .view-header {
             border-right: 1px solid var(--background-modifier-border) !important;
-        }
-        /* don't remove !important */
-        & .mod-root > .workspace-leaf {
             border-left: 1px solid var(--background-modifier-border) !important;
         }
+
         /* Removes shadow inside of Note Header Title */
         & .view-header-title-container::before {
             display: none;
