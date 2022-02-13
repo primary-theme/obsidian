@@ -39,6 +39,7 @@ Primary was crafted with a "perfect fundamentals first, nail other features late
 - Sliding Panes by death_au — recommended width of 36px
 - Dataview by Michael Brenan
 - Supercharged Links by mdelobelle
+- Style Settings by mgmeyers — through this plugin, you can change fonts, colors, and get access to features!
 
 If you'd like to see what plugins I'm planning to support next, check out the roadmap linked above.
 
