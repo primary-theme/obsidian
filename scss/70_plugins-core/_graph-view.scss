@@ -3,7 +3,6 @@
             Graph View
 ++++++++++++++++++++++++++++++++++++++
 ──────────────────────────────────────*/
-
 .workspace-leaf-content[data-type="graph"]
 .view-content {
     padding: 0;
@@ -48,48 +47,48 @@
     }
 }
 
-/*─────────Graph View for Light Theme──────────*/
-/*~ Graph View Nodes for Light Theme ~*/
-.theme-light .graph-view {
+/*─────────Graph View Colors──────────*/
+.theme-light .graph-view,
+.theme-dark .graph-view {
     &.color-fill {
-        color: var(--graph-color-l-node-resolved);
+        color: var(--graph-color-node-resolved);
     }
 
     &.color-fill-unresolved {
-        color: var(--graph-color-l-node-unresolved);
-        opacity: var(--graph-color-l-node-unresolved-opacity);
+        color: var(--graph-color-node-unresolved);
+        opacity: var(--graph-color-node-unresolved-opacity);
     }
 
     &.color-fill-tag {
-        color: var(--graph-color-l-node-tag);
+        color: var(--graph-color-node-tag);
     }
 
     &.color-fill-attachment {
-        color: var(--graph-color-l-node-attachment);
+        color: var(--graph-color-node-attachment);
     }
 
     &.color-fill-focused { /* Focused Node */
-        color: var(--graph-color-l-node-focused);
+        color: var(--graph-color-node-focused);
     }
 
     &.color-circle { /* Node Cirle on Hover (Border) */
-        color: var(--graph-color-l-node-border-hover);
+        color: var(--graph-color-node-border-hover);
     }
 
     &.color-arrow {
-        color: var(--graph-color-l-node-arrow);
+        color: var(--graph-color-node-arrow);
     }
 
     &.color-line {
-        color: var(--graph-color-l-node-line);
+        color: var(--graph-color-node-line);
     }
 
     &.color-line-highlight { /* Node Line on Hover */
-        color: var(--graph-color-l-node-line-hover);
+        color: var(--graph-color-node-line-hover);
     }
 
     &.color-text {
-        color: var(--graph-color-l-node-text);
+        color: var(--graph-color-node-text);
     }
 }
 
@@ -112,52 +111,6 @@
     }
 }
 
-
-/*─────────Graph View for Dark Theme──────────*/
-/*~ Graph View Nodes for Dark Theme ~*/
-.theme-dark .graph-view {
-    &.color-fill {
-        color: var(--graph-color-d-node-resolved);
-    }
-
-    &.color-fill-unresolved {
-        color: var(--graph-color-d-node-unresolved);
-        opacity: var(--graph-color-d-node-unresolved-opacity);
-    }
-
-    &.color-fill-tag {
-        color: var(--graph-color-d-node-tag);
-    }
-
-    &.color-fill-attachment {
-        color: var(--graph-color-d-node-attachment);
-    }
-
-    &.color-fill-focused { /* Focused Node */
-        color: var(--graph-color-d-node-focused);
-    }
-
-    &.color-circle { /* Node Cirle on Hover (Border) */
-        color: var(--graph-color-d-node-border-hover);
-    }
-
-    &.color-arrow {
-        color: var(--graph-color-d-node-arrow);
-    }
-
-    &.color-line {
-        color: var(--graph-color-d-node-line);
-    }
-
-    &.color-line-highlight { /* Node Line on Hover */
-        color: var(--graph-color-d-node-line-hover);
-    }
-
-    &.color-text {
-        color: var(--graph-color-d-node-text);
-    }
-}
-
 /*~ Graph View Controls for Dark Theme ~*/
 .theme-dark .graph-controls {
     background-color: var(--color-d-gray-70);
@@ -176,4 +129,3 @@
         color: var(--color-d-gray-10);
     }
 }
-

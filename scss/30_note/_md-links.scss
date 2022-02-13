@@ -35,7 +35,7 @@ span.cm {
 
 /* Source View Resolved Links */
 span.is-unresolved.is-unresolved {
-    span.cm {
+    & span.cm {
         &-url,
         &-blockid,
         &-link,
@@ -58,7 +58,7 @@ span.is-unresolved.is-unresolved {
             }
 
             &:active {
-                color: var(--md-color-unreslink-hover);
+                color: var(--md-color-unreslink-active);
                 text-decoration: underline;
                 text-underline-position: under;
                 text-decoration-thickness: 1px;

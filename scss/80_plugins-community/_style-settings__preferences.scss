@@ -1,0 +1,147 @@
+/*────────── preset-fonts ──────────*/
+.preset-font__karla {
+    &__font-preview-header {
+        --font-preview-header:  "Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__font-preview {
+        --font-preview: "Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__font-editor-header {
+        --font-editor-header:  "Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__font-editor {
+        --font-editor:  "Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__default-font {
+        --default-font: "Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+}
+
+.preset-font__lora {
+    &__font-preview-header {
+        --font-preview-header:  "Lora", Georgia, Times New Roman, serif;
+    }
+
+    &__font-preview {
+        --font-preview: "Lora", Georgia, Times New Roman, serif;
+    }
+
+    &__font-editor-header {
+        --font-editor-header:  "Lora", Georgia, Times New Roman, serif;
+    }
+
+    &__font-editor {
+        --font-editor:  "Lora", Georgia, Times New Roman, serif;
+    }
+
+    &__default-font {
+        --default-font: "Lora", Georgia, Times New Roman, serif;
+    }
+}
+
+.preset-font__inter {
+    &__font-preview-header {
+        --font-preview-header:  "Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+
+        -webkit-font-feature-settings: "cv01", "cv05", "cv06", "cv11";
+    }
+
+    &__font-preview {
+        --font-preview: "Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+
+        -webkit-font-feature-settings: "cv01", "cv05", "cv06", "cv11";
+    }
+
+    &__font-editor-header {
+        --font-editor-header:  "Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+
+        -webkit-font-feature-settings: "cv01", "cv05", "cv06", "cv11";
+    }
+
+    &__font-editor {
+        --font-editor:  "Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__default-font {
+        --default-font: "Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+
+        -webkit-font-feature-settings: "cv01", "cv05", "cv06", "cv11";
+    }
+}
+
+.preset-font__quicksand {
+    &__font-preview-header {
+        --font-preview-header:  "Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__font-preview {
+        --font-preview: "Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__font-editor-header {
+        --font-editor-header:  "Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__font-editor {
+        --font-editor:  "Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    &__default-font {
+        --default-font: "Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+}
+
+.preset-font__roboto-slab {
+    &__font-preview-header {
+        --font-preview-header:  "Roboto Slab", Georgia, Times New Roman, serif;
+    }
+
+    &__font-preview {
+        --font-preview: "Roboto Slab", Georgia, Times New Roman, serif;
+    }
+
+    &__font-editor-header {
+        --font-editor-header:  "Roboto Slab", Georgia, Times New Roman, serif;
+    }
+
+    &__font-editor {
+        --font-editor:  "Roboto Slab", Georgia, Times New Roman, serif;
+    }
+
+    &__default-font {
+        --default-font: "Roboto Slab", Georgia, Times New Roman, serif;
+    }
+}
+
+/* tabular nums */
+.tabular-nums * {
+    font-variant-numeric: tabular-nums;
+}
+
+/*────────── workspace-components ──────────*/
+/* vault title */
+.vault-title {
+    &__titlebar .titlebar-text,
+    &__file-explorer .nav-folder-title[data-path="/"] {
+        display: none;
+    }
+}

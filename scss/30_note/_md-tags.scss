@@ -1,5 +1,4 @@
 /*──────────Tags──────────*/
-
 .cm-s-obsidian span.cm-hashtag,
 .tag:not(.token) {
     color: var(--md-color-tag);
@@ -23,13 +22,14 @@
     .theme-dark & {
         border-top: 1px solid rgba(0, 0, 0, 0.3);
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        box-shadow: 0px -2px 0px 0px
+        box-shadow: 0px -1px 0px 0px
                     rgba(0, 0, 0, 0.15) inset,
                     0px 2px 4px 0px rgba(0, 0, 0, 0.1);
     }
     
     &:hover {
         color: var(--md-color-tag-hover);
+        background: transparent;
     }
     
     &:active {
@@ -41,6 +41,15 @@
 .cm-s-obsidian span.cm-hashtag:not(.cm-header),
 .tag:not(.token, h1, h2, h3, h4, h5, h6) {
     font-size: var(--font-scale-0-5);
+}
+
+/* Font Family for Tags */
+.cm-s-obsidian span.cm-hashtag {
+    font-family: var(--font-editor);
+}
+
+.tag:not(.token) {
+    font-family: var(--font-preview);
 }
 
 // Source View Tag Pill Shape Fix

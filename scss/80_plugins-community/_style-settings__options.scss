@@ -1,12 +1,450 @@
 /* @settings
 
-name: Primary Theme by Cecilia May
-id: obsidianmd-primary-theme
+name: Primary Theme Settings
+id: primary-ceciliamay
 settings:
-    - 
-        id: coming-soon
-        title: Coming Soon!
-        description: Style Settings should come by mid-Feb!
+    -
+        id: preset-fonts
+        title: 🔤 Fonts & Typography
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: preset-font__font-preview-header
+        title: Preset Preview Header Font
+        type: class-select
+        default: preset-font__karla__font-preview-header
+        options:
+            -
+                label: Karla
+                value: preset-font__karla__font-preview-header
+            -
+                label: Lora 
+                value: preset-font__lora__font-preview-header
+            -
+                label: Inter (Alt. Version)
+                value: preset-font__inter__font-preview-header
+            -
+                label: Quicksand 
+                value: preset-font__quicksand__font-preview-header
+            -
+                label: Roboto Slab
+                value: preset-font__roboto-slab__font-preview-header
+    -
+        id: preset-font__font-preview-header
+        title: Preset Preview Body Font
+        type: class-select
+        default: preset-font__karla__font-preview
+        options:
+            -
+                label: Karla
+                value: preset-font__karla__font-preview
+            -
+                label: Lora 
+                value: preset-font__lora__font-preview
+            -
+                label: Inter (Alt. Version)
+                value: preset-font__inter__font-preview
+            -
+                label: Quicksand 
+                value: preset-font__quicksand__font-preview
+            -
+                label: Roboto Slab
+                value: preset-font__roboto-slab__font-preview
+    -
+        id: preset-font__font-editor-header
+        title: Preset Editor Header Font
+        type: class-select
+        default: preset-font__karla__font-editor-header
+        options:
+            -
+                label: Karla
+                value: preset-font__karla__font-editor-header
+            -
+                label: Lora 
+                value: preset-font__lora__font-editor-header
+            -
+                label: Inter (Alt. Version)
+                value: preset-font__inter__font-editor-header
+            -
+                label: Quicksand 
+                value: preset-font__quicksand__font-editor-header
+            -
+                label: Roboto Slab
+                value: preset-font__roboto-slab__font-editor-header
+    -
+        id: preset-font__font-editor
+        title: Preset Editor Body Font
+        type: class-select
+        default: preset-font__karla__font-editor
+        options:
+            -
+                label: Karla
+                value: preset-font__karla__font-editor
+            -
+                label: Lora 
+                value: preset-font__lora__font-editor
+            -
+                label: Inter (Alt. Version)
+                value: preset-font__inter__font-editor
+            -
+                label: Quicksand 
+                value: preset-font__quicksand__font-editor
+            -
+                label: Roboto Slab
+                value: preset-font__roboto-slab__font-editor
+    -
+        id: preset-font__default-font
+        title: Preset Interface Font
+        type: class-select
+        default: preset-font__karla__default-font
+        options:
+            -
+                label: Karla
+                value: preset-font__karla__default-font
+            -
+                label: Lora 
+                value: preset-font__lora__default-font
+            -
+                label: Inter (Alt. Version)
+                value: preset-font__inter__default-font
+            -
+                label: Quicksand 
+                value: preset-font__quicksand__default-font
+            -
+                label: Roboto Slab
+                value: preset-font__roboto-slab__default-font
+    -
+        id: tabular-nums
+        title: Use Tabular Numbers
+        description: Evenly spaces out numbers.
+        type: class-toggle
+    -
+        id: gray-md-formatting
+        title: Gray Out Markdown Formatting
+        description: Makes markdown formatting less noticeable in Editor View.
+        type: class-toggle
+    -
+        id: global-fonts__custom
+        title: Custom Fonts
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: font-preview-header
+        title: Custom Preview Header Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-preview
+        title: Custom Preview Body Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-editor-header
+        title: Custom Edit Header Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-editor
+        title: Custom Edit Body Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-code
+        title: Code Font
+        description:
+        type: variable-text
+        default: '"Cascadia Code", Inconsolata, Courier, monospace'
+    -
+        id: default-font
+        title: Interface Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: line-height-1
+        title: Line Height
+        type: variable-text
+        default: '1.53em'
+    -
+        id: workspace-components
+        title: ⏹️ Workspace Components
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: vault-title__titlebar
+        title: Hide Vault Title on Titlebar
+        description: Toggle on to hide the vault title on the titlebar. Keep it off to show it.
+        type: class-toggle
+    -
+        id: vault-title__file-explorer
+        title: Hide Vault Title on File Explorer
+        description: Toggle on to hide the vault title box on the file explorer. Keep it off to show it.
+        type: class-toggle
+    -
+        id: header
+        title: 🔠 Header Size, Line Height and Color
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: header-size__preset
+        title: Preset Header Sizes
+        type: class-select
+        allowEmpty: false
+        default: header-size__original
+        options:
+            -
+                label: Original Size
+                value: header-size__original
+            -
+                label: Medium Size
+                value: header-size__medium
+            -
+                label: Small Size
+                value: header-size__small
+    -
+        id: header-color__preset
+        title: Preset Header Colors
+        description: 
+        type: class-select
+        allowEmpty: false
+        default: header-color__normal
+        options:
+            -
+                label: Text Colors Header 
+                value: header-color__normal
+            -
+                label: Primary Colors Header
+                value: header-color__yrb
+            -
+                label: Rainbow Colors Header
+                value: header-color__rainbow
+    -
+        id: header__custom
+        title: Custom Headers
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h1-size
+        title: Header 1 Size
+        type: variable-text
+        default: '2.678em'
+    -
+        id: h1-text-color
+        title: Header 1 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h2-size
+        title: Header 2 Size
+        type: variable-text
+        default: '2.288em'
+    -
+        id: h2-text-color
+        title: Header 2 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h3-size
+        title: Header 3 Size
+        type: variable-text
+        default: '1.927em'
+    -
+        id: h3-text-color
+        title: Header 3 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h4-size
+        title: Header 4 Size
+        type: variable-text
+        default: '1.648em'
+    -
+        id: h4-text-color
+        title: Header 4 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h5-size
+        title: Header 5 Size
+        type: variable-text
+        default: '1.388em'
+    -
+        id: h5-text-color
+        title: Header 5 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h6-size
+        title: Header 6 Size
+        type: variable-text
+        default: '1.188em'
+    -
+        id: h6-text-color
+        title: Header 6 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(34, 28%, 60%)'
+        default-dark: 'hsl(35, 27%, 55%)'
+    -
+        id: header-line-height
+        title: Headers Line Height
+        type: variable-text
+        default: '1.18'
+    -
+        id: graph-view
+        title: 🌐 Graph View
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: graph-color-node-resolved
+        title: Resolved Note Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(205, 66%, 46%)'
+        default-dark: 'hsl(198, 75%, 35%)'
+    -
+        id: graph-color-node-unresolved
+        title: Unresolved Note Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(43, 78%, 52%)'
+        default-dark: 'hsl(43, 100%, 42%)'
+    -
+        id: graph-color-node-unresolved-opacity
+        title: Unresolved Note Node Opacity
+        type: variable-text
+        default: '1'
+    -
+        id: graph-color-node-tag
+        title: Tag Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(4, 74%, 53%)'
+        default-dark: 'hsl(4, 65%, 60%)'
+    -
+        id: graph-color-node-attachment
+        title: Attachment Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(154, 50%, 58%)'
+        default-dark: 'hsl(154, 52%, 46%)'
+    -
+        id: graph-color-node-focused
+        title: Focused Node (Opened Note) Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 27%, 40%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: graph-color-node-border-hover
+        title: Node (on hover) Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(34, 18%, 62%)'
+    -
+        id: graph-color-node-arrow
+        title: Graph View Arrow Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 28%, 60%)'
+        default-dark: 'hsl(33, 20%, 30%)'
+    -
+        id: graph-color-node-line
+        title: Graph View Line Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(36, 34%, 85%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: graph-color-node-line-hover
+        title: Graph View Line (on hover) Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(33, 20%, 30%)'
+    -
+        id: graph-color-node-text
+        title: Graph View Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 18%, 62%)'
+    -
+        id: interface-components
+        title: 🖱️ Interface Components
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: scrollbar-style
+        title: Scrollbar Style
+        description: 
+        type: class-select
+        allowEmpty: false
+        default: scrollbar__thin
+        options: 
+            -
+                label: Thin
+                value: scrollbar__thin
+            -
+                label: Mac (Grabbable)
+                value: scrollbar__mac
+            -
+                label: Hidden
+                value: scrollbar__hidden
+    -
+        id: primary-wiki
+        title: 💛 Support Primary's Development 
+        description: Consider supporting Primary's Development by donating coffee's at ko-fi.com/ceciliamay
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: primary-wiki
+        title: 🎯 Follow Primary's Roadmap
+        description: Look into Primary's grand development through its roadmap at tinyurl.com/primary-board
         type: heading
         level: 1
         collapsed: false

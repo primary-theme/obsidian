@@ -19,6 +19,7 @@
     overflow-y: hidden;
 
     // Styles both Light and Dark Mode
+    background: var(--background-primary);
     border: 1px solid rgba(100, 100, 100, 0.25);
 
     &.mod-settings,
@@ -220,8 +221,9 @@
 
             & span.suggestion-prefix {
                 color: var(--text-muted);
-                text-transform: uppercase;
+                font-size: 90%;
                 font-style: italic;
+                text-transform: uppercase;
                 margin-right: var(--scale-8-1);
 
                 &::after { // Colon after Prefix

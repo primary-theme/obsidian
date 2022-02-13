@@ -1,0 +1,11 @@
+.cm-s-obsidian span.obsidian-search-match-highlight {
+    color: var(--md-color-text);
+    font-style: italic;
+    border-radius: var(--scale-2-2);
+}
+
+.is-flashing {
+    color: var(--md-color-highlight-text-yellow);
+    font-style: italic;
+    border-radius: var(--scale-2-2);
+}

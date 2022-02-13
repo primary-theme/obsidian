@@ -1,32 +1,113 @@
 /*────────────────────────────────────
             Scrollbars
 ────────────────────────────────────*/
-::-webkit-scrollbar,
-.graph-controls::-webkit-scrollbar {
-    visibility: visible;
-    width: var(--scale-2-2);
-    height: var(--scale-2-2);
-    border-radius: 0;
-    display: inherit;
-    background: transparent;
-}
-
-::-webkit-scrollbar {
-    &-thumb {
+/* Thin Scrollbar */
+.scrollbar__thin {
+    & ::-webkit-scrollbar,
+    & .graph-controls::-webkit-scrollbar {
         visibility: visible;
-        background: var(--background-modifier-border);
+        width: var(--scale-2-2);
+        height: var(--scale-2-2);
         border-radius: 0;
+        display: inherit;
+        background: transparent;
+    }
 
-        &:active {
-            border-radius: 0;  
-
-            .theme-light & { /* Scrollbar for Light Theme */
-                background: var(--color-l-gray-30);
-            }
-
-            .theme-dark & { /* Scrollbar for Dark Theme */
-                background: var(--color-d-gray-40);
+    & ::-webkit-scrollbar {
+        &-thumb {
+            visibility: visible;
+            background: var(--background-modifier-border);
+            border-radius: 0;
+    
+            &:active {
+                border-radius: 0;  
+    
+                .theme-light & { /* Scrollbar for Light Theme */
+                    background: var(--color-l-gray-30);
+                }
+    
+                .theme-dark & { /* Scrollbar for Dark Theme */
+                    background: var(--color-d-gray-40);
+                }
             }
         }
     }
+}
+
+/* Mac (Grabbable) Scrollbar */
+.scrollbar__mac {
+    & ::-webkit-scrollbar {
+        background: transparent;
+        visibility: visible;
+        width: 12px;
+        height: 12px;
+        border-radius: 0;
+    }
+
+    & ::-webkit-scrollbar,
+    & .node-insert-event ::-webkit-scrollbar {
+        &-thumb {
+            background: var(--background-modifier-border);
+            visibility: visible;
+            border: 5px solid var(--background-primary);
+            border-radius: 24px;
+
+            &:hover {
+                background: var(--interactive-accent);
+                border-width: 3px;
+                border-radius: 24px;
+            }
+            
+            &:active {
+                border-radius: 24px;
+            }
+        }
+    }
+
+    & .workspace-tabs ::-webkit-scrollbar {
+        &-thumb {
+            background: var(--background-modifier-border);
+            border: 5px solid var(--background-secondary);
+    
+            &:hover {
+                background: var(--interactive-accent);
+                border-width: 3px;
+                border-radius: 24px;
+            }
+    
+            &:active {
+                border-radius: 24px;
+            }
+        }
+    }
+
+    & .markdown-embed:not(.hover-popover .markdown-embed) ::-webkit-scrollbar {
+        &-thumb {
+            border: 5px solid var(--background-primary-alt);
+
+            &:hover {
+                background: var(--interactive-accent);
+                border-width: 3px;
+                border-radius: 24px;
+            }
+    
+            &:active {
+                border-radius: 24px;
+            }
+        }
+    }
+}
+
+
+body.plugin-sliding-panes.scrollbar__mac .workspace-split.mod-vertical.mod-root {
+    background: var(--background-primary);
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-content {
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* Hidden Scrollbar */
+.scrollbar__hidden ::-webkit-scrollbar {
+    display: none;
 }

@@ -77,6 +77,7 @@
 .markdown-embed {
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--scale-2-6);
+    padding: 0;
 
     & .markdown-preview-view {
         /* Markdown Embed Padding with Readable Line Width OFF */
@@ -100,9 +101,9 @@
         font-size: var(--font-scale-1);
         line-height: var(--line-height-1);
         text-align: left;
-        padding:    calc(var(--scale-8-1) - 4px)
+        padding:    var(--scale-2-3)
                     var(--scale-8-5)
-                    var(--scale-8-1)
+                    var(--scale-2-3)
                     var(--scale-2-6);
         border-bottom: 1px solid var(--background-modifier-border);
     }
@@ -110,7 +111,7 @@
     &-link {
         top: 0;
         right: 0;
-        margin: calc(var(--scale-2-6) - 1px)
+        margin: var(--scale-2-4)
                 var(--scale-2-6)
                 var(--scale-8-1)
                 var(--scale-0-0);

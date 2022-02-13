@@ -1,35 +1,6 @@
 /*────────────────────────────────────
             Note Markdown
 ────────────────────────────────────*/
-/*──────────Headings──────────*/
-:root {
-    --h1-size: var(--font-scale-7);
-    --h2-size: var(--font-scale-6);
-    --h3-size: var(--font-scale-5);
-    --h4-size: var(--font-scale-4);
-    --h5-size: var(--font-scale-3);
-    --h6-size: var(--font-scale-2);
-    --header-line-height: 1.18;
-    
-    & .theme-light {
-        --h1-color: var(--text-normal);
-        --h2-color: var(--text-normal);
-        --h3-color: var(--text-normal);
-        --h4-color: var(--text-normal);
-        --h5-color: var(--text-normal);
-        --h6-color: var(--text-muted);
-    }
-
-    & .theme-dark {
-        --h1-color: var(--text-normal);
-        --h2-color: var(--text-normal);
-        --h3-color: var(--text-normal);
-        --h4-color: var(--text-normal);
-        --h5-color: var(--text-normal);
-        --h6-color: var(--text-muted);
-    }
-}
-
 .markdown-preview-view .heading-collapse-indicator {
     padding-right: 0;
     padding-left: var(--scale-2-4);
@@ -37,36 +8,38 @@
 
 /* General Headings */
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-preview-header);
+    font-weight: var(--font-bold);
     line-height: var(--header-line-height);
 }
 
 h1 {
-    color: var(--h1-color);
+    color: var(--h1-text-color);
     font-size: var(--h1-size);
 }
 
 h2 {
-    color: var(--h2-color);
+    color: var(--h2-text-color);
     font-size: var(--h2-size);
 }
 
 h3 {
-    color: var(--h3-color);
+    color: var(--h3-text-color);
     font-size: var(--h3-size);
 }
 
 h4 {
-    color: var(--h4-color);
+    color: var(--h4-text-color);
     font-size: var(--h4-size);
 }
 
 h5 {
-    color: var(--h5-color);
+    color: var(--h5-text-color);
     font-size: var(--h5-size);
 }
 
 h6 {
-    color: var(--h6-color);
+    color: var(--h6-text-color);
     font-size: var(--h6-size);
 }
 
@@ -78,37 +51,37 @@ body .cm-s-obsidian .HyperMD-header {
 
 .cm-header {
     &-1, &-2, &-3, &-4, &-5, &-6 {
-        font-family: var(--font-header);
+        font-family: var(--font-editor-header);
         font-weight: var(--font-bold);
     }
 
     &-1 {
-        color: var(--h1-color);
+        color: var(--h1-text-color);
         font-size: var(--h1-size);
     }
 
     &-2 {
-        color: var(--h2-color);
+        color: var(--h2-text-color);
         font-size: var(--h2-size);
     }
 
     &-3 {
-        color: var(--h3-color);
+        color: var(--h3-text-color);
         font-size: var(--h3-size);
     }
 
     &-4 {
-        color: var(--h4-color);
+        color: var(--h4-text-color);
         font-size: var(--h4-size);
     }
 
     &-5 {
-        color: var(--h5-color);
+        color: var(--h5-text-color);
         font-size: var(--h5-size);
     }
 
     &-6 {
-        color: var(--h6-color);
+        color: var(--h6-text-color);
         font-size: var(--h6-size);
     }
 }
@@ -158,38 +131,123 @@ body .cm-s-obsidian .HyperMD-header {
 /* Preview View Headings */
 .markdown-preview-view {
     & h1, & h2, & h3, & h4, & h5, & h6 {
-        font-family: var(--font-header);
+        font-family: var(--font-preview-header);
         font-weight: var(--font-bold);
         line-height: var(--header-line-height);
     }
     
     & h1 {
-        color: var(--h1-color);
+        color: var(--h1-text-color);
         font-size: var(--h1-size);
     }
 
     & h2 {
-        color: var(--h2-color);
+        color: var(--h2-text-color);
         font-size: var(--h2-size);
     }
 
     & h3 {
-        color: var(--h3-color);
+        color: var(--h3-text-color);
         font-size: var(--h3-size);
     }
 
     & h4 {
-        color: var(--h4-color);
+        color: var(--h4-text-color);
         font-size: var(--h4-size);
     }
 
     & h5 {
-        color: var(--h5-color);
+        color: var(--h5-text-color);
         font-size: var(--h5-size);
     }
 
     & h6 {
-        color: var(--h6-color);
+        color: var(--h6-text-color);
         font-size: var(--h6-size);
+    }
+}
+
+/*──────────Headings──────────*/
+:root {
+    --header-line-height: 1.18;
+}
+
+/*────────── header-size__preset ──────────*/
+.header-size {
+    &__original { /* 1.388 Scale Ratio */
+        --h1-size: var(--font-scale-7);
+        --h2-size: var(--font-scale-6);
+        --h3-size: var(--font-scale-5);
+        --h4-size: var(--font-scale-4);
+        --h5-size: var(--font-scale-3);
+        --h6-size: var(--font-scale-2);
+    }
+
+    &__medium { /* 1.24 Scale Ratio */
+        --h1-size: 1.907em;
+        --h2-size: 1.707em;
+        --h3-size: 1.538em;
+        --h4-size: 1.377em;
+        --h5-size: 1.24em;
+        --h6-size: 1.11em;
+    }
+
+    &__small { /* 1.12 Scale Ratio */
+        --h1-size: 1.405em;
+        --h2-size: 1.33em;
+        --h3-size: 1.254em;
+        --h4-size: 1.187em;
+        --h5-size: 1.12em;
+        --h6-size: 1.06em;
+    }
+}
+
+/*────────── header-color__preset ──────────*/
+.header-color__normal { /* Normal Colors */
+    --h1-text-color: var(--text-normal);
+    --h2-text-color: var(--text-normal);
+    --h3-text-color: var(--text-normal);
+    --h4-text-color: var(--text-normal);
+    --h5-text-color: var(--text-normal);
+    --h6-text-color: var(--text-muted);
+}
+
+.theme-light { 
+    &.header-color__yrb { /* YRB Light Mode Colors */
+        --h1-text-color: var(--color-l-yellow-700);
+        --h2-text-color: var(--color-l-red-700);
+        --h3-text-color: var(--color-l-blue-700);
+        --h4-text-color: var(--color-l-yellow-700);
+        --h5-text-color: var(--color-l-red-700);
+        --h6-text-color: var(--color-l-blue-700);
+    }
+
+    &.header-color__rainbow { /* Rainbow Light Mode Colors */
+        --h1-text-color: var(--color-l-red-700);
+        --h2-text-color: var(--color-l-orange-500);
+        --h3-text-color: var(--color-l-yellow-700);
+        --h4-text-color: var(--color-l-green-700);
+        --h5-text-color: var(--color-l-blue-700);
+        --h6-text-color: var(--color-l-violet-700);
+    }
+}
+
+.theme-dark {
+    &.header-color__yrb { /* YRB Dark Mode Colors */
+        --h1-text-color: var(--color-d-yellow-300);
+        --h2-text-color: var(--color-d-red-300);
+        --h3-text-color: var(--color-d-blue-500);
+        --h4-text-color: var(--color-d-yellow-300);
+        --h5-text-color: var(--color-d-red-300);
+        --h6-text-color: var(--color-d-blue-500);
+    }
+
+    &.header-color__rainbow { /* Rainbow Dark Mode Colors */
+        --h1-text-color: var(--color-d-red-300);
+        --h2-text-color: var(--color-d-orange-300);
+        --h3-text-color: var(--color-d-yellow-300);
+        --h4-text-color: var(--color-d-green-500);
+        --h5-text-color: var(--color-d-blue-500);
+        --h6-text-color: var(--color-d-violet-300);
     }
 }

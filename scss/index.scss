@@ -2,8 +2,10 @@
 @use '00_meta/TOC';
 
 @use '10_base/body-font__karla';
-@use '10_base/body-font__inter';
 @use '10_base/body-font__lora';
+@use '10_base/body-font__inter';
+@use '10_base/body-font__quicksand';
+@use '10_base/body-font__roboto-slab';
 @use '10_base/mono-font__cascadia-code';
 
 @use '10_base/var__global';
@@ -28,7 +30,7 @@
 @use '30_note/md-lists';
 @use '30_note/md-checkboxes';
 @use '30_note/md-code';
-// @use '30_note/md-formatting';
+@use '30_note/md-formatting';
 @use '30_note/md-horizontal-rule';
 @use '30_note/md-embeds';
 @use '30_note/md-tables';
@@ -36,6 +38,7 @@
 @use '30_note/md-active-line';
 @use '30_note/md-gutter-line';
 @use '30_note/md-yaml';
+@use '30_note/md-highlighted-search';
 
 @use '40_special-features/custom-icons';
 
@@ -66,5 +69,6 @@
 @use '80_plugins-community/dataview';
 @use '80_plugins-community/supercharged-links';
 @use '80_plugins-community/style-settings__styling';
+@use '80_plugins-community/style-settings__preferences';
 @use '80_plugins-community/style-settings__options';
 
