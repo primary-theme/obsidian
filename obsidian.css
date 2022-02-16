@@ -5735,6 +5735,11 @@ body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
                 Dataview
 ────────────────────────────────────*/
 /* Dataview Tables */
+table.dataview {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
 .markdown-source-view.mod-cm6 .dataview {
   /* Source View */
 }

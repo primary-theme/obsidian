@@ -2,6 +2,11 @@
                 Dataview
 ────────────────────────────────────*/
 /* Dataview Tables */
+table.dataview {
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
 .dataview {
     .markdown-source-view.mod-cm6 & {
     /* Source View */
