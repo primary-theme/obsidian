@@ -1008,6 +1008,7 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
 /*─────────Outline Tab──────────*/
 .outline {
   font-size: var(--font-scale-0-5);
+  margin-left: var(--scale-2-8);
 }
 
 /*─────────Search Results──────────*/
@@ -1092,11 +1093,11 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
 .tree-item-self .tree-item-icon {
   align-self: initial;
   padding-left: var(--scale-0-0);
-  margin-left: calc(-1 * var(--scale-2-2));
 }
 
 .tree-item-children:not(.graph-control-section .tree-item-children) {
-  margin-left: var(--scale-2-8);
+  margin-left: var(--scale-0-0);
+  padding-left: var(--scale-2-8);
   border-left: 1px solid var(--background-modifier-border);
 }
 .tree-item-children:not(.graph-control-section .tree-item-children) .tree-item {
