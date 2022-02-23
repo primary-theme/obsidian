@@ -46,6 +46,10 @@
     --interactive-accent-rgb:   92, 78, 61;
     --interactive-accent-hover: var(--color-d-gray-50);
     --interactive-success:      var(--color-d-green-700);
+
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb-bg: var(--background-modifier-border);
+    --scrollbar-active-thumb-bg: var(--interactive-accent);
     
     /*──────────The PRIMARY Color Palette for Dark Theme──────────*/
     

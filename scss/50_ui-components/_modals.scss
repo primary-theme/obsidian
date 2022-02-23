@@ -20,12 +20,10 @@
 
     // Styles both Light and Dark Mode
     background: var(--background-primary);
-    border: 1px solid rgba(100, 100, 100, 0.25);
+    border: 1px solid var(--background-modifier-border);
 
     &.mod-settings,
-    &.mod-settings .vertical-tab-container,
-    &.mod-community-theme.mod-community-theme,
-    &.mod-community-plugin {
+    &.mod-settings .vertical-tab-container {
         width: 60vw;
         max-width: 60vw;
         min-height: 20vh;
@@ -37,7 +35,7 @@
         overflow-y: hidden;
 
         // Styles both Light and Dark Mode
-        border: 1px solid rgba(100, 100, 100, 0.25);
+        border: 1px solid var(--background-modifier-border);
 
         .theme-light & {
             box-shadow: var(--shadow-xl)
@@ -53,6 +51,15 @@
             padding: 0;
             margin-right: var(--scale-2-4);
         }
+    }
+
+    &.mod-community-theme.mod-community-theme,
+    &.mod-community-plugin {
+        width: 80vw;
+        max-width: 80vw;
+        min-height: 80vh;
+
+        overflow: hidden;
     }
 
     &.mod-image-lightbox {
@@ -303,7 +310,7 @@
 
     /*─────────Community Themes Modal──────────*/
     &.mod-community-theme {
-        background: var(--background-secondary);
+        background: var(--background-primary);
         padding: 0;
 
         & .modal-content {
@@ -326,10 +333,19 @@
             & .search-input-container {
                 width: 100%;
             }
+
+            & button {
+                margin: 0;
+                margin-right: var(--scale-2-4);
+            }
+        }
+        
+        &-info.u-center-text {
+            color: var(--text-muted);
         }
 
         .theme-light & {
-            background: var(--background-primary);
+            background: var(--background-primary-alt);
 
             &:hover {
                 border: 1px solid var(--text-faint);
@@ -342,10 +358,11 @@
                 box-shadow: var(--shadow-m) 
                             var(--color-l-shadow-100);
             }
+
         }
 
         .theme-dark & {
-            background: var(--background-primary);
+            background: var(--background-primary-alt);
 
             &:hover {
                 border: 1px solid var(--text-faint);
@@ -669,7 +686,7 @@
         }
 
         // Styles both Light and Dark Mode
-        border: 1px solid rgba(100, 100, 100, 0.25);
+        border: 1px solid var(--background-modifier-border);
     .theme-light & {
         box-shadow: var(--shadow-xl)
                     var(--color-l-shadow-100);

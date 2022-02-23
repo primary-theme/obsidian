@@ -388,6 +388,9 @@ Custom Icons
   --interactive-accent-rgb: 207, 182, 150;
   --interactive-accent-hover: var(--color-l-gray-70);
   --interactive-success: var(--color-l-green-500);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--background-modifier-border);
+  --scrollbar-active-thumb-bg: var(--interactive-accent);
   /*──────────The PRIMARY Color Palette for Light Theme──────────*/
   --color-l-whiter: hsl(36, 36%, 96.9%);
   --color-l-white: hsl(35, 36%, 95%);
@@ -492,6 +495,9 @@ Custom Icons
   --interactive-accent-rgb: 92, 78, 61;
   --interactive-accent-hover: var(--color-d-gray-50);
   --interactive-success: var(--color-d-green-700);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--background-modifier-border);
+  --scrollbar-active-thumb-bg: var(--interactive-accent);
   /*──────────The PRIMARY Color Palette for Dark Theme──────────*/
   --color-d-whiter: hsl(33, 66%, 90%);
   --color-d-white: hsl(34, 50%, 80%);
@@ -2510,6 +2516,7 @@ mjx-math {
 .gray-md-formatting .cm-s-obsidian span.cm-quote.cm-formatting-quote {
   filter: initial;
   color: var(--md-color-formatting);
+  background: initial;
 }
 
 /*──────────Horizontal Rule──────────*/
@@ -2565,18 +2572,18 @@ mjx-math {
 }
 
 /*──────────Images──────────*/
-.workspace-leaf-content img,
-.view-content .markdown-preview-view img,
-.popover img {
+.workspace-leaf-content img[src],
+.view-content .markdown-preview-view img[src],
+.popover img[src] {
   padding: 0;
   border: 1px solid rgba(100, 100, 100, 0.25);
   border-radius: var(--scale-2-4);
   margin: 0;
   transition: var(--duration-fast-1) var(--motion-smooth);
 }
-.workspace-leaf-content img:hover,
-.view-content .markdown-preview-view img:hover,
-.popover img:hover {
+.workspace-leaf-content img[src]:hover,
+.view-content .markdown-preview-view img[src]:hover,
+.popover img[src]:hover {
   border-radius: var(--scale-0-0);
   box-shadow: var(--shadow-m) var(--background-modifier-box-shadow);
   transform: translateY(-2px);
@@ -3921,13 +3928,13 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
   border-radius: var(--scale-2-8);
   overflow-y: hidden;
   background: var(--background-primary);
-  border: 1px solid rgba(100, 100, 100, 0.25);
+  border: 1px solid var(--background-modifier-border);
   /*─────────Settings Modal──────────*/
   /*─────────Command, Quick Switcher etc. Modals──────────*/
   /*─────────Community Themes Modal──────────*/
   /*─────────Community Plugins Modal──────────*/
 }
-.modal.mod-settings, .modal.mod-settings .vertical-tab-container, .modal.mod-community-theme.mod-community-theme, .modal.mod-community-plugin {
+.modal.mod-settings, .modal.mod-settings .vertical-tab-container {
   width: 60vw;
   max-width: 60vw;
   min-height: 20vh;
@@ -3935,17 +3942,23 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
   max-height: 70vh;
   border-radius: var(--scale-2-8);
   overflow-y: hidden;
-  border: 1px solid rgba(100, 100, 100, 0.25);
+  border: 1px solid var(--background-modifier-border);
 }
-.theme-light .modal.mod-settings, .theme-light .modal.mod-settings .vertical-tab-container, .theme-light .modal.mod-community-theme.mod-community-theme, .theme-light .modal.mod-community-plugin {
+.theme-light .modal.mod-settings, .theme-light .modal.mod-settings .vertical-tab-container {
   box-shadow: var(--shadow-xl) var(--color-l-shadow-100);
 }
-.theme-dark .modal.mod-settings, .theme-dark .modal.mod-settings .vertical-tab-container, .theme-dark .modal.mod-community-theme.mod-community-theme, .theme-dark .modal.mod-community-plugin {
+.theme-dark .modal.mod-settings, .theme-dark .modal.mod-settings .vertical-tab-container {
   box-shadow: var(--shadow-xl) var(--color-d-shadow-100);
 }
-.modal.mod-settings .setting-item-control button.clickable-icon, .modal.mod-settings .vertical-tab-container .setting-item-control button.clickable-icon, .modal.mod-community-theme.mod-community-theme .setting-item-control button.clickable-icon, .modal.mod-community-plugin .setting-item-control button.clickable-icon {
+.modal.mod-settings .setting-item-control button.clickable-icon, .modal.mod-settings .vertical-tab-container .setting-item-control button.clickable-icon {
   padding: 0;
   margin-right: var(--scale-2-4);
+}
+.modal.mod-community-theme.mod-community-theme, .modal.mod-community-plugin {
+  width: 80vw;
+  max-width: 80vw;
+  min-height: 80vh;
+  overflow: hidden;
 }
 .modal.mod-image-lightbox {
   width: 90vw;
@@ -4115,7 +4128,7 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
   margin-top: 1px;
 }
 .modal.mod-community-theme {
-  background: var(--background-secondary);
+  background: var(--background-primary);
   padding: 0;
 }
 .modal.mod-community-theme .modal-content {
@@ -4132,8 +4145,15 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
 .modal .community-theme-filters-container .setting-item-control .search-input-container {
   width: 100%;
 }
+.modal .community-theme-filters-container .setting-item-control button {
+  margin: 0;
+  margin-right: var(--scale-2-4);
+}
+.modal .community-theme-info.u-center-text {
+  color: var(--text-muted);
+}
 .theme-light .modal .community-theme {
-  background: var(--background-primary);
+  background: var(--background-primary-alt);
 }
 .theme-light .modal .community-theme:hover {
   border: 1px solid var(--text-faint);
@@ -4145,7 +4165,7 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
   box-shadow: var(--shadow-m) var(--color-l-shadow-100);
 }
 .theme-dark .modal .community-theme {
-  background: var(--background-primary);
+  background: var(--background-primary-alt);
 }
 .theme-dark .modal .community-theme:hover {
   border: 1px solid var(--text-faint);
@@ -4353,7 +4373,7 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
 .prompt {
   border-radius: var(--scale-2-8);
   overflow-y: hidden;
-  border: 1px solid rgba(100, 100, 100, 0.25);
+  border: 1px solid var(--background-modifier-border);
 }
 .prompt-results {
   padding-right: var(--scale-2-4);
@@ -4627,6 +4647,29 @@ body.theme-dark .workspace .document-search-button.document-search-button:hover 
 }
 .document-search-close-button:before:active {
   color: var(--text-faint);
+}
+
+/*~ Command Palette & Quick Switcher Search Input ~*/
+input.prompt-input[placeholder="Select a command..."], input.prompt-input[placeholder="Type file to switch to or create..."] {
+  font-size: var(--font-scale-2);
+  background: var(--background-primary);
+  padding: var(--scale-8-3);
+  border: none;
+}
+input.prompt-input[placeholder="Select a command..."]:focus, input.prompt-input[placeholder="Type file to switch to or create..."]:focus {
+  background: var(--background-primary);
+  border: none;
+  box-shadow: none;
+}
+
+.prompt {
+  padding: 0;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.prompt-results {
+  padding: var(--scale-2-6);
+  border-top: 1px solid var(--background-modifier-border);
 }
 
 /*────────KBD──────────*/
@@ -4995,74 +5038,67 @@ input[type=range]::-webkit-slider-thumb {
             Scrollbars
 ────────────────────────────────────*/
 /* Thin Scrollbar */
-.scrollbar__thin ::-webkit-scrollbar, .scrollbar__thin .graph-controls::-webkit-scrollbar {
+.scrollbar__thin.scrollbar__thin:not(.native-scrollbars) ::-webkit-scrollbar, .scrollbar__thin.scrollbar__thin:not(.native-scrollbars) .graph-controls::-webkit-scrollbar {
   visibility: visible;
   width: var(--scale-2-2);
   height: var(--scale-2-2);
   border-radius: 0;
   display: inherit;
-  background: transparent;
+  background: var(--scrollbar-bg);
 }
-.scrollbar__thin ::-webkit-scrollbar-thumb {
+.scrollbar__thin.scrollbar__thin:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   visibility: visible;
-  background: var(--background-modifier-border);
+  background: var(scrollbar-thumb-bg);
   border-radius: 0;
 }
-.scrollbar__thin ::-webkit-scrollbar-thumb:active {
+.scrollbar__thin.scrollbar__thin:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-active-thumb-bg);
   border-radius: 0;
-}
-.theme-light .scrollbar__thin ::-webkit-scrollbar-thumb:active {
-  /* Scrollbar for Light Theme */
-  background: var(--color-l-gray-30);
-}
-.theme-dark .scrollbar__thin ::-webkit-scrollbar-thumb:active {
-  /* Scrollbar for Dark Theme */
-  background: var(--color-d-gray-40);
 }
 
 /* Mac (Grabbable) Scrollbar */
-.scrollbar__mac ::-webkit-scrollbar {
-  background: transparent;
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) ::-webkit-scrollbar {
+  background: var(--scrollbar-bg);
   visibility: visible;
   width: 12px;
   height: 12px;
   border-radius: 0;
 }
-.scrollbar__mac ::-webkit-scrollbar-thumb, .scrollbar__mac .node-insert-event ::-webkit-scrollbar-thumb {
-  background: var(--background-modifier-border);
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) ::-webkit-scrollbar-thumb, .scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .node-insert-event ::-webkit-scrollbar-thumb {
   visibility: visible;
+  background: var(scrollbar-thumb-bg);
   border: 5px solid var(--background-primary);
   border-radius: 24px;
 }
-.scrollbar__mac ::-webkit-scrollbar-thumb:hover, .scrollbar__mac .node-insert-event ::-webkit-scrollbar-thumb:hover {
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover, .scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .node-insert-event ::-webkit-scrollbar-thumb:hover {
   background: var(--interactive-accent);
   border-width: 3px;
   border-radius: 24px;
 }
-.scrollbar__mac ::-webkit-scrollbar-thumb:active, .scrollbar__mac .node-insert-event ::-webkit-scrollbar-thumb:active {
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active, .scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .node-insert-event ::-webkit-scrollbar-thumb:active {
   border-radius: 24px;
 }
-.scrollbar__mac .workspace-tabs ::-webkit-scrollbar-thumb {
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .workspace-tabs ::-webkit-scrollbar-thumb {
   background: var(--background-modifier-border);
   border: 5px solid var(--background-secondary);
 }
-.scrollbar__mac .workspace-tabs ::-webkit-scrollbar-thumb:hover {
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .workspace-tabs ::-webkit-scrollbar-thumb:hover {
   background: var(--interactive-accent);
   border-width: 3px;
   border-radius: 24px;
 }
-.scrollbar__mac .workspace-tabs ::-webkit-scrollbar-thumb:active {
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .workspace-tabs ::-webkit-scrollbar-thumb:active {
   border-radius: 24px;
 }
-.scrollbar__mac .markdown-embed:not(.hover-popover .markdown-embed) ::-webkit-scrollbar-thumb {
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .markdown-embed:not(.hover-popover .markdown-embed) ::-webkit-scrollbar-thumb {
   border: 5px solid var(--background-primary-alt);
 }
-.scrollbar__mac .markdown-embed:not(.hover-popover .markdown-embed) ::-webkit-scrollbar-thumb:hover {
-  background: var(--interactive-accent);
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .markdown-embed:not(.hover-popover .markdown-embed) ::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-active-thumb-bg);
   border-width: 3px;
   border-radius: 24px;
 }
-.scrollbar__mac .markdown-embed:not(.hover-popover .markdown-embed) ::-webkit-scrollbar-thumb:active {
+.scrollbar__mac.scrollbar__mac:not(.native-scrollbars) .markdown-embed:not(.hover-popover .markdown-embed) ::-webkit-scrollbar-thumb:active {
   border-radius: 24px;
 }
 
@@ -5075,7 +5111,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /* Hidden Scrollbar */
-.scrollbar__hidden ::-webkit-scrollbar {
+.scrollbar__hidden:not(.native-scrollbars) ::-webkit-scrollbar {
   display: none;
 }
 
@@ -5721,9 +5757,6 @@ body.plugin-sliding-panes-rotate-header .view-header .view-action[aria-label="Mo
 body.plugin-sliding-panes-rotate-header .view-header .view-header-icon {
   left: 3px;
 }
-body.plugin-sliding-panes-rotate-header .view-header .view-header-title {
-  margin-left: 3px;
-}
 body.plugin-sliding-panes-rotate-header .view-header .view-actions {
   margin-left: 3px;
 }
@@ -5932,20 +5965,33 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 }
 
 /* Removes Weird Padding on Dark Theme Color Picker */
+.view-content .style-settings-container .setting-item-control {
+  padding-top: 0.2em;
+}
+
+div.themed-color-wrapper > div {
+  margin-right: var(--scale-2-6);
+}
+.modal div.themed-color-wrapper > div {
+  margin-right: 0;
+}
 div.themed-color-wrapper > div + div {
   margin-top: 0;
+  margin-right: var(--scale-2-2);
+}
+.modal div.themed-color-wrapper > div + div {
+  margin-top: var(--scale-2-5);
+  margin-right: 0;
 }
 .theme-light div.themed-color-wrapper > div.theme-light {
   background: var(--color-l-whiter);
   border: 1px solid var(--color-l-gray-40);
   box-shadow: 0px 0px 0px 3px var(--color-l-gray-20);
-  margin-right: var(--scale-8-2);
 }
 .theme-light div.themed-color-wrapper > div.theme-dark {
   background: var(--color-l-gray-100);
   border: 1px solid var(--color-l-gray-80);
   box-shadow: 0px 0px 0px 3px var(--color-l-black);
-  margin-right: var(--scale-2-2);
 }
 .theme-dark div.themed-color-wrapper > div.theme-light {
   background: var(--color-d-whiter);

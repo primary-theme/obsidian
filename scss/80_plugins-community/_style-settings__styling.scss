@@ -142,9 +142,27 @@ div.workspace-leaf-content[data-type=style-settings] .view-content
 }
 
 /* Removes Weird Padding on Dark Theme Color Picker */
+.view-content .style-settings-container .setting-item-control {
+    padding-top: 0.2em;
+}
+
 div.themed-color-wrapper {
-    & > div + div {
-        margin-top: 0;
+    & > div {
+        margin-right: var(--scale-2-6);
+
+        .modal & {
+            margin-right: 0;
+        }
+    
+        & + div {
+            margin-top: 0;
+            margin-right: var(--scale-2-2);
+
+            .modal & {
+                margin-top: var(--scale-2-5);
+                margin-right: 0;
+            }
+        }
     }
 
     .theme-light & {
@@ -152,14 +170,12 @@ div.themed-color-wrapper {
             background: var(--color-l-whiter);
             border: 1px solid var(--color-l-gray-40);
             box-shadow: 0px 0px 0px 3px var(--color-l-gray-20);
-            margin-right: var(--scale-8-2);
         }
 
         & > div.theme-dark {
             background: var(--color-l-gray-100);
             border: 1px solid var(--color-l-gray-80);
             box-shadow: 0px 0px 0px 3px var(--color-l-black);
-            margin-right: var(--scale-2-2);
         }
     }
 
