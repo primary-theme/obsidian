@@ -186,9 +186,16 @@ input[type='number'] {
 }
 
 /*~ Command Palette & Quick Switcher Search Input ~*/
-input.prompt-input {
-    &[placeholder="Select a command..."],
-    &[placeholder="Type file to switch to or create..."] {
+.prompt {
+    padding: 0;
+    border: 1px solid var(--background-modifier-border);
+
+    &-results {
+        padding: var(--scale-2-6);
+        border-top: 1px solid var(--background-modifier-border);
+    }
+
+    & input.prompt-input {
         font-size: var(--font-scale-2);
         background: var(--background-primary);
         padding: var(--scale-8-3);
@@ -200,12 +207,4 @@ input.prompt-input {
             box-shadow: none;
         }
     }
-}
-.prompt {
-    padding: 0;
-    border: 1px solid var(--background-modifier-border);
-}
-.prompt-results {
-    padding: var(--scale-2-6);
-    border-top: 1px solid var(--background-modifier-border);
 }

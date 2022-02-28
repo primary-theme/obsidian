@@ -28,7 +28,7 @@
     }
 
     &:active {
-        transform: translateY(2px);
+        transform: translateY(1px);
     }
 
     .theme-light & {
@@ -122,4 +122,17 @@
             }
         }
     }
+}
+
+.empty-state::after {
+    content: "Primary by Cecilia May \A © 2021—2022";
+    color: var(--text-faint);
+    letter-spacing: var(--tracking-4);
+    text-transform: uppercase;
+    font-size: var(--font-scale-0-5);
+    white-space: pre;
+    text-align: center;
+    position: absolute;
+    bottom: var(--scale-8-4);
+    opacity: 0.75;
 }

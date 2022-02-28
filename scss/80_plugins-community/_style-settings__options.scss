@@ -10,110 +10,135 @@ settings:
         level: 1
         collapsed: true
     -
-        id: preset-font__font-preview-header
+        id: font-preview-header
         title: Preset Preview Header Font
-        type: class-select
-        default: preset-font__karla__font-preview-header
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
         options:
             -
                 label: Karla
-                value: preset-font__karla__font-preview-header
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Lora 
-                value: preset-font__lora__font-preview-header
+                value: '"Lora", Georgia, Times New Roman, serif'
             -
-                label: Inter (Alt. Version)
-                value: preset-font__inter__font-preview-header
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Quicksand 
-                value: preset-font__quicksand__font-preview-header
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Roboto Slab
-                value: preset-font__roboto-slab__font-preview-header
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
-        id: preset-font__font-preview-header
+        id: font-preview
         title: Preset Preview Body Font
-        type: class-select
-        default: preset-font__karla__font-preview
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
         options:
             -
                 label: Karla
-                value: preset-font__karla__font-preview
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Lora 
-                value: preset-font__lora__font-preview
+                value: '"Lora", Georgia, Times New Roman, serif'
             -
-                label: Inter (Alt. Version)
-                value: preset-font__inter__font-preview
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Quicksand 
-                value: preset-font__quicksand__font-preview
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Roboto Slab
-                value: preset-font__roboto-slab__font-preview
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
-        id: preset-font__font-editor-header
+        id: font-editor-header
         title: Preset Editor Header Font
-        type: class-select
-        default: preset-font__karla__font-editor-header
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
         options:
             -
                 label: Karla
-                value: preset-font__karla__font-editor-header
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Lora 
-                value: preset-font__lora__font-editor-header
+                value: '"Lora", Georgia, Times New Roman, serif'
             -
-                label: Inter (Alt. Version)
-                value: preset-font__inter__font-editor-header
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Quicksand 
-                value: preset-font__quicksand__font-editor-header
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Roboto Slab
-                value: preset-font__roboto-slab__font-editor-header
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
-        id: preset-font__font-editor
+        id: font-editor
         title: Preset Editor Body Font
-        type: class-select
-        default: preset-font__karla__font-editor
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
         options:
             -
                 label: Karla
-                value: preset-font__karla__font-editor
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Lora 
-                value: preset-font__lora__font-editor
+                value: '"Lora", Georgia, Times New Roman, serif'
             -
-                label: Inter (Alt. Version)
-                value: preset-font__inter__font-editor
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Quicksand 
-                value: preset-font__quicksand__font-editor
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Roboto Slab
-                value: preset-font__roboto-slab__font-editor
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
-        id: preset-font__default-font
+        id: default-font
         title: Preset Interface Font
-        type: class-select
-        default: preset-font__karla__default-font
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
         options:
             -
                 label: Karla
-                value: preset-font__karla__default-font
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Lora 
-                value: preset-font__lora__default-font
+                value: '"Lora", Georgia, Times New Roman, serif'
             -
-                label: Inter (Alt. Version)
-                value: preset-font__inter__default-font
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Quicksand 
-                value: preset-font__quicksand__default-font
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
                 label: Roboto Slab
-                value: preset-font__roboto-slab__default-font
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
+    -
+        id: inter-alt
+        title: Enable Inter's Alternative Font Settings
+        description: Recommended if you're using Inter. This will enable you to use alternative font settings from Inter that better fit with Primary.
+        type: class-toggle
     -
         id: tabular-nums
         title: Use Tabular Numbers
@@ -178,7 +203,7 @@ settings:
         default: '1.53em'
     -
         id: workspace-components
-        title: ⏹️ Workspace Components
+        title: ⬛ Workspace Components
         type: heading
         level: 1
         collapsed: true
@@ -193,8 +218,114 @@ settings:
         description: Toggle on to hide the vault title box on the file explorer. Keep it off to show it.
         type: class-toggle
     -
+        id: tab-header
+        title: ⏹️ Tab Headers
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tab-header-size
+        title: Tab Header Size
+        description: Select your preferred tab header size.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__size-regular
+        options:
+            -
+                label: Regular Size
+                value: tab-header__size-regular
+            -
+                label: Small Size
+                value: tab-header__size-small
+    -
+        id: tab-header-style
+        title: Tab Header Style
+        description: Select your preferred tab header style.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__style-original
+        options:
+            -
+                label: Original
+                value: tab-header__style-original
+            -
+                label: Minimal
+                value: tab-header__style-minimal
+    -
+        id: tab-header-align-modleft
+        title: Tab Header Alignment for Left Sidebar
+        description: Select your preferred tab header alignment for the left sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__align-modleft-left
+        options:
+            -
+                label: Left
+                value: tab-header__align-modleft-left
+            -
+                label: Center
+                value: tab-header__align-modleft-center
+            -
+                label: Right
+                value: tab-header__align-modleft-right
+    -
+        id: tab-header-align-modright
+        title: Tab Header Alignment for Right Sidebar
+        description: Select your preferred tab header alignment for the right sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__align-modright-right
+        options:
+            -
+                label: Left
+                value: tab-header__align-modright-left
+            -
+                label: Center
+                value: tab-header__align-modright-center
+            -
+                label: Right
+                value: tab-header__align-modright-right
+    -
+        id: tab-header-color-modleft
+        title: Tab Header Color Movement for Left Sidebar
+        description: Select your preferred tab header color arrangement for the right sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__left-color-ltr
+        options:
+            -
+                label: Left to Right
+                value: tab-header__left-color-ltr
+            -
+                label: Right to Left
+                value: tab-header__left-color-rtl
+    -
+        id: tab-header-color-modright
+        title: Tab Header Color Movement for Right Sidebar
+        description: Select your preferred tab header color arrangement for the right sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__right-color-rtl
+        options:
+            -
+                label: Left to Right
+                value: tab-header__right-color-ltr
+            -
+                label: Right to Left
+                value: tab-header__right-color-rtl
+    -
+        id: tab-header__wrap
+        title: Allow Multiple Tab Header Rows
+        description: Toggle on to wrap tab headers and allow multiple rows. This a good option for those whose tabs get cut off due to overflow. It also reduces horizontal margins for the tab headers.
+        type: class-toggle
+    -
+        id: tab-header__anim-none
+        title: Turn Off Tab Header Animation
+        description: Toggle on to turn off the fun jumpy tab header animation.
+        type: class-toggle
+    -
         id: header
-        title: 🔠 Header Size, Line Height and Color
+        title: 🅰️ Header Size, Line Height and Color
         type: heading
         level: 1
         collapsed: true
@@ -321,6 +452,58 @@ settings:
         type: variable-text
         default: '1.18'
     -
+        id: note
+        title: ✏️ Note
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: no-link-underline
+        title: Remove Link Underline
+        description: When toggled on, underlines on internal and external links will be removed.
+        type: class-toggle
+    -
+        id: note-embeds
+        title: 📍 Embeds
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: center-embeds
+        title: Center Embeds
+        description: When toggled on, all embeds (including images and other attachments) will be centered.
+        type: class-toggle
+    -
+        id: full-height-embeds
+        title: Full Height Markdown Embeds
+        description: Toggle on to remove scrolling and embed the whole note.
+        type: class-toggle
+    -
+        id: note-embeds__style
+        title: Markdown Embeds Style
+        description: Choose your preferred embedded note style.
+        type: class-select
+        allowEmpty: false
+        default: note-embeds__style-original
+        options:
+            -
+                label: Original
+                value: note-embeds__style-original
+            -
+                label: Minimal
+                value: note-embeds__style-minimal
+            -
+                label: Clean
+                value: note-embeds__style-clean
+    -
+        id: md-embed-bg
+        title: Markdown Embed Background Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(36, 37%, 92%)'
+        default-dark: 'hsl(30, 15%, 13%)'
+    -
         id: graph-view
         title: 🌐 Graph View
         type: heading
@@ -437,7 +620,7 @@ settings:
     -
         id: primary-wiki
         title: 💛 Support Primary's Development 
-        description: Consider supporting Primary's Development by donating coffee's at ko-fi.com/ceciliamay
+        description: Consider supporting Primary's Development by donating coffees at ko-fi.com/ceciliamay
         type: heading
         level: 1
         collapsed: false

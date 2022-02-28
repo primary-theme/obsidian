@@ -9,6 +9,7 @@
 }
 
 .graph-controls {
+    max-width: initial;
     padding:    var(--scale-8-1)
                 var(--scale-8-3)
                 var(--scale-8-2)
@@ -40,10 +41,6 @@
                 margin: 0;
             }
         }
-    }
-
-    &::-webkit-scrollbar {
-        display: none;
     }
 }
 
@@ -102,7 +99,6 @@
 
     &.is-close {
         min-width: inherit;
-        border: 1px solid var(--color-l-gray-50);
         box-shadow: none;
     }
 
@@ -121,7 +117,6 @@
 
     &.is-close {
         min-width: inherit;
-        border: 1px solid var(--color-d-gray-40);
         box-shadow: none;
     }
 

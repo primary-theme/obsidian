@@ -103,6 +103,8 @@ body *,
 
     --md-color-formatting: var(--color-l-gray-50);
     --md-color-border: var(--background-modifier-border);
+
+    --md-embed-bg: var(--color-l-gray-10);
 }
 
 .theme-dark {
@@ -153,6 +155,8 @@ body *,
 
     --md-color-formatting: var(--color-d-gray-40);
     --md-color-border: var(--background-modifier-border);
+
+    --md-embed-bg: var(--color-d-gray-90);
 }
 
 .markdown-source-view,

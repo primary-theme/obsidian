@@ -1,7 +1,6 @@
 /*────────────────────────────────────
             Tab Header
 ────────────────────────────────────*/
-
 /*─────────Tab Header Container──────────*/
 
 .workspace-split {
@@ -90,6 +89,7 @@ body .workspace-tab-header
 .workspace-tab-header-inner-icon svg {
     height: var(--scale-8-2);
     width: var(--scale-8-2);
+    vertical-align: 1px;
 }
 
 /*─────────Tab Header for Light Mode──────────*/

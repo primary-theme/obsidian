@@ -213,8 +213,8 @@
     & .tree-item-icon {
         align-self: initial; 
         padding-left: var(--scale-0-0);
-        margin-left: calc(-1 * var(--scale-2-2));
-        }
+        margin-left: calc(-1* var(--scale-2-2));
+    }
 }
 
 .tree-item-children:not(.graph-control-section .tree-item-children) { // Indentation Line
@@ -225,6 +225,21 @@
         margin-left: var(--scale-2-2);
     }
 }
+
+/* Items in Outline Pane */
+.workspace-leaf-content[data-type="outline"] {
+    .tree-item-self {
+        padding:    calc(1px + var(--scale-2-2))
+                    var(--scale-2-2)
+                    calc(1px + var(--scale-2-2))
+                    calc(5px + var(--scale-8-3));
+
+        & .tree-item-icon {
+            margin-left: -21px;
+        }
+    }
+}
+
 
 /* Items in Outgoing Links Pane */
 .outgoing-link-item {

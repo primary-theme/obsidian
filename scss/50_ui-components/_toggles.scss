@@ -10,7 +10,7 @@
         height: calc(4px + var(--scale-8-2));
         width: calc(4px + var(--scale-8-2));
         border-radius: var(--scale-8-4);
-        margin: 2.5px 0 0 1px;
+        margin: 2.5px 0 0 0px;
     }
     
     &:active::after {
@@ -23,6 +23,7 @@
 
         &:after {
             transform: translate3d(24px, 0, 0);
+            margin-left: 1px;
         }
 
         &:active::after {

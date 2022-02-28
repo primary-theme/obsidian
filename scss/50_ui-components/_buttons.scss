@@ -52,7 +52,7 @@
 
         &:active {
             box-shadow: 0px 0px 0px 2px
-                        rgba(100, 100, 100, 0.3) inset,
+                        rgba(100, 100, 100, 0.38) inset,
                         0px 1px 1px 0px rgba(100, 100, 100, 0.1);
             transition: var(--duration-superfast)
                         var(--motion-smooth);
@@ -87,7 +87,7 @@
                     0px 2px 4px 0px rgba(100, 100, 100, 0.1);
 
         &:hover, &:focus {
-            background: var(--color-l-gray-20);
+            background: var(--color-l-gray-10);
         }
 
         &:active {
@@ -115,6 +115,56 @@
             box-shadow: 0px 0px 0px 2px
                         rgba(0, 0, 0, 0.2) inset,
                         0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
+        }
+    }
+}
+
+span.community-theme-remove-button.clickable-icon {
+    top: 6px;
+    right: -3px;
+    color: var(--text-on-accent);
+    padding:    var(--scale-2-2)
+                var(--scale-2-2)
+                var(--scale-0-0)
+                var(--scale-2-2);
+
+    .theme-light & {
+        color: var(--color-l-gray-20);
+        background: var(--color-l-red-300);
+        box-shadow: 0px 1px 2px 0px rgb(100 100 100 / 50%),
+                0px -2px 0px 0px rgb(100 20 20 / 18%) inset;
+
+        &:hover {
+            background: var(--color-l-red-500);
+        }
+
+        &:active {
+            color: var(--color-l-red-900);
+            background: var(--color-l-red-700);
+            box-shadow: 0px 0px 0px 2px 
+                    rgba(150, 20, 20, 0.55) inset;
+            transition: var(--duration-superfast)
+                        var(--motion-smooth);
+        }
+    }
+
+    .theme-dark & {
+        color: var(--color-d-white);
+        background: var(--color-d-red-500);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25),
+                0px -2px 0px 0px rgba(85, 8, 8, 0.38) inset;
+
+        &:hover {
+            background: var(--color-d-red-300);
+        }
+
+        &:active {
+            color: var(--color-d-red-900);
+            background: var(--color-d-red-700);
+            box-shadow: 0px 0px 0px 2px 
+                    rgba(0, 0, 0, 0.45)  inset;
             transition: var(--duration-superfast)
                         var(--motion-smooth);
         }

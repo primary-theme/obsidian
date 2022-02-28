@@ -146,6 +146,7 @@
 
             &.is-active {
                 font-weight: var(--font-bold);
+                z-index: 2;
             }
 
             .theme-light & {
@@ -220,7 +221,7 @@
             font-size: var(--font-scale-1);
             line-height: var(--line-height-0-5);
             padding:    var(--scale-2-3)
-                        var(--scale-2-1)
+                        var(--scale-2-3)
                         var(--scale-2-3)
                         var(--scale-8-1);
             border-radius: var(--scale-2-2);
@@ -305,179 +306,6 @@
         & .prompt .suggestion-flair {
             float: left;
             margin-top: 1px;
-        }
-    }
-
-    /*─────────Community Themes Modal──────────*/
-    &.mod-community-theme {
-        background: var(--background-primary);
-        padding: 0;
-
-        & .modal-content {
-            padding:    var(--scale-8-4)
-                        var(--scale-8-4)
-                        var(--scale-8-4)
-                        var(--scale-8-4);
-            margin-top: 0;
-        }
-    }
-
-    & .community-theme {
-        border: 1px solid var(--background-modifier-border);
-        transition: var(--duration-superfast)
-                    var(--motion-smooth);
-
-        &-filters-container .setting-item-control {
-            justify-content: flex-end;
-
-            & .search-input-container {
-                width: 100%;
-            }
-
-            & button {
-                margin: 0;
-                margin-right: var(--scale-2-4);
-            }
-        }
-        
-        &-info.u-center-text {
-            color: var(--text-muted);
-        }
-
-        .theme-light & {
-            background: var(--background-primary-alt);
-
-            &:hover {
-                border: 1px solid var(--text-faint);
-            }
-
-            &.is-selected {
-                color: var(--text-normal);
-                background: var(--color-l-whiter);
-                border: 1px solid var(--text-muted);
-                box-shadow: var(--shadow-m) 
-                            var(--color-l-shadow-100);
-            }
-
-        }
-
-        .theme-dark & {
-            background: var(--background-primary-alt);
-
-            &:hover {
-                border: 1px solid var(--text-faint);
-            }
-
-            &.is-selected {
-                color: var(--text-normal);
-                background: var(--color-d-gray-40);
-                border: 1px solid var(--text-muted);
-                box-shadow: var(--shadow-m) 
-                            var(--color-d-shadow-100);
-            }
-        }
-
-    }
-
-
-    /*─────────Community Plugins Modal──────────*/
-    .community-plugin {
-        background: var(--background-primary);
-
-        &-info {
-            padding:    var(--scale-8-2)
-                        var(--scale-0-0)
-                        var(--scale-0-0)
-                        var(--scale-8-3);
-            margin: 0;
-        }
-
-        &-readme {
-            padding:    var(--scale-0-0)
-                        var(--scale-8-3)
-                        var(--scale-0-0)
-                        var(--scale-0-0);
-            margin: 0;
-        }
-
-        &-name {
-            font-weight: var(--font-bold);
-        }
-
-        &-item {
-            margin: var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0);
-            border-bottom: 1px solid
-                        var(--background-modifier-border);
-            transition: var(--duration-superfast)
-                        var(--motion-smooth);
-
-            .theme-light & {
-                &:hover,
-                &span:hover {
-                    color: var(--color-l-gray-80);
-                    background: var(--color-l-gray-10);
-                }
-    
-                &:active,
-                &span:active {
-                    color: var(--color-l-gray-50);
-                    background: var(--color-l-gray-40);
-
-                    & .flair.mod-pop {
-                        color: var(--color-l-gray-50);
-                        background: var(--color-l-gray-20);
-                    }
-                }
-            }
-
-            .theme-dark & {
-                &:hover,
-                &span:hover {
-                    color: var(--color-d-gray-20);
-                    background: var(--color-d-gray-60);
-                }
-    
-                &:active,
-                &span:active {
-                    color: var(--color-d-gray-40);
-                    background: var(--color-d-blacker);
-
-                    & .flair.mod-pop {
-                        color: var(--color-d-gray-40);
-                        background: var(--color-d-gray-80);
-                    }
-                }
-            }
-        }
-
-        &-search {
-            padding:    var(--scale-2-4)
-                        var(--scale-0-0)
-                        var(--scale-0-0)
-                        var(--scale-0-0);
-
-            & .setting-item {
-                display: initial;
-                align-self: flex-start;
-            }
-        }
-
-        & .flair.mod-pop {
-            vertical-align: middle;
-            font-weight: var(--font-semi-bold);
-
-            .theme-light & {
-                background: var(--color-l-whiter);
-                color: var(--color-l-red-300);
-            }
-
-            .theme-dark & {
-                background: var(--color-d-blacker);
-                color: var(--color-d-red-500);
-            }
         }
     }
 }

@@ -41,8 +41,10 @@
 @use '30_note/md-highlighted-search';
 
 @use '40_special-features/custom-icons';
+@use '40_special-features/alt-checkboxes.scss';
 
 @use '50_ui-components/modals';
+@use '50_ui-components/community-themes-plugins';
 @use '50_ui-components/buttons';
 @use '50_ui-components/search-input';
 @use '50_ui-components/kbd';
@@ -68,6 +70,7 @@
 @use '80_plugins-community/sliding-panes';
 @use '80_plugins-community/dataview';
 @use '80_plugins-community/supercharged-links';
+// @use '80_plugins-community/excalidraw';
 @use '80_plugins-community/style-settings__styling';
 @use '80_plugins-community/style-settings__preferences';
 @use '80_plugins-community/style-settings__options';

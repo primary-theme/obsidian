@@ -118,11 +118,11 @@
     }
 
     .theme-light & {
-        background: var(--color-l-gray-10);
+        background: var(--md-embed-bg);
     }
 
     .theme-dark & {
-        background: var(--color-d-gray-90);
+        background: var(--md-embed-bg);
     }
 }
 

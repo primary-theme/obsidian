@@ -1,6 +1,29 @@
 /*────────────────────────────────────
             Scrollbars
 ────────────────────────────────────*/
+body:not(.native-scrollbars) ::-webkit-scrollbar,
+body:not(.native-scrollbars) .graph-controls::-webkit-scrollbar {
+    visibility: visible;
+    width: var(--scale-2-2);
+    height: var(--scale-2-2);
+    border-radius: 0;
+    display: inherit;
+    background: var(--scrollbar-bg);
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+    &-thumb {
+        visibility: visible;
+        background: var(scrollbar-thumb-bg);
+        border-radius: 0;
+
+        &:active {
+            background: var(--scrollbar-active-thumb-bg);
+            border-radius: 0;  
+        }
+    }
+}
+
 /* Thin Scrollbar */
 .scrollbar__thin.scrollbar__thin:not(.native-scrollbars) {
     & ::-webkit-scrollbar,

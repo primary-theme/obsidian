@@ -30,6 +30,10 @@ span.cm {
             text-underline-position: under;
             text-decoration-thickness: 1px;
         }
+
+        .no-link-underline & { // Style Setting — No Link Underline in Edit View
+            text-decoration: none;
+        }
     }
 }
 
@@ -63,6 +67,10 @@ span.is-unresolved.is-unresolved {
                 text-underline-position: under;
                 text-decoration-thickness: 1px;
             }
+
+            .no-link-underline & { // Style Setting — No Link Underline in Edit View
+                text-decoration: none;
+            }
         }
     }
 }
@@ -87,6 +95,10 @@ a code {
         
         &:active {
             color: var(--md-color-reslink-active);
+        }
+
+        .no-link-underline & { // Style Setting — No Link Underline in Modals
+            text-decoration: none;
         }
     }
 }    
@@ -127,6 +139,10 @@ a code {
             color: var(--md-color-unreslink-active);
         }
     }
+
+    .no-link-underline & { // Style Setting — No Link Underline in Preview View
+        text-decoration: none;
+    }
 }
 
 a {
@@ -136,6 +152,10 @@ a {
             text-underline-position: under;
             text-decoration-thickness: 1px;
         }
+    }
+
+    .no-link-underline & { // Style Setting — No Link Underline in Global
+        text-decoration: none;
     }
 }
 
