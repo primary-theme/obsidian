@@ -1,0 +1,16 @@
+/*────────────────────────────────────
+    Backlinks and Outgoing Links
+────────────────────────────────────*/
+.mod-root .workspace-leaf-content[data-type="markdown"] {
+    & .nav-header {
+        border-top: 1px solid var(--background-modifier-border);
+        margin-top: 3em;
+        position: relative;
+    }
+
+    & .nav-buttons-container {
+        position: absolute;
+        right: 0;
+        top: 3px;
+    }
+}
