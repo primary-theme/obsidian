@@ -38,6 +38,13 @@
     }
 }
 
+.pane-empty {
+    color: var(--text-faint);
+    font-style: italic;
+    margin: auto auto;
+    width: 17ch;
+}
+
 /*─────────Node Insert Event──────────*/
 // Container for Outgoing Links and Backlinks Tab and more
 .workspace-split.mod-left-split,
@@ -67,11 +74,6 @@
     overflow: auto;
 }
 
-/*─────────Outline Tab──────────*/
-.outline {
-    font-size: var(--font-scale-0-5);
-}
-
 /*─────────Search Results──────────*/
 .search-result {
     &-container:not(.mod-global-search) {
@@ -85,13 +87,6 @@
                 var(--scale-0-0)
                 var(--scale-0-0)
                 var(--scale-2-8);
-        
-        .backlink-pane & {
-            margin: var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-2-8);
-        }
     }
 
     &.search-result {
@@ -186,8 +181,11 @@
     }
 }
 
-/*─────────Tree Items for Tabs──────────*/
+.search-input-container .search-input-clear-button {
+    top: 9px;
+}
 
+/*─────────Tree Items for Tabs──────────*/
 .tree-item-self {
     line-height: var(--line-height-0-5);
     padding:    calc(1px + var(--scale-2-2))
@@ -203,10 +201,6 @@
         .tree-item-flair {
             font-family: var(--font-code);
             font-size: var(--font-scale-0);
-        }
-
-        .outgoing-link-pane & {
-            font-size: var(--font-scale-0-5);
         }
     }
 
@@ -226,43 +220,6 @@
     }
 }
 
-/* Items in Outline Pane */
-.workspace-leaf-content[data-type="outline"] {
-    .tree-item-self {
-        padding:    calc(1px + var(--scale-2-2))
-                    var(--scale-2-2)
-                    calc(1px + var(--scale-2-2))
-                    calc(5px + var(--scale-8-3));
-
-        & .tree-item-icon {
-            margin-left: -21px;
-        }
-    }
-}
-
-
-/* Items in Outgoing Links Pane */
-.outgoing-link-item {
-    font-size: var(--font-scale-0-5);
-    margin: var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-2-2);
-
-    .search-result-container &
-    .tree-item-self span.tree-item-icon {
-        margin: var(--scale-0-0)
-                var(--scale-0-0)
-                var(--scale-0-0)
-                calc(-1 * var(--scale-2-2));
-    }
-}
-
-/* Items in Backlinks Pane */
-.backlink-pane {
-    font-size: var(--font-scale-0-5);
-}
-
 /*~ Tree Items for Tabs for Light Mode ~*/
 .theme-light .tree-item-self {
     color: var(--color-l-gray-80);
@@ -275,7 +232,7 @@
 
             & .tree-item-flair {
                 color: var(--color-gray-50);
-                background: var(--color-l-gray-20);
+                background: var(--color-l-whiter);
             }
         }
 
@@ -324,6 +281,42 @@
             & .tree-item-flair {
                 color: var(--color-d-gray-40);
                 background: var(--color-d-gray-80);
+            }
+        }
+    }
+}
+
+/* Tree Item Self Light and Dark Mode for Backlink and Outgoing Pane */
+body.theme-light .backlink-pane .tree-item-self,
+body.theme-light .outgoing-link-pane .tree-item-self,
+body.theme-dark .backlink-pane .tree-item-self,
+body.theme-dark .outgoing-link-pane .tree-item-self {
+    color: var(--md-color-text-muted);
+    background: transparent;
+
+    &.is-clickable {
+        &:hover {
+            color: var(--md-color-text-normal);
+            background: transparent;
+
+            & .tree-item-flair {
+                color: var(--md-color-text-normal);
+                background: transparent;
+            }
+        }
+
+        & .tree-item-flair {
+            color: var(--md-color-text-muted);
+                background: transparent;
+        }
+
+        &:active {
+            color: var(--md-color-text-faint);
+            background: transparent;
+
+            & .tree-item-flair {
+                color: var(--md-color-text-faint);
+                background: transparent;
             }
         }
     }

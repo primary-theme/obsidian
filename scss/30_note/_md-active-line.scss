@@ -1,4 +1,19 @@
 /*──────────Active Line──────────*/
+:root {
+    .theme-light {
+        --md-color-activeline: rgba(255, 255, 255, 0.4);
+    }
+
+    .theme-dark {
+        --md-color-activeline: rgba(0, 0, 0, 0.18);
+    }
+}
+
+.no-md-activeline.theme-light,
+.no-md-activeline.theme-dark {
+    --md-color-activeline: transparent !important;
+}
+
 .workspace-leaf:not(.workspace-leaf.mod-active) {
     & .cm-active,
     & .CodeMirror-activeline .CodeMirror-linebackground,
@@ -10,13 +25,7 @@
 .CodeMirror-activeline .CodeMirror-linebackground,
 .CodeMirror-activeline-gutter,
 .cm-active:not(.cm-gutterElement) {
-    .theme-light & {
-        background-color: var(--color-l-gray-10);
-    }
-    
-    .theme-dark & {
-        background-color: var(--color-d-black);
-    }
+    background: var(--md-color-activeline);
 }
 
 // Activeline on Gutter Color (Live Preview)

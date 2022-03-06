@@ -150,6 +150,11 @@ settings:
         description: Makes markdown formatting less noticeable in Editor View.
         type: class-toggle
     -
+        id: no-link-underline
+        title: Remove Link Underline
+        description: When toggled on, underlines on internal and external links will be removed.
+        type: class-toggle
+    -
         id: global-fonts__custom
         title: Custom Fonts
         type: heading
@@ -369,7 +374,7 @@ settings:
         level: 2
         collapsed: true
     -
-        id: h1-size
+        id: h1
         title: Header 1 Size
         type: variable-text
         default: '2.678em'
@@ -382,7 +387,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h2-size
+        id: h2
         title: Header 2 Size
         type: variable-text
         default: '2.288em'
@@ -395,7 +400,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h3-size
+        id: h3
         title: Header 3 Size
         type: variable-text
         default: '1.927em'
@@ -408,7 +413,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h4-size
+        id: h4
         title: Header 4 Size
         type: variable-text
         default: '1.648em'
@@ -421,7 +426,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h5-size
+        id: h5
         title: Header 5 Size
         type: variable-text
         default: '1.388em'
@@ -434,7 +439,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h6-size
+        id: h6
         title: Header 6 Size
         type: variable-text
         default: '1.188em'
@@ -458,9 +463,9 @@ settings:
         level: 1
         collapsed: true
     -
-        id: no-link-underline
-        title: Remove Link Underline
-        description: When toggled on, underlines on internal and external links will be removed.
+        id: no-md-activeline
+        title: Disable Activeline Highlighting
+        description: Toggle on to remove activeline highlighting. Keep it off to show it.
         type: class-toggle
     -
         id: note-embeds

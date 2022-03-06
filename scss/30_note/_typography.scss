@@ -30,6 +30,10 @@ body *,
                 17px;
 }
 
+div.cm-content {
+    padding-top: 0 !important;
+}
+
 /* Preview */
 .markdown-preview-view {
     font-optical-sizing: auto;

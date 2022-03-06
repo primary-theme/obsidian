@@ -30,7 +30,6 @@
 @use '30_note/md-lists';
 @use '30_note/md-checkboxes';
 @use '30_note/md-code';
-@use '30_note/md-formatting';
 @use '30_note/md-horizontal-rule';
 @use '30_note/md-embeds';
 @use '30_note/md-tables';
@@ -38,10 +37,12 @@
 @use '30_note/md-active-line';
 @use '30_note/md-gutter-line';
 @use '30_note/md-yaml';
+@use '30_note/md-find-replace';
 @use '30_note/md-highlighted-search';
 
 @use '40_special-features/custom-icons';
-@use '40_special-features/alt-checkboxes.scss';
+@use '40_special-features/alt-checkboxes';
+@use '40_special-features/_md-formatting';
 
 @use '50_ui-components/modals';
 @use '50_ui-components/community-themes-plugins';
@@ -65,7 +66,8 @@
 @use '60_mobile/big-tablet-mobile';
 
 @use '70_plugins-core/graph-view';
-// @use '70_plugins-core/backlinks-outgoing'; #todo
+@use '70_plugins-core/backlinks-outgoing';
+@use '70_plugins-core/outline';
 
 @use '80_plugins-community/calendar';
 @use '80_plugins-community/sliding-panes';

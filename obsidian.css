@@ -1008,6 +1008,13 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
   padding: var(--scale-0-0) var(--scale-2-4) var(--scale-0-0) var(--scale-2-4);
 }
 
+.pane-empty {
+  color: var(--text-faint);
+  font-style: italic;
+  margin: auto auto;
+  width: 17ch;
+}
+
 /*─────────Node Insert Event──────────*/
 .workspace-split.mod-left-split .node-insert-event,
 .workspace-split.mod-right-split .node-insert-event {
@@ -1025,18 +1032,10 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
   overflow: auto;
 }
 
-/*─────────Outline Tab──────────*/
-.outline {
-  font-size: var(--font-scale-0-5);
-}
-
 /*─────────Search Results──────────*/
 .search-result-container:not(.mod-global-search) {
   padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
   border-left: 1px solid var(--background-modifier-border);
-  margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-2-8);
-}
-.backlink-pane .search-result-container:not(.mod-global-search) {
   margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-2-8);
 }
 .search-result.search-result {
@@ -1095,6 +1094,10 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
   margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-2-2);
 }
 
+.search-input-container .search-input-clear-button {
+  top: 9px;
+}
+
 /*─────────Tree Items for Tabs──────────*/
 .tree-item-self {
   line-height: var(--line-height-0-5);
@@ -1105,9 +1108,6 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
 .tree-item-self.is-clickable .tree-item-flair {
   font-family: var(--font-code);
   font-size: var(--font-scale-0);
-}
-.outgoing-link-pane .tree-item-self.is-clickable {
-  font-size: var(--font-scale-0-5);
 }
 .tree-item-self .tree-item-icon {
   align-self: initial;
@@ -1123,28 +1123,6 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
   margin-left: var(--scale-2-2);
 }
 
-/* Items in Outline Pane */
-.workspace-leaf-content[data-type=outline] .tree-item-self {
-  padding: calc(1px + var(--scale-2-2)) var(--scale-2-2) calc(1px + var(--scale-2-2)) calc(5px + var(--scale-8-3));
-}
-.workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-icon {
-  margin-left: -21px;
-}
-
-/* Items in Outgoing Links Pane */
-.outgoing-link-item {
-  font-size: var(--font-scale-0-5);
-  margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-2-2);
-}
-.search-result-container .outgoing-link-item .tree-item-self span.tree-item-icon {
-  margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) calc(-1 * var(--scale-2-2));
-}
-
-/* Items in Backlinks Pane */
-.backlink-pane {
-  font-size: var(--font-scale-0-5);
-}
-
 /*~ Tree Items for Tabs for Light Mode ~*/
 .theme-light .tree-item-self {
   color: var(--color-l-gray-80);
@@ -1156,7 +1134,7 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
 }
 .theme-light .tree-item-self.is-clickable:hover .tree-item-flair {
   color: var(--color-gray-50);
-  background: var(--color-l-gray-20);
+  background: var(--color-l-whiter);
 }
 .theme-light .tree-item-self.is-clickable .tree-item-flair {
   color: var(--color-l-gray-80);
@@ -1195,6 +1173,50 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
 .theme-dark .tree-item-self.is-clickable:active .tree-item-flair {
   color: var(--color-d-gray-40);
   background: var(--color-d-gray-80);
+}
+
+/* Tree Item Self Light and Dark Mode for Backlink and Outgoing Pane */
+body.theme-light .backlink-pane .tree-item-self,
+body.theme-light .outgoing-link-pane .tree-item-self,
+body.theme-dark .backlink-pane .tree-item-self,
+body.theme-dark .outgoing-link-pane .tree-item-self {
+  color: var(--md-color-text-muted);
+  background: transparent;
+}
+body.theme-light .backlink-pane .tree-item-self.is-clickable:hover,
+body.theme-light .outgoing-link-pane .tree-item-self.is-clickable:hover,
+body.theme-dark .backlink-pane .tree-item-self.is-clickable:hover,
+body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:hover {
+  color: var(--md-color-text-normal);
+  background: transparent;
+}
+body.theme-light .backlink-pane .tree-item-self.is-clickable:hover .tree-item-flair,
+body.theme-light .outgoing-link-pane .tree-item-self.is-clickable:hover .tree-item-flair,
+body.theme-dark .backlink-pane .tree-item-self.is-clickable:hover .tree-item-flair,
+body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:hover .tree-item-flair {
+  color: var(--md-color-text-normal);
+  background: transparent;
+}
+body.theme-light .backlink-pane .tree-item-self.is-clickable .tree-item-flair,
+body.theme-light .outgoing-link-pane .tree-item-self.is-clickable .tree-item-flair,
+body.theme-dark .backlink-pane .tree-item-self.is-clickable .tree-item-flair,
+body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable .tree-item-flair {
+  color: var(--md-color-text-muted);
+  background: transparent;
+}
+body.theme-light .backlink-pane .tree-item-self.is-clickable:active,
+body.theme-light .outgoing-link-pane .tree-item-self.is-clickable:active,
+body.theme-dark .backlink-pane .tree-item-self.is-clickable:active,
+body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:active {
+  color: var(--md-color-text-faint);
+  background: transparent;
+}
+body.theme-light .backlink-pane .tree-item-self.is-clickable:active .tree-item-flair,
+body.theme-light .outgoing-link-pane .tree-item-self.is-clickable:active .tree-item-flair,
+body.theme-dark .backlink-pane .tree-item-self.is-clickable:active .tree-item-flair,
+body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:active .tree-item-flair {
+  color: var(--md-color-text-faint);
+  background: transparent;
 }
 
 /*────────────────────────────────────
@@ -1530,6 +1552,10 @@ body *,
   padding: var(--scale-8-5) 17px;
 }
 
+div.cm-content {
+  padding-top: 0 !important;
+}
+
 /* Preview */
 .markdown-preview-view {
   font-optical-sizing: auto;
@@ -1652,32 +1678,32 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: var(--h1-text-color);
-  font-size: var(--h1-size);
+  font-size: var(--h1);
 }
 
 h2 {
   color: var(--h2-text-color);
-  font-size: var(--h2-size);
+  font-size: var(--h2);
 }
 
 h3 {
   color: var(--h3-text-color);
-  font-size: var(--h3-size);
+  font-size: var(--h3);
 }
 
 h4 {
   color: var(--h4-text-color);
-  font-size: var(--h4-size);
+  font-size: var(--h4);
 }
 
 h5 {
   color: var(--h5-text-color);
-  font-size: var(--h5-size);
+  font-size: var(--h5);
 }
 
 h6 {
   color: var(--h6-text-color);
-  font-size: var(--h6-size);
+  font-size: var(--h6);
 }
 
 /* Source View Headings */
@@ -1692,27 +1718,27 @@ body .cm-s-obsidian .HyperMD-header {
 }
 .cm-header-1 {
   color: var(--h1-text-color);
-  font-size: var(--h1-size);
+  font-size: var(--h1);
 }
 .cm-header-2 {
   color: var(--h2-text-color);
-  font-size: var(--h2-size);
+  font-size: var(--h2);
 }
 .cm-header-3 {
   color: var(--h3-text-color);
-  font-size: var(--h3-size);
+  font-size: var(--h3);
 }
 .cm-header-4 {
   color: var(--h4-text-color);
-  font-size: var(--h4-size);
+  font-size: var(--h4);
 }
 .cm-header-5 {
   color: var(--h5-text-color);
-  font-size: var(--h5-size);
+  font-size: var(--h5);
 }
 .cm-header-6 {
   color: var(--h6-text-color);
-  font-size: var(--h6-size);
+  font-size: var(--h6);
 }
 
 /* Inline Code in Headers Fix */
@@ -1721,22 +1747,22 @@ body .cm-s-obsidian .HyperMD-header {
   font-weight: var(--font-bold);
 }
 .cm-s-obsidian .cm-inline-code.cm-header-1 {
-  font-size: calc(0.85 * var(--h1-size));
+  font-size: calc(0.85 * var(--h1));
 }
 .cm-s-obsidian .cm-inline-code.cm-header-2 {
-  font-size: calc(0.85 * var(--h2-size));
+  font-size: calc(0.85 * var(--h2));
 }
 .cm-s-obsidian .cm-inline-code.cm-header-3 {
-  font-size: calc(0.85 * var(--h3-size));
+  font-size: calc(0.85 * var(--h3));
 }
 .cm-s-obsidian .cm-inline-code.cm-header-4 {
-  font-size: calc(0.85 * var(--h4-size));
+  font-size: calc(0.85 * var(--h4));
 }
 .cm-s-obsidian .cm-inline-code.cm-header-5 {
-  font-size: calc(0.85 * var(--h5-size));
+  font-size: calc(0.85 * var(--h5));
 }
 .cm-s-obsidian .cm-inline-code.cm-header-6 {
-  font-size: calc(0.85 * var(--h6-size));
+  font-size: calc(0.85 * var(--h6));
 }
 
 .markdown-preview-view h1 code, .markdown-preview-view h2 code, .markdown-preview-view h3 code, .markdown-preview-view h4 code, .markdown-preview-view h5 code, .markdown-preview-view h6 code {
@@ -1752,38 +1778,38 @@ body .cm-s-obsidian .HyperMD-header {
 }
 .markdown-preview-view h1 {
   color: var(--h1-text-color);
-  font-size: var(--h1-size);
+  font-size: var(--h1);
 }
 .markdown-preview-view h2 {
   color: var(--h2-text-color);
-  font-size: var(--h2-size);
+  font-size: var(--h2);
 }
 .markdown-preview-view h3 {
   color: var(--h3-text-color);
-  font-size: var(--h3-size);
+  font-size: var(--h3);
 }
 .markdown-preview-view h4 {
   color: var(--h4-text-color);
-  font-size: var(--h4-size);
+  font-size: var(--h4);
 }
 .markdown-preview-view h5 {
   color: var(--h5-text-color);
-  font-size: var(--h5-size);
+  font-size: var(--h5);
 }
 .markdown-preview-view h6 {
   color: var(--h6-text-color);
-  font-size: var(--h6-size);
+  font-size: var(--h6);
 }
 
 /*──────────Headings──────────*/
 :root body {
   /* 1.388 Scale Ratio */
-  --h1-size: var(--font-scale-7);
-  --h2-size: var(--font-scale-6);
-  --h3-size: var(--font-scale-5);
-  --h4-size: var(--font-scale-4);
-  --h5-size: var(--font-scale-3);
-  --h6-size: var(--font-scale-2);
+  --h1: var(--font-scale-7);
+  --h2: var(--font-scale-6);
+  --h3: var(--font-scale-5);
+  --h4: var(--font-scale-4);
+  --h5: var(--font-scale-3);
+  --h6: var(--font-scale-2);
   --header-line-height: 1.18;
   /* Normal Colors */
   --h1-text-color: var(--text-normal);
@@ -2268,13 +2294,12 @@ input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   filter: none;
-  height: 1.5em;
-  width: 1.5em;
+  height: calc(3px + var(--editor-font-size));
+  width: calc(3px + var(--editor-font-size));
   border-radius: var(--scale-2-2);
   border: 1px solid var(--text-faint);
   padding: 0;
   margin: 0;
-  margin-top: -3px;
   margin-left: 6px;
 }
 input[type=checkbox]:hover {
@@ -2282,7 +2307,7 @@ input[type=checkbox]:hover {
   transition: var(--duration-fast-1) var(--motion-smooth);
 }
 input[type=checkbox]:checked {
-  background-position: 3px, center;
+  background-position: center;
   background-size: 72%;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z'/%3E%3C/svg%3E");
@@ -2313,6 +2338,10 @@ input[type=checkbox]:checked {
 }
 
 /* Source View Checkbox Fix */
+.markdown-source-view input.task-list-item-checkbox {
+  margin-top: -3px;
+}
+
 .cm-s-obsidian span.cm-formatting-task {
   font-family: var(--font-code);
 }
@@ -2468,33 +2497,6 @@ mjx-math {
   padding: 0;
   margin-top: var(--scale-2-1);
   margin-right: var(--scale-2-2);
-}
-
-/*──────────Markdown Formatting──────────*/
-.gray-md-formatting span.cm-formatting:not(.cm-header, .cm-formatting-hashtag, .cm-formatting-list),
-.gray-md-formatting .cm-s-obsidian span.cm-formatting-math.cm-keyword,
-.gray-md-formatting .cm-s-obsidian span.cm-formatting-link.cm-link,
-.gray-md-formatting .cm-s-obsidian span.cm-formatting-escape,
-.gray-md-formatting .cm-s-obsidian span.cm-formatting-link-string.cm-string.cm-url,
-.gray-md-formatting .cm-s-obsidian span.cm-bracket,
-.gray-md-formatting span.cm-formatting-header,
-.gray-md-formatting span.cm-header.cm-formatting-link-start,
-.gray-md-formatting span.cm-header.cm-formatting-link-end,
-.gray-md-formatting span.cm-header.cm-formatting.cm-link,
-.gray-md-formatting span.cm-header.cm-formatting.cm-string.cm-url,
-.gray-md-formatting span.cm-formatting.cm-highlight,
-.gray-md-formatting .markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight,
-.gray-md-formatting .markdown-source-view .cm-header.cm-formatting-strong,
-.gray-md-formatting .markdown-source-view .cm-header.cm-formatting-strikethrough,
-.gray-md-formatting .markdown-source-view .cm-header.cm-formatting-em,
-.gray-md-formatting span.cm-quote.cm-formatting.cm-strong,
-.gray-md-formatting span.cm-quote.cm-formatting.cm-em,
-.gray-md-formatting span.cm-quote.cm-formatting.cm-highlight,
-.gray-md-formatting span.cm-quote.cm-formatting.cm-strikethrough,
-.gray-md-formatting .cm-s-obsidian span.cm-quote.cm-formatting-quote {
-  filter: initial;
-  color: var(--md-color-formatting);
-  background: initial;
 }
 
 /*──────────Horizontal Rule──────────*/
@@ -2657,19 +2659,26 @@ mjx-math {
 }
 
 /*──────────Active Line──────────*/
+:root .theme-light {
+  --md-color-activeline: rgba(255, 255, 255, 0.4);
+}
+:root .theme-dark {
+  --md-color-activeline: rgba(0, 0, 0, 0.18);
+}
+
+.no-md-activeline.theme-light,
+.no-md-activeline.theme-dark {
+  --md-color-activeline: transparent !important;
+}
+
 .workspace-leaf:not(.workspace-leaf.mod-active) .cm-active, .workspace-leaf:not(.workspace-leaf.mod-active) .CodeMirror-activeline .CodeMirror-linebackground, .workspace-leaf:not(.workspace-leaf.mod-active) .CodeMirror-activeline-gutter {
   background: transparent;
 }
 
-.theme-light .CodeMirror-activeline .CodeMirror-linebackground,
-.theme-light .CodeMirror-activeline-gutter,
-.theme-light .cm-active:not(.cm-gutterElement) {
-  background-color: var(--color-l-gray-10);
-}
-.theme-dark .CodeMirror-activeline .CodeMirror-linebackground,
-.theme-dark .CodeMirror-activeline-gutter,
-.theme-dark .cm-active:not(.cm-gutterElement) {
-  background-color: var(--color-d-black);
+.CodeMirror-activeline .CodeMirror-linebackground,
+.CodeMirror-activeline-gutter,
+.cm-active:not(.cm-gutterElement) {
+  background: var(--md-color-activeline);
 }
 
 .theme-light .cm-active.cm-gutterElement {
@@ -2779,6 +2788,80 @@ span.frontmatter-section-label {
   font-weight: var(--font-bold);
   text-transform: uppercase;
   margin-left: var(--scale-8-1);
+}
+
+/*──────────Document Search and Replace──────────*/
+.markdown-reading-view.is-searching,
+.markdown-source-view.is-replacing,
+.markdown-source-view.is-searching {
+  flex-direction: column-reverse;
+}
+
+.document-search-container {
+  height: 44px;
+  width: 97%;
+  max-width: 600px;
+  padding: 1px 2px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--scale-2-4);
+  margin: var(--scale-2-4) auto;
+}
+.document-search-container.mod-replace-mode {
+  height: 82px;
+  padding: 0;
+}
+.theme-light .document-search-container {
+  background: var(--color-l-gray-10);
+}
+.theme-dark .document-search-container {
+  background: var(--color-d-gray-80);
+}
+.document-replace {
+  border-top: 1px solid var(--background-modifier-border);
+}
+.document-search-input.document-search-input, .document-replace-input.document-replace-input {
+  width: 20%;
+  margin: var(--scale-2-3) var(--scale-2-3) var(--scale-2-3) var(--scale-2-3);
+}
+.document-search-button.document-search-button {
+  line-height: 0;
+  border-radius: var(--scale-2-2);
+  padding: var(--scale-2-2) var(--scale-2-3) var(--scale-2-3) var(--scale-2-3) !important;
+  margin: calc(1px + var(--scale-2-3)) var(--scale-2-1) var(--scale-0-0) var(--scale-2-1);
+}
+.document-search-button.document-search-button:last-child {
+  margin-right: var(--scale-2-3);
+}
+body.theme-light .workspace .document-search-button.document-search-button {
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+}
+body.theme-light .workspace .document-search-button.document-search-button:hover {
+  background: var(--interactive-accent-hover);
+}
+body.theme-dark .workspace .document-search-button.document-search-button {
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+}
+body.theme-dark .workspace .document-search-button.document-search-button:hover {
+  background: var(--interactive-accent-hover);
+}
+
+.document-search-close-button {
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+  font-size: var(--scale-8-3);
+  height: var(--scale-2-8);
+  width: var(--scale-2-8);
+  top: 2px;
+  margin-right: 2px;
+  transition: var(--duration-superfast) var(--motion-smooth);
+}
+.document-search-close-button:before:hover {
+  color: var(--text-muted);
+}
+.document-search-close-button:before:active {
+  color: var(--text-faint);
 }
 
 .cm-s-obsidian span.obsidian-search-match-highlight {
@@ -3907,285 +3990,323 @@ ul > li.task-list-item.is-checked[data-task]:is([data-task=">"]) {
 }
 
 /*──────────Icons & Background Color──────────*/
+/* x — Checked */
+input[data-task=x]:checked,
+li[data-task=x] > input:checked {
+  background-position: center;
+  background-size: 72%;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z'/%3E%3C/svg%3E");
+}
+
 /* > — Rescheduled/Moved */
-input.task-list-item-checkbox[data-task=">"]:checked,
-li[data-task=">"] input.task-list-item-checkbox:checked {
+input[data-task=">"]:checked,
+li[data-task=">"] > input:checked {
   background-position: center;
   background-size: 50%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 256 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z'/%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=">"]:checked,
-.theme-light li[data-task=">"] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=">"]:checked,
+.theme-light li[data-task=">"] > input:checked {
   background-color: var(--color-l-blue-500);
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
-.theme-dark input.task-list-item-checkbox[data-task=">"]:checked,
-.theme-dark li[data-task=">"] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=">"]:checked,
+.theme-dark li[data-task=">"] > input:checked {
   background-color: var(--color-d-blue-900);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* < — Schedule */
-input.task-list-item-checkbox[data-task="<"]:checked,
-li[data-task="<"] input.task-list-item-checkbox:checked {
+input[data-task="<"]:checked,
+li[data-task="<"] > input:checked {
   background-position: center;
   background-size: 92%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='M11 12h6v6h-6z'%3E%3C/path%3E%3Cpath d='M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z'%3E%3C/path%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task="<"]:checked,
-.theme-light li[data-task="<"] input.task-list-item-checkbox:checked {
+.theme-light input[data-task="<"]:checked,
+.theme-light li[data-task="<"] > input:checked {
   background-color: var(--color-l-gray-80);
 }
-.theme-dark input.task-list-item-checkbox[data-task="<"]:checked,
-.theme-dark li[data-task="<"] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task="<"]:checked,
+.theme-dark li[data-task="<"] > input:checked {
   background-color: var(--color-d-gray-40);
 }
 
 /* ! — Important */
-input.task-list-item-checkbox[data-task="!"]:checked,
-li[data-task="!"] input.task-list-item-checkbox:checked {
+input[data-task="!"]:checked,
+li[data-task="!"] > input:checked {
   background-position: center;
   background-size: 22%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 128 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M64 352c17.69 0 32-14.32 32-31.1V64.01c0-17.67-14.31-32.01-32-32.01S32 46.34 32 64.01v255.1C32 337.7 46.31 352 64 352zM64 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1s40-17.9 40-39.1S86.09 400 64 400z'/%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task="!"]:checked,
-.theme-light li[data-task="!"] input.task-list-item-checkbox:checked {
+.theme-light input[data-task="!"]:checked,
+.theme-light li[data-task="!"] > input:checked {
   background-color: var(--color-l-red-500);
 }
-.theme-dark input.task-list-item-checkbox[data-task="!"]:checked,
-.theme-dark li[data-task="!"] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task="!"]:checked,
+.theme-dark li[data-task="!"] > input:checked {
   background-color: var(--color-d-red-900);
 }
 
 /* - — Cancelled */
-input.task-list-item-checkbox[data-task="-"]:checked,
-li[data-task="-"] input.task-list-item-checkbox:checked {
+input[data-task="-"]:checked,
+li[data-task="-"] > input:checked {
   background-position: center;
   background-size: 67%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z'/%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task="-"]:checked,
-.theme-light li[data-task="-"] input.task-list-item-checkbox:checked {
+.theme-light input[data-task="-"]:checked,
+.theme-light li[data-task="-"] > input:checked {
   background-color: var(--color-l-black);
 }
-.theme-dark input.task-list-item-checkbox[data-task="-"]:checked,
-.theme-dark li[data-task="-"] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task="-"]:checked,
+.theme-dark li[data-task="-"] > input:checked {
   background-color: var(--color-d-black);
 }
 
 /* / — In Progress */
-input.task-list-item-checkbox[data-task="/"]:checked,
-li[data-task="/"] input.task-list-item-checkbox:checked {
+input[data-task="/"]:checked,
+li[data-task="/"] > input:checked {
   background-image: none;
 }
-.theme-light input.task-list-item-checkbox[data-task="/"]:checked,
-.theme-light li[data-task="/"] input.task-list-item-checkbox:checked {
+.theme-light input[data-task="/"]:checked,
+.theme-light li[data-task="/"] > input:checked {
   background-color: var(--color-l-gray-50);
 }
-.theme-dark input.task-list-item-checkbox[data-task="/"]:checked,
-.theme-dark li[data-task="/"] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task="/"]:checked,
+.theme-dark li[data-task="/"] > input:checked {
   background-color: var(--color-d-gray-30);
 }
 
 /* ? — Question */
-input.task-list-item-checkbox[data-task="?"],
-li[data-task="?"] input.task-list-item-checkbox {
+input[data-task="?"],
+li[data-task="?"] > input {
   border-radius: var(--scale-2-8);
 }
-input.task-list-item-checkbox[data-task="?"]:checked,
-li[data-task="?"] input.task-list-item-checkbox:checked {
+input[data-task="?"]:checked,
+li[data-task="?"] > input:checked {
   background-position: center;
   background-size: 48%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M204.3 32.01H96c-52.94 0-96 43.06-96 96c0 17.67 14.31 31.1 32 31.1s32-14.32 32-31.1c0-17.64 14.34-32 32-32h108.3C232.8 96.01 256 119.2 256 147.8c0 19.72-10.97 37.47-30.5 47.33L127.8 252.4C117.1 258.2 112 268.7 112 280v40c0 17.67 14.31 31.99 32 31.99s32-14.32 32-31.99V298.3L256 251.3c39.47-19.75 64-59.42 64-103.5C320 83.95 268.1 32.01 204.3 32.01zM144 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1s40-17.9 40-39.1S166.1 400 144 400z'/%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task="?"]:checked,
-.theme-light li[data-task="?"] input.task-list-item-checkbox:checked {
+.theme-light input[data-task="?"]:checked,
+.theme-light li[data-task="?"] > input:checked {
   background-color: var(--color-l-yellow-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task="?"]:checked,
-.theme-dark li[data-task="?"] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task="?"]:checked,
+.theme-dark li[data-task="?"] > input:checked {
   background-color: var(--color-d-yellow-700);
 }
 
 /* n — Note */
-input.task-list-item-checkbox[data-task=n],
-li[data-task=n] input.task-list-item-checkbox {
+input[data-task=n],
+li[data-task=n] > input {
   border-radius: var(--scale-2-1);
 }
-input.task-list-item-checkbox[data-task=n]:checked,
-li[data-task=n] input.task-list-item-checkbox:checked {
+input[data-task=n]:checked,
+li[data-task=n] > input:checked {
   background-position: center;
   background-size: 60%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z'/%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=n]:checked,
-.theme-light li[data-task=n] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=n]:checked,
+.theme-light li[data-task=n] > input:checked {
   background-color: var(--color-l-red-500);
 }
-.theme-dark input.task-list-item-checkbox[data-task=n]:checked,
-.theme-dark li[data-task=n] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=n]:checked,
+.theme-dark li[data-task=n] > input:checked {
   background-color: var(--color-d-red-900);
 }
 
 /* * — Star */
-input.task-list-item-checkbox[data-task="*"],
-li[data-task="*"] input.task-list-item-checkbox {
+input[data-task="*"],
+li[data-task="*"] > input {
   border-radius: var(--scale-2-8);
 }
-input.task-list-item-checkbox[data-task="*"]:checked,
-li[data-task="*"] input.task-list-item-checkbox:checked {
+input[data-task="*"]:checked,
+li[data-task="*"] > input:checked {
   background-position: center;
   background-size: 80%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 576 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z'%3E%3C/path%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task="*"]:checked,
-.theme-light li[data-task="*"] input.task-list-item-checkbox:checked {
+.theme-light input[data-task="*"]:checked,
+.theme-light li[data-task="*"] > input:checked {
   background-color: var(--color-l-orange-500);
 }
-.theme-dark input.task-list-item-checkbox[data-task="*"]:checked,
-.theme-dark li[data-task="*"] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task="*"]:checked,
+.theme-dark li[data-task="*"] > input:checked {
   background-color: var(--color-d-orange-500);
 }
 
 /* l — Location */
-input.task-list-item-checkbox[data-task=l]:checked,
-li[data-task=l] input.task-list-item-checkbox:checked {
+input[data-task=l]:checked,
+li[data-task=l] > input:checked {
   background-position: center;
   background-size: 65%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z'/%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=l]:checked,
-.theme-light li[data-task=l] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=l]:checked,
+.theme-light li[data-task=l] > input:checked {
   background-color: var(--color-l-red-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task=l]:checked,
-.theme-dark li[data-task=l] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=l]:checked,
+.theme-dark li[data-task=l] > input:checked {
   background-color: var(--color-d-red-700);
 }
 
 /* i — Info */
-input.task-list-item-checkbox[data-task=i],
-li[data-task=i] input.task-list-item-checkbox {
+input[data-task=i],
+li[data-task=i] > input {
   border-radius: var(--scale-2-8);
 }
-input.task-list-item-checkbox[data-task=i]:checked,
-li[data-task=i] input.task-list-item-checkbox:checked {
+input[data-task=i]:checked,
+li[data-task=i] > input:checked {
   background-position: center;
-  background-size: 30%;
+  background-size: 26%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 192 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z'/%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=i]:checked,
-.theme-light li[data-task=i] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=i]:checked,
+.theme-light li[data-task=i] > input:checked {
   background-color: var(--color-l-blue-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task=i]:checked,
-.theme-dark li[data-task=i] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=i]:checked,
+.theme-dark li[data-task=i] > input:checked {
   background-color: var(--color-d-blue-700);
 }
 
 /* S — Amount */
-input.task-list-item-checkbox[data-task=S],
-li[data-task=S] input.task-list-item-checkbox {
+input[data-task=S],
+li[data-task=S] > input {
   border-radius: var(--scale-2-8);
 }
-input.task-list-item-checkbox[data-task=S]:checked,
-li[data-task=S] input.task-list-item-checkbox:checked {
+input[data-task=S]:checked,
+li[data-task=S] > input:checked {
   background-position: center;
-  background-size: 50%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M160 0C177.7 0 192 14.33 192 32V67.68C193.6 67.89 195.1 68.12 196.7 68.35C207.3 69.93 238.9 75.02 251.9 78.31C268.1 82.65 279.4 100.1 275 117.2C270.7 134.3 253.3 144.7 236.1 140.4C226.8 137.1 198.5 133.3 187.3 131.7C155.2 126.9 127.7 129.3 108.8 136.5C90.52 143.5 82.93 153.4 80.92 164.5C78.98 175.2 80.45 181.3 82.21 185.1C84.1 189.1 87.79 193.6 95.14 198.5C111.4 209.2 136.2 216.4 168.4 225.1L171.2 225.9C199.6 233.6 234.4 243.1 260.2 260.2C274.3 269.6 287.6 282.3 295.8 299.9C304.1 317.7 305.9 337.7 302.1 358.1C295.1 397 268.1 422.4 236.4 435.6C222.8 441.2 207.8 444.8 192 446.6V480C192 497.7 177.7 512 160 512C142.3 512 128 497.7 128 480V445.1C127.6 445.1 127.1 444.1 126.7 444.9L126.5 444.9C102.2 441.1 62.07 430.6 35 418.6C18.85 411.4 11.58 392.5 18.76 376.3C25.94 360.2 44.85 352.9 60.1 360.1C81.9 369.4 116.3 378.5 136.2 381.6C168.2 386.4 194.5 383.6 212.3 376.4C229.2 369.5 236.9 359.5 239.1 347.5C241 336.8 239.6 330.7 237.8 326.9C235.9 322.9 232.2 318.4 224.9 313.5C208.6 302.8 183.8 295.6 151.6 286.9L148.8 286.1C120.4 278.4 85.58 268.9 59.76 251.8C45.65 242.4 32.43 229.7 24.22 212.1C15.89 194.3 14.08 174.3 17.95 153C25.03 114.1 53.05 89.29 85.96 76.73C98.98 71.76 113.1 68.49 128 66.73V32C128 14.33 142.3 0 160 0V0z'/%3E%3C/svg%3E");
+  background-size: 95%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429 0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4zm-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399zm8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4z'%3E%3C/path%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=S]:checked,
-.theme-light li[data-task=S] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=S]:checked,
+.theme-light li[data-task=S] > input:checked {
   background-color: var(--color-l-yellow-900);
 }
-.theme-dark input.task-list-item-checkbox[data-task=S]:checked,
-.theme-dark li[data-task=S] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=S]:checked,
+.theme-dark li[data-task=S] > input:checked {
   background-color: var(--color-d-yellow-900);
 }
 
 /* " — Quote */
-input.task-list-item-checkbox[data-task='"']:checked,
-li[data-task='"'] input.task-list-item-checkbox:checked {
+input[data-task='"']:checked,
+li[data-task='"'] > input:checked {
   background-position: center;
   background-size: 80%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='m21.95 8.721-.025-.168-.026.006A4.5 4.5 0 1 0 17.5 14c.223 0 .437-.034.65-.065-.069.232-.14.468-.254.68-.114.308-.292.575-.469.844-.148.291-.409.488-.601.737-.201.242-.475.403-.692.604-.213.21-.492.315-.714.463-.232.133-.434.28-.65.35l-.539.222-.474.197.484 1.939.597-.144c.191-.048.424-.104.689-.171.271-.05.56-.187.882-.312.317-.143.686-.238 1.028-.467.344-.218.741-.4 1.091-.692.339-.301.748-.562 1.05-.944.33-.358.656-.734.909-1.162.293-.408.492-.856.702-1.299.19-.443.343-.896.468-1.336.237-.882.343-1.72.384-2.437.034-.718.014-1.315-.028-1.747a7.028 7.028 0 0 0-.063-.539zm-11 0-.025-.168-.026.006A4.5 4.5 0 1 0 6.5 14c.223 0 .437-.034.65-.065-.069.232-.14.468-.254.68-.114.308-.292.575-.469.844-.148.291-.409.488-.601.737-.201.242-.475.403-.692.604-.213.21-.492.315-.714.463-.232.133-.434.28-.65.35l-.539.222c-.301.123-.473.195-.473.195l.484 1.939.597-.144c.191-.048.424-.104.689-.171.271-.05.56-.187.882-.312.317-.143.686-.238 1.028-.467.344-.218.741-.4 1.091-.692.339-.301.748-.562 1.05-.944.33-.358.656-.734.909-1.162.293-.408.492-.856.702-1.299.19-.443.343-.896.468-1.336.237-.882.343-1.72.384-2.437.034-.718.014-1.315-.028-1.747a7.571 7.571 0 0 0-.064-.537z'%3E%3C/path%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task='"']:checked,
-.theme-light li[data-task='"'] input.task-list-item-checkbox:checked {
+.theme-light input[data-task='"']:checked,
+.theme-light li[data-task='"'] > input:checked {
   background-color: var(--color-l-violet-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task='"']:checked,
-.theme-dark li[data-task='"'] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task='"']:checked,
+.theme-dark li[data-task='"'] > input:checked {
   background-color: var(--color-d-violet-700);
 }
 
 /* I — Idea / Lightbulb */
-input.task-list-item-checkbox[data-task=I],
-li[data-task=I] input.task-list-item-checkbox {
+input[data-task=I],
+li[data-task=I] > input {
   border-radius: var(--scale-2-8);
 }
-input.task-list-item-checkbox[data-task=I]:checked,
-li[data-task=I] input.task-list-item-checkbox:checked {
+input[data-task=I]:checked,
+li[data-task=I] > input:checked {
   background-position: center;
   background-size: 90%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E&lt;!--! Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;%3Cpath d='M19,9a7,7,0,0,1-4,6.32V18H9V15.32A7,7,0,1,1,19,9Z'%3E%3C/path%3E%3Cline x1='9' y1='22' x2='15' y2='22'%3E%3C/line%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=I]:checked,
-.theme-light li[data-task=I] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=I]:checked,
+.theme-light li[data-task=I] > input:checked {
   background-color: var(--color-l-yellow-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task=I]:checked,
-.theme-dark li[data-task=I] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=I]:checked,
+.theme-dark li[data-task=I] > input:checked {
   background-color: var(--color-d-yellow-700);
 }
 
 /* b - Pro */
-input.task-list-item-checkbox[data-task=b]:checked,
-li[data-task=b] input.task-list-item-checkbox:checked {
+input[data-task=b]:checked,
+li[data-task=b] > input:checked {
   background-position: center;
   background-size: 90%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E&lt;!--! Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;%3Cpath d='M7,9l4-7h.69a2,2,0,0,1,2,2.28L13,9h6.67a2,2,0,0,1,2,2.3l-1.39,9a2,2,0,0,1-2,1.7H7Z'%3E%3C/path%3E%3Cpath d='M2,11v9a2,2,0,0,0,2,2H7V9H4A2,2,0,0,0,2,11Z'%3E%3C/path%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=b]:checked,
-.theme-light li[data-task=b] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=b]:checked,
+.theme-light li[data-task=b] > input:checked {
   background-color: var(--color-l-green-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task=b]:checked,
-.theme-dark li[data-task=b] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=b]:checked,
+.theme-dark li[data-task=b] > input:checked {
   background-color: var(--color-d-green-700);
 }
 
 /* p - Con */
-input.task-list-item-checkbox[data-task=p]:checked,
-li[data-task=p] input.task-list-item-checkbox:checked {
+input[data-task=p]:checked,
+li[data-task=p] > input:checked {
   background-position: center;
   background-size: 90%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E&lt;!--! Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;%3Cpath d='M7,9l4-7h.69a2,2,0,0,1,2,2.28L13,9h6.67a2,2,0,0,1,2,2.3l-1.39,9a2,2,0,0,1-2,1.7H7Z'%3E%3C/path%3E%3Cpath d='M2,11v9a2,2,0,0,0,2,2H7V9H4A2,2,0,0,0,2,11Z'%3E%3C/path%3E%3C/svg%3E");
   transform: scaleY(-1);
 }
-.theme-light input.task-list-item-checkbox[data-task=p]:checked,
-.theme-light li[data-task=p] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=p]:checked,
+.theme-light li[data-task=p] > input:checked {
   background-color: var(--color-l-red-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task=p]:checked,
-.theme-dark li[data-task=p] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=p]:checked,
+.theme-dark li[data-task=p] > input:checked {
   background-color: var(--color-d-red-700);
 }
 
 /* v - Bookmark */
-input.task-list-item-checkbox[data-task=v]:checked,
-li[data-task=v] input.task-list-item-checkbox:checked {
+input[data-task=v]:checked,
+li[data-task=v] > input:checked {
   background-position: center;
   background-size: 90%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='M19 10.132v-6c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2V22l7-4.666L19 22V10.132z'%3E%3C/path%3E%3C/svg%3E");
 }
-.theme-light input.task-list-item-checkbox[data-task=v]:checked,
-.theme-light li[data-task=v] input.task-list-item-checkbox:checked {
+.theme-light input[data-task=v]:checked,
+.theme-light li[data-task=v] > input:checked {
   background-color: var(--color-l-red-700);
 }
-.theme-dark input.task-list-item-checkbox[data-task=v]:checked,
-.theme-dark li[data-task=v] input.task-list-item-checkbox:checked {
+.theme-dark input[data-task=v]:checked,
+.theme-dark li[data-task=v] > input:checked {
   background-color: var(--color-d-red-900);
+}
+
+/*──────────Markdown Formatting──────────*/
+.gray-md-formatting span.cm-formatting:not(.cm-header, .cm-formatting-hashtag, .cm-formatting-list),
+.gray-md-formatting .cm-s-obsidian span.cm-formatting-math.cm-keyword,
+.gray-md-formatting .cm-s-obsidian span.cm-formatting-link.cm-link,
+.gray-md-formatting .cm-s-obsidian span.cm-formatting-escape,
+.gray-md-formatting .cm-s-obsidian span.cm-formatting-link-string.cm-string.cm-url,
+.gray-md-formatting .cm-s-obsidian span.cm-bracket,
+.gray-md-formatting span.cm-formatting-code.cm-inline-code,
+.gray-md-formatting span.cm-formatting-header,
+.gray-md-formatting span.cm-header.cm-formatting-link-start,
+.gray-md-formatting span.cm-header.cm-formatting-link-end,
+.gray-md-formatting span.cm-header.cm-formatting.cm-link,
+.gray-md-formatting span.cm-header.cm-formatting.cm-string.cm-url,
+.gray-md-formatting span.cm-formatting.cm-highlight,
+.gray-md-formatting .markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight,
+.gray-md-formatting .markdown-source-view .cm-header.cm-formatting-strong,
+.gray-md-formatting .markdown-source-view .cm-header.cm-formatting-strikethrough,
+.gray-md-formatting .markdown-source-view .cm-header.cm-formatting-em,
+.gray-md-formatting span.cm-quote.cm-formatting.cm-strong,
+.gray-md-formatting span.cm-quote.cm-formatting.cm-em,
+.gray-md-formatting span.cm-quote.cm-formatting.cm-highlight,
+.gray-md-formatting span.cm-quote.cm-formatting.cm-strikethrough,
+.gray-md-formatting .cm-s-obsidian span.cm-quote.cm-formatting-quote {
+  filter: initial;
+  color: var(--md-color-formatting);
+  background: initial;
+  text-decoration: none;
 }
 
 /*────────────────────────────────────
@@ -4784,7 +4905,7 @@ li[data-task=v] input.task-list-item-checkbox:checked {
 .theme-light .modal button:active,
 .theme-light .graph-controls button:active,
 .theme-light .workspace button:active {
-  box-shadow: 0px 0px 0px 2px rgba(100, 100, 100, 0.38) inset, 0px 1px 1px 0px rgba(100, 100, 100, 0.1);
+  box-shadow: 0px 0px 0px 2px rgba(100, 100, 100, 0.3) inset, 0px 1px 1px 0px rgba(100, 100, 100, 0.1);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .theme-dark .modal button,
@@ -4803,7 +4924,8 @@ li[data-task=v] input.task-list-item-checkbox:checked {
 
 .theme-light .modal button:not(.mod-cta, .mod-warning),
 .theme-light .modal.mod-settings button:not(.mod-cta, .mod-warning),
-.theme-light .workspace button:not(.graph-controls button, .document-search-button) {
+.theme-light .workspace button:not(.graph-controls button, .document-search-button),
+.theme-light .search-result-file-match-destination-file {
   color: var(--color-l-gray-80);
   background: var(--color-l-whiter);
   border: 1px solid rgba(100, 100, 100, 0.3);
@@ -4813,18 +4935,22 @@ li[data-task=v] input.task-list-item-checkbox:checked {
 .theme-light .modal.mod-settings button:not(.mod-cta, .mod-warning):hover,
 .theme-light .modal.mod-settings button:not(.mod-cta, .mod-warning):focus,
 .theme-light .workspace button:not(.graph-controls button, .document-search-button):hover,
-.theme-light .workspace button:not(.graph-controls button, .document-search-button):focus {
+.theme-light .workspace button:not(.graph-controls button, .document-search-button):focus,
+.theme-light .search-result-file-match-destination-file:hover,
+.theme-light .search-result-file-match-destination-file:focus {
   background: var(--color-l-gray-10);
 }
 .theme-light .modal button:not(.mod-cta, .mod-warning):active,
 .theme-light .modal.mod-settings button:not(.mod-cta, .mod-warning):active,
-.theme-light .workspace button:not(.graph-controls button, .document-search-button):active {
+.theme-light .workspace button:not(.graph-controls button, .document-search-button):active,
+.theme-light .search-result-file-match-destination-file:active {
   box-shadow: 0px 0px 0px 2px rgba(100, 100, 100, 0.1) inset, 0px 1px 1px 0px rgba(100, 100, 100, 0.1);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .theme-dark .modal button:not(.mod-cta, .mod-warning),
 .theme-dark .modal.mod-settings button:not(.mod-cta, .mod-warning),
-.theme-dark .workspace button:not(.graph-controls button, .document-search-button) {
+.theme-dark .workspace button:not(.graph-controls button, .document-search-button),
+.theme-dark .search-result-file-match-destination-file {
   color: var(--color-d-white);
   background: var(--color-d-black);
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -4832,12 +4958,14 @@ li[data-task=v] input.task-list-item-checkbox:checked {
 }
 .theme-dark .modal button:not(.mod-cta, .mod-warning):hover,
 .theme-dark .modal.mod-settings button:not(.mod-cta, .mod-warning):hover,
-.theme-dark .workspace button:not(.graph-controls button, .document-search-button):hover {
+.theme-dark .workspace button:not(.graph-controls button, .document-search-button):hover,
+.theme-dark .search-result-file-match-destination-file:hover {
   background: var(--color-d-blacker);
 }
 .theme-dark .modal button:not(.mod-cta, .mod-warning):active,
 .theme-dark .modal.mod-settings button:not(.mod-cta, .mod-warning):active,
-.theme-dark .workspace button:not(.graph-controls button, .document-search-button):active {
+.theme-dark .workspace button:not(.graph-controls button, .document-search-button):active,
+.theme-dark .search-result-file-match-destination-file:active {
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2) inset, 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
@@ -4972,68 +5100,6 @@ input[type=number] {
   color: var(--text-muted);
 }
 .search-input-clear-button:active {
-  color: var(--text-faint);
-}
-
-/*~ Document Search Input ~*/
-.document-search-container {
-  position: absolute;
-  bottom: 0;
-  min-width: 20%;
-  width: 40vw;
-  height: 45px;
-  border-top-right-radius: var(--scale-2-4);
-  border-top: 1px solid var(--background-modifier-border);
-  border-right: 1px solid var(--background-modifier-border);
-}
-.document-search-container.mod-replace-mode {
-  height: 80px;
-}
-.document-search-container input {
-  margin-left: var(--scale-2-2);
-}
-.theme-light .document-search-container {
-  background: var(--color-l-gray-10);
-}
-.theme-dark .document-search-container {
-  background: var(--color-d-gray-80);
-}
-.document-search-button.document-search-button {
-  line-height: var(--line-height-0);
-  border-radius: var(--scale-2-2);
-  margin: var(--scale-2-2) var(--scale-2-1) var(--scale-0-0) var(--scale-2-1);
-}
-.document-search-button.document-search-button:last-child {
-  margin-right: var(--scale-2-2);
-}
-body.theme-light .workspace .document-search-button.document-search-button {
-  color: var(--text-on-accent);
-  background: var(--interactive-accent);
-}
-body.theme-light .workspace .document-search-button.document-search-button:hover {
-  background: var(--interactive-accent-hover);
-}
-body.theme-dark .workspace .document-search-button.document-search-button {
-  color: var(--text-on-accent);
-  background: var(--interactive-accent);
-}
-body.theme-dark .workspace .document-search-button.document-search-button:hover {
-  background: var(--interactive-accent-hover);
-}
-
-.document-search-close-button {
-  font-family: Inter, sans-serif;
-  font-weight: 300;
-  font-size: var(--scale-8-3);
-  height: var(--scale-2-8);
-  width: var(--scale-2-8);
-  border-radius: var(--scale-8-3);
-  transition: var(--duration-superfast) var(--motion-smooth);
-}
-.document-search-close-button:before:hover {
-  color: var(--text-muted);
-}
-.document-search-close-button:before:active {
   color: var(--text-faint);
 }
 
@@ -5250,7 +5316,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 .empty-state-action:active,
 .is-mobile .empty-state-action:active {
-  transform: translateY(1px);
+  transform: translateY(0.5px);
 }
 .theme-light .empty-state-action,
 .theme-light .is-mobile .empty-state-action {
@@ -5259,7 +5325,7 @@ input[type=range]::-webkit-slider-thumb {
 .theme-light .empty-state-action:active,
 .theme-light .is-mobile .empty-state-action:active {
   background: var(--background-secondary);
-  box-shadow: 0px 0px 0px 2px rgba(150, 150, 150, 0.15) inset;
+  box-shadow: 0px 0px 0px 3px rgba(150, 150, 150, 0.15) inset;
 }
 .theme-light .empty-state-action:nth-child(3n+1):hover, .theme-light .empty-state-action:nth-child(3n+1) :focus,
 .theme-light .is-mobile .empty-state-action:nth-child(3n+1):hover,
@@ -5296,11 +5362,12 @@ input[type=range]::-webkit-slider-thumb {
 }
 .theme-dark .empty-state-action,
 .theme-dark .is-mobile .empty-state-action {
-  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px -3px 0px 0px rgba(0, 0, 0, 0.25) inset;
 }
 .theme-dark .empty-state-action:active,
 .theme-dark .is-mobile .empty-state-action:active {
   background: var(--background-secondary);
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.3) inset;
 }
 .theme-dark .empty-state-action:nth-child(3n+1):hover, .theme-dark .empty-state-action:nth-child(3n+1) :focus,
 .theme-dark .is-mobile .empty-state-action:nth-child(3n+1):hover,
@@ -5336,12 +5403,12 @@ input[type=range]::-webkit-slider-thumb {
   border: 1px solid var(--color-d-blue-900);
 }
 
-.empty-state::after {
+.workspace-leaf-content[data-type=empty] .empty-state::after {
   content: "Primary by Cecilia May \a© 2021—2022";
   color: var(--text-faint);
   letter-spacing: var(--tracking-4);
   text-transform: uppercase;
-  font-size: var(--font-scale-0-5);
+  font-size: var(--font-scale-0);
   white-space: pre;
   text-align: center;
   position: absolute;
@@ -6043,6 +6110,205 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /*────────────────────────────────────
+    Backlinks and Outgoing Links
+────────────────────────────────────*/
+/* Backlink Pane */
+.backlink-pane {
+  padding-left: 0;
+}
+.backlink-pane > .tree-item-self {
+  flex-direction: row-reverse;
+  color: var(--md-color-text-normal);
+  font-weight: var(--font-bold);
+  margin-top: 3px;
+}
+.backlink-pane > .tree-item-self:hover {
+  background: transparent;
+}
+.backlink-pane > .tree-item-self.is-collapsed {
+  color: var(--md-color-text-muted);
+}
+.backlink-pane > .tree-item-self.is-collapsed:active {
+  color: var(--md-color-text-faint);
+}
+.backlink-pane > .tree-item-self span.tree-item-icon.collapse-icon {
+  display: none;
+}
+.backlink-pane > .tree-item-self .tree-item-inner {
+  flex: auto 1 1;
+}
+.backlink-pane > .tree-item-self.is-clickable .tree-item-flair {
+  color: var(--md-color-text-normal);
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  padding: 0;
+  margin-right: var(--scale-2-2);
+}
+.backlink-pane .search-result-container {
+  background: var(--background-secondary);
+  padding: 0;
+  border: none;
+  border-radius: var(--scale-2-4);
+  margin: var(--scale-2-2) var(--scale-2-3) var(--scale-2-3) var(--scale-2-3);
+}
+.backlink-pane .search-result-container .tree-item.search-result {
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--scale-2-3);
+  margin-bottom: var(--scale-2-4);
+}
+.backlink-pane .search-result-container .tree-item-self {
+  padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-4) var(--scale-2-8);
+  border-bottom: 1px solid var(--background-modifier-border);
+  border-radius: 0;
+  margin: 0;
+  margin-bottom: var(--scale-2-4);
+}
+.backlink-pane .search-result-container .search-result-file-matches {
+  padding-bottom: var(--scale-2-1);
+  border-bottom: none;
+}
+.backlink-pane .search-result-container .search-result-file-match {
+  width: calc(100% - var(--scale-8-1));
+  left: 0;
+}
+
+/* Outgoing Link Pane */
+.outgoing-link-pane > .tree-item-self {
+  flex-direction: row-reverse;
+  font-size: var(--font-scale-1);
+  font-weight: var(--font-bold);
+  margin-top: 3px;
+}
+.outgoing-link-pane > .tree-item-self:hover {
+  background: transparent;
+}
+.outgoing-link-pane > .tree-item-self span.tree-item-icon.collapse-icon {
+  display: none;
+}
+.outgoing-link-pane > .tree-item-self .tree-item-inner {
+  flex: auto 1 1;
+}
+.outgoing-link-pane > .tree-item-self.is-clickable .tree-item-flair {
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  padding: 0;
+  margin-right: var(--scale-2-2);
+}
+.outgoing-link-pane .search-result-container {
+  background: var(--background-primary);
+  padding: 0;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--scale-2-4);
+  margin: var(--scale-2-2) var(--scale-0-0) var(--scale-2-2) var(--scale-2-1);
+}
+.outgoing-link-pane .search-result-container .tree-item-self {
+  font-size: var(--font-scale-0-5);
+  padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-4) var(--scale-2-8);
+  border-bottom: 1px solid var(--background-modifier-border);
+  border-radius: 0;
+  margin: 0;
+}
+.outgoing-link-pane .search-result-container .tree-item-self:last-of-type {
+  border-bottom: none;
+  border-bottom-left-radius: var(--scale-2-4);
+  border-bottom-right-radius: var(--scale-2-4);
+}
+.outgoing-link-pane .search-result-container .tree-item-self.tree-item-self.tree-item-self:active {
+  color: var(--text-faint);
+  background: var(--background-primary-alt);
+}
+.outgoing-link-pane .search-result-container .search-result-file-matches {
+  padding-bottom: var(--scale-2-1);
+  border-bottom: none;
+}
+.outgoing-link-pane .search-result-container .search-result-file-match {
+  width: calc(100% - var(--scale-2-6));
+  margin: var(--scale-2-3) var(--scale-2-1) var(--scale-2-4) var(--scale-2-1);
+}
+.outgoing-link-pane .search-result-container .search-result-file-match:last-of-type {
+  margin-bottom: var(--scale-0-0);
+}
+.outgoing-link-pane .search-result-container .search-result-file-match-destination-file {
+  background: var(--background-primary);
+  color: var(--text-normal);
+  border-radius: var(--scale-2-8);
+  padding: var(--scale-2-1) var(--scale-2-5) var(--scale-2-2) var(--scale-2-5);
+  margin: 0;
+}
+
+/* Backlinks on Document */
+.mod-root .workspace-leaf-content[data-type=markdown] .nav-header {
+  border-top: 1px solid var(--background-modifier-border);
+  padding: 0;
+  padding-bottom: var(--scale-2-4);
+  margin-top: 0;
+  position: relative;
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .nav-buttons-container {
+  position: absolute;
+  right: 0;
+  top: var(--scale-2-4);
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .search-input-container {
+  margin-right: calc(4 * var(--scale-8-5) - 24px);
+  margin-left: 0;
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .search-input-container .search-input-clear-button:before {
+  top: -10px;
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .backlink-pane {
+  padding-left: 0;
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .backlink-pane > .tree-item-self {
+  font-size: var(--font-scale-2);
+  margin-top: 3px;
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .backlink-pane .search-result-container {
+  background: var(--background-secondary);
+  padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-1) var(--scale-2-4);
+  border: none;
+  border-radius: var(--scale-2-4);
+  margin-top: var(--scale-2-2);
+  margin-left: 0;
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .backlink-pane .search-result-container .tree-item-self {
+  font-size: var(--font-scale-1);
+}
+
+/* Font for Source View */
+.cm-s-obsidian .backlink-pane > .tree-item-self {
+  font-family: var(--font-editor-header);
+}
+
+/* Font for Preview View */
+.markdown-preview-view .backlink-pane > .tree-item-self {
+  font-family: var(--font-preview-header);
+}
+
+/* "Link" Button */
+.search-result-file-match-replace-button.search-result-file-match-replace-button {
+  padding: var(--scale-2-1) var(--scale-2-3) var(--scale-2-2) var(--scale-2-3) !important;
+  border-radius: var(--scale-2-2);
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: var(--scale-2-5);
+  opacity: 1;
+}
+
+/*────────────────────────────────────
+            Outline Pane
+────────────────────────────────────*/
+.workspace-leaf-content[data-type=outline] .tree-item-self {
+  padding: calc(1px + var(--scale-2-2)) var(--scale-2-2) calc(1px + var(--scale-2-2)) calc(5px + var(--scale-8-3));
+}
+.workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-icon {
+  margin-left: -21px;
+}
+
+/*────────────────────────────────────
 ++++++++++++++++++++++++++++++++++++++
             Community Plugins
 ++++++++++++++++++++++++++++++++++++++
@@ -6624,21 +6890,21 @@ body.tab-header__right-color-ltr.theme-dark .mod-right-split .workspace-tab-head
 /*────────── header-size__preset ──────────*/
 body.header-size__medium {
   /* 1.24 Scale Ratio */
-  --h1-size: 1.907em;
-  --h2-size: 1.707em;
-  --h3-size: 1.538em;
-  --h4-size: 1.377em;
-  --h5-size: 1.24em;
-  --h6-size: 1.11em;
+  --h1: 1.907em;
+  --h2: 1.707em;
+  --h3: 1.538em;
+  --h4: 1.377em;
+  --h5: 1.24em;
+  --h6: 1.11em;
 }
 body.header-size__small {
   /* 1.12 Scale Ratio */
-  --h1-size: 1.405em;
-  --h2-size: 1.33em;
-  --h3-size: 1.254em;
-  --h4-size: 1.187em;
-  --h5-size: 1.12em;
-  --h6-size: 1.06em;
+  --h1: 1.405em;
+  --h2: 1.33em;
+  --h3: 1.254em;
+  --h4: 1.187em;
+  --h5: 1.12em;
+  --h6: 1.06em;
 }
 
 /*────────── header-color__preset ──────────*/
@@ -6876,6 +7142,11 @@ settings:
         description: Makes markdown formatting less noticeable in Editor View.
         type: class-toggle
     -
+        id: no-link-underline
+        title: Remove Link Underline
+        description: When toggled on, underlines on internal and external links will be removed.
+        type: class-toggle
+    -
         id: global-fonts__custom
         title: Custom Fonts
         type: heading
@@ -7095,7 +7366,7 @@ settings:
         level: 2
         collapsed: true
     -
-        id: h1-size
+        id: h1
         title: Header 1 Size
         type: variable-text
         default: '2.678em'
@@ -7108,7 +7379,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h2-size
+        id: h2
         title: Header 2 Size
         type: variable-text
         default: '2.288em'
@@ -7121,7 +7392,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h3-size
+        id: h3
         title: Header 3 Size
         type: variable-text
         default: '1.927em'
@@ -7134,7 +7405,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h4-size
+        id: h4
         title: Header 4 Size
         type: variable-text
         default: '1.648em'
@@ -7147,7 +7418,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h5-size
+        id: h5
         title: Header 5 Size
         type: variable-text
         default: '1.388em'
@@ -7160,7 +7431,7 @@ settings:
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
     -
-        id: h6-size
+        id: h6
         title: Header 6 Size
         type: variable-text
         default: '1.188em'
@@ -7184,9 +7455,9 @@ settings:
         level: 1
         collapsed: true
     -
-        id: no-link-underline
-        title: Remove Link Underline
-        description: When toggled on, underlines on internal and external links will be removed.
+        id: no-md-activeline
+        title: Disable Activeline Highlighting
+        description: Toggle on to remove activeline highlighting. Keep it off to show it.
         type: class-toggle
     -
         id: note-embeds
