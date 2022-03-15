@@ -468,6 +468,35 @@ settings:
         description: Toggle on to remove activeline highlighting. Keep it off to show it.
         type: class-toggle
     -
+        id: lists
+        title: 📃 Lists
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: md-color-bullet
+        title: Preset Bullet Color
+        type: variable-select
+        default: 'var(--md-color-text-faint)'
+        options:
+            -
+                label: Like Body Text
+                value: 'var(--md-color-text)'
+            -
+                label: Muted
+                value: 'var(--md-color-text-muted)'
+            -
+                label: Faint
+                value: 'var(--md-color-text-faint)'
+    -
+        id: md-color-bullet
+        title: Custom Bullet Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(34, 24%, 30%)'
+    -
         id: note-embeds
         title: 📍 Embeds
         type: heading

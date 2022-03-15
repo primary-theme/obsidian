@@ -8,10 +8,26 @@
     top: initial;
 }
 
+.markdown-source-view.mod-cm6 {
+    & .list-bullet:after {
+        content: '-';
+        font-family: var(--font-code);
+        font-size: 1.25em;
+    }
+
+    & .cm-list-2 .list-bullet:after {
+        content: '•';
+    }
+
+    & .cm-list-3 .list-bullet:after {
+        content: '◦';
+    }
+}
+
 span.cm-formatting.cm-formatting-list,
 span.list-bullet,
 li::marker {
-    color: var(--md-color-text-faint);
+    color: var(--md-color-bullet);
     font-size: var(--font-scale-0);
     font-family: var(--font-code);
     font-variant-numeric: tabular-nums;
@@ -26,102 +42,49 @@ li::marker {
 }
 
 /* Ordered List / Number List */
-ol {
+ol,
+ol ol ol,
+ol ol ol ol ol,
+ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
     list-style-type: decimal;
     padding-left: 2ch;
     margin-left: var(--scale-0-0);
 }
-ol ol {
-    list-style-type: lower-alpha;
-}
-ol ol ol {
-    list-style-type: decimal;
-}
-ol ol ol ol {
-    list-style-type: lower-alpha;
-}
-ol ol ol ol ol {
-    list-style-type: decimal;
-}
-ol ol ol ol ol ol {
-    list-style-type: lower-alpha;
-}
-ol ol ol ol ol ol ol {
-    list-style-type: decimal;
-}
-ol ol ol ol ol ol ol ol {
-    list-style-type: lower-alpha;
-}
-ol ol ol ol ol ol ol ol ol {
-    list-style-type: decimal;
-}
-ol ol ol ol ol ol ol ol ol ol {
-    list-style-type: lower-alpha;
-}
-ol ol ol ol ol ol ol ol ol ol ol {
-    list-style-type: decimal;
-}
-ol ol ol ol ol ol ol ol ol ol ol ol {
-    list-style-type: lower-alpha;
-}
-ol ol ol ol ol ol ol ol ol ol ol ol ol {
-    list-style-type: decimal;
-}
+ol ol,
+ol ol ol ol,
+ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol ol,
 ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
-    list-style-type: lower-alpha;
-}
-ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
-    list-style-type: decimal;
-}
-ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
     list-style-type: lower-alpha;
 }
 
 /* Unordered List / Bullet List */
-ul {
+ul,
+ul ul ul ul,
+ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul ul ul ul {
     list-style-type: "– ";
     padding-left: 2ch;
     margin-left: var(--scale-0-0);
 }
-ul ul {
-    list-style-type: disc;
-}
-ul ul ul {
-    list-style-type: circle;
-}
-ul ul ul ul {
-    list-style-type: square;
-}
-ul ul ul ul ul {
-    list-style-type: "-> ";
-}
-ul ul ul ul ul ul {
-    list-style-type: "– ";
-}
-ul ul ul ul ul ul ul {
-    list-style-type: disc;
-}
-ul ul ul ul ul ul ul ul {
-    list-style-type: circle;
-}
-ul ul ul ul ul ul ul ul ul {
-    list-style-type: square;
-}
-ul ul ul ul ul ul ul ul ul ul {
-    list-style-type: "-> ";
-}
-ul ul ul ul ul ul ul ul ul ul ul {
-    list-style-type: "– ";
-}
-ul ul ul ul ul ul ul ul ul ul ul ul {
-    list-style-type: disc;
-}
-ul ul ul ul ul ul ul ul ul ul ul ul ul {
-    list-style-type: circle;
-}
+ul ul,
+ul ul ul ul ul,
+ul ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
-    list-style-type: square;
+    list-style-type: disc;
 }
+ul ul ul,
+ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
-    list-style-type: "-> ";
+    list-style-type: circle;
 }

@@ -8,8 +8,7 @@
 ────────────────────────────────────*/
 /*─────────All Modals──────────*/
 .modal {
-    width: 60vw;
-    max-width: 60vw;
+    width: clamp(200px, 90vw, 960px);
     min-height: 20vh;
     height: auto;
     max-height: 70vh;
@@ -24,12 +23,11 @@
 
     &.mod-settings,
     &.mod-settings .vertical-tab-container {
-        width: 60vw;
-        max-width: 60vw;
+        width: clamp(200px, 90vw, 960px);
         min-height: 20vh;
         height: auto;
         max-height: 70vh;
-        
+
         // Border and Overflow Fix
         border-radius: var(--scale-2-8);
         overflow-y: hidden;
@@ -55,16 +53,14 @@
 
     &.mod-community-theme.mod-community-theme,
     &.mod-community-plugin {
-        width: 80vw;
-        max-width: 80vw;
+        width: clamp(200px, 90vw, 960px);
         min-height: 80vh;
 
         overflow: hidden;
     }
 
     &.mod-image-lightbox {
-        width: 90vw;
-        max-width: 90vw;
+        width: clamp(200px, 95vw, 1920px);
         min-height: 20vh;
         height: auto;
         max-height: 90vh;
@@ -72,6 +68,19 @@
         // Border and Overflow Fix
         border-radius: var(--scale-2-8);
         overflow-y: hidden;
+    }
+
+    & .vertical-tab-nav-item {
+        text-transform: capitalize;
+    }
+
+    &-title {
+        text-transform: capitalize;
+        text-align: left;
+    }
+
+    &.mod-community-theme .modal-title {
+        margin-left: var(--scale-8-3);
     }
 
     & .setting-hotkey {

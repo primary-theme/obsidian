@@ -109,6 +109,8 @@ div.cm-content {
     --md-color-border: var(--background-modifier-border);
 
     --md-embed-bg: var(--color-l-gray-10);
+
+    --md-color-bullet: var(--md-color-text-faint);
 }
 
 .theme-dark {
@@ -161,6 +163,8 @@ div.cm-content {
     --md-color-border: var(--background-modifier-border);
 
     --md-embed-bg: var(--color-d-gray-90);
+
+    --md-color-bullet: var(--md-color-text-faint);
 }
 
 .markdown-source-view,

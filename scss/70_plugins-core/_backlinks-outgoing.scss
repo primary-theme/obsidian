@@ -29,6 +29,7 @@
 
         & .tree-item-inner {
             flex: auto 1 1;
+            text-transform: capitalize;
         }
 
         &.is-clickable .tree-item-flair {
@@ -99,6 +100,7 @@
 
         & .tree-item-inner {
             flex: auto 1 1;
+            text-transform: capitalize;
         }
 
         &.is-clickable .tree-item-flair {
@@ -189,6 +191,9 @@
     }
 
     & .embedded-backlinks {
+        margin-top: 3em;
+        margin-bottom: 1em;
+
         & .search-input-container {
             margin-right: calc(4 * var(--scale-8-5) - 24px);
             margin-left: 0;

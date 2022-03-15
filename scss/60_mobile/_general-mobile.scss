@@ -7,6 +7,10 @@
 .is-mobile .workspace-drawer-ribbon {
     width: var(--scale-8-8);
     border-right: 1px solid var(--background-modifier-border);
+
+    & .side-dock-ribbon-action {
+        padding-bottom: var(--scale-0-0);
+    }
 }
 
 /*────────────────────────────────────
@@ -23,7 +27,7 @@
     &-active-tab-header {
         padding:    var(--scale-2-4)
                     var(--scale-2-2)
-                    var(--scale-2-8)
+                    var(--scale-2-4)
                     var(--scale-2-8);
         margin: 0;
     }
@@ -42,9 +46,9 @@
 .is-mobile {
     & .workspace-drawer-actions,
     & .nav-buttons-container {
-    margin: var(--scale-2-10)
+    margin: var(--scale-2-6)
             var(--scale-0-0)
-            var(--scale-2-6)
+            var(--scale-0-0)
             var(--scale-0-0);
     }
 
@@ -78,6 +82,27 @@
                     var(--scale-0-0)
                     var(--scale-8-1);
     }
+
+    // File Explorer Search
+    & .search-input-suggest-button {
+        top: 8px;
+    }
+}
+
+/* Workspace Drawer Items Fix */
+:root {
+    --mobile-fileexplorer-font-size: 16px;
+    --mobile-fileexplorer-line-height: 1.2;
+}
+
+.is-mobile .theme-light,
+.is-mobile .theme-dark {
+    & .nav-folder-title,
+    & .nav-file-title {
+        font-size: var(--mobile-fileexplorer-font-size);
+        line-height: var(--mobile-fileexplorer-line-height);
+        padding: var(--scale-2-2) var(--scale-2-4);
+    }
 }
 
 /*────────────────────────────────────
@@ -109,6 +134,25 @@
     }
 }
 /*────────────────────────────────────
+        Backlinks in Document
+────────────────────────────────────*/
+.is-mobile .mod-root .workspace-leaf-content[data-type="markdown"] {
+    & .nav-buttons-container {
+        position: relative;
+        margin-top: var(--scale-2-4);
+        margin-bottom: var(--scale-0-0);
+    }
+    & .embedded-backlinks {
+        & .search-input-container {
+            width: 98%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: var(--scale-2-4);
+        }
+    }
+}
+
+/*────────────────────────────────────
 +++++++++++Other Components+++++++++++
 ────────────────────────────────────*/
 /*────────────────────────────────────
@@ -126,6 +170,24 @@
 
         // Styles both Light and Dark Mode
         border: 1px solid rgba(100, 100, 100, 0.25);
+    }
+
+    & .modal {
+        padding: var(--scale-8-2) var(--scale-8-4);
+    }
+
+    & .prompt {
+        padding-left: 0;
+        padding-right: 0;
+
+        & input.prompt-input {
+            padding-top: var(--scale-2-4);
+            padding-bottom: var(--scale-2-6);
+        }
+    }
+
+    & .menu {
+        padding: 0;
     }
 
     & ::-webkit-scrollbar {
@@ -151,7 +213,7 @@
 
         &-content {
             padding:    var(--scale-0-0)
-                        var(--scale-8-4);
+                        var(--scale-0-0);
         }
 
         &-close-button {

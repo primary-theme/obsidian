@@ -7,8 +7,7 @@ span.cm {
     &-underline:not(span[data-link-tags] .cm-underline),
     &-inline-code.cm-link:not(.cm-formatting-code.cm-formatting),
     &-hmd-footnote,
-    &-header.cm-hmd-internal-link,
-    &-hmd-internal-link.cm-hmd-internal-link {
+    &-header.cm-hmd-internal-link {
         color: var(--md-color-reslink);
         text-decoration: underline;
         text-underline-position: under;
@@ -37,19 +36,17 @@ span.cm {
     }
 }
 
-/* Source View Resolved Links */
+/* Source View Unresolved Links */
 span.is-unresolved.is-unresolved {
     & span.cm {
         &-url,
         &-blockid,
         &-link,
         &-underline,
-        &-hmd-internal-link,
         &-hmd-footnote {
             color: var(--md-color-unreslink);
             text-decoration: underline;
             text-underline-position: under;
-            text-decoration-thickness: 1px;
     
             transition: var(--duration-superfast)
                         var(--motion-smooth);
@@ -58,7 +55,6 @@ span.is-unresolved.is-unresolved {
                 color: var(--md-color-unreslink-hover);
                 text-decoration: underline;
                 text-underline-position: under;
-                text-decoration-thickness: 1px;
             }
 
             &:active {
@@ -72,6 +68,22 @@ span.is-unresolved.is-unresolved {
                 text-decoration: none;
             }
         }
+    }
+}
+
+/* Legacy Editor Fix */
+.markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link {
+    color: var(--md-color-unreslink);
+    transition: var(--duration-superfast)
+                    var(--motion-smooth);
+
+    &:hover {
+        color: var(--md-color-reslink-hover);
+        cursor: pointer;
+    }
+    
+    &:active {
+        color: var(--md-color-reslink-active);
     }
 }
 

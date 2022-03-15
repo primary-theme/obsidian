@@ -51,8 +51,9 @@
             }
         }
         
-        &-info.u-center-text {
-            color: var(--text-muted) !important;
+        &-info.u-center-text,
+        & span.community-theme-downloads {
+            color: var(--text-muted);
         }
 
         .theme-light & {

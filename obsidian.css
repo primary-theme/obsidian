@@ -1612,6 +1612,7 @@ div.cm-content {
   --md-color-formatting: var(--color-l-gray-50);
   --md-color-border: var(--background-modifier-border);
   --md-embed-bg: var(--color-l-gray-10);
+  --md-color-bullet: var(--md-color-text-faint);
 }
 
 .theme-dark {
@@ -1650,6 +1651,7 @@ div.cm-content {
   --md-color-formatting: var(--color-d-gray-40);
   --md-color-border: var(--background-modifier-border);
   --md-embed-bg: var(--color-d-gray-90);
+  --md-color-bullet: var(--md-color-text-faint);
 }
 
 .theme-light .markdown-source-view,
@@ -1914,51 +1916,62 @@ strong em, em strong,
 
 /*──────────Internal & External Links──────────*/
 /* Source View Resolved Links */
-span.cm-url.cm-url, span.cm-blockid, span.cm-link:not(.cm-formatting), span.cm-underline:not(span[data-link-tags] .cm-underline), span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting), span.cm-hmd-footnote, span.cm-header.cm-hmd-internal-link, span.cm-hmd-internal-link.cm-hmd-internal-link {
+span.cm-url.cm-url, span.cm-blockid, span.cm-link:not(.cm-formatting), span.cm-underline:not(span[data-link-tags] .cm-underline), span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting), span.cm-hmd-footnote, span.cm-header.cm-hmd-internal-link {
   color: var(--md-color-reslink);
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-span.cm-url.cm-url:hover, span.cm-blockid:hover, span.cm-link:not(.cm-formatting):hover, span.cm-underline:not(span[data-link-tags] .cm-underline):hover, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):hover, span.cm-hmd-footnote:hover, span.cm-header.cm-hmd-internal-link:hover, span.cm-hmd-internal-link.cm-hmd-internal-link:hover {
+span.cm-url.cm-url:hover, span.cm-blockid:hover, span.cm-link:not(.cm-formatting):hover, span.cm-underline:not(span[data-link-tags] .cm-underline):hover, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):hover, span.cm-hmd-footnote:hover, span.cm-header.cm-hmd-internal-link:hover {
   color: var(--md-color-reslink-hover);
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
 }
-span.cm-url.cm-url:active, span.cm-blockid:active, span.cm-link:not(.cm-formatting):active, span.cm-underline:not(span[data-link-tags] .cm-underline):active, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):active, span.cm-hmd-footnote:active, span.cm-header.cm-hmd-internal-link:active, span.cm-hmd-internal-link.cm-hmd-internal-link:active {
+span.cm-url.cm-url:active, span.cm-blockid:active, span.cm-link:not(.cm-formatting):active, span.cm-underline:not(span[data-link-tags] .cm-underline):active, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):active, span.cm-hmd-footnote:active, span.cm-header.cm-hmd-internal-link:active {
   color: var(--md-color-reslink-active);
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
 }
-.no-link-underline span.cm-url.cm-url, .no-link-underline span.cm-blockid, .no-link-underline span.cm-link:not(.cm-formatting), .no-link-underline span.cm-underline:not(span[data-link-tags] .cm-underline), .no-link-underline span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting), .no-link-underline span.cm-hmd-footnote, .no-link-underline span.cm-header.cm-hmd-internal-link, .no-link-underline span.cm-hmd-internal-link.cm-hmd-internal-link {
+.no-link-underline span.cm-url.cm-url, .no-link-underline span.cm-blockid, .no-link-underline span.cm-link:not(.cm-formatting), .no-link-underline span.cm-underline:not(span[data-link-tags] .cm-underline), .no-link-underline span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting), .no-link-underline span.cm-hmd-footnote, .no-link-underline span.cm-header.cm-hmd-internal-link {
   text-decoration: none;
 }
 
-/* Source View Resolved Links */
-span.is-unresolved.is-unresolved span.cm-url, span.is-unresolved.is-unresolved span.cm-blockid, span.is-unresolved.is-unresolved span.cm-link, span.is-unresolved.is-unresolved span.cm-underline, span.is-unresolved.is-unresolved span.cm-hmd-internal-link, span.is-unresolved.is-unresolved span.cm-hmd-footnote {
+/* Source View Unresolved Links */
+span.is-unresolved.is-unresolved span.cm-url, span.is-unresolved.is-unresolved span.cm-blockid, span.is-unresolved.is-unresolved span.cm-link, span.is-unresolved.is-unresolved span.cm-underline, span.is-unresolved.is-unresolved span.cm-hmd-footnote {
   color: var(--md-color-unreslink);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
-span.is-unresolved.is-unresolved span.cm-url:hover, span.is-unresolved.is-unresolved span.cm-blockid:hover, span.is-unresolved.is-unresolved span.cm-link:hover, span.is-unresolved.is-unresolved span.cm-underline:hover, span.is-unresolved.is-unresolved span.cm-hmd-internal-link:hover, span.is-unresolved.is-unresolved span.cm-hmd-footnote:hover {
+span.is-unresolved.is-unresolved span.cm-url:hover, span.is-unresolved.is-unresolved span.cm-blockid:hover, span.is-unresolved.is-unresolved span.cm-link:hover, span.is-unresolved.is-unresolved span.cm-underline:hover, span.is-unresolved.is-unresolved span.cm-hmd-footnote:hover {
   color: var(--md-color-unreslink-hover);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
 }
-span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unresolved span.cm-blockid:active, span.is-unresolved.is-unresolved span.cm-link:active, span.is-unresolved.is-unresolved span.cm-underline:active, span.is-unresolved.is-unresolved span.cm-hmd-internal-link:active, span.is-unresolved.is-unresolved span.cm-hmd-footnote:active {
+span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unresolved span.cm-blockid:active, span.is-unresolved.is-unresolved span.cm-link:active, span.is-unresolved.is-unresolved span.cm-underline:active, span.is-unresolved.is-unresolved span.cm-hmd-footnote:active {
   color: var(--md-color-unreslink-active);
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
 }
-.no-link-underline span.is-unresolved.is-unresolved span.cm-url, .no-link-underline span.is-unresolved.is-unresolved span.cm-blockid, .no-link-underline span.is-unresolved.is-unresolved span.cm-link, .no-link-underline span.is-unresolved.is-unresolved span.cm-underline, .no-link-underline span.is-unresolved.is-unresolved span.cm-hmd-internal-link, .no-link-underline span.is-unresolved.is-unresolved span.cm-hmd-footnote {
+.no-link-underline span.is-unresolved.is-unresolved span.cm-url, .no-link-underline span.is-unresolved.is-unresolved span.cm-blockid, .no-link-underline span.is-unresolved.is-unresolved span.cm-link, .no-link-underline span.is-unresolved.is-unresolved span.cm-underline, .no-link-underline span.is-unresolved.is-unresolved span.cm-hmd-footnote {
   text-decoration: none;
+}
+
+/* Legacy Editor Fix */
+.markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link {
+  color: var(--md-color-unreslink);
+  transition: var(--duration-superfast) var(--motion-smooth);
+}
+.markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link:hover {
+  color: var(--md-color-reslink-hover);
+  cursor: pointer;
+}
+.markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link:active {
+  color: var(--md-color-reslink-active);
 }
 
 /* Preview Resolved Links */
@@ -2143,10 +2156,22 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
   top: initial;
 }
 
+.markdown-source-view.mod-cm6 .list-bullet:after {
+  content: "-";
+  font-family: var(--font-code);
+  font-size: 1.25em;
+}
+.markdown-source-view.mod-cm6 .cm-list-2 .list-bullet:after {
+  content: "•";
+}
+.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet:after {
+  content: "◦";
+}
+
 span.cm-formatting.cm-formatting-list,
 span.list-bullet,
 li::marker {
-  color: var(--md-color-text-faint);
+  color: var(--md-color-bullet);
   font-size: var(--font-scale-0);
   font-family: var(--font-code);
   font-variant-numeric: tabular-nums;
@@ -2160,133 +2185,54 @@ li::marker {
 }
 
 /* Ordered List / Number List */
-ol {
+ol,
+ol ol ol,
+ol ol ol ol ol,
+ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
   list-style-type: decimal;
   padding-left: 2ch;
   margin-left: var(--scale-0-0);
 }
 
-ol ol {
-  list-style-type: lower-alpha;
-}
-
-ol ol ol {
-  list-style-type: decimal;
-}
-
-ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-ol ol ol ol ol {
-  list-style-type: decimal;
-}
-
-ol ol ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-ol ol ol ol ol ol ol {
-  list-style-type: decimal;
-}
-
-ol ol ol ol ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-ol ol ol ol ol ol ol ol ol {
-  list-style-type: decimal;
-}
-
-ol ol ol ol ol ol ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-ol ol ol ol ol ol ol ol ol ol ol {
-  list-style-type: decimal;
-}
-
-ol ol ol ol ol ol ol ol ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-ol ol ol ol ol ol ol ol ol ol ol ol ol {
-  list-style-type: decimal;
-}
-
+ol ol,
+ol ol ol ol,
+ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol ol ol,
 ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
   list-style-type: lower-alpha;
 }
 
-ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
-  list-style-type: decimal;
-}
-
-ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-
 /* Unordered List / Bullet List */
-ul {
+ul,
+ul ul ul ul,
+ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul ul ul ul {
   list-style-type: "– ";
   padding-left: 2ch;
   margin-left: var(--scale-0-0);
 }
 
-ul ul {
-  list-style-type: disc;
-}
-
-ul ul ul {
-  list-style-type: circle;
-}
-
-ul ul ul ul {
-  list-style-type: square;
-}
-
-ul ul ul ul ul {
-  list-style-type: "-> ";
-}
-
-ul ul ul ul ul ul {
-  list-style-type: "– ";
-}
-
-ul ul ul ul ul ul ul {
-  list-style-type: disc;
-}
-
-ul ul ul ul ul ul ul ul {
-  list-style-type: circle;
-}
-
-ul ul ul ul ul ul ul ul ul {
-  list-style-type: square;
-}
-
-ul ul ul ul ul ul ul ul ul ul {
-  list-style-type: "-> ";
-}
-
-ul ul ul ul ul ul ul ul ul ul ul {
-  list-style-type: "– ";
-}
-
-ul ul ul ul ul ul ul ul ul ul ul ul {
-  list-style-type: disc;
-}
-
-ul ul ul ul ul ul ul ul ul ul ul ul ul {
-  list-style-type: circle;
-}
-
+ul ul,
+ul ul ul ul ul,
+ul ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
-  list-style-type: square;
+  list-style-type: disc;
 }
 
+ul ul ul,
+ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
-  list-style-type: "-> ";
+  list-style-type: circle;
 }
 
 /*──────────Checkboxes──────────*/
@@ -2866,13 +2812,11 @@ body.theme-dark .workspace .document-search-button.document-search-button:hover 
 
 .cm-s-obsidian span.obsidian-search-match-highlight {
   color: var(--md-color-text);
-  font-style: italic;
   border-radius: var(--scale-2-2);
 }
 
 .is-flashing {
   color: var(--md-color-highlight-text-yellow);
-  font-style: italic;
   border-radius: var(--scale-2-2);
 }
 
@@ -4319,8 +4263,7 @@ li[data-task=v] > input:checked {
 ────────────────────────────────────*/
 /*─────────All Modals──────────*/
 .modal {
-  width: 60vw;
-  max-width: 60vw;
+  width: clamp(200px, 90vw, 960px);
   min-height: 20vh;
   height: auto;
   max-height: 70vh;
@@ -4332,8 +4275,7 @@ li[data-task=v] > input:checked {
   /*─────────Command, Quick Switcher etc. Modals──────────*/
 }
 .modal.mod-settings, .modal.mod-settings .vertical-tab-container {
-  width: 60vw;
-  max-width: 60vw;
+  width: clamp(200px, 90vw, 960px);
   min-height: 20vh;
   height: auto;
   max-height: 70vh;
@@ -4352,19 +4294,27 @@ li[data-task=v] > input:checked {
   margin-right: var(--scale-2-4);
 }
 .modal.mod-community-theme.mod-community-theme, .modal.mod-community-plugin {
-  width: 80vw;
-  max-width: 80vw;
+  width: clamp(200px, 90vw, 960px);
   min-height: 80vh;
   overflow: hidden;
 }
 .modal.mod-image-lightbox {
-  width: 90vw;
-  max-width: 90vw;
+  width: clamp(200px, 95vw, 1920px);
   min-height: 20vh;
   height: auto;
   max-height: 90vh;
   border-radius: var(--scale-2-8);
   overflow-y: hidden;
+}
+.modal .vertical-tab-nav-item {
+  text-transform: capitalize;
+}
+.modal-title {
+  text-transform: capitalize;
+  text-align: left;
+}
+.modal.mod-community-theme .modal-title {
+  margin-left: var(--scale-8-3);
 }
 .modal .setting-hotkey {
   display: flex;
@@ -4715,8 +4665,8 @@ li[data-task=v] > input:checked {
   align-items: center;
   flex-grow: 1;
 }
-.modal .community-theme-info.u-center-text {
-  color: var(--text-muted) !important;
+.modal .community-theme-info.u-center-text, .modal .community-theme span.community-theme-downloads {
+  color: var(--text-muted);
 }
 .theme-light .modal .community-theme {
   background: var(--background-primary-alt);
@@ -5028,8 +4978,8 @@ input[type=password],
 input[type=number] {
   font-family: var(--default-font);
   font-size: var(--font-scale-1);
-  border-radius: var(--scale-2-2);
-  padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-4) var(--scale-2-4);
+  border-radius: var(--scale-2-3);
+  padding: var(--scale-2-8) var(--scale-2-4) var(--scale-2-8) var(--scale-2-4);
   margin: var(--scale-2-2) 0;
   transition: var(--duration-fast-1) var(--motion-delay);
 }
@@ -5094,7 +5044,7 @@ input[type=number] {
 .search-input-clear-button:before {
   position: absolute;
   right: 3px;
-  top: -3px;
+  top: -1px;
 }
 .search-input-clear-button:hover {
   color: var(--text-muted);
@@ -5264,6 +5214,7 @@ input[type=range]::-webkit-slider-thumb {
   line-height: var(--line-height-1);
   width: 215px;
   padding: var(--scale-2-2) var(--scale-2-8) var(--scale-2-2) var(--scale-2-8);
+  margin: var(--scale-2-2) 0;
   transition: var(--duration-fast-1) var(--motion-smooth);
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' id='Outline' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z'/%3E%3C/svg%3E%0A");
@@ -5685,6 +5636,9 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
   width: var(--scale-8-8);
   border-right: 1px solid var(--background-modifier-border);
 }
+.is-mobile .workspace-drawer-ribbon .side-dock-ribbon-action {
+  padding-bottom: var(--scale-0-0);
+}
 
 /*────────────────────────────────────
     Tab Header in Workspace Drawer
@@ -5693,7 +5647,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
   padding: var(--scale-8-3) var(--scale-8-3) var(--scale-0-0) var(--scale-8-3);
 }
 .is-mobile .workspace-drawer-active-tab-header {
-  padding: var(--scale-2-4) var(--scale-2-2) var(--scale-2-8) var(--scale-2-8);
+  padding: var(--scale-2-4) var(--scale-2-2) var(--scale-2-4) var(--scale-2-8);
   margin: 0;
 }
 .is-mobile .workspace-drawer-tab-container > * {
@@ -5704,7 +5658,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     Nav Header in Workspace Drawer
 ────────────────────────────────────*/
 .is-mobile .workspace-drawer-actions, .is-mobile .nav-buttons-container {
-  margin: var(--scale-2-10) var(--scale-0-0) var(--scale-2-6) var(--scale-0-0);
+  margin: var(--scale-2-6) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
 }
 .is-mobile .nav-action-button {
   padding: 0;
@@ -5726,6 +5680,23 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 .is-mobile .workspace-drawer .workspace-drawer-tab-options {
   padding: var(--scale-0-0) var(--scale-8-1) var(--scale-0-0) var(--scale-8-1);
+}
+.is-mobile .workspace-drawer .search-input-suggest-button {
+  top: 8px;
+}
+
+/* Workspace Drawer Items Fix */
+:root {
+  --mobile-fileexplorer-font-size: 16px;
+  --mobile-fileexplorer-line-height: 1.2;
+}
+
+.is-mobile .theme-light .nav-folder-title, .is-mobile .theme-light .nav-file-title,
+.is-mobile .theme-dark .nav-folder-title,
+.is-mobile .theme-dark .nav-file-title {
+  font-size: var(--mobile-fileexplorer-font-size);
+  line-height: var(--mobile-fileexplorer-line-height);
+  padding: var(--scale-2-2) var(--scale-2-4);
 }
 
 /*────────────────────────────────────
@@ -5749,6 +5720,21 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /*────────────────────────────────────
+        Backlinks in Document
+────────────────────────────────────*/
+.is-mobile .mod-root .workspace-leaf-content[data-type=markdown] .nav-buttons-container {
+  position: relative;
+  margin-top: var(--scale-2-4);
+  margin-bottom: var(--scale-0-0);
+}
+.is-mobile .mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .search-input-container {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--scale-2-4);
+}
+
+/*────────────────────────────────────
 +++++++++++Other Components+++++++++++
 ────────────────────────────────────*/
 /*────────────────────────────────────
@@ -5761,6 +5747,20 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 .is-mobile .modal, .is-mobile .prompt {
   overflow-y: hidden;
   border: 1px solid rgba(100, 100, 100, 0.25);
+}
+.is-mobile .modal {
+  padding: var(--scale-8-2) var(--scale-8-4);
+}
+.is-mobile .prompt {
+  padding-left: 0;
+  padding-right: 0;
+}
+.is-mobile .prompt input.prompt-input {
+  padding-top: var(--scale-2-4);
+  padding-bottom: var(--scale-2-6);
+}
+.is-mobile .menu {
+  padding: 0;
 }
 .is-mobile ::-webkit-scrollbar {
   display: none;
@@ -5778,7 +5778,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
   border-bottom: 1px solid var(--background-modifier-border);
 }
 .is-mobile .modal-content {
-  padding: var(--scale-0-0) var(--scale-8-4);
+  padding: var(--scale-0-0) var(--scale-0-0);
 }
 .is-mobile .modal-close-button {
   top: var(--scale-2-1);
@@ -6136,6 +6136,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 .backlink-pane > .tree-item-self .tree-item-inner {
   flex: auto 1 1;
+  text-transform: capitalize;
 }
 .backlink-pane > .tree-item-self.is-clickable .tree-item-flair {
   color: var(--md-color-text-normal);
@@ -6189,6 +6190,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 .outgoing-link-pane > .tree-item-self .tree-item-inner {
   flex: auto 1 1;
+  text-transform: capitalize;
 }
 .outgoing-link-pane > .tree-item-self.is-clickable .tree-item-flair {
   font-family: inherit;
@@ -6251,6 +6253,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
   position: absolute;
   right: 0;
   top: var(--scale-2-4);
+}
+.mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks {
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 .mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .search-input-container {
   margin-right: calc(4 * var(--scale-8-5) - 24px);
@@ -6542,6 +6548,37 @@ table.dataview {
 .internal-link.data-link-icon {
   color: inherit;
   transition: var(--duration-superfast) var(--motion-smooth);
+}
+
+.workspace-leaf-content[data-type=map] img {
+  border: none;
+  border-radius: 0;
+}
+.workspace-leaf-content[data-type=map] button {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  margin-top: var(--scale-2-2);
+  margin-bottom: var(--scale-2-3);
+}
+.workspace-leaf-content[data-type=map] input[type=checkbox] {
+  vertical-align: text-top;
+  margin-left: 0;
+  border-radius: 100%;
+}
+.workspace-leaf-content[data-type=map] input[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z'%3E%3C/path%3E%3C/svg%3E");
+}
+.workspace-leaf-content[data-type=map] .graph-controls {
+  max-width: 242px;
+  padding: var(--scale-2-6) var(--scale-2-6) var(--scale-2-6) var(--scale-2-6);
+  margin-right: var(--scale-8-2);
+}
+.workspace-leaf-content[data-type=map] .graph-control-content {
+  margin-top: var(--scale-2-3);
+}
+.workspace-leaf-content[data-type=map] .extra-marker .svg-inline--fa, .workspace-leaf-content[data-type=map] .extra-marker i.fa, .workspace-leaf-content[data-type=map] .extra-marker i.fab, .workspace-leaf-content[data-type=map] .extra-marker i.fas, .workspace-leaf-content[data-type=map] .extra-marker i.far, .workspace-leaf-content[data-type=map] .extra-marker i.fal {
+  margin-top: 11px;
+  margin-left: 1px;
 }
 
 /*────────────────────────────────────
@@ -7459,6 +7496,35 @@ settings:
         title: Disable Activeline Highlighting
         description: Toggle on to remove activeline highlighting. Keep it off to show it.
         type: class-toggle
+    -
+        id: lists
+        title: 📃 Lists
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: md-color-bullet
+        title: Preset Bullet Color
+        type: variable-select
+        default: 'var(--md-color-text-faint)'
+        options:
+            -
+                label: Like Body Text
+                value: 'var(--md-color-text)'
+            -
+                label: Muted
+                value: 'var(--md-color-text-muted)'
+            -
+                label: Faint
+                value: 'var(--md-color-text-faint)'
+    -
+        id: md-color-bullet
+        title: Custom Bullet Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(34, 24%, 30%)'
     -
         id: note-embeds
         title: 📍 Embeds
