@@ -11,7 +11,6 @@ span.cm {
         color: var(--md-color-reslink);
         text-decoration: underline;
         text-underline-position: under;
-        text-decoration-thickness: 1px;
 
         transition: var(--duration-superfast)
                     var(--motion-smooth);
@@ -20,14 +19,13 @@ span.cm {
             color: var(--md-color-reslink-hover);
             text-decoration: underline;
             text-underline-position: under;
-            text-decoration-thickness: 1px;
         }
 
         &:active {
             color: var(--md-color-reslink-active);
             text-decoration: underline;
             text-underline-position: under;
-            text-decoration-thickness: 1px;
+            
         }
 
         .no-link-underline & { // Style Setting — No Link Underline in Edit View
@@ -61,12 +59,10 @@ span.is-unresolved.is-unresolved {
                 color: var(--md-color-unreslink-active);
                 text-decoration: underline;
                 text-underline-position: under;
-                text-decoration-thickness: 1px;
+                
             }
 
-            .no-link-underline & { // Style Setting — No Link Underline in Edit View
-                text-decoration: none;
-            }
+
         }
     }
 }
@@ -85,6 +81,10 @@ span.is-unresolved.is-unresolved {
     &:active {
         color: var(--md-color-reslink-active);
     }
+
+    .no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
 }
 
 /* Preview Resolved Links */
@@ -95,7 +95,6 @@ a code {
         color: var(--md-color-reslink);
         text-decoration: underline;
         text-underline-position: under;
-        text-decoration-thickness: 1px;
         
         transition: var(--duration-superfast)
                     var(--motion-smooth);
@@ -120,7 +119,6 @@ a code {
     color: var(--md-color-reslink);
     text-decoration: underline;
     text-underline-position: under;
-    text-decoration-thickness: 1px;
     
     transition: var(--duration-superfast)
     var(--motion-smooth);
@@ -137,7 +135,6 @@ a code {
     &.is-unresolved {
         color: var(--md-color-unreslink);
         text-underline-position: under;
-        text-decoration-thickness: 1px;
 
         transition: var(--duration-superfast)
                     var(--motion-smooth);
@@ -162,7 +159,6 @@ a {
         &.footnote-link {
             color: var(--md-color-reslink);
             text-underline-position: under;
-            text-decoration-thickness: 1px;
         }
     }
 
@@ -180,4 +176,15 @@ a {
 /* External Link Icon Position Fix */
 .external-link {
     background-position-y: initial;
+}
+
+/* No Underline Fixes */
+.no-link-underline {
+    & .cm-s-obsidian span.cm-hmd-internal-link:hover {
+        text-decoration: none;
+    }
+
+    & span.is-unresolved.is-unresolved span.cm-url:hover, span.is-unresolved.is-unresolved span.cm-blockid:hover, span.is-unresolved.is-unresolved span.cm-link:hover, span.is-unresolved.is-unresolved span.cm-underline:hover, span.is-unresolved.is-unresolved span.cm-hmd-footnote:hover {
+        text-decoration: none;
+    }
 }

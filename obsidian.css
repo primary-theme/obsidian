@@ -1920,20 +1920,17 @@ span.cm-url.cm-url, span.cm-blockid, span.cm-link:not(.cm-formatting), span.cm-u
   color: var(--md-color-reslink);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 span.cm-url.cm-url:hover, span.cm-blockid:hover, span.cm-link:not(.cm-formatting):hover, span.cm-underline:not(span[data-link-tags] .cm-underline):hover, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):hover, span.cm-hmd-footnote:hover, span.cm-header.cm-hmd-internal-link:hover {
   color: var(--md-color-reslink-hover);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
 }
 span.cm-url.cm-url:active, span.cm-blockid:active, span.cm-link:not(.cm-formatting):active, span.cm-underline:not(span[data-link-tags] .cm-underline):active, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):active, span.cm-hmd-footnote:active, span.cm-header.cm-hmd-internal-link:active {
   color: var(--md-color-reslink-active);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
 }
 .no-link-underline span.cm-url.cm-url, .no-link-underline span.cm-blockid, .no-link-underline span.cm-link:not(.cm-formatting), .no-link-underline span.cm-underline:not(span[data-link-tags] .cm-underline), .no-link-underline span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting), .no-link-underline span.cm-hmd-footnote, .no-link-underline span.cm-header.cm-hmd-internal-link {
   text-decoration: none;
@@ -1955,10 +1952,6 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
   color: var(--md-color-unreslink-active);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
-}
-.no-link-underline span.is-unresolved.is-unresolved span.cm-url, .no-link-underline span.is-unresolved.is-unresolved span.cm-blockid, .no-link-underline span.is-unresolved.is-unresolved span.cm-link, .no-link-underline span.is-unresolved.is-unresolved span.cm-underline, .no-link-underline span.is-unresolved.is-unresolved span.cm-hmd-footnote {
-  text-decoration: none;
 }
 
 /* Legacy Editor Fix */
@@ -1973,6 +1966,9 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
 .markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link:active {
   color: var(--md-color-reslink-active);
 }
+.no-link-underline .markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link {
+  text-decoration: none;
+}
 
 /* Preview Resolved Links */
 .modal a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved), .view-content a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved),
@@ -1981,7 +1977,6 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
   color: var(--md-color-reslink);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .modal a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):hover, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):hover,
@@ -2006,7 +2001,6 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
   color: var(--md-color-reslink);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .internal-link:hover,
@@ -2022,7 +2016,6 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
 .external-link.is-unresolved {
   color: var(--md-color-unreslink);
   text-underline-position: under;
-  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .internal-link.is-unresolved:hover,
@@ -2042,7 +2035,6 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
 .markdown-preview-view a.footnote-link {
   color: var(--md-color-reslink);
   text-underline-position: under;
-  text-decoration-thickness: 1px;
 }
 .no-link-underline a {
   text-decoration: none;
@@ -2057,6 +2049,14 @@ span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unres
 /* External Link Icon Position Fix */
 .external-link {
   background-position-y: initial;
+}
+
+/* No Underline Fixes */
+.no-link-underline .cm-s-obsidian span.cm-hmd-internal-link:hover {
+  text-decoration: none;
+}
+.no-link-underline span.is-unresolved.is-unresolved span.cm-url:hover, .no-link-underline span.is-unresolved.is-unresolved span.cm-blockid:hover, .no-link-underline span.is-unresolved.is-unresolved span.cm-link:hover, .no-link-underline span.is-unresolved.is-unresolved span.cm-underline:hover, .no-link-underline span.is-unresolved.is-unresolved span.cm-hmd-footnote:hover {
+  text-decoration: none;
 }
 
 /*──────────Tags──────────*/
