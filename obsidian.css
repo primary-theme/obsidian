@@ -6990,7 +6990,7 @@ body.header-size__small {
 }
 
 .md-bullet-color-normal.theme-light span.cm-formatting.cm-formatting-list, .md-bullet-color-normal.theme-light span.list-bullet, .md-bullet-color-normal.theme-light li::marker, .md-bullet-color-normal.theme-dark span.cm-formatting.cm-formatting-list, .md-bullet-color-normal.theme-dark span.list-bullet, .md-bullet-color-normal.theme-dark li::marker {
-  color: ar(--md-color-text);
+  color: var(--md-color-text);
 }
 
 /* center embeds */

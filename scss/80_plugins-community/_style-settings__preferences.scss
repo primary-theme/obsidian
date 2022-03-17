@@ -327,7 +327,7 @@ body.header-size {
         & span.cm-formatting.cm-formatting-list,
         & span.list-bullet,
         & li::marker {
-            color: ar(--md-color-text);
+            color: var(--md-color-text);
         }
     }
 }
