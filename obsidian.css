@@ -6984,6 +6984,15 @@ body.header-size__small {
 }
 
 /*────────── note ──────────*/
+/* bullet color */
+.md-bullet-color-muted.theme-light span.cm-formatting.cm-formatting-list, .md-bullet-color-muted.theme-light span.list-bullet, .md-bullet-color-muted.theme-light li::marker, .md-bullet-color-muted.theme-dark span.cm-formatting.cm-formatting-list, .md-bullet-color-muted.theme-dark span.list-bullet, .md-bullet-color-muted.theme-dark li::marker {
+  color: var(--md-color-text-muted);
+}
+
+.md-bullet-color-normal.theme-light span.cm-formatting.cm-formatting-list, .md-bullet-color-normal.theme-light span.list-bullet, .md-bullet-color-normal.theme-light li::marker, .md-bullet-color-normal.theme-dark span.cm-formatting.cm-formatting-list, .md-bullet-color-normal.theme-dark span.list-bullet, .md-bullet-color-normal.theme-dark li::marker {
+  color: ar(--md-color-text);
+}
+
 /* center embeds */
 body.center-embeds img {
   display: block !important;
@@ -7503,28 +7512,22 @@ settings:
         level: 2
         collapsed: true
     -
-        id: md-color-bullet
+        id: md-bullet-color
         title: Preset Bullet Color
-        type: variable-select
-        default: 'var(--md-color-text-faint)'
+        description: Select your preferred bullet color (applied to all bullets, ordered and unordered)
+        type: class-select
+        allowEmpty: false
+        default: md-bullet-color-faint
         options:
             -
                 label: Like Body Text
-                value: 'var(--md-color-text)'
+                value: md-bullet-color-normal
             -
                 label: Muted
-                value: 'var(--md-color-text-muted)'
+                value: md-bullet-color-muted
             -
                 label: Faint
-                value: 'var(--md-color-text-faint)'
-    -
-        id: md-color-bullet
-        title: Custom Bullet Color
-        type: variable-themed-color
-        format: hsl
-        opacity: true
-        default-light: 'hsl(34, 37%, 70%)'
-        default-dark: 'hsl(34, 24%, 30%)'
+                value: md-bullet-color-faint
     -
         id: note-embeds
         title: 📍 Embeds

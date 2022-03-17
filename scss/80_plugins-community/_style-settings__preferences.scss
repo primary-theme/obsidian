@@ -309,6 +309,29 @@ body.header-size {
 }
 
 /*────────── note ──────────*/
+/* bullet color */
+.md-bullet-color-muted {
+    &.theme-light,
+    &.theme-dark {
+        & span.cm-formatting.cm-formatting-list,
+        & span.list-bullet,
+        & li::marker {
+            color: var(--md-color-text-muted);
+        }
+    }
+}
+
+.md-bullet-color-normal {
+    &.theme-light,
+    &.theme-dark {
+        & span.cm-formatting.cm-formatting-list,
+        & span.list-bullet,
+        & li::marker {
+            color: ar(--md-color-text);
+        }
+    }
+}
+
 /* center embeds */
 body.center-embeds {
     & img {

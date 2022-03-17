@@ -474,28 +474,22 @@ settings:
         level: 2
         collapsed: true
     -
-        id: md-color-bullet
+        id: md-bullet-color
         title: Preset Bullet Color
-        type: variable-select
-        default: 'var(--md-color-text-faint)'
+        description: Select your preferred bullet color (applied to all bullets, ordered and unordered)
+        type: class-select
+        allowEmpty: false
+        default: md-bullet-color-faint
         options:
             -
                 label: Like Body Text
-                value: 'var(--md-color-text)'
+                value: md-bullet-color-normal
             -
                 label: Muted
-                value: 'var(--md-color-text-muted)'
+                value: md-bullet-color-muted
             -
                 label: Faint
-                value: 'var(--md-color-text-faint)'
-    -
-        id: md-color-bullet
-        title: Custom Bullet Color
-        type: variable-themed-color
-        format: hsl
-        opacity: true
-        default-light: 'hsl(34, 37%, 70%)'
-        default-dark: 'hsl(34, 24%, 30%)'
+                value: md-bullet-color-faint
     -
         id: note-embeds
         title: 📍 Embeds
