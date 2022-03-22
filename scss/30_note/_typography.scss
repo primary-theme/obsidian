@@ -69,8 +69,17 @@ div.cm-content {
     --md-color-bolditalic: var(--color-l-blacker);
     --md-color-strikethrough: var(--text-faint);
 
-    --md-color-highlight-text-yellow: var(--text-normal);
-    --md-color-highlight-bg-yellow: var(--color-l-highlight-yellow);
+    --md-color-highlight-text: var(--text-normal);
+    --md-color-highlight-bg: var(--color-highlight-yellow);
+
+    --md-color-bold-highlight-text: var(--text-normal);
+    --md-color-bold-highlight-bg: var(--color-highlight-yellow);
+
+    --md-color-italic-highlight-text: var(--text-normal);
+    --md-color-italic-highlight-bg: var(--color-highlight-yellow);
+
+    --md-color-bi-highlight-text: var(--text-normal);
+    --md-color-bi-highlight-bg: var(--color-highlight-yellow);
 
     --md-color-comment: var(--text-muted);
 
@@ -111,6 +120,7 @@ div.cm-content {
     --md-embed-bg: var(--color-l-gray-10);
 
     --md-color-bullet: var(--md-color-text-faint);
+
 }
 
 .theme-dark {
@@ -123,8 +133,17 @@ div.cm-content {
     --md-color-bolditalic: var(--color-d-whiter);
     --md-color-strikethrough: var(--text-faint);
 
-    --md-color-highlight-text-yellow: var(--color-d-black);
-    --md-color-highlight-bg-yellow: var(--color-d-highlight-yellow);
+    --md-color-highlight-text: var(--text-normal);
+    --md-color-highlight-bg: var(--color-highlight-yellow);
+
+    --md-color-bold-highlight-text: var(--text-normal);
+    --md-color-bold-highlight-bg: var(--color-highlight-yellow);
+
+    --md-color-italic-highlight-text: var(--text-normal);
+    --md-color-italic-highlight-bg: var(--color-highlight-yellow);
+
+    --md-color-bi-highlight-text: var(--text-normal);
+    --md-color-bi-highlight-bg: var(--color-highlight-yellow);
 
     --md-color-comment: var(--text-muted);
 

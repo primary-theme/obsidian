@@ -3,7 +3,7 @@
     border-radius: var(--scale-2-2);
 }
 
-.is-flashing {
-    color: var(--md-color-highlight-text-yellow);
+.is-flashing.is-flashing {
+    background: var(--md-color-highlight-bg);
     border-radius: var(--scale-2-2);
 }

@@ -3,15 +3,15 @@
 ──────────────────────────────────────*/
 /*──────────Checkbox List Text──────────*/
 /* Normal Text */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="!"],[data-task="/"],[data-task="?"],[data-task="n"],[data-task="*"],[data-task="l"],[data-task="i"],[data-task="<"],[data-task="S"],[data-task="\""],[data-task="I"],[data-task="b"],[data-task="p"],[data-task="v"],[data-task="B"]),
-ul > li.task-list-item.is-checked[data-task]:is([data-task="!"],[data-task="/"],[data-task="?"],[data-task="n"],[data-task="*"],[data-task="l"],[data-task="i"],[data-task="<"],[data-task="S"],[data-task="\""],[data-task="I"],[data-task="b"],[data-task="p"],[data-task="v"],[data-task="B"]) {
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="!"],[data-task="/"],[data-task="?"],[data-task="n"],[data-task="*"],[data-task="l"],[data-task="i"],[data-task="<"],[data-task="S"],[data-task="\""],[data-task="I"],[data-task="p"],[data-task="c"],[data-task="b"]),
+ul > li.task-list-item.is-checked[data-task]:is([data-task="!"],[data-task="/"],[data-task="?"],[data-task="n"],[data-task="*"],[data-task="l"],[data-task="i"],[data-task="<"],[data-task="S"],[data-task="\""],[data-task="I"],[data-task="p"],[data-task="c"],[data-task="b"]) {
     color: var(--md-color-text);
     text-decoration: none;
 }
 
 /* Muted Text */
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=">"]),
-ul > li.task-list-item.is-checked[data-task]:is([data-task=">"]) {
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=">"],[data-task="-"]),
+ul > li.task-list-item.is-checked[data-task]:is([data-task=">"],[data-task="-"]) {
     color: var(--md-color-text-muted);
     text-decoration: none;
 }
@@ -366,9 +366,9 @@ li[data-task="I"] > input {
     }
 }
 
-/* b - Pro */
-input[data-task="b"], 
-li[data-task="b"] > input {
+/* p - Pro */
+input[data-task="p"], 
+li[data-task="p"] > input {
     &:checked {
         background-position: center;
         background-size: 90%;
@@ -388,9 +388,9 @@ li[data-task="b"] > input {
     }
 }
 
-/* p - Con */
-input[data-task="p"], 
-li[data-task="p"] > input {
+/* c - Con */
+input[data-task="c"], 
+li[data-task="c"] > input {
     &:checked {
         background-position: center;
         background-size: 90%;
@@ -411,9 +411,9 @@ li[data-task="p"] > input {
     }
 }
 
-/* v - Bookmark */
-input[data-task="v"], 
-li[data-task="v"] > input {
+/* b - Bookmark */
+input[data-task="b"], 
+li[data-task="b"] > input {
     &:checked {
         background-position: center;
         background-size: 90%;

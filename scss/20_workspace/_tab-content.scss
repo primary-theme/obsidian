@@ -160,16 +160,11 @@
         padding-right: 1px;
         border-radius: calc(1px + var(--scale-2-1));
 
-        .theme-light & {
-            color: var(--md-color-highlight-text-yellow);
-            font-weight: var(--font-bold);
-            background: var(--md-color-highlight-bg-yellow);
-        }
-
+        .theme-light & ,
         .theme-dark & {
-            color: var(--md-color-highlight-text-yellow);
-            font-weight: var(--font-semi-bold);
-            background: var(--md-color-highlight-bg-yellow);
+            color: var(--ui-color-highlight-text);
+            font-weight: var(--font-bold);
+            background: var(--ui-color-highlight-bg);
         }
     }
 

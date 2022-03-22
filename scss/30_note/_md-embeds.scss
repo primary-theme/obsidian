@@ -3,6 +3,11 @@
 ────────────────────────────────────*/
 /*──────────Live Preview──────────*/
 .markdown-source-view.mod-cm6 {
+    & .file-embed {
+        border-width: 1px;
+        border-radius: var(--scale-2-4);
+        padding: 15px 20px;
+    }
     & .cm-embed-block {
         border: 1px solid transparent;
         border-radius: 0;
@@ -16,7 +21,8 @@
 
         & .edit-block-button {
             top: var(--scale-2-2);
-            right: var(--scale-2-2);
+            left: var(--scale-2-2);
+            right: unset;
             border: 1px solid var(--background-modifier-border);
             border-radius: var(--scale-2-2);
 

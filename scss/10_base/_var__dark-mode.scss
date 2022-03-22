@@ -83,43 +83,53 @@
     --color-d-yellow-500: hsl(50, 100%, 46%);
     --color-d-yellow-700: hsl(43, 100%, 42%);
     --color-d-yellow-900: hsl(39, 92%, 33%);
+    --color-d-yellow-a: hsl(43, 75%, 52%);
     
     --color-d-red: var(--color-d-red-500);
     --color-d-red-300: hsl(4, 100%, 68%);
     --color-d-red-500: hsl(4, 65%, 60%);
     --color-d-red-700: hsl(4, 90%, 61%);
     --color-d-red-900: hsl(4, 77%, 38%);
+    --color-d-red-a: hsl(4, 61%, 53%);
     
     --color-d-blue: var(--color-d-blue-500);
     --color-d-blue-300: hsl(198, 39%, 56%);
     --color-d-blue-500: hsl(198, 62%, 57%);
     --color-d-blue-700: hsl(198, 57%, 55%);
     --color-d-blue-900: hsl(198, 75%, 35%);
+    --color-d-blue-a: hsl(197, 58%, 48%);
     
     --color-d-orange: var(--color-d-orange-500);
     --color-d-orange-300: hsl(22, 92%, 64%);
     --color-d-orange-500: hsl(22, 92%, 57%);
     --color-d-orange-700: hsl(21, 88%, 51%);
     --color-d-orange-900: hsl(20, 80%, 41%);
+    --color-d-orange-a: hsl(27, 77%, 51%);
     
     --color-d-green: var(--color-d-green-500);
     --color-d-green-300: hsl(150, 66%, 53%);
     --color-d-green-500: hsl(154, 52%, 46%);
     --color-d-green-700: hsl(154, 61%, 39%);
     --color-d-green-900: hsl(155, 81%, 24%);
+    --color-d-green-a: hsl(96, 50%, 49%);
     
     --color-d-violet: var(--color-d-violet-500);
-    --color-d-violet-300: hsl(256, 71%, 73%);
+    --color-d-violet-300: hsl(256, 63%, 74%);
     --color-d-violet-500: hsl(263, 60%, 67%);
     --color-d-violet-700: hsl(256, 52%, 57%);
     --color-d-violet-900: hsl(256, 44%, 50%);
+    --color-d-violet-a: hsl(246, 53%, 67%);
     
-    --color-d-highlight-yellow: hsla(43, 61%, 56%, 1);
-    --color-d-highlight-red:    hsla(4, 65%, 27%, 1);
-    --color-d-highlight-blue:   hsla(201, 79%, 23%, 1);
-    --color-d-highlight-orange:  hsla(27, 94%, 25%, 1);
-    --color-d-highlight-green:  hsla(115, 61%, 15%, 1);
-    --color-d-highlight-violet:  hsla(281, 39%, 24%, 1);
+    /*~ Highlights */
+    --ui-color-highlight-text: var(--color-d-black);
+    --ui-color-highlight-bg: hsl(43, 61%, 56%);
+
+    --color-highlight-yellow: rgba(255, 187, 0, 0.2);
+    --color-highlight-red:    rgba(240, 79, 106, 0.2);
+    --color-highlight-blue:   rgba(40, 178, 194, 0.2);
+    --color-highlight-orange:  rgba(255, 115, 0, 0.2);
+    --color-highlight-green:  rgba(153, 189, 36, 0.2);
+    --color-highlight-violet:  rgba(113, 122, 255, 0.2);
     
     /*~ Graph View */
     --graph-color-node-resolved: var(--color-d-blue-900);

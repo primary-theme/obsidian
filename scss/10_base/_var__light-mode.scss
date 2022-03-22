@@ -91,20 +91,22 @@
     --color-l-red: var(--color-l-red-500);
     --color-l-red-300: hsl(4, 54%, 61%);
     --color-l-red-500: hsl(4, 72%, 55%);
-    --color-l-red-700: hsl(4, 62%, 46%);
+    --color-l-red-700: hsl(4, 56%, 48%);
     --color-l-red-900: hsl(4, 66%, 30%);
+
     
     --color-l-blue: var(--color-l-blue-500);
     --color-l-blue-300: hsl(198, 39%, 56%);
     --color-l-blue-500: hsl(205, 66%, 46%);
-    --color-l-blue-700: hsl(205, 79%, 36%);
+    --color-l-blue-700: hsl(205, 63%, 39%);
     --color-l-blue-900: hsl(205, 95%, 25%);
     
     --color-l-orange: var(--color-l-orange-500);
     --color-l-orange-300: hsl(26, 66%, 57%);
-    --color-l-orange-500: hsl(21, 80%, 52%);
+    --color-l-orange-500: hsl(21, 82%, 55%);
     --color-l-orange-700: hsl(18, 69%, 50%);
     --color-l-orange-900: hsl(24, 96%, 35%);
+    --color-l-orange-a: hsl(27, 81%, 46%);
     
     --color-l-green: var(--color-l-green-500);
     --color-l-green-300: hsl(154, 58%, 65%);
@@ -115,15 +117,19 @@
     --color-l-violet: var(--color-l-violet-500);
     --color-l-violet-300: hsl(270, 50%, 74%);
     --color-l-violet-500: hsl(266, 31%, 57%);
-    --color-l-violet-700: hsl(266, 37%, 44%);
+    --color-l-violet-700: hsl(267, 37%, 43%);
     --color-l-violet-900: hsl(266, 70%, 30%);
     
-    --color-l-highlight-yellow: hsla(43, 85%, 79%, 1);
-    --color-l-highlight-red:    hsla(0, 91%, 87%, 1);
-    --color-l-highlight-blue:   hsla(182, 66%, 84%, 1);
-    --color-l-highlight-orange:  hsla(19, 100%, 79%, 1);
-    --color-l-highlight-green:  hsla(124, 65%, 87%, 1);
-    --color-l-highlight-violet:  hsla(245, 65%, 87%, 1);
+    /*~ Highlights */
+    --ui-color-highlight-text: var(--color-l-black);
+    --ui-color-highlight-bg: hsl(43, 85%, 79%);
+
+    --color-highlight-yellow: rgba(255, 187, 0, 0.2);
+    --color-highlight-red:    rgba(240, 79, 106, 0.2);
+    --color-highlight-blue:   rgba(40, 178, 194, 0.2);
+    --color-highlight-orange:  rgba(255, 115, 0, 0.2);
+    --color-highlight-green:  rgba(153, 189, 36, 0.2);
+    --color-highlight-violet:  rgba(113, 122, 255, 0.2);
     
     /*~ Graph View */
     --graph-color-node-resolved: var(--color-l-blue-500);

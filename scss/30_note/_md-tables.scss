@@ -12,7 +12,12 @@
     }
 }
 
-.markdown-preview-view {
+.markdown-source-view .cm-embed-block.cm-table-widget {
+    padding: 0 0;
+}
+
+.markdown-preview-view,
+.markdown-source-view .cm-embed-block {
     & table {
         width: 100%;
 

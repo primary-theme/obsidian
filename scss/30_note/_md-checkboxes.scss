@@ -11,6 +11,7 @@ input[type=checkbox] {
     padding: 0;
     margin: 0;
     margin-left: 6px;
+    margin-right: 0.5ch;
 
     &:hover {
         cursor: pointer;
@@ -59,6 +60,13 @@ input[type=checkbox] {
             background-color: var(--color-d-green-900);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+    }
+}
+
+.markdown-source-view .HyperMD-task-line:is([data-task="x"],[data-task="X"]),
+.task-list-item.is-checked {
+    &:hover {
+        text-decoration: unset;
     }
 }
 

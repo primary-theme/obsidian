@@ -67,6 +67,14 @@ span.is-unresolved.is-unresolved {
     }
 }
 
+span.is-unresolved .cm-hmd-internal-link {
+    color: var(--md-color-unreslink);
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 /* Legacy Editor Fix */
 .markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link {
     color: var(--md-color-unreslink);

@@ -365,6 +365,9 @@ settings:
                 label: Primary Colors Header
                 value: header-color__yrb
             -
+                label: Secondary Colors Header
+                value: header-color__ogv
+            -
                 label: Rainbow Colors Header
                 value: header-color__rainbow
     -
@@ -467,6 +470,87 @@ settings:
         title: Disable Activeline Highlighting
         description: Toggle on to remove activeline highlighting. Keep it off to show it.
         type: class-toggle
+    -
+        id: highlight
+        title: ⚡ Highlight
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: multicolor-highlight
+        title: Enable Multicolor Highlight
+        description: Turn this on to activate multicolored highlighting.
+        type: class-toggle
+    -
+        id: custom-highlight
+        title: Custom Highlight
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: md-color-highlight-text
+        title: Highlight-only Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-highlight-bg
+        title: Highlight-only Background Color
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-light: 'rgba(255, 187, 0, 0.2)'
+        default-dark: 'rgba(255, 187, 0, 0.2)'
+    -
+        id: md-color-bold-highlight-text
+        title: Bold and Highlight Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-bold-highlight-bg
+        title: Bold and Highlight Background Color
+        type: variable-themed-color
+        format: rgb 
+        opacity: true
+        default-light: 'rgba(240, 79, 106, 0.2)'
+        default-dark: 'rgba(240, 79, 106, 0.2)'
+    -
+        id: md-color-italic-highlight-text
+        title: Italic and Highlight Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-italic-highlight-bg
+        title: Italic and Highlight Background Color
+        type: variable-themed-color
+        format: rgb 
+        opacity: true
+        default-light: 'rgba(40, 178, 194, 0.2)'
+        default-dark: 'rgba(40, 178, 194, 0.2)'
+    -
+        id: md-color-bi-highlight-text
+        title: Bold, Italic, and Highlight Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-bi-highlight-bg
+        title: Bold, Italic, and Highlight Background Color
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-light: 'rgba(153, 189, 36, 0.2)'
+        default-dark: 'rgba(153, 189, 36, 0.2)'
     -
         id: lists
         title: 📃 Lists

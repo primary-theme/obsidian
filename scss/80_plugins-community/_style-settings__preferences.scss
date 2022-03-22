@@ -278,6 +278,15 @@ body.header-size {
         --h6-text-color: var(--color-l-blue-700);
     }
 
+    &.header-color__ogv { /* OGV Light Mode Colors */
+        --h1-text-color: var(--color-l-orange-700);
+        --h2-text-color: var(--color-l-green-700);
+        --h3-text-color: var(--color-l-violet-700);
+        --h4-text-color: var(--color-l-orange-700);
+        --h5-text-color: var(--color-l-green-700);
+        --h6-text-color: var(--color-l-violet-700);
+    }
+
     &.header-color__rainbow { /* Rainbow Light Mode Colors */
         --h1-text-color: var(--color-l-red-700);
         --h2-text-color: var(--color-l-orange-500);
@@ -298,6 +307,15 @@ body.header-size {
         --h6-text-color: var(--color-d-blue-500);
     }
 
+    &.header-color__ogv { /* OGV Dark Mode Colors */
+        --h1-text-color: var(--color-d-orange-300);
+        --h2-text-color: var(--color-d-green-300);
+        --h3-text-color: var(--color-d-violet-500);
+        --h4-text-color: var(--color-d-orange-300);
+        --h5-text-color: var(--color-d-green-300);
+        --h6-text-color: var(--color-d-violet-500);
+    }
+
     &.header-color__rainbow { /* Rainbow Dark Mode Colors */
         --h1-text-color: var(--color-d-red-300);
         --h2-text-color: var(--color-d-orange-300);
@@ -309,6 +327,21 @@ body.header-size {
 }
 
 /*────────── note ──────────*/
+/* multicolor highlight */
+.multicolor-highlight {
+    --md-color-highlight-text: var(--color-l-black);
+    --md-color-highlight-bg: var(--color-highlight-yellow);
+
+    --md-color-bold-highlight-text: var(--color-l-black);
+    --md-color-bold-highlight-bg: var(--color-highlight-red);
+
+    --md-color-italic-highlight-text: var(--color-l-black);
+    --md-color-italic-highlight-bg: var(--color-highlight-blue);
+
+    --md-color-bi-highlight-text: var(--color-l-black);
+    --md-color-bi-highlight-bg: var(--color-highlight-green);
+}
+
 /* bullet color */
 .md-bullet-color-muted {
     &.theme-light,

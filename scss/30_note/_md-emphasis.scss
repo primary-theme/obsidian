@@ -15,6 +15,13 @@ em,
     color: var(--md-color-italic);
 }
 
+/* Bold & Italic */
+strong em, em strong,
+.cm-strong.cm-em,
+.markdown-preview-view strong em {
+    color: var(--md-color-bolditalic);
+}
+
 /* Strikethrough */
 del,
 .cm-strikethrough,
@@ -35,30 +42,70 @@ del,
     }
 }
 
-/* Highlight */
+/* Highlight [Highlight] */
 mark,
 .cm-s-obsidian span.cm-highlight,
-.markdown-source-view.is-live-preview
-.cm-header.cm-formatting-highlight,
+.markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight,
 .cm-s-obsidian span.cm-quote.cm-highlight,
-.markdown-preview-view mark {
-    color: var(--md-color-highlight-text-yellow);
-    background: var(--md-color-highlight-bg-yellow);
+.markdown-preview-view mark,
+.markdown-embed mark {
+    // redefining this variable because it is returning as undefined in dark mode
+    --md-color-highlight-text: var(--text-normal);
+    
+    color: var(--md-color-highlight-text);
+    background: var(--md-color-highlight-bg);
     padding: 2px 2px;
     border-radius: var(--scale-2-1);
+}
+
+/* Highlight [Bold + Highlight] */
+.cm-s-obsidian span.cm-highlight.cm-strong,
+.cm-s-obsidian span.cm-quote.cm-highlight.cm-strong {
+    color: var(--md-color-bold-highlight-text);
+    background: var(--md-color-bold-highlight-bg);
+}
+
+.markdown-preview-view.markdown-preview-view mark strong,
+.markdown-embed.markdown-embed mark strong {
+    color: var(--md-color-bold-highlight-text);
+}
+
+.markdown-preview-view.markdown-preview-view strong > mark,
+.markdown-embed.markdown-embed strong > mark {
+    background: var(--md-color-bold-highlight-bg);
+}
+
+/* Highlight [Italic + Highlight] */
+.cm-s-obsidian span.cm-highlight.cm-em,
+.cm-s-obsidian span.cm-quote.cm-highlight.cm-em {
+    color: var(--md-color-italic-highlight-text);
+    background: var(--md-color-italic-highlight-bg);
+}
+
+.markdown-preview-view mark em,
+.markdown-embed mark em {
+    color: var(--md-color-italic-highlight-text);
+}
+
+.markdown-preview-view.markdown-preview-view em > mark,
+.markdown-embed.markdown-embed em > mark {
+    background: var(--md-color-italic-highlight-bg);
+}
+
+/* Highlight [Bold + Italic + Highlight] */
+.cm-s-obsidian span.cm-highlight.cm-strong.cm-em,
+.cm-s-obsidian span.cm-quote.cm-highlight.cm-strong.cm-em {
+    color: var(--md-color-bi-highlight-text);
+    background: var(--md-color-bi-highlight-bg);
+}
+
+.markdown-preview-view.markdown-preview-view strong > em > mark,
+.markdown-embed.markdown-embed strong > em > mark {
+    background: var(--md-color-bi-highlight-bg);
 }
 
 /* Comments */
 .cm-s-obsidian span.cm-comment,
 .cm-s-obsidian span.cm-comment.cm-quote {
     color: var(--md-color-comment);
-}
-
-/*──────────Mixed Emphasis──────────*/
-
-/* Bold & Italic */
-strong em, em strong,
-.cm-strong.cm-em,
-.markdown-preview-view strong em {
-    color: var(--md-color-bolditalic);
 }
