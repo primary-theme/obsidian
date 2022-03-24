@@ -1688,143 +1688,6 @@ div.cm-content {
 /*────────────────────────────────────
             Note Markdown
 ────────────────────────────────────*/
-.markdown-preview-view .heading-collapse-indicator {
-  padding-right: 0;
-  padding-left: var(--scale-2-4);
-}
-
-/* General Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-preview-header);
-  font-weight: var(--font-bold);
-  line-height: var(--header-line-height);
-}
-
-h1 {
-  color: var(--h1-text-color);
-  font-size: var(--h1);
-}
-
-h2 {
-  color: var(--h2-text-color);
-  font-size: var(--h2);
-}
-
-h3 {
-  color: var(--h3-text-color);
-  font-size: var(--h3);
-}
-
-h4 {
-  color: var(--h4-text-color);
-  font-size: var(--h4);
-}
-
-h5 {
-  color: var(--h5-text-color);
-  font-size: var(--h5);
-}
-
-h6 {
-  color: var(--h6-text-color);
-  font-size: var(--h6);
-}
-
-/* Source View Headings */
-body .cm-s-obsidian .HyperMD-header {
-  line-height: var(--header-line-height);
-  padding-bottom: 0;
-}
-
-.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
-  font-family: var(--font-editor-header);
-  font-weight: var(--font-bold);
-}
-.cm-header-1 {
-  color: var(--h1-text-color);
-  font-size: var(--h1);
-}
-.cm-header-2 {
-  color: var(--h2-text-color);
-  font-size: var(--h2);
-}
-.cm-header-3 {
-  color: var(--h3-text-color);
-  font-size: var(--h3);
-}
-.cm-header-4 {
-  color: var(--h4-text-color);
-  font-size: var(--h4);
-}
-.cm-header-5 {
-  color: var(--h5-text-color);
-  font-size: var(--h5);
-}
-.cm-header-6 {
-  color: var(--h6-text-color);
-  font-size: var(--h6);
-}
-
-/* Inline Code in Headers Fix */
-.cm-s-obsidian .cm-inline-code.cm-header {
-  font-family: var(--font-code);
-  font-weight: var(--font-bold);
-}
-.cm-s-obsidian .cm-inline-code.cm-header-1 {
-  font-size: calc(0.85 * var(--h1));
-}
-.cm-s-obsidian .cm-inline-code.cm-header-2 {
-  font-size: calc(0.85 * var(--h2));
-}
-.cm-s-obsidian .cm-inline-code.cm-header-3 {
-  font-size: calc(0.85 * var(--h3));
-}
-.cm-s-obsidian .cm-inline-code.cm-header-4 {
-  font-size: calc(0.85 * var(--h4));
-}
-.cm-s-obsidian .cm-inline-code.cm-header-5 {
-  font-size: calc(0.85 * var(--h5));
-}
-.cm-s-obsidian .cm-inline-code.cm-header-6 {
-  font-size: calc(0.85 * var(--h6));
-}
-
-.markdown-preview-view h1 code, .markdown-preview-view h2 code, .markdown-preview-view h3 code, .markdown-preview-view h4 code, .markdown-preview-view h5 code, .markdown-preview-view h6 code {
-  font-family: var(--font-code);
-  font-weight: var(--font-bold);
-}
-
-/* Preview View Headings */
-.markdown-preview-view h1, .markdown-preview-view h2, .markdown-preview-view h3, .markdown-preview-view h4, .markdown-preview-view h5, .markdown-preview-view h6 {
-  font-family: var(--font-preview-header);
-  font-weight: var(--font-bold);
-  line-height: var(--header-line-height);
-}
-.markdown-preview-view h1 {
-  color: var(--h1-text-color);
-  font-size: var(--h1);
-}
-.markdown-preview-view h2 {
-  color: var(--h2-text-color);
-  font-size: var(--h2);
-}
-.markdown-preview-view h3 {
-  color: var(--h3-text-color);
-  font-size: var(--h3);
-}
-.markdown-preview-view h4 {
-  color: var(--h4-text-color);
-  font-size: var(--h4);
-}
-.markdown-preview-view h5 {
-  color: var(--h5-text-color);
-  font-size: var(--h5);
-}
-.markdown-preview-view h6 {
-  color: var(--h6-text-color);
-  font-size: var(--h6);
-}
-
 /*──────────Headings──────────*/
 :root body {
   /* 1.388 Scale Ratio */
@@ -1842,6 +1705,224 @@ body .cm-s-obsidian .HyperMD-header {
   --h4-text-color: var(--text-normal);
   --h5-text-color: var(--text-normal);
   --h6-text-color: var(--text-muted);
+  /* Font Weight */
+  --h1-weight: var(--font-bold);
+  --h2-weight: var(--font-bold);
+  --h3-weight: var(--font-bold);
+  --h4-weight: var(--font-bold);
+  --h5-weight: var(--font-bold);
+  --h6-weight: var(--font-bold);
+  /* Font Style */
+  --h1-style: normal;
+  --h2-style: normal;
+  --h3-style: normal;
+  --h4-style: normal;
+  --h5-style: normal;
+  --h6-style: normal;
+}
+
+.markdown-preview-view .heading-collapse-indicator {
+  padding-right: 0;
+  padding-left: var(--scale-2-4);
+}
+
+/* General Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-preview-header);
+  line-height: var(--header-line-height);
+}
+
+h1 {
+  color: var(--h1-text-color);
+  font-size: var(--h1);
+  font-weight: var(--h1-weight);
+  font-style: var(--h1-style);
+}
+
+h2 {
+  color: var(--h2-text-color);
+  font-size: var(--h2);
+  font-weight: var(--h2-weight);
+  font-style: var(--h2-style);
+}
+
+h3 {
+  color: var(--h3-text-color);
+  font-size: var(--h3);
+  font-weight: var(--h3-weight);
+  font-style: var(--h3-style);
+}
+
+h4 {
+  color: var(--h4-text-color);
+  font-size: var(--h4);
+  font-weight: var(--h4-weight);
+  font-style: var(--h4-style);
+}
+
+h5 {
+  color: var(--h5-text-color);
+  font-size: var(--h5);
+  font-weight: var(--h5-weight);
+  font-style: var(--h5-style);
+}
+
+h6 {
+  color: var(--h6-text-color);
+  font-size: var(--h6);
+  font-weight: var(--h6-weight);
+  font-style: var(--h6-style);
+}
+
+/* Source View Headings */
+body .cm-s-obsidian .HyperMD-header {
+  line-height: var(--header-line-height);
+  padding-bottom: 0;
+}
+
+.cm-s-obsidian .cm-header-1, .cm-s-obsidian .cm-header-2, .cm-s-obsidian .cm-header-3, .cm-s-obsidian .cm-header-4, .cm-s-obsidian .cm-header-5, .cm-s-obsidian .cm-header-6 {
+  font-family: var(--font-editor-header);
+}
+.cm-s-obsidian .cm-header-1 {
+  color: var(--h1-text-color);
+  font-size: var(--h1);
+  font-weight: var(--h1-weight);
+  font-style: var(--h1-style);
+}
+.cm-s-obsidian .cm-header-2 {
+  color: var(--h2-text-color);
+  font-size: var(--h2);
+  font-weight: var(--h2-weight);
+  font-style: var(--h2-style);
+}
+.cm-s-obsidian .cm-header-3 {
+  color: var(--h3-text-color);
+  font-size: var(--h3);
+  font-weight: var(--h3-weight);
+  font-style: var(--h3-style);
+}
+.cm-s-obsidian .cm-header-4 {
+  color: var(--h4-text-color);
+  font-size: var(--h4);
+  font-weight: var(--h4-weight);
+  font-style: var(--h4-style);
+}
+.cm-s-obsidian .cm-header-5 {
+  color: var(--h5-text-color);
+  font-size: var(--h5);
+  font-weight: var(--h5-weight);
+  font-style: var(--h5-style);
+}
+.cm-s-obsidian .cm-header-6 {
+  color: var(--h6-text-color);
+  font-size: var(--h6);
+  font-weight: var(--h6-weight);
+  font-style: var(--h6-style);
+}
+
+/* Inline Code in Headers Fix */
+.cm-s-obsidian .cm-inline-code.cm-header {
+  font-family: var(--font-code);
+}
+.cm-s-obsidian .cm-inline-code.cm-header-1 {
+  font-size: calc(0.65 * var(--h1));
+  font-weight: var(--h1-weight);
+  font-style: var(--h1-style);
+}
+.cm-s-obsidian .cm-inline-code.cm-header-2 {
+  font-size: calc(0.65 * var(--h2));
+  font-weight: var(--h2-weight);
+  font-style: var(--h2-style);
+}
+.cm-s-obsidian .cm-inline-code.cm-header-3 {
+  font-size: calc(0.65 * var(--h3));
+  font-weight: var(--h3-weight);
+  font-style: var(--h3-style);
+}
+.cm-s-obsidian .cm-inline-code.cm-header-4 {
+  font-size: calc(0.65 * var(--h4));
+  font-weight: var(--h4-weight);
+  font-style: var(--h4-style);
+}
+.cm-s-obsidian .cm-inline-code.cm-header-5 {
+  font-size: calc(0.65 * var(--h5));
+  font-weight: var(--h5-weight);
+  font-style: var(--h5-style);
+}
+.cm-s-obsidian .cm-inline-code.cm-header-6 {
+  font-size: calc(0.65 * var(--h6));
+  font-weight: var(--h6-weight);
+  font-style: var(--h6-style);
+}
+
+.markdown-preview-view h1 code, .markdown-preview-view h2 code, .markdown-preview-view h3 code, .markdown-preview-view h4 code, .markdown-preview-view h5 code, .markdown-preview-view h6 code {
+  font-family: var(--font-code);
+}
+.markdown-preview-view h1 code {
+  font-weight: var(--h1-weight);
+  font-style: var(--h1-style);
+}
+.markdown-preview-view h2 code {
+  font-weight: var(--h2-weight);
+  font-style: var(--h2-style);
+}
+.markdown-preview-view h3 code {
+  font-weight: var(--h3-weight);
+  font-style: var(--h3-style);
+}
+.markdown-preview-view h4 code {
+  font-weight: var(--h4-weight);
+  font-style: var(--h4-style);
+}
+.markdown-preview-view h5 code {
+  font-weight: var(--h5-weight);
+  font-style: var(--h5-style);
+}
+.markdown-preview-view h6 code {
+  font-weight: var(--h6-weight);
+  font-style: var(--h6-style);
+}
+
+/* Preview View Headings */
+.markdown-preview-view h1, .markdown-preview-view h2, .markdown-preview-view h3, .markdown-preview-view h4, .markdown-preview-view h5, .markdown-preview-view h6 {
+  font-family: var(--font-preview-header);
+  line-height: var(--header-line-height);
+}
+.markdown-preview-view h1 {
+  color: var(--h1-text-color);
+  font-size: var(--h1);
+  font-weight: var(--h1-weight);
+  font-style: var(--h1-style);
+}
+.markdown-preview-view h2 {
+  color: var(--h2-text-color);
+  font-size: var(--h2);
+  font-weight: var(--h2-weight);
+  font-style: var(--h2-style);
+}
+.markdown-preview-view h3 {
+  color: var(--h3-text-color);
+  font-size: var(--h3);
+  font-weight: var(--h3-weight);
+  font-style: var(--h3-style);
+}
+.markdown-preview-view h4 {
+  color: var(--h4-text-color);
+  font-size: var(--h4);
+  font-weight: var(--h4-weight);
+  font-style: var(--h4-style);
+}
+.markdown-preview-view h5 {
+  color: var(--h5-text-color);
+  font-size: var(--h5);
+  font-weight: var(--h5-weight);
+  font-style: var(--h5-style);
+}
+.markdown-preview-view h6 {
+  color: var(--h6-text-color);
+  font-size: var(--h6);
+  font-weight: var(--h6-weight);
+  font-style: var(--h6-style);
 }
 
 /*──────────Emphasis──────────*/
@@ -1989,17 +2070,20 @@ span.cm-url.cm-url, span.cm-blockid, span.cm-link:not(.cm-formatting), span.cm-u
   color: var(--md-color-reslink);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 span.cm-url.cm-url:hover, span.cm-blockid:hover, span.cm-link:not(.cm-formatting):hover, span.cm-underline:not(span[data-link-tags] .cm-underline):hover, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):hover, span.cm-hmd-footnote:hover, span.cm-header.cm-hmd-internal-link:hover {
   color: var(--md-color-reslink-hover);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 span.cm-url.cm-url:active, span.cm-blockid:active, span.cm-link:not(.cm-formatting):active, span.cm-underline:not(span[data-link-tags] .cm-underline):active, span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting):active, span.cm-hmd-footnote:active, span.cm-header.cm-hmd-internal-link:active {
   color: var(--md-color-reslink-active);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 .no-link-underline span.cm-url.cm-url, .no-link-underline span.cm-blockid, .no-link-underline span.cm-link:not(.cm-formatting), .no-link-underline span.cm-underline:not(span[data-link-tags] .cm-underline), .no-link-underline span.cm-inline-code.cm-link:not(.cm-formatting-code.cm-formatting), .no-link-underline span.cm-hmd-footnote, .no-link-underline span.cm-header.cm-hmd-internal-link {
   text-decoration: none;
@@ -2010,17 +2094,20 @@ span.is-unresolved.is-unresolved span.cm-url, span.is-unresolved.is-unresolved s
   color: var(--md-color-unreslink);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 span.is-unresolved.is-unresolved span.cm-url:hover, span.is-unresolved.is-unresolved span.cm-blockid:hover, span.is-unresolved.is-unresolved span.cm-link:hover, span.is-unresolved.is-unresolved span.cm-underline:hover, span.is-unresolved.is-unresolved span.cm-hmd-footnote:hover {
   color: var(--md-color-unreslink-hover);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 span.is-unresolved.is-unresolved span.cm-url:active, span.is-unresolved.is-unresolved span.cm-blockid:active, span.is-unresolved.is-unresolved span.cm-link:active, span.is-unresolved.is-unresolved span.cm-underline:active, span.is-unresolved.is-unresolved span.cm-hmd-footnote:active {
   color: var(--md-color-unreslink-active);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 
 span.is-unresolved .cm-hmd-internal-link {
@@ -2053,6 +2140,7 @@ span.is-unresolved .cm-hmd-internal-link:hover {
   color: var(--md-color-reslink);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .modal a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):hover, .view-content a:not(a.footnote-link, a.tag, button.mod-cta a, a.is-unresolved):hover,
@@ -2077,6 +2165,7 @@ span.is-unresolved .cm-hmd-internal-link:hover {
   color: var(--md-color-reslink);
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .internal-link:hover,
@@ -7715,7 +7804,7 @@ settings:
         type: class-toggle
     -
         id: header
-        title: 🅰️ Header Size, Line Height and Color
+        title: 🅰️ Header Size, Weight, Style, Line Height and Color
         type: heading
         level: 1
         collapsed: true
@@ -7767,6 +7856,18 @@ settings:
         type: variable-text
         default: '2.678em'
     -
+        id: h1-weight
+        title: Header 1 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h1-style
+        title: Header 1 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
         id: h1-text-color
         title: Header 1 Text Color
         type: variable-themed-color
@@ -7779,6 +7880,18 @@ settings:
         title: Header 2 Size
         type: variable-text
         default: '2.288em'
+    -
+        id: h2-weight
+        title: Header 2 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h2-style
+        title: Header 2 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
     -
         id: h2-text-color
         title: Header 2 Text Color
@@ -7793,6 +7906,18 @@ settings:
         type: variable-text
         default: '1.927em'
     -
+        id: h3-weight
+        title: Header 3 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h3-style
+        title: Header 3 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
         id: h3-text-color
         title: Header 3 Text Color
         type: variable-themed-color
@@ -7805,6 +7930,18 @@ settings:
         title: Header 4 Size
         type: variable-text
         default: '1.648em'
+    -
+        id: h4-weight
+        title: Header 4 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h4-style
+        title: Header 4 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
     -
         id: h4-text-color
         title: Header 4 Text Color
@@ -7819,6 +7956,18 @@ settings:
         type: variable-text
         default: '1.388em'
     -
+        id: h5-weight
+        title: Header 5 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h5-style
+        title: Header 5 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
         id: h5-text-color
         title: Header 5 Text Color
         type: variable-themed-color
@@ -7831,6 +7980,18 @@ settings:
         title: Header 6 Size
         type: variable-text
         default: '1.188em'
+    -
+        id: h6-weight
+        title: Header 6 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h6-style
+        title: Header 6 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
     -
         id: h6-text-color
         title: Header 6 Text Color

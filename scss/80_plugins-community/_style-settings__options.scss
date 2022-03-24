@@ -330,7 +330,7 @@ settings:
         type: class-toggle
     -
         id: header
-        title: 🅰️ Header Size, Line Height and Color
+        title: 🅰️ Header Size, Weight, Style, Line Height and Color
         type: heading
         level: 1
         collapsed: true
@@ -382,6 +382,18 @@ settings:
         type: variable-text
         default: '2.678em'
     -
+        id: h1-weight
+        title: Header 1 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h1-style
+        title: Header 1 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
         id: h1-text-color
         title: Header 1 Text Color
         type: variable-themed-color
@@ -394,6 +406,18 @@ settings:
         title: Header 2 Size
         type: variable-text
         default: '2.288em'
+    -
+        id: h2-weight
+        title: Header 2 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h2-style
+        title: Header 2 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
     -
         id: h2-text-color
         title: Header 2 Text Color
@@ -408,6 +432,18 @@ settings:
         type: variable-text
         default: '1.927em'
     -
+        id: h3-weight
+        title: Header 3 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h3-style
+        title: Header 3 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
         id: h3-text-color
         title: Header 3 Text Color
         type: variable-themed-color
@@ -420,6 +456,18 @@ settings:
         title: Header 4 Size
         type: variable-text
         default: '1.648em'
+    -
+        id: h4-weight
+        title: Header 4 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h4-style
+        title: Header 4 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
     -
         id: h4-text-color
         title: Header 4 Text Color
@@ -434,6 +482,18 @@ settings:
         type: variable-text
         default: '1.388em'
     -
+        id: h5-weight
+        title: Header 5 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h5-style
+        title: Header 5 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
         id: h5-text-color
         title: Header 5 Text Color
         type: variable-themed-color
@@ -446,6 +506,18 @@ settings:
         title: Header 6 Size
         type: variable-text
         default: '1.188em'
+    -
+        id: h6-weight
+        title: Header 6 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h6-style
+        title: Header 6 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
     -
         id: h6-text-color
         title: Header 6 Text Color

@@ -1,172 +1,6 @@
 /*────────────────────────────────────
             Note Markdown
 ────────────────────────────────────*/
-.markdown-preview-view .heading-collapse-indicator {
-    padding-right: 0;
-    padding-left: var(--scale-2-4);
-}
-
-/* General Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-preview-header);
-    font-weight: var(--font-bold);
-    line-height: var(--header-line-height);
-}
-
-h1 {
-    color: var(--h1-text-color);
-    font-size: var(--h1);
-}
-
-h2 {
-    color: var(--h2-text-color);
-    font-size: var(--h2);
-}
-
-h3 {
-    color: var(--h3-text-color);
-    font-size: var(--h3);
-}
-
-h4 {
-    color: var(--h4-text-color);
-    font-size: var(--h4);
-}
-
-h5 {
-    color: var(--h5-text-color);
-    font-size: var(--h5);
-}
-
-h6 {
-    color: var(--h6-text-color);
-    font-size: var(--h6);
-}
-
-/* Source View Headings */
-body .cm-s-obsidian .HyperMD-header {
-    line-height: var(--header-line-height);
-    padding-bottom: 0;
-}
-
-.cm-header {
-    &-1, &-2, &-3, &-4, &-5, &-6 {
-        font-family: var(--font-editor-header);
-        font-weight: var(--font-bold);
-    }
-
-    &-1 {
-        color: var(--h1-text-color);
-        font-size: var(--h1);
-    }
-
-    &-2 {
-        color: var(--h2-text-color);
-        font-size: var(--h2);
-    }
-
-    &-3 {
-        color: var(--h3-text-color);
-        font-size: var(--h3);
-    }
-
-    &-4 {
-        color: var(--h4-text-color);
-        font-size: var(--h4);
-    }
-
-    &-5 {
-        color: var(--h5-text-color);
-        font-size: var(--h5);
-    }
-
-    &-6 {
-        color: var(--h6-text-color);
-        font-size: var(--h6);
-    }
-}
-
-/* Inline Code in Headers Fix */
-.cm-s-obsidian .cm-inline-code.cm-header {
-    font-family: var(--font-code);
-    font-weight: var(--font-bold);
-
-    &-1 {
-        font-size: calc(0.85 * var(--h1));
-    }
-
-    &-2 {
-        font-size: calc(0.85 * var(--h2));
-    }
-
-    &-3 {
-        font-size: calc(0.85 * var(--h3));
-    }
-
-    &-4 {
-        font-size: calc(0.85 * var(--h4));
-    }
-
-    &-5 {
-        font-size: calc(0.85 * var(--h5));
-    }
-
-    &-6 {
-        font-size: calc(0.85 * var(--h6));
-    }
-}
-
-.markdown-preview-view {
-    & h1 code,
-    & h2 code,
-    & h3 code,
-    & h4 code,
-    & h5 code,
-    & h6 code {
-        font-family: var(--font-code);
-        font-weight: var(--font-bold);
-    }
-}
-
-/* Preview View Headings */
-.markdown-preview-view {
-    & h1, & h2, & h3, & h4, & h5, & h6 {
-        font-family: var(--font-preview-header);
-        font-weight: var(--font-bold);
-        line-height: var(--header-line-height);
-    }
-    
-    & h1 {
-        color: var(--h1-text-color);
-        font-size: var(--h1);
-    }
-
-    & h2 {
-        color: var(--h2-text-color);
-        font-size: var(--h2);
-    }
-
-    & h3 {
-        color: var(--h3-text-color);
-        font-size: var(--h3);
-    }
-
-    & h4 {
-        color: var(--h4-text-color);
-        font-size: var(--h4);
-    }
-
-    & h5 {
-        color: var(--h5-text-color);
-        font-size: var(--h5);
-    }
-
-    & h6 {
-        color: var(--h6-text-color);
-        font-size: var(--h6);
-    }
-}
-
 /*──────────Headings──────────*/
 :root body {
     /* 1.388 Scale Ratio */
@@ -185,4 +19,248 @@ body .cm-s-obsidian .HyperMD-header {
     --h4-text-color: var(--text-normal);
     --h5-text-color: var(--text-normal);
     --h6-text-color: var(--text-muted);
+
+    /* Font Weight */
+    --h1-weight: var(--font-bold);
+    --h2-weight: var(--font-bold);
+    --h3-weight: var(--font-bold);
+    --h4-weight: var(--font-bold);
+    --h5-weight: var(--font-bold);
+    --h6-weight: var(--font-bold);
+
+    /* Font Style */
+    --h1-style: normal;
+    --h2-style: normal;
+    --h3-style: normal;
+    --h4-style: normal;
+    --h5-style: normal;
+    --h6-style: normal;
+}
+
+.markdown-preview-view .heading-collapse-indicator {
+    padding-right: 0;
+    padding-left: var(--scale-2-4);
+}
+
+/* General Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-preview-header);
+    line-height: var(--header-line-height);
+}
+
+h1 {
+    color: var(--h1-text-color);
+    font-size: var(--h1);
+    font-weight: var(--h1-weight);
+    font-style: var(--h1-style);
+}
+
+h2 {
+    color: var(--h2-text-color);
+    font-size: var(--h2);
+    font-weight: var(--h2-weight);
+    font-style: var(--h2-style);
+}
+
+h3 {
+    color: var(--h3-text-color);
+    font-size: var(--h3);
+    font-weight: var(--h3-weight);
+    font-style: var(--h3-style);
+}
+
+h4 {
+    color: var(--h4-text-color);
+    font-size: var(--h4);
+    font-weight: var(--h4-weight);
+    font-style: var(--h4-style);
+}
+
+h5 {
+    color: var(--h5-text-color);
+    font-size: var(--h5);
+    font-weight: var(--h5-weight);
+    font-style: var(--h5-style);
+}
+
+h6 {
+    color: var(--h6-text-color);
+    font-size: var(--h6);
+    font-weight: var(--h6-weight);
+    font-style: var(--h6-style);
+}
+
+/* Source View Headings */
+body .cm-s-obsidian .HyperMD-header {
+    line-height: var(--header-line-height);
+    padding-bottom: 0;
+}
+
+.cm-s-obsidian .cm-header {
+    &-1, &-2, &-3, &-4, &-5, &-6 {
+        font-family: var(--font-editor-header);
+    }
+
+    &-1 {
+        color: var(--h1-text-color);
+        font-size: var(--h1);
+        font-weight: var(--h1-weight);
+        font-style: var(--h1-style);
+    }
+
+    &-2 {
+        color: var(--h2-text-color);
+        font-size: var(--h2);
+        font-weight: var(--h2-weight);
+        font-style: var(--h2-style);
+    }
+
+    &-3 {
+        color: var(--h3-text-color);
+        font-size: var(--h3);
+        font-weight: var(--h3-weight);
+        font-style: var(--h3-style);
+    }
+
+    &-4 {
+        color: var(--h4-text-color);
+        font-size: var(--h4);
+        font-weight: var(--h4-weight);
+        font-style: var(--h4-style);
+    }
+
+    &-5 {
+        color: var(--h5-text-color);
+        font-size: var(--h5);
+        font-weight: var(--h5-weight);
+        font-style: var(--h5-style);
+    }
+
+    &-6 {
+        color: var(--h6-text-color);
+        font-size: var(--h6);
+        font-weight: var(--h6-weight);
+        font-style: var(--h6-style);
+    }
+}
+
+/* Inline Code in Headers Fix */
+.cm-s-obsidian .cm-inline-code.cm-header {
+    font-family: var(--font-code);
+
+    &-1 {
+        font-size: calc(0.65 * var(--h1));
+        font-weight: var(--h1-weight);
+        font-style: var(--h1-style);
+    }
+
+    &-2 {
+        font-size: calc(0.65 * var(--h2));
+        font-weight: var(--h2-weight);
+        font-style: var(--h2-style);
+    }
+
+    &-3 {
+        font-size: calc(0.65 * var(--h3));
+        font-weight: var(--h3-weight);
+        font-style: var(--h3-style);
+    }
+
+    &-4 {
+        font-size: calc(0.65 * var(--h4));
+        font-weight: var(--h4-weight);
+        font-style: var(--h4-style);
+    }
+
+    &-5 {
+        font-size: calc(0.65 * var(--h5));
+        font-weight: var(--h5-weight);
+        font-style: var(--h5-style);
+    }
+
+    &-6 {
+        font-size: calc(0.65 * var(--h6));
+        font-weight: var(--h6-weight);
+        font-style: var(--h6-style);
+    }
+}
+
+.markdown-preview-view {
+    & h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+        font-family: var(--font-code);
+    }
+    & h1 code {
+        font-weight: var(--h1-weight);
+        font-style: var(--h1-style);
+    }
+    & h2 code {
+        font-weight: var(--h2-weight);
+        font-style: var(--h2-style);
+    }
+    & h3 code {
+        font-weight: var(--h3-weight);
+        font-style: var(--h3-style);
+    }
+    & h4 code {
+        font-weight: var(--h4-weight);
+        font-style: var(--h4-style);
+    }
+    & h5 code {
+        font-weight: var(--h5-weight);
+        font-style: var(--h5-style);
+    }
+    & h6 code {
+        font-weight: var(--h6-weight);
+        font-style: var(--h6-style);
+    }
+}
+
+/* Preview View Headings */
+.markdown-preview-view {
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        font-family: var(--font-preview-header);
+        line-height: var(--header-line-height);
+    }
+    
+    & h1 {
+        color: var(--h1-text-color);
+        font-size: var(--h1);
+        font-weight: var(--h1-weight);
+        font-style: var(--h1-style);
+    }
+
+    & h2 {
+        color: var(--h2-text-color);
+        font-size: var(--h2);
+        font-weight: var(--h2-weight);
+        font-style: var(--h2-style);
+    }
+
+    & h3 {
+        color: var(--h3-text-color);
+        font-size: var(--h3);
+        font-weight: var(--h3-weight);
+        font-style: var(--h3-style);
+    }
+
+    & h4 {
+        color: var(--h4-text-color);
+        font-size: var(--h4);
+        font-weight: var(--h4-weight);
+        font-style: var(--h4-style);
+    }
+
+    & h5 {
+        color: var(--h5-text-color);
+        font-size: var(--h5);
+        font-weight: var(--h5-weight);
+        font-style: var(--h5-style);
+    }
+
+    & h6 {
+        color: var(--h6-text-color);
+        font-size: var(--h6);
+        font-weight: var(--h6-weight);
+        font-style: var(--h6-style);
+    }
 }

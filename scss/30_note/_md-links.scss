@@ -11,6 +11,7 @@ span.cm {
         color: var(--md-color-reslink);
         text-decoration: underline;
         text-underline-position: under;
+        text-decoration-thickness: 1px;
 
         transition: var(--duration-superfast)
                     var(--motion-smooth);
@@ -19,13 +20,14 @@ span.cm {
             color: var(--md-color-reslink-hover);
             text-decoration: underline;
             text-underline-position: under;
+            text-decoration-thickness: 1px;
         }
 
         &:active {
             color: var(--md-color-reslink-active);
             text-decoration: underline;
             text-underline-position: under;
-            
+            text-decoration-thickness: 1px;
         }
 
         .no-link-underline & { // Style Setting — No Link Underline in Edit View
@@ -45,6 +47,7 @@ span.is-unresolved.is-unresolved {
             color: var(--md-color-unreslink);
             text-decoration: underline;
             text-underline-position: under;
+            text-decoration-thickness: 1px;
     
             transition: var(--duration-superfast)
                         var(--motion-smooth);
@@ -53,16 +56,15 @@ span.is-unresolved.is-unresolved {
                 color: var(--md-color-unreslink-hover);
                 text-decoration: underline;
                 text-underline-position: under;
+                text-decoration-thickness: 1px;
             }
 
             &:active {
                 color: var(--md-color-unreslink-active);
                 text-decoration: underline;
                 text-underline-position: under;
-                
+                text-decoration-thickness: 1px;
             }
-
-
         }
     }
 }
@@ -103,6 +105,8 @@ a code {
         color: var(--md-color-reslink);
         text-decoration: underline;
         text-underline-position: under;
+        text-decoration-thickness: 1px;
+
         
         transition: var(--duration-superfast)
                     var(--motion-smooth);
@@ -127,6 +131,8 @@ a code {
     color: var(--md-color-reslink);
     text-decoration: underline;
     text-underline-position: under;
+    text-decoration-thickness: 1px;
+
     
     transition: var(--duration-superfast)
     var(--motion-smooth);
