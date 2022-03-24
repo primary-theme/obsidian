@@ -121,6 +121,7 @@ div.cm-content {
 
     --md-color-bullet: var(--md-color-text-faint);
 
+    --md-find-highlight-bg: var(--color-highlight-violet);
 }
 
 .theme-dark {
@@ -184,6 +185,8 @@ div.cm-content {
     --md-embed-bg: var(--color-d-gray-90);
 
     --md-color-bullet: var(--md-color-text-faint);
+
+    --md-find-highlight-bg: var(--color-highlight-violet);
 }
 
 .markdown-source-view,
