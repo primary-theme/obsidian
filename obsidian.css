@@ -6987,6 +6987,82 @@ table.dataview {
   margin-left: 1px;
 }
 
+.popover.hover-popover {
+  --he-popover-border-radius: var(--scale-2-4);
+  --he-title-bar-height: 24px;
+  border: 1px solid var(--background-modifier-border) !important;
+}
+.popover.hover-popover .popover-titlebar .popover-title.popover-title {
+  font-weight: var(--font-bold);
+}
+.popover.hover-popover.show-navbar .popover-titlebar {
+  box-shadow: 0px -1px 0px 0px var(--background-modifier-border) inset;
+}
+.theme-light .popover.hover-popover {
+  --he-title-bar-inactive-pinned-bg: var(--background-primary);
+  --he-title-bar-inactive-fg: var(--text-faint);
+  --he-title-bar-active-action: var(--he-title-bar-inactive-fg);
+  --he-title-bar-inactive-action: var(--text-faint);
+  --he-title-bar-active-pinned-bg: var(--background-primary-alt);
+  --he-title-bar-active-fg: var(--color-l-gray-80);
+}
+.theme-light .popover.hover-popover.is-active {
+  --he-title-bar-active-action: var(--he-title-bar-active-fg);
+  --he-title-bar-inactive-action: var(--he-title-bar-active-fg);
+}
+.theme-light .popover.hover-popover .popover-action {
+  margin: 0;
+  padding: 0 var(--scale-2-4);
+}
+.theme-light .popover.hover-popover .popover-action.mod-show-navbar:hover {
+  background: var(--color-l-blue-300);
+  color: var(--color-l-white);
+}
+.theme-light .popover.hover-popover .popover-action.mod-minimize:hover {
+  background: var(--color-l-blue-500);
+  color: var(--color-l-white);
+}
+.theme-light .popover.hover-popover .popover-action.mod-maximize:hover {
+  background: var(--color-l-yellow-500);
+  color: var(--color-l-white);
+}
+.theme-light .popover.hover-popover .popover-action.mod-close:hover {
+  background: var(--color-l-red-500);
+  color: var(--color-l-white);
+}
+.theme-dark .popover.hover-popover {
+  --he-title-bar-inactive-pinned-bg: var(--background-primary);
+  --he-title-bar-inactive-fg: var(--text-faint);
+  --he-title-bar-active-action: var(--he-title-bar-inactive-fg);
+  --he-title-bar-inactive-action: var(--text-faint);
+  --he-title-bar-active-pinned-bg: var(--background-primary-alt);
+  --he-title-bar-active-fg: var(--color-d-gray-20);
+}
+.theme-dark .popover.hover-popover.is-active {
+  --he-title-bar-active-action: var(--he-title-bar-active-fg);
+  --he-title-bar-inactive-action: var(--he-title-bar-active-fg);
+}
+.theme-dark .popover.hover-popover .popover-action {
+  margin: 0;
+  padding: 0 var(--scale-2-4);
+}
+.theme-dark .popover.hover-popover .popover-action.mod-show-navbar:hover {
+  background: var(--color-d-blue-300);
+  color: var(--color-d-whiter);
+}
+.theme-dark .popover.hover-popover .popover-action.mod-minimize:hover {
+  background: var(--color-d-blue-700);
+  color: var(--color-d-whiter);
+}
+.theme-dark .popover.hover-popover .popover-action.mod-maximize:hover {
+  background: var(--color-d-yellow-700);
+  color: var(--color-d-whiter);
+}
+.theme-dark .popover.hover-popover .popover-action.mod-close:hover {
+  background: var(--color-d-red-700);
+  color: var(--color-d-whiter);
+}
+
 /*────────────────────────────────────
     Style Settings Plugin Styling
 ────────────────────────────────────*/

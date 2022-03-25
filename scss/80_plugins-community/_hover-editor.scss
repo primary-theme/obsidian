@@ -1,0 +1,86 @@
+.popover.hover-popover {
+    --he-popover-border-radius: var(--scale-2-4);
+    --he-title-bar-height: 24px;
+    
+    border: 1px solid var(--background-modifier-border) !important;
+
+    & .popover-titlebar .popover-title.popover-title {
+        font-weight: var(--font-bold);
+    }
+
+    &.show-navbar .popover-titlebar {
+        box-shadow: 0px -1px 0px 0px var(--background-modifier-border) inset;
+    }
+
+    .theme-light & {
+        --he-title-bar-inactive-pinned-bg: var(--background-primary);
+        --he-title-bar-inactive-fg: var(--text-faint);
+        --he-title-bar-active-action: var(--he-title-bar-inactive-fg);
+        --he-title-bar-inactive-action: var(--text-faint);
+        --he-title-bar-active-pinned-bg: var(--background-primary-alt);
+        --he-title-bar-active-fg: var(--color-l-gray-80);
+
+        &.is-active {
+            --he-title-bar-active-action: var(--he-title-bar-active-fg);
+            --he-title-bar-inactive-action: var(--he-title-bar-active-fg);
+        }
+
+        & .popover-action {
+            margin: 0;
+            padding: 0 var(--scale-2-4);
+
+            &.mod-show-navbar:hover {
+                background: var(--color-l-blue-300);
+                color: var(--color-l-white);
+            }
+            &.mod-minimize:hover {
+                background: var(--color-l-blue-500);
+                color: var(--color-l-white);
+            }
+            &.mod-maximize:hover {
+                background: var(--color-l-yellow-500);
+                color: var(--color-l-white);
+            }
+            &.mod-close:hover {
+                background: var(--color-l-red-500);
+                color: var(--color-l-white);
+            }
+        }
+    }
+
+    .theme-dark & {
+        --he-title-bar-inactive-pinned-bg: var(--background-primary);
+        --he-title-bar-inactive-fg: var(--text-faint);
+        --he-title-bar-active-action: var(--he-title-bar-inactive-fg);
+        --he-title-bar-inactive-action: var(--text-faint);
+        --he-title-bar-active-pinned-bg: var(--background-primary-alt);
+        --he-title-bar-active-fg: var(--color-d-gray-20);
+
+        &.is-active {
+            --he-title-bar-active-action: var(--he-title-bar-active-fg);
+            --he-title-bar-inactive-action: var(--he-title-bar-active-fg);
+        }
+
+        & .popover-action {
+            margin: 0;
+            padding: 0 var(--scale-2-4);
+
+            &.mod-show-navbar:hover {
+                background: var(--color-d-blue-300);
+                color: var(--color-d-whiter);
+            }
+            &.mod-minimize:hover {
+                background: var(--color-d-blue-700);
+                color: var(--color-d-whiter);
+            }
+            &.mod-maximize:hover {
+                background: var(--color-d-yellow-700);
+                color: var(--color-d-whiter);
+            }
+            &.mod-close:hover {
+                background: var(--color-d-red-700);
+                color: var(--color-d-whiter);
+            }
+        }
+    }
+}
