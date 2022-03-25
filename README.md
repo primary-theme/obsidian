@@ -41,6 +41,7 @@ Primary was crafted with a "perfect fundamentals first, nail other features late
 - Supercharged Links by mdelobelle
 - Style Settings by mgmeyers — through this plugin, you can change fonts, colors, and get access to features!
 - Map View by esm
+- Hover Editor by nothingislost
 
 If you'd like to see what plugins I'm planning to support next, check out the roadmap linked above.
 
