@@ -1341,6 +1341,8 @@ body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:active .tree-it
 }
 .status-bar-item {
   padding: var(--scale-0-0) var(--scale-2-3) var(--scale-0-0) var(--scale-2-3);
+  display: flex;
+  align-items: center;
 }
 .status-bar-item-icon {
   line-height: 1;
