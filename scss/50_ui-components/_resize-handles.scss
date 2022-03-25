@@ -1,0 +1,67 @@
+/*────────────────────────────────────
+            Resize Handles
+────────────────────────────────────*/
+.workspace-split.mod {
+    // Vertical Handles
+    &-vertical > * >,
+    &-left-split >,
+    &-right-split > {
+        & .workspace-leaf-resize-handle {
+            width: 1px;
+            height: 105%;
+            top: -24px;
+            background: var(--background-modifier-border);
+            transition: var(--duration-fast-2)
+                        var(--motion-smooth);
+
+            &:hover {
+                width: 4px;
+                background: var(--background-modifier-border);
+                transition: var(--duration-fast-2)
+                            var(--motion-smooth);
+            }
+
+            &:active {
+                width: 5px;
+                transition: var(--duration-fast-2)
+                            var(--motion-smooth);
+
+                .theme-light & { /* VH for Light Mode */
+                    background: var(--color-l-gray-50);
+                }
+
+                .theme-dark & { /* VH for Dark Mode */
+                    background: var(--color-d-gray-30);
+                }
+            }
+        }
+    }
+
+    //Horizontal Handles
+    &-horizontal > * > .workspace-leaf-resize-handle {
+        height: 1px;
+        background: var(--background-modifier-border);
+        transition: var(--duration-fast-1)
+                    var(--motion-smooth);
+
+        &:hover {
+            height: 4px;
+            transition: var(--duration-fast-1)
+                        var(--motion-smooth);
+        }
+
+        &:active {
+            height: 5px;
+            transition: var(--duration-fast-1)
+                        var(--motion-smooth);
+
+            .theme-light & { /* HH for Light Mode */
+                background: var(--color-l-gray-50);
+            }
+
+            .theme-dark & { /* HH for Dark Mode */
+                background: var(--color-d-gray-30);
+            }
+        }
+    }
+}

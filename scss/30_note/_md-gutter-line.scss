@@ -1,0 +1,18 @@
+/*──────────Gutter Line Numbers──────────*/
+.CodeMirror-gutter.CodeMirror-linenumbers,
+.CodeMirror-gutter.CodeMirror-foldgutter {
+  background: transparent;
+}
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+    padding-right: var(--scale-2-6);
+}
+
+.CodeMirror-linenumber,
+.cm-lineNumbers,
+div.cm-gutterElement {
+    font-family: var(--font-code);
+    font-size: var(--font-scale-1);
+    font-variant-numeric: tabular-nums;
+    vertical-align: super;
+}

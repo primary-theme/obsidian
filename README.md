@@ -1,6 +1,21 @@
-![Primary Theme Hero](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-heroimg.png)
+![Primary Main Promotional Image](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-heroimg.png)
 
 # Primary 🟨🟥🟦
+
+_Winner of [Obsidian October](http://obsidian.md/october2021) 2021's Best Theme ✨_
+
+> Primary is soft, chewy, comforting — like a chocolate chip cookie, or a warm brownie. Primary instantly puts you in a relaxed state that opens the door to creativity and exploration. Wonderfully executed down to the smallest details, Primary ran away with first place. — **O_O 2021 Judges**
+
+<center>
+    <h3>Support Primary's Development ☕</h3>
+    <a href='https://ko-fi.com/E1E76SQX8' target='_blank'><img height='48' style='border:0px;height:48px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+    <br>
+    <a href="https://tinyurl.com/primary-board" target="_blank">📌 Primary Development Roadmap</a>
+    <br><br>
+    Primary is currently on the works to bring its  warm palette to other developer apps!
+</center>
+
+---
 
 A combination of Bauhaus, Scandinavian and yellowing magazine pages as palette inspiration—Primary is a theme for people looking for a certain nostalgic warmness.
 
@@ -8,63 +23,39 @@ It is toppled with functional pop of red blue yellow colors. The perfect mix of 
 
 Playful, reminiscing, productive.
 
-Available in both ⚪Light and ⚫Dark modes, for both Mobile and Desktop!
+Available in both Light and Dark modes, for both Mobile and Desktop!
 
-## 📌 Plugins Supported
-More plugins will be supported in the coming weeks! For now, I've checked the theme for these:
+## 👁️ Goals
+- Help users give instant visual context of their notes through colors and scale that is both beautiful and productive.
+- Create a playful, elegant, easy-going, complete and beautiful environment in Obsidian.
+- Offer a balance of fun and serious work.
+- Apply premium palettes by @ceciliamay (soon)
 
-✅ Calendar
+## ⭐ Supported Plugins
 
-✅ Dataview
+Primary was crafted with a "perfect fundamentals first, nail other features later" approach, so it should cover most standard Obsidian UI and markdown cues. But some plugins were given extra love.
 
-✅ Outliner
+- Calendar by Liam Cain
+- Sliding Panes by death_au — recommended width of 36px
+- Dataview by Michael Brenan
+- Supercharged Links by mdelobelle
+- Style Settings by mgmeyers — through this plugin, you can change fonts, colors, and get access to features!
+- Map View by esm
+- Hover Editor by nothingislost
 
-✅ Sliding Panes
+If you'd like to see what plugins I'm planning to support next, check out the roadmap linked above.
 
-✅ Recent Files
+## 🖼️ Screenshots
 
-✅ Contextual Typography
+![Primary Overall Preview — features markdown syntax styling as well as commonly used sidebars and other exclusive features](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-1.png)
 
-✅ Advanced Tables
+![Primary's Settings Modal](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-2.png)
 
-**Plugin TODO**
-- [ ] Admonition
-- [ ] Kanban
-- [ ] Checklist
-- [ ] Excalidraw
-- [ ] File Tree Alternative
-- [ ] Day Planner
-- [ ] Spaced Repetition
-- [ ] Style Settings
+![Primary's Command Palette](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-3.png)
 
-**Other TODO**
-- [x] Mobile 
-- [ ] Optimizing/Minifying the File
+![Primary's Graph View](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-preview-4.png)
 
-These are on the radar as I'm using these myself. If you have a particular plugin you want supported, please drop it in and I'll catch up on it!
-I'm also looking to optimize the theme. It's really usable but I believe the file is still huge.
-
-Check out the theme below! (If you want to read my process on this, scroll after Dark Mode)
-
-## ⚪ Light Mode
-
-![Primary in Light Mode on Preview](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Light-01%20Preview%20Mode.png)
-![Primary in Light Mode on Edit](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Light-02%20Edit%20Mode.png)
-![Primary in Light Mode with Settings Modal](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Light-03%20Modal.png)
-![Primary in Light Mode with Command Palette](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Light-04%20Command%20Palette.png)
-![Primary in Light Mode with Graph View Zoomed Out](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Light-05%20Graph%20View%201.png)
-![Primary in Light Mode with Graph View Zoomed In](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Light-06%20Graph%20View%202.png)
-![Primary in Light Mode showcasing Note Formatting](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Light-07%20Formatting.png)
-
-## ⚫ Dark Mode
-
-![Primary in Dark Mode on Preview](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Dark-01%20Preview%20Mode.png)
-![Primary in Dark Mode on Edit](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Dark-02%20Edit%20Mode.png)
-![Primary in Dark Mode with Settings Modal](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Dark-03%20Modal.png)
-![Primary in Dark Mode with Command Palette](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Dark-04%20Command%20Palette.png)
-![Primary in Dark Mode with Graph View Zoomed Out](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Dark-05%20Graph%20View%201.png)
-![Primary in Dark Mode with Graph View Zoomed In](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Dark-06%20Graph%20View%202.png)
-![Primary in Dark Mode showcasing Note Formatting](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/Primary-Dark-07%20Formatting.png)
+---
 
 ## 🧠 Creating Primary
 
@@ -90,8 +81,5 @@ I'm planning to update it as best as I can and create more themes hopefully with
 
 If you've read all the way down here, well, what the heck. Thank you for listening to my TED talk. Please go back to writing your notes or whatever was more important than my rambles. Hahaha!
 
-## Credits
+## ❤️ Credits
 I owe a lot to @jdanielmourao, @kepano and @chetachiezikeuzor! Their work inspired me design-wise and studying their theme helped me a lot in creating mine.
-
-### Support My Work
-<a href='https://ko-fi.com/E1E76SQX8' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>

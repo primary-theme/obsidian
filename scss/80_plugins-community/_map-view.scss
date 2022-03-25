@@ -1,0 +1,44 @@
+/*────────────────────────────────────
+                Map View
+────────────────────────────────────*/
+.workspace-leaf-content[data-type="map"] {
+    img {
+        border: none;
+        border-radius: 0;
+    }
+
+    button {
+        background: var(--interactive-accent);
+        color: var(--text-on-accent);
+        margin-top: var(--scale-2-2);
+        margin-bottom: var(--scale-2-3);
+    }
+
+    input[type="checkbox"] {
+        vertical-align: text-top;
+        margin-left: 0;
+        border-radius: 100%;
+
+        &:checked {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z'%3E%3C/path%3E%3C/svg%3E");
+        }
+    }
+
+    .graph-controls {
+        max-width: 242px;
+        padding: var(--scale-2-6)
+                 var(--scale-2-6)
+                 var(--scale-2-6)
+                 var(--scale-2-6);
+        margin-right: var(--scale-8-2);
+    }
+
+    .graph-control-content {
+        margin-top: var(--scale-2-3);
+    }
+
+    .extra-marker .svg-inline--fa, .extra-marker i.fa, .extra-marker i.fab, .extra-marker i.fas, .extra-marker i.far, .extra-marker i.fal {
+        margin-top: 11px;
+        margin-left: 1px;
+    }
+}

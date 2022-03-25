@@ -1,0 +1,71 @@
+/*────────────────────────────────────
+    Toggle (Checkboxes for Modals)
+────────────────────────────────────*/
+.checkbox-container {
+    height: calc(3px + var(--scale-8-3));
+    width: calc(2px + var(--scale-8-6));
+    border-radius: var(--scale-8-4);
+
+    &:after {
+        height: calc(4px + var(--scale-8-2));
+        width: calc(4px + var(--scale-8-2));
+        border-radius: var(--scale-8-4);
+        margin: 2.5px 0 0 0px;
+    }
+    
+    &:active::after {
+        width: calc(4px + var(--scale-8-3));
+    }
+
+    &.is-enabled {
+        transition: var(--duration-fast-2)
+                    var(--motion-smooth);
+
+        &:after {
+            transform: translate3d(24px, 0, 0);
+            margin-left: 1px;
+        }
+
+        &:active::after {
+            left: -8px;
+        }
+    }
+
+    .theme-light & {
+        background: var(--color-l-gray-40);
+        border: 1px solid var(--color-l-gray-40);
+        box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5),
+                    0px 0px 2px 1px rgba(100, 100, 100, 0.35) inset;
+
+        &::after {
+            background: var(--color-l-whiter);
+            box-shadow: 0px 1px 3px 0px rgba(100, 100, 100, 0.45),
+                        0px -2px 0px 0px rgba(100, 100, 100, 0.15) inset,
+                        0px 1px 0px 0px rgba(255, 255, 255, 0.9) inset;
+        }
+
+        &.is-enabled {
+            border: 1px solid var(--color-l-green-300);
+            background: var(--color-l-green-500);
+        }
+    }
+
+    .theme-dark & {
+        background: var(--color-d-gray-40);
+        border: 1px solid var(--color-d-gray-30);
+        box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1),
+                    0px 0px 2px 1px rgba(0, 0, 0, 0.35) inset;
+
+        &::after {
+            background: var(--color-d-white);
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45),
+                        0px -2px 0px 0px rgba(0, 0, 0, 0.15) inset,
+                        0px 1px 0px 0px rgba(255, 255, 255, 0.35) inset;
+        }
+
+        &.is-enabled {
+            border: 1px solid var(--color-d-green-700);
+            background: var(--color-d-green-900);
+        }
+    }
+}

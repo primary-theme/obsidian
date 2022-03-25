@@ -1,0 +1,23 @@
+@media (min-width: 1000pt) {
+    .is-mobile {
+        /*──────────Aside HTML / Sidenotes──────────*/
+        // & aside,
+        // & .aside-show,
+        // & .aside-in {
+        //     width: var(--aside-width);
+        //     clear: both;
+        //     z-index: 0;
+        // }
+
+        // & .is-readable-line-width {
+        //     & aside,
+        //     & .aside-show,
+        //     & .aside-hide {
+        //         margin-right: calc(-4.25em - 1px);
+        //         &:hover {
+        //             margin-right: var(--aside-margin);
+        //         }
+        //     }
+        // }
+    }
+}

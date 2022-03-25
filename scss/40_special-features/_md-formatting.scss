@@ -1,0 +1,35 @@
+/*──────────Markdown Formatting──────────*/
+.gray-md-formatting {
+    span.cm-formatting:not(.cm-header, .cm-formatting-hashtag, .cm-formatting-list),
+    .cm-s-obsidian span.cm-formatting-math.cm-keyword,
+    .cm-s-obsidian span.cm-formatting-link.cm-link,
+    .cm-s-obsidian span.cm-formatting-escape,
+    .cm-s-obsidian span.cm-formatting-link-string.cm-string.cm-url,
+    .cm-s-obsidian span.cm-bracket,
+    span.cm-formatting-code.cm-inline-code,
+    
+    span.cm-formatting-header,
+    span.cm-header.cm-formatting-link-start, 
+    span.cm-header.cm-formatting-link-end,
+    span.cm-header.cm-formatting.cm-link,
+    span.cm-header.cm-formatting.cm-string.cm-url, 
+    
+    span.cm-formatting.cm-highlight,
+    .markdown-source-view.is-live-preview
+        .cm-header.cm-formatting-highlight,
+    .markdown-source-view .cm-header.cm-formatting-strong,
+    .markdown-source-view .cm-header.cm-formatting-strikethrough,
+    .markdown-source-view .cm-header.cm-formatting-em,
+    
+    span.cm-quote.cm-formatting.cm-strong,
+    span.cm-quote.cm-formatting.cm-em,
+    span.cm-quote.cm-formatting.cm-highlight,
+    span.cm-quote.cm-formatting.cm-strikethrough,
+    
+    .cm-s-obsidian span.cm-quote.cm-formatting-quote {
+        filter: initial;
+        color: var(--md-color-formatting);
+        background: initial;
+        text-decoration: none;
+    }
+}

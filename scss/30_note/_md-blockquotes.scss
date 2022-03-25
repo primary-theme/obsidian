@@ -1,0 +1,45 @@
+/*──────────Blockquotes──────────*/
+/* Source View Blockquotes */
+.markdown-source-view.mod-cm6 {
+    &.is-live-preview .HyperMD-quote {
+        font-style: italic;
+        background: var(--md-color-blockquotes-bg);
+        padding:    var(--scale-2-6)
+                    var(--scale-2-6)
+                    var(--scale-2-6)
+                    var(--scale-2-6);
+
+        border-left: 2px solid var(--md-color-blockquotes-border);
+    }
+
+    & .cm-blockquote-border {
+        border-left: 2px solid var(--md-color-blockquotes-border);
+    }
+}
+
+/* Source View Emphasis in Blockquotes Fix */
+.cm-s-obsidian span.cm {
+    &-quote {
+        color: var(--md-color-blockquotes);
+    }
+
+    &-formatting-quote {
+        color: var(--md-color-blockquotes-formatting);
+    }
+}
+
+/* Preview View Blockquotes */
+.markdown-preview-view blockquote {
+    font-style: italic;
+    background: var(--md-color-blockquotes-bg);
+
+    padding:    var(--scale-2-8)
+                var(--scale-2-18)
+                var(--scale-2-8)
+                var(--scale-2-18);
+    border-radius: var(--scale-2-4);
+    border: 1px solid var(--md-color-blockquotes-border);
+    margin-left: var(--scale-0-0);
+    margin-right: var(--scale-0-0);
+
+}

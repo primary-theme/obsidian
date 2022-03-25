@@ -1,0 +1,196 @@
+/*────────────────────────────────────
+++++++++++++++++++++++++++++++++++++++
+Content / Active Note / Opened Notes
+++++++++++++++++++++++++++++++++++++++
+──────────────────────────────────────*/
+/* Curved Top Corners in Active Note Pane Fix */
+.workspace-split.mod-root > .workspace-leaf {
+    &:first-of-type,
+    &:last-of-type {
+        & .workspace-leaf-content {
+            border-radius: 0 !important;
+        }
+    }
+}
+/* Active Note Panel -> is Highlighted (Unlink Pane) */
+.workspace-leaf.is-highlighted::before {
+    background: var(--text-highlight-bg);
+    opacity: 0.5;
+}
+
+/*────────────────────────────────────
+            Note Header
+────────────────────────────────────*/
+.view-header {
+    .workspace-leaf.mod-active &,
+    .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type & {
+        height: var(--scale-2-18);
+    }
+
+    .workspace-leaf & &-title-container:after {
+        display: none;
+    }
+
+    &-icon,
+    &-title,
+    & .view-action {
+        margin-top: 1px;
+    }
+
+    &-title {
+        line-height: 2.1;
+    }
+}
+
+/* Some Fixes on Tiny Padding Issues */
+.workspace-split.mod-vertical.mod-root
+.workspace-leaf  {
+    padding-right: 0;
+}
+
+/*─────────Note Header for Light Mode─────────*/
+/* don't remove !important */
+.theme-light {
+    & .view-header,
+    & .workspace-leaf.mod-active .view-header,
+    & .worksapce-split.mod-root > .theme-light .workspace-leaf:first-of-type:last-of-type .view-header {
+        border-top: none;
+        border-left: none !important;
+        border-right: none;
+        border-bottom: 1px solid var(--color-l-gray-40) !important;
+        background: var(--color-l-white) !important;
+    }
+
+    & .view-header .view-header-title {
+        color: var(--color-l-gray-50);
+    }
+
+    /* Non-active Notes Colors */
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header-title {
+        // Note Title
+        color: var(--color-l-gray-50);
+    }
+
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-header-icon,
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-action {
+        // Icons
+        color: var(--color-l-gray-50);
+    }
+
+    /* Non-active Notes "Drag to Rearrange Icon on Hover */
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-header-icon:hover {
+        color: var(--color-l-gray-80);
+    }
+
+    & .workspace-leaf {
+        &.mod-active .view-header-title,
+        &.mod-active .view-action {
+            color: var(--color-l-gray-80);
+        }
+
+        & .view-header .view-action {
+            &:nth-child(3n+1) {
+                &:hover {
+                    color: var(--color-l-yellow-500);
+                }
+
+                &:active {
+                    color: var(--color-l-yellow-300);
+                }
+            }
+
+            &:nth-child(3n+2) {
+                &:hover {
+                    color: var(--color-l-red-500);
+                }
+
+                &:active {
+                    color: var(--color-l-red-300);
+                }
+            }
+
+            &:nth-child(3n+3) {
+                &:hover {
+                    color: var(--color-l-blue-500);
+                }
+                
+                &:active {
+                    color: var(--color-l-blue-300);
+                }
+            }
+        }
+    }
+}
+
+/*─────────Note Header for Dark Mode─────────*/
+.theme-dark {
+    & .view-header,
+    & .workspace-leaf.mod-active .view-header,
+    & .worksapce-split.mod-root > .theme-dark .workspace-leaf:first-of-type:last-of-type .view-header {
+        border-top: none;
+        border-left: none !important;
+        border-right: none;
+        border-bottom: 1px solid var(--color-d-gray-50) !important;
+        background: var(--color-d-gray-70) !important;
+    }
+
+    & .view-header .view-header-title {
+        color: var(--color-d-gray-20);
+    }
+
+    /* Non-active Notes Colors */
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header-title {
+        // Note Title
+        color: var(--color-d-gray-30);
+    }
+
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-header-icon,
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-action {
+        // Icons
+        color: var(--color-d-gray-30);
+    }
+
+    /* Non-active Notes "Drag to Rearrange Icon on Hover */
+    & .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-header-icon:hover {
+        color: var(--color-d-gray-20);
+    }
+
+    & .workspace-leaf {
+        &.mod-active .view-header-title,
+        &.mod-active .view-action {
+            color: var(--color-d-gray-20);
+        }
+
+        & .view-header .view-action {
+            &:nth-child(3n+1) {
+                &:hover {
+                    color: var(--color-d-yellow-700);
+                }
+
+                &:active {
+                    color: var(--color-d-yellow-900);
+                }
+            }
+
+            &:nth-child(3n+2) {
+                &:hover {
+                    color: var(--color-d-red-700);
+                }
+                
+                &:active {
+                    color: var(--color-d-red-900);
+                }
+            }
+
+            &:nth-child(3n+3) {
+                &:hover {
+                    color: var(--color-d-blue-700);
+                }
+
+                &:active {
+                    color: var(--color-d-blue-900);
+                }
+            }
+        }
+    }
+}

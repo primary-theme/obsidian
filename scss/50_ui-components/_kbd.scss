@@ -1,0 +1,35 @@
+/*────────KBD──────────*/
+kbd,
+.setting-hotkey {
+    font-family: var(--font-code);
+
+    .markdown-soure-view &,
+    .cm-s-obsidian &,
+    .markdown-preview-view &{
+        padding: 3px 8px;
+    }
+
+    .theme-light & {
+        font-size: var(--font-scale-0);
+        color: var(--color-l-red-300);
+        background: var(--color-l-gray-20);
+        border: 1px solid rgba(100, 100, 100, 0.1);
+        box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.1) inset,
+                    0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+    }
+
+    .theme-dark & {
+        font-size: var(--font-scale-0);
+        color: var(--color-d-red-500);
+        background: var(--color-d-gray-90);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        box-shadow: 0px -2px 0px 0px
+                    rgba(0, 0, 0, 0.15) inset,
+                    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.suggestion-hotkey {
+    padding: 1px 8px 3px 8px;
+    margin-top: -3px;
+}

@@ -1,0 +1,113 @@
+/* Light Mode
+
+Graph View Controls
+    box-shadow: inset 0px 0px 1px rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px var(--color-l-shadow-10);
+
+Tab Header & Empty Page
+    is-active
+    box-shadow: 0px -2px 0px 0px
+                0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+                rgba(100, 100, 100, 0.15) inset;
+
+    :hover
+    box-shadow: 0px 3px 3px -1px
+                rgba(100, 100, 100, 0.15);
+    
+    :active
+    box-shadow: 0px 0px 0px 2px 
+                rgba(150, 150, 150, 0.15) inset;
+
+File Explorer
+    nav-file/folder-title
+    border: 1px solid rgba(100, 100, 100, 0.3);
+                box-shadow: 0px -2px 0px 0px
+                            rgba(100, 100, 100, 0.1) inset,
+                            0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+Notice
+    box-shadow: 0px 1px 0px rgba(17, 17, 26,0.05),
+                    0px 0px 8px rgba(17, 17, 26,0.1);
+
+Dropdown
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    box-shadow: 0px -2px 0px 0px 
+                rgba(100, 100, 100, 0.1) inset,
+                0px 2px 4px 0px 
+                rgba(100, 100, 100, 0.1);
+
+Buttons
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.3) inset,
+                0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+
+Sliders - Slider
+    border: 1px solid rgba(100, 100, 100, 0.2);
+
+Sliders - Thumb
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    box-shadow: 0px 1px 3px 0px rgba(100, 100, 100, 0.45),
+                0px -2px 0px 0px rgba(100, 100, 100, 0.15) inset,
+                0px 1px 0px 0px rgba(255, 255, 255, 0.35) inset;
+
+Kbd
+border: 1px solid rgba(100, 100, 100, 0.1);
+        box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.1) inset,
+                    0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+                */
+
+
+/* Dark Mode
+
+Graph View Controls
+    box-shadow: inset 0px 0px 1px 
+                rgb(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 4px
+                var(--color-d-shadow-10);
+
+Tab Header
+    is-active
+    box-shadow: 0px -3px 0px 0px
+                rgba(0, 0, 0, 0.25) inset;
+    
+    :hover
+    box-shadow: 0px 3px 3px -1px
+                rgba(0, 0, 0, 0.25);
+    :active
+    box-shadow: 0px 0px 0px 2px 
+                rgba(0, 0, 0, 0.15)  inset;   
+
+File Explorer
+    nav-file/folder-title
+    border: 1px solid rgba(0, 0, 0, 0.3);
+                box-shadow: 0px -2px 0px 0px
+                            rgba(0, 0, 0, 0.15) inset,
+                            0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+Notice
+    box-shadow: 0px 1px 0px rgba(0, 0, 0,0.05),
+                    0px 0px 8px rgba(0, 0, 0,0.1);
+
+Dropdown
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px -2px 0px 0px
+                rgba(0, 0, 0, 0.15) inset,
+                0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+Buttons
+
+
+Sliders - Slider
+    border: 1px solid rgba(0, 0, 0, 0.4);
+
+Sliders - Thumb
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45),
+                0px -2px 0px 0px rgba(0, 0, 0, 0.15) inset,
+                0px 2px 0px 0px rgba(255, 255, 255, 0.35) inset;
+
+Kbd
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0px -2px 0px 0px
+                rgba(0, 0, 0, 0.15) inset,
+                0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+                            */

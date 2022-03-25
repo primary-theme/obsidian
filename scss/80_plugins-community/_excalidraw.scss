@@ -1,0 +1,29 @@
+/*────────────────────────────────────
+            Excalidraw
+────────────────────────────────────*/
+.workspace-leaf-content[data-type="excalidraw"] { 
+    .view-content {
+        padding: var(--scale-0-0) var(--scale-0-0);
+    }
+
+    button { // resets button padding
+        padding: var(--scale-0-0) var(--scale-0-0) !important;
+    }
+
+    .excalidraw .ToolIcon__icon {
+        padding: var(--scale-2-3) var(--scale-2-3);
+    }
+
+    .excalidraw .help-icon {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+
+        &:hover,
+        &:active {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+/*────────────────────────────────────
+++++++++++++++++++++++++++++++++++++++
+            Graph View
+++++++++++++++++++++++++++++++++++++++
+──────────────────────────────────────*/
+.workspace-leaf-content[data-type="graph"]
+.view-content {
+    padding: 0;
+}
+
+.graph-controls {
+    max-width: initial;
+    padding:    var(--scale-8-1)
+                var(--scale-8-3)
+                var(--scale-8-2)
+                var(--scale-8-1);
+    margin-top: var(--scale-2-2);
+    margin-left: var(--scale-2-2);
+    border-radius: var(--scale-2-4);
+
+    transition: var(--duration-fast-2)
+                var(--motion-smooth);
+
+    &.is-close {
+        padding:    var(--scale-8-1)
+                    var(--scale-8-1)
+                    var(--scale-8-1)
+                    var(--scale-8-1);
+        margin-top: var(--scale-2-2);
+        margin-left: var(--scale-2-2);
+        border-radius: var(--scale-2-4);
+        opacity: 1;
+
+        & .graph-controls-buttons {
+            &.mod-open,
+            &.mod-animate {
+                padding:    var(--scale-2-4)
+                            var(--scale-2-4)
+                            var(--scale-2-4)
+                            var(--scale-2-4);
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*─────────Graph View Colors──────────*/
+.theme-light .graph-view,
+.theme-dark .graph-view {
+    &.color-fill {
+        color: var(--graph-color-node-resolved);
+    }
+
+    &.color-fill-unresolved {
+        color: var(--graph-color-node-unresolved);
+        opacity: var(--graph-color-node-unresolved-opacity);
+    }
+
+    &.color-fill-tag {
+        color: var(--graph-color-node-tag);
+    }
+
+    &.color-fill-attachment {
+        color: var(--graph-color-node-attachment);
+    }
+
+    &.color-fill-focused { /* Focused Node */
+        color: var(--graph-color-node-focused);
+    }
+
+    &.color-circle { /* Node Cirle on Hover (Border) */
+        color: var(--graph-color-node-border-hover);
+    }
+
+    &.color-arrow {
+        color: var(--graph-color-node-arrow);
+    }
+
+    &.color-line {
+        color: var(--graph-color-node-line);
+    }
+
+    &.color-line-highlight { /* Node Line on Hover */
+        color: var(--graph-color-node-line-hover);
+    }
+
+    &.color-text {
+        color: var(--graph-color-node-text);
+    }
+}
+
+/*~ Graph View Controls for Light Theme ~*/
+.theme-light .graph-controls {
+    background-color: var(--color-l-white);
+    color: var(--color-l-gray-60);
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: var(--shadow-s)
+                var(--color-l-shadow-100);
+
+    &.is-close {
+        min-width: inherit;
+        box-shadow: none;
+    }
+
+    & .setting-item-name {
+        color: var(--color-l-gray-80);
+    }
+}
+
+/*~ Graph View Controls for Dark Theme ~*/
+.theme-dark .graph-controls {
+    background-color: var(--color-d-gray-70);
+    color: var(--color-d-gray-50);
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: var(--shadow-s)
+                var(--color-d-shadow-100);
+
+    &.is-close {
+        min-width: inherit;
+        box-shadow: none;
+    }
+
+    & .setting-item-name {
+        color: var(--color-d-gray-10);
+    }
+}

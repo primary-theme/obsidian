@@ -1,0 +1,105 @@
+/*──────────Document Search and Replace──────────*/
+.markdown-reading-view.is-searching,
+.markdown-source-view.is-replacing,
+.markdown-source-view.is-searching {
+    flex-direction: column-reverse;
+}
+
+.document {
+    &-search-container {
+        height: 44px;
+        width: 97%;
+        max-width: 600px;
+
+        padding: 1px 2px;
+        border: 1px solid var(--background-modifier-border);
+        border-radius: var(--scale-2-4);
+
+        margin: var(--scale-2-4) auto;
+
+        &.mod-replace-mode {
+            height: 82px;
+            padding: 0;
+        }
+
+        .theme-light & {
+            background: var(--color-l-gray-10);
+        }
+
+        .theme-dark & {
+            background: var(--color-d-gray-80);
+        }
+    }
+
+    &-replace {
+        border-top: 1px solid var(--background-modifier-border);
+    }
+
+    &-search-input.document-search-input,
+    &-replace-input.document-replace-input {
+        width: 20%;
+        margin: var(--scale-2-3)
+                var(--scale-2-3)
+                var(--scale-2-3)
+                var(--scale-2-3);
+    }
+
+    &-search-button.document-search-button {
+        line-height: 0;
+        border-radius: var(--scale-2-2);
+        padding: var(--scale-2-2)
+                var(--scale-2-3)
+                var(--scale-2-3)
+                var(--scale-2-3) !important;
+        margin: calc(1px + var(--scale-2-3))
+                var(--scale-2-1)
+                var(--scale-0-0)
+                var(--scale-2-1);
+
+        &:last-child {
+            margin-right: var(--scale-2-3);
+        }
+
+        // Styling for Light and Dark Mode
+        body.theme-light .workspace & {
+            color: var(--text-on-accent);
+            background: var(--interactive-accent);
+            
+            &:hover {
+                background: var(--interactive-accent-hover);
+            }
+        }
+
+        body.theme-dark .workspace & {
+            color: var(--text-on-accent);
+            background: var(--interactive-accent);
+            
+            &:hover {
+                background: var(--interactive-accent-hover);
+            }
+        }
+    }
+}
+
+.document-search-close-button {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: var(--scale-8-3);
+
+    height: var(--scale-2-8);
+    width: var(--scale-2-8);
+    top: 2px;
+    margin-right: 2px;
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+    &:before {
+        &:hover {
+            color: var(--text-muted);
+        }
+    
+        &:active {
+            color: var(--text-faint);
+        }
+    }
+}

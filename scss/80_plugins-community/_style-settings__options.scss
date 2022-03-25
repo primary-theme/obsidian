@@ -1,0 +1,818 @@
+/* @settings
+
+name: Primary Theme Settings
+id: primary-ceciliamay
+settings:
+    -
+        id: preset-fonts
+        title: 🔤 Fonts & Typography
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: font-preview-header
+        title: Preset Preview Header Font
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+        options:
+            -
+                label: Karla
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Lora 
+                value: '"Lora", Georgia, Times New Roman, serif'
+            -
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Quicksand 
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Roboto Slab
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
+    -
+        id: font-preview
+        title: Preset Preview Body Font
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+        options:
+            -
+                label: Karla
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Lora 
+                value: '"Lora", Georgia, Times New Roman, serif'
+            -
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Quicksand 
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Roboto Slab
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
+    -
+        id: font-editor-header
+        title: Preset Editor Header Font
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+        options:
+            -
+                label: Karla
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Lora 
+                value: '"Lora", Georgia, Times New Roman, serif'
+            -
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Quicksand 
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Roboto Slab
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
+    -
+        id: font-editor
+        title: Preset Editor Body Font
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+        options:
+            -
+                label: Karla
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Lora 
+                value: '"Lora", Georgia, Times New Roman, serif'
+            -
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Quicksand 
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Roboto Slab
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
+    -
+        id: default-font
+        title: Preset Interface Font
+        type: variable-select
+        default: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+        options:
+            -
+                label: Karla
+                value: '"Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Lora 
+                value: '"Lora", Georgia, Times New Roman, serif'
+            -
+                label: Inter
+                value: '"Inter", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Quicksand 
+                value: '"Quicksand", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+            -
+                label: Roboto Slab
+                value: '"Roboto Slab", Georgia, Times New Roman, serif'
+    -
+        id: inter-alt
+        title: Enable Inter's Alternative Font Settings
+        description: Recommended if you're using Inter. This will enable you to use alternative font settings from Inter that better fit with Primary.
+        type: class-toggle
+    -
+        id: tabular-nums
+        title: Use Tabular Numbers
+        description: Evenly spaces out numbers.
+        type: class-toggle
+    -
+        id: gray-md-formatting
+        title: Gray Out Markdown Formatting
+        description: Makes markdown formatting less noticeable in Editor View.
+        type: class-toggle
+    -
+        id: no-link-underline
+        title: Remove Link Underline
+        description: When toggled on, underlines on internal and external links will be removed.
+        type: class-toggle
+    -
+        id: global-fonts__custom
+        title: Custom Fonts
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: font-preview-header
+        title: Custom Preview Header Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-preview
+        title: Custom Preview Body Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-editor-header
+        title: Custom Edit Header Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-editor
+        title: Custom Edit Body Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: font-code
+        title: Code Font
+        description:
+        type: variable-text
+        default: '"Cascadia Code", Inconsolata, Courier, monospace'
+    -
+        id: default-font
+        title: Interface Font
+        description:
+        type: variable-text
+        default: '"Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    -
+        id: line-height-1
+        title: Line Height
+        type: variable-text
+        default: '1.53em'
+    -
+        id: workspace-components
+        title: ⬛ Workspace Components
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: vault-title__titlebar
+        title: Hide Vault Title on Titlebar
+        description: Toggle on to hide the vault title on the titlebar. Keep it off to show it.
+        type: class-toggle
+    -
+        id: vault-title__file-explorer
+        title: Hide Vault Title on File Explorer
+        description: Toggle on to hide the vault title box on the file explorer. Keep it off to show it.
+        type: class-toggle
+    -
+        id: tab-header
+        title: ⏹️ Tab Headers
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tab-header-size
+        title: Tab Header Size
+        description: Select your preferred tab header size.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__size-regular
+        options:
+            -
+                label: Regular Size
+                value: tab-header__size-regular
+            -
+                label: Small Size
+                value: tab-header__size-small
+    -
+        id: tab-header-style
+        title: Tab Header Style
+        description: Select your preferred tab header style.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__style-original
+        options:
+            -
+                label: Original
+                value: tab-header__style-original
+            -
+                label: Minimal
+                value: tab-header__style-minimal
+    -
+        id: tab-header-align-modleft
+        title: Tab Header Alignment for Left Sidebar
+        description: Select your preferred tab header alignment for the left sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__align-modleft-left
+        options:
+            -
+                label: Left
+                value: tab-header__align-modleft-left
+            -
+                label: Center
+                value: tab-header__align-modleft-center
+            -
+                label: Right
+                value: tab-header__align-modleft-right
+    -
+        id: tab-header-align-modright
+        title: Tab Header Alignment for Right Sidebar
+        description: Select your preferred tab header alignment for the right sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__align-modright-right
+        options:
+            -
+                label: Left
+                value: tab-header__align-modright-left
+            -
+                label: Center
+                value: tab-header__align-modright-center
+            -
+                label: Right
+                value: tab-header__align-modright-right
+    -
+        id: tab-header-color-modleft
+        title: Tab Header Color Movement for Left Sidebar
+        description: Select your preferred tab header color arrangement for the right sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__left-color-ltr
+        options:
+            -
+                label: Left to Right
+                value: tab-header__left-color-ltr
+            -
+                label: Right to Left
+                value: tab-header__left-color-rtl
+    -
+        id: tab-header-color-modright
+        title: Tab Header Color Movement for Right Sidebar
+        description: Select your preferred tab header color arrangement for the right sidebar.
+        type: class-select
+        allowEmpty: false
+        default: tab-header__right-color-rtl
+        options:
+            -
+                label: Left to Right
+                value: tab-header__right-color-ltr
+            -
+                label: Right to Left
+                value: tab-header__right-color-rtl
+    -
+        id: tab-header__wrap
+        title: Allow Multiple Tab Header Rows
+        description: Toggle on to wrap tab headers and allow multiple rows. This a good option for those whose tabs get cut off due to overflow. It also reduces horizontal margins for the tab headers.
+        type: class-toggle
+    -
+        id: tab-header__anim-none
+        title: Turn Off Tab Header Animation
+        description: Toggle on to turn off the fun jumpy tab header animation.
+        type: class-toggle
+    -
+        id: header
+        title: 🅰️ Header Size, Weight, Style, Line Height and Color
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: header-size__preset
+        title: Preset Header Sizes
+        type: class-select
+        allowEmpty: false
+        default: header-size__original
+        options:
+            -
+                label: Original Size
+                value: header-size__original
+            -
+                label: Medium Size
+                value: header-size__medium
+            -
+                label: Small Size
+                value: header-size__small
+    -
+        id: header-color__preset
+        title: Preset Header Colors
+        description: 
+        type: class-select
+        allowEmpty: false
+        default: header-color__normal
+        options:
+            -
+                label: Text Colors Header 
+                value: header-color__normal
+            -
+                label: Primary Colors Header
+                value: header-color__yrb
+            -
+                label: Secondary Colors Header
+                value: header-color__ogv
+            -
+                label: Rainbow Colors Header
+                value: header-color__rainbow
+    -
+        id: header__custom
+        title: Custom Headers
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h1
+        title: Header 1 Size
+        type: variable-text
+        default: '2.678em'
+    -
+        id: h1-weight
+        title: Header 1 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h1-style
+        title: Header 1 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
+        id: h1-text-color
+        title: Header 1 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h2
+        title: Header 2 Size
+        type: variable-text
+        default: '2.288em'
+    -
+        id: h2-weight
+        title: Header 2 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h2-style
+        title: Header 2 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
+        id: h2-text-color
+        title: Header 2 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h3
+        title: Header 3 Size
+        type: variable-text
+        default: '1.927em'
+    -
+        id: h3-weight
+        title: Header 3 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h3-style
+        title: Header 3 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
+        id: h3-text-color
+        title: Header 3 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h4
+        title: Header 4 Size
+        type: variable-text
+        default: '1.648em'
+    -
+        id: h4-weight
+        title: Header 4 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h4-style
+        title: Header 4 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
+        id: h4-text-color
+        title: Header 4 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h5
+        title: Header 5 Size
+        type: variable-text
+        default: '1.388em'
+    -
+        id: h5-weight
+        title: Header 5 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h5-style
+        title: Header 5 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
+        id: h5-text-color
+        title: Header 5 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h6
+        title: Header 6 Size
+        type: variable-text
+        default: '1.188em'
+    -
+        id: h6-weight
+        title: Header 6 Font Weight
+        description: You can put a number from 100 to 900. Or in lowercase letters, you can put normal, bold, lighter, or bolder.
+        type: variable-text
+        default: 'bold'
+    -
+        id: h6-style
+        title: Header 6 Font Style
+        description: In lowercase letters, choose between normal, italic, or oblique.
+        type: variable-text
+        default: 'normal'
+    -
+        id: h6-text-color
+        title: Header 6 Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(34, 28%, 60%)'
+        default-dark: 'hsl(35, 27%, 55%)'
+    -
+        id: header-line-height
+        title: Headers Line Height
+        type: variable-text
+        default: '1.18'
+    -
+        id: note
+        title: ✏️ Note
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: no-md-activeline
+        title: Disable Activeline Highlighting
+        description: Toggle on to remove activeline highlighting. Keep it off to show it.
+        type: class-toggle
+    -
+        id: highlight
+        title: ⚡ Highlight
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: multicolor-highlight
+        title: Enable Multicolor Highlight
+        description: Turn this on to activate multicolored highlighting.
+        type: class-toggle
+    -
+        id: custom-highlight
+        title: Custom Highlight
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: md-color-highlight-text
+        title: Highlight-only Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-highlight-bg
+        title: Highlight-only Background Color
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-light: 'rgba(255, 187, 0, 0.2)'
+        default-dark: 'rgba(255, 187, 0, 0.2)'
+    -
+        id: md-color-bold-highlight-text
+        title: Bold and Highlight Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-bold-highlight-bg
+        title: Bold and Highlight Background Color
+        type: variable-themed-color
+        format: rgb 
+        opacity: true
+        default-light: 'rgba(240, 79, 106, 0.2)'
+        default-dark: 'rgba(240, 79, 106, 0.2)'
+    -
+        id: md-color-italic-highlight-text
+        title: Italic and Highlight Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-italic-highlight-bg
+        title: Italic and Highlight Background Color
+        type: variable-themed-color
+        format: rgb 
+        opacity: true
+        default-light: 'rgba(40, 178, 194, 0.2)'
+        default-dark: 'rgba(40, 178, 194, 0.2)'
+    -
+        id: md-color-bi-highlight-text
+        title: Bold, Italic, and Highlight Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-bi-highlight-bg
+        title: Bold, Italic, and Highlight Background Color
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-light: 'rgba(153, 189, 36, 0.2)'
+        default-dark: 'rgba(153, 189, 36, 0.2)'
+    -
+        id: lists
+        title: 📃 Lists
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: md-bullet-color
+        title: Preset Bullet Color
+        description: Select your preferred bullet color (applied to all bullets, ordered and unordered)
+        type: class-select
+        allowEmpty: false
+        default: md-bullet-color-faint
+        options:
+            -
+                label: Like Body Text
+                value: md-bullet-color-normal
+            -
+                label: Muted
+                value: md-bullet-color-muted
+            -
+                label: Faint
+                value: md-bullet-color-faint
+    -
+        id: note-embeds
+        title: 📍 Embeds
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: center-embeds
+        title: Center Embeds
+        description: When toggled on, all embeds (including images and other attachments) will be centered.
+        type: class-toggle
+    -
+        id: full-height-embeds
+        title: Full Height Markdown Embeds
+        description: Toggle on to remove scrolling and embed the whole note.
+        type: class-toggle
+    -
+        id: note-embeds__style
+        title: Markdown Embeds Style
+        description: Choose your preferred embedded note style.
+        type: class-select
+        allowEmpty: false
+        default: note-embeds__style-original
+        options:
+            -
+                label: Original
+                value: note-embeds__style-original
+            -
+                label: Minimal
+                value: note-embeds__style-minimal
+            -
+                label: Clean
+                value: note-embeds__style-clean
+    -
+        id: md-embed-bg
+        title: Markdown Embed Background Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(36, 37%, 92%)'
+        default-dark: 'hsl(30, 15%, 13%)'
+    -
+        id: graph-view
+        title: 🌐 Graph View
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: graph-color-node-resolved
+        title: Resolved Note Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(205, 66%, 46%)'
+        default-dark: 'hsl(198, 75%, 35%)'
+    -
+        id: graph-color-node-unresolved
+        title: Unresolved Note Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(43, 78%, 52%)'
+        default-dark: 'hsl(43, 100%, 42%)'
+    -
+        id: graph-color-node-unresolved-opacity
+        title: Unresolved Note Node Opacity
+        type: variable-text
+        default: '1'
+    -
+        id: graph-color-node-tag
+        title: Tag Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(4, 74%, 53%)'
+        default-dark: 'hsl(4, 65%, 60%)'
+    -
+        id: graph-color-node-attachment
+        title: Attachment Node Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(154, 50%, 58%)'
+        default-dark: 'hsl(154, 52%, 46%)'
+    -
+        id: graph-color-node-focused
+        title: Focused Node (Opened Note) Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 27%, 40%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: graph-color-node-border-hover
+        title: Node (on hover) Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(34, 18%, 62%)'
+    -
+        id: graph-color-node-arrow
+        title: Graph View Arrow Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 28%, 60%)'
+        default-dark: 'hsl(33, 20%, 30%)'
+    -
+        id: graph-color-node-line
+        title: Graph View Line Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(36, 34%, 85%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: graph-color-node-line-hover
+        title: Graph View Line (on hover) Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(33, 20%, 30%)'
+    -
+        id: graph-color-node-text
+        title: Graph View Text Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: false
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 18%, 62%)'
+    -
+        id: interface-components
+        title: 🖱️ Interface Components
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: scrollbar-style
+        title: Scrollbar Style
+        description: 
+        type: class-select
+        allowEmpty: false
+        default: scrollbar__thin
+        options: 
+            -
+                label: Thin
+                value: scrollbar__thin
+            -
+                label: Mac (Grabbable)
+                value: scrollbar__mac
+            -
+                label: Hidden
+                value: scrollbar__hidden
+    -
+        id: primary-wiki
+        title: 💛 Support Primary's Development 
+        description: Consider supporting Primary's Development by donating coffees at ko-fi.com/ceciliamay
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: primary-wiki
+        title: 🎯 Follow Primary's Roadmap
+        description: Look into Primary's grand development through its roadmap at tinyurl.com/primary-board
+        type: heading
+        level: 1
+        collapsed: false
+*/

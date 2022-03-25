@@ -1,0 +1,43 @@
+/*────────────────────────────────────
+    Sliding Panes (Andy's Mode)
+────────────────────────────────────*/
+body {
+    &.plugin-sliding-panes {
+        &:not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:not(:first-of-type) {
+            border-left: 1px solid var(--background-modifier-border) !important;
+        }
+    }
+
+    &.plugin-sliding-panes-rotate-header {
+        /* don't remove !important */
+        & .workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content .view-header,
+        & .workspace .mod-root .workspace-leaf:not(.workspace-leaf.mod-active) .workspace-leaf-content .view-header {
+            border-right: 1px solid var(--background-modifier-border) !important;
+            border-left: 1px solid var(--background-modifier-border) !important;
+        }
+
+        /* Removes shadow inside of Note Header Title */
+        & .view-header-title-container::before {
+            display: none;
+        }
+    
+        & .view-header {
+            & .view-action[aria-label="More options"] svg {
+                    transform: rotate(90deg);
+                    margin-bottom: var(--scale-2-2);
+            }
+
+            /* Alignment Fixes for 36px width */
+            & .view-header-icon {
+                left: 3px;
+            }
+            & .view-actions {
+                margin-left: 3px;
+            }
+        }
+    }
+
+    &.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
+        box-shadow: none !important;
+    }
+}

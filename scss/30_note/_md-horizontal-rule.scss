@@ -1,0 +1,11 @@
+/*──────────Horizontal Rule──────────*/
+.theme-light,
+.theme-dark {
+    & span.cm-hr {
+        color: var(--md-color-border);
+    }
+}
+
+.markdown-preview-view hr {
+    border-width: 1px;
+}

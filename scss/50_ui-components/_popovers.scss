@@ -1,0 +1,22 @@
+/*────────────────────────────────────
+            Popovers
+────────────────────────────────────*/
+.popover.hover-popover {
+    width: 40vw;
+    border-radius: var(--scale-2-6);
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: var(--shadow-l)
+                var(--background-modifier-box-shadow);
+
+    & .markdown-preview-view {
+        background: var(--background-primary);
+        padding:    var(--scale-8-1)
+                    var(--scale-8-6)
+                    var(--scale-8-1)
+                    var(--scale-8-6);
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

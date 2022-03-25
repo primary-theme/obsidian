@@ -1,0 +1,51 @@
+/*────────────────────────────────────
+        Vault Launch Progress
+────────────────────────────────────*/
+.is-loading:before,
+.search-result-container.is-loading:before {
+    background-color: var(--background-primary);
+    animation:  var(--duration-slow-2)
+                var(--motion-smooth)
+                infinite
+                progress-bar;
+}
+
+.progress-bar {
+    background: var(--background-primary);
+
+    &-indicator {
+        width: 35%;
+        overflow: hidden;
+        height: var(--scale-2-6);
+        border-radius: var(--scale-2-6);
+        border: 1px solid var(--background-modifier-border);
+
+        .is-mobile & {
+            width: 65%;
+        }
+    }
+    
+    &-line {
+        height: var(--scale-2-6);
+        position: absolute;
+        background: var(--background-secondary);
+        border-radius: var(--scale-2-6);
+    }
+
+    &-subline {
+        height: var(--scale-2-5);
+        border-radius: var(--scale-2-6);
+
+        .theme-light & { /* VLP for Light Mode */
+            background: var(--color-l-green-500);
+        }
+
+        .theme-dark & { /* VLP for Dark Mode */
+            background: var(--color-d-green-900);
+        }
+    }
+
+    &-message {
+        display: none;
+    }
+}

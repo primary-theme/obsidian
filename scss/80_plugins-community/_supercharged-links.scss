@@ -1,0 +1,24 @@
+/*────────────────────────────────────
+        Supercharged Links
+────────────────────────────────────*/
+/* Supercharged Links Reset for Source View */
+.cm-s-obsidian {
+    & span.cm-hmd-internal-link span[data-link-tags],
+    & span[data-link-tags] .cm-underline {
+        color: inherit;
+        text-decoration: inherit;
+        text-underline-position: inherit;
+        text-decoration-thickness: inherit;
+
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+    }
+}
+
+/* Supercharged Links Reset for Preview View */
+.internal-link.data-link-icon {
+    color: inherit;
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+}

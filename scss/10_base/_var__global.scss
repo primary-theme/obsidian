@@ -1,0 +1,133 @@
+/*────────────────────────────────────
+++++++++++++Variables+++++++++++++++++
+────────────────────────────────────*/
+
+:root {
+
+    /*──────────Font Families──────────*/
+    
+    --font-sans:
+        "Karla", -apple-system,
+        BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-monospace:
+        "Cascadia Code", Inconsolata, Courier, monospace;
+    
+    --font-preview: "Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-preview-header: "Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-editor:  "Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-editor-header:  "Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-code: "Cascadia Code", Inconsolata, Courier, monospace;
+
+    /* Original Obsidian Font Variables */
+    --default-font: "Karla", -apple-system,
+    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --mermaid-font: var(--font-preview);
+    --reveal-font:  var(--font-preview);
+    
+    /*──────────Font Weight──────────*/
+    
+    --font-thin: 100;
+    --font-extra-light: 200;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+    
+    /*──────────Typography Modular Scale──────────*/
+    
+    /*  Based on Standard 16px, Ratio 1.388  */
+    --line-width: 700px;
+    
+    --font-scale-000: 0.547em;
+    --font-scale-00: 0.676em;
+    --font-scale-0: 0.81em;
+    --font-scale-0-5: 0.875em;
+    --font-scale-1: 1em;
+    --font-scale-2: 1.188em;
+    --font-scale-3: 1.388em;
+    --font-scale-4: 1.648em;
+    --font-scale-5: 1.927em;
+    --font-scale-6: 2.288em;
+    --font-scale-7: 2.678em;
+    
+    --line-height-0: 1em;
+    --line-height-0-5: 1.2em;
+    --line-height-1: 1.53em;
+    
+    /*──────────Tracking (Letter Spacing)──────────*/
+    
+    --tracking-0: 0px;
+    --tracking-1: 0.16px;
+    --tracking-2: 0.32px;
+    --tracking-3: 0.64px;
+    --tracking-4: 1.28px;
+    --tracking-5: 2.56px;
+    
+    /*──────────Layout Sizing──────────*/
+    
+    --scale-0-0: 0px;
+    
+    /* Multiples of 2 */
+    
+    --scale-2-1: 2px;
+    --scale-2-2: 4px;
+    --scale-2-3: 6px;
+    --scale-2-4: 8px;
+    --scale-2-5: 10px;
+    --scale-2-6: 12px;
+    --scale-2-8: 16px;
+    --scale-2-9: 18px;
+    --scale-2-10: 20px;
+    --scale-2-18: 36px;
+    
+    /* Multiples of 8 */
+    
+    --scale-8-1: 8px;
+    --scale-8-2: 16px;
+    --scale-8-3: 24px;
+    --scale-8-4: 32px;
+    --scale-8-5: 40px;
+    --scale-8-6: 48px;
+    --scale-8-7: 54px;
+    --scale-8-8: 64px;
+    --scale-8-9: 72px;
+    --scale-8-10: 80px;
+    
+    --scale-8-12: 96px;
+    --scale-8-18: 144px;
+    --scale-8-36: 288px;
+
+    /*──────────Shadow Sizing──────────*/
+
+    --shadow-xs: 0px 0px 3px 1px;
+    --shadow-s: 0px 2px 8px -1px;
+    --shadow-m: 0px 4px 16px -2px;
+    --shadow-l: 0px 8px 24px -3px;
+    --shadow-xl: 0px 12px 32px -4px;
+    
+    /*──────────Duration, Transitions & Animations──────────*/
+    
+    /* Duration */
+    
+    --duration-none: 0;
+    --duration-superfast: 70ms;
+    --duration-fast-1: 140ms;
+    --duration-fast-2: 260ms;
+    --duration-moderate-1: 300ms;
+    --duration-moderate-2: 440ms;
+    --duration-slow-1: 560ms;
+    --duration-slow-2: 600ms;
+    
+    /* Transitions & Animations */
+    
+    --motion-smooth: cubic-bezier(0.45,0.05,0.55,0.95); /* easeInOutSine */
+    --motion-delay: cubic-bezier(0.65,0.05,0.36,1); /* easeInOutCubic */
+    --motion-jumpy: cubic-bezier(0.68,-0.55,0.27,1.55); /* easeInOutBack */
+    
+    } /*    End of Variables (:root)   */

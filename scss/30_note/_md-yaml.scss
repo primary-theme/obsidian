@@ -1,0 +1,95 @@
+/*────────────────────────────────────
+            YAML/Metadata
+────────────────────────────────────*/
+/*──────────YAML──────────*/
+pre.frontmatter.language-yaml {
+    border-radius: var(--scale-2-4);
+    border: none;
+}
+
+.markdown-source-view .cm-hmd-frontmatter,
+code.language-yaml {
+    font-family: var(--font-code);
+    font-size: var(--font-scale-0);
+    font-variant-numeric: tabular-nums;
+}
+
+/* YAML Code Colors */
+.theme-light,
+.theme-dark {
+    &:not(pre) > code[class*="language-"],
+    & pre[class*="language-"] {
+        background: var(--background-primary-alt);
+    }
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter,
+.markdown-preview-view code.language-yaml.is-loaded {
+    color: var(--md-color-code-red-1);
+}
+
+.cm-s-obsidian div .cm-hmd-frontmatter.cm-string,
+.markdown-preview-view code.language-yaml 
+        span.token.string {
+    color: var(--md-color-code-yellow-1);
+}
+
+.cm-s-obsidian div .cm-hmd-frontmatter.cm-atom,
+.markdown-preview-view code.language-yaml 
+span.key.atrule {
+    color: var(--md-color-code-blue-1);
+}
+
+.cm-s-obsidian div .cm-hmd-frontmatter.cm-def,
+.cm-s-obsidian div .cm-hmd-frontmatter.cm-meta,
+.markdown-preview-view code.language-yaml 
+    span.token.punctuation {
+    color: var(--md-color-code-gray);
+}
+
+/*──────────Metadata──────────*/
+.frontmatter-container {
+    border: 1px solid var(--md-color-border);
+    border-radius: var(--scale-2-4);
+
+    & .frontmatter-container-header {
+        border: none;
+        margin-bottom: var(--scale-8-1);
+    
+        &:hover {
+            .theme-light & {
+                color: var(--color-l-gray-70);
+            }
+            .theme-dark & {
+                color: var(--color-d-white);
+            }
+        }
+    
+        &:active {
+            .theme-light & {
+                color: var(--color-l-gray-50);
+            }
+            .theme-dark & {
+                color: var(--color-d-gray-30);
+            }
+        }
+    }
+
+    & .frontmatter-section {
+        border-top: 1px solid var(--md-color-border);
+        margin-top: 0;
+        padding-top: var(--scale-8-1);
+    }
+
+    & .frontmatter-alias {
+        border: 1px solid var(--md-color-border);
+        background: var(--background-secondary);
+    }
+}
+span.frontmatter-section-label {
+    font-family: var(--default-font);
+    font-size: var(--font-scale-0-5);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    margin-left: var(--scale-8-1);
+}

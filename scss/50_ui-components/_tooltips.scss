@@ -1,0 +1,37 @@
+/*────────────────────────────────────
+            Tooltips
+────────────────────────────────────*/
+.tooltip {
+    background: var(--text-normal);
+    color: var(--background-primary);
+    box-shadow: var(--shadow-s)
+                var(--background-modifier-box-shadow);
+
+    & .tooltip-arrow {
+    border-bottom: 5px solid var(--text-normal);
+    }
+
+    &.mod {
+        &-top .tooltip-arrow {
+            border-top: 5px solid var(--text-normal);
+        }
+
+        &-right .tooltip-arrow {
+            border-right: 5px solid var(--text-normal);
+
+            .mod-error & {
+                border-right-color: var(--background-modifier-error);
+                border-bottom: 5px solid transparent;
+            }
+        }
+
+        &-left .tooltip-arrow {
+            border-left: 5px solid var(--text-normal);
+
+            .mod-error & {
+                border-left-color: var(--background-modifier-error);
+                border-bottom: 5px solid transparent;
+            }
+        }
+    }
+}

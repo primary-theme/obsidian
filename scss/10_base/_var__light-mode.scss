@@ -1,0 +1,147 @@
+/*────────────────────────────────────
+++++++++++++Theme Colors++++++++++++++
+────────────────────────────────────*/
+
+/*────────────────────────────────────
+            Light Theme
+────────────────────────────────────*/
+
+.theme-light {
+
+    /*─────────Original Obsidian Variables──────────*/
+    
+    --background-primary:           var(--color-l-white);
+    --background-primary-alt:       var(--color-l-gray-10);
+    
+    --background-secondary:         var(--color-l-gray-20);
+    --background-secondary-alt:     var(--color-l-gray-20);
+    
+    --background-modifier-border:   var(--color-l-gray-40);
+    
+    --background-modifier-form-field:               var(--color-l-gray-30);
+    --background-modifier-form-field-highlighted:   var(--color-l-gray-40);
+    --background-modifier-box-shadow:               var(--color-l-shadow-100);
+    
+    --background-modifier-success:      var(--color-l-green-300);
+    --background-modifier-error:        var(--color-l-red-300);
+    --background-modifier-error-hover:  var(--color-l-red-500);
+    --background-modifier-cover:        var(--color-l-shadow-cover);
+    
+    --text-normal:  var(--color-l-black);
+    --text-muted:   var(--color-l-gray-60);
+    --text-faint:   var(--color-l-gray-50);
+    
+    --text-accent:      var(--color-l-yellow-900);
+    --text-accent-hover:var(--color-l-yellow-500);
+    
+    --text-error:       var(--color-l-red);
+    --text-error-hover: var(--color-l-red-900);
+    
+    --text-highlight-bg:        var(--color-l-highlight-yellow);
+    --text-highlight-bg-active: var(--color-l-highlight-yellow);
+    --highlight-mix-blend-mode: darken;
+    
+    --text-selection:   var(--color-l-gray-40);
+    
+    --text-on-accent:   var(--color-l-gray-10);
+    
+    --interactive-hover:        var(--color-l-gray-10);
+    --interactive-accent:       var(--color-l-gray-60);
+    --interactive-accent-rgb:   207, 182, 150;
+    --interactive-accent-hover: var(--color-l-gray-70);
+    --interactive-success:      var(--color-l-green-500);
+
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb-bg: var(--background-modifier-border);
+    --scrollbar-active-thumb-bg: var(--interactive-accent);
+    
+    /*──────────The PRIMARY Color Palette for Light Theme──────────*/
+    
+    --color-l-whiter: hsl(36, 36%, 96.9%);
+    
+    --color-l-white: hsl(35, 36%, 95%);
+    
+    --color-l-gray: var(--color-l-gray-50);
+    --color-l-gray-10: hsl(36, 37%, 92%);
+    --color-l-gray-20: hsl(35, 35%, 90%);
+    --color-l-gray-30: hsl(34, 36%, 88%);
+    --color-l-gray-40: hsl(36, 37%, 83%);
+    --color-l-gray-50: hsl(34, 37%, 70%);
+    --color-l-gray-60: hsl(34, 28%, 60%);
+    --color-l-gray-70: hsl(31, 23%, 50%);
+    --color-l-gray-80: hsl(34, 27%, 40%);
+    --color-l-gray-90: hsl(34, 30%, 37%);
+    --color-l-gray-100: hsl(35, 32%, 30%);
+    
+    --color-l-black: hsl(31, 45%, 20%);
+
+    --color-l-blacker: hsl(32, 55%, 12%);
+
+    --color-l-shadow-10:    rgba(168, 160, 148, 0.8);
+    --color-l-shadow-50:    rgba(180, 172, 161, 0.3);
+    --color-l-shadow-100:   rgba(75, 70, 64, 0.2);
+    --color-l-shadow-cover: rgba(177, 171, 164, 0.5);
+    
+    --color-l-yellow: var(--color-l-yellow-500);
+    --color-l-yellow-300: hsl(43, 71%, 67%);
+    --color-l-yellow-500: hsl(43, 78%, 52%);
+    --color-l-yellow-700: hsl(43, 100%, 42%);
+    --color-l-yellow-900: hsl(43, 89%, 38%);
+    
+    --color-l-red: var(--color-l-red-500);
+    --color-l-red-300: hsl(4, 54%, 61%);
+    --color-l-red-500: hsl(4, 72%, 55%);
+    --color-l-red-700: hsl(4, 56%, 48%);
+    --color-l-red-900: hsl(4, 66%, 30%);
+
+    
+    --color-l-blue: var(--color-l-blue-500);
+    --color-l-blue-300: hsl(198, 39%, 56%);
+    --color-l-blue-500: hsl(205, 66%, 46%);
+    --color-l-blue-700: hsl(205, 63%, 39%);
+    --color-l-blue-900: hsl(205, 95%, 25%);
+    
+    --color-l-orange: var(--color-l-orange-500);
+    --color-l-orange-300: hsl(26, 66%, 57%);
+    --color-l-orange-500: hsl(21, 82%, 55%);
+    --color-l-orange-700: hsl(18, 69%, 50%);
+    --color-l-orange-900: hsl(24, 96%, 35%);
+    --color-l-orange-a: hsl(27, 81%, 46%);
+    
+    --color-l-green: var(--color-l-green-500);
+    --color-l-green-300: hsl(154, 58%, 65%);
+    --color-l-green-500: hsl(154, 47%, 49%);
+    --color-l-green-700: hsl(155, 52%, 38%);
+    --color-l-green-900: hsl(165, 63%, 29%);
+    
+    --color-l-violet: var(--color-l-violet-500);
+    --color-l-violet-300: hsl(270, 50%, 74%);
+    --color-l-violet-500: hsl(266, 31%, 57%);
+    --color-l-violet-700: hsl(267, 37%, 43%);
+    --color-l-violet-900: hsl(266, 70%, 30%);
+    
+    /*~ Highlights */
+    --ui-color-highlight-text: var(--color-l-black);
+    --ui-color-highlight-bg: hsl(43, 85%, 79%);
+
+    --color-highlight-yellow: rgba(255, 187, 0, 0.2);
+    --color-highlight-red:    rgba(240, 79, 106, 0.2);
+    --color-highlight-blue:   rgba(40, 178, 194, 0.2);
+    --color-highlight-orange:  rgba(255, 115, 0, 0.2);
+    --color-highlight-green:  rgba(153, 189, 36, 0.2);
+    --color-highlight-violet:  rgba(113, 122, 255, 0.2);
+    
+    /*~ Graph View */
+    --graph-color-node-resolved: var(--color-l-blue-500);
+    --graph-color-node-unresolved: var(--color-l-yellow-500);
+    --graph-color-node-unresolved-opacity: 1;
+    --graph-color-node-tag: var(--color-l-red-500);
+    --graph-color-node-attachment: var(--color-l-green-300);
+    --graph-color-node-focused: var(--color-l-gray-80);
+    --graph-color-node-border-hover: var(--color-l-gray-50);
+
+    --graph-color-node-arrow: var(--color-l-gray-60);
+    --graph-color-node-line: var(--color-l-gray-40);
+    --graph-color-node-line-hover: var(--color-l-gray-50);
+    --graph-color-node-text: var(--color-l-black);
+}
