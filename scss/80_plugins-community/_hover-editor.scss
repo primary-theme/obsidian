@@ -1,3 +1,6 @@
+/*────────────────────────────────────
+            Hover Editor
+────────────────────────────────────*/
 .popover.hover-popover {
     --he-popover-border-radius: var(--scale-2-4);
     --he-title-bar-height: 24px;
@@ -82,5 +85,9 @@
                 color: var(--color-d-whiter);
             }
         }
+    }
+
+    .workspace-leaf {
+        padding-right: 0;
     }
 }

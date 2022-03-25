@@ -6956,6 +6956,9 @@ table.dataview {
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 
+/*────────────────────────────────────
+                Map View
+────────────────────────────────────*/
 .workspace-leaf-content[data-type=map] img {
   border: none;
   border-radius: 0;
@@ -6987,6 +6990,9 @@ table.dataview {
   margin-left: 1px;
 }
 
+/*────────────────────────────────────
+            Hover Editor
+────────────────────────────────────*/
 .popover.hover-popover {
   --he-popover-border-radius: var(--scale-2-4);
   --he-title-bar-height: 24px;
@@ -7061,6 +7067,9 @@ table.dataview {
 .theme-dark .popover.hover-popover .popover-action.mod-close:hover {
   background: var(--color-d-red-700);
   color: var(--color-d-whiter);
+}
+.popover.hover-popover .workspace-leaf {
+  padding-right: 0;
 }
 
 /*────────────────────────────────────
