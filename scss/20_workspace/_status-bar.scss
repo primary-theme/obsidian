@@ -22,6 +22,8 @@
                     var(--scale-2-3)
                     var(--scale-0-0)
                     var(--scale-2-3);
+        display: flex;
+        align-items: center;
 
         &-icon {
             line-height: 1;
