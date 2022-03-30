@@ -2810,6 +2810,13 @@ mjx-math {
 /* General Styling */
 .callout {
   border: 1px solid rgba(var(--callout-color), 0.2);
+  overflow: hidden;
+}
+.theme-light .callout {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+}
+.theme-dark .callout {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
 }
 .theme-light .callout-title {
   background: rgba(var(--callout-color), 0.2);
@@ -2824,10 +2831,10 @@ mjx-math {
   filter: brightness(1);
 }
 .theme-light .callout.is-collapsed .callout-title {
-  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.05) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.05) inset;
 }
 .theme-dark .callout.is-collapsed .callout-title {
-  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.175) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.175) inset;
 }
 .callout-fold {
   color: rgba(var(--callout-color), 1);
@@ -2840,11 +2847,11 @@ mjx-math {
 }
 .theme-light .callout-content {
   background: var(--color-l-gray-10);
-  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.05) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.05) inset;
 }
 .theme-dark .callout-content {
   background: var(--color-d-black);
-  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.175) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.175) inset;
 }
 
 /* Callout Type Styling */
