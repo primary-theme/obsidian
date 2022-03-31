@@ -5433,17 +5433,13 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
   align-self: center;
   justify-self: center;
   content: "Hello there! Cecil here. 🦊 \aWelcome to Primary. \aI hope you have a cozy time. \a\aIf you want to toggle exclusive features, tweak some colors and fonts — download the Style Settings Plugin. \a Check it out, you might like some of the presets there! \a\aRemember to update the theme from time to time to get the latest fixes, improvements, etc. \a\a💛 Support its development at \ako-fi.com/ceciliamay \a\a🎯 Follow its development at \atinyurl.com/primary-board";
+  color: var(--text-normal);
   line-height: 1.4;
-  width: 75%;
+  width: 88%;
   position: relative;
   background: var(--background-primary-alt);
   white-space: pre-wrap;
   text-align: left;
-  padding: var(--scale-2-4);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--scale-2-3);
-  margin-top: var(--scale-2-2);
-  margin-bottom: var(--scale-2-2);
 }
 
 span.clickable-icon[aria-label="Visit on GitHub"] {
