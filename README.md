@@ -25,8 +25,6 @@ Playful, reminiscing, productive.
 
 Available in both Light and Dark modes, for both Mobile and Desktop!
 
----
-
 ## 📖 Table of Contents
 
 - [Goals](#👁️-goals)
@@ -35,8 +33,6 @@ Available in both Light and Dark modes, for both Mobile and Desktop!
     - [Customizing Primary](#⚒️-customizing-primary-through-style-settings)
     - [Alternate Checkboxes](#✅-alternative-checkboxes)
     - []
-
----
 
 ## 👁️ Goals
 - Help users give instant visual context of their notes through colors and scale that is both beautiful and productive.
