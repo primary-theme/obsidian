@@ -291,7 +291,7 @@ body:not(.is-mobile) .community-theme.is-selected {
     }
 }
 
-span.clickable-icon[aria-label="Visit on GitHub"] {
+.community-theme.is-selected .clickable-icon[aria-label="Visit on GitHub"] {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     align-self: center;
