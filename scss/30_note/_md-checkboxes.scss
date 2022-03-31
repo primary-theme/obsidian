@@ -27,37 +27,41 @@ input[type=checkbox] {
     }
     
     .theme-light & {
+        background-color: var(--md-unchecked-bg-color);
+
         &:hover {
-            background-color: var(--color-l-whiter);
+            background-color: var(--md-unchecked-bg-color-hover);
             box-shadow: 0px 0px 0px 2px var(--color-l-gray-30);
         }
 
         &:active,
         &:checked:active {
-            background-color: var(--color-l-gray-20);
+            background-color: var(--md-unchecked-bg-color-active);
             box-shadow: 0px 0px 0px 2px var(--color-l-gray-30);
         }
 
         &:checked {
-            background-color: var(--color-l-green-500);
+            background-color: var(--md-checked-bg-color);
             border: 1px solid rgba(0, 0, 0, 0.15);
         }
     }
 
     .theme-dark & {
+        background-color: var(--md-unchecked-bg-color);
+
         &:hover {
-            background-color: var(--color-d-gray-100);
+            background-color: var(--md-unchecked-bg-color-hover);
             box-shadow: 0px 0px 0px 2px var(--text-faint);
         }
 
         &:active,
         &:checked:active {
-            background-color: var(--color-d-gray-70);
+            background-color: var(--md-unchecked-bg-color-active);
             box-shadow: 0px 0px 0px 2px var(--text-faint);
         }
         
         &:checked {
-            background-color: var(--color-d-green-900);
+            background-color: var(--md-checked-bg-color);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
     }

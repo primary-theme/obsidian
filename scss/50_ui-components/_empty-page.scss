@@ -11,12 +11,11 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    line-height: 1.2;
+    width: 26ch;
 
     background: var(--background-primary-alt);
-    padding:    var(--scale-2-1)
-                var(--scale-2-8)
-                var(--scale-2-2)
-                var(--scale-2-8);
+    padding: var(--scale-2-6) 0;
     border-radius: var(--scale-8-4);
     border: 1px solid var(--background-modifier-border);
     margin-bottom: var(--scale-2-4);
@@ -127,7 +126,7 @@
 }
 
 .workspace-leaf-content[data-type="empty"] .empty-state::after {
-    content: "Primary by Cecilia May \A © 2021—2022";
+    content: "Primary by Cecilia May";
     color: var(--text-faint);
     letter-spacing: var(--tracking-4);
     text-transform: uppercase;
@@ -137,4 +136,8 @@
     position: absolute;
     bottom: var(--scale-8-4);
     opacity: 0.75;
+
+    .popover.hover-popover & {
+        display: none;
+    }
 }

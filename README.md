@@ -25,6 +25,19 @@ Playful, reminiscing, productive.
 
 Available in both Light and Dark modes, for both Mobile and Desktop!
 
+---
+
+## 📖 Table of Contents
+
+- [Goals](#👁️-goals)
+- [Supported Plugins](#⭐-supported-plugins)
+- [How to Use Primary](#❓-how-to-use-primary)
+    - [Customizing Primary](#⚒️-customizing-primary-through-style-settings)
+    - [Alternate Checkboxes](#✅-alternative-checkboxes)
+    - []
+
+---
+
 ## 👁️ Goals
 - Help users give instant visual context of their notes through colors and scale that is both beautiful and productive.
 - Create a playful, elegant, easy-going, complete and beautiful environment in Obsidian.
@@ -39,11 +52,117 @@ Primary was crafted with a "perfect fundamentals first, nail other features late
 - Sliding Panes by death_au — recommended width of 36px
 - Dataview by Michael Brenan
 - Supercharged Links by mdelobelle
-- Style Settings by mgmeyers — through this plugin, you can change fonts, colors, and get access to features!
+- Style Settings by mgmeyers — through this plugin, you can change fonts, colors, and get access to features! See [Customizing Primary through Style Settings](#⚒️-customizing-primary-through-style-settings) section below.
 - Map View by esm
 - Hover Editor by nothingislost
 
 If you'd like to see what plugins I'm planning to support next, check out the roadmap linked above.
+
+## ❓ How to Use Primary
+
+### ⚒️ Customizing Primary through Style Settings
+
+By downloading the Style Settings plugin, Primary offers you tons of customization and feature toggling options. This includes:
+
+- 5 Preset fonts to choose from (guaranteed Primary-certified), as well as option to add your own
+- Toggle to use **Tabular Numbers** (this option makes numbers evenly spaced out)
+- Adjust **Line Height**
+- **Hide Obsidian Elements** such as:
+    - Vault Titles
+    - Note Header Bar (Shows on Hover)
+    - Side Dock Ribbon
+        - You can also choose other styles such as **Mini Floating Side Dock** or **Show on Hover Side Dock**
+    - Status Bar
+        - You can also choose other styles such as **Only Show Sync Icon**
+- Choose between **Preset Header Styles or Customizable Headers**
+    - 3 Preset Header Sizes to choose from or use your own sizes
+    - 4 Preset Header Colors to choose from including **Rainbow**
+    - Add **Border Lines** to your Headers, adjust the width, adjust the color
+    - Add **Background Color** to your Headers
+    - Add **Border Curves** to your Headers
+- Toggle **Active Line Highlighting** on or off
+- Make **Markdown Formatting** inconspicuous by graying them out
+- Toggle **Link Underline**
+- Customize Markdown Features including:
+    - Custom Bold color
+    - Custom Italics color
+    - Custom Bold and Italics color
+    - Custom Strikethrough color
+    - Custom "Hidden Comments" `%% text %%` color
+    - Custom Resolved and Unresolved Links color 
+    - Custom Blockquotes color (change text color, syntax color, border color, background color)
+    - Custom Highlight colors
+- 3 Markdown Embed Style options (Original, Minimal, or Clean)
+- Customize Popover sizes
+- Customize Graph View colors
+- 3 Preset options for **Scrollbar Style** (Thin, Mac, Hidden)
+
+_and more..._
+
+### ✅ Alternative Checkboxes
+
+Obsidian internally supports unchecked, and checked (x) syntax. Primary offers additional syntaxes!
+
+```
+- [ ]  Unchecked
+- [x] `x` Checked
+- [>] `>` Rescheduled
+- [<] `<` Scheduled
+- [!] `!` Important
+- [-] `-` Cancelled
+- [/] `/` In Progress
+- [?] `?` Question
+- [*] `*` Star
+- [n] `n` Note
+- [l] `l` Location
+- [i] `i` Information
+- [S] `S` Amount
+- ["] `"` Quote
+- [I] `I` Idea
+- [p] `p` Pro
+- [c] `c` Con
+- [b] `b` Bookmark
+```
+
+### ⏹️ Exclusive Callouts
+
+Primary styles [Callouts](https://help.obsidian.md/How+to/Use+callouts), using already known visual cues in Primary. But Primary also offers additional support for some exclusively added Callouts.
+
+#### Gradient Party Callouts
+
+```
+> [!celebrate]
+> Let's party!
+```
+
+```
+> [!success]
+> Let's party!
+```
+
+#### Thinking Callouts
+
+```
+> [!pro]
+> I think this is a good feature because...
+```
+
+```
+> [!con]
+> This is a bad feature becacuse...
+```
+
+```
+> [!idea]
+> I think it would be great to add...
+```
+
+#### Meditation Callouts
+
+```
+> [!morning]
+> “If you are irritated by every rub, how will your mirror be polished?”  ― Rumi
+```
 
 ## 🖼️ Screenshots
 

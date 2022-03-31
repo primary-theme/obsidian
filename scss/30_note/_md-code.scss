@@ -25,6 +25,7 @@
 .cm-s-obsidian .cm-tag,
 div[data-tag-name="pre"] code,
 pre code,
+code,
 .markdown-preview-view code {
     font-family: var(--font-code);
 }
@@ -41,6 +42,7 @@ pre code {
     font-size: 90%;
 }
 
+code,
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting-code),
 .markdown-preview-view pre code {
     padding:    var(--scale-2-1)
@@ -107,6 +109,7 @@ Syntax Highlighting──────────*/
     color: var(--md-color-code-yellow-2);
 }
 
+code,
 pre code,
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting-code),
 .cm-s-obsidian span.cm-bracket,
@@ -114,7 +117,8 @@ pre code,
 .cm-s-obsidian .cm-hmd-codeblock,
 .markdown-preview-view pre code.is-loaded,
 .markdown-preview-view pre code,
-.markdown-preview-view code {
+.markdown-preview-view code,
+.markdown-rendered code {
     color: var(--md-color-code-red-1);
 }
 

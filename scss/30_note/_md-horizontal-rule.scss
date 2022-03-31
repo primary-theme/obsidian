@@ -2,10 +2,13 @@
 .theme-light,
 .theme-dark {
     & span.cm-hr {
-        color: var(--md-color-border);
+        font-family: var(--font-code);
+        color: var(--md-color-comment);
     }
 }
 
 .markdown-preview-view hr {
+    font-family: var(--font-code);
+    color: var(--md-color-border);
     border-width: 1px;
 }

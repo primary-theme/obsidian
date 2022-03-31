@@ -28,6 +28,7 @@
 @use '30_note/md-links';
 @use '30_note/md-tags';
 @use '30_note/md-lists';
+@use '30_note/md-footnotes';
 @use '30_note/md-checkboxes';
 @use '30_note/md-code';
 @use '30_note/md-horizontal-rule';
@@ -43,7 +44,8 @@
 
 @use '40_special-features/custom-icons';
 @use '40_special-features/alt-checkboxes';
-@use '40_special-features/_md-formatting';
+@use '40_special-features/md-formatting';
+@use '40_special-features/translucency';
 
 @use '50_ui-components/modals';
 @use '50_ui-components/community-themes-plugins';

@@ -6,6 +6,7 @@ settings:
     -
         id: preset-fonts
         title: 🔤 Fonts & Typography
+        description: Adjust global font settings. Includes settings for Header fonts, Body fonts, Line Height, and other features.
         type: heading
         level: 1
         collapsed: true
@@ -110,7 +111,7 @@ settings:
                 label: Roboto Slab
                 value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
-        id: default-font
+        id: interface-font
         title: Preset Interface Font
         type: variable-select
         default: '"Karla", -apple-system,
@@ -143,16 +144,6 @@ settings:
         id: tabular-nums
         title: Use Tabular Numbers
         description: Evenly spaces out numbers.
-        type: class-toggle
-    -
-        id: gray-md-formatting
-        title: Gray Out Markdown Formatting
-        description: Makes markdown formatting less noticeable in Editor View.
-        type: class-toggle
-    -
-        id: no-link-underline
-        title: Remove Link Underline
-        description: When toggled on, underlines on internal and external links will be removed.
         type: class-toggle
     -
         id: global-fonts__custom
@@ -195,7 +186,7 @@ settings:
         type: variable-text
         default: '"Cascadia Code", Inconsolata, Courier, monospace'
     -
-        id: default-font
+        id: interface-font
         title: Interface Font
         description:
         type: variable-text
@@ -209,19 +200,59 @@ settings:
     -
         id: workspace-components
         title: ⬛ Workspace Components
+        description: Adjust parts of Obsidian such as  the sidebars, tabs, titlebars, and more.
         type: heading
         level: 1
         collapsed: true
     -
         id: vault-title__titlebar
         title: Hide Vault Title on Titlebar
-        description: Toggle on to hide the vault title on the titlebar. Keep it off to show it.
         type: class-toggle
     -
         id: vault-title__file-explorer
         title: Hide Vault Title on File Explorer
-        description: Toggle on to hide the vault title box on the file explorer. Keep it off to show it.
         type: class-toggle
+    -
+        id: hide__note-header
+        title: Hide Note Header Bar, Show on Hover (Desktop Only)
+        description: Note Header Bars are the bars at the top of a note where the note title, and menu options are located. Toggle on to hide note header bar on default. When hovered, note header bar will show.
+        type: class-toggle
+    -
+        id: hide__sidedockribbon
+        title: Side Dock Ribbon Style (Desktop Only)
+        description: Side Dock Ribbons are the narrow columns at the utmost left and right of Obsidian. Choose your preferred style.
+        type: class-select
+        allowEmpty: false
+        default: show__sidedockribbon
+        options:
+            -
+                label: Show Side Dock Ribbon
+                value: show__sidedockribbon
+            -
+                label: Mini Floating Side Dock Ribbon
+                value: hide__sidedockribbon-functional
+            -
+                label: Show on Hover Side Dock Ribbon
+                value: hide__sidedockribbon-hover
+            -
+                label: Hide Side Dock Ribbon
+                value: hide__sidedockribbon-full
+    -
+        id: statusbar
+        title: Status Bar Style
+        type: class-select
+        allowEmpty: false
+        default: show__status-bar
+        options:
+            -
+                label: Show Full Status Bar
+                value: show__status-bar
+            -
+                label: Only Obsidian Sync Icon
+                value: sync-only-status-bar
+            -
+                label: Hide Status Bar
+                value: hide__status-bar
     -
         id: tab-header
         title: ⏹️ Tab Headers
@@ -330,7 +361,8 @@ settings:
         type: class-toggle
     -
         id: header
-        title: 🅰️ Header Size, Weight, Style, Line Height and Color
+        title: 🅰️ Header Styling
+        description: Adjust how your header looks. Includes settings for font weight, style, size, line height, color, background color, and borders.
         type: heading
         level: 1
         collapsed: true
@@ -373,8 +405,15 @@ settings:
     -
         id: header__custom
         title: Custom Headers
+        description: Includes settings for Header text alignment, borders, background, and more.
         type: heading
         level: 2
+        collapsed: true
+    -
+        id: header-1
+        title: Heading 1
+        type: heading
+        level: 3
         collapsed: true
     -
         id: h1
@@ -394,6 +433,21 @@ settings:
         type: variable-text
         default: 'normal'
     -
+        id: h1-text-align
+        title: Header 1 Text Alignment
+        type: variable-select
+        default: 'left'
+        options:
+            -
+                label: Left
+                value: left
+            -
+                label: Center
+                value: center
+            -
+                label: Right
+                value: right
+    -
         id: h1-text-color
         title: Header 1 Text Color
         type: variable-themed-color
@@ -401,6 +455,57 @@ settings:
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h1-background
+        title: Enable Header 1 Background Color
+        type: class-toggle
+        default: false
+    -
+        id: h1-bg-color
+        title: Header 1 Background Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'rgba(240, 79, 106, 0.2)'
+        default-dark: 'rgba(240, 79, 106, 0.2)'
+    -
+        id: h1-border
+        title: Enable Header 1 Border
+        type: class-toggle
+        default: false
+    -
+        id: h1-border-width
+        title: Header 1 Border Width (in pixels)
+        type: variable-number-slider
+        format: px
+        default: 1
+        min: 0
+        max: 16
+        step: 1
+    -
+        id: h1-border-color
+        title: Header 1 Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: h1-border-radius
+        title: Header 1 Border Radius (in pixels)
+        description: Recommended values are multiples of 2
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 32
+        step: 1
+    -
+        id: header-2
+        title: Heading 2
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: h2
         title: Header 2 Size
@@ -419,6 +524,21 @@ settings:
         type: variable-text
         default: 'normal'
     -
+        id: h2-text-align
+        title: Header 2 Text Alignment
+        type: variable-select
+        default: 'left'
+        options:
+            -
+                label: Left
+                value: left
+            -
+                label: Center
+                value: center
+            -
+                label: Right
+                value: right
+    -
         id: h2-text-color
         title: Header 2 Text Color
         type: variable-themed-color
@@ -426,6 +546,57 @@ settings:
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h2-background
+        title: Enable Header 2 Background Color
+        type: class-toggle
+        default: false
+    -
+        id: h2-bg-color
+        title: Header 2 Background Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'rgba(255, 115, 0, 0.2)'
+        default-dark: 'rgba(255, 115, 0, 0.2)'
+    -
+        id: h2-border
+        title: Enable Header 2 Border
+        type: class-toggle
+        default: false
+    -
+        id: h2-border-width
+        title: Header 2 Border Width (in pixels)
+        type: variable-number-slider
+        format: px
+        default: 1
+        min: 0
+        max: 16
+        step: 1
+    -
+        id: h2-border-color
+        title: Header 2 Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: h2-border-radius
+        title: Header 2 Border Radius (in pixels)
+        description: Recommended values are multiples of 2
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 32
+        step: 1
+    -
+        id: header-3
+        title: Heading 3
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: h3
         title: Header 3 Size
@@ -444,6 +615,21 @@ settings:
         type: variable-text
         default: 'normal'
     -
+        id: h3-text-align
+        title: Header 3 Text Alignment
+        type: variable-select
+        default: 'left'
+        options:
+            -
+                label: Left
+                value: left
+            -
+                label: Center
+                value: center
+            -
+                label: Right
+                value: right
+    -
         id: h3-text-color
         title: Header 3 Text Color
         type: variable-themed-color
@@ -451,6 +637,57 @@ settings:
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h3-background
+        title: Enable Header 3 Background Color
+        type: class-toggle
+        default: false
+    -
+        id: h3-bg-color
+        title: Header 3 Background Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'rgba(255, 187, 0, 0.2)'
+        default-dark: 'rgba(255, 187, 0, 0.2)'
+    -
+        id: h3-border
+        title: Enable Header 3 Border
+        type: class-toggle
+        default: false
+    -
+        id: h3-border-width
+        title: Header 3 Border Width (in pixels)
+        type: variable-number-slider
+        format: px
+        default: 1
+        min: 0
+        max: 16
+        step: 1
+    -
+        id: h3-border-color
+        title: Header 3 Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: h3-border-radius
+        title: Header 3 Border Radius (in pixels)
+        description: Recommended values are multiples of 2
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 32
+        step: 1
+    -
+        id: header-4
+        title: Heading 4
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: h4
         title: Header 4 Size
@@ -469,6 +706,21 @@ settings:
         type: variable-text
         default: 'normal'
     -
+        id: h4-text-align
+        title: Header 4 Text Alignment
+        type: variable-select
+        default: 'left'
+        options:
+            -
+                label: Left
+                value: left
+            -
+                label: Center
+                value: center
+            -
+                label: Right
+                value: right
+    -
         id: h4-text-color
         title: Header 4 Text Color
         type: variable-themed-color
@@ -476,6 +728,57 @@ settings:
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h4-background
+        title: Enable Header 4 Background Color
+        type: class-toggle
+        default: false
+    -
+        id: h4-bg-color
+        title: Header 4 Background Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'rgba(153, 189, 36, 0.2)'
+        default-dark: 'rgba(153, 189, 36, 0.2)'
+    -
+        id: h4-border
+        title: Enable Header 4 Border
+        type: class-toggle
+        default: false
+    -
+        id: h4-border-width
+        title: Header 4 Border Width (in pixels)
+        type: variable-number-slider
+        format: px
+        default: 1
+        min: 0
+        max: 16
+        step: 1
+    -
+        id: h4-border-color
+        title: Header 4 Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: h4-border-radius
+        title: Header 4 Border Radius (in pixels)
+        description: Recommended values are multiples of 2
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 32
+        step: 1
+    -
+        id: header-5
+        title: Heading 5
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: h5
         title: Header 5 Size
@@ -494,6 +797,21 @@ settings:
         type: variable-text
         default: 'normal'
     -
+        id: h5-text-align
+        title: Header 5 Text Alignment
+        type: variable-select
+        default: 'left'
+        options:
+            -
+                label: Left
+                value: left
+            -
+                label: Center
+                value: center
+            -
+                label: Right
+                value: right
+    -
         id: h5-text-color
         title: Header 5 Text Color
         type: variable-themed-color
@@ -501,6 +819,57 @@ settings:
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: h5-background
+        title: Enable Header 5 Background Color
+        type: class-toggle
+        default: false
+    -
+        id: h5-bg-color
+        title: Header 5 Background Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'rgba(40, 178, 194, 0.2)'
+        default-dark: 'rgba(40, 178, 194, 0.2)'
+    -
+        id: h5-border
+        title: Enable Header 5 Border Color
+        type: class-toggle
+        default: false
+    -
+        id: h5-border-color
+        title: Header 5 Border
+        type: variable-themed-color
+        format: hsl 
+    -
+        id: h5-border-width
+        title: Header 5 Border Width (in pixels)
+        type: variable-number-slider
+        format: px
+        default: 1
+        min: 0
+        max: 16
+        step: 1
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: h5-border-radius
+        title: Header 5 Border Radius (in pixels)
+        description: Recommended values are multiples of 2
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 32
+        step: 1
+    -
+        id: header-6
+        title: Heading 6
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: h6
         title: Header 6 Size
@@ -519,6 +888,21 @@ settings:
         type: variable-text
         default: 'normal'
     -
+        id: h6-text-align
+        title: Header 6 Text Alignment
+        type: variable-select
+        default: 'left'
+        options:
+            -
+                label: Left
+                value: left
+            -
+                label: Center
+                value: center
+            -
+                label: Right
+                value: right
+    -
         id: h6-text-color
         title: Header 6 Text Color
         type: variable-themed-color
@@ -527,6 +911,51 @@ settings:
         default-light: 'hsl(34, 28%, 60%)'
         default-dark: 'hsl(35, 27%, 55%)'
     -
+        id: h6-background
+        title: Enable Header 6 Background Color
+        type: class-toggle
+        default: false
+    -
+        id: h6-bg-color
+        title: Header 6 Background Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'rgba(113, 122, 255, 0.2'
+        default-dark: 'rgba(113, 122, 255, 0.2'
+    -
+        id: h6-border
+        title: Enable Header 6 Border
+        type: class-toggle
+        default: false
+    -
+        id: h6-border-width
+        title: Header 6 Border Width (in pixels)
+        type: variable-number-slider
+        format: px
+        default: 1
+        min: 0
+        max: 16
+        step: 1
+    -
+        id: h6-border-color
+        title: Header 6 Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: h6-border-radius
+        title: Header 6 Border Radius (in pixels)
+        description: Recommended values are multiples of 2
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 32
+        step: 1
+    -
         id: header-line-height
         title: Headers Line Height
         type: variable-text
@@ -534,6 +963,7 @@ settings:
     -
         id: note
         title: ✏️ Note
+        description: Adjust colors and features in notes. Includes settings for blockquotes, links, highlights, embeds, popovers and more.
         type: heading
         level: 1
         collapsed: true
@@ -543,15 +973,183 @@ settings:
         description: Toggle on to remove activeline highlighting. Keep it off to show it.
         type: class-toggle
     -
+        id: gray-md-formatting
+        title: Gray Out Markdown Formatting
+        description: Makes markdown formatting less noticeable in Editor View.
+        type: class-toggle
+    -
+        id: emphasis
+        title: 🖍️ Emphasis
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: md-color-bold
+        title: Bold Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(4, 72%, 55%)'
+        default-dark: 'hsl(4, 90%, 61%)'
+    -
+        id: md-color-italic
+        title: Italic Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(205, 66%, 46%)'
+        default-dark: 'hsl(198, 57%, 55%)'
+    -
+        id: md-color-bolditalic
+        title: Bold and Italic Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(32, 55%, 12%)'
+        default-dark: 'hsl(33, 66%, 90%)'
+    -
+        id: md-color-strikethrough
+        title: Strikethrough Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(34, 24%, 30%)'
+    -
+        id: md-color-comment
+        title: Hidden Comments Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(34, 28%, 60%)'
+        default-dark: 'hsl(35, 27%, 55%)'
+    -
+        id: md-color-comment
+        title: Footnote (at the end of the note, not the links) Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: Links
+        title: 🔗 Links
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: no-link-underline
+        title: Remove Link Underline
+        description: When toggled on, underlines on internal and external links will be removed.
+        type: class-toggle
+    -
+        id: Links
+        title: ❗ Resolved Links
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: md-color-reslink
+        title: Resolved Links
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 100%, 42%)'
+        default-dark: 'hsl(50, 100%, 46%)'
+    -
+        id: md-color-reslink-hover
+        title: Resolved Links on Hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 78%, 52%)'
+        default-dark: 'hsl(46, 91%, 69%)'
+    -
+        id: md-color-reslink-active
+        title: Resolved Links on Click
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 89%, 38%)'
+        default-dark: 'hsl(43, 100%, 42%)'
+    -
+        id: Links
+        title: ❔ Unresolved Links
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: md-color-unreslink
+        title: Unresolved Links
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(34, 28%, 60%)'
+        default-dark: 'hsl(35, 27%, 55%)'
+    -
+        id: md-color-unreslink-hover
+        title: Unresolved Links on Hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 100%, 42%)'
+        default-dark: 'hsl(50, 100%, 46%)'
+    -
+        id: md-color-unreslink-active
+        title: Unresolved Links on Click
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 89%, 38%)'
+        default-dark: 'hsl(43, 100%, 42%)'
+    -
+        id: blockquotes
+        title: 👉 Blockquotes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: md-color-blockquotes
+        title: Blockquotes Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(31, 45%, 20%)'
+        default-dark: 'hsl(34, 50%, 80%)'
+    -
+        id: md-color-blockquotes-formatting
+        title: Blockquotes Syntax Text Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(34, 37%, 70%)'
+        default-dark: 'hsl(34, 24%, 30%)'
+    -
+        id: md-color-blockquotes-border
+        title: Blockquotes Border Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
+        id: md-color-blockquotes-bg
+        title: Blockquotes Background Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(36, 36%, 96.9%)'
+        default-dark: 'hsl(26, 16%, 9%)'
+    -
         id: highlight
         title: ⚡ Highlight
         type: heading
         level: 2
         collapsed: true
     -
-        id: multicolor-highlight
-        title: Enable Multicolor Highlight
-        description: Turn this on to activate multicolored highlighting.
+        id: no-multicolor-highlight
+        title: Disable Multicolor Highlight
+        description: Turn off to disable multicolored highlighting.
         type: class-toggle
     -
         id: custom-highlight
@@ -647,6 +1245,8 @@ settings:
                 label: Faint
                 value: md-bullet-color-faint
     -
+        id: 
+    -
         id: note-embeds
         title: 📍 Embeds
         type: heading
@@ -688,8 +1288,45 @@ settings:
         default-light: 'hsl(36, 37%, 92%)'
         default-dark: 'hsl(30, 15%, 13%)'
     -
+        id: md-popover
+        title: 📤 Popovers
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: popover-default
+        title: Usual Popover Size (in view widths)
+        description: This variable is in view widths (percentage of the width of Obsidian's window). Being default at 40vw means that it has a width of 40% of the window's current width size. This allows the popover to dynamically resize depending on the window size. Changing the values of this variable will show you instant changes.
+        type: variable-number-slider
+        format: vw
+        default: 40
+        min: 10
+        max: 90
+        step: 1
+    -
+        id: popover-min
+        title: Minimum Popover Size (in pixels)
+        description: This variable is in pixels. Being the minimum width at 150px means that the dynamic resizing of the popover in relation to the window's width will not be smaller than this "Maximum Popover Size" value.
+        type: variable-number-slider
+        format: px
+        default: 150
+        min: 100
+        max: 1000
+        step: 1
+    -
+        id: popover-max
+        title: Maximum Popover Size (in pixels)
+        description: This variable is in pixels. Being the maximum width at 600px means that the dynamic resizing of the popover in relation to the window's width will not be bigger than this "Maximum Popover Size" value.
+        type: variable-number-slider
+        format: px
+        default: 600
+        min: 100
+        max: 1000
+        step: 1
+    -
         id: graph-view
         title: 🌐 Graph View
+        description: Adjust colors of your graph view.
         type: heading
         level: 1
         collapsed: true
@@ -781,6 +1418,7 @@ settings:
     -
         id: interface-components
         title: 🖱️ Interface Components
+        description: Adjust non-Obsidian native UI components (i.e. scrollbars).
         type: heading
         level: 1
         collapsed: true

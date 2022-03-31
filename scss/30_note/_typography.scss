@@ -24,16 +24,6 @@ body *,
     letter-spacing: var(--tracking-0);
 }
 
-.view-content
-.cm-scroller.node-insert-event {
-    padding:    var(--scale-8-5) //reset value at 16px
-                17px;
-}
-
-div.cm-content {
-    padding-top: 0 !important;
-}
-
 /* Preview */
 .markdown-preview-view {
     font-optical-sizing: auto;
@@ -73,17 +63,20 @@ div.cm-content {
     --md-color-highlight-bg: var(--color-highlight-yellow);
 
     --md-color-bold-highlight-text: var(--text-normal);
-    --md-color-bold-highlight-bg: var(--color-highlight-yellow);
+    --md-color-bold-highlight-bg: var(--color-highlight-red);
 
     --md-color-italic-highlight-text: var(--text-normal);
-    --md-color-italic-highlight-bg: var(--color-highlight-yellow);
+    --md-color-italic-highlight-bg: var(--color-highlight-blue);
 
     --md-color-bi-highlight-text: var(--text-normal);
-    --md-color-bi-highlight-bg: var(--color-highlight-yellow);
+    --md-color-bi-highlight-bg: var(--color-highlight-green);
 
     --md-color-comment: var(--text-muted);
 
     --md-color-footnote: var(--text-normal);
+    --md-color-footnote-link: var(--color-l-green-700);
+    --md-color-footnote-link-hover: var(--color-l-green-500);
+    --md-color-footnote-link-active: var(--color-l-green-900);
 
     --md-color-reslink: var(--color-l-yellow-700);
     --md-color-reslink-hover: var(--color-l-yellow-500);
@@ -122,6 +115,11 @@ div.cm-content {
     --md-color-bullet: var(--md-color-text-faint);
 
     --md-find-highlight-bg: var(--color-highlight-violet);
+
+    --md-unchecked-bg-color: rgba(255, 255, 255, 0.4);
+    --md-unchecked-bg-color-hover: var(--color-l-gray-whiter);
+    --md-unchecked-bg-color-active: var(--color-l-gray-20);
+    --md-checked-bg-color: var(--color-l-green-500);
 }
 
 .theme-dark {
@@ -138,17 +136,20 @@ div.cm-content {
     --md-color-highlight-bg: var(--color-highlight-yellow);
 
     --md-color-bold-highlight-text: var(--text-normal);
-    --md-color-bold-highlight-bg: var(--color-highlight-yellow);
+    --md-color-bold-highlight-bg: var(--color-highlight-red);
 
     --md-color-italic-highlight-text: var(--text-normal);
-    --md-color-italic-highlight-bg: var(--color-highlight-yellow);
+    --md-color-italic-highlight-bg: var(--color-highlight-blue);
 
     --md-color-bi-highlight-text: var(--text-normal);
-    --md-color-bi-highlight-bg: var(--color-highlight-yellow);
+    --md-color-bi-highlight-bg: var(--color-highlight-green);
 
     --md-color-comment: var(--text-muted);
 
     --md-color-footnote: var(--text-normal);
+    --md-color-footnote-link: var(--color-d-green-700);
+    --md-color-footnote-link-hover: var(--color-d-green-500);
+    --md-color-footnote-link-active: var(--color-d-green-900);
 
     --md-color-reslink: var(--color-d-yellow-500);
     --md-color-reslink-hover: var(--color-d-yellow-300);
@@ -187,6 +188,11 @@ div.cm-content {
     --md-color-bullet: var(--md-color-text-faint);
 
     --md-find-highlight-bg: var(--color-highlight-violet);
+
+    --md-unchecked-bg-color: rgba(0, 0, 0, 0.2);
+    --md-unchecked-bg-color-hover: var(--color-d-gray-100);
+    --md-unchecked-bg-color-active: var(--color-d-gray-70);
+    --md-checked-bg-color: var(--color-d-green-900);
 }
 
 .markdown-source-view,

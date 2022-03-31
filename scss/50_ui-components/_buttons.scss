@@ -4,11 +4,13 @@
 /* don't remove !important */
 .theme-light button,
 .theme-dark button {
-    font-family: var(--default-font) !important;
+    font-family: var(--interface-font) !important;
     padding:    var(--scale-2-3)
                 var(--scale-2-8)
                 var(--scale-2-4)
                 var(--scale-2-8) !important;
+    margin-top: var(--scale-2-3);
+    margin-bottom: var(--scale-2-3);
     margin-right: var(--scale-2-4);
     border-radius: var(--scale-2-10);
     transition: var(--duration-superfast)
@@ -120,6 +122,11 @@
                         var(--motion-smooth);
         }
     }
+}
+
+button.clickable-icon[aria-label="Change sort order"] {
+    margin-left: 0;
+    margin-right: var(--scale-2-4);
 }
 
 span.community-theme-remove-button.clickable-icon {

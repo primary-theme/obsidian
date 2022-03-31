@@ -1,0 +1,39 @@
+/*────────────────────────────────────
+            Translucency
+────────────────────────────────────*/
+.theme-light.is-translucent.is-translucent.is-translucent {
+    --opacity-translucency: 0.8;
+
+    & .workspace-split.mod-left-split,
+    & .workspace-split.mod-right-split,
+    & .side-dock-ribbon {
+        --opacity-translucency: 0.8;
+    }
+    
+    & .titlebar,
+    & .workspace-split.mod-root {
+        --opacity-translucency: 0.9;
+    }
+
+    & .status-bar {
+        margin: 0;
+    }
+}
+.theme-dark.is-translucent.is-translucent.is-translucent {
+    --opacity-translucency: 0.6;
+
+    & .workspace-split.mod-left-split,
+    & .workspace-split.mod-right-split,
+    & .side-dock-ribbon {
+        --opacity-translucency: 0.6;
+    }
+
+    & .titlebar,
+    & .workspace-split.mod-root {
+        --opacity-translucency: 0.9;
+    }
+
+    & .status-bar {
+        margin: 0;
+    }
+}

@@ -1,0 +1,341 @@
+/*
+―――――――――――――――――――――――――――――――――――――――――――――――
+Welcome to the Colored Folders CSS Snippet!
+        by ceciliamay for Primary
+―――――――――――――――――――――――――――――――――――――――――――――――
+
+The first section contains color variables
+that correspond to the folders.
+
+The second section contains the code to
+manipulate the colors of the folders including:
+- background color
+- text color
+- collapse icon (same as text)
+- background color when hovered
+- text color when hovered
+
+By default, this snippet allows you to customize 8 folders:
+
+(1) two of which are "brown" to signify miscellany folders
+    these are "bins" and "000"
+
+(2) and six which are "rainbow" colored folders in order of
+    roy g bv
+
+    By changing the hsl values in the first section, it helps you
+    easily change colors of your folders.
+
+Of course, you are free to edit it to your needs.
+Add as needed!
+
+*/
+
+/* FIRST SECTION - COLOR VARIABLES */
+/* Light Mode */
+.theme-light {
+    --folder-color-bins-bg: hsl(35, 33%, 87%);
+    --folder-color-bins-text: hsl(34, 20%, 59%);
+    --folder-color-bins-bg-hover: hsl(36, 33%, 81%);
+    --folder-color-bins-text-hover: hsl(34, 16%, 44%);
+    
+    --folder-color-000-bg: hsl(35, 33%, 87%);
+    --folder-color-000-text: hsl(34, 20%, 59%);
+    --folder-color-000-bg-hover: hsl(36, 33%, 81%);
+    --folder-color-000-text-hover: hsl(34, 16%, 44%);
+
+    --folder-color-100-bg: hsl(9, 42%, 87%);
+    --folder-color-100-text: hsl(9, 36%, 56%);
+    --folder-color-100-bg-hover: hsl(10, 43%, 83%);
+    --folder-color-100-text-hover: hsl(10, 51%, 35%);
+    
+    --folder-color-200-bg: hsl(22, 46%, 86%);
+    --folder-color-200-text: hsl(26, 43%, 52%);
+    --folder-color-200-bg-hover: hsl(22, 48%, 82%);
+    --folder-color-200-text-hover: hsl(25, 53%, 33%);
+    
+    --folder-color-300-bg: hsl(44, 45%, 83%);
+    --folder-color-300-text: hsl(39, 38%, 47%);
+    --folder-color-300-bg-hover: hsl(45, 51%, 78%);
+    --folder-color-300-text-hover: hsl(40, 64%, 32%);
+    
+    --folder-color-400-bg: hsl(84, 33%, 83%);
+    --folder-color-400-text: hsl(83, 34%, 41%);
+    --folder-color-400-bg-hover: hsl(83, 37%, 77%);
+    --folder-color-400-text-hover: hsl(85, 53%, 26%);
+    
+    --folder-color-500-bg: hsl(210, 35%, 85%);
+    --folder-color-500-text: hsl(215, 32%, 52%);
+    --folder-color-500-bg-hover: hsl(209, 42%, 82%);
+    --folder-color-500-text-hover: hsl(214, 56%, 27%);
+    
+    --folder-color-600-bg: hsl(264, 31%, 87%);
+    --folder-color-600-text: hsl(267, 27%, 53%);
+    --folder-color-600-bg-hover: hsl(262, 36%, 84%);
+    --folder-color-600-text-hover: hsl(266, 38%, 39%);
+}
+
+/* Dark Mode */
+.theme-dark {
+    --folder-color-bins-bg: hsl(25, 16%, 15%);
+    --folder-color-bins-text: hsl(21, 15%, 40%);
+    --folder-color-bins-bg-hover: hsl(24, 19%, 19%);
+    --folder-color-bins-text-hover: hsl(21, 22%, 57%);
+    
+    --folder-color-000-bg: hsl(25, 16%, 15%);
+    --folder-color-000-text: hsl(21, 15%, 40%);
+    --folder-color-000-bg-hover: hsl(24, 19%, 19%);
+    --folder-color-000-text-hover: hsl(21, 22%, 57%);
+
+    --folder-color-100-bg: hsl(8, 40%, 20%);
+    --folder-color-100-text: hsl(9, 39%, 61%);
+    --folder-color-100-bg-hover: hsl(8, 42%, 26%);
+    --folder-color-100-text-hover: hsl(9, 49%, 79%);
+    
+    --folder-color-200-bg: hsl(23, 39%, 20%);
+    --folder-color-200-text: hsl(25, 36%, 59%);
+    --folder-color-200-bg-hover: hsl(23, 43%, 28%);
+    --folder-color-200-text-hover: hsl(25, 78%, 79%);
+    
+    --folder-color-300-bg: hsl(46, 46%, 18%);
+    --folder-color-300-text: hsl(39, 36%, 59%);
+    --folder-color-300-bg-hover: hsl(45, 45%, 24%);
+    --folder-color-300-text-hover: hsl(39, 76%, 77%);
+    
+    --folder-color-400-bg: hsl(85, 23%, 18%);
+    --folder-color-400-text: hsl(83, 24%, 55%);
+    --folder-color-400-bg-hover: hsl(85, 32%, 25%);
+    --folder-color-400-text-hover: hsl(83, 69%, 82%);
+    
+    --folder-color-500-bg: hsl(210, 23%, 18%);
+    --folder-color-500-text: hsl(215, 31%, 60%);
+    --folder-color-500-bg-hover: hsl(209, 30%, 28%);
+    --folder-color-500-text-hover: hsl(214, 89%, 82%);
+    
+    --folder-color-600-bg: hsl(266, 17%, 18%);
+    --folder-color-600-text: hsl(266, 22%, 58%);
+    --folder-color-600-bg-hover: hsl(264, 25%, 28%);
+    --folder-color-600-text-hover: hsl(266, 67%, 82%);
+}
+
+
+/*  SECOND SECTION - MANIPULATING THE FOLDERS */
+
+/*
+
+this part are a bunch of tiny fixes so that
+your colored folders will have a margin
+against each other.
+
+do not touch unless you know what you are doing.
+
+*/
+
+.nav-folder {
+    margin-bottom: 2px; /* do not touch */
+}
+
+.nav-folder-children .nav-folder-title:first-child,
+.nav-folder-children .nav-file-title:first-child {
+    margin-top: 2px; /* do not touch */
+}
+
+/* 
+
+This is the part where you point the code to your folders.
+The [data-type*=] that you see used often throughout
+this snippet means:
+"all folder paths within and including {YOUR_FOLDER_TITLE}"
+
+Remember to replace [data-type*={YOUR_FOLDER_TILE}] with your own!
+
+Do not touch [data-type="file-explorer"].
+
+*/
+
+/* _bins */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="_bins"] {
+    color: var(--folder-color-bins-text);
+    background: var(--folder-color-bins-bg) !important;
+}
+
+.nav-folder-title[data-path*="_bins"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-bins-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="_bins"]:hover {
+    color: var(--folder-color-bins-text-hover) !important;
+    background: var(--folder-color-bins-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="_bins"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-bins-text-hover) !important;
+}
+
+/* 000 */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="000"] {
+    color: var(--folder-color-000-text);
+    background: var(--folder-color-000-bg) !important;
+}
+
+.nav-folder-title[data-path*="000"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-000-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="000"]:hover {
+    color: var(--folder-color-000-text-hover) !important;
+    background: var(--folder-color-000-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="000"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-000-text-hover) !important;
+}
+
+/* 100 */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="100"],
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="100"] .nav-file-title {
+    color: var(--folder-color-100-text);
+    background: var(--folder-color-100-bg) !important;
+}
+
+.nav-folder-title[data-path*="100"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-100-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="100"]:hover {
+    color: var(--folder-color-100-text-hover) !important;
+    background: var(--folder-color-100-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="100"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-100-text-hover) !important;
+}
+
+/* 200 */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="200"] {
+    color: var(--folder-color-200-text);
+    background: var(--folder-color-200-bg) !important;
+}
+
+.nav-folder-title[data-path*="200"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-200-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="200"]:hover {
+    color: var(--folder-color-200-text-hover) !important;
+    background: var(--folder-color-200-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="200"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-200-text-hover) !important;
+}
+
+/* 300 */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="300"] {
+    color: var(--folder-color-300-text);
+    background: var(--folder-color-300-bg) !important;
+}
+
+.nav-folder-title[data-path*="300"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-300-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="300"]:hover {
+    color: var(--folder-color-300-text-hover) !important;
+    background: var(--folder-color-300-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="300"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-300-text-hover) !important;
+}
+
+/* 400 */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="400"] {
+    color: var(--folder-color-400-text);
+    background: var(--folder-color-400-bg) !important;
+}
+
+.nav-folder-title[data-path*="400"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-400-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="400"]:hover {
+    color: var(--folder-color-400-text-hover) !important;
+    background: var(--folder-color-400-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="400"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-400-text-hover) !important;
+}
+
+/* 500 */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="500"] {
+    color: var(--folder-color-500-text);
+    background: var(--folder-color-500-bg) !important;
+}
+
+.nav-folder-title[data-path*="500"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-500-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="500"]:hover {
+    color: var(--folder-color-500-text-hover) !important;
+    background: var(--folder-color-500-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="500"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-500-text-hover) !important;
+}
+
+/* 600 */
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="600"] {
+    color: var(--folder-color-600-text);
+    background: var(--folder-color-600-bg) !important;
+}
+
+.nav-folder-title[data-path*="600"]
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-600-text);
+}
+
+.workspace-leaf-content[data-type="file-explorer"]
+.nav-folder-title[data-path*="600"]:hover {
+    color: var(--folder-color-600-text-hover) !important;
+    background: var(--folder-color-600-bg-hover) !important;
+}
+
+.nav-folder-title[data-path*="600"]:hover
+.nav-folder-collapse-indicator {
+    color: var(--folder-color-600-text-hover) !important;
+}
+

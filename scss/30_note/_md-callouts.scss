@@ -31,10 +31,18 @@
     transition: var(--duration-superfast)
                 var(--motion-smooth);
 
+    .markdown-source-view & {
+        font-family: var(--font-editor);
+    }
+
     .markdown-source-view.mod-cm6 & {
         margin: 0 0;
         border-top-right-radius: var(--scale-2-4);
         border-bottom-right-radius: var(--scale-2-4);
+    }
+
+    .markdown-preview-view & {
+        font-family: var(--font-preview);
     }
 
     &-title {
@@ -71,16 +79,6 @@
 /* General Styling */
 .callout {
     border: 1px solid rgba(var(--callout-color), 0.2);
-    overflow: hidden;
-
-    .theme-light & {
-        box-shadow: 0px 2px 6px 0px
-        rgba(0, 0, 0, 0.1);
-    }
-    .theme-dark & {
-        box-shadow: 0px 2px 6px 0px
-        rgba(0, 0, 0, 0.2);
-    }
 
     &-title {
         .theme-light & {
@@ -103,11 +101,15 @@
     &.is-collapsed .callout-title {
         .theme-light & {
             box-shadow: 0px -1px 0px 0px
-            rgba(0, 0, 0, 0.05) inset
+            rgba(0, 0, 0, 0.05) inset,
+                        0px 2px 6px 0px
+            rgba(0, 0, 0, 0.1);
         }
         .theme-dark & {
             box-shadow: 0px -1px 0px 0px
-            rgba(0, 0, 0, 0.175) inset
+            rgba(0, 0, 0, 0.175) inset,
+                        0px 2px 6px 0px
+            rgba(0, 0, 0, 0.2);
         }
     }
 
@@ -127,18 +129,61 @@
         .theme-light & {
             background: var(--color-l-gray-10);
             box-shadow: 0px -3px 0px 0px
-            rgba(0, 0, 0, 0.05) inset
+            rgba(0, 0, 0, 0.05) inset,
+                        0px 2px 6px 0px
+            rgba(0, 0, 0, 0.1);
         }
         .theme-dark & {
             background: var(--color-d-black);
             box-shadow: 0px -3px 0px 0px
-            rgba(0, 0, 0, 0.175) inset
+            rgba(0, 0, 0, 0.175) inset,
+                        0px 2px 6px 0px
+            rgba(0, 0, 0, 0.2);
         }
     }
 }
 
+/* Callout Colors */
+.theme-light,
+.theme-dark {
+    --callout-color-note: 200, 175, 155;
+    --callout-color-abstract: 34, 152, 225;
+    --callout-color-summary: 255, 221, 88;
+    --callout-color-tldr: 240, 180, 225;
+    --callout-color-info: 0, 171, 197;
+    --callout-color-todo: 0, 171, 197;
+    --callout-color-tip: 70, 206, 185;
+    --callout-color-hint: 70, 206, 185;
+    --callout-color-important: 244, 87, 93;
+    --callout-color-celebrate: 100, 175, 255;
+    --callout-color-celebrate-bg: linear-gradient(45deg, #ef92af70, #7bd7e970, #81e1a570, #ffda2b70);
+    --callout-color-success: 100, 175, 255;
+    --callout-color-success-bg: linear-gradient(45deg, #ef92af70, #7bd7e970, #81e1a570, #ffda2b70);
+    --callout-color-check: 0, 200, 83;
+    --callout-color-done: 0, 200, 83;
+    --callout-color-question: 130, 190, 235;
+    --callout-color-help: 150, 95, 255;
+    --callout-color-faq: 130, 190, 235;
+    --callout-color-warning: 255, 161, 32;
+    --callout-color-caution: 255, 161, 32;
+    --callout-color-attention: 255, 161, 32;
+    --callout-color-failure: 226, 72, 86;
+    --callout-color-missing: 226, 72, 86;
+    --callout-color-danger: 226, 72, 86;
+    --callout-color-error: 226, 72, 86;
+    --callout-color-bug: 206, 91, 124;
+    --callout-color-example: 173, 102, 234;
+    --callout-color-quote: 158, 158, 158;
+    --callout-color-cite: 158, 158, 158;
+    /* Primary Custom Callouts */
+    --callout-color-pro: 147, 241, 62;
+    --callout-color-con: 255, 75, 75;
+    --callout-color-idea: 247, 141, 25;
+    --callout-color-morning: 149, 197, 194;
+}
+
+
 /* Callout Type Styling */
-// Abstract
 div.callout {
     --callout-color: 200, 175, 155;
 
@@ -185,8 +230,12 @@ div.callout {
         --callout-color: 244, 87, 93;
     }
     &[data-callout="check"] {
+        --callout-icon: check;
+        --callout-color: 0, 200, 83;
     }
     &[data-callout="done"] {
+        --callout-icon: check;
+        --callout-color: 0, 200, 83;
     }
     &[data-callout="question"] {
         --callout-color: 130, 190, 235;
@@ -228,8 +277,10 @@ div.callout {
         --callout-color: 173, 102, 234;
     }
     &[data-callout="quote"] {
+        --callout-color: 158, 158, 158;
     }
     &[data-callout="cite"] {
+        --callout-color: 158, 158, 158;
     }
     &[data-callout="pro"] {
         --callout-icon: thumbs-up;

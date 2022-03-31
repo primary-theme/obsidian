@@ -7,12 +7,25 @@ table.dataview {
     overflow-wrap: normal;
 }
 
+/* padding fix for LP */
+.block-language-dataview.node-insert-event > div.markdown-rendered.cm-embed-block {
+    padding: 0;
+}
+
 .dataview {
     .markdown-source-view.mod-cm6 & {
     /* Source View */
         &.table-view-table {
-            background: var(--background-modifier-border);
-    
+            margin-bottom: 0;
+            border: 1px solid var(--background-modifier-border);
+
+            & > thead > tr > th {
+                font-size: var(--font-scale-1);
+                border-width: 0px;
+                border-bottom: 1px solid var(--background-modifier-border);
+                border-right: 1px solid var(--background-modifier-border);
+            }
+
             & thead,
             & tr,
             & td,
@@ -27,10 +40,20 @@ table.dataview {
             
             & thead.table-view-thead tr th { // Table Head
                 font-size: var(--font-scale-1);
-                border-bottom: none;
 
                 color: var(--md-color-code-red-1);
                 background: var(--background-secondary);
+            }
+
+            & .table-view-tbody {
+                & tr {
+                border-bottom: 1px solid var(--background-modifier-border);
+                }
+    
+                & td {
+                    padding: 4px 10px;
+                    border-right: 1px solid var(--background-modifier-border);
+                }
             }
 
             & .table-view-tbody { // Table Body

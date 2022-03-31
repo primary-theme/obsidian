@@ -2,29 +2,24 @@
 ++++++++++++Variables+++++++++++++++++
 ────────────────────────────────────*/
 
-:root {
+:root,
+body {
 
     /*──────────Font Families──────────*/
     
     --font-sans:
-        "Karla", -apple-system,
-        BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+        "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
     --font-monospace:
         "Cascadia Code", Inconsolata, Courier, monospace;
     
-    --font-preview: "Karla", -apple-system,
-    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-    --font-preview-header: "Karla", -apple-system,
-    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-    --font-editor:  "Karla", -apple-system,
-    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-    --font-editor-header:  "Karla", -apple-system,
-    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-preview: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-preview-header: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-editor:  "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --font-editor-header:  "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
     --font-code: "Cascadia Code", Inconsolata, Courier, monospace;
 
     /* Original Obsidian Font Variables */
-    --default-font: "Karla", -apple-system,
-    BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --interface-font: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
     --mermaid-font: var(--font-preview);
     --reveal-font:  var(--font-preview);
     

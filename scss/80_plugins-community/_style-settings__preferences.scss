@@ -18,6 +18,200 @@
     }
 }
 
+/* hide note header, show on hover */
+.hide__note-header:not(.plugin-sliding-panes, .plugin-sliding-panes-rotate-header, .plugin-sliding-panes-stacking, .plugin-sliding-select-orientation-sideway, .is-mobile) {
+    & .workspace-leaf .view-header.view-header.view-header {
+        height: var(--scale-8-1) !important;
+        border-bottom: 1px solid transparent !important;
+        transition: var(--duration-fast-2) var(--motion-delay);
+
+        &:hover {
+            height: var(--scale-2-18) !important;
+            border-bottom: 1px solid var(--background-modifier-border) !important;
+
+            opacity: 1;
+        }
+    }
+
+    & .view-content {
+        height: 100%;
+    }
+
+    & .view-header-title,
+    & .view-header-icon,
+    & .view-header .view-actions {
+        opacity: 0;
+        transition: opacity var(--duration-fast-2) var(--motion-delay);
+
+        &:hover {
+            transition: none;
+        }
+    }
+
+    & .view-header:hover .view-header-title,
+    & .view-header:hover .view-header-icon,
+    & .view-header:hover .view-actions {
+        opacity: 1;
+    }
+
+    & .graph-controls.is-close {
+        margin-top: 36px;
+    }
+}
+
+/* hide side dock ribbon */
+.hide__sidedockribbon-full:not(.is-mobile) {
+    & .side-dock-ribbon {
+        display: none;
+    }
+}
+
+.hide__sidedockribbon-hover:not(.is-mobile) {
+    --sdr-left-height: clamp(150px, 20vh, 1200px);
+    --sdr-left-height-hover: clamp(150px, 40vh, 1200px);
+    --sdr-right-height: 45px;
+
+    & .side-dock-ribbon.side-dock-ribbon {
+        position: fixed;
+        overflow-y: hidden;
+        
+        background: var(--background-secondary);
+        border: 1px solid var(--background-modifier-border);
+
+        &:hover {
+            background: var(--background-primary);
+            transform: scale(1.15);
+        }
+
+        &:not(.is-collapsed) {
+            background: var(--background-primary);
+        }
+        
+        &.mod-left {
+            left: -28px;
+            top: calc(50% - calc(var(--sdr-left-height) / 2));
+            height: var(--sdr-left-height);
+            border-top-right-radius: var(--scale-2-4);
+            border-bottom-right-radius: var(--scale-2-4);
+
+            &:hover {
+                left: 0;
+                top: calc(50% - calc(var(--sdr-left-height-hover) / 2));
+                height: var(--sdr-left-height-hover);
+                overflow-y: scroll;
+            }
+        }
+
+        &.mod-right {
+            right: -28px;
+            top: calc(50% - calc(var(--sdr-right-height) / 2));
+            height: var(--sdr-right-height);
+            border-top-left-radius: var(--scale-2-4);
+            border-bottom-left-radius: var(--scale-2-4);
+
+            &:hover {
+                right: 0;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.hide__sidedockribbon-functional:not(.is-mobile) {
+    & .side-dock-ribbon {
+        background: var(--background-primary);
+        opacity: 0.5;
+        transition: opacity var(--duration-superfast) var(--motion-smooth);
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.is-collapsed {
+            opacity: 1;
+        }
+    }
+
+    & .mod-left.side-dock-ribbon {
+        width: 36px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+
+        border: 1px solid var(--background-modifier-border);
+        border-radius: var(--scale-2-4);
+
+        margin-left: var(--scale-8-2);
+        margin-bottom: var(--scale-8-2);
+
+        transition: var(--duration-fast-2) var(--motion-smooth);
+
+        &:hover {
+            flex: 0 0 var(--scale-2-18);
+        }
+
+        & .side-dock-actions {
+            display: none;
+        }
+
+        & .side-dock-ribbon-action {
+            padding-bottom: var(--scale-2-2);
+        }
+
+        & .workspace-ribbon-collapse-btn {
+            justify-items: flex-end;
+            padding: var(--scale-2-4)
+                    var(--scale-2-4)
+                    var(--scale-2-2)
+                    var(--scale-2-4);
+            margin: 0;
+        }
+    }
+
+    & .mod-right.side-dock-ribbon {
+        transition: var(--duration-fast-2) var(--motion-smooth);
+
+        width: 36px;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        border: 1px solid var(--background-modifier-border);
+        border-radius: var(--scale-2-4);
+
+        margin-right: var(--scale-8-2);
+        margin-bottom: var(--scale-8-5);
+
+        & .workspace-ribbon-collapse-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0;
+        }
+    }
+
+    /* hide status bar fix */
+    &.hider-status .mod-right.side-dock-ribbon,
+    &.hide__status-bar  .mod-right.side-dock-ribbon {
+        margin-bottom: var(--scale-8-2);
+    }
+}
+
+/* hide status bar */
+.hide__status-bar .status-bar {
+    display: none;
+}
+
+/* only show sync status bar */
+.sync-only-status-bar .status-bar .status-bar-item:not(.plugin-sync) {
+    display: none;
+}
+
 /* tab header */
 /* Size */
 .tab-header__size-small {
@@ -326,20 +520,284 @@ body.header-size {
     }
 }
 
+/*────────── header features ──────────*/
+body {
+    --h1-bg-color: var(--color-highlight-red);
+    --h2-bg-color: var(--color-highlight-orange);
+    --h3-bg-color: var(--color-highlight-yellow);
+    --h4-bg-color: var(--color-highlight-green);
+    --h5-bg-color: var(--color-highlight-blue);
+    --h6-bg-color: var(--color-highlight-violet);
+
+    --h1-border-width: 1px;
+    --h2-border-width: 1px;
+    --h3-border-width: 1px;
+    --h4-border-width: 1px;
+    --h5-border-width: 1px;
+    --h6-border-width: 1px;
+
+    --h1-border-color: var(--background-modifier-border);
+    --h2-border-color: var(--background-modifier-border);
+    --h3-border-color: var(--background-modifier-border);
+    --h4-border-color: var(--background-modifier-border);
+    --h5-border-color: var(--background-modifier-border);
+    --h6-border-color: var(--background-modifier-border);
+
+    --h1-border-radius: 0px;
+    --h2-border-radius: 0px;
+    --h3-border-radius: 0px;
+    --h4-border-radius: 0px;
+    --h5-border-radius: 0px;
+    --h6-border-radius: 0px;
+
+    --h1-text-align: left;
+    --h2-text-align: left;
+    --h3-text-align: left;
+    --h4-text-align: left;
+    --h5-text-align: left;
+    --h6-text-align: left;
+}
+
+.CodeMirror-line.HyperMD-header,
+.cm-line.HyperMD-header {
+    &-1 {
+        /* add background */
+        .h1-background & {
+            background: var(--h1-bg-color);
+            padding: var(--scale-2-2) var(--scale-2-4);
+            border-radius: var(--h1-border-radius);
+        }
+
+        /* add border at the bottom */
+        .h1-border & {
+            padding-bottom: var(--scale-2-4);
+            border-bottom: var(--h1-border-width) solid var(--h1-border-color);
+            border-radius: var(--h1-border-radius);
+        }
+
+        /* text align */
+        text-align: var(--h1-text-align);
+    }
+    &-2 {
+        /* add background */
+        .h2-background & {
+            background: var(--h2-bg-color);
+            padding: var(--scale-2-2) var(--scale-2-4);
+            border-radius: var(--h2-border-radius);
+        }
+
+        /* add border at the bottom */
+        .h2-border & {
+            padding-bottom: var(--scale-2-4);
+            border-bottom: 1px solid var(--h2-border-color);
+            border-radius: var(--h2-border-radius);
+        }
+
+        /* text align */
+        text-align: var(--h2-text-align);
+    }
+    &-3 {
+        /* add background */
+        .h3-background & {
+            background: var(--h3-bg-color);
+            padding: var(--scale-2-2) var(--scale-2-4);
+            border-radius: var(--h3-border-radius);
+        }
+
+        /* add border at the bottom */
+        .h3-border & {
+            padding-bottom: var(--scale-2-4);
+            border-bottom: 1px solid var(--h3-border-color);
+            border-radius: var(--h3-border-radius);
+        }
+
+        /* text align */
+        text-align: var(--h3-text-align);
+    }
+    &-4 {
+        /* add background */
+        .h4-background & {
+            background: var(--h4-bg-color);
+            padding: var(--scale-2-2) var(--scale-2-4);
+            border-radius: var(--h4-border-radius);
+        }
+
+        /* add border at the bottom */
+        .h4-border & {
+            padding-bottom: var(--scale-2-4);
+            border-bottom: 1px solid var(--h4-border-color);
+            border-radius: var(--h4-border-radius);
+        }
+
+        /* text align */
+        text-align: var(--h4-text-align);
+    }
+    &-5 {
+        /* add background */
+        .h5-background & {
+            background: var(--h5-bg-color);
+            padding: var(--scale-2-2) var(--scale-2-4);
+            border-radius: var(--h5-border-radius);
+        }
+
+        /* add border at the bottom */
+        .h5-border & {
+            padding-bottom: var(--scale-2-4);
+            border-bottom: 1px solid var(--h5-border-color);
+            border-radius: var(--h5-border-radius);
+        }
+
+        /* text align */
+        text-align: var(--h5-text-align);
+    }
+    &-6 {
+        /* add background */
+        .h6-background & {
+            background: var(--h6-bg-color);
+            padding: var(--scale-2-2) var(--scale-2-4);
+            border-radius: var(--h6-border-radius);
+        }
+
+        /* add border at the bottom */
+        .h6-border & {
+            padding-bottom: var(--scale-2-4);
+            border-bottom: 1px solid var(--h6-border-color);
+            border-radius: var(--h6-border-radius);
+        }
+
+        /* text align */
+        text-align: var(--h6-text-align);
+    }
+}
+
+h1 {
+    /* add background */
+    .h1-background & {
+        background: var(--h1-bg-color);
+        padding: var(--scale-2-2) var(--scale-2-4);
+        border-radius: var(--h1-border-radius);
+    }
+
+    /* add border at the bottom */
+    .h1-border & {
+        padding-bottom: var(--scale-2-4);
+        border-bottom: var(--h1-border-width) solid var(--h1-border-color);
+        border-radius: var(--h1-border-radius);
+    }
+
+    /* text align */
+    text-align: var(--h1-text-align);
+}
+
+h2 {
+    /* add background */
+    .h2-background & {
+        background: var(--h2-bg-color);
+        padding: var(--scale-2-2) var(--scale-2-4);
+        border-radius: var(--h2-border-radius);
+    }
+
+    /* add border at the bottom */
+    .h2-border & {
+        padding-bottom: var(--scale-2-4);
+        border-bottom: 1px solid var(--h2-border-color);
+        border-radius: var(--h2-border-radius);
+    }
+
+    /* text align */
+    text-align: var(--h2-text-align);
+}
+
+h3 {
+    /* add background */
+    .h3-background & {
+        background: var(--h3-bg-color);
+        padding: var(--scale-2-2) var(--scale-2-4);
+        border-radius: var(--h3-border-radius);
+    }
+
+    /* add border at the bottom */
+    .h3-border & {
+        padding-bottom: var(--scale-2-4);
+        border-bottom: 1px solid var(--h3-border-color);
+        border-radius: var(--h3-border-radius);
+    }
+
+    /* text align */
+    text-align: var(--h3-text-align);
+}
+
+h4 {
+    /* add background */
+    .h4-background & {
+        background: var(--h4-bg-color);
+        padding: var(--scale-2-2) var(--scale-2-4);
+        border-radius: var(--h4-border-radius);
+    }
+
+    /* add border at the bottom */
+    .h4-border & {
+        padding-bottom: var(--scale-2-4);
+        border-bottom: 1px solid var(--h4-border-color);
+        border-radius: var(--h4-border-radius);
+    }
+
+    /* text align */
+    text-align: var(--h4-text-align);
+}
+
+h5 {
+    /* add background */
+    .h5-background & {
+        background: var(--h5-bg-color);
+        padding: var(--scale-2-2) var(--scale-2-4);
+        border-radius: var(--h5-border-radius);
+    }
+
+    /* add border at the bottom */
+    .h5-border & {
+        padding-bottom: var(--scale-2-4);
+        border-bottom: 1px solid var(--h5-border-color);
+        border-radius: var(--h5-border-radius);
+    }
+
+    /* text align */
+    text-align: var(--h5-text-align);
+}
+
+h6 {
+    /* add background */
+    .h6-background & {
+        background: var(--h6-bg-color);
+        padding: var(--scale-2-2) var(--scale-2-4);
+        border-radius: var(--h6-border-radius);
+    }
+
+    /* add border at the bottom */
+    .h6-border & {
+        padding-bottom: var(--scale-2-4);
+        border-bottom: 1px solid var(--h6-border-color);
+        border-radius: var(--h6-border-radius);
+    }
+
+    /* text align */
+    text-align: var(--h6-text-align);
+}
+
 /*────────── note ──────────*/
 /* multicolor highlight */
-.multicolor-highlight {
-    --md-color-highlight-text: var(--color-l-black);
+.no-multicolor-highlight {
+    --md-color-highlight-text: var(--text-normal);
     --md-color-highlight-bg: var(--color-highlight-yellow);
 
-    --md-color-bold-highlight-text: var(--color-l-black);
-    --md-color-bold-highlight-bg: var(--color-highlight-red);
+    --md-color-bold-highlight-text: var(--text-normal);
+    --md-color-bold-highlight-bg: var(--color-highlight-yellow);
 
-    --md-color-italic-highlight-text: var(--color-l-black);
-    --md-color-italic-highlight-bg: var(--color-highlight-blue);
+    --md-color-italic-highlight-text: var(--text-normal);
+    --md-color-italic-highlight-bg: var(--color-highlight-yellow);
 
-    --md-color-bi-highlight-text: var(--color-l-black);
-    --md-color-bi-highlight-bg: var(--color-highlight-green);
+    --md-color-bi-highlight-text: var(--text-normal);
+    --md-color-bi-highlight-bg: var(--color-highlight-yellow);
 }
 
 /* bullet color */

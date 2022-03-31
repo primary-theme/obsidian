@@ -29,6 +29,11 @@
     }
 }
 
+.side-dock-ribbon.is-collapsed .mod-left-split,
+.side-dock-ribbon.is-collapsed .mod-right-split {
+    opacity: 0;
+}
+
 /* Side Dock Ribbon Icons Sizing */
 .side-dock-ribbon-action {
     padding:    var(--scale-0-0)

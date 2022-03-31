@@ -1,0 +1,77 @@
+/*──────────Footnotes──────────*/
+/* Source View */
+.cm-s-obsidian span.cm-footref {
+    color: var(--md-color-footnote-link);
+    font-size: 70% !important;
+    text-decoration: none !important;
+    vertical-align: super;
+
+    &:hover {
+        color: var(--md-color-footnote-link-hover);
+    }
+    
+    &:active {
+        color: var(--md-color-footnote-link-active);
+    }
+}
+
+/* Section */
+.cm-s-obsidian span:where(.cm-hmd-footnote.cm-link) .cm-underline {
+    color: var(--md-color-footnote-link);
+    text-decoration: none !important;
+
+    &:hover {
+        color: var(--md-color-footnote-link-hover);
+    }
+    
+    &:active {
+        color: var(--md-color-footnote-link-active);
+    }
+}
+
+section.footnotes {
+    font-size: var(--font-scale-0-5);
+    line-height: 1em;
+    
+    & a.footnote-link {
+        color: var(--md-color-text-muted);
+        background: var(--background-primary-alt);
+        padding: 0 2px;
+        border: 1px solid var(--background-modifier-border);
+        border-radius: var(--scale-8-4);
+        margin: 0 2px;
+        vertical-align: middle;
+        
+        &:hover {
+            color: var(--md-color-footnote-link-hover);
+        }
+        &:active {
+            color: var(--md-color-footnote-link-active);
+        }
+    }
+}
+
+/* Preview View */
+a.footnote-link {
+    color: var(--md-color-footnote-link);
+    font-size: 70%;
+    text-decoration: none !important;
+
+    h1 &, 
+    h2 &, 
+    h3 &, 
+    h4 &, 
+    h5 &, 
+    h6 & {
+        font-size: 70%;
+        text-decoration: none !important;
+    }
+
+    &:hover {
+        color: var(--md-color-footnote-link-hover);
+    }
+
+    &:active {
+        color: var(--md-color-footnote-link-active);
+    }
+}

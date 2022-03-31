@@ -1,8 +1,14 @@
 /*────────────────────────────────────
             Popovers
 ────────────────────────────────────*/
+:root {
+    --popover-min: 150px;
+    --popover-default: 40vw;
+    --popover-max: 600px;
+}
+
 .popover.hover-popover {
-    width: 40vw;
+    width: clamp(var(--popover-min), var(--popover-default), var(--popover-max));
     border-radius: var(--scale-2-6);
     border: 1px solid var(--background-modifier-border);
     box-shadow: var(--shadow-l)

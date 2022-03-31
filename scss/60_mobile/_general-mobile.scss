@@ -230,7 +230,7 @@
 .is-mobile .modal {
     .vertical-tab-header::before {
         content: "Settings";
-        font-family: var(--default-font);
+        font-family: var(--interface-font);
         font-weight: var(--font-semi-bold);
         color: var(--text-muted);
         background: var(--background-secondary);

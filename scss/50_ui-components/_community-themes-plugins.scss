@@ -1,4 +1,23 @@
 /*─────────Community Themes and Plugins Modals──────────*/
+body:not(.is-mobile) .theme-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem 0rem;
+
+    & .community-theme {
+        align-self: stretch;
+        justify-self: center;
+
+        & .community-theme-remove-button {
+            display: block;
+        }
+    }
+}
+
+.community-theme-filters-container {
+    padding: 1rem 1rem 0rem 1rem;
+}
+
 .modal {
     /*─────────Community Themes Modal──────────*/
     &.mod-community-theme {
@@ -194,16 +213,80 @@
     }
 }
 
-/* Selected Community Theme */
-.community-theme.is-selected {
+/* Selected Theme */
+body:not(.is-mobile) .community-theme.is-selected {
+    border-radius:  var(--scale-8-3);
+
+    /* for theme-list grid */
+    grid-column: 1 / 4;
+    grid-row: 1;
+    max-width: 96%;
+
+    /* for inside elements */
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    padding: 20px 20px;
+
+    & .community-theme-title {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+
+        text-align: left;
+        font-size: 2rem;
+        margin: 1rem 1.2rem;
+    }
+
+    & .community-theme-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 30px 50px 440px;
+
+        margin: 0;
+
+        & .community-theme-downloads {
+            margin: 0;
+        }
+    }
+
+    & .community-theme-screenshot {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        max-width: 100%;
+    }
+
+    & .modal-button-container {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        margin-top: 6px;
+        margin-left: 6rem;
+    }
+
+    & .community-theme-remove-button {
+        top: 36px;
+        right: 24px;
+        width: 48px;
+        height: 28px;
+
+        border-radius: 32px;
+    }
+
+    /* Notes and Link to Documentation */
     &.is-selected .community-theme-info::after {
-        content: "🪄 Customize using the Style Settings Plugin";
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        align-self: center;
+        justify-self: center;
+
+        content:
+        "Hello there! Cecil here. 🦊 \A Welcome to Primary. \A I hope you have a cozy time. \A \A If you want to toggle exclusive features, tweak some colors and fonts — download the Style Settings Plugin. \A Check it out, you might like some of the presets there! \A \A Remember to update the theme from time to time to get the latest fixes, improvements, etc. \A \A 💛 Support its development at \A ko-fi.com/ceciliamay \A \A 🎯 Follow its development at \A tinyurl.com/primary-board";
+
         line-height: 1.4;
         width: 75%;
         position: relative;
         background: var(--background-primary-alt);
         white-space: pre-wrap;
-        text-align: center;
+        text-align: left;
         padding: var(--scale-2-4);
         border: 1px solid var(--background-modifier-border);
         border-radius: var(--scale-2-3);
@@ -212,6 +295,13 @@
     }
 
     & span.clickable-icon[aria-label="Visit on GitHub"] {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        align-self: center;
+        justify-self: center;
+        margin: 0 2rem;
+        width: auto;
+
         color: var(--text-normal);
         background: var(--background-primary);
         border-radius: var(--scale-8-4);
@@ -227,7 +317,7 @@
         }
 
         &:after {
-            content: "Documentation";
+            content: "How to Use Primary";
             width: 100%;
             display: block;
             margin-left: var(--scale-8-1);

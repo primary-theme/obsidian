@@ -43,17 +43,17 @@
         }
 
         &.mod-minimize:hover {
-            color: var(--color-l-white);
+            color: var(--color-l-whiter);
             background: var(--color-l-blue-500);
         }
 
         &.mod-maximize:hover {
-            color: var(--color-l-white);
+            color: var(--color-l-whiter);
             background: var(--color-l-yellow-500);
         }
 
         &.mod-close:hover {
-            color: var(--color-l-white);
+            color: var(--color-l-whiter);
             background: var(--color-l-red-500);
         }
     }
@@ -90,17 +90,17 @@
         }
 
         &.mod-minimize:hover {
-            color: var(--color-d-white);
+            color: var(--color-d-whiter);
             background: var(--color-d-blue-700);
         }
 
         &.mod-maximize:hover {
-            color: var(--color-d-white);
+            color: var(--color-d-whiter);
             background: var(--color-d-yellow-700);
         }
 
         &.mod-close:hover {
-            color: var(--color-d-white);
+            color: var(--color-d-whiter);
             background: var(--color-d-red-700);
         }
     }

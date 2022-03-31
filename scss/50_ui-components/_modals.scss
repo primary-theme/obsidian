@@ -9,9 +9,7 @@
 /*─────────All Modals──────────*/
 .modal {
     width: clamp(200px, 90vw, 960px);
-    min-height: 20vh;
     height: auto;
-    max-height: 70vh;
 
     // Border and Overflow Fix
     border-radius: var(--scale-2-8);
@@ -54,7 +52,7 @@
     &.mod-community-theme.mod-community-theme,
     &.mod-community-plugin {
         width: clamp(200px, 90vw, 960px);
-        min-height: 80vh;
+        min-height: 90vh;
 
         overflow: hidden;
     }
