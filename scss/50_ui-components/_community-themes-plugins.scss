@@ -285,9 +285,9 @@ body:not(.is-mobile) .community-theme.is-selected {
         line-height: 1.4;
         width: 88%;
         position: relative;
-        background: var(--background-primary-alt);
         white-space: pre-wrap;
         text-align: left;
+        border: none;
     }
 }
 
