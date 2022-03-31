@@ -7412,6 +7412,63 @@ table.dataview {
 }
 
 /*────────────────────────────────────
+        Full Calendar Plugin
+────────────────────────────────────*/
+.fc {
+  --fc-button-active-bg-color: var(--interactive-accent) !important;
+  --fc-event-bg-color: var(--text-highlight-bg) !important;
+  --fc-now-indicator-color: var(--interactive-accent) !important;
+  --fc-highlight-color: var(--background-primary-alt) !important;
+  --fc-today-bg-color: var(--background-primary-alt) !important;
+}
+
+.fc-button-active {
+  background-color: var(--fc-button-active-bg-color) !important;
+}
+
+.fc th {
+  background: var(--background-primary-alt);
+}
+
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  border-color: transparent;
+  border-color: transparent;
+}
+
+.fc .fc-button-primary:not(:disabled):active:focus,
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+  box-shadow: initial !important;
+}
+
+.fc .fc-highlight {
+  background: transparent !important;
+  background: transparent !important;
+}
+
+.fc .fc-daygrid-body-natural .fc-daygrid-day-events {
+  margin-bottom: 0em !important;
+}
+
+.fc-v-event .fc-event-title {
+  display: inline-block !important;
+}
+
+.fc .fc-timegrid-divider {
+  background: var(--fc-border-color) !important;
+}
+
+.fc .fc-timegrid-now-indicator-line {
+  border-color: black !important;
+  border-color: var(--fc-now-indicator-color, black) !important;
+  border-width: 2px 0 0 !important;
+}
+
+.fc-theme-standard .fc-list-day-cushion {
+  background-color: var(--background-primary-alt) !important;
+}
+
+/*────────────────────────────────────
     Style Settings Plugin Styling
 ────────────────────────────────────*/
 div.style-settings-container {
