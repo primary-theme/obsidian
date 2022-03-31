@@ -32,7 +32,10 @@ Available in both Light and Dark modes, for both Mobile and Desktop!
 - [How to Use Primary](#❓-how-to-use-primary)
     - [Customizing Primary](#⚒️-customizing-primary-through-style-settings)
     - [Alternate Checkboxes](#✅-alternative-checkboxes)
-    - []
+    - [Callouts](#⏹️-exclusive-callouts)
+- [Screenshots](#🖼️-screenshots)
+- [Creating Primary](#🧠-creating-primary)
+- [Credits](#❤️-credits)
 
 ## 👁️ Goals
 - Help users give instant visual context of their notes through colors and scale that is both beautiful and productive.
@@ -198,3 +201,7 @@ If you've read all the way down here, well, what the heck. Thank you for listeni
 
 ## ❤️ Credits
 I owe a lot to @jdanielmourao, @kepano and @chetachiezikeuzor! Their work inspired me design-wise and studying their theme helped me a lot in creating mine.
+
+I also would like to thank the Obsidian Theme Community (hey #appearance-dev folks!) for continuously giving me inspiration.
+
+Last but not the least, I would like to say that I am very blessed to have such active, loving, and supportive Primary users. You guys are the best!
