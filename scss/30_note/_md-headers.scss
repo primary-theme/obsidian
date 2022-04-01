@@ -146,7 +146,7 @@ body .cm-s-obsidian .HyperMD-header {
 
 /* Inline Code in Headers Fix */
 .cm-s-obsidian .cm-inline-code.cm-header {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
 
     &-1 {
         font-size: calc(0.65 * var(--h1));
@@ -187,7 +187,7 @@ body .cm-s-obsidian .HyperMD-header {
 
 .markdown-preview-view {
     & h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
-        font-family: var(--font-code);
+        font-family: var(--font-monospace-theme);
     }
     & h1 code {
         font-weight: var(--h1-weight);

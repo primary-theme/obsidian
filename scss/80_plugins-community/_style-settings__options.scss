@@ -111,7 +111,7 @@ settings:
                 label: Roboto Slab
                 value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
-        id: interface-font
+        id: font-interface-theme
         title: Preset Interface Font
         type: variable-select
         default: '"Karla", -apple-system,
@@ -180,13 +180,13 @@ settings:
         default: '"Karla", -apple-system,
         BlinkMacSystemFont, Helvetica, Arial, sans-serif'
     -
-        id: font-code
+        id: font-monospace-theme
         title: Code Font
         description:
         type: variable-text
         default: '"Cascadia Code", Inconsolata, Courier, monospace'
     -
-        id: interface-font
+        id: font-interface-theme
         title: Interface Font
         description:
         type: variable-text

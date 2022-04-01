@@ -4,8 +4,8 @@ input[type=checkbox] {
     appearance: none;
     filter: none;
 
-    height: calc(3px + var(--editor-font-size));
-    width: calc(3px + var(--editor-font-size));
+    height: calc(3px + var(--font-text-size));
+    width: calc(3px + var(--font-text-size));
     border-radius: var(--scale-2-2);
     border: 1px solid var(--text-faint);
     padding: 0;
@@ -80,7 +80,7 @@ input[type=checkbox] {
 }
 
 .cm-s-obsidian span.cm-formatting-task {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
 }
 
 .cm-s-obsidian .task-list-item-checkbox {

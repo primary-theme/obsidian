@@ -260,19 +260,15 @@ Custom Icons
 :root,
 body {
   /*──────────Font Families──────────*/
-  --font-sans:
-      "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  --font-monospace:
-      "Cascadia Code", Inconsolata, Courier, monospace;
-  --font-preview: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  --font-preview-header: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  --font-editor: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  --font-editor-header: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  --font-code: "Cascadia Code", Inconsolata, Courier, monospace;
+  --font-preview: var(--font-text);
+  --font-preview-header: var(--font-text);
+  --font-editor: var(--font-text);
+  --font-editor-header: var(--font-text);
   /* Original Obsidian Font Variables */
-  --interface-font: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  --mermaid-font: var(--font-preview);
-  --reveal-font: var(--font-preview);
+  --font-interface-theme: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --font-text-theme: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --font-monospace-theme: "Cascadia Code", Inconsolata, Courier, monospace;
+  --font-mermaid: var(--font-preview);
   /*──────────Font Weight──────────*/
   --font-thin: 100;
   --font-extra-light: 200;
@@ -1114,7 +1110,7 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .tree-item-self.is-clickable .tree-item-flair {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   font-size: var(--font-scale-0);
 }
 .tree-item-self .tree-item-icon {
@@ -1830,7 +1826,7 @@ body .cm-s-obsidian .HyperMD-header {
 
 /* Inline Code in Headers Fix */
 .cm-s-obsidian .cm-inline-code.cm-header {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
 }
 .cm-s-obsidian .cm-inline-code.cm-header-1 {
   font-size: calc(0.65 * var(--h1));
@@ -1864,7 +1860,7 @@ body .cm-s-obsidian .HyperMD-header {
 }
 
 .markdown-preview-view h1 code, .markdown-preview-view h2 code, .markdown-preview-view h3 code, .markdown-preview-view h4 code, .markdown-preview-view h5 code, .markdown-preview-view h6 code {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
 }
 .markdown-preview-view h1 code {
   font-weight: var(--h1-weight);
@@ -2362,7 +2358,7 @@ div.node-insert-event .external-link:where(.is-unresolved):active {
 
 .markdown-source-view.mod-cm6 .list-bullet:after {
   content: "-";
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   font-size: 1.25em;
 }
 .markdown-source-view.mod-cm6 .cm-list-2 .list-bullet:after {
@@ -2377,7 +2373,7 @@ span.list-bullet,
 li::marker {
   color: var(--md-color-bullet);
   font-size: var(--font-scale-0);
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   font-variant-numeric: tabular-nums;
   text-align: left;
   vertical-align: 0px;
@@ -2508,8 +2504,8 @@ input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   filter: none;
-  height: calc(3px + var(--editor-font-size));
-  width: calc(3px + var(--editor-font-size));
+  height: calc(3px + var(--font-text-size));
+  width: calc(3px + var(--font-text-size));
   border-radius: var(--scale-2-2);
   border: 1px solid var(--text-faint);
   padding: 0;
@@ -2569,7 +2565,7 @@ input[type=checkbox]:checked {
 }
 
 .cm-s-obsidian span.cm-formatting-task {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
 }
 
 .cm-s-obsidian .task-list-item-checkbox {
@@ -2600,11 +2596,12 @@ div[data-tag-name=pre] code,
 pre code,
 code,
 .markdown-preview-view code {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
 }
 
 .cm-s-obsidian .HyperMD-codeblock {
-  line-height: initial;
+  line-height: 1.5;
+  padding: 0 var(--scale-2-8);
 }
 
 pre code {
@@ -2722,7 +2719,7 @@ mjx-math {
 
 .markdown-source-view.mod-cm6 span.code-block-flair[aria-label=Copy] {
   color: var(--md-color-code-gray);
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   font-size: var(--font-scale-1);
   padding: 0;
   margin-top: var(--scale-2-1);
@@ -2732,12 +2729,12 @@ mjx-math {
 /*──────────Horizontal Rule──────────*/
 .theme-light span.cm-hr,
 .theme-dark span.cm-hr {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   color: var(--md-color-comment);
 }
 
 .markdown-preview-view hr {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   color: var(--md-color-border);
   border-width: 1px;
 }
@@ -2857,7 +2854,7 @@ mjx-math {
 }
 .mermaid tspan, .mermaid text.messageText {
   font-size: var(--font-scale-1) !important;
-  font-family: var(--font-code) !important;
+  font-family: var(--font-monospace-theme) !important;
   font-weight: var(--font-regular);
   stroke: none !important;
   fill: var(--color-gray-10) !important;
@@ -2916,8 +2913,8 @@ mjx-math {
 
 .callout-icon svg,
 .callout-fold svg {
-  height: var(--editor-font-size);
-  width: var(--editor-font-size);
+  height: var(--font-text-size);
+  width: var(--font-text-size);
 }
 
 .callout-icon,
@@ -3129,7 +3126,7 @@ div.callout[data-callout*=celebrate], div.callout[data-callout*=success] {
   --callout-color: 100, 175, 255;
 }
 div.callout[data-callout*=celebrate] .callout-title, div.callout[data-callout*=success] .callout-title {
-  background: linear-gradient(45deg, rgba(239, 146, 175, 0.4392156863), rgba(123, 215, 233, 0.4392156863), rgba(129, 225, 165, 0.4392156863), rgba(255, 218, 43, 0.4392156863));
+  background: linear-gradient(45deg, #ef92af70, #7bd7e970, #81e1a570, #ffda2b70);
   background-size: 800% 800%;
   -webkit-animation: animateCelebrate 15s ease infinite;
 }
@@ -3157,7 +3154,7 @@ div.callout[data-callout*=celebrate] .callout-icon, div.callout[data-callout*=ce
 ────────────────────────────────────*/
 /*──────────Edit Mode Markdown Table──────────*/
 .cm-s-obsidian .HyperMD-table-row {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   font-size: var(--font-scale-0-5);
 }
 .cm-s-obsidian .HyperMD-table-row-0 {
@@ -3235,7 +3232,7 @@ div.callout[data-callout*=celebrate] .callout-icon, div.callout[data-callout*=ce
 .CodeMirror-linenumber,
 .cm-lineNumbers,
 div.cm-gutterElement {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   font-size: var(--font-scale-1);
   font-variant-numeric: tabular-nums;
   vertical-align: super;
@@ -3252,7 +3249,7 @@ pre.frontmatter.language-yaml {
 
 .markdown-source-view .cm-hmd-frontmatter,
 code.language-yaml {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   font-size: var(--font-scale-0);
   font-variant-numeric: tabular-nums;
 }
@@ -3317,7 +3314,7 @@ code.language-yaml {
 }
 
 span.frontmatter-section-label {
-  font-family: var(--interface-font);
+  font-family: var(--font-interface-theme);
   font-size: var(--font-scale-0-5);
   font-weight: var(--font-bold);
   text-transform: uppercase;
@@ -5505,7 +5502,7 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
 /* don't remove !important */
 .theme-light button,
 .theme-dark button {
-  font-family: var(--interface-font) !important;
+  font-family: var(--font-interface-theme) !important;
   padding: var(--scale-2-3) var(--scale-2-8) var(--scale-2-4) var(--scale-2-8) !important;
   margin-top: var(--scale-2-3);
   margin-bottom: var(--scale-2-3);
@@ -5673,7 +5670,7 @@ input[type=search],
 input[type=email],
 input[type=password],
 input[type=number] {
-  font-family: var(--interface-font);
+  font-family: var(--font-interface-theme);
   font-size: var(--font-scale-1);
   border-radius: var(--scale-2-3);
   padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-4) var(--scale-2-4);
@@ -5774,7 +5771,7 @@ input[type=number] {
 /*────────KBD──────────*/
 kbd,
 .setting-hotkey {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
 }
 .markdown-soure-view kbd, .cm-s-obsidian kbd, .markdown-preview-view kbd,
 .markdown-soure-view .setting-hotkey,
@@ -5905,7 +5902,7 @@ input[type=range]::-webkit-slider-thumb {
             Dropdown
 ────────────────────────────────────*/
 .dropdown {
-  font-family: var(--interface-font);
+  font-family: var(--font-interface-theme);
   font-size: var(--font-scale-0-5);
   line-height: var(--line-height-1);
   width: 215px;
@@ -6072,7 +6069,7 @@ input[type=range]::-webkit-slider-thumb {
             Notifacation
 ────────────────────────────────────*/
 .notice {
-  font-family: var(--font-code);
+  font-family: var(--font-monospace-theme);
   border-radius: var(--scale-2-4);
   transition: var(--duration-moderate-2) var(--motion-jumpy);
 }
@@ -6497,7 +6494,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 /*─────────Modal CLose Button──────────*/
 .is-mobile .modal .vertical-tab-header::before {
   content: "Settings";
-  font-family: var(--interface-font);
+  font-family: var(--font-interface-theme);
   font-weight: var(--font-semi-bold);
   color: var(--text-muted);
   background: var(--background-secondary);
@@ -8473,7 +8470,7 @@ settings:
                 label: Roboto Slab
                 value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
-        id: interface-font
+        id: font-interface-theme
         title: Preset Interface Font
         type: variable-select
         default: '"Karla", -apple-system,
@@ -8542,13 +8539,13 @@ settings:
         default: '"Karla", -apple-system,
         BlinkMacSystemFont, Helvetica, Arial, sans-serif'
     -
-        id: font-code
+        id: font-monospace-theme
         title: Code Font
         description:
         type: variable-text
         default: '"Cascadia Code", Inconsolata, Courier, monospace'
     -
-        id: interface-font
+        id: font-interface-theme
         title: Interface Font
         description:
         type: variable-text

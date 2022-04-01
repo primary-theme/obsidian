@@ -9,7 +9,7 @@ pre.frontmatter.language-yaml {
 
 .markdown-source-view .cm-hmd-frontmatter,
 code.language-yaml {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-0);
     font-variant-numeric: tabular-nums;
 }
@@ -87,7 +87,7 @@ span.key.atrule {
     }
 }
 span.frontmatter-section-label {
-    font-family: var(--interface-font);
+    font-family: var(--font-interface-theme);
     font-size: var(--font-scale-0-5);
     font-weight: var(--font-bold);
     text-transform: uppercase;

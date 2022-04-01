@@ -11,7 +11,7 @@
 .markdown-source-view.mod-cm6 {
     & .list-bullet:after {
         content: '-';
-        font-family: var(--font-code);
+        font-family: var(--font-monospace-theme);
         font-size: 1.25em;
     }
 
@@ -29,7 +29,7 @@ span.list-bullet,
 li::marker {
     color: var(--md-color-bullet);
     font-size: var(--font-scale-0);
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-variant-numeric: tabular-nums;
     text-align: left;
     vertical-align: 0px;
