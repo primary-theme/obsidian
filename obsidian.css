@@ -297,7 +297,7 @@ body {
   --line-height-0: 1em;
   --line-height-0-5: 1.2em;
   --line-height-1: 1.53em;
-  --font-editor-size: var(--editor-font-size);
+  --font-text-size: var(--editor-font-size);
   /*──────────Tracking (Letter Spacing)──────────*/
   --tracking-0: 0px;
   --tracking-1: 0.16px;
