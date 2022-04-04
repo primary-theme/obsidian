@@ -269,6 +269,8 @@ body {
   --font-text-theme: "Karla", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   --font-monospace-theme: "Cascadia Code", Inconsolata, Courier, monospace;
   --font-mermaid: var(--font-preview);
+  --default-font: var(--font-interface-theme);
+  --font-code: var(--font-monospace-theme);
   /*──────────Font Weight──────────*/
   --font-thin: 100;
   --font-extra-light: 200;
@@ -295,6 +297,7 @@ body {
   --line-height-0: 1em;
   --line-height-0-5: 1.2em;
   --line-height-1: 1.53em;
+  --font-editor-size: var(--editor-font-size);
   /*──────────Tracking (Letter Spacing)──────────*/
   --tracking-0: 0px;
   --tracking-1: 0.16px;
