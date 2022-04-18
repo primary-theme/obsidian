@@ -46,7 +46,8 @@
 
 .modal button,
 .graph-controls button,
-.workspace button {
+.workspace button,
+.popover button {
     .theme-light & {
         border: 1px solid rgba(100, 100, 100, 0.4);
         box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.4) inset,
@@ -81,6 +82,7 @@
 .modal button:not(.mod-cta, .mod-warning),
 .modal.mod-settings button:not(.mod-cta, .mod-warning),
 .workspace button:not(.graph-controls button, .document-search-button),
+.popover button:not(.graph-controls button, .document-search-button),
 .search-result-file-match-destination-file {
     .theme-light & {
         color: var(--color-l-gray-80);
