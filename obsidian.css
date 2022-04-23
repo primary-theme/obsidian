@@ -5540,26 +5540,30 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
 
 .theme-light .modal button,
 .theme-light .graph-controls button,
-.theme-light .workspace button {
+.theme-light .workspace button,
+.theme-light .popover button {
   border: 1px solid rgba(100, 100, 100, 0.4);
   box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.4) inset, 0px 2px 4px 0px rgba(100, 100, 100, 0.3);
 }
 .theme-light .modal button:active,
 .theme-light .graph-controls button:active,
-.theme-light .workspace button:active {
+.theme-light .workspace button:active,
+.theme-light .popover button:active {
   box-shadow: 0px 0px 0px 2px rgba(100, 100, 100, 0.3) inset, 0px 1px 1px 0px rgba(100, 100, 100, 0.1);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
 .theme-dark .modal button,
 .theme-dark .graph-controls button,
-.theme-dark .workspace button {
+.theme-dark .workspace button,
+.theme-dark .popover button {
   color: var(--color-d-white);
   border: 1px solid rgba(0, 0, 0, 0.55);
   box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.28) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .theme-dark .modal button:active,
 .theme-dark .graph-controls button:active,
-.theme-dark .workspace button:active {
+.theme-dark .workspace button:active,
+.theme-dark .popover button:active {
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.15) inset, 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
   transition: var(--duration-superfast) var(--motion-smooth);
 }
@@ -5567,6 +5571,7 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
 .theme-light .modal button:not(.mod-cta, .mod-warning),
 .theme-light .modal.mod-settings button:not(.mod-cta, .mod-warning),
 .theme-light .workspace button:not(.graph-controls button, .document-search-button),
+.theme-light .popover button:not(.graph-controls button, .document-search-button),
 .theme-light .search-result-file-match-destination-file {
   color: var(--color-l-gray-80);
   background: var(--color-l-whiter);
@@ -5578,6 +5583,8 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
 .theme-light .modal.mod-settings button:not(.mod-cta, .mod-warning):focus,
 .theme-light .workspace button:not(.graph-controls button, .document-search-button):hover,
 .theme-light .workspace button:not(.graph-controls button, .document-search-button):focus,
+.theme-light .popover button:not(.graph-controls button, .document-search-button):hover,
+.theme-light .popover button:not(.graph-controls button, .document-search-button):focus,
 .theme-light .search-result-file-match-destination-file:hover,
 .theme-light .search-result-file-match-destination-file:focus {
   background: var(--color-l-gray-10);
@@ -5585,6 +5592,7 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
 .theme-light .modal button:not(.mod-cta, .mod-warning):active,
 .theme-light .modal.mod-settings button:not(.mod-cta, .mod-warning):active,
 .theme-light .workspace button:not(.graph-controls button, .document-search-button):active,
+.theme-light .popover button:not(.graph-controls button, .document-search-button):active,
 .theme-light .search-result-file-match-destination-file:active {
   box-shadow: 0px 0px 0px 2px rgba(100, 100, 100, 0.1) inset, 0px 1px 1px 0px rgba(100, 100, 100, 0.1);
   transition: var(--duration-superfast) var(--motion-smooth);
@@ -5592,6 +5600,7 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
 .theme-dark .modal button:not(.mod-cta, .mod-warning),
 .theme-dark .modal.mod-settings button:not(.mod-cta, .mod-warning),
 .theme-dark .workspace button:not(.graph-controls button, .document-search-button),
+.theme-dark .popover button:not(.graph-controls button, .document-search-button),
 .theme-dark .search-result-file-match-destination-file {
   color: var(--color-d-white);
   background: var(--color-d-black);
@@ -5601,12 +5610,14 @@ body:not(.is-mobile) .community-theme.is-selected.is-selected .community-theme-i
 .theme-dark .modal button:not(.mod-cta, .mod-warning):hover,
 .theme-dark .modal.mod-settings button:not(.mod-cta, .mod-warning):hover,
 .theme-dark .workspace button:not(.graph-controls button, .document-search-button):hover,
+.theme-dark .popover button:not(.graph-controls button, .document-search-button):hover,
 .theme-dark .search-result-file-match-destination-file:hover {
   background: var(--color-d-blacker);
 }
 .theme-dark .modal button:not(.mod-cta, .mod-warning):active,
 .theme-dark .modal.mod-settings button:not(.mod-cta, .mod-warning):active,
 .theme-dark .workspace button:not(.graph-controls button, .document-search-button):active,
+.theme-dark .popover button:not(.graph-controls button, .document-search-button):active,
 .theme-dark .search-result-file-match-destination-file:active {
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2) inset, 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
   transition: var(--duration-superfast) var(--motion-smooth);
