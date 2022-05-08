@@ -933,7 +933,7 @@ body.center-embeds {
 .note-embeds__style-clean {
     .popover .markdown-embed,
     .markdown-embed {
-        --md-embed-bg: var(--background-primary);
+        --md-embed-bg: transparent;
 
         background: var(--md-embed-bg);
         border: 0px solid transparent;
@@ -950,7 +950,7 @@ body.center-embeds {
             padding: 0
                     var(--scale-2-4)
                     0
-                    0;
+                    var(--scale-2-4);
         }
     }
 }

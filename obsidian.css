@@ -8810,7 +8810,7 @@ body.center-embeds .markdown-source-view.mod-cm6 .cm-content > * {
 
 .note-embeds__style-clean .popover .markdown-embed,
 .note-embeds__style-clean .markdown-embed {
-  --md-embed-bg: var(--background-primary);
+  --md-embed-bg: transparent;
   background: var(--md-embed-bg);
   border: 0px solid transparent;
 }
@@ -8824,7 +8824,7 @@ body.center-embeds .markdown-source-view.mod-cm6 .cm-content > * {
 }
 .note-embeds__style-clean .popover .markdown-embed .markdown-preview-view,
 .note-embeds__style-clean .markdown-embed .markdown-preview-view {
-  padding: 0 var(--scale-2-4) 0 0;
+  padding: 0 var(--scale-2-4) 0 var(--scale-2-4);
 }
 
 .full-height-embeds .markdown-embed-content {
