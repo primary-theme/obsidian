@@ -218,6 +218,11 @@ settings:
         description: Note Header Bars are the bars at the top of a note where the note title, and menu options are located. Toggle on to hide note header bar on default. When hovered, note header bar will show.
         type: class-toggle
     -
+        id: hide__metadata-box
+        title: Hide Metadata Box 
+        description: Different from the "Show Frontmatter" option in Obsidian. This setting removes the metadata box (one with aliases and tags only, not YAML).
+        type: class-toggle
+    -
         id: hide__sidedockribbon
         title: Side Dock Ribbon Style (Desktop Only)
         description: Side Dock Ribbons are the narrow columns at the utmost left and right of Obsidian. Choose your preferred style.
@@ -230,7 +235,10 @@ settings:
                 value: show__sidedockribbon
             -
                 label: Mini Floating Side Dock Ribbon
-                value: hide__sidedockribbon-functional
+                value: hide__sidedockribbon-minifloating
+            -
+                label: Full Floating Side Dock Ribbon
+                value: hide__sidedockribbon-fullfloating
             -
                 label: Show on Hover Side Dock Ribbon
                 value: hide__sidedockribbon-hover
@@ -855,6 +863,14 @@ settings:
         default-light: 'hsl(36, 37%, 83%)'
         default-dark: 'hsl(33, 20%, 20%)'
     -
+        id: h5-border-color
+        title: Header 5 Border Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(36, 37%, 83%)'
+        default-dark: 'hsl(33, 20%, 20%)'
+    -
         id: h5-border-radius
         title: Header 5 Border Radius (in pixels)
         description: Recommended values are multiples of 2
@@ -1097,6 +1113,36 @@ settings:
     -
         id: md-color-unreslink-active
         title: Unresolved Links on Click
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 89%, 38%)'
+        default-dark: 'hsl(43, 100%, 42%)'
+    -
+        id: Links
+        title: 🌐 External Links
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: md-color-extlink
+        title: External Links
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 100%, 42%)'
+        default-dark: 'hsl(50, 100%, 46%)'
+    -
+        id: md-color-extlink-hover
+        title: External Links on Hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsl(43, 78%, 52%)'
+        default-dark: 'hsl(46, 91%, 69%)'
+    -
+        id: md-color-extlink-active
+        title: External Links on Click
         type: variable-themed-color
         format: hsl
         opacity: true

@@ -1,0 +1,123 @@
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: calc(var(--font-text-size) + 220px);
+    height: calc(var(--font-text-size) - 8px);
+    margin-right: var(--scale-2-4);
+    
+    &[value]::-webkit-progress-bar {
+        background: var(--background-secondary);
+        box-shadow: 0px 0px 0px 1px var(--background-modifier-border) inset;
+        border-radius: var(--scale-8-2);
+        overflow: hidden;
+    }
+    &[value]::-webkit-progress-value {
+        border-radius: var(--scale-8-2);
+    }
+}
+
+.theme-light progress {
+    --color-l-progress-10: var(--color-l-red-700);
+    --color-l-progress-20: var(--color-l-red-700);
+    --color-l-progress-30: var(--color-l-orange-500);
+    --color-l-progress-40: var(--color-l-orange-500);
+    --color-l-progress-50: var(--color-l-yellow-500);
+    --color-l-progress-60: var(--color-l-yellow-500);
+    --color-l-progress-70: var(--color-l-green-700);
+    --color-l-progress-80: var(--color-l-blue-700);
+    --color-l-progress-90: var(--color-l-violet-700);
+    --color-l-progress-100: linear-gradient(45deg, #ef92af95, #7bd7e995, #ffda2b95);
+
+    &[value="10"]::-webkit-progress-value {
+        background: var(--color-l-progress-10);
+    }
+
+    &[value="20"]::-webkit-progress-value {
+        background: var(--color-l-progress-20);
+    }
+
+    &[value="30"]::-webkit-progress-value {
+        background: var(--color-l-progress-30);
+    }
+
+    &[value="40"]::-webkit-progress-value {
+        background: var(--color-l-progress-40);
+    }
+
+    &[value="50"]::-webkit-progress-value {
+        background: var(--color-l-progress-50);
+    }
+
+    &[value="60"]::-webkit-progress-value {
+        background: var(--color-l-progress-60);
+    }
+
+    &[value="70"]::-webkit-progress-value {
+        background: var(--color-l-progress-70);
+    }
+
+    &[value="80"]::-webkit-progress-value {
+        background: var(--color-l-progress-80);
+    }
+
+    &[value="90"]::-webkit-progress-value {
+        background: var(--color-l-progress-90);
+    }
+
+    &[value="100"]::-webkit-progress-value {
+        background: var(--color-l-progress-100);
+    }
+}
+
+.theme-dark progress {
+    --color-d-progress-10: var(--color-d-red-900);
+    --color-d-progress-20: var(--color-d-red-900);
+    --color-d-progress-30: var(--color-d-orange-700);
+    --color-d-progress-40: var(--color-d-orange-700);
+    --color-d-progress-50: var(--color-d-yellow-700);
+    --color-d-progress-60: var(--color-d-yellow-700);
+    --color-d-progress-70: var(--color-d-green-900);
+    --color-d-progress-80: var(--color-d-blue-900);
+    --color-d-progress-90: var(--color-d-violet-900);
+    --color-d-progress-100: linear-gradient(45deg, #ef92af95, #7bd7e995, #ffda2b95);
+
+    &[value="10"]::-webkit-progress-value {
+        background: var(--color-d-progress-10);
+    }
+
+    &[value="20"]::-webkit-progress-value {
+        background: var(--color-d-progress-20);
+    }
+
+    &[value="30"]::-webkit-progress-value {
+        background: var(--color-d-progress-30);
+    }
+
+    &[value="40"]::-webkit-progress-value {
+        background: var(--color-d-progress-40);
+    }
+
+    &[value="50"]::-webkit-progress-value {
+        background: var(--color-d-progress-50);
+    }
+
+    &[value="60"]::-webkit-progress-value {
+        background: var(--color-d-progress-60);
+    }
+
+    &[value="70"]::-webkit-progress-value {
+        background: var(--color-d-progress-70);
+    }
+
+    &[value="80"]::-webkit-progress-value {
+        background: var(--color-d-progress-80);
+    }
+
+    &[value="90"]::-webkit-progress-value {
+        background: var(--color-d-progress-90);
+    }
+
+    &[value="100"]::-webkit-progress-value {
+        background: var(--color-d-progress-100);
+    }
+}

@@ -2,6 +2,7 @@
     Backlinks and Outgoing Links
 ────────────────────────────────────*/
 /* Backlink Pane */
+.popover .backlink-pane,
 .backlink-pane { 
     padding-left: 0;
 
@@ -10,6 +11,8 @@
         color: var(--md-color-text-normal);
         font-weight: var(--font-bold);
         margin-top: 3px;
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
 
         &:hover {
             background: transparent;
@@ -32,11 +35,13 @@
             text-transform: capitalize;
         }
 
-        &.is-clickable .tree-item-flair {
-            color: var(--md-color-text-normal);
+        & .tree-item-flair-outer {
+            align-items: center;
+        }
+
+        & .tree-item-flair {
             font-family: inherit;
             font-size: inherit;
-            background: transparent;
             padding: 0;
             margin-right: var(--scale-2-2);
         }
@@ -175,6 +180,7 @@
 }
 
 /* Backlinks on Document */
+.popover .workspace-leaf-content[data-type="markdown"],
 .mod-root .workspace-leaf-content[data-type="markdown"] {
     & .nav-header {
         border-top: 1px solid var(--background-modifier-border);

@@ -6,7 +6,7 @@
 }
 
 /* Source View Resolved Links */
-.markdown-source-view.mod-cm6 span:where(.cm-url.cm-url, .cm-blockid, .cm-link, .cm-underline, .cm-inline-code.cm-link, .cm-header.cm-hmd-internal-link) {
+.markdown-source-view.mod-cm6 span:where(.cm-url.cm-url, .cm-blockid, .cm-inline-code.cm-link, .cm-hmd-internal-link, .cm-header.cm-hmd-internal-link, .cm-hmd-internal-link .cm-underline) {
     color: var(--md-color-reslink);
     text-decoration: underline solid 1px;
     text-underline-position: under;
@@ -16,10 +16,14 @@
 
     &:hover {
         color: var(--md-color-reslink-hover);
+        text-decoration: underline solid 1px;
+
     }
 
     &:active {
         color: var(--md-color-reslink-active);
+        text-decoration: underline solid 1px;
+
     }
 
     .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
@@ -83,6 +87,28 @@
     }
 }
 
+/* Source View External Links */
+.markdown-source-view.mod-cm6 span:where(.cm-link, .cm-link .cm-underline, .cm-url) {
+    color: var(--md-color-extlink);
+    text-decoration: underline solid 1px;
+    text-underline-position: under;
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+
+    &:hover {
+        color: var(--md-color-extlink-hover);
+    }
+
+    &:active {
+        color: var(--md-color-extlink-active);
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
 /* Preview Resolved Links */
 a,
 a code {
@@ -134,11 +160,9 @@ a:where(a.tag, button.mod-cta a, a.is-unresolved) {
 
 .cm-s-obsidian .internal-link,
 .markdown-rendered.cm-embed-block .internal-link,
-.markdown-rendered.cm-embed-block .external-link,
 .markdown-preview-view .internal-link,
-.markdown-preview-view .external-link,
 div.node-insert-event .internal-link,
-div.node-insert-event .external-link {
+.reveal .internal-link {
     color: var(--md-color-reslink);
     text-decoration: underline solid 1px;
     text-underline-position: under;
@@ -171,6 +195,32 @@ div.node-insert-event .external-link {
         &:active {
             color: var(--md-color-unreslink-active);
         }
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+/* Preview External Links */
+.markdown-rendered.cm-embed-block .external-link,
+.markdown-preview-view .external-link,
+div.node-insert-event .external-link,
+.reveal .external-link {
+    color: var(--md-color-extlink);
+    text-decoration: underline solid 1px;
+    text-underline-position: under;
+    
+    transition: var(--duration-superfast)
+    var(--motion-smooth);
+    
+    &:hover {
+        color: var(--md-color-extlink-hover);
+        cursor: pointer;
+    }
+    
+    &:active {
+        color: var(--md-color-extlink-active);
     }
 
     .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor

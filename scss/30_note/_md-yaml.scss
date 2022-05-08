@@ -82,8 +82,20 @@ span.key.atrule {
     }
 
     & .frontmatter-alias {
+        line-height: 1.2;
+        word-break: break-all;
+        white-space: unset;
+        padding:    var(--scale-2-1)
+                    var(--scale-2-4)
+                    var(--scale-2-1)
+                    var(--scale-8-3);
         border: 1px solid var(--md-color-border);
         background: var(--background-secondary);
+    }
+
+    & .frontmatter-alias-icon {
+        margin-left: -16px;
+        position: absolute;
     }
 }
 span.frontmatter-section-label {

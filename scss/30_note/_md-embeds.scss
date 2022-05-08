@@ -9,6 +9,7 @@
         padding: 15px 20px;
     }
     & .cm-embed-block {
+        font-family: var(--font-editor);
         border: 1px solid transparent;
         border-radius: 0;
 
@@ -60,10 +61,15 @@
     }
 }
 
-/*──────────Images──────────*/
+/*────────── Media ──────────*/
+.workspace-leaf-content video[src],
+.view-content .markdown-preview-view video[src],
+.popover video[src],
+.reveal video[src],
 .workspace-leaf-content img[src],
 .view-content .markdown-preview-view img[src],
-.popover img[src] {
+.popover img[src],
+.reveal img[src] {
     padding: 0;
     border: 1px solid rgba(100, 100, 100, 0.25);
     border-radius: var(--scale-2-4);
@@ -80,10 +86,12 @@
 }
 
 /*──────────Markdown Embed──────────*/
+.popover .markdown-embed,
 .markdown-embed {
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--scale-2-6);
     padding: 0;
+    overflow: hidden;
 
     & .markdown-preview-view {
         /* Markdown Embed Padding with Readable Line Width OFF */
@@ -132,12 +140,18 @@
     }
 }
 
+.markdown-source-view .markdown-embed-title {
+    font-family: var(--font-editor);
+    line-height: 1.3;
+}
+
+.markdown-preview-view .markdown-embed-title {
+    font-family: var(--font-preview);
+    line-height: 1.4;
+}
+
 /*──────────Mermaid JS (Diagram Generator)──────────*/
 .mermaid {
-    & svg {
-        width: 100%;
-    }
-
     & line {
         stroke: var(--md-color-text-faint) !important;
         fill: var(--md-color-text-faint) !important;

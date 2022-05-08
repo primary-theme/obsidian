@@ -60,6 +60,16 @@
         margin-top: var(--scale-2-1);
         margin-left: var(--scale-0-0);
     }
+
+    &-file-tag {
+        align-self: start;
+        line-height: 2;
+    }
+}
+
+// resets color of arrow triangle when hovering folder title
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
+    color: unset;
 }
 
 /* File Explorer for Light Mode */

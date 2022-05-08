@@ -7,6 +7,10 @@
 }
 
 /*─────────View Content──────────*/
+.workspace-leaf-content .view-content {
+    padding: var(--scale-8-2) var(--scale-8-2);
+}
+
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
     & .view-content {

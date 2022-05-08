@@ -318,6 +318,7 @@
 }
 
 /* Modal Close Close Buttons */
+.slides-close-btn,
 .modal-close-button {
     right: var(--scale-2-5);
     top: var(--scale-2-4);
@@ -531,4 +532,13 @@
         box-shadow: var(--shadow-xl)
                     var(--color-d-shadow-100);
     }
+}
+
+.prompt-instructions {
+    font-size: var(--font-scale-0-5);
+    padding: var(--scale-2-3)
+            var(--scale-2-2)
+            var(--scale-2-3)
+            var(--scale-2-2);
+    border-top: 1px solid var(--background-modifier-border);
 }

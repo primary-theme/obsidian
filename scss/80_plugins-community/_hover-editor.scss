@@ -1,15 +1,11 @@
 /*────────────────────────────────────
             Hover Editor
 ────────────────────────────────────*/
-.popover.hover-popover {
+.hover-editor.popover {
     --he-popover-border-radius: var(--scale-2-4);
     --he-title-bar-height: 24px;
 
     border: 1px solid var(--background-modifier-border) !important;
-
-    transition: border-radius
-                var(--duration-fast-1)
-                var(--motion-smooth);
 
     & .popover-titlebar .popover-title.popover-title {
         font-weight: var(--font-bold);
@@ -20,7 +16,6 @@
     }
 
     &.is-minimized {
-        --he-popover-border-radius: var(--scale-2-2);
         box-shadow: var(--shadow-s) var(--background-modifier-box-shadow);
     }
 

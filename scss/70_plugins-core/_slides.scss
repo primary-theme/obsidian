@@ -1,0 +1,116 @@
+/*────────────────────────────────────
+++++++++++++++++++++++++++++++++++++++
+                Slides
+++++++++++++++++++++++++++++++++++++++
+──────────────────────────────────────*/
+.reveal {
+    color: var(--md-color-text);
+    background: var(--background-primary);
+
+    & .progress {
+        height: var(--scale-8-1);
+        border-top: 1px solid var(--background-modifier-border);
+        
+        .theme-light & {
+            background: var(--color-l-gray-30);
+            color: var(--color-l-blue-300);
+        }
+
+        .theme-dark & {
+            background: var(--color-d-black);
+            color: var(--color-d-blue-900);
+        }
+    }
+
+    & .controls {
+        .theme-light & {
+            color: var(--color-l-gray-50);
+        }
+
+        .theme-dark & {
+            color: var(--color-d-gray-30);
+        }
+    }
+
+    & p {
+        color: var(--md-color-text);
+        margin-left: var(--scale-8-4);
+        margin-right: var(--scale-8-4);
+    }
+
+    & h1 {
+        color: var(--h1-text-color);
+        font-size: var(--h1);
+        line-height: var(--header-line-height);
+        text-align: center;
+        margin-bottom: 0;
+        text-transform: unset;
+    }
+
+    & h2 {
+        color: var(--h2-text-color);
+        font-size: var(--h2);
+        line-height: var(--header-line-height);
+        text-align: center;
+        margin-bottom: 0;
+        text-transform: unset;
+    }
+
+    & h3 {
+        color: var(--h3-text-color);
+        font-size: var(--h3);
+        line-height: var(--header-line-height);
+        text-align: center;
+        margin-bottom: 0;
+        text-transform: unset;
+    }
+
+    & h4 {
+        color: var(--h4-text-color);
+        font-size: var(--h4);
+        line-height: var(--header-line-height);
+        text-align: center;
+        margin-bottom: 0;
+        text-transform: unset;
+    }
+
+    & h5 {
+        color: var(--h5-text-color);
+        font-size: var(--h5);
+        line-height: var(--header-line-height);
+        text-align: center;
+        margin-bottom: 0;
+        text-transform: unset;
+    }
+
+    & h6 {
+        color: var(--h6-text-color);
+        font-size: var(--h6);
+        line-height: var(--header-line-height);
+        text-align: center;
+        margin-bottom: 0;
+        text-transform: unset;
+    }
+
+    & img {
+        height: clamp(200px, 60vh, 960px);
+        margin-top: 0;
+    }
+}
+
+.reveal .slides > section {
+    padding: 0 0;
+}
+
+.slides-close-btn {
+    top: var(--scale-8-2);
+    right: var(--scale-8-2);
+
+    & svg {
+        display: none;
+    }
+
+    &::before {
+        content: "\D7";
+    }
+}

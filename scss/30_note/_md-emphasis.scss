@@ -47,11 +47,10 @@ mark,
 .cm-s-obsidian span.cm-highlight,
 .markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight,
 .cm-s-obsidian span.cm-quote.cm-highlight,
+.callout mark,
 .markdown-preview-view mark,
-.markdown-embed mark {
-    // redefining this variable because it is returning as undefined in dark mode
-    --md-color-highlight-text: var(--text-normal);
-    
+.popover mark,
+.markdown-embed mark {    
     color: var(--md-color-highlight-text);
     background: var(--md-color-highlight-bg);
     padding: 2px 2px;
@@ -66,12 +65,16 @@ mark,
 }
 
 .markdown-preview-view.markdown-preview-view mark strong,
-.markdown-embed.markdown-embed mark strong {
+.markdown-embed.markdown-embed mark strong,
+.reveal mark strong {
     color: var(--md-color-bold-highlight-text);
 }
 
+.callout strong > mark,
 .markdown-preview-view.markdown-preview-view strong > mark,
-.markdown-embed.markdown-embed strong > mark {
+.popover strong > mark,
+.markdown-embed.markdown-embed strong > mark,
+.reveal strong > mark {
     background: var(--md-color-bold-highlight-bg);
 }
 
@@ -82,13 +85,19 @@ mark,
     background: var(--md-color-italic-highlight-bg);
 }
 
+.callout em > mark,
 .markdown-preview-view mark em,
-.markdown-embed mark em {
+.popover mark em,
+.markdown-embed mark em,
+.reveal mark em {
     color: var(--md-color-italic-highlight-text);
 }
 
+.callout em > mark,
 .markdown-preview-view.markdown-preview-view em > mark,
-.markdown-embed.markdown-embed em > mark {
+.popover em > mark,
+.markdown-embed.markdown-embed em > mark,
+.reveal em > mark {
     background: var(--md-color-italic-highlight-bg);
 }
 
@@ -99,8 +108,11 @@ mark,
     background: var(--md-color-bi-highlight-bg);
 }
 
+.callout strong > em > mark,
 .markdown-preview-view.markdown-preview-view strong > em > mark,
-.markdown-embed.markdown-embed strong > em > mark {
+.popover strong > em > mark,
+.markdown-embed.markdown-embed strong > em > mark,
+.reveal strong > em > mark {
     background: var(--md-color-bi-highlight-bg);
 }
 

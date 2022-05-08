@@ -1,7 +1,10 @@
 /*────────────────────────────────────
             Markdown Table
 ────────────────────────────────────*/
-/*──────────Edit Mode Markdown Table──────────*/
+.cm-embed-block table {
+    font-family: var(--font-editor);
+}
+
 .cm-s-obsidian .HyperMD-table-row {
     font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-0-5);
@@ -14,6 +17,10 @@
 
 .markdown-source-view .cm-embed-block.cm-table-widget {
     padding: 0 0;
+}
+
+.markdown-preview-view table {
+    font-family: var(--font-preview);
 }
 
 .markdown-preview-view,

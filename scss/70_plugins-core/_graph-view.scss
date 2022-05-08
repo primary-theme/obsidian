@@ -44,10 +44,6 @@
     }
 }
 
-div:not(.workspace-tabs) .workspace-leaf-content[data-type="graph"] .graph-controls.is-close {
-    margin-top: var(--scale-2-18);
-}
-
 /*─────────Graph View Colors──────────*/
 .theme-light .graph-view,
 .theme-dark .graph-view {

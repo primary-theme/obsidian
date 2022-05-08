@@ -46,6 +46,7 @@
 @use '40_special-features/alt-checkboxes';
 @use '40_special-features/md-formatting';
 @use '40_special-features/translucency';
+@use '40_special-features/md-progress';
 
 @use '50_ui-components/modals';
 @use '50_ui-components/community-themes-plugins';
@@ -71,6 +72,7 @@
 @use '70_plugins-core/graph-view';
 @use '70_plugins-core/backlinks-outgoing';
 @use '70_plugins-core/outline';
+@use '70_plugins-core/slides';
 
 @use '80_plugins-community/calendar';
 @use '80_plugins-community/sliding-panes';

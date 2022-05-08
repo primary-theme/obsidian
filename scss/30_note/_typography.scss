@@ -17,11 +17,15 @@ body *,
 /* Editor */
 .CodeMirror pre.CodeMirror-line,
 .markdown-source-view .cm-line,
-.cm-s-obsidian .cm-line{
+.cm-s-obsidian .cm-line {
     font-optical-sizing: auto;
     font-family: var(--font-editor);
     line-height: var(--line-height-1);
     letter-spacing: var(--tracking-0);
+}
+
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+    contain: unset;
 }
 
 /* Preview */
@@ -85,6 +89,10 @@ body *,
     --md-color-unreslink: var(--text-muted);
     --md-color-unreslink-hover: var(--color-l-yellow-700);
     --md-color-unreslink-active: var(--color-l-yellow-900);
+
+    --md-color-extlink: var(--color-l-yellow-700);
+    --md-color-extlink-hover: var(--color-l-yellow-500);
+    --md-color-extlink-active: var(--color-l-yellow-900);
 
     --md-color-blockquotes: var(--text-normal);
     --md-color-blockquotes-formatting: var(--text-faint);
@@ -158,6 +166,10 @@ body *,
     --md-color-unreslink: var(--text-muted);
     --md-color-unreslink-hover: var(--color-d-yellow-500);
     --md-color-unreslink-active: var(--color-d-yellow-700);
+
+    --md-color-extlink: var(--color-d-yellow-500);
+    --md-color-extlink-hover: var(--color-d-yellow-300);
+    --md-color-extlink-active: var(--color-d-yellow-700);
 
     --md-color-blockquotes: var(--text-normal);
     --md-color-blockquotes-formatting: var(--text-faint);

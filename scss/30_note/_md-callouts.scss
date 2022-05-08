@@ -27,6 +27,7 @@
 }
 
 .callout {
+    line-height: var(--line-height-1);
     border-radius: var(--scale-2-4);
     transition: var(--duration-superfast)
                 var(--motion-smooth);
@@ -61,6 +62,16 @@
         border-bottom-right-radius: var(--scale-2-4);
         border-bottom-left-radius: var(--scale-2-4);
     }
+}
+
+/* Nested Markdown Fixes */
+.markdown-source-view.mod-cm6 .callout .callout {
+    margin: var(--scale-8-2) var(--scale-0-0);
+}
+
+.callout .callout .callout-content {
+    border-right: none;
+    border-bottom: none;
 }
 
 .callout-icon svg,
@@ -134,12 +145,12 @@
         
         .theme-light & {
             background: var(--color-l-gray-10);
-            box-shadow: 0px -3px 0px 0px
+            box-shadow: 0px -2px 0px 0px
             rgba(0, 0, 0, 0.05) inset
         }
         .theme-dark & {
             background: var(--color-d-black);
-            box-shadow: 0px -3px 0px 0px
+            box-shadow: 0px -2px 0px 0px
             rgba(0, 0, 0, 0.175) inset
         }
     }
