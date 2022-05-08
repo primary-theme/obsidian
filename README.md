@@ -164,7 +164,7 @@ Primary styles [Callouts](https://help.obsidian.md/How+to/Use+callouts), using a
 
 ### 💯 Progress Bars
 
-Primary also supports HTML progress bars. You can create them inside of your note by using this code:
+Primary also supports HTML progress bars. Progress bars are mainly composed of the `value="n"` and `max="100"` parts. You can create them inside of your note by using this code:
 
 | Percentage  | HTML Code  |
 |------|---------------------------------------------|
@@ -178,6 +178,8 @@ Primary also supports HTML progress bars. You can create them inside of your not
 | 80%  | `<progress value="80" max="100"></progress>`  |
 | 90%  | `<progress value="90" max="100"></progress>`  |
 | 100% | `<progress value="100" max="100"></progress>` |
+
+**Note:** *Currently, Primary only supprots these specific values - but will be updated to properly visually support any value from 1-100 in the next update.*
 
 ## 🖼️ Screenshots
 
