@@ -102,26 +102,25 @@ _and more..._
 
 Obsidian internally supports unchecked, and checked (x) syntax. Primary offers additional syntaxes!
 
-```
-- [ ]  Unchecked
-- [x] `x` Checked
-- [>] `>` Rescheduled
-- [<] `<` Scheduled
-- [!] `!` Important
-- [-] `-` Cancelled
-- [/] `/` In Progress
-- [?] `?` Question
-- [*] `*` Star
-- [n] `n` Note
-- [l] `l` Location
-- [i] `i` Information
-- [S] `S` Amount
-- ["] `"` Quote
-- [I] `I` Idea
-- [p] `p` Pro
-- [c] `c` Con
-- [b] `b` Bookmark
-```
+| Syntax | Description |
+|--------|-------------|
+| `- [ ]`  | Unchecked   |
+| `- [x]`  | Checked     |
+| `- [>]`  | Rescheduled |
+| `- [<]`  | Scheduled   |
+| `- [!]`  | Important   |
+| `- [-]`  | Cancelled   |
+| `- [/]`  | In Progress |
+| `- [?]`  | Question    |
+| `- [*]`  | Star        |
+| `- [n]`  | Note        |
+| `- [l]`  | Location    |
+| `- [i]`  | Information |
+| `- [I]`  | Idea        |
+| `- [S]`  | Amount      |
+| `- [p]`  | Pro         |
+| `- [c]`  | Con         |
+| `- [b]`  | Bookmark    |
 
 ### ⏹️ Exclusive Callouts
 
@@ -162,6 +161,23 @@ Primary styles [Callouts](https://help.obsidian.md/How+to/Use+callouts), using a
 > [!morning]
 > “If you are irritated by every rub, how will your mirror be polished?”  ― Rumi
 ```
+
+### 💯 Progress Bars
+
+Primary also supports HTML progress bars. You can create them inside of your note by using this code:
+
+| Percentage  | HTML Code  |
+|------|---------------------------------------------|
+| 10%  | `<progress value="10" max="100"></progress>`  |
+| 20%  | `<progress value="20" max="100></progress>`   |
+| 30%  | `<progress value="30" max="100"></progress>`  |
+| 40%  | `<progress value="40" max="100"></progress>`  |
+| 50%  | `<progress value="50" max="100"></progress>`  |
+| 60%  | `<progress value="60" max="100"></progress>`  |
+| 70%  | `<progress value="70" max="100"></progress>`  |
+| 80%  | `<progress value="80" max="100"></progress>`  |
+| 90%  | `<progress value="90" max="100"></progress>`  |
+| 100% | `<progress value="100" max="100"></progress>` |
 
 ## 🖼️ Screenshots
 
