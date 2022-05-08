@@ -2242,7 +2242,7 @@ a:where(a.tag, button.mod-cta a, a.is-unresolved):active {
 .markdown-rendered.cm-embed-block .internal-link,
 .markdown-preview-view .internal-link,
 div.node-insert-event .internal-link,
-.reveal .internal-link {
+.reveal a.internal-link {
   color: var(--md-color-reslink);
   text-decoration: underline solid 1px;
   text-underline-position: under;
@@ -2252,7 +2252,7 @@ div.node-insert-event .internal-link,
 .markdown-rendered.cm-embed-block .internal-link:hover,
 .markdown-preview-view .internal-link:hover,
 div.node-insert-event .internal-link:hover,
-.reveal .internal-link:hover {
+.reveal a.internal-link:hover {
   color: var(--md-color-reslink-hover);
   cursor: pointer;
 }
@@ -2260,14 +2260,14 @@ div.node-insert-event .internal-link:hover,
 .markdown-rendered.cm-embed-block .internal-link:active,
 .markdown-preview-view .internal-link:active,
 div.node-insert-event .internal-link:active,
-.reveal .internal-link:active {
+.reveal a.internal-link:active {
   color: var(--md-color-reslink-active);
 }
 .cm-s-obsidian .internal-link:where(.is-unresolved),
 .markdown-rendered.cm-embed-block .internal-link:where(.is-unresolved),
 .markdown-preview-view .internal-link:where(.is-unresolved),
 div.node-insert-event .internal-link:where(.is-unresolved),
-.reveal .internal-link:where(.is-unresolved) {
+.reveal a.internal-link:where(.is-unresolved) {
   color: var(--md-color-unreslink);
   text-decoration: underline solid 1px;
   text-underline-position: under;
@@ -2277,7 +2277,7 @@ div.node-insert-event .internal-link:where(.is-unresolved),
 .markdown-rendered.cm-embed-block .internal-link:where(.is-unresolved):hover,
 .markdown-preview-view .internal-link:where(.is-unresolved):hover,
 div.node-insert-event .internal-link:where(.is-unresolved):hover,
-.reveal .internal-link:where(.is-unresolved):hover {
+.reveal a.internal-link:where(.is-unresolved):hover {
   color: var(--md-color-unreslink-hover);
   cursor: pointer;
 }
@@ -2285,14 +2285,14 @@ div.node-insert-event .internal-link:where(.is-unresolved):hover,
 .markdown-rendered.cm-embed-block .internal-link:where(.is-unresolved):active,
 .markdown-preview-view .internal-link:where(.is-unresolved):active,
 div.node-insert-event .internal-link:where(.is-unresolved):active,
-.reveal .internal-link:where(.is-unresolved):active {
+.reveal a.internal-link:where(.is-unresolved):active {
   color: var(--md-color-unreslink-active);
 }
 .no-link-underline.no-link-underline .cm-s-obsidian .internal-link,
 .no-link-underline.no-link-underline .markdown-rendered.cm-embed-block .internal-link,
 .no-link-underline.no-link-underline .markdown-preview-view .internal-link,
 .no-link-underline.no-link-underline div.node-insert-event .internal-link,
-.no-link-underline.no-link-underline .reveal .internal-link {
+.no-link-underline.no-link-underline .reveal a.internal-link {
   text-decoration: none;
 }
 

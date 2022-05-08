@@ -162,7 +162,7 @@ a:where(a.tag, button.mod-cta a, a.is-unresolved) {
 .markdown-rendered.cm-embed-block .internal-link,
 .markdown-preview-view .internal-link,
 div.node-insert-event .internal-link,
-.reveal .internal-link {
+.reveal a.internal-link {
     color: var(--md-color-reslink);
     text-decoration: underline solid 1px;
     text-underline-position: under;
