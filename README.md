@@ -1,8 +1,4 @@
-![Primary Main Promotional Image](https://github.com/ceciliamay/obsidianmd-theme-primary/blob/main/assets/primary-heroimg.png)
-
-# Primary 🟨🟥🟦
-
-_Winner of [Obsidian October](http://obsidian.md/october2021) 2021's Best Theme ✨_
+# Nezhos Theme 🟨🟥🟦
 
 > Primary is soft, chewy, comforting — like a chocolate chip cookie, or a warm brownie. Primary instantly puts you in a relaxed state that opens the door to creativity and exploration. Wonderfully executed down to the smallest details, Primary ran away with first place. — **O_O 2021 Judges**
 
