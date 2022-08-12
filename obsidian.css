@@ -27,19 +27,19 @@ body {
   --font-bold: 700;
   --font-extra-bold: 800;
   /*──────────Typography Modular Scale──────────*/
-  /*  Based on Standard 16px, Ratio 1.388  */
+  /*  Based on Standard 18px  */
   --line-width: 700px;
   --font-scale-000: 0.547em;
   --font-scale-00: 0.676em;
   --font-scale-0: 0.81em;
   --font-scale-0-5: 0.875em;
   --font-scale-1: 1em;
-  --font-scale-2: 1.188em;
-  --font-scale-3: 1.388em;
-  --font-scale-4: 1.648em;
-  --font-scale-5: 1.927em;
-  --font-scale-6: 2.288em;
-  --font-scale-7: 2.678em;
+  --font-scale-2: 1.08em;
+  --font-scale-3: 1.12em;
+  --font-scale-4: 1.25em;
+  --font-scale-5: 1.37em;
+  --font-scale-6: 1.6em;
+  --font-scale-7: 2em;
   --line-height-0: 1em;
   --line-height-0-5: 1.2em;
   --line-height-1: 1.53em;
@@ -1461,6 +1461,10 @@ body *,
   letter-spacing: var(--tracking-0);
 }
 
+.cm-line {
+  font-size: 18px;
+}
+
 .markdown-source-view.mod-cm6 .cm-content>[contenteditable=false] {
   contain: unset;
 }
@@ -1619,7 +1623,6 @@ body *,
 ────────────────────────────────────*/
 /*──────────Headings──────────*/
 :root body {
-  /* 1.388 Scale Ratio */
   --h1: var(--font-scale-7);
   --h2: var(--font-scale-6);
   --h3: var(--font-scale-5);
@@ -1704,7 +1707,6 @@ h6 {
 /* Source View Headings */
 body .cm-s-obsidian .HyperMD-header {
   line-height: var(--header-line-height);
-  padding-bottom: 0;
 }
 
 .cm-s-obsidian .cm-header-1,
@@ -1718,42 +1720,42 @@ body .cm-s-obsidian .HyperMD-header {
 
 .cm-s-obsidian .cm-header-1 {
   color: var(--h1-text-color);
-  font-size: var(--h1);
+  font-size: var(--h1) !important;
   font-weight: var(--h1-weight);
   font-style: var(--h1-style);
 }
 
 .cm-s-obsidian .cm-header-2 {
   color: var(--h2-text-color);
-  font-size: var(--h2);
+  font-size: var(--h2) !important;
   font-weight: var(--h2-weight);
   font-style: var(--h2-style);
 }
 
 .cm-s-obsidian .cm-header-3 {
   color: var(--h3-text-color);
-  font-size: var(--h3);
+  font-size: var(--h3) !important;
   font-weight: var(--h3-weight);
   font-style: var(--h3-style);
 }
 
 .cm-s-obsidian .cm-header-4 {
   color: var(--h4-text-color);
-  font-size: var(--h4);
+  font-size: var(--h4) !important;
   font-weight: var(--h4-weight);
   font-style: var(--h4-style);
 }
 
 .cm-s-obsidian .cm-header-5 {
   color: var(--h5-text-color);
-  font-size: var(--h5);
+  font-size: var(--h5) !important;
   font-weight: var(--h5-weight);
   font-style: var(--h5-style);
 }
 
 .cm-s-obsidian .cm-header-6 {
   color: var(--h6-text-color);
-  font-size: var(--h6);
+  font-size: var(--h6) !important;
   font-weight: var(--h6-weight);
   font-style: var(--h6-style);
 }
@@ -3450,18 +3452,6 @@ div.callout[data-callout*=success] .callout-fold {
 .no-md-activeline.theme-light,
 .no-md-activeline.theme-dark {
   --md-color-activeline: transparent !important;
-}
-
-.workspace-leaf:not(.workspace-leaf.mod-active) .cm-active,
-.workspace-leaf:not(.workspace-leaf.mod-active) .CodeMirror-activeline .CodeMirror-linebackground,
-.workspace-leaf:not(.workspace-leaf.mod-active) .CodeMirror-activeline-gutter {
-  background: transparent;
-}
-
-.CodeMirror-activeline .CodeMirror-linebackground,
-.CodeMirror-activeline-gutter,
-.cm-active:not(.cm-gutterElement) {
-  background: var(--md-color-activeline);
 }
 
 .theme-light .cm-active.cm-gutterElement {
@@ -7128,85 +7118,7 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
 /*────────────────────────────────────
 +++++++++++++++Workspace++++++++++++++
 ────────────────────────────────────*/
-/*────────────────────────────────────
-            Side Dock Ribbon
-────────────────────────────────────*/
-.is-mobile .workspace-drawer-ribbon {
-  width: var(--scale-8-8);
-  border-right: 1px solid var(--background-modifier-border);
-}
 
-.is-mobile .workspace-drawer-ribbon .side-dock-ribbon-action {
-  padding-bottom: var(--scale-0-0);
-}
-
-/*────────────────────────────────────
-    Tab Header in Workspace Drawer
-────────────────────────────────────*/
-.is-mobile .workspace-drawer-header {
-  padding: var(--scale-8-3) var(--scale-8-3) var(--scale-0-0) var(--scale-8-3);
-}
-
-.is-mobile .workspace-drawer-active-tab-header {
-  padding: var(--scale-2-4) var(--scale-2-2) var(--scale-2-4) var(--scale-2-8);
-  margin: 0;
-}
-
-.is-mobile .workspace-drawer-tab-container>* {
-  padding: var(--scale-0-0) var(--scale-8-1) var(--scale-0-0) var(--scale-8-1);
-}
-
-/*────────────────────────────────────
-    Nav Header in Workspace Drawer
-────────────────────────────────────*/
-.is-mobile .workspace-drawer-actions,
-.is-mobile .nav-buttons-container {
-  margin: var(--scale-2-6) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
-}
-
-.is-mobile .nav-action-button {
-  padding: 0;
-  margin: var(--scale-0-0) var(--scale-2-6) var(--scale-0-0) var(--scale-2-6);
-}
-
-/*────────────────────────────────────
-            Tab Content
-────────────────────────────────────*/
-.is-mobile .workspace-drawer {
-  width: 100%;
-}
-
-.is-mobile .workspace-drawer.mod-left .workspace-drawer-inner {
-  padding-left: var(--scale-8-8);
-  padding-right: var(--scale-0-0);
-}
-
-.is-mobile .workspace-drawer .workspace-drawer-inner {
-  background: var(--background-secondary);
-}
-
-.is-mobile .workspace-drawer .workspace-drawer-tab-options {
-  padding: var(--scale-0-0) var(--scale-8-1) var(--scale-0-0) var(--scale-8-1);
-}
-
-.is-mobile .workspace-drawer .search-input-suggest-button {
-  top: 8px;
-}
-
-/* Workspace Drawer Items Fix */
-:root {
-  --mobile-fileexplorer-font-size: 16px;
-  --mobile-fileexplorer-line-height: 1.2;
-}
-
-.is-mobile .theme-light .nav-folder-title,
-.is-mobile .theme-light .nav-file-title,
-.is-mobile .theme-dark .nav-folder-title,
-.is-mobile .theme-dark .nav-file-title {
-  font-size: var(--mobile-fileexplorer-font-size);
-  line-height: var(--mobile-fileexplorer-line-height);
-  padding: var(--scale-2-2) var(--scale-2-4);
-}
 
 /*────────────────────────────────────
 +++++++++Content / Active Note++++++++
@@ -7363,202 +7275,6 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
 ────────────────────────────────────*/
 .is-mobile .progress-bar-message {
   font-size: var(--font-scale-1);
-}
-
-/* Phone */
-@media (max-width: 400pt) {
-
-  /*────────────────────────────────────
-  ++++++++++++++Variables+++++++++++++++
-  ────────────────────────────────────*/
-  .is-mobile {
-    /*──────────Typography Modular Scale──────────*/
-    /*  Based on Standard 16px  */
-    --line-width: 400pt;
-    --scale-ratio: 1.23;
-    --font-scale-000: 0.652em;
-    --font-scale-00: 0.694em;
-    --font-scale-0: 0.783em;
-    --font-scale-0-5: 0.875em;
-    --font-scale-1: 1em;
-    --font-scale-2: 1.12em;
-    --font-scale-3: 1.23em;
-    --font-scale-4: 1.378em;
-    --font-scale-5: 1.513em;
-    --font-scale-6: 1.695em;
-    --font-scale-7: 1.861em;
-    --font-scale-8: 2.085em;
-    --font-scale-9: 2.289em;
-    --font-scale-10: 2.564em;
-    /*────────────────────────────────────
-    +++++++++Content / Active Note++++++++
-    ────────────────────────────────────*/
-    /*────────────────────────────────────
-                    Editor
-    ────────────────────────────────────*/
-    /* iOS Modal extending to Status Bar fix */
-  }
-
-  .is-mobile .modal:not(.modal.mod-settings),
-  .is-mobile .prompt,
-  .is-mobile .suggestion-container,
-  .is-mobile .menu {
-    border-top-left-radius: var(--scale-2-8);
-    border-top-right-radius: var(--scale-2-8);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
-  }
-
-  .is-mobile .modal:not(.modal.mod-settings),
-  .is-mobile .prompt {
-    bottom: 0;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .is-mobile .suggestion-container {
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-
-  .is-mobile .modal.mod-settings {
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
-    border-radius: 0;
-  }
-
-  .is-mobile .modal.mod-community-theme .modal-content {
-    padding: var(--scale-0-0) var(--scale-2-3);
-  }
-
-  .is-mobile .prompt kbd {
-    display: none;
-  }
-
-  .is-mobile.is-ios .modal.mod-settings {
-    top: auto;
-    bottom: 0;
-    max-height: calc(100% - 42px);
-    box-shadow: none;
-  }
-
-  .is-mobile.is-ios .modal-bg {
-    background: var(--background-secondary);
-    opacity: 1;
-  }
-}
-
-@media (min-width: 400pt) {
-
-  /*────────────────────────────────────
-  ++++++++++++++Variables+++++++++++++++
-  ────────────────────────────────────*/
-  .is-mobile {
-    /*──────────Typography Modular Scale──────────*/
-    /*  Based on Standard 16px  */
-    --line-width: 400pt;
-    --scale-ratio: 1.32;
-    --font-scale-000: 0.652em;
-    --font-scale-00: 0.694em;
-    --font-scale-0: 0.783em;
-    --font-scale-0-5: 0.875em;
-    --font-scale-1: 1em;
-    --font-scale-2: 1.179em;
-    --font-scale-3: 1.32em;
-    --font-scale-4: 1.557em;
-    --font-scale-5: 1.742em;
-    --font-scale-6: 2.055em;
-    --font-scale-7: 2.3em;
-    --font-scale-8: 2.712em;
-    --font-scale-9: 3.036em;
-    --font-scale-10: 3.58em;
-    /*────────────────────────────────────
-    +++++++++++++++Workspace++++++++++++++
-    ────────────────────────────────────*/
-    /*────────────────────────────────────
-                Workspace Sidebar
-    ────────────────────────────────────*/
-    /*────────────────────────────────────
-    +++++++++Content / Active Note++++++++
-    ────────────────────────────────────*/
-    /*────────────────────────────────────
-    +++++++++++Other Components+++++++++++
-    ────────────────────────────────────*/
-    /*────────────────────────────────────
-                    Modals
-    ────────────────────────────────────*/
-    /*─────────Settings Modal──────────*/
-    /*─────────Menu/Options Modal──────────*/
-    /*────────────────────────────────────
-                Pull Down Action
-    ────────────────────────────────────*/
-  }
-
-  .is-mobile .workspace-drawer:not(.is-pinned) {
-    width: 100vw;
-    max-width: 360pt;
-    height: calc(100vh - var(--scale-8-6));
-    margin: var(--scale-8-3) var(--scale-8-3);
-    border-radius: var(--scale-2-8);
-    border: 1px solid var(--background-modifier-border);
-    box-shadow: 0px 0px 16px 0px var(--background-modifier-box-shadow);
-  }
-
-  .is-mobile .modal,
-  .is-mobile .prompt {
-    top: auto;
-    bottom: auto;
-    width: 100%;
-    max-width: 75%;
-    border-radius: var(--scale-2-8);
-    box-shadow: var(--shadow-m) var(--background-modifier-box-shadow);
-  }
-
-  .is-mobile .modal.mod-settings {
-    height: 100%;
-  }
-
-  .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) {
-    flex-direction: unset;
-  }
-
-  .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
-    width: 300px;
-  }
-
-  .is-mobile .menu {
-    border-top-left-radius: var(--scale-2-8);
-    border-top-right-radius: var(--scale-2-8);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: var(--shadow-m) var(--background-modifier-box-shadow);
-  }
-
-  .is-mobile .pull-down-action {
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 75%;
-    margin: var(--scale-2-8) auto;
-    padding: var(--scale-2-8) var(--scale-2-8) var(--scale-2-8) var(--scale-2-8);
-    text-align: center;
-    border-radius: var(--scale-2-8);
-    border: none;
-  }
-}
-
-@media (min-width: 1000pt) {
-  .is-mobile {
-    /*──────────Aside HTML / Sidenotes──────────*/
-  }
 }
 
 /*────────────────────────────────────
