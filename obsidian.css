@@ -110,8 +110,8 @@ body {
   /*─────────Original Obsidian Variables──────────*/
   --background-primary: var(--color-l-white);
   --background-primary-alt: var(--color-l-gray-10);
-  --background-secondary: var(--color-l-gray-20);
-  --background-secondary-alt: var(--color-l-gray-20);
+  --background-secondary: var(--color-l-gray-10);
+  --background-secondary-alt: var(--color-l-white);
   --background-modifier-border: var(--color-l-gray-40);
   --background-modifier-form-field: var(--color-l-gray-30);
   --background-modifier-form-field-highlighted: var(--color-l-gray-40);
@@ -229,8 +229,8 @@ body {
   /*─────────Original Obsidian Variables──────────*/
   --background-primary: var(--color-d-gray-70);
   --background-primary-alt: var(--color-d-gray-90);
-  --background-secondary: var(--color-d-black);
-  --background-secondary-alt: var(--color-d-black);
+  --background-secondary: var(--color-d-gray-80);
+  --background-secondary-alt: var(--color-d-gray-90);
   --background-modifier-border: var(--color-d-gray-50);
   --background-modifier-form-field: var(--color-d-blacker);
   --background-modifier-form-field-highlighted: var(--color-d-black);
@@ -270,8 +270,8 @@ body {
   --color-d-gray-50: hsl(33, 20%, 20%);
   --color-d-gray-60: hsl(30, 19%, 17%);
   --color-d-gray-70: hsl(208, 95%, 8%);
-  --color-d-gray-80: hsl(32, 19%, 13%);
-  --color-d-gray-90: hsl(207, 96%, 10%);
+  --color-d-gray-80: hsl(207, 96%, 10%);
+  --color-d-gray-90: hsl(206, 95%, 8%);
   --color-d-gray-100: hsl(30, 20%, 8%);
   --color-d-black: #02223c;
   --color-d-blacker: hsl(26, 16%, 9%);
@@ -583,15 +583,22 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  background-color: var(--background-secondary-alt);
+}
+
+.workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+  border-left: 1px solid var(--background-modifier-border) !important;
 }
 
 .workspace-tabs {
   padding-right: 0;
+  background-color: var(--background-secondary);
 }
 
 /*─────────Tab Header Icons──────────*/
 .workspace-tab-header-container {
   height: unset;
+  background-color: var(--background-secondary);
   padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
   margin: var(--scale-2-6) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
 }
@@ -842,6 +849,7 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
 ────────────────────────────────────*/
 .workspace-split.mod-right-split .workspace-tabs:last-child {
   padding-bottom: calc(-4px + var(--scale-8-3));
+  background-color: var(--background-secondary-alt);
 }
 
 /*─────────View Content──────────*/
@@ -859,6 +867,7 @@ body .workspace-tab-header .workspace-tab-header-inner-icon svg {
 .workspace-leaf-content[data-type=backlink] .view-content,
 .workspace-leaf-content[data-type=outgoing-link] .view-content {
   padding: var(--scale-2-3) var(--scale-0-0) var(--scale-2-4) var(--scale-0-0);
+  background-color: var(--background-secondary-alt);
 }
 
 .workspace-leaf-content[data-type=starred] {
@@ -1298,7 +1307,7 @@ Content / Active Note / Opened Notes
 .view-header-icon,
 .view-header-title,
 .view-header .view-action {
-  margin-top: 1px;
+  margin: 8px -2px !important;
 }
 
 .view-header-title {
@@ -7118,48 +7127,6 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
 /*────────────────────────────────────
 +++++++++++++++Workspace++++++++++++++
 ────────────────────────────────────*/
-
-
-/*────────────────────────────────────
-+++++++++Content / Active Note++++++++
-────────────────────────────────────*/
-/*────────────────────────────────────
-            Note Header
-────────────────────────────────────*/
-.is-mobile .view-header,
-.is-mobile .workspace-leaf.mod-active .view-header,
-.is-mobile .workspace-split.mod-root>.workspace-leaf:first-of-type:last-of-type .view-header {
-  height: var(--scale-2-24);
-}
-
-.is-mobile .view-header .view-header-icon {
-  top: 4px;
-  margin-left: 6px;
-}
-
-.is-mobile .view-header-title {
-  line-height: 50px;
-}
-
-.is-mobile .view-header .view-actions a {
-  top: 6px;
-}
-
-/*────────────────────────────────────
-        Backlinks in Document
-────────────────────────────────────*/
-.is-mobile .mod-root .workspace-leaf-content[data-type=markdown] .nav-buttons-container {
-  position: relative;
-  margin-top: var(--scale-2-4);
-  margin-bottom: var(--scale-0-0);
-}
-
-.is-mobile .mod-root .workspace-leaf-content[data-type=markdown] .embedded-backlinks .search-input-container {
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: var(--scale-2-4);
-}
 
 /*────────────────────────────────────
 +++++++++++Other Components+++++++++++
