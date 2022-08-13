@@ -4,7 +4,6 @@
 
 :root,
 body {
-
     /*──────────Font Families──────────*/
     
     --font-preview: var(--font-text);
@@ -66,6 +65,9 @@ body {
     --tracking-5: 2.56px;
     
     /*──────────Layout Sizing──────────*/
+
+    /* Obsidian Defaults */
+    --border-width: 1px;
     
     --scale-0-0: 0px;
     

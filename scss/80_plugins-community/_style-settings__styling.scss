@@ -141,9 +141,14 @@ div.workspace-leaf-content[data-type=style-settings] .view-content
     flex-direction: row;
 }
 
-/* Removes Weird Padding on Dark Theme Color Picker */
-.view-content .style-settings-container .setting-item-control {
-    padding-top: 0.2em;
+/* vertically center toggles, dropdowns, etc. */
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+    align-items: center;
+}
+
+/* removes padding-top on toggles, dropdowns, etc. */
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) .setting-item-control {
+    padding-top: unset;
 }
 
 div.themed-color-wrapper {

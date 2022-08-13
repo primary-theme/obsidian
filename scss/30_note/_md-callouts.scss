@@ -159,7 +159,8 @@
 /* Callout Colors */
 .theme-light,
 .theme-dark {
-    --callout-color-note: 200, 175, 155;
+    --callout-color-general: 200, 175, 155;
+    --callout-color-note: 145, 125, 105;
     --callout-color-abstract: 34, 152, 225;
     --callout-color-summary: 255, 221, 88;
     --callout-color-tldr: 240, 180, 225;
@@ -168,8 +169,6 @@
     --callout-color-tip: 70, 206, 185;
     --callout-color-hint: 70, 206, 185;
     --callout-color-important: 244, 87, 93;
-    --callout-color-celebrate: 100, 175, 255;
-    --callout-color-celebrate-bg: linear-gradient(45deg, #ef92af70, #7bd7e970, #81e1a570, #ffda2b70);
     --callout-color-success: 100, 175, 255;
     --callout-color-success-bg: linear-gradient(45deg, #ef92af70, #7bd7e970, #81e1a570, #ffda2b70);
     --callout-color-check: 0, 200, 83;
@@ -193,15 +192,31 @@
     --callout-color-con: 255, 75, 75;
     --callout-color-idea: 247, 141, 25;
     --callout-color-morning: 149, 197, 194;
+    --callout-color-meditate: 149, 197, 194;
+    --callout-color-money: 144, 194, 120;
+    --callout-color-backlog: 79, 160, 178;
+    --callout-color-inprogress: 226, 183, 35;
+    --callout-color-currently: 57, 210, 169;
+    --callout-color-target: 247, 87, 87;
+    --callout-color-btc: 236, 136, 25;
+    --callout-color-resources: 206, 91, 124;
+    --callout-color-links: 57, 175, 222;
+    --callout-color-related: 124, 126, 255;
+    --callout-color-world: 185, 208, 57;
+    --callout-color-backstory: 72, 108, 231;
+    --callout-color-feature: 255, 161, 32;
+    --callout-color-conflict: 232, 101, 101;
+    --callout-color-translate: 100, 214, 255;
+    --callout-color-shop: 237, 160, 200;
 }
 
 
 /* Callout Type Styling */
 div.callout {
-    --callout-color: 200, 175, 155;
+    --callout-color: var(--callout-color-general);
 
     &[data-callout="note"] {
-        --callout-color: 145, 125, 105;
+        --callout-color: var(--callout-color-note);
 
         & .callout-title {
             background: rgb(var(--callout-color), 0.03);
@@ -209,115 +224,120 @@ div.callout {
     }
     &[data-callout="abstract"] {
         --callout-icon: loader;
-        --callout-color: 34, 152, 225;
+        --callout-color: var(--callout-color-abstract);
     }
     &[data-callout="summary"] {
         --callout-icon: align-justify;
-        --callout-color: 255, 221, 88;
+        --callout-color: var(--callout-color-summary);
     }
     &[data-callout="tldr"] {
         --callout-icon: clock-4;
-        --callout-color: 240, 180, 225;
+        --callout-color: var(--callout-color-tldr);
 
         & .callout-title {
             text-transform: uppercase;
         }
     }
     &[data-callout="info"] {
-        --callout-color: 0, 171, 197;
+        --callout-color: var(--callout-color-info);
     }
     &[data-callout="todo"] {
         --callout-icon: check-square;
-        --callout-color: 0, 171, 197;
+        --callout-color: var(--callout-color-todo);
     }
     &[data-callout="tip"] {
         --callout-icon: clover;
-        --callout-color: 70, 206, 185;
+        --callout-color: var(--callout-color-tip);
     }
     &[data-callout="hint"] {
         --callout-icon: search;
-        --callout-color: 70, 206, 185;
+        --callout-color: var(--callout-color-hint);
     }
     &[data-callout="important"] {
         --callout-icon: asterisk;
-        --callout-color: 244, 87, 93;
+        --callout-color: var(--callout-color-important);
     }
     &[data-callout="check"] {
         --callout-icon: check;
-        --callout-color: 0, 200, 83;
+        --callout-color: var(--callout-color-check);
     }
     &[data-callout="done"] {
         --callout-icon: check;
-        --callout-color: 0, 200, 83;
+        --callout-color: var(--callout-color-done);
     }
     &[data-callout="question"] {
-        --callout-color: 130, 190, 235;
+        --callout-color: var(--callout-color-question);
     }
     &[data-callout="help"] {
-        // --callout-icon: paperclip;
-        --callout-color: 150, 95, 255;
+        --callout-color: var(--callout-color-help);
     }
     &[data-callout="faq"] {
-        --callout-color: 130, 190, 235;
+        --callout-color: var(--callout-color-faq);
     }
     &[data-callout="warning"] {
-        --callout-color: 255, 161, 32;
+        --callout-color: var(--callout-color-warning);
     }
     &[data-callout="caution"] {
-        --callout-color: 255, 161, 32;
+        --callout-color: var(--callout-color-caution);
     }
     &[data-callout="attention"] {
-        --callout-color: 255, 161, 32;
+        --callout-color: var(--callout-color-attention);
     }
     &[data-callout="fail"],
     &[data-callout="failure"] {
-        --callout-color: 226, 72, 86;
+        --callout-color: var(--callout-color-failure);
     }
     &[data-callout="missing"] {
-        --callout-color: 226, 72, 86;
+        --callout-color: var(--callout-color-missing);
     }
     &[data-callout="danger"] {
-        --callout-color: 226, 72, 86;
+        --callout-color: var(--callout-color-danger);
     }
     &[data-callout="error"] {
         --callout-icon: alert-circle;
-        --callout-color: 226, 72, 86;
+        --callout-color: var(--callout-color-error);
     }
     &[data-callout="bug"] {
-        --callout-color: 206, 91, 124;
+        --callout-color: var(--callout-color-bug);
     }
     &[data-callout="example"] {
-        --callout-color: 173, 102, 234;
+        --callout-color: var(--callout-color-example);
     }
     &[data-callout="quote"] {
-        --callout-color: 158, 158, 158;
+        --callout-color: var(--callout-color-quote);
     }
     &[data-callout="cite"] {
-        --callout-color: 158, 158, 158;
+        --callout-color: var(--callout-color-cite);
     }
     &[data-callout="pro"] {
         --callout-icon: thumbs-up;
-        --callout-color: 147, 241, 62;
+        --callout-color: var(--callout-color-pro);
     }
     &[data-callout="con"] {
         --callout-icon: thumbs-down;
-        --callout-color: 255, 75, 75;
+        --callout-color: var(--callout-color-con);
     }
     &[data-callout="idea"] {
         --callout-icon: lightbulb;
-        --callout-color: 247, 141, 25;
+        --callout-color: var(--callout-color-idea);
     }
+    &[data-callout="coffee"],
     &[data-callout="morning"] {
         --callout-icon: coffee;
-        --callout-color: 149, 197, 194;
+        --callout-color: var(--callout-color-morning);
+    }
+    &[data-callout="meditation"],
+    &[data-callout="meditate"] {
+        --callout-icon: sprout;
+        --callout-color: var(--callout-color-meditate);
     }
     &[data-callout*="celebrate"],
     &[data-callout*="success"] {
         --callout-icon: flag;
-        --callout-color: 100, 175, 255;
+        --callout-color: var(--callout-color-success);
         
         & .callout-title {
-            background: linear-gradient(45deg, #ef92af70, #7bd7e970, #81e1a570, #ffda2b70);
+            background: var(--callout-color-success-bg);
             background-size: 800% 800%;
             -webkit-animation: animateCelebrate 15s ease infinite;
         }
@@ -330,6 +350,74 @@ div.callout {
         & .callout-fold {
             color: var(--md-color-text);
         }
+    }
+    &[data-callout="money"] {
+        --callout-icon: banknote;
+        --callout-color: var(--callout-color-money);
+    }
+    &[data-callout="backlog"] {
+        --callout-icon: inbox;
+        --callout-color: var(--callout-color-backlog);
+    }
+    &[data-callout="doing"],
+    &[data-callout="in-progress"] {
+        --callout-icon: rocket;
+        --callout-color: var(--callout-color-inprogress);
+    }
+    &[data-callout="currently"] {
+        --callout-icon: haze;
+        --callout-color: var(--callout-color-currently);
+    }
+    &[data-callout="target"] {
+        --callout-icon: target;
+        --callout-color: var(--callout-color-target);
+    }
+    &[data-callout="btc"] {
+        --callout-icon: bitcoin;
+        --callout-color: var(--callout-color-btc);
+    }
+    &[data-callout="resources"] {
+        --callout-icon: bookmark;
+        --callout-color: var(--callout-color-resources);
+    }
+    &[data-callout="links"] {
+        --callout-icon: link-2;
+        --callout-color: var(--callout-color-links);
+    }
+    &[data-callout="related"] {
+        --callout-icon: shuffle;
+        --callout-color: var(--callout-color-related);
+    }
+    &[data-callout="world"],
+    &[data-callout="worlds"] {
+        --callout-icon: globe-2;
+        --callout-color: var(--callout-color-world);
+    }
+    &[data-callout="backstory"] {
+        --callout-icon: feather;
+        --callout-color: var(--callout-color-backstory);
+    }
+    &[data-callout="feature"],
+    &[data-callout="features"] {
+        --callout-icon: zap;
+        --callout-color: var(--callout-color-feature);
+    }
+    &[data-callout="conflict"],
+    &[data-callout="encounter"],
+    &[data-callout="challenge"] {
+        --callout-icon: mountain-snow;
+        --callout-color: var(--callout-color-conflict);
+    }
+    &[data-callout="translate"],
+    &[data-callout="translation"] {
+        --callout-icon: lucide-languages;
+        --callout-color: var(--callout-color-translate);
+    }
+    &[data-callout="buy"],
+    &[data-callout="shopping"],
+    &[data-callout="shop"] {
+        --callout-icon: shopping-cart;
+        --callout-color: var(--callout-color-shop);
     }
 }
 
