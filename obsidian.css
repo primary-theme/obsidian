@@ -214,8 +214,8 @@ body {
   --graph-color-node-text: var(--color-l-black);
 
   /* Normal Colors */
-  --h1-text-color: #ff1744;
-  --h2-text-color: #651fff;
+  --h1-text-color: #994cc3;
+  --h2-text-color: #4876d6;
   --h3-text-color: #00838f;
   --h4-text-color: var(--text-normal);
   --h5-text-color: var(--text-normal);
@@ -1188,21 +1188,27 @@ body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:active .tree-it
 /*────────────────────────────────────
             Status Bar
 ────────────────────────────────────*/
-.status-bar {
-  max-height: unset;
-  display: flex;
-  justify-content: flex-end;
+.status-bar,
+.is-translucent .status-bar {
   align-items: center;
-  position: absolute;
-  margin: auto;
-  right: 0;
+  background: white;
+  border-left: 1px solid var(--shade-plus-darker);
+  border-top-left-radius: var(--radius-m);
+  border-top: 1px solid var(--shade-plus-darker);
   bottom: 0;
-  padding: var(--scale-2-1) var(--scale-2-3) var(--scale-2-1) var(--scale-2-3);
-  border-top-left-radius: var(--scale-2-4);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1;
+  max-height: unset;
+  padding: 8px 12px 8px 0;
+  position: absolute;
+  right: 0;
+  margin: 0;
 }
 
 .status-bar-item {
-  padding: var(--scale-0-0) var(--scale-2-3) var(--scale-0-0) var(--scale-2-3);
+  padding: 1px 4px 0px 10px;
   display: flex;
   align-items: center;
 }
