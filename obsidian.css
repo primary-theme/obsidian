@@ -214,7 +214,8 @@ body {
   --graph-color-node-text: var(--color-l-black);
 
   /* Normal Colors */
-  --h1-text-color: #994cc3;
+  --h1-text-color: var(--text-normal);
+  ;
   --h2-text-color: #4876d6;
   --h3-text-color: #00838f;
   --h4-text-color: var(--text-normal);
@@ -1138,6 +1139,7 @@ body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:active .tree-it
   background: var(--color-l-gray-10);
   border: 1px solid rgba(100, 100, 100, 0.3);
   box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.1) inset, 0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+  border-left: 5px solid var(--interactive-accent);
 }
 
 .theme-light .nav-file-tag {
@@ -1173,6 +1175,7 @@ body.theme-dark .outgoing-link-pane .tree-item-self.is-clickable:active .tree-it
   background: var(--color-d-gray-70);
   border: 1px solid rgba(0, 0, 0, 0.45);
   box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--interactive-accent);
 }
 
 .theme-dark .nav-file-tag {
@@ -1347,7 +1350,7 @@ Content / Active Note / Opened Notes
 }
 
 .theme-light .workspace-leaf:not(.workspace-leaf.mod-active) .view-header-title {
-  color: var(--color-l-gray-50);
+  color: var(--color-l-gray-70);
 }
 
 .theme-light .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-header-icon,
@@ -1409,7 +1412,7 @@ Content / Active Note / Opened Notes
 }
 
 .theme-dark .workspace-leaf:not(.workspace-leaf.mod-active) .view-header-title {
-  color: var(--color-d-gray-30);
+  color: var(--color-d-gray-20);
 }
 
 .theme-dark .workspace-leaf:not(.workspace-leaf.mod-active) .view-header .view-header-icon,
@@ -1423,7 +1426,7 @@ Content / Active Note / Opened Notes
 
 .theme-dark .workspace-leaf.mod-active .view-header-title,
 .theme-dark .workspace-leaf.mod-active .view-action {
-  color: var(--color-d-gray-20);
+  color: var(--color-d-gray-10);
 }
 
 .theme-dark .workspace-leaf .view-header .view-action:nth-child(3n+1):hover {
