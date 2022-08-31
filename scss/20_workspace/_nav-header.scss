@@ -6,7 +6,7 @@
 .workspace-split.mod-right-split .nav-header {
     padding:    var(--scale-2-1)
                 var(--scale-2-2)
-                var(--scale-2-2)
+                var(--scale-2-1)
                 var(--scale-2-2);
     margin: var(--scale-0-0)
             var(--scale-0-0)
@@ -36,6 +36,8 @@
             var(--scale-0-0);
     border-radius: var(--scale-2-3);
     opacity: 1;
+    display: flex;
+    align-items: center;
 
     .theme-light & {
         color:  var(--color-l-gray-60);

@@ -24,8 +24,8 @@ body *,
     letter-spacing: var(--tracking-0);
 }
 
-.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-    contain: unset;
+.markdown-source-view.mod-cm6 .cm-content.cm-content > [contenteditable=false] {
+    contain: unset !important;
 }
 
 /* Preview */

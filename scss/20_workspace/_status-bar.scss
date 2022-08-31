@@ -3,6 +3,8 @@
 ────────────────────────────────────*/
 
 .status-bar {
+    font-size: var(--font-scale-0-5);
+
     max-height: unset;
     display: flex;
     justify-content: flex-end;
@@ -37,6 +39,7 @@
     color: var(--color-l-gray-50);
     background-color: var(--color-l-gray-10);
     border: 1px solid var(--color-l-gray-40);
+    border-bottom: none;
 
     &-item {
         color: var(--color-l-gray-60);
@@ -73,6 +76,7 @@
     color: var(--color-d-gray-30);
     background-color: var(--color-d-gray-80);
     border: 1px solid var(--color-d-gray-50);
+    border-bottom: none;
 
     &-item {
         color: var(--color-d-gray-30);

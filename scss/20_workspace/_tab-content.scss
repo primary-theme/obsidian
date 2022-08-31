@@ -1,6 +1,11 @@
 /*────────────────────────────────────
             Tab Content
 ────────────────────────────────────*/
+.workspace-tabs .workspace-leaf.mod-active,
+.workspace-tabs .workspace-leaf.mod-active:active {
+    border-color: transparent;
+}
+
 .workspace-split.mod-right-split
 .workspace-tabs:last-child {
     padding-bottom: calc(-4px + var(--scale-8-3));

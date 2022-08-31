@@ -9,6 +9,27 @@
     font-variant-numeric: tabular-nums;
 }
 
+/* scroll__scalable-fonts */
+body.scroll__scalable-fonts div:where(.workspace:not(.workspace .workspace-tab-container-inner), .modal, .prompt) {
+    font-size: var(--font-scale-1);
+    
+    /*──────────Typography Modular Scale──────────*/
+    
+    /*  Based on Standard 16px, Ratio 1.388  */
+    --font-scale-000: calc(var(--font-text-size) * 0.547);
+    --font-scale-00: calc(var(--font-text-size) * 0.676);
+    --font-scale-0: calc(var(--font-text-size) * 0.81);
+    --font-scale-0-5: calc(var(--font-text-size) * 0.875);
+    --font-scale-1: calc(var(--font-text-size) * 1);
+    --font-scale-2: calc(var(--font-text-size) * 1.188);
+    --font-scale-3: calc(var(--font-text-size) * 1.388);
+    --font-scale-4: calc(var(--font-text-size) * 1.648);
+    --font-scale-5: calc(var(--font-text-size) * 1.927);
+    --font-scale-6: calc(var(--font-text-size) * 2.288);
+    --font-scale-7: calc(var(--font-text-size) * 2.678);
+}
+
+
 /*────────── workspace-components ──────────*/
 /* vault title */
 .vault-title {
@@ -56,6 +77,29 @@
 
     & .graph-controls.is-close {
         margin-top: 36px;
+    }
+}
+
+
+/* unwrap file titles in file explorer */
+.linewrap-file__file-explorer {
+    & .nav-file-title {
+        width: max-content;
+        padding-right: var(--scale-8-1);
+    }
+    & .nav-file-title-content {
+        white-space: unset;
+    }
+}
+
+/* unwrap folder titles in file explorer */
+.linewrap-folder__file-explorer {
+    & .nav-folder-title {
+        width: max-content;
+        padding-right: var(--scale-8-1);
+    }
+    & .nav-folder-title {
+        white-space: unset;
     }
 }
 
@@ -158,7 +202,7 @@
         }
 
         & .side-dock-ribbon-action {
-            padding-bottom: var(--scale-2-2);
+            padding-bottom: var(--scale-2-6);
         }
 
         & .workspace-ribbon-collapse-btn {
@@ -236,7 +280,7 @@
         }
 
         & .side-dock-ribbon-action {
-            padding-bottom: var(--scale-2-2);
+            padding-bottom: var(--scale-2-6);
         }
 
         & .workspace-ribbon-collapse-btn {
@@ -937,6 +981,7 @@ body.center-embeds {
 
         background: var(--md-embed-bg);
         border: 0px solid transparent;
+        border-radius: 0;
 
         &-content.markdown-embed-content.markdown-embed-content.markdown-embed-content.markdown-embed-content::-webkit-scrollbar-thumb {
             border-color: var(--md-embed-bg);
@@ -970,4 +1015,29 @@ body.center-embeds {
     & .frontmatter-container {
         display: none;
     }
+}
+
+/* checkbox border radius style */
+.squircle__checkbox {
+    --ch-radius: var(--scale-2-3);
+    --ach-radius-noborder: var(--scale-0-0);
+    --ach-radius-curved: var(--scale-2-3);
+    --ach-radius-squircle: var(--scale-2-3);
+    --ach-radius-round: var(--scale-2-3);
+}
+
+.circle__checkbox {
+    --ch-radius: var(--scale-8-2);
+    --ach-radius-noborder: var(--scale-0-0);
+    --ach-radius-curved: var(--scale-2-2);
+    --ach-radius-squircle: var(--scale-8-2);
+    --ach-radius-round: var(--scale-8-2);
+}
+
+.square__checkbox {
+    --ch-radius: var(--scale-0-0);
+    --ach-radius-noborder: var(--scale-0-0);
+    --ach-radius-curved: var(--scale-0-0);
+    --ach-radius-squircle: var(--scale-0-0);
+    --ach-radius-round: var(--scale-0-0);
 }
