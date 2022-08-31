@@ -10,13 +10,13 @@
             width: 1px;
             height: 105%;
             top: -24px;
-            background: var(--background-modifier-border);
+            border-color: var(--background-modifier-border);
             transition: var(--duration-fast-2)
                         var(--motion-smooth);
 
             &:hover {
                 width: 4px;
-                background: var(--background-modifier-border);
+                border-color: var(--background-modifier-border);
                 transition: var(--duration-fast-2)
                             var(--motion-smooth);
             }
@@ -27,11 +27,11 @@
                             var(--motion-smooth);
 
                 .theme-light & { /* VH for Light Mode */
-                    background: var(--color-l-gray-50);
+                    border-color: var(--color-l-gray-50);
                 }
 
                 .theme-dark & { /* VH for Dark Mode */
-                    background: var(--color-d-gray-30);
+                    border-color: var(--color-d-gray-30);
                 }
             }
         }
@@ -64,4 +64,10 @@
             }
         }
     }
+}
+
+// remove new modification to resize handles
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle,
+.workspace-leaf-resize-handle {
+    border: none;
 }

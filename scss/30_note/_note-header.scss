@@ -32,13 +32,25 @@ Content / Active Note / Opened Notes
     }
 
     &-icon,
-    &-title,
+    &-title-container,
+    & .view-actions {
+        display: flex;
+        align-items: center;
+    }
+
     & .view-action {
-        margin-top: 1px;
+        font-size: 0;
+        top: unset;
+        display: flex;
     }
 
     &-title {
-        line-height: 2.1;
+        overflow: unset;
+        text-overflow: ellipsis;
+    }
+
+    &-icon {
+        top: unset;
     }
 }
 

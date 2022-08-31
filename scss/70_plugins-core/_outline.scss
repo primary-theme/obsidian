@@ -1,6 +1,9 @@
 /*────────────────────────────────────
             Outline Pane
 ────────────────────────────────────*/
+.outline {
+    font-size: var(--font-scale-0-5);
+}
 .workspace-leaf-content[data-type="outline"] {
     .tree-item-self {
         padding:    calc(1px + var(--scale-2-2))

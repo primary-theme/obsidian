@@ -89,7 +89,9 @@ body .workspace-tab-header
 .workspace-tab-header-inner-icon svg {
     height: var(--scale-8-2);
     width: var(--scale-8-2);
-    vertical-align: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*─────────Tab Header for Light Mode──────────*/

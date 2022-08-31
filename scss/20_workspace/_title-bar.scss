@@ -17,6 +17,7 @@
 .theme-light {
     & .titlebar {
         background: var(--color-l-white);
+        border-bottom: none;
     }
 
     & .titlebar-text {
@@ -64,6 +65,7 @@
 .theme-dark {
     & .titlebar {
         background: var(--color-d-gray-70);
+        border-bottom: none;
     }
 
     & .titlebar-text {

@@ -444,6 +444,13 @@
         border-radius: var(--scale-2-4);
         overflow-x: hidden;
 
+        & .suggestion {
+            padding:    var(--scale-0-0)
+                        var(--scale-0-0)
+                        var(--scale-0-0)
+                        var(--scale-0-0);
+        }
+
         .theme-light & {
             box-shadow: var(--shadow-m)
                         var(--color-l-shadow-100);
@@ -456,7 +463,7 @@
     }
 
     &-item {
-        &.search-suggest-item {
+        &.search-suggest-item.mod-complex:not(.mod-group) {
             line-height: var(--line-height-0-5);
             white-space: pre-wrap;
             word-wrap: break-word;
@@ -481,19 +488,12 @@
             }
         }
 
-        &.search-suggest-item.list-item.mod-group {
+        &.search-suggest-item.mod-group {
         // Modal Titles
             font-size: var(--font-scale-0-5);
-            padding:    var(--scale-2-3)
-                        var(--scale-2-6)
-                        var(--scale-2-3)
-                        var(--scale-2-6);
             border-radius: 0;
             border-bottom: 1px solid var(--background-modifier-border);
-            margin: var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-2-2)
-                    var(--scale-0-0);
+            margin-bottom: var(--scale-2-2);
         }
 
         & .search-suggest-info-text {
@@ -508,7 +508,6 @@
 
 .list-item-part.search-suggest-icon.clickable-icon {
     margin: 0;
-    margin-bottom: -4px;
 }
 
 /*─────────Prompts──────────*/
@@ -536,9 +535,29 @@
 
 .prompt-instructions {
     font-size: var(--font-scale-0-5);
+    display: flex;
+    justify-content: center;
     padding: var(--scale-2-3)
-            var(--scale-2-2)
+            var(--scale-2-4)
             var(--scale-2-3)
-            var(--scale-2-2);
+            var(--scale-2-4);
     border-top: 1px solid var(--background-modifier-border);
+}
+
+.prompt-instruction:last-child {
+    margin-right: 0;
+}
+
+/*───────── Loading Progress Status in Modals ──────────*/
+.is-loading:before {
+    border-radius: var(--scale-2-4);
+    border: 1px solid var(--background-modifier-border);
+
+    .theme-light & {
+        background: var(--color-l-green-500);
+    }
+
+    .theme-dark & {
+        background: var(--color-d-green-900);
+    }
 }

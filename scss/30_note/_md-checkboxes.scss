@@ -6,7 +6,7 @@ input[type=checkbox] {
 
     height: calc(3px + var(--font-text-size));
     width: calc(3px + var(--font-text-size));
-    border-radius: var(--scale-2-2);
+    border-radius: var(--ch-radius);
     border: 1px solid var(--text-faint);
     padding: 0;
     margin: 0;

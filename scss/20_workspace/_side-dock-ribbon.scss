@@ -36,15 +36,18 @@
 
 /* Side Dock Ribbon Icons Sizing */
 .side-dock-ribbon-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding:    var(--scale-0-0)
                 var(--scale-0-0)
-                var(--scale-2-4)
+                var(--scale-2-6)
                 var(--scale-0-0);
 }
 
 .workspace-ribbon.side-dock-ribbon {
     & .workspace-ribbon-collapse-btn {
-        margin-top: var(--scale-2-3);
+        margin-top: var(--scale-0-0);
         padding:    var(--scale-2-4)
                     var(--scale-2-5);
     }

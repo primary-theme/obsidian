@@ -1,7 +1,16 @@
 /*────────────────────────────────────
         Alternative Checkboxes
 ──────────────────────────────────────*/
-/*──────────Checkbox List Text──────────*/
+/*────────── Checkbox Radius ──────────*/
+body {
+    --ch-radius: var(--scale-2-2);
+    --ach-radius-noborder: var(--scale-0-0);
+    --ach-radius-curved: var(--scale-2-2);
+    --ach-radius-squircle: var(--scale-2-3);
+    --ach-radius-round: var(--scale-8-2);
+}
+
+/*────────── Checkbox List Text ──────────*/
 /* Normal Text */
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="!"],[data-task="/"],[data-task="?"],[data-task="n"],[data-task="*"],[data-task="l"],[data-task="i"],[data-task="<"],[data-task="S"],[data-task="\""],[data-task="I"],[data-task="p"],[data-task="c"],[data-task="b"]),
 ul > li.task-list-item.is-checked[data-task]:is([data-task="!"],[data-task="/"],[data-task="?"],[data-task="n"],[data-task="*"],[data-task="l"],[data-task="i"],[data-task="<"],[data-task="S"],[data-task="\""],[data-task="I"],[data-task="p"],[data-task="c"],[data-task="b"]) {
@@ -16,419 +25,787 @@ ul > li.task-list-item.is-checked[data-task]:is([data-task=">"],[data-task="-"])
     text-decoration: none;
 }
 
-/*──────────Icons & Background Color──────────*/
-// :root .theme-light {
-//     --alt-cb-bg-color-unchecked: ;
-//     --alt-cb-bg-color-checked: ;
-//     --alt-cb-bg-color-resched: ;
-//     --alt-cb-bg-color-sched: ;
-//     --alt-cb-bg-color-important: ;
-//     --alt-cb-bg-color-cancelled: ;
-//     --alt-cb-bg-color-inprogress: ;
-//     --alt-cb-bg-color-question: ;
-//     --alt-cb-bg-color-star: ;
-//     --alt-cb-bg-color-location: ;
-//     --alt-cb-bg-color-info: ;
-//     --alt-cb-bg-color-money: ;
-//     --alt-cb-bg-color-quote: ;
-//     --alt-cb-bg-color-idea: ;
-//     --alt-cb-bg-color-pro: ;
-//     --alt-cb-bg-color-con: ;
-//     --alt-cb-bg-color-bookmark: ;
-// }
+/*────────── Icons & Background Color ──────────*/
+:root .theme-light {
+    --ach-color-resched: var(--color-l-blue-300);
+    --ach-color-sched: var(--color-l-gray-90);
+    --ach-color-important: var(--color-l-red-500);
+    --ach-color-cancelled: var(--color-l-black);
+    --ach-color-inprogress: var(--color-l-gray-50);
+    --ach-color-question: var(--color-l-yellow-700);
+    --ach-color-note: var(--color-l-red-700);
+    --ach-color-star: var(--color-l-orange-500);
+    --ach-color-location: var(--color-l-red-500);
+    --ach-color-info: var(--color-l-blue-700);
+    --ach-color-amount: var(--color-l-yellow-900);
+    --ach-color-quote: var(--color-l-violet-700);
+    --ach-color-idea: var(--color-l-yellow-700);
+    --ach-color-pro: var(--color-l-green-700);
+    --ach-color-con: var(--color-l-red-700);
+    --ach-color-bookmark: var(--color-l-red-700);
+    --ach-color-fire: var(--color-l-orange-500);
+    --ach-color-win: var(--color-l-yellow-700);
+    --ach-color-key: var(--color-l-yellow-500);
+    --ach-color-up: var(--color-l-green-900);
+    --ach-color-down: var(--color-l-red-700);
+    --ach-color-law: var(--color-l-gray-90);
+    --ach-color-measure: var(--color-l-blue-500);
+    --ach-color-medical: var(--color-l-blue-300);
+    --ach-color-time: var(--color-l-violet-300);
+    --ach-color-telephone: var(--color-l-red-300);
+    --ach-color-person: var(--color-l-blue-900);
+    --ach-color-tags: var(--color-l-blue-900);
+    --ach-color-feature: var(--color-l-orange-700);
+    --ach-color-language: var(--color-l-blue-300);
+    --ach-color-world: var(--color-l-blue-700);
+    --ach-color-universe: var(--color-l-violet-900);
+}
 
-// :root .theme-dark {
-//     --alt-cb-bg-color-unchecked: ;
-//     --alt-cb-bg-color-checked: ;
-//     --alt-cb-bg-color-resched: ;
-//     --alt-cb-bg-color-sched: ;
-//     --alt-cb-bg-color-important: ;
-//     --alt-cb-bg-color-cancelled: ;
-//     --alt-cb-bg-color-inprogress: ;
-//     --alt-cb-bg-color-question: ;
-//     --alt-cb-bg-color-star: ;
-//     --alt-cb-bg-color-location: ;
-//     --alt-cb-bg-color-info: ;
-//     --alt-cb-bg-color-money: ;
-//     --alt-cb-bg-color-quote: ;
-//     --alt-cb-bg-color-idea: ;
-//     --alt-cb-bg-color-pro: ;
-//     --alt-cb-bg-color-con: ;
-//     --alt-cb-bg-color-bookmark: ;
-// }
+:root .theme-dark {
+    --ach-color-resched: var(--color-d-blue-300);
+    --ach-color-sched: var(--color-d-gray-20);
+    --ach-color-important: var(--color-d-red-900);
+    --ach-color-cancelled: var(--color-d-black);
+    --ach-color-inprogress: var(--color-d-gray-30);
+    --ach-color-question: var(--color-d-yellow-700);
+    --ach-color-note: var(--color-d-red-700);
+    --ach-color-star: var(--color-d-orange-500);
+    --ach-color-location: var(--color-d-red-700);
+    --ach-color-info: var(--color-d-blue-700);
+    --ach-color-amount: var(--color-d-yellow-900);
+    --ach-color-quote: var(--color-d-violet-700);
+    --ach-color-idea: var(--color-d-yellow-700);
+    --ach-color-pro: var(--color-d-green-700);
+    --ach-color-con: var(--color-d-red-700);
+    --ach-color-bookmark: var(--color-d-red-900);
+    --ach-color-fire: var(--color-d-orange-700);
+    --ach-color-win: var(--color-d-yellow-500);
+    --ach-color-key: var(--color-d-yellow-700);
+    --ach-color-up: var(--color-d-green-700);
+    --ach-color-down: var(--color-d-red-900);
+    --ach-color-law: var(--color-d-gray-40);
+    --ach-color-measure: var(--color-d-blue-500);
+    --ach-color-medical: var(--color-d-blue-300);
+    --ach-color-time: var(--color-d-violet-500);
+    --ach-color-telephone: var(--color-d-red-500);
+    --ach-color-person: var(--color-d-blue-900);
+    --ach-color-tags: var(--color-d-blue-900);
+    --ach-color-feature: var(--color-d-orange-700);
+    --ach-color-language: var(--color-d-blue-300);
+    --ach-color-world: var(--color-d-blue-700);
+    --ach-color-universe: var(--color-d-violet-900);
+}
 
 /* x — Checked */
 input[data-task="x"],
-li[data-task="x"] > input {
+li[data-task="x"] > input,
+li[data-task="x"] > p > input {
+    border-radius: var(--ch-radius);
     &:checked {
-        background-position: center;
-        background-size: 72%;
+        background-position: center center;
+        background-size: 75%;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
     }
 }
 
 /* > — Rescheduled/Moved */
 input[data-task=">"],
-li[data-task=">"] > input {
+li[data-task=">"] > input,
+li[data-task=">"] > p > input {
+    border-radius: var(--ach-radius-noborder);
+
     &:checked {
+        cursor: default;
         background-position: center;
-        background-size: 50%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 256 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z'/%3E%3C/svg%3E");
+        background: none;
+
+        -webkit-mask-size: 110%;
+        -webkit-mask-position: 50% 50%;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-blue-500);
-            border: 1px solid rgba(0, 0, 0, 0.15);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-blue-900);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: var(--ach-color-resched);
+            box-shadow: none;
         }
     }
 }
 
 /* < — Schedule */
 input[data-task="<"],
-li[data-task="<"] > input {
+li[data-task="<"] > input,
+li[data-task="<"] > p > input {
+    border-radius: var(--ach-radius-noborder);
+
     &:checked {
-        background-position: center;
-        background-size: 92%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='M11 12h6v6h-6z'%3E%3C/path%3E%3Cpath d='M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z'%3E%3C/path%3E%3C/svg%3E");
+        cursor: default;
+        background: none;
+        -webkit-mask-size: 110%;
+        -webkit-mask-position: 50% 50%;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM5 7h14v2H5V7z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-gray-80);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-gray-40);
+            background-color: var(--ach-color-sched);
+            box-shadow: none;
         }
     }
 }
 
 /* ! — Important */
 input[data-task="!"],
-li[data-task="!"] > input {
+li[data-task="!"] > input,
+li[data-task="!"] > p > input {
+    border-radius: var(--ch-radius);
+
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 22%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 128 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M64 352c17.69 0 32-14.32 32-31.1V64.01c0-17.67-14.31-32.01-32-32.01S32 46.34 32 64.01v255.1C32 337.7 46.31 352 64 352zM64 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1s40-17.9 40-39.1S86.09 400 64 400z'/%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-red-500);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-red-900);
+            background-color: var(--ach-color-important);
+            box-shadow: none;
         }
     }
 }
 
 /* - — Cancelled */
 input[data-task="-"],
-li[data-task="-"] > input {
+li[data-task="-"] > input,
+li[data-task="-"] > p > input {
+    border-radius: var(--ch-radius);
+
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 67%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z'/%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-black);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-black);
+            background-color: var(--ach-color-cancelled);
+            box-shadow: none;
         }
     }
 }
 
 /* / — In Progress */
 input[data-task="/"],
-li[data-task="/"] > input {
+li[data-task="/"] > input,
+li[data-task="/"] > p > input {
+    border-radius: var(--ch-radius);
+
     &:checked {
         background-image: none;
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-gray-50);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-gray-30);
+            background: var(--ach-color-inprogress);
         }
     }
 }
 
 /* ? — Question */
 input[data-task="?"],
-li[data-task="?"] > input {
-    border-radius: var(--scale-2-8);
+li[data-task="?"] > input,
+li[data-task="?"] > p > input {
+    border-radius: var(--ach-radius-round);
 
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 48%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M204.3 32.01H96c-52.94 0-96 43.06-96 96c0 17.67 14.31 31.1 32 31.1s32-14.32 32-31.1c0-17.64 14.34-32 32-32h108.3C232.8 96.01 256 119.2 256 147.8c0 19.72-10.97 37.47-30.5 47.33L127.8 252.4C117.1 258.2 112 268.7 112 280v40c0 17.67 14.31 31.99 32 31.99s32-14.32 32-31.99V298.3L256 251.3c39.47-19.75 64-59.42 64-103.5C320 83.95 268.1 32.01 204.3 32.01zM144 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1s40-17.9 40-39.1S166.1 400 144 400z'/%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-yellow-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-yellow-700);
+            background-color: var(--ach-color-question);
+            box-shadow: none;
         }
     }
 }
 
 /* n — Note */
 input[data-task="n"],
-li[data-task="n"] > input {
-    border-radius: var(--scale-2-1);
+li[data-task="n"] > input,
+li[data-task="n"] > p > input {
+    border-radius: var(--ach-radius-noborder);
 
     &:checked {
+        cursor: default;
         background-position: center;
-        background-size: 60%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z'/%3E%3C/svg%3E");
+        background: none;
+
+        transform: rotate(45deg);
+        -webkit-mask-size: 120%;
+        -webkit-mask-position: 50% 50%;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M15 11.586V6h2V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2h2v5.586l-2.707 1.707A.996.996 0 0 0 6 14v2a1 1 0 0 0 1 1h4v3l1 2 1-2v-3h4a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L15 11.586z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-red-500);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-red-900);
+            background-color: var(--ach-color-note);
+            box-shadow: none;
         }
     }
 }
 
 /* * — Star */
 input[data-task="*"],
-li[data-task="*"] > input {
-    border-radius: var(--scale-2-8);
+li[data-task="*"] > input,
+li[data-task="*"] > p > input {
+    border-radius: var(--ach-radius-round);
 
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 80%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-orange-500);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-orange-500);
+            background-color: var(--ach-color-star);
+            box-shadow: none;
         }
     }
 }
 
 /* l — Location */
 input[data-task="l"],
-li[data-task="l"] > input {
+li[data-task="l"] > input,
+li[data-task="l"] > p > input {
+    border-radius: var(--ach-radius-noborder);
+    
     &:checked {
+        cursor: default;
         background-position: center;
-        background-size: 65%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z'/%3E%3C/svg%3E");
+        background-size: 100%;
+        background: none;
+
+        -webkit-mask-size: 110%;
+        -webkit-mask-position: 50% 50%;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z' clip-rule='evenodd' /%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-red-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-red-700);
+            background-color: var(--ach-color-location);
+            box-shadow: none;
         }
     }
 }
 
 /* i — Info */
 input[data-task="i"],
-li[data-task="i"] > input {
-    border-radius: var(--scale-2-8);
+li[data-task="i"] > input,
+li[data-task="i"] > p > input {
+    border-radius: var(--ach-radius-round);
 
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 26%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 192 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z'/%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-blue-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-blue-700);
+            background-color: var(--ach-color-info);
+            box-shadow: none;
         }
     }
 }
 
 /* S — Amount */
 input[data-task="S"],
-li[data-task="S"] > input {
-    border-radius: var(--scale-2-8);
+li[data-task="S"] > input,
+li[data-task="S"] > p > input {
+    border-radius: var(--ach-radius-round);
 
     &:checked {
+        cursor: default;
         background-position: center;
-        background-size: 95%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429 0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4zm-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399zm8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4z'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429 0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4zm-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399zm8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-yellow-900);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-yellow-900);
+            background-color: var(--ach-color-amount);
+            box-shadow: none;
         }
     }
 }
 
 /* " — Quote */
 input[data-task="\""], 
-li[data-task="\""] > input {
+li[data-task="\""] > p > input {
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 80%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='m21.95 8.721-.025-.168-.026.006A4.5 4.5 0 1 0 17.5 14c.223 0 .437-.034.65-.065-.069.232-.14.468-.254.68-.114.308-.292.575-.469.844-.148.291-.409.488-.601.737-.201.242-.475.403-.692.604-.213.21-.492.315-.714.463-.232.133-.434.28-.65.35l-.539.222-.474.197.484 1.939.597-.144c.191-.048.424-.104.689-.171.271-.05.56-.187.882-.312.317-.143.686-.238 1.028-.467.344-.218.741-.4 1.091-.692.339-.301.748-.562 1.05-.944.33-.358.656-.734.909-1.162.293-.408.492-.856.702-1.299.19-.443.343-.896.468-1.336.237-.882.343-1.72.384-2.437.034-.718.014-1.315-.028-1.747a7.028 7.028 0 0 0-.063-.539zm-11 0-.025-.168-.026.006A4.5 4.5 0 1 0 6.5 14c.223 0 .437-.034.65-.065-.069.232-.14.468-.254.68-.114.308-.292.575-.469.844-.148.291-.409.488-.601.737-.201.242-.475.403-.692.604-.213.21-.492.315-.714.463-.232.133-.434.28-.65.35l-.539.222c-.301.123-.473.195-.473.195l.484 1.939.597-.144c.191-.048.424-.104.689-.171.271-.05.56-.187.882-.312.317-.143.686-.238 1.028-.467.344-.218.741-.4 1.091-.692.339-.301.748-.562 1.05-.944.33-.358.656-.734.909-1.162.293-.408.492-.856.702-1.299.19-.443.343-.896.468-1.336.237-.882.343-1.72.384-2.437.034-.718.014-1.315-.028-1.747a7.571 7.571 0 0 0-.064-.537z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-violet-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-violet-700);
+            background-color: var(--ach-color-quote);
+            box-shadow: none;
         }
     }
 }
 
 /* I — Idea / Lightbulb */
 input[data-task="I"], 
-li[data-task="I"] > input {
-    border-radius: var(--scale-2-8);
+li[data-task="I"] > input, 
+li[data-task="I"] > p > input {
+    border-radius: var(--ach-radius-round);
 
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 90%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E&lt;!--! Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;%3Cpath d='M19,9a7,7,0,0,1-4,6.32V18H9V15.32A7,7,0,1,1,19,9Z'%3E%3C/path%3E%3Cline x1='9' y1='22' x2='15' y2='22'%3E%3C/line%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='9' y1='18' x2='15' y2='18'%3E%3C/line%3E%3Cline x1='10' y1='22' x2='14' y2='22'%3E%3C/line%3E%3Cpath d='M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-yellow-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-yellow-700);
+            background-color: var(--ach-color-idea);
+            box-shadow: none;
         }
     }
 }
 
 /* p - Pro */
 input[data-task="p"], 
-li[data-task="p"] > input {
+li[data-task="p"] > input, 
+li[data-task="p"] > p > input {
+    border-radius: var(--ach-radius-curved);
+    
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 90%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E&lt;!--! Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;%3Cpath d='M7,9l4-7h.69a2,2,0,0,1,2,2.28L13,9h6.67a2,2,0,0,1,2,2.3l-1.39,9a2,2,0,0,1-2,1.7H7Z'%3E%3C/path%3E%3Cpath d='M2,11v9a2,2,0,0,0,2,2H7V9H4A2,2,0,0,0,2,11Z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-green-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-green-700);
+            background-color: var(--ach-color-pro);
+            box-shadow: none;
         }
     }
 }
 
 /* c - Con */
 input[data-task="c"], 
-li[data-task="c"] > input {
+li[data-task="c"] > input, 
+li[data-task="c"] > p > input {
+    border-radius: var(--ach-radius-curved);
+    
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 90%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E&lt;!--! Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;%3Cpath d='M7,9l4-7h.69a2,2,0,0,1,2,2.28L13,9h6.67a2,2,0,0,1,2,2.3l-1.39,9a2,2,0,0,1-2,1.7H7Z'%3E%3C/path%3E%3Cpath d='M2,11v9a2,2,0,0,0,2,2H7V9H4A2,2,0,0,0,2,11Z'%3E%3C/path%3E%3C/svg%3E");
         transform: scaleY(-1);
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-red-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-red-700);
+            background-color: var(--ach-color-con);
+            box-shadow: none;
         }
     }
 }
 
 /* b - Bookmark */
 input[data-task="b"], 
-li[data-task="b"] > input {
+li[data-task="b"] > input, 
+li[data-task="b"] > p > input {
+    border-radius: var(--ach-radius-curved);
+
     &:checked {
+        cursor: default;
         background-position: center;
         background-size: 90%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='M19 10.132v-6c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2V22l7-4.666L19 22V10.132z'%3E%3C/path%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M19 10.132v-6c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2V22l7-4.666L19 22V10.132z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .theme-light & {
-        &:checked {
-            background-color: var(--color-l-red-700);
-        }
-    }
-
+    .theme-light &,
     .theme-dark & {
         &:checked {
-            background-color: var(--color-d-red-900);
+            background-color: var(--ach-color-bookmark);
+            box-shadow: none;
+        }
+    }
+}
+
+/* f - Fire */
+input[data-task="f"], 
+li[data-task="f"] > input, 
+li[data-task="f"] > p > input {
+    &:checked {
+        cursor: default;
+        background-position: center;
+        background-size: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M16.5 8c0 1.5-.5 3.5-2.9 4.3.7-1.7.8-3.4.3-5-.7-2.1-3-3.7-4.6-4.6-.4-.3-1.1.1-1 .7 0 1.1-.3 2.7-2 4.4C4.1 10 3 12.3 3 14.5 3 17.4 5 21 9 21c-4-4-1-7.5-1-7.5.8 5.9 5 7.5 7 7.5 1.7 0 5-1.2 5-6.4 0-3.1-1.3-5.5-2.4-6.9-.3-.5-1-.2-1.1.3'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-fire);
+            box-shadow: none;
+        }
+    }
+}
+
+/* w - Win */
+input[data-task="w"], 
+li[data-task="w"] > input, 
+li[data-task="w"] > p > input {
+    border-radius: var(--ach-radius-noborder);
+
+    &:checked {
+        cursor: default;
+        background-position: center;
+        background: none;
+
+        -webkit-mask-size: 100%;
+        -webkit-mask-position: 50% 50%;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M21 4h-3V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v1H3a1 1 0 0 0-1 1v3c0 4.31 1.8 6.91 4.82 7A6 6 0 0 0 11 17.91V20H9v2h6v-2h-2v-2.09A6 6 0 0 0 17.18 15c3-.1 4.82-2.7 4.82-7V5a1 1 0 0 0-1-1zM4 8V6h2v6.83C4.22 12.08 4 9.3 4 8zm14 4.83V6h2v2c0 1.3-.22 4.08-2 4.83z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-win);
+            box-shadow: none;
+        }
+    }
+}
+
+/* k - Key */
+input[data-task="k"], 
+li[data-task="k"] > input, 
+li[data-task="k"] > p > input {
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: rotate(45deg);msFilter:;'%3E%3Cpath d='M7 17a5.007 5.007 0 0 0 4.898-4H14v2h2v-2h2v3h2v-3h1v-2h-9.102A5.007 5.007 0 0 0 7 7c-2.757 0-5 2.243-5 5s2.243 5 5 5zm0-8c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-key);
+            box-shadow: none;
+        }
+    }
+}
+
+/* u - Up */
+input[data-task="u"], 
+li[data-task="u"] > input, 
+li[data-task="u"] > p > input {
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 85%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='transform: rotate(-10deg);' fill='white' viewBox='0 0 576 512'%3E%3C!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M384 160C366.3 160 352 145.7 352 128C352 110.3 366.3 96 384 96H544C561.7 96 576 110.3 576 128V288C576 305.7 561.7 320 544 320C526.3 320 512 305.7 512 288V205.3L342.6 374.6C330.1 387.1 309.9 387.1 297.4 374.6L191.1 269.3L54.63 406.6C42.13 419.1 21.87 419.1 9.372 406.6C-3.124 394.1-3.124 373.9 9.372 361.4L169.4 201.4C181.9 188.9 202.1 188.9 214.6 201.4L320 306.7L466.7 159.1L384 160z'/%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-up);
+            box-shadow: none;
+        }
+    }
+}
+
+/* d - Down */
+input[data-task="d"], 
+li[data-task="d"] > input, 
+li[data-task="d"] > p > input {
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 85%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='transform: rotate(10deg) scaleY(-1);' fill='white' viewBox='0 0 576 512'%3E%3C!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M384 160C366.3 160 352 145.7 352 128C352 110.3 366.3 96 384 96H544C561.7 96 576 110.3 576 128V288C576 305.7 561.7 320 544 320C526.3 320 512 305.7 512 288V205.3L342.6 374.6C330.1 387.1 309.9 387.1 297.4 374.6L191.1 269.3L54.63 406.6C42.13 419.1 21.87 419.1 9.372 406.6C-3.124 394.1-3.124 373.9 9.372 361.4L169.4 201.4C181.9 188.9 202.1 188.9 214.6 201.4L320 306.7L466.7 159.1L384 160z'/%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-down);
+            box-shadow: none;
+        }
+    }
+}
+
+/* r - Rule/Law */
+input[data-task="r"], 
+li[data-task="r"] > input, 
+li[data-task="r"] > p > input {
+    border-radius: var(--ach-radius-curved);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 92%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m16 16 3-8 3.001 8A5.002 5.002 0 0 1 16 16z'%3E%3C/path%3E%3Cpath d='m2 16 3-8 3.001 8A5.002 5.002 0 0 1 2 16z'%3E%3C/path%3E%3Cpath d='M7 21h10'%3E%3C/path%3E%3Cpath d='M12 3v18'%3E%3C/path%3E%3Cpath d='M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-law);
+            box-shadow: none;
+        }
+    }
+}
+
+/* m - Measure */
+input[data-task="m"], 
+li[data-task="m"] > input, 
+li[data-task="m"] > p > input {
+    border-radius: var(--ach-radius-curved);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 92%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m16 2 6 6L8 22l-6-6L16 2'%3E%3C/path%3E%3Cpath d='m7.5 10.5 2 2'%3E%3C/path%3E%3Cpath d='m10.5 7.5 2 2'%3E%3C/path%3E%3Cpath d='m13.5 4.5 2 2'%3E%3C/path%3E%3Cpath d='m4.5 13.5 2 2'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-measure);
+            box-shadow: none;
+        }
+    }
+}
+
+/* M - Medical */
+input[data-task="M"], 
+li[data-task="M"] > input, 
+li[data-task="M"] > p > input {
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 75%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M15 2.013H9V9H2v6h7v6.987h6V15h7V9h-7z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-medical);
+            box-shadow: none;
+        }
+    }
+}
+
+/* t - Time */
+input[data-task="t"], 
+li[data-task="t"] > input, 
+li[data-task="t"] > p > input {
+    border-radius: var(--ach-radius-round);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 90%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-time);
+            box-shadow: none;
+        }
+    }
+}
+
+/* T - Telephone */
+input[data-task="T"], 
+li[data-task="T"] > input, 
+li[data-task="T"] > p > input {
+    border-radius: var(--ach-radius-curved);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 85%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-telephone);
+            box-shadow: none;
+        }
+    }
+}
+
+/* P - Person */
+input[data-task="P"], 
+li[data-task="P"] > input, 
+li[data-task="P"] > p > input {
+    border-radius: var(--ach-radius-round);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 90%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-person);
+            box-shadow: none;
+        }
+    }
+}
+
+/* # - Tags */
+input[data-task="#"], 
+li[data-task="#"] > input, 
+li[data-task="#"] > p > input {
+    border-radius: var(--ach-radius-squircle);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 80%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12V2h10l9.44 9.44a2 2 0 0 1 0 2.82l-7.18 7.18a2 2 0 0 1-2.82 0L2 12Z'%3E%3C/path%3E%3Cpath d='M7 7h.01'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-tags);
+            box-shadow: none;
+        }
+    }
+}
+
+/* F - Feature */
+input[data-task="F"], 
+li[data-task="F"] > input, 
+li[data-task="F"] > p > input {
+    border-radius: var(--ach-radius-squircle);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 75%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='white' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'%3E%3C/polygon%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-feature);
+            box-shadow: none;
+        }
+    }
+}
+
+/* L - Translate/Language */
+input[data-task="L"], 
+li[data-task="L"] > input, 
+li[data-task="L"] > p > input {
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 90%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 6 6'%3E%3C/path%3E%3Cpath d='m4 14 6-6 2-3'%3E%3C/path%3E%3Cpath d='M2 5h12'%3E%3C/path%3E%3Cpath d='M7 2h1'%3E%3C/path%3E%3Cpath d='m22 22-5-10-5 10'%3E%3C/path%3E%3Cpath d='M14 18h6'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-language);
+            box-shadow: none;
+        }
+    }
+}
+
+/* W - World/Country */
+input[data-task="W"], 
+li[data-task="W"] > input, 
+li[data-task="W"] > p > input {
+    border-radius: var(--ach-radius-round);
+    
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: white;transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-world);
+            box-shadow: none;
+        }
+    }
+}
+
+/* U - Universe */
+input[data-task="U"], 
+li[data-task="U"] > input, 
+li[data-task="U"] > p > input {
+    border-radius: var(--ach-radius-curved);
+
+    &:checked {
+        cursor: default;
+        background-position: center center;
+        background-size: 95%;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAADKklEQVRYhe2XXWhPcRjHv8fbZLa2yLu8LVaSvNzRyIW0xPJyQYgiN7hCwiQpbsgNygWSQlIkRYrVWiJvIZrCYt5aFPs3NrOPi/Mc/2f//ue/s9mdPTfn/3x/3+f7fc7L7znnL/3vEXS1EJgiaZGkMkmlkook/ZaUknRf0mlJV4MgoBv6/GsaAIuAuySLC0Df7jIfA9zMMEgBT4Aa4BHQkqWJQ91hvgD4boK/gRPAPCAvg9cfWA18dQ20AiX/Yr4a+GViT4GZCWpmmXEUu7tqXu7MrwOFnag96xq40xXzUqDRBK4CfdzafOAiUG/3/Q2wwz9wwFLXwHvDhlre0JF5H+Ceke8D+YYPIHyy4+Ko05jh8GbDSix/11ED24yYAiYalgdU5TAHaHQacxz+1bDplr+MeL2ymA+StNPSXUEQvAQCSSclzcnZueQv7Xj3+4sdx9nxR2wDkrYpnGq1ko4ZtlfSSseplTRV0qSM2tPud4X7/diOpXZ8k8VXAvJJ7+Hlhs0m3PtRvAZG2Np8hz/C5oLd62a3tsnwM5YfiGtggxFeAb2BfsAzJ/QRmGDcycBnwx/arYt0/MRsBgYb/tywlXENRA/ZVsu3O6FfQJnh04AGwx8AxU5jJ+3jlOEjLW8DhmUzH0Z4qVuBEYRbsd4JVRpvCPDe4ZOcxhoziCIFjLS1zYY9iTv7FUaotnyJE2ogPQvOZ5xhGVAMVNJ+/AKsd/rRXKmMa+C4EfZYfskJHXS8FMniuKuJZkILMDyugWojLbD8nRNb7HgfEpgfIZwd0TdEpH0uq7kRPxlptOV+G811vMM5jD8CyzJ0N9paEzA2VwM/jdjf8i9OeJXj5QH7gTqrqSN8U64DBmZoVpD+SNkTax7T0C3XwJVOFevvQxxdxSo6+2kGbHENtGGTMUFdPnCM9HZsN6Q600CB3dMoWoF9uKGTwS8ifIu+dTU34vhR5PwsB8olXZbkL1+TpBpJLxS+1QolzZA0zfGaFL7ADgVB0JbgfHM2sZD0zO8ovhFuwVFJ9RP9MQEKJK2VVC5psqThkholtUiqk/RA0m1J14Ig+BGn0xM9kS3+AIVhhF9MAbHFAAAAAElFTkSuQmCC");
+    }
+
+    .theme-light &,
+    .theme-dark & {
+        &:checked {
+            background-color: var(--ach-color-universe);
+            box-shadow: none;
         }
     }
 }

@@ -146,6 +146,11 @@ settings:
         description: Evenly spaces out numbers.
         type: class-toggle
     -
+        id: scroll__scalable-fonts
+        title: Scale UI Font Size on Scroll
+        description: Obsidian allows you to change a note's font sizes on scroll. Toggling this on will allow you to change all of Obsidian's font sizes on scroll.
+        type: class-toggle
+    -
         id: global-fonts__custom
         title: Custom Fonts
         type: heading
@@ -211,6 +216,16 @@ settings:
     -
         id: vault-title__file-explorer
         title: Hide Vault Title on File Explorer
+        type: class-toggle
+    -
+        id: linewrap-file__file-explorer
+        title: Unwrap File Titles in the File Explorer
+        description: Toggling this on will unwrap file titles in the File Explorer, meaning long titles will not go to the next line.
+        type: class-toggle
+    -
+        id: linewrap-folder__file-explorer
+        title: Unwrap Folder Titles in the File Explorer
+        description: Toggling this on will unwrap folder titles in the File Explorer, meaning long titles will not go to the next line.
         type: class-toggle
     -
         id: hide__note-header
@@ -846,11 +861,6 @@ settings:
         type: class-toggle
         default: false
     -
-        id: h5-border-color
-        title: Header 5 Border
-        type: variable-themed-color
-        format: hsl 
-    -
         id: h5-border-width
         title: Header 5 Border Width (in pixels)
         type: variable-number-slider
@@ -1291,7 +1301,39 @@ settings:
                 label: Faint
                 value: md-bullet-color-faint
     -
-        id: 
+        id: checkboxes
+        title: ✅ Checkboxes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: checkbox-style
+        title: Checkbox Style
+        description: Note for Circle Checkboxes - Most of the checkboxes are circular, but some alternative checkboxes are kept square-ish because of the size of the inner icons. 
+        type: class-select
+        allowEmpty: false
+        default: original__checkbox
+        options:
+            -
+                label: Original Checkboxes
+                value: original__checkbox
+            -
+                label: Squircle Checkboxes
+                value: squircle__checkbox
+            -
+                label: Circle Checkboxes
+                value: circle__checkbox
+            -
+                label: Square Checkboxes
+                value: square__checkbox
+    -
+        id: md-checked-bg-color
+        title: Checked Background Color
+        type: variable-themed-color
+        format: hsl 
+        opacity: true
+        default-light: 'hsl(154, 47%, 49%)'
+        default-dark: 'hsl(155, 81%, 24%)'
     -
         id: note-embeds
         title: 📍 Embeds
