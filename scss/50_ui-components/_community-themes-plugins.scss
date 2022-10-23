@@ -1,362 +1,362 @@
-/*─────────Community Themes and Plugins Modals──────────*/
-body:not(.is-mobile) .theme-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0rem 0rem;
-
-    & .community-theme {
-        align-self: stretch;
-        justify-self: center;
-
-        & .community-theme-remove-button {
-            display: block;
-        }
-    }
-}
-
-.community-theme-filters-container {
-    padding: 1rem 1rem 0rem 1rem;
-}
-
-.modal {
-    /*─────────Community Themes Modal──────────*/
-    &.mod-community-theme {
-        background: var(--background-primary);
-        padding: 0;
-
-        & .modal-content {
-            padding:    var(--scale-8-4)
-                        var(--scale-8-4)
-                        var(--scale-8-4)
-                        var(--scale-8-4);
-            margin-top: 0;
-        }
-    }
-
-    & .community-theme {
-        width: 100%;
-        border: 1px solid var(--background-modifier-border);
-        transition: var(--duration-superfast)
-                    var(--motion-smooth);
-
-        &-title {
-            font-size: var(--font-scale-2);
-            margin-bottom: 8px;
-        }
-
-        &-filters-container .setting-item-control {
-            justify-content: flex-end;
-
-            & .search-input-container {
-                width: 100%;
-            }
-
-            & button {
-                margin: 0;
-                margin-right: var(--scale-2-4);
-            }
-        }
-
-        &-info {
-            flex-grow: 0;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        
-            &+div {
-                display: flex;
-                align-items: center;
-                flex-grow: 1;
-            }
-        }
-        
-        &-info.u-center-text,
-        & span.community-theme-downloads {
-            color: var(--text-muted);
-        }
-
-        .theme-light & {
-            background: var(--background-primary-alt);
-
-            &:hover {
-                border: 1px solid var(--text-faint);
-            }
-
-            &.is-selected {
-                color: var(--text-normal);
-                background: var(--color-l-whiter);
-                border: 1px solid var(--text-faint);
-                box-shadow: var(--shadow-m) 
-                            var(--color-l-shadow-100);
-            }
-
-        }
-
-        .theme-dark & {
-            background: var(--background-primary-alt);
-
-            &:hover {
-                border: 1px solid var(--text-faint);
-            }
-
-            &.is-selected {
-                color: var(--text-normal);
-                background: var(--color-d-gray-100);
-                border: 1px solid var(--text-faint);
-                box-shadow: var(--shadow-m) 
-                            var(--color-d-shadow-100);
-            }
-        }
-
-    }
-
-
-    /*─────────Community Plugins Modal──────────*/
-    .community-plugin {
-        background: var(--background-primary);
-
-        &-info {
-            padding:    var(--scale-8-2)
-                        var(--scale-0-0)
-                        var(--scale-0-0)
-                        var(--scale-8-3);
-            margin: 0;
-        }
-
-        &-readme {
-            padding:    var(--scale-0-0)
-                        var(--scale-8-3)
-                        var(--scale-0-0)
-                        var(--scale-0-0);
-            margin: 0;
-        }
-
-        &-name {
-            font-weight: var(--font-bold);
-        }
-
-        &-item {
-            margin: var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0);
-            border-bottom: 1px solid
-                        var(--background-modifier-border);
-            transition: var(--duration-superfast)
-                        var(--motion-smooth);
-
-            .theme-light & {
-                &:hover,
-                &span:hover {
-                    color: var(--color-l-gray-80);
-                    background: var(--color-l-gray-10);
-                }
-    
-                &:active,
-                &span:active {
-                    color: var(--color-l-gray-50);
-                    background: var(--color-l-gray-40);
-
-                    & .flair.mod-pop {
-                        color: var(--color-l-gray-50);
-                        background: var(--color-l-gray-20);
-                    }
-                }
-            }
-
-            .theme-dark & {
-                &:hover,
-                &span:hover {
-                    color: var(--color-d-gray-20);
-                    background: var(--color-d-gray-60);
-                }
-    
-                &:active,
-                &span:active {
-                    color: var(--color-d-gray-40);
-                    background: var(--color-d-blacker);
-
-                    & .flair.mod-pop {
-                        color: var(--color-d-gray-40);
-                        background: var(--color-d-gray-80);
-                    }
-                }
-            }
-        }
-
-        &-search {
-            padding:    var(--scale-2-4)
-                        var(--scale-0-0)
-                        var(--scale-0-0)
-                        var(--scale-0-0);
-
-            & .setting-item {
-                display: initial;
-                align-self: flex-start;
-            }
-        }
-
-        & .flair.mod-pop {
-            vertical-align: middle;
-            font-weight: var(--font-semi-bold);
-
-            .theme-light & {
-                background: var(--color-l-whiter);
-                color: var(--color-l-red-300);
-            }
-
-            .theme-dark & {
-                background: var(--color-d-blacker);
-                color: var(--color-d-red-500);
-            }
-        }
-    }
-}
-
-/* Selected Theme */
-body:not(.is-mobile) .community-theme.is-selected {
-    border-radius:  var(--scale-8-3);
-
-    /* for theme-list grid */
-    grid-column: 1 / 4;
-    grid-row: 1;
-    max-width: 96%;
-
-    /* for inside elements */
-    display: grid;
-    grid-template-columns: 1.2fr 2fr;
-    padding: 20px 20px;
-
-    & .community-theme-title {
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
-
-        text-align: left;
-        font-size: 2rem;
-        margin: 1rem 1.2rem;
-    }
-
-    & .community-theme-info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 30px 50px 440px;
-
-        margin: 0;
-
-        & .community-theme-downloads {
-            margin: 0;
-        }
-    }
-
-    & .community-theme-screenshot {
-        grid-column: 2 / 3;
-        grid-row: 1 / 3;
-        max-width: 100%;
-    }
-
-    & .modal-button-container {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-
-        margin-top: 6px;
-        margin-left: 6rem;
-    }
-
-    & .community-theme-remove-button {
-        top: 36px;
-        right: 24px;
-        width: 48px;
-        height: 28px;
-
-        border-radius: 32px;
-    }
-
-    /* Notes and Link to Documentation */
-    &.is-selected .community-theme-info::after {
-        grid-column: 1 / 3;
-        grid-row: 3 / 4;
-        align-self: center;
-        justify-self: center;
-
-        content:
-        "Hello there! Cecil here. 🦊 \A Welcome to Primary. \A I hope you have a cozy time. \A \A If you want to toggle exclusive features, tweak some colors and fonts — download the Style Settings Plugin. \A Check it out, you might like some of the presets there! \A \A Remember to update the theme from time to time to get the latest fixes, improvements, etc. \A \A 💛 Support its development at \A ko-fi.com/ceciliamay \A \A 🎯 Follow its development at \A tinyurl.com/primary-board";
-
-        color: var(--text-normal);
-        line-height: 1.4;
-        width: 88%;
-        position: relative;
-        white-space: pre-wrap;
-        text-align: left;
-        border: none;
-    }
-}
-
-.community-theme.is-selected .clickable-icon[aria-label="Visit on GitHub"] {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    align-self: center;
-    justify-self: center;
-    margin: 0 2rem;
-    width: auto;
-
-    color: var(--text-normal);
-    background: var(--background-primary);
-    border-radius: var(--scale-8-4);
-    display: flex;
-    padding: var(--scale-2-2)
-            var(--scale-2-6)
-            calc(1px + var(--scale-2-2))
-            var(--scale-2-6);
-    
-    & svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    &:after {
-        content: "How to Use Primary";
-        width: 100%;
-        display: block;
-        margin-left: var(--scale-8-1);
-        margin-top: 1px;
-    }
-
-    .theme-light & {
-        border: 1px solid rgba(100, 100, 100, 0.3);
-        box-shadow: 0px -2px 0px 0px 
-                    rgba(100, 100, 100, 0.2) inset,
-                    0px 2px 4px 0px rgba(100, 100, 100, 0.1);
-
-        &:active {
-            box-shadow: 0px 0px 0px 2px
-                    rgba(100, 100, 100, 0.1) inset,
-                    0px 1px 1px 0px rgba(100, 100, 100, 0.1);
-            transition: var(--duration-superfast)
-                        var(--motion-smooth);
-        }
-    }
-
-    .theme-dark & {
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        box-shadow: 0px -2px 0px 0px
-                    rgba(0, 0, 0, 0.3) inset,
-                    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-
-        &:active {
-            box-shadow: 0px 0px 0px 2px
-                    rgba(0, 0, 0, 0.2) inset,
-                    0px 1px 1px 0px rgba(0, 0, 0, 0.1);
-            transition: var(--duration-superfast)
-                    var(--motion-smooth);
-        }
-    }
-}
-
-.modal-content .community-theme-container .theme-list .community-theme .modal-button-container button:not(.mod-cta) {
-    display: none;
-}
-
-.community-theme.is-selected button.mod-cta {
-    color: var(--text-on-accent);
-    background-color: var(--interactive-accent);
-}
+///*─────────Community Themes and Plugins Modals──────────*/
+//body:not(.is-mobile) .theme-list {
+//    display: grid;
+//    grid-template-columns: repeat(3, 1fr);
+//    gap: 0rem 0rem;
+//
+//    & .community-theme {
+//        align-self: stretch;
+//        justify-self: center;
+//
+//        & .community-theme-remove-button {
+//            display: block;
+//        }
+//    }
+//}
+//
+//.community-theme-filters-container {
+//    padding: 1rem 1rem 0rem 1rem;
+//}
+//
+//.modal {
+//    /*─────────Community Themes Modal──────────*/
+//    &.mod-community-theme {
+//        background: var(--background-primary);
+//        padding: 0;
+//
+//        & .modal-content {
+//            padding:    var(--size-4-8)
+//                        var(--size-4-8)
+//                        var(--size-4-8)
+//                        var(--size-4-8);
+//            margin-top: 0;
+//        }
+//    }
+//
+//    & .community-theme {
+//        width: 100%;
+//        border: 1px solid var(--background-modifier-border);
+//        transition: var(--duration-superfast)
+//                    var(--motion-smooth);
+//
+//        &-title {
+//            font-size: var(--font-scale-2);
+//            margin-bottom: 8px;
+//        }
+//
+//        &-filters-container .setting-item-control {
+//            justify-content: flex-end;
+//
+//            & .search-input-container {
+//                width: 100%;
+//            }
+//
+//            & button {
+//                margin: 0;
+//                margin-right: var(--size-4-2);
+//            }
+//        }
+//
+//        &-info {
+//            flex-grow: 0;
+//            align-items: center;
+//            justify-content: center;
+//            flex-wrap: wrap;
+//
+//            &+div {
+//                display: flex;
+//                align-items: center;
+//                flex-grow: 1;
+//            }
+//        }
+//
+//        &-info.u-center-text,
+//        & span.community-theme-downloads {
+//            color: var(--text-muted);
+//        }
+//
+//        .theme-light & {
+//            background: var(--background-primary-alt);
+//
+//            &:hover {
+//                border: 1px solid var(--text-faint);
+//            }
+//
+//            &.is-selected {
+//                color: var(--text-normal);
+//                background: var(--color-l-whiter);
+//                border: 1px solid var(--text-faint);
+//                box-shadow: var(--shadow-m)
+//                            var(--color-l-shadow-100);
+//            }
+//
+//        }
+//
+//        .theme-dark & {
+//            background: var(--background-primary-alt);
+//
+//            &:hover {
+//                border: 1px solid var(--text-faint);
+//            }
+//
+//            &.is-selected {
+//                color: var(--text-normal);
+//                background: var(--color-d-gray-100);
+//                border: 1px solid var(--text-faint);
+//                box-shadow: var(--shadow-m)
+//                            var(--color-d-shadow-100);
+//            }
+//        }
+//
+//    }
+//
+//
+//    /*─────────Community Plugins Modal──────────*/
+//    .community-plugin {
+//        background: var(--background-primary);
+//
+//        &-info {
+//            padding:    var(--size-4-4)
+//                        var(--size-0-0)
+//                        var(--size-0-0)
+//                        var(--size-4-6);
+//            margin: 0;
+//        }
+//
+//        &-readme {
+//            padding:    var(--size-0-0)
+//                        var(--size-4-6)
+//                        var(--size-0-0)
+//                        var(--size-0-0);
+//            margin: 0;
+//        }
+//
+//        &-name {
+//            font-weight: var(--font-bold);
+//        }
+//
+//        &-item {
+//            margin: var(--size-0-0)
+//                    var(--size-0-0)
+//                    var(--size-0-0)
+//                    var(--size-0-0);
+//            border-bottom: 1px solid
+//                        var(--background-modifier-border);
+//            transition: var(--duration-superfast)
+//                        var(--motion-smooth);
+//
+//            .theme-light & {
+//                &:hover,
+//                &span:hover {
+//                    color: var(--color-l-gray-80);
+//                    background: var(--color-l-gray-10);
+//                }
+//
+//                &:active,
+//                &span:active {
+//                    color: var(--color-l-gray-50);
+//                    background: var(--color-l-gray-40);
+//
+//                    & .flair.mod-pop {
+//                        color: var(--color-l-gray-50);
+//                        background: var(--color-l-gray-20);
+//                    }
+//                }
+//            }
+//
+//            .theme-dark & {
+//                &:hover,
+//                &span:hover {
+//                    color: var(--color-d-gray-20);
+//                    background: var(--color-d-gray-60);
+//                }
+//
+//                &:active,
+//                &span:active {
+//                    color: var(--color-d-gray-40);
+//                    background: var(--color-d-blacker);
+//
+//                    & .flair.mod-pop {
+//                        color: var(--color-d-gray-40);
+//                        background: var(--color-d-gray-80);
+//                    }
+//                }
+//            }
+//        }
+//
+//        &-search {
+//            padding:    var(--size-4-2)
+//                        var(--size-0-0)
+//                        var(--size-0-0)
+//                        var(--size-0-0);
+//
+//            & .setting-item {
+//                display: initial;
+//                align-self: flex-start;
+//            }
+//        }
+//
+//        & .flair.mod-pop {
+//            vertical-align: middle;
+//            font-weight: var(--font-semi-bold);
+//
+//            .theme-light & {
+//                background: var(--color-l-whiter);
+//                color: var(--color-l-red-300);
+//            }
+//
+//            .theme-dark & {
+//                background: var(--color-d-blacker);
+//                color: var(--color-d-red-500);
+//            }
+//        }
+//    }
+//}
+//
+///* Selected Theme */
+//body:not(.is-mobile) .community-theme.is-selected {
+//    border-radius:  var(--size-4-6);
+//
+//    /* for theme-list grid */
+//    grid-column: 1 / 4;
+//    grid-row: 1;
+//    max-width: 96%;
+//
+//    /* for inside elements */
+//    display: grid;
+//    grid-template-columns: 1.2fr 2fr;
+//    padding: 20px 20px;
+//
+//    & .community-theme-title {
+//        grid-column: 1 / 3;
+//        grid-row: 1 / 2;
+//
+//        text-align: left;
+//        font-size: 2rem;
+//        margin: 1rem 1.2rem;
+//    }
+//
+//    & .community-theme-info {
+//        display: grid;
+//        grid-template-columns: repeat(2, 1fr);
+//        grid-template-rows: 30px 50px 440px;
+//
+//        margin: 0;
+//
+//        & .community-theme-downloads {
+//            margin: 0;
+//        }
+//    }
+//
+//    & .community-theme-screenshot {
+//        grid-column: 2 / 3;
+//        grid-row: 1 / 3;
+//        max-width: 100%;
+//    }
+//
+//    & .modal-button-container {
+//        grid-column: 1 / 2;
+//        grid-row: 1 / 2;
+//
+//        margin-top: 6px;
+//        margin-left: 6rem;
+//    }
+//
+//    & .community-theme-remove-button {
+//        top: 36px;
+//        right: 24px;
+//        width: 48px;
+//        height: 28px;
+//
+//        border-radius: 32px;
+//    }
+//
+//    /* Notes and Link to Documentation */
+//    &.is-selected .community-theme-info::after {
+//        grid-column: 1 / 3;
+//        grid-row: 3 / 4;
+//        align-self: center;
+//        justify-self: center;
+//
+//        content:
+//        "Hello there! Cecil here. 🦊 \A Welcome to Primary. \A I hope you have a cozy time. \A \A If you want to toggle exclusive features, tweak some colors and fonts — download the Style Settings Plugin. \A Check it out, you might like some of the presets there! \A \A Remember to update the theme from time to time to get the latest fixes, improvements, etc. \A \A 💛 Support its development at \A ko-fi.com/ceciliamay \A \A 🎯 Follow its development at \A tinyurl.com/primary-board";
+//
+//        color: var(--text-normal);
+//        line-height: 1.4;
+//        width: 88%;
+//        position: relative;
+//        white-space: pre-wrap;
+//        text-align: left;
+//        border: none;
+//    }
+//}
+//
+//.community-theme.is-selected .clickable-icon[aria-label="Visit on GitHub"] {
+//    grid-column: 1 / 3;
+//    grid-row: 2 / 3;
+//    align-self: center;
+//    justify-self: center;
+//    margin: 0 2rem;
+//    width: auto;
+//
+//    color: var(--text-normal);
+//    background: var(--background-primary);
+//    border-radius: var(--size-4-8);
+//    display: flex;
+//    padding: var(--size-2-2)
+//            var(--size-4-3)
+//            calc(1px + var(--size-2-2))
+//            var(--size-4-3);
+//
+//    & svg {
+//        width: 24px;
+//        height: 24px;
+//    }
+//
+//    &:after {
+//        content: "How to Use Primary";
+//        width: 100%;
+//        display: block;
+//        margin-left: var(--size-4-2);
+//        margin-top: 1px;
+//    }
+//
+//    .theme-light & {
+//        border: 1px solid rgba(100, 100, 100, 0.3);
+//        box-shadow: 0px -2px 0px 0px
+//                    rgba(100, 100, 100, 0.2) inset,
+//                    0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+//
+//        &:active {
+//            box-shadow: 0px 0px 0px 2px
+//                    rgba(100, 100, 100, 0.1) inset,
+//                    0px 1px 1px 0px rgba(100, 100, 100, 0.1);
+//            transition: var(--duration-superfast)
+//                        var(--motion-smooth);
+//        }
+//    }
+//
+//    .theme-dark & {
+//        border: 1px solid rgba(0, 0, 0, 0.3);
+//        box-shadow: 0px -2px 0px 0px
+//                    rgba(0, 0, 0, 0.3) inset,
+//                    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+//
+//        &:active {
+//            box-shadow: 0px 0px 0px 2px
+//                    rgba(0, 0, 0, 0.2) inset,
+//                    0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+//            transition: var(--duration-superfast)
+//                    var(--motion-smooth);
+//        }
+//    }
+//}
+//
+//.modal-content .community-theme-container .theme-list .community-theme .modal-button-container button:not(.mod-cta) {
+//    display: none;
+//}
+//
+//.community-theme.is-selected button.mod-cta {
+//    color: var(--text-on-accent);
+//    background-color: var(--interactive-accent);
+//}

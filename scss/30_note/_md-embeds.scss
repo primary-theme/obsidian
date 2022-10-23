@@ -5,7 +5,7 @@
 .markdown-source-view.mod-cm6 {
     & .file-embed {
         border-width: 1px;
-        border-radius: var(--scale-2-4);
+        border-radius: var(--size-4-2);
         padding: 15px 20px;
     }
     & .cm-embed-block {
@@ -21,11 +21,11 @@
         }
 
         & .edit-block-button {
-            top: var(--scale-2-2);
-            left: var(--scale-2-2);
+            top: var(--size-2-2);
+            left: var(--size-2-2);
             right: unset;
             border: 1px solid var(--background-modifier-border);
-            border-radius: var(--scale-2-2);
+            border-radius: var(--size-2-2);
 
             transition: var(--duration-superfast)
                         var(--motion-smooth);
@@ -72,13 +72,13 @@
 .reveal img[src] {
     padding: 0;
     border: 1px solid rgba(100, 100, 100, 0.25);
-    border-radius: var(--scale-2-4);
+    border-radius: var(--size-4-2);
     margin: 0;
     transition: var(--duration-fast-1)
                 var(--motion-smooth);
     
     &:hover {
-        border-radius: var(--scale-0-0);
+        border-radius: var(--size-0-0);
         box-shadow: var(--shadow-m)
                     var(--background-modifier-box-shadow);
         transform: translateY(-2px);
@@ -89,23 +89,23 @@
 .popover .markdown-embed,
 .markdown-embed {
     border: 1px solid var(--background-modifier-border);
-    border-radius: var(--scale-2-6);
+    border-radius: var(--size-4-3);
     padding: 0;
     overflow: hidden;
 
     & .markdown-preview-view {
         /* Markdown Embed Padding with Readable Line Width OFF */
-        padding:    var(--scale-0-0)
-                    var(--scale-8-4)
-                    var(--scale-0-0)
-                    var(--scale-8-4);
+        padding:    var(--size-0-0)
+                    var(--size-4-8)
+                    var(--size-0-0)
+                    var(--size-4-8);
     }
 
     .is-live-preview & {
-        padding:    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0);
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0);
         border: 1px solid var(--background-modifier-border);
     }
 
@@ -115,20 +115,20 @@
         font-size: var(--font-scale-1);
         line-height: var(--line-height-1);
         text-align: left;
-        padding:    var(--scale-2-3)
-                    var(--scale-8-5)
-                    var(--scale-2-3)
-                    var(--scale-2-6);
+        padding:    var(--size-2-3)
+                    var(--size-4-10)
+                    var(--size-2-3)
+                    var(--size-4-3);
         border-bottom: 1px solid var(--background-modifier-border);
     }
 
     &-link {
         top: 0;
         right: 0;
-        margin: var(--scale-2-4)
-                var(--scale-2-6)
-                var(--scale-8-1)
-                var(--scale-0-0);
+        margin: var(--size-4-2)
+                var(--size-4-3)
+                var(--size-4-2)
+                var(--size-0-0);
     }
 
     .theme-light & {

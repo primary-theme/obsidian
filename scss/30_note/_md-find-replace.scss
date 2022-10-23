@@ -13,9 +13,9 @@
 
         padding: 1px 2px;
         border: 1px solid var(--background-modifier-border);
-        border-radius: var(--scale-2-4);
+        border-radius: var(--size-4-2);
 
-        margin: var(--scale-2-4) auto;
+        margin: var(--size-4-2) auto;
 
         &.mod-replace-mode {
             height: 82px;
@@ -38,26 +38,26 @@
     &-search-input.document-search-input,
     &-replace-input.document-replace-input {
         width: 20%;
-        margin: var(--scale-2-3)
-                var(--scale-2-3)
-                var(--scale-2-3)
-                var(--scale-2-3);
+        margin: var(--size-2-3)
+                var(--size-2-3)
+                var(--size-2-3)
+                var(--size-2-3);
     }
 
     &-search-button.document-search-button {
         line-height: 0;
-        border-radius: var(--scale-2-2);
-        padding: var(--scale-2-2)
-                var(--scale-2-3)
-                var(--scale-2-3)
-                var(--scale-2-3) !important;
-        margin: calc(1px + var(--scale-2-3))
-                var(--scale-2-1)
-                var(--scale-0-0)
-                var(--scale-2-1);
+        border-radius: var(--size-2-2);
+        padding: var(--size-2-2)
+                var(--size-2-3)
+                var(--size-2-3)
+                var(--size-2-3) !important;
+        margin: calc(1px + var(--size-2-3))
+                var(--size-2-1)
+                var(--size-0-0)
+                var(--size-2-1);
 
         &:last-child {
-            margin-right: var(--scale-2-3);
+            margin-right: var(--size-2-3);
         }
 
         // Styling for Light and Dark Mode
@@ -84,10 +84,10 @@
 .document-search-close-button {
     font-family: Inter, sans-serif;
     font-weight: 300;
-    font-size: var(--scale-8-3);
+    font-size: var(--size-4-6);
 
-    height: var(--scale-2-8);
-    width: var(--scale-2-8);
+    height: var(--size-4-4);
+    width: var(--size-4-4);
     top: 2px;
     margin-right: 2px;
 

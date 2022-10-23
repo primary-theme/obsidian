@@ -12,7 +12,7 @@
     height: auto;
 
     // Border and Overflow Fix
-    border-radius: var(--scale-2-8);
+    border-radius: var(--size-4-4);
     overflow-y: hidden;
 
     // Styles both Light and Dark Mode
@@ -27,7 +27,7 @@
         max-height: 70vh;
 
         // Border and Overflow Fix
-        border-radius: var(--scale-2-8);
+        border-radius: var(--size-4-4);
         overflow-y: hidden;
 
         // Styles both Light and Dark Mode
@@ -45,7 +45,7 @@
 
         & .setting-item-control button.clickable-icon {
             padding: 0;
-            margin-right: var(--scale-2-4);
+            margin-right: var(--size-4-2);
         }
     }
 
@@ -62,9 +62,9 @@
         min-height: 20vh;
         height: auto;
         max-height: 90vh;
-        
+
         // Border and Overflow Fix
-        border-radius: var(--scale-2-8);
+        border-radius: var(--size-4-4);
         overflow-y: hidden;
     }
 
@@ -78,7 +78,7 @@
     }
 
     &.mod-community-theme .modal-title {
-        margin-left: var(--scale-8-3);
+        margin-left: var(--size-4-6);
     }
 
     & .setting-hotkey {
@@ -88,7 +88,7 @@
 
         & .setting-delete-hotkey {
             margin-right: 0;
-            margin-left: var(--scale-2-6);
+            margin-left: var(--size-4-3);
         }
     }
 
@@ -101,10 +101,10 @@
         }
 
         &-content {
-            padding:    var(--scale-8-4)
-                        var(--scale-8-4)
-                        var(--scale-8-4)
-                        var(--scale-8-4);
+            padding:    var(--size-4-8)
+                        var(--size-4-8)
+                        var(--size-4-8)
+                        var(--size-4-8);
         }
 
         &-header,
@@ -120,6 +120,7 @@
             }
         }
 
+
         &-header-group,
         &-nav-item {
             background: var(--background-secondary);
@@ -127,28 +128,29 @@
 
         &-header-group-title {
             font-weight: var(--font-bold);
+            text-transform: uppercase;
         }
 
         &-header-group-items .vertical-tab-nav-item {
         // Setting Modal Item
             background: transparent;
-            padding:    var(--scale-2-2)
-                        var(--scale-2-4)
-                        var(--scale-2-2)
-                        var(--scale-2-8);
+            padding:    var(--size-2-2)
+                        var(--size-4-2)
+                        var(--size-2-2)
+                        var(--size-4-4);
             border: 1px solid transparent;
-            border-radius: var(--scale-2-2);
+            border-radius: var(--size-2-2);
             border-left: none;
-            margin: var(--scale-0-0)
-                    var(--scale-2-4)
-                    var(--scale-0-0)
-                    var(--scale-2-4);
+            margin: var(--size-0-0)
+                    var(--size-4-2)
+                    var(--size-0-0)
+                    var(--size-4-2);
 
             transition: var(--duration-superfast)
                         var(--motion-smooth);
 
             &:last-of-type {
-                margin-bottom: var(--scale-2-5);
+                margin-bottom: calc(var(--size-4-2) + var(--size-2-1)); // was --scale-2-5
             }
 
             &.is-active {
@@ -227,11 +229,11 @@
         & .suggestion-item {
             font-size: var(--font-scale-1);
             line-height: var(--line-height-0-5);
-            padding:    var(--scale-2-3)
-                        var(--scale-2-3)
-                        var(--scale-2-3)
-                        var(--scale-8-1);
-            border-radius: var(--scale-2-2);
+            padding:    var(--size-2-3)
+                        var(--size-2-3)
+                        var(--size-2-3)
+                        var(--size-4-2);
+            border-radius: var(--size-2-2);
             border: 1px solid transparent;
 
             & span.suggestion-prefix {
@@ -239,7 +241,7 @@
                 font-size: 90%;
                 font-style: italic;
                 text-transform: uppercase;
-                margin-right: var(--scale-8-1);
+                margin-right: var(--size-4-2);
 
                 &::after { // Colon after Prefix
                     display: none;
@@ -307,7 +309,7 @@
             position: relative;
             left: initial;
             top: initial;
-            margin-right: var(--scale-2-3);
+            margin-right: var(--size-2-3);
         }
 
         & .prompt .suggestion-flair {
@@ -320,22 +322,22 @@
 /* Modal Close Close Buttons */
 .slides-close-btn,
 .modal-close-button {
-    right: var(--scale-2-5);
-    top: var(--scale-2-4);
+    right: calc(var(--size-4-2) + var(--size-2-1)); // was --scale-2-5
+    top: var(--size-4-2);
 
     font-family: Inter, sans-serif;
     font-weight: 200;
-    font-size: var(--scale-8-3);
+    font-size: var(--size-4-6);
 
-    height: var(--scale-8-3);
-    width: var(--scale-8-3);
-    border-radius: var(--scale-8-3);
+    height: var(--size-4-6);
+    width: var(--size-4-6);
+    border-radius: var(--size-4-6);
     z-index: 9;
 
     &:before {
         position: absolute;
         right: 4px;
-        top: -2px;
+        top: 0;
 
         .theme-light & {
             color: var(--color-l-gray-20);
@@ -348,7 +350,7 @@
 
     .theme-light & { // Modal Close Button Light Mode
         background: var(--color-l-red-300);
-        box-shadow: 0px 1px 2px 0px 
+        box-shadow: 0px 1px 2px 0px
                     rgba(100, 100, 100, 0.5),
                     0px -2px 0px 0px
                     rgba(100, 20, 20, 0.18) inset;
@@ -358,7 +360,7 @@
 
         &:active {
             background: var(--color-l-red-700);
-            box-shadow: 0px 0px 0px 2px 
+            box-shadow: 0px 0px 0px 2px
                     rgba(150, 20, 20, 0.55) inset;
 
             &:before {
@@ -369,7 +371,7 @@
 
     .theme-dark & { // Modal Close Button Dark Mode
         background: var(--color-d-red-500);
-        box-shadow: 0px 1px 2px 0px 
+        box-shadow: 0px 1px 2px 0px
                     rgba(0, 0, 0, 0.25),
                     0px -2px 0px 0px
                     rgba(50, 10, 10, 0.35) inset;
@@ -379,7 +381,7 @@
 
         &:active {
             background: var(--color-d-red-700);
-            box-shadow: 0px 0px 0px 2px 
+            box-shadow: 0px 0px 0px 2px
                     rgba(0, 0, 0, 0.45)  inset;
 
             &:before {
@@ -393,7 +395,7 @@
 .menu {
     // Styles both Light Mode and Dark Mode
     border: 1px solid var(--background-modifier-border);
-    border-radius: var(--scale-2-4);
+    border-radius: var(--size-4-2);
 
     .theme-light & {
         box-shadow: var(--shadow-s)
@@ -404,7 +406,7 @@
         box-shadow: var(--shadow-m)
                     var(--color-d-shadow-100);
     }
-    
+
     & .menu-item {
         .theme-light & {
             &.selected:active {
@@ -421,7 +423,7 @@
             &.selected:active {
                 color: var(--color-d-gray-40);
                 background: var(--color-d-blacker);
-                
+
                 & .menu-item-icon svg {
                     background: var(--color-d-gray-40);
                 }
@@ -437,25 +439,25 @@
 /*─────────File Explorer Search Modal─────────*/
 .suggestion {
     &-container.mod-search-suggestion {
-        padding:    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0);
-        border-radius: var(--scale-2-4);
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0);
+        border-radius: var(--size-4-2);
         overflow-x: hidden;
 
         & .suggestion {
-            padding:    var(--scale-0-0)
-                        var(--scale-0-0)
-                        var(--scale-0-0)
-                        var(--scale-0-0);
+            padding:    var(--size-0-0)
+                        var(--size-0-0)
+                        var(--size-0-0)
+                        var(--size-0-0);
         }
 
         .theme-light & {
             box-shadow: var(--shadow-m)
                         var(--color-l-shadow-100);
         }
-    
+
         .theme-dark & {
             box-shadow: var(--shadow-m)
                         var(--color-d-shadow-100);
@@ -467,19 +469,19 @@
             line-height: var(--line-height-0-5);
             white-space: pre-wrap;
             word-wrap: break-word;
-            padding:    var(--scale-2-3)
-                        var(--scale-2-8)
-                        var(--scale-2-3)
-                        var(--scale-2-8); 
+            padding:    var(--size-2-3)
+                        var(--size-4-4)
+                        var(--size-2-3)
+                        var(--size-4-4);
             border-radius: 0;
             margin: 0;
-            
-            &:nth-of-child(6) {
-                margin-bottom: var(--scale-2-2);
+
+            &:nth-child(6) {
+                margin-bottom: var(--size-2-2);
             }
-            
+
             &:last-child {
-                margin-bottom: var(--scale-2-2);
+                margin-bottom: var(--size-2-2);
             }
 
             &:active {
@@ -493,7 +495,7 @@
             font-size: var(--font-scale-0-5);
             border-radius: 0;
             border-bottom: 1px solid var(--background-modifier-border);
-            margin-bottom: var(--scale-2-2);
+            margin-bottom: var(--size-2-2);
         }
 
         & .search-suggest-info-text {
@@ -513,11 +515,11 @@
 /*─────────Prompts──────────*/
 .prompt {
         // Border and Overflow Fix
-        border-radius: var(--scale-2-8);
+        border-radius: var(--size-4-4);
         overflow-y: hidden;
 
         &-results {
-            padding-right: var(--scale-2-4);
+            padding-right: var(--size-4-2);
         }
 
         // Styles both Light and Dark Mode
@@ -537,10 +539,10 @@
     font-size: var(--font-scale-0-5);
     display: flex;
     justify-content: center;
-    padding: var(--scale-2-3)
-            var(--scale-2-4)
-            var(--scale-2-3)
-            var(--scale-2-4);
+    padding: var(--size-2-3)
+            var(--size-4-2)
+            var(--size-2-3)
+            var(--size-4-2);
     border-top: 1px solid var(--background-modifier-border);
 }
 
@@ -550,7 +552,7 @@
 
 /*───────── Loading Progress Status in Modals ──────────*/
 .is-loading:before {
-    border-radius: var(--scale-2-4);
+    border-radius: var(--size-4-2);
     border: 1px solid var(--background-modifier-border);
 
     .theme-light & {

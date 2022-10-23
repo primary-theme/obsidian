@@ -10,34 +10,34 @@
 
 .graph-controls {
     max-width: initial;
-    padding:    var(--scale-8-1)
-                var(--scale-8-3)
-                var(--scale-8-2)
-                var(--scale-8-1);
-    margin-top: var(--scale-2-2);
-    margin-left: var(--scale-2-2);
-    border-radius: var(--scale-2-4);
+    padding:    var(--size-4-2)
+                var(--size-4-6)
+                var(--size-4-4)
+                var(--size-4-2);
+    margin-top: var(--size-4-1);
+    margin-left: var(--size-4-1);
+    border-radius: var(--size-4-2);
 
     transition: var(--duration-fast-2)
                 var(--motion-smooth);
 
     &.is-close {
-        padding:    var(--scale-8-1)
-                    var(--scale-8-1)
-                    var(--scale-8-1)
-                    var(--scale-8-1);
-        margin-top: var(--scale-2-2);
-        margin-left: var(--scale-2-2);
-        border-radius: var(--scale-2-4);
+        padding:    var(--size-4-2)
+                    var(--size-4-2)
+                    var(--size-4-2)
+                    var(--size-4-2);
+        margin-top: var(--size-4-1);
+        margin-left: var(--size-4-1);
+        border-radius: var(--size-4-2);
         opacity: 1;
 
         & .graph-controls-buttons {
             &.mod-open,
             &.mod-animate {
-                padding:    var(--scale-2-4)
-                            var(--scale-2-4)
-                            var(--scale-2-4)
-                            var(--scale-2-4);
+                padding:    var(--size-4-2)
+                            var(--size-4-2)
+                            var(--size-4-2)
+                            var(--size-4-2);
                 margin: 0;
             }
         }
@@ -94,8 +94,7 @@
     background-color: var(--color-l-white);
     color: var(--color-l-gray-60);
     border: 1px solid var(--background-modifier-border);
-    box-shadow: var(--shadow-s)
-                var(--color-l-shadow-100);
+    box-shadow: var(--shadow-s);
 
     &.is-close {
         min-width: inherit;

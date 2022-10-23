@@ -22,14 +22,14 @@ settings:
                 value: '"Karla", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Lora 
+                label: Lora
                 value: '"Lora", Georgia, Times New Roman, serif'
             -
                 label: Inter
                 value: '"Inter", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Quicksand 
+                label: Quicksand
                 value: '"Quicksand", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
@@ -47,14 +47,14 @@ settings:
                 value: '"Karla", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Lora 
+                label: Lora
                 value: '"Lora", Georgia, Times New Roman, serif'
             -
                 label: Inter
                 value: '"Inter", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Quicksand 
+                label: Quicksand
                 value: '"Quicksand", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
@@ -72,14 +72,14 @@ settings:
                 value: '"Karla", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Lora 
+                label: Lora
                 value: '"Lora", Georgia, Times New Roman, serif'
             -
                 label: Inter
                 value: '"Inter", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Quicksand 
+                label: Quicksand
                 value: '"Quicksand", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
@@ -97,14 +97,14 @@ settings:
                 value: '"Karla", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Lora 
+                label: Lora
                 value: '"Lora", Georgia, Times New Roman, serif'
             -
                 label: Inter
                 value: '"Inter", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Quicksand 
+                label: Quicksand
                 value: '"Quicksand", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
@@ -122,14 +122,14 @@ settings:
                 value: '"Karla", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Lora 
+                label: Lora
                 value: '"Lora", Georgia, Times New Roman, serif'
             -
                 label: Inter
                 value: '"Inter", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
-                label: Quicksand 
+                label: Quicksand
                 value: '"Quicksand", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
             -
@@ -234,7 +234,7 @@ settings:
         type: class-toggle
     -
         id: hide__metadata-box
-        title: Hide Metadata Box 
+        title: Hide Metadata Box
         description: Different from the "Show Frontmatter" option in Obsidian. This setting removes the metadata box (one with aliases and tags only, not YAML).
         type: class-toggle
     -
@@ -408,13 +408,13 @@ settings:
     -
         id: header-color__preset
         title: Preset Header Colors
-        description: 
+        description:
         type: class-select
         allowEmpty: false
         default: header-color__normal
         options:
             -
-                label: Text Colors Header 
+                label: Text Colors Header
                 value: header-color__normal
             -
                 label: Primary Colors Header
@@ -474,7 +474,7 @@ settings:
         id: h1-text-color
         title: Header 1 Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -487,7 +487,7 @@ settings:
         id: h1-bg-color
         title: Header 1 Background Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'rgba(240, 79, 106, 0.2)'
         default-dark: 'rgba(240, 79, 106, 0.2)'
@@ -509,7 +509,7 @@ settings:
         id: h1-border-color
         title: Header 1 Border Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(36, 37%, 83%)'
         default-dark: 'hsl(33, 20%, 20%)'
@@ -565,7 +565,7 @@ settings:
         id: h2-text-color
         title: Header 2 Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -578,7 +578,7 @@ settings:
         id: h2-bg-color
         title: Header 2 Background Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'rgba(255, 115, 0, 0.2)'
         default-dark: 'rgba(255, 115, 0, 0.2)'
@@ -600,7 +600,7 @@ settings:
         id: h2-border-color
         title: Header 2 Border Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(36, 37%, 83%)'
         default-dark: 'hsl(33, 20%, 20%)'
@@ -656,7 +656,7 @@ settings:
         id: h3-text-color
         title: Header 3 Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -669,7 +669,7 @@ settings:
         id: h3-bg-color
         title: Header 3 Background Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'rgba(255, 187, 0, 0.2)'
         default-dark: 'rgba(255, 187, 0, 0.2)'
@@ -691,7 +691,7 @@ settings:
         id: h3-border-color
         title: Header 3 Border Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(36, 37%, 83%)'
         default-dark: 'hsl(33, 20%, 20%)'
@@ -747,7 +747,7 @@ settings:
         id: h4-text-color
         title: Header 4 Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -760,7 +760,7 @@ settings:
         id: h4-bg-color
         title: Header 4 Background Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'rgba(153, 189, 36, 0.2)'
         default-dark: 'rgba(153, 189, 36, 0.2)'
@@ -782,7 +782,7 @@ settings:
         id: h4-border-color
         title: Header 4 Border Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(36, 37%, 83%)'
         default-dark: 'hsl(33, 20%, 20%)'
@@ -838,7 +838,7 @@ settings:
         id: h5-text-color
         title: Header 5 Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -851,7 +851,7 @@ settings:
         id: h5-bg-color
         title: Header 5 Background Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'rgba(40, 178, 194, 0.2)'
         default-dark: 'rgba(40, 178, 194, 0.2)'
@@ -876,7 +876,7 @@ settings:
         id: h5-border-color
         title: Header 5 Border Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(36, 37%, 83%)'
         default-dark: 'hsl(33, 20%, 20%)'
@@ -932,7 +932,7 @@ settings:
         id: h6-text-color
         title: Header 6 Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(34, 28%, 60%)'
         default-dark: 'hsl(35, 27%, 55%)'
@@ -945,7 +945,7 @@ settings:
         id: h6-bg-color
         title: Header 6 Background Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'rgba(113, 122, 255, 0.2'
         default-dark: 'rgba(113, 122, 255, 0.2'
@@ -967,7 +967,7 @@ settings:
         id: h6-border-color
         title: Header 6 Border Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(36, 37%, 83%)'
         default-dark: 'hsl(33, 20%, 20%)'
@@ -1217,7 +1217,7 @@ settings:
         id: md-color-highlight-text
         title: Highlight-only Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -1233,7 +1233,7 @@ settings:
         id: md-color-bold-highlight-text
         title: Bold and Highlight Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -1241,7 +1241,7 @@ settings:
         id: md-color-bold-highlight-bg
         title: Bold and Highlight Background Color
         type: variable-themed-color
-        format: rgb 
+        format: rgb
         opacity: true
         default-light: 'rgba(240, 79, 106, 0.2)'
         default-dark: 'rgba(240, 79, 106, 0.2)'
@@ -1249,7 +1249,7 @@ settings:
         id: md-color-italic-highlight-text
         title: Italic and Highlight Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -1257,7 +1257,7 @@ settings:
         id: md-color-italic-highlight-bg
         title: Italic and Highlight Background Color
         type: variable-themed-color
-        format: rgb 
+        format: rgb
         opacity: true
         default-light: 'rgba(40, 178, 194, 0.2)'
         default-dark: 'rgba(40, 178, 194, 0.2)'
@@ -1265,7 +1265,7 @@ settings:
         id: md-color-bi-highlight-text
         title: Bold, Italic, and Highlight Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -1309,7 +1309,7 @@ settings:
     -
         id: checkbox-style
         title: Checkbox Style
-        description: Note for Circle Checkboxes - Most of the checkboxes are circular, but some alternative checkboxes are kept square-ish because of the size of the inner icons. 
+        description: Note for Circle Checkboxes - Most of the checkboxes are circular, but some alternative checkboxes are kept square-ish because of the size of the inner icons.
         type: class-select
         allowEmpty: false
         default: original__checkbox
@@ -1330,7 +1330,7 @@ settings:
         id: md-checked-bg-color
         title: Checked Background Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: true
         default-light: 'hsl(154, 47%, 49%)'
         default-dark: 'hsl(155, 81%, 24%)'
@@ -1422,7 +1422,7 @@ settings:
         id: graph-color-node-resolved
         title: Resolved Note Node Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(205, 66%, 46%)'
         default-dark: 'hsl(198, 75%, 35%)'
@@ -1430,7 +1430,7 @@ settings:
         id: graph-color-node-unresolved
         title: Unresolved Note Node Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(43, 78%, 52%)'
         default-dark: 'hsl(43, 100%, 42%)'
@@ -1443,7 +1443,7 @@ settings:
         id: graph-color-node-tag
         title: Tag Node Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(4, 74%, 53%)'
         default-dark: 'hsl(4, 65%, 60%)'
@@ -1451,7 +1451,7 @@ settings:
         id: graph-color-node-attachment
         title: Attachment Node Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(154, 50%, 58%)'
         default-dark: 'hsl(154, 52%, 46%)'
@@ -1459,7 +1459,7 @@ settings:
         id: graph-color-node-focused
         title: Focused Node (Opened Note) Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(34, 27%, 40%)'
         default-dark: 'hsl(34, 50%, 80%)'
@@ -1467,7 +1467,7 @@ settings:
         id: graph-color-node-border-hover
         title: Node (on hover) Border Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(34, 37%, 70%)'
         default-dark: 'hsl(34, 18%, 62%)'
@@ -1475,7 +1475,7 @@ settings:
         id: graph-color-node-arrow
         title: Graph View Arrow Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(34, 28%, 60%)'
         default-dark: 'hsl(33, 20%, 30%)'
@@ -1483,7 +1483,7 @@ settings:
         id: graph-color-node-line
         title: Graph View Line Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(36, 34%, 85%)'
         default-dark: 'hsl(33, 20%, 20%)'
@@ -1491,7 +1491,7 @@ settings:
         id: graph-color-node-line-hover
         title: Graph View Line (on hover) Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(34, 37%, 70%)'
         default-dark: 'hsl(33, 20%, 30%)'
@@ -1499,7 +1499,7 @@ settings:
         id: graph-color-node-text
         title: Graph View Text Color
         type: variable-themed-color
-        format: hsl 
+        format: hsl
         opacity: false
         default-light: 'hsl(31, 45%, 20%)'
         default-dark: 'hsl(34, 18%, 62%)'
@@ -1513,11 +1513,11 @@ settings:
     -
         id: scrollbar-style
         title: Scrollbar Style
-        description: 
+        description:
         type: class-select
         allowEmpty: false
         default: scrollbar__thin
-        options: 
+        options:
             -
                 label: Thin
                 value: scrollbar__thin
@@ -1529,7 +1529,7 @@ settings:
                 value: scrollbar__hidden
     -
         id: primary-wiki
-        title: 💛 Support Primary's Development 
+        title: 💛 Support Primary's Development
         description: Consider supporting Primary's Development by donating coffees at ko-fi.com/ceciliamay
         type: heading
         level: 1

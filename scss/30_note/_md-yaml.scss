@@ -3,7 +3,7 @@
 ────────────────────────────────────*/
 /*──────────YAML──────────*/
 pre.frontmatter.language-yaml {
-    border-radius: var(--scale-2-4);
+    border-radius: var(--size-4-2);
     border: none;
 }
 
@@ -50,11 +50,11 @@ span.key.atrule {
 /*──────────Metadata──────────*/
 .frontmatter-container {
     border: 1px solid var(--md-color-border);
-    border-radius: var(--scale-2-4);
+    border-radius: var(--size-4-2);
 
     & .frontmatter-container-header {
         border: none;
-        margin-bottom: var(--scale-8-1);
+        margin-bottom: var(--size-4-2);
     
         &:hover {
             .theme-light & {
@@ -78,17 +78,17 @@ span.key.atrule {
     & .frontmatter-section {
         border-top: 1px solid var(--md-color-border);
         margin-top: 0;
-        padding-top: var(--scale-8-1);
+        padding-top: var(--size-4-2);
     }
 
     & .frontmatter-alias {
         line-height: 1.2;
         word-break: break-all;
         white-space: unset;
-        padding:    var(--scale-2-1)
-                    var(--scale-2-4)
-                    var(--scale-2-1)
-                    var(--scale-8-3);
+        padding:    var(--size-2-1)
+                    var(--size-4-2)
+                    var(--size-2-1)
+                    var(--size-4-6);
         border: 1px solid var(--md-color-border);
         background: var(--background-secondary);
     }
@@ -103,5 +103,5 @@ span.frontmatter-section-label {
     font-size: var(--font-scale-0-5);
     font-weight: var(--font-bold);
     text-transform: uppercase;
-    margin-left: var(--scale-8-1);
+    margin-left: var(--size-4-2);
 }
