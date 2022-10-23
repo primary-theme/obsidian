@@ -3,11 +3,11 @@
 ──────────────────────────────────────*/
 /*────────── Checkbox Radius ──────────*/
 body {
-    --ch-radius: var(--scale-2-2);
-    --ach-radius-noborder: var(--scale-0-0);
-    --ach-radius-curved: var(--scale-2-2);
-    --ach-radius-squircle: var(--scale-2-3);
-    --ach-radius-round: var(--scale-8-2);
+    --ch-radius: var(--size-2-2);
+    --ach-radius-noborder: var(--size-0-0);
+    --ach-radius-curved: var(--size-2-2);
+    --ach-radius-squircle: var(--size-2-3);
+    --ach-radius-round: var(--size-4-4);
 }
 
 /*────────── Checkbox List Text ──────────*/

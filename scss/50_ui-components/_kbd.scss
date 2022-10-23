@@ -6,7 +6,7 @@ kbd,
     .markdown-soure-view &,
     .cm-s-obsidian &,
     .markdown-preview-view &{
-        padding: 3px 8px;
+        padding: 3px var(--size-4-2);
     }
 
     .theme-light & {
@@ -30,7 +30,7 @@ kbd,
 }
 
 .suggestion-hotkey {
-    padding: 1px 8px 3px 8px;
+    padding: 1px var(--size-4-2) 3px var(--size-4-2);
     margin-top: -3px;
 }
 
@@ -38,12 +38,12 @@ kbd,
     font-family: var(--font-monospace);
     font-size: var(--font-scale-0);
     background: var(--background-secondary);
-    padding: var(--scale-2-1)
-            var(--scale-2-2)
-            calc(1px + var(--scale-2-1))
-            var(--scale-2-2);
+    padding: var(--size-2-1)
+            var(--size-2-2)
+            calc(1px + var(--size-2-1))
+            var(--size-2-2);
     border: 1px solid var(--background-modifier-border);
-    border-radius: var(--scale-2-2);
+    border-radius: var(--size-2-2);
 
     .theme-light & {
         font-size: var(--font-scale-0);

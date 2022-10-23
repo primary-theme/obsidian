@@ -9,7 +9,7 @@
 .titlebar-text,
 .titlebar-button-container.mod-right,
 .titlebar-left {
-    margin-top: var(--scale-0-0);
+    margin-top: var(--size-0-0);
 }
 
 /*─────────Titlebar for Light Theme──────────*/
@@ -28,6 +28,7 @@
     & .titlebar-button {
         color: var(--color-l-gray-50);
         display: inline-block;
+        padding-top: calc(var(--header-height) / 2 - 10px);
         -webkit-app-region: no-drag;
 
         &.mod-back,

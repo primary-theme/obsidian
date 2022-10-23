@@ -4,10 +4,10 @@
     &.is-live-preview .HyperMD-quote {
         font-style: italic;
         background: var(--md-color-blockquotes-bg);
-        padding:    var(--scale-2-6)
-                    var(--scale-2-6)
-                    var(--scale-2-6)
-                    var(--scale-2-6);
+        padding:    var(--size-4-3)
+                    var(--size-4-3)
+                    var(--size-4-3)
+                    var(--size-4-3);
 
         border-left: 2px solid var(--md-color-blockquotes-border);
     }
@@ -33,13 +33,13 @@
     font-style: italic;
     background: var(--md-color-blockquotes-bg);
 
-    padding:    var(--scale-2-8)
-                var(--scale-2-18)
-                var(--scale-2-8)
-                var(--scale-2-18);
-    border-radius: var(--scale-2-4);
+    padding:    var(--size-4-4)
+                var(--size-4-9)
+                var(--size-4-4)
+                var(--size-4-9);
+    border-radius: var(--size-4-2);
     border: 1px solid var(--md-color-blockquotes-border);
-    margin-left: var(--scale-0-0);
-    margin-right: var(--scale-0-0);
+    margin-left: var(--size-0-0);
+    margin-right: var(--size-0-0);
 
 }

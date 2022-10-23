@@ -4,14 +4,14 @@
 /*─────────Nav Header Container──────────*/
 .workspace-split.mod-left-split .nav-header,
 .workspace-split.mod-right-split .nav-header {
-    padding:    var(--scale-2-1)
-                var(--scale-2-2)
-                var(--scale-2-1)
-                var(--scale-2-2);
-    margin: var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-0-0);
+    padding:    var(--size-2-1)
+                var(--size-2-2)
+                var(--size-2-1)
+                var(--size-2-2);
+    margin: var(--size-0-0)
+            var(--size-0-0)
+            var(--size-0-0)
+            var(--size-0-0);
 
     & .nav-buttons-container {
         display: flex;
@@ -25,16 +25,16 @@
 /*─────────Nav Header Buttons──────────*/
 .nav-action-button {
     background: none;
-    height: var(--scale-8-4);
-    padding:    var(--scale-2-4)
-                var(--scale-2-4)
-                var(--scale-2-4)
-                var(--scale-2-4);
-    margin: var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-0-0);
-    border-radius: var(--scale-2-3);
+    height: var(--size-4-8);
+    padding:    var(--size-4-2)
+                var(--size-4-2)
+                var(--size-4-2)
+                var(--size-4-2);
+    margin: var(--size-0-0)
+            var(--size-0-0)
+            var(--size-0-0)
+            var(--size-0-0);
+    border-radius: var(--size-2-3);
     opacity: 1;
     display: flex;
     align-items: center;

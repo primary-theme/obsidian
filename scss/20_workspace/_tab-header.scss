@@ -1,232 +1,232 @@
-/*────────────────────────────────────
-            Tab Header
-────────────────────────────────────*/
-/*─────────Tab Header Container──────────*/
-
-.workspace-split {
-    &.mod-left-split .workspace-tab-header-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    &.mod-right-split .workspace-tab-header-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-}
-
-.workspace-tabs {
-    padding-right: 0;
-}
-
-/*─────────Tab Header Icons──────────*/
-
-.workspace-tab-header-container {
-    height: unset;
-    padding:    var(--scale-0-0)
-                var(--scale-0-0)
-                var(--scale-0-0)
-                var(--scale-0-0);
-    margin: var(--scale-2-6)
-            var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-0-0);
-}
-
-.workspace-tab-header {
-/*
-Applied for All 
-Tab Header Icon Container
-*/
-    height: var(--scale-2-18);
-    padding:    var(--scale-2-4)
-                var(--scale-2-4)
-                var(--scale-2-4)
-                var(--scale-2-4);
-    margin: var(--scale-0-0)
-            var(--scale-2-2)
-            var(--scale-2-2)
-            var(--scale-2-2);
-    border-radius: var(--scale-2-4);
-
-    transition: var(--duration-superfast)
-                var(--motion-smooth);
-}
-
-.workspace-tab {
-    &-header-inner {
-        background: transparent !important;
-    }
-
-    &-header-inner,
-    &-header-inner-icon {
-        padding:    var(--scale-0-0);
-    }
-
-    &-header.is-active {
-        border-radius: var(--scale-2-4);
-    }
-
-    &-container-before.is-before-active,
-    &-container-after.is-after-active,
-    &-header.is-before-active,
-    &-header.is-after-active {
-        background: transparent;
-    }  
-}
-
-.workspace-tab-container {
-    &-before,
-    &-after {
-        margin: calc(-1 * var(--scale-2-3));
-    }
-}
-
-/*─────────Tab Header Icon Sizing──────────*/
-body .workspace-tab-header
-.workspace-tab-header-inner-icon svg {
-    height: var(--scale-8-2);
-    width: var(--scale-8-2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*─────────Tab Header for Light Mode──────────*/
-.theme-light {
-    & .workspace-tab-header {
-        &.is-active {
-            background: var(--color-l-white);
-            box-shadow: 0px -2px 0px 0px
-                        rgba(100, 100, 100, 0.15) inset;
-        }
-
-        &:not(.workspace-tab-header.is-active) {
-            border: 1px solid var(--color-l-gray-50);
-
-            &:hover {
-                border: 1px solid var(--color-l-gray-60);
-                transform: translateY(-2px);
-                box-shadow: 0px 3px 3px -1px
-                            rgba(100, 100, 100, 0.15);
-                cursor: pointer;
-
-                & .workspace-tab-header-inner-icon {
-                    color: var(--color-l-gray-60);
-                }
-            }
-
-            &:active {
-                transform: translateY(2px);
-                box-shadow: 0px 0px 0px 2px 
-                rgba(150, 150, 150, 0.15) inset;
-            }
-        }
-    }
-
-    & .mod-left-split .workspace-tab-header.is-active {
-        &:nth-child(3n+1) {
-            color: var(--color-l-yellow-500);
-            border: 1px solid var(--color-l-yellow-500);
-        }
-
-        &:nth-child(3n+2) {
-            color: var(--color-l-red-500);
-            border: 1px solid var(--color-l-red-500);
-        }
-
-        &:nth-child(3n+3) {
-            color: var(--color-l-blue-500);
-            border: 1px solid var(--color-l-blue-500);
-        }
-    }
-
-    & .mod-right-split .workspace-tab-header.is-active {
-        &:nth-last-child(3n+1) {
-            color: var(--color-l-yellow-500);
-            border: 1px solid var(--color-l-yellow-500);
-        }
-
-        &:nth-last-child(3n+2) {
-            color: var(--color-l-red-500);
-            border: 1px solid var(--color-l-red-500);
-        }
-
-        &:nth-last-child(3n+3) {
-            color: var(--color-l-blue-500);
-            border: 1px solid var(--color-l-blue-500);
-        }
-    }
-}
-
-/*─────────Tab Header for Dark Mode──────────*/
-.theme-dark {
-    & .workspace-tab-header {
-        transition: var(--duration-superfast)
-                    var(--motion-smooth) !important;
-
-        &.is-active {
-            background: var(--color-d-gray-70);
-            box-shadow: 0px -3px 0px 0px
-                        rgba(0, 0, 0, 0.25) inset;
-        }
-
-        &:not(.workspace-tab-header.is-active) {
-            border: 1px solid var(--color-d-gray-50);
-
-            &:hover {
-                border: 1px solid var(--color-d-gray-30);
-                transform: translateY(-1.5px);
-                box-shadow: 0px 3px 3px -1px
-                        rgba(0, 0, 0, 0.25);
-                cursor: pointer;
-
-                & .workspace-tab-header-inner-icon {
-                    color: var(--color-d-gray-30);
-                }
-            }
-
-            &:active {
-                transform: translateY(1.5px);
-                box-shadow: 0px 0px 0px 2.5px 
-                            rgba(0, 0, 0, 0.2) inset; 
-            }
-        }
-    }
-
-    & .mod-left-split .workspace-tab-header.is-active {
-        &:nth-child(3n+1) {
-            color: var(--color-d-yellow-700);
-            border: 1px solid var(--color-d-yellow-700);
-        }
-
-        &:nth-child(3n+2) {
-            color: var(--color-d-red-700);
-            border: 1px solid var(--color-d-red-700);
-        }
-
-        &:nth-child(3n+3) {
-            color: var(--color-d-blue-700);
-            border: 1px solid var(--color-d-blue-700);
-        }
-    }
-
-    & .mod-right-split .workspace-tab-header.is-active {
-        &:nth-last-child(3n+1) {
-            color: var(--color-d-yellow-700);
-            border: 1px solid var(--color-d-yellow-700);
-        }
-
-        &:nth-last-child(3n+2) {
-            color: var(--color-d-red-700);
-            border: 1px solid var(--color-d-red-700);
-        }
-
-        &:nth-last-child(3n+3) {
-            color: var(--color-d-blue-700);
-            border: 1px solid var(--color-d-blue-700);
-        }
-    }
-}
+///*────────────────────────────────────
+//            Tab Header
+//────────────────────────────────────*/
+///*─────────Tab Header Container──────────*/
+//
+//.workspace-split {
+//    &.mod-left-split .workspace-tab-header-container {
+//        display: flex;
+//        flex-direction: row;
+//        justify-content: flex-start;
+//    }
+//
+//    &.mod-right-split .workspace-tab-header-container {
+//        display: flex;
+//        flex-direction: row;
+//        justify-content: flex-end;
+//    }
+//}
+//
+//.workspace-tabs {
+//    padding-right: 0;
+//}
+//
+///*─────────Tab Header Icons──────────*/
+//
+//.workspace-tab-header-container {
+//    height: unset;
+//    padding:    var(--size-0-0)
+//                var(--size-0-0)
+//                var(--size-0-0)
+//                var(--size-0-0);
+//    margin: var(--size-4-3)
+//            var(--size-0-0)
+//            var(--size-0-0)
+//            var(--size-0-0);
+//}
+//
+//.workspace-tab-header {
+///*
+//Applied for All
+//Tab Header Icon Container
+//*/
+//    height: var(--size-4-9);
+//    padding:    var(--size-4-2)
+//                var(--size-4-2)
+//                var(--size-4-2)
+//                var(--size-4-2);
+//    margin: var(--size-0-0)
+//            var(--size-2-2)
+//            var(--size-2-2)
+//            var(--size-2-2);
+//    border-radius: var(--size-4-2);
+//
+//    transition: var(--duration-superfast)
+//                var(--motion-smooth);
+//}
+//
+//.workspace-tab {
+//    &-header-inner {
+//        background: transparent !important;
+//    }
+//
+//    &-header-inner,
+//    &-header-inner-icon {
+//        padding:    var(--size-0-0);
+//    }
+//
+//    &-header.is-active {
+//        border-radius: var(--size-4-2);
+//    }
+//
+//    &-container-before.is-before-active,
+//    &-container-after.is-after-active,
+//    &-header.is-before-active,
+//    &-header.is-after-active {
+//        background: transparent;
+//    }
+//}
+//
+//.workspace-tab-container {
+//    &-before,
+//    &-after {
+//        margin: calc(-1 * var(--size-2-3));
+//    }
+//}
+//
+///*─────────Tab Header Icon Sizing──────────*/
+//body .workspace-tab-header
+//.workspace-tab-header-inner-icon svg {
+//    height: var(--size-4-4);
+//    width: var(--size-4-4);
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//}
+//
+///*─────────Tab Header for Light Mode──────────*/
+//.theme-light {
+//    & .workspace-tab-header {
+//        &.is-active {
+//            background: var(--color-l-white);
+//            box-shadow: 0px -2px 0px 0px
+//                        rgba(100, 100, 100, 0.15) inset;
+//        }
+//
+//        &:not(.workspace-tab-header.is-active) {
+//            border: 1px solid var(--color-l-gray-50);
+//
+//            &:hover {
+//                border: 1px solid var(--color-l-gray-60);
+//                transform: translateY(-2px);
+//                box-shadow: 0px 3px 3px -1px
+//                            rgba(100, 100, 100, 0.15);
+//                cursor: pointer;
+//
+//                & .workspace-tab-header-inner-icon {
+//                    color: var(--color-l-gray-60);
+//                }
+//            }
+//
+//            &:active {
+//                transform: translateY(2px);
+//                box-shadow: 0px 0px 0px 2px
+//                rgba(150, 150, 150, 0.15) inset;
+//            }
+//        }
+//    }
+//
+//    & .mod-left-split .workspace-tab-header.is-active {
+//        &:nth-child(3n+1) {
+//            color: var(--color-l-yellow-500);
+//            border: 1px solid var(--color-l-yellow-500);
+//        }
+//
+//        &:nth-child(3n+2) {
+//            color: var(--color-l-red-500);
+//            border: 1px solid var(--color-l-red-500);
+//        }
+//
+//        &:nth-child(3n+3) {
+//            color: var(--color-l-blue-500);
+//            border: 1px solid var(--color-l-blue-500);
+//        }
+//    }
+//
+//    & .mod-right-split .workspace-tab-header.is-active {
+//        &:nth-last-child(3n+1) {
+//            color: var(--color-l-yellow-500);
+//            border: 1px solid var(--color-l-yellow-500);
+//        }
+//
+//        &:nth-last-child(3n+2) {
+//            color: var(--color-l-red-500);
+//            border: 1px solid var(--color-l-red-500);
+//        }
+//
+//        &:nth-last-child(3n+3) {
+//            color: var(--color-l-blue-500);
+//            border: 1px solid var(--color-l-blue-500);
+//        }
+//    }
+//}
+//
+///*─────────Tab Header for Dark Mode──────────*/
+//.theme-dark {
+//    & .workspace-tab-header {
+//        transition: var(--duration-superfast)
+//                    var(--motion-smooth) !important;
+//
+//        &.is-active {
+//            background: var(--color-d-gray-70);
+//            box-shadow: 0px -3px 0px 0px
+//                        rgba(0, 0, 0, 0.25) inset;
+//        }
+//
+//        &:not(.workspace-tab-header.is-active) {
+//            border: 1px solid var(--color-d-gray-50);
+//
+//            &:hover {
+//                border: 1px solid var(--color-d-gray-30);
+//                transform: translateY(-1.5px);
+//                box-shadow: 0px 3px 3px -1px
+//                        rgba(0, 0, 0, 0.25);
+//                cursor: pointer;
+//
+//                & .workspace-tab-header-inner-icon {
+//                    color: var(--color-d-gray-30);
+//                }
+//            }
+//
+//            &:active {
+//                transform: translateY(1.5px);
+//                box-shadow: 0px 0px 0px 2.5px
+//                            rgba(0, 0, 0, 0.2) inset;
+//            }
+//        }
+//    }
+//
+//    & .mod-left-split .workspace-tab-header.is-active {
+//        &:nth-child(3n+1) {
+//            color: var(--color-d-yellow-700);
+//            border: 1px solid var(--color-d-yellow-700);
+//        }
+//
+//        &:nth-child(3n+2) {
+//            color: var(--color-d-red-700);
+//            border: 1px solid var(--color-d-red-700);
+//        }
+//
+//        &:nth-child(3n+3) {
+//            color: var(--color-d-blue-700);
+//            border: 1px solid var(--color-d-blue-700);
+//        }
+//    }
+//
+//    & .mod-right-split .workspace-tab-header.is-active {
+//        &:nth-last-child(3n+1) {
+//            color: var(--color-d-yellow-700);
+//            border: 1px solid var(--color-d-yellow-700);
+//        }
+//
+//        &:nth-last-child(3n+2) {
+//            color: var(--color-d-red-700);
+//            border: 1px solid var(--color-d-red-700);
+//        }
+//
+//        &:nth-last-child(3n+3) {
+//            color: var(--color-d-blue-700);
+//            border: 1px solid var(--color-d-blue-700);
+//        }
+//    }
+//}

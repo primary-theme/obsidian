@@ -16,25 +16,25 @@
     &-indicator {
         width: 35%;
         overflow: hidden;
-        height: var(--scale-2-6);
-        border-radius: var(--scale-2-6);
+        height: var(--size-4-3);
+        border-radius: var(--size-4-3);
         border: 1px solid var(--background-modifier-border);
 
         .is-mobile & {
             width: 65%;
         }
     }
-    
+
     &-line {
-        height: var(--scale-2-6);
+        height: var(--size-4-3);
         position: absolute;
         background: var(--background-secondary);
-        border-radius: var(--scale-2-6);
+        border-radius: var(--size-4-3);
     }
 
     &-subline {
-        height: var(--scale-2-5);
-        border-radius: var(--scale-2-6);
+        height: var(--size-4-3); // was --scale-2-5
+        border-radius: var(--size-4-3);
 
         .theme-light & { /* VLP for Light Mode */
             background: var(--color-l-green-500);

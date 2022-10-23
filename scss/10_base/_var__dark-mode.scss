@@ -5,22 +5,68 @@
 .theme-dark {
 
     /*─────────Original Obsidian Variables──────────*/
-    
+    color-scheme: dark;
+
+    // Colors
+    --mono-rgb-0: 35, 30, 26;
+    --mono-rgb-100: 230, 207, 179;
+    --color-red-rgb: 219, 96, 87;
+    --color-red: var(--color-d-red);
+    --color-green-rgb: 56, 178, 125;
+    --color-green: var(--color-d-green);
+    --color-orange: var(--color-d-orange);
+    --color-yellow: var(--color-d-yellow);
+    //--color-cyan: var(--color-d-blue);
+    --color-blue: var(--color-d-blue);
+    //--color-purple: var(--color-d-p);
+    //--color-pink: var(--color-d-pink);
+    --color-base-00: var(--color-d-black);
+    --color-base-10: var(--color-d-gray-90);
+    --color-base-20: var(--color-d-gray-80);
+    --color-base-25: var(--color-d-gray-70);
+    --color-base-30: var(--color-d-gray-60);
+    --color-base-35: var(--color-d-gray-50);
+    --color-base-40: var(--color-d-gray-40);
+    --color-base-50: var(--color-d-gray-30);
+    --color-base-60: var(--color-d-gray-20);
+    --color-base-70: var(--color-d-gray-10);
+    --color-base-100: var(--color-d-white);
+    --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+    --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
+    --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+
+
+    /* Backgrounds */
+
+
+
+
+
     --background-primary:           var(--color-d-gray-70);
     --background-primary-alt:       var(--color-d-gray-90);
     
     --background-secondary:         var(--color-d-black);
     --background-secondary-alt:     var(--color-d-black);
-    
+
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.05);
+    --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
+
     --background-modifier-border:   var(--color-d-gray-50);
-    
+    --background-modifier-border-hover: var(--color-base-35);
+    --background-modifier-border-focus: var(--color-base-40);
+
+    --background-modifier-error-rgb: var(--color-red-rgb);
+    --background-modifier-error:        var(--color-d-red-500);
+    --background-modifier-error-hover:  var(--color-d-red-700);
+
+    --background-modifier-success-rgb: var(--color-green-rgb);
+    --background-modifier-success:      var(--color-d-green-300);
+    --background-modifier-message: rgba(0, 0, 0, 0.9);
+
     --background-modifier-form-field:               var(--color-d-blacker);
     --background-modifier-form-field-highlighted:   var(--color-d-black);
     --background-modifier-box-shadow:               var(--color-d-shadow-100);
-    
-    --background-modifier-success:      var(--color-d-green-300);
-    --background-modifier-error:        var(--color-d-red-500);
-    --background-modifier-error-hover:  var(--color-d-red-700);
     --background-modifier-cover:        var(--color-d-shadow-cover);
     
     --text-normal:  var(--color-d-white);

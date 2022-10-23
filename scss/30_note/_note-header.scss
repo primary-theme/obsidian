@@ -24,7 +24,7 @@ Content / Active Note / Opened Notes
 .view-header {
     .workspace-leaf.mod-active &,
     .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type & {
-        height: var(--scale-2-18);
+        height: var(--size-4-9);
     }
 
     .workspace-leaf & &-title-container:after {
@@ -52,7 +52,22 @@ Content / Active Note / Opened Notes
     &-icon {
         top: unset;
     }
+
+    .view-header-nav-buttons button {
+        padding: var(--size-2-2) var(--size-2-3);
+    }
+
+    .view-header-nav-buttons button:first-child {
+        border-radius: var(--size-4-5) 0 0 var(--size-4-5);
+        margin-right: 0;
+    }
+
+    .view-header-nav-buttons button:nth-child(2) {
+        border-radius: 0 var(--size-4-5) var(--size-4-5) 0;
+    }
 }
+
+
 
 /* Some Fixes on Tiny Padding Issues */
 .workspace-split.mod-vertical.mod-root

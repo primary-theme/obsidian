@@ -1,278 +1,278 @@
-/*────────────────────────────────────
-+++++++++++++++Workspace++++++++++++++
-────────────────────────────────────*/
-/*────────────────────────────────────
-            Side Dock Ribbon
-────────────────────────────────────*/
-.is-mobile .workspace-drawer-ribbon {
-    width: var(--scale-8-8);
-    border-right: 1px solid var(--background-modifier-border);
-
-    & .side-dock-ribbon-action {
-        padding-bottom: var(--scale-0-0);
-    }
-}
-
-/*────────────────────────────────────
-    Tab Header in Workspace Drawer
-────────────────────────────────────*/
-.is-mobile .workspace-drawer {
-    &-header {
-        padding:    var(--scale-8-3)
-                    var(--scale-8-3)
-                    var(--scale-0-0)
-                    var(--scale-8-3);
-    }
-
-    &-active-tab-header {
-        padding:    var(--scale-2-4)
-                    var(--scale-2-2)
-                    var(--scale-2-4)
-                    var(--scale-2-8);
-        margin: 0;
-    }
-
-    &-tab-container > * {
-        padding:    var(--scale-0-0)
-                    var(--scale-8-1)
-                    var(--scale-0-0)
-                    var(--scale-8-1);
-    }
-}
-
-/*────────────────────────────────────
-    Nav Header in Workspace Drawer
-────────────────────────────────────*/
-.is-mobile {
-    & .workspace-drawer-actions,
-    & .nav-buttons-container {
-    margin: var(--scale-2-6)
-            var(--scale-0-0)
-            var(--scale-0-0)
-            var(--scale-0-0);
-    }
-
-    & .nav-action-button {
-    padding: 0;
-    margin: var(--scale-0-0)
-            var(--scale-2-6)
-            var(--scale-0-0)
-            var(--scale-2-6);
-    }
-}
-
-/*────────────────────────────────────
-            Tab Content
-────────────────────────────────────*/
-.is-mobile .workspace-drawer {
-    width: 100%;
-
-    &.mod-left .workspace-drawer-inner {
-        padding-left: var(--scale-8-8);
-        padding-right: var(--scale-0-0);
-    }
-
-    & .workspace-drawer-inner {
-        background: var(--background-secondary);
-    }
-
-    & .workspace-drawer-tab-options {
-        padding:    var(--scale-0-0)
-                    var(--scale-8-1)
-                    var(--scale-0-0)
-                    var(--scale-8-1);
-    }
-
-    // File Explorer Search
-    & .search-input-suggest-button {
-        top: 8px;
-    }
-}
-
-/* Workspace Drawer Items Fix */
-:root {
-    --mobile-fileexplorer-font-size: 16px;
-    --mobile-fileexplorer-line-height: 1.2;
-}
-
-.is-mobile .theme-light,
-.is-mobile .theme-dark {
-    & .nav-folder-title,
-    & .nav-file-title {
-        font-size: var(--mobile-fileexplorer-font-size);
-        line-height: var(--mobile-fileexplorer-line-height);
-        padding: var(--scale-2-2) var(--scale-2-4);
-    }
-}
-
-/*────────────────────────────────────
-+++++++++Content / Active Note++++++++
-────────────────────────────────────*/
-/*────────────────────────────────────
-            Note Header
-────────────────────────────────────*/
-.is-mobile {
-    & .view-header,
-    & .workspace-leaf.mod-active .view-header,
-    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-        height: var(--scale-2-24);
-    }
-
-    & .view-header {
-        & .view-header-icon {
-            top: 4px;
-            margin-left: 6px;
-        }
-
-        &-title {
-            line-height: 50px;
-        }
-
-        & .view-actions a {
-            top: 6px;
-        }
-    }
-}
-/*────────────────────────────────────
-        Backlinks in Document
-────────────────────────────────────*/
-.is-mobile .mod-root .workspace-leaf-content[data-type="markdown"] {
-    & .nav-buttons-container {
-        position: relative;
-        margin-top: var(--scale-2-4);
-        margin-bottom: var(--scale-0-0);
-    }
-    & .embedded-backlinks {
-        & .search-input-container {
-            width: 98%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: var(--scale-2-4);
-        }
-    }
-}
-
-/*────────────────────────────────────
-+++++++++++Other Components+++++++++++
-────────────────────────────────────*/
-/*────────────────────────────────────
-                Modals
-────────────────────────────────────*/
-/*─────────Settings Modal──────────*/
-.is-mobile {
-    & .workspace {
-        transform: none !important;
-    }
-
-    & .modal,
-    & .prompt {
-        overflow-y: hidden;
-
-        // Styles both Light and Dark Mode
-        border: 1px solid rgba(100, 100, 100, 0.25);
-    }
-
-    & .modal {
-        padding: var(--scale-8-2) var(--scale-8-4);
-    }
-
-    & .prompt {
-        padding-left: 0;
-        padding-right: 0;
-
-        & input.prompt-input {
-            padding-top: var(--scale-2-4);
-            padding-bottom: var(--scale-2-6);
-        }
-    }
-
-    & .menu {
-        padding: 0;
-    }
-
-    & ::-webkit-scrollbar {
-        display: none;
-    }
-
-    & .modal {
-        & .vertical-tab-header-group {
-            background: var(--background-primary);
-        }
-
-        & .modal-content .vertical-tab-content {
-            border: none;
-        }
-
-        & .modal-content .vertical-tab-header-group:nth-child(2) {
-            border-top: 1px solid var(--background-modifier-border);
-        }
-
-        &-setting-back-button {
-            border-bottom: 1px solid var(--background-modifier-border);
-        }
-
-        &-content {
-            padding:    var(--scale-0-0)
-                        var(--scale-0-0);
-        }
-
-        &-close-button {
-            top: var(--scale-2-1);
-        }
-    }
-
-    & .community-theme-screenshot {
-        max-width: 100%;
-    }
-}
-
-/*─────────Modal CLose Button──────────*/
-.is-mobile .modal {
-    .vertical-tab-header::before {
-        content: "Settings";
-        font-family: var(--font-interface-theme);
-        font-weight: var(--font-semi-bold);
-        color: var(--text-muted);
-        background: var(--background-secondary);
-        position: sticky;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 47px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        border-bottom: 1px solid var(--background-modifier-border);
-        z-index: 1;
-    }
-
-    &-setting-back-button {
-        box-shadow: none;
-
-        & span {
-            font-weight: var(--font-semi-bold);
-            color: var(--text-muted);
-        }
-    }
-
-    &-close-button {
-        margin: var(--scale-2-4);
-        display: block;
-        z-index: 2;
-    }
-}
-
-/*────────────────────────────────────
-            Buttons
-────────────────────────────────────*/
-.is-mobile button {
-    margin: 5px;
-}
-
-/*────────────────────────────────────
-        Vault Launch Progress
-────────────────────────────────────*/
-.is-mobile .progress-bar-message {
-    font-size: var(--font-scale-1);
-}
+///*────────────────────────────────────
+//+++++++++++++++Workspace++++++++++++++
+//────────────────────────────────────*/
+///*────────────────────────────────────
+//            Side Dock Ribbon
+//────────────────────────────────────*/
+//.is-mobile .workspace-drawer-ribbon {
+//    width: var(--size-4-16);
+//    border-right: 1px solid var(--background-modifier-border);
+//
+//    & .side-dock-ribbon-action {
+//        padding-bottom: var(--size-0-0);
+//    }
+//}
+//
+///*────────────────────────────────────
+//    Tab Header in Workspace Drawer
+//────────────────────────────────────*/
+//.is-mobile .workspace-drawer {
+//    &-header {
+//        padding:    var(--size-4-6)
+//                    var(--size-4-6)
+//                    var(--size-0-0)
+//                    var(--size-4-6);
+//    }
+//
+//    &-active-tab-header {
+//        padding:    var(--size-4-2)
+//                    var(--size-2-2)
+//                    var(--size-4-2)
+//                    var(--size-4-4);
+//        margin: 0;
+//    }
+//
+//    &-tab-container > * {
+//        padding:    var(--size-0-0)
+//                    var(--size-4-2)
+//                    var(--size-0-0)
+//                    var(--size-4-2);
+//    }
+//}
+//
+///*────────────────────────────────────
+//    Nav Header in Workspace Drawer
+//────────────────────────────────────*/
+//.is-mobile {
+//    & .workspace-drawer-actions,
+//    & .nav-buttons-container {
+//    margin: var(--size-4-3)
+//            var(--size-0-0)
+//            var(--size-0-0)
+//            var(--size-0-0);
+//    }
+//
+//    & .nav-action-button {
+//    padding: 0;
+//    margin: var(--size-0-0)
+//            var(--size-4-3)
+//            var(--size-0-0)
+//            var(--size-4-3);
+//    }
+//}
+//
+///*────────────────────────────────────
+//            Tab Content
+//────────────────────────────────────*/
+//.is-mobile .workspace-drawer {
+//    width: 100%;
+//
+//    &.mod-left .workspace-drawer-inner {
+//        padding-left: var(--size-4-16);
+//        padding-right: var(--size-0-0);
+//    }
+//
+//    & .workspace-drawer-inner {
+//        background: var(--background-secondary);
+//    }
+//
+//    & .workspace-drawer-tab-options {
+//        padding:    var(--size-0-0)
+//                    var(--size-4-2)
+//                    var(--size-0-0)
+//                    var(--size-4-2);
+//    }
+//
+//    // File Explorer Search
+//    & .search-input-suggest-button {
+//        top: 8px;
+//    }
+//}
+//
+///* Workspace Drawer Items Fix */
+//:root {
+//    --mobile-fileexplorer-font-size: 16px;
+//    --mobile-fileexplorer-line-height: 1.2;
+//}
+//
+//.is-mobile .theme-light,
+//.is-mobile .theme-dark {
+//    & .nav-folder-title,
+//    & .nav-file-title {
+//        font-size: var(--mobile-fileexplorer-font-size);
+//        line-height: var(--mobile-fileexplorer-line-height);
+//        padding: var(--size-2-2) var(--size-4-2);
+//    }
+//}
+//
+///*────────────────────────────────────
+//+++++++++Content / Active Note++++++++
+//────────────────────────────────────*/
+///*────────────────────────────────────
+//            Note Header
+//────────────────────────────────────*/
+//.is-mobile {
+//    & .view-header,
+//    & .workspace-leaf.mod-active .view-header,
+//    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+//        height: var(--size-4-12);
+//    }
+//
+//    & .view-header {
+//        & .view-header-icon {
+//            top: 4px;
+//            margin-left: 6px;
+//        }
+//
+//        &-title {
+//            line-height: 50px;
+//        }
+//
+//        & .view-actions a {
+//            top: 6px;
+//        }
+//    }
+//}
+///*────────────────────────────────────
+//        Backlinks in Document
+//────────────────────────────────────*/
+//.is-mobile .mod-root .workspace-leaf-content[data-type="markdown"] {
+//    & .nav-buttons-container {
+//        position: relative;
+//        margin-top: var(--size-4-2);
+//        margin-bottom: var(--size-0-0);
+//    }
+//    & .embedded-backlinks {
+//        & .search-input-container {
+//            width: 98%;
+//            margin-left: auto;
+//            margin-right: auto;
+//            margin-bottom: var(--size-4-2);
+//        }
+//    }
+//}
+//
+///*────────────────────────────────────
+//+++++++++++Other Components+++++++++++
+//────────────────────────────────────*/
+///*────────────────────────────────────
+//                Modals
+//────────────────────────────────────*/
+///*─────────Settings Modal──────────*/
+//.is-mobile {
+//    & .workspace {
+//        transform: none !important;
+//    }
+//
+//    & .modal,
+//    & .prompt {
+//        overflow-y: hidden;
+//
+//        // Styles both Light and Dark Mode
+//        border: 1px solid rgba(100, 100, 100, 0.25);
+//    }
+//
+//    & .modal {
+//        padding: var(--size-4-4) var(--size-4-8);
+//    }
+//
+//    & .prompt {
+//        padding-left: 0;
+//        padding-right: 0;
+//
+//        & input.prompt-input {
+//            padding-top: var(--size-4-2);
+//            padding-bottom: var(--size-4-3);
+//        }
+//    }
+//
+//    & .menu {
+//        padding: 0;
+//    }
+//
+//    & ::-webkit-scrollbar {
+//        display: none;
+//    }
+//
+//    & .modal {
+//        & .vertical-tab-header-group {
+//            background: var(--background-primary);
+//        }
+//
+//        & .modal-content .vertical-tab-content {
+//            border: none;
+//        }
+//
+//        & .modal-content .vertical-tab-header-group:nth-child(2) {
+//            border-top: 1px solid var(--background-modifier-border);
+//        }
+//
+//        &-setting-back-button {
+//            border-bottom: 1px solid var(--background-modifier-border);
+//        }
+//
+//        &-content {
+//            padding:    var(--size-0-0)
+//                        var(--size-0-0);
+//        }
+//
+//        &-close-button {
+//            top: var(--size-2-1);
+//        }
+//    }
+//
+//    & .community-theme-screenshot {
+//        max-width: 100%;
+//    }
+//}
+//
+///*─────────Modal CLose Button──────────*/
+//.is-mobile .modal {
+//    .vertical-tab-header::before {
+//        content: "Settings";
+//        font-family: var(--font-interface-theme);
+//        font-weight: var(--font-semi-bold);
+//        color: var(--text-muted);
+//        background: var(--background-secondary);
+//        position: sticky;
+//        top: 0;
+//        right: 0;
+//        left: 0;
+//        height: 47px;
+//        display: flex;
+//        align-items: center;
+//        justify-content: center;
+//        text-align: center;
+//        border-bottom: 1px solid var(--background-modifier-border);
+//        z-index: 1;
+//    }
+//
+//    &-setting-back-button {
+//        box-shadow: none;
+//
+//        & span {
+//            font-weight: var(--font-semi-bold);
+//            color: var(--text-muted);
+//        }
+//    }
+//
+//    &-close-button {
+//        margin: var(--size-4-2);
+//        display: block;
+//        z-index: 2;
+//    }
+//}
+//
+///*────────────────────────────────────
+//            Buttons
+//────────────────────────────────────*/
+//.is-mobile button {
+//    margin: 5px;
+//}
+//
+///*────────────────────────────────────
+//        Vault Launch Progress
+//────────────────────────────────────*/
+//.is-mobile .progress-bar-message {
+//    font-size: var(--font-scale-1);
+//}

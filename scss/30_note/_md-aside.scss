@@ -2,7 +2,7 @@
 :root {
     --aside-width: calc(var(--line-width) * 0.38);
     --aside-margin: calc(-1 * (var(--aside-width)
-                    + var(--scale-8-3)));
+                    + var(--size-4-6)));
     --aside-header: "✏️ Note";
     --aside-hide-icon: "🔴";
 }
@@ -12,21 +12,21 @@ aside,
 .aside-hide,
 .aside-in {
     font-size: inherit;
-    padding:    var(--scale-2-8)
-                var(--scale-2-10)
-                var(--scale-2-8)
-                var(--scale-2-10);
-    margin: 0em 0em 1em var(--scale-2-8);
-    border-radius: var(--scale-2-4);
+    padding:    var(--size-4-4)
+                var(--size-4-5)
+                var(--size-4-4)
+                var(--size-4-5);
+    margin: 0em 0em 1em var(--size-4-4);
+    border-radius: var(--size-4-2);
     z-index: 0;
 
     & .markdown-embed,
     & .internal-embed.is-loaded:not(.image-embed) {
         width: 100%;
-        margin: var(--scale-8-1)
-                var(--scale-0-0)
-                var(--scale-8-1)
-                var(--scale-0-0);
+        margin: var(--size-4-2)
+                var(--size-0-0)
+                var(--size-4-2)
+                var(--size-0-0);
     }
 
     & .markdown-embed .markdown-preview-view {
@@ -39,9 +39,9 @@ aside,
         font-size: inherit;
         font-weight: var(--font-semi-bold);
         display: block;
-        padding-bottom: var(--scale-2-3);
+        padding-bottom: var(--size-2-3);
         border-bottom: 1px solid var(--background-modifier-border);
-        margin-bottom: var(--scale-2-4);
+        margin-bottom: var(--size-4-2);
     }
 
     /* Aside for Light Mode */
@@ -129,10 +129,10 @@ s {
             height: auto;
             white-space: normal;
             text-overflow: unset;
-            padding:    var(--scale-2-8)
-                        var(--scale-2-10)
-                        var(--scale-2-8)
-                        var(--scale-2-10);
+            padding:    var(--size-4-4)
+                        var(--size-4-5)
+                        var(--size-4-4)
+                        var(--size-4-5);
             z-index: 3;
         }
     }
