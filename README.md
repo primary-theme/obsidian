@@ -169,7 +169,7 @@ Primary also supports HTML progress bars. Progress bars are mainly composed of t
 | Percentage  | HTML Code  |
 |------|---------------------------------------------|
 | 10%  | `<progress value="10" max="100"></progress>`  |
-| 20%  | `<progress value="20" max="100></progress>`   |
+| 20%  | `<progress value="20" max="100"></progress>`  |
 | 30%  | `<progress value="30" max="100"></progress>`  |
 | 40%  | `<progress value="40" max="100"></progress>`  |
 | 50%  | `<progress value="50" max="100"></progress>`  |
