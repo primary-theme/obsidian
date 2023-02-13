@@ -6540,7 +6540,7 @@ span.community-theme-remove-button.clickable-icon {
   margin: var(--scale-2-2) var(--scale-2-6) var(--scale-2-2) var(--scale-2-6);
 }
 .search-input-container.search-input-container input {
-  padding: var(--scale-2-4) var(--scale-8-4) var(--scale-2-4) var(--scale-2-4);
+  padding: var(--scale-2-4) var(--scale-8-4) var(--scale-2-4) var(--scale-8-4);
 }
 
 .hotkey-search-container {
