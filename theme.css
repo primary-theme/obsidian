@@ -2473,25 +2473,27 @@ div.node-insert-event .external-link:active,
 }
 
 .markdown-source-view.mod-cm6 .list-bullet:after {
-  top: initial;
-}
-
-.markdown-source-view.mod-cm6 .list-bullet:after {
-  content: "-";
-  font-family: var(--font-monospace-theme);
-  font-size: 1.25em;
+  height: 1px;
+  width: 7px;
+  border-radius: 0;
 }
 .markdown-source-view.mod-cm6 .cm-list-2 .list-bullet:after {
-  content: "•";
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
 }
 .markdown-source-view.mod-cm6 .cm-list-3 .list-bullet:after {
-  content: "◦";
+  height: 4px;
+  width: 4px;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 1px;
 }
 
 span.cm-formatting.cm-formatting-list,
 span.list-bullet,
 li::marker {
-  color: var(--md-color-bullet);
   font-size: var(--font-scale-0);
   font-family: var(--font-monospace-theme);
   font-variant-numeric: tabular-nums;
