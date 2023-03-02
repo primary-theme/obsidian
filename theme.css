@@ -933,6 +933,165 @@ body {
 }
 
 /*────────────────────────────────────
+            Tab Header
+────────────────────────────────────*/
+/*─────────Tab Header Container──────────*/
+.workspace-split.mod-left-split .workspace-tab-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.workspace-split.mod-right-split .workspace-tab-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.workspace-tabs {
+  padding-right: 0;
+}
+
+/*─────────Tab Header Icons──────────*/
+.workspace-tab-header-container {
+  height: unset;
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+  margin: var(--scale-2-6) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+}
+
+.workspace-tab-header {
+  /*
+  Applied for All 
+  Tab Header Icon Container
+  */
+  height: var(--scale-2-18);
+  padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-4) var(--scale-2-4);
+  margin: var(--scale-0-0) var(--scale-2-2) var(--scale-2-2) var(--scale-2-2);
+  border-radius: var(--scale-2-4);
+  transition: var(--duration-superfast) var(--motion-smooth);
+}
+
+.workspace-tab-header-inner {
+  background: transparent !important;
+}
+.workspace-tab-header-inner, .workspace-tab-header-inner-icon {
+  padding: var(--scale-0-0);
+}
+.workspace-tab-header.is-active {
+  border-radius: var(--scale-2-4);
+}
+.workspace-tab-container-before.is-before-active, .workspace-tab-container-after.is-after-active, .workspace-tab-header.is-before-active, .workspace-tab-header.is-after-active {
+  background: transparent;
+}
+
+.workspace-tab-container-before, .workspace-tab-container-after {
+  margin: calc(-1 * var(--scale-2-3));
+}
+
+/*─────────Tab Header Icon Sizing──────────*/
+body .workspace-tab-header .workspace-tab-header-inner-icon svg {
+  height: var(--scale-8-2);
+  width: var(--scale-8-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*─────────Tab Header for Light Mode──────────*/
+.theme-light .workspace-tab-header.is-active {
+  background: var(--color-l-white);
+  box-shadow: 0px -2px 0px 0px rgba(100, 100, 100, 0.15) inset;
+}
+.theme-light .workspace-tab-header:not(.workspace-tab-header.is-active) {
+  border: 1px solid var(--color-l-gray-50);
+}
+.theme-light .workspace-tab-header:not(.workspace-tab-header.is-active):hover {
+  border: 1px solid var(--color-l-gray-60);
+  transform: translateY(-2px);
+  box-shadow: 0px 3px 3px -1px rgba(100, 100, 100, 0.15);
+  cursor: pointer;
+}
+.theme-light .workspace-tab-header:not(.workspace-tab-header.is-active):hover .workspace-tab-header-inner-icon {
+  color: var(--color-l-gray-60);
+}
+.theme-light .workspace-tab-header:not(.workspace-tab-header.is-active):active {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 0px 2px rgba(150, 150, 150, 0.15) inset;
+}
+.theme-light .mod-left-split .workspace-tab-header.is-active:nth-child(3n+1) {
+  color: var(--color-l-yellow-500);
+  border: 1px solid var(--color-l-yellow-500);
+}
+.theme-light .mod-left-split .workspace-tab-header.is-active:nth-child(3n+2) {
+  color: var(--color-l-red-500);
+  border: 1px solid var(--color-l-red-500);
+}
+.theme-light .mod-left-split .workspace-tab-header.is-active:nth-child(3n+3) {
+  color: var(--color-l-blue-500);
+  border: 1px solid var(--color-l-blue-500);
+}
+.theme-light .mod-right-split .workspace-tab-header.is-active:nth-last-child(3n+1) {
+  color: var(--color-l-yellow-500);
+  border: 1px solid var(--color-l-yellow-500);
+}
+.theme-light .mod-right-split .workspace-tab-header.is-active:nth-last-child(3n+2) {
+  color: var(--color-l-red-500);
+  border: 1px solid var(--color-l-red-500);
+}
+.theme-light .mod-right-split .workspace-tab-header.is-active:nth-last-child(3n+3) {
+  color: var(--color-l-blue-500);
+  border: 1px solid var(--color-l-blue-500);
+}
+
+/*─────────Tab Header for Dark Mode──────────*/
+.theme-dark .workspace-tab-header {
+  transition: var(--duration-superfast) var(--motion-smooth) !important;
+}
+.theme-dark .workspace-tab-header.is-active {
+  background: var(--color-d-gray-70);
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.theme-dark .workspace-tab-header:not(.workspace-tab-header.is-active) {
+  border: 1px solid var(--color-d-gray-50);
+}
+.theme-dark .workspace-tab-header:not(.workspace-tab-header.is-active):hover {
+  border: 1px solid var(--color-d-gray-30);
+  transform: translateY(-1.5px);
+  box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.theme-dark .workspace-tab-header:not(.workspace-tab-header.is-active):hover .workspace-tab-header-inner-icon {
+  color: var(--color-d-gray-30);
+}
+.theme-dark .workspace-tab-header:not(.workspace-tab-header.is-active):active {
+  transform: translateY(1.5px);
+  box-shadow: 0px 0px 0px 2.5px rgba(0, 0, 0, 0.2) inset;
+}
+.theme-dark .mod-left-split .workspace-tab-header.is-active:nth-child(3n+1) {
+  color: var(--color-d-yellow-700);
+  border: 1px solid var(--color-d-yellow-700);
+}
+.theme-dark .mod-left-split .workspace-tab-header.is-active:nth-child(3n+2) {
+  color: var(--color-d-red-700);
+  border: 1px solid var(--color-d-red-700);
+}
+.theme-dark .mod-left-split .workspace-tab-header.is-active:nth-child(3n+3) {
+  color: var(--color-d-blue-700);
+  border: 1px solid var(--color-d-blue-700);
+}
+.theme-dark .mod-right-split .workspace-tab-header.is-active:nth-last-child(3n+1) {
+  color: var(--color-d-yellow-700);
+  border: 1px solid var(--color-d-yellow-700);
+}
+.theme-dark .mod-right-split .workspace-tab-header.is-active:nth-last-child(3n+2) {
+  color: var(--color-d-red-700);
+  border: 1px solid var(--color-d-red-700);
+}
+.theme-dark .mod-right-split .workspace-tab-header.is-active:nth-last-child(3n+3) {
+  color: var(--color-d-blue-700);
+  border: 1px solid var(--color-d-blue-700);
+}
+
+/*────────────────────────────────────
             Nav Header
 ────────────────────────────────────*/
 /*─────────Nav Header Container──────────*/
