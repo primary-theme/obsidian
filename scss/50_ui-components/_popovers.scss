@@ -9,7 +9,7 @@
 
 .popover.hover-popover {
     width: clamp(var(--popover-min), var(--popover-default), var(--popover-max));
-    border-radius: var(--scale-2-6);
+    border-radius: var(--size-4-3);
     border: 1px solid var(--background-modifier-border);
     box-shadow: var(--shadow-l)
                 var(--background-modifier-box-shadow);
@@ -20,10 +20,10 @@
 
     & .markdown-preview-view {
         background: var(--background-primary);
-        padding:    var(--scale-8-1)
-                    var(--scale-8-6)
-                    var(--scale-8-1)
-                    var(--scale-8-6);
+        padding:    var(--size-4-2)
+                    var(--size-4-12)
+                    var(--size-4-2)
+                    var(--size-4-12);
     }
 
     &::-webkit-scrollbar {

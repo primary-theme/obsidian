@@ -2,19 +2,19 @@
     Toggle (Checkboxes for Modals)
 ────────────────────────────────────*/
 .checkbox-container {
-    height: calc(3px + var(--scale-8-3));
-    width: calc(2px + var(--scale-8-6));
-    border-radius: var(--scale-8-4);
+    height: calc(3px + var(--size-4-6));
+    width: calc(2px + var(--size-4-12));
+    border-radius: var(--size-4-8);
 
     &:after {
-        height: calc(4px + var(--scale-8-2));
-        width: calc(4px + var(--scale-8-2));
-        border-radius: var(--scale-8-4);
+        height: calc(4px + var(--size-4-4));
+        width: calc(4px + var(--size-4-4));
+        border-radius: var(--size-4-8);
         margin: 2.5px 0 0 0px;
     }
-    
+
     &:active::after {
-        width: calc(4px + var(--scale-8-3));
+        width: calc(4px + var(--size-4-6));
     }
 
     &.is-enabled {

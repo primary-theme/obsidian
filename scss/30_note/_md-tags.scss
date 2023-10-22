@@ -57,8 +57,8 @@
 // Source View Tag Pill Shape Fix
 .workspace .cm-s-obsidian span.cm-hashtag {
     &-begin {
-        border-top-left-radius: var(--scale-8-4);
-        border-bottom-left-radius: var(--scale-8-4);
+        border-top-left-radius: var(--size-4-8);
+        border-bottom-left-radius: var(--size-4-8);
         padding-left: 0.55em;
         padding-right: 0;
         border-right:none;
@@ -73,8 +73,8 @@
     }
 
     &-end {
-        border-top-right-radius: var(--scale-8-4);
-        border-bottom-right-radius: var(--scale-8-4);
+        border-top-right-radius: var(--size-4-8);
+        border-bottom-right-radius: var(--size-4-8);
         padding-left: 0;
         padding-right: 0.55em;
         border-left:none;
@@ -95,7 +95,7 @@
                 0.55em
                 0
                 0.55em;
-    border-radius: var(--scale-8-4);
+    border-radius: var(--size-4-8);
 
     .theme-light & {
         border: 1px solid rgba(100, 100, 100, 0.3);

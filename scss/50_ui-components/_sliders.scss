@@ -4,37 +4,37 @@
 input[type="range"] {
     min-width: 150px;
     background-color: transparent;
-    padding: 0px;
+    padding: 0;
     -webkit-appearance: none;
     cursor: default;
 
     &::-webkit-slider {
         &-runnable-track {
-            height: var(--scale-2-3);
-            border-radius: var(--scale-2-3);
+            height: var(--size-2-3);
+            border-radius: var(--size-2-3);
 
             .theme-light & {
                 background: var(--background-modifier-border);
-                border-radius: var(--scale-2-2);
+                border-radius: var(--size-2-2);
                 border: 1px solid rgba(100, 100, 100, 0.2);
             }
 
             .theme-dark & {
                 background: var(--background-modifier-border);
-                border-radius: var(--scale-2-2);
+                border-radius: var(--size-2-2);
                 border: 1px solid rgba(0, 0, 0, 0.4);
             }
         }
 
         &-thumb {
-            height: var(--scale-2-10);
-            width: var(--scale-2-4);
-            margin-top: -4px;
+            height: var(--size-4-5);
+            width: var(--size-4-2);
+            margin-top: -2px;
             cursor: ew-resize;
             transition: var(--duration-fast-1)
                         var(--motion-jumpy);
-            border-radius: var(--scale-8-2);
-            
+            border-radius: var(--size-4-4);
+
             .theme-light & {
                 background: var(--color-l-blue-300);
                 border: 1px solid rgba(100, 100, 100, 0.5);
@@ -42,7 +42,7 @@ input[type="range"] {
                             0px -2px 0px 0px rgba(100, 100, 100, 0.15) inset,
                             0px 1px 0px 0px rgba(255, 255, 255, 0.35) inset;
             }
-            
+
             .theme-dark & {
                 background: var(--color-d-blue-700);
                 border: 1px solid rgba(0, 0, 0, 0.5);

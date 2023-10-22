@@ -3,14 +3,14 @@
 ────────────────────────────────────*/
 
 .side-dock-ribbon {
-    flex: 0 0 var(--scale-2-18);
+    flex: 0 0 var(--size-4-9);
     display: flex;
     flex-direction: column;
 }
 
 .workspace-ribbon {
     overflow: hidden;
-    width: var(--scale-8-5);
+    width: var(--size-4-10);
     transition: var(--duration-fast-1)
                 var(--motion-smooth);
 
@@ -39,21 +39,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:    var(--scale-0-0)
-                var(--scale-0-0)
-                var(--scale-2-6)
-                var(--scale-0-0);
+    padding:    var(--size-0-0)
+                var(--size-0-0)
+                var(--size-4-3)
+                var(--size-0-0);
 }
 
 .workspace-ribbon.side-dock-ribbon {
     & .workspace-ribbon-collapse-btn {
-        margin-top: var(--scale-0-0);
-        padding:    var(--scale-2-4)
-                    var(--scale-2-5);
+        margin-top: var(--size-0-0);
+        padding:    var(--size-4-2)
+                    var(--size-2-5);
     }
 
     & .side-dock-settings {
-        margin-bottom: var(--scale-0-0);
+        margin-bottom: var(--size-0-0);
     }
 }
 
@@ -83,7 +83,7 @@
                 color: var(--color-l-red-300);
             }
         }
-        
+
         &:nth-child(3n+3) {
             &:hover {
                 color: var(--color-l-blue-500);
@@ -130,7 +130,7 @@
                 color: var(--color-d-red-900);
             }
         }
-        
+
         &:nth-child(3n+3) {
             &:hover {
                 color: var(--color-d-blue-700);

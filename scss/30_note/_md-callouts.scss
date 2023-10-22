@@ -28,7 +28,7 @@
 
 .callout {
     line-height: var(--line-height-1);
-    border-radius: var(--scale-2-4);
+    border-radius: var(--size-4-2);
     transition: var(--duration-superfast)
                 var(--motion-smooth);
 
@@ -38,8 +38,8 @@
 
     .markdown-source-view.mod-cm6 & {
         margin: 0 0;
-        border-top-right-radius: var(--scale-2-4);
-        border-bottom-right-radius: var(--scale-2-4);
+        border-top-right-radius: var(--size-4-2);
+        border-bottom-right-radius: var(--size-4-2);
     }
 
     .markdown-preview-view & {
@@ -47,26 +47,26 @@
     }
 
     &-title {
-        padding: var(--scale-2-4) 1em;
-        border-top-right-radius: var(--scale-2-4);
-        border-top-left-radius: var(--scale-2-4);
+        padding: var(--size-4-2) 1em;
+        border-top-right-radius: var(--size-4-2);
+        border-top-left-radius: var(--size-4-2);
     }
 
     &.is-collapsed .callout-title {
-        border-bottom-left-radius: var(--scale-2-4);
-        border-bottom-right-radius: var(--scale-2-4);
+        border-bottom-left-radius: var(--size-4-2);
+        border-bottom-right-radius: var(--size-4-2);
     }
 
     &-content {
-        padding: var(--scale-0-0) 1em;
-        border-bottom-right-radius: var(--scale-2-4);
-        border-bottom-left-radius: var(--scale-2-4);
+        padding: var(--size-0-0) 1em;
+        border-bottom-right-radius: var(--size-4-2);
+        border-bottom-left-radius: var(--size-4-2);
     }
 }
 
 /* Nested Markdown Fixes */
 .markdown-source-view.mod-cm6 .callout .callout {
-    margin: var(--scale-8-2) var(--scale-0-0);
+    margin: var(--size-4-4) var(--size-0-0);
 }
 
 .callout .callout .callout-content {

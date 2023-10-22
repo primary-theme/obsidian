@@ -1,7 +1,7 @@
 {
   "name": "Primary",
-  "version": "1.0.0",
+  "version": "2.0.0-alpha",
   "minAppVersion": "1.0.0",
   "author": "Cecilia May",
-  "authorUrl": "https://github.com/ceciliamay/obsidianmd-theme-primary"
+  "authorUrl": "https://github.com/ceciliamay/obsidianmd-theme-primary/"
 }

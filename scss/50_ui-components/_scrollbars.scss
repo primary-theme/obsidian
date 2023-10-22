@@ -4,8 +4,8 @@
 body:not(.native-scrollbars) ::-webkit-scrollbar,
 body:not(.native-scrollbars) .graph-controls::-webkit-scrollbar {
     visibility: visible;
-    width: var(--scale-2-2);
-    height: var(--scale-2-2);
+    width: var(--size-2-2);
+    height: var(--size-2-2);
     border-radius: 0;
     display: inherit;
     background: var(--scrollbar-bg);
@@ -19,7 +19,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 
         &:active {
             background: var(--scrollbar-active-thumb-bg);
-            border-radius: 0;  
+            border-radius: 0;
         }
     }
 }
@@ -29,8 +29,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
     & ::-webkit-scrollbar,
     & .graph-controls::-webkit-scrollbar {
         visibility: visible;
-        width: var(--scale-2-2);
-        height: var(--scale-2-2);
+        width: var(--size-2-2);
+        height: var(--size-2-2);
         border-radius: 0;
         display: inherit;
         background: var(--scrollbar-bg);
@@ -41,10 +41,10 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
             visibility: visible;
             background: var(scrollbar-thumb-bg);
             border-radius: 0;
-    
+
             &:active {
                 background: var(--scrollbar-active-thumb-bg);
-                border-radius: 0;  
+                border-radius: 0;
             }
         }
     }
@@ -73,7 +73,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
                 border-width: 3px;
                 border-radius: 24px;
             }
-            
+
             &:active {
                 border-radius: 24px;
             }
@@ -84,13 +84,13 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
         &-thumb {
             background: var(--background-modifier-border);
             border: 5px solid var(--background-secondary);
-    
+
             &:hover {
                 background: var(--interactive-accent);
                 border-width: 3px;
                 border-radius: 24px;
             }
-    
+
             &:active {
                 border-radius: 24px;
             }
@@ -106,7 +106,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
                 border-width: 3px;
                 border-radius: 24px;
             }
-    
+
             &:active {
                 border-radius: 24px;
             }

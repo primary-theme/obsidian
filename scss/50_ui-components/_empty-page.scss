@@ -15,10 +15,10 @@
     width: 26ch;
 
     background: var(--background-primary-alt);
-    padding: var(--scale-2-6) 0;
-    border-radius: var(--scale-8-4);
+    padding: var(--size-4-3) 0;
+    border-radius: var(--size-4-8);
     border: 1px solid var(--background-modifier-border);
-    margin-bottom: var(--scale-2-4);
+    margin-bottom: var(--size-4-2);
     transition: var(--duration-superfast)
                 var(--motion-smooth);
 
@@ -36,7 +36,7 @@
 
         &:active {
             background: var(--background-secondary);
-            box-shadow: 0px 0px 0px 3px 
+            box-shadow: 0px 0px 0px 3px
                 rgba(150, 150, 150, 0.15) inset;
         }
 
@@ -51,7 +51,7 @@
                 border: 1px solid var(--color-l-yellow-700);
             }
         }
-    
+
         &:nth-child(3n+2) {
             &:hover, :focus {
                 color: var(--color-l-red-500);
@@ -63,7 +63,7 @@
                 border: 1px solid var(--color-l-red-700);
             }
         }
-    
+
         &:nth-child(3n+3) {
             &:hover, :focus {
                 color: var(--color-l-blue-500);
@@ -83,7 +83,7 @@
 
         &:active {
             background: var(--background-secondary);
-            box-shadow: 0px 0px 0px 3px 
+            box-shadow: 0px 0px 0px 3px
                 rgba(0, 0, 0, 0.3) inset;
         }
 
@@ -98,7 +98,7 @@
                 border: 1px solid var(--color-d-yellow-900);
             }
         }
-    
+
         &:nth-child(3n+2) {
             &:hover, :focus {
                 color: var(--color-d-red-700);
@@ -110,7 +110,7 @@
                 border: 1px solid var(--color-d-red-900);
             }
         }
-    
+
         &:nth-child(3n+3) {
             &:hover, :focus {
                 color: var(--color-d-blue-700);
@@ -134,7 +134,7 @@
     white-space: pre;
     text-align: center;
     position: absolute;
-    bottom: var(--scale-8-4);
+    bottom: var(--size-4-8);
     opacity: 0.75;
 
     .popover.hover-popover & {

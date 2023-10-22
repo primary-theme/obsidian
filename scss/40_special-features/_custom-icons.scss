@@ -151,8 +151,8 @@ body:not(.no-svg-replace) svg.box-glyph,
 body:not(.no-svg-replace) svg.wand,
 body:not(.no-svg-replace) svg.longform,
 body:not(.no-svg-replace) svg.changelog {
-    height: var(--scale-8-2);
-    width: var(--scale-8-2);
+    height: var(--size-4-4);
+    width: var(--size-4-4);
     background-color: currentColor;
 }
 
@@ -925,8 +925,8 @@ body:not(.no-svg-replace) svg.right-chevron-glyph {
 
 /* Right Triangle, Triangle for File Explorer */
 body:not(.no-svg-replace) svg.right-triangle {
-    height: var(--scale-2-8);
-    width: var(--scale-2-8);
+    height: var(--size-4-4);
+    width: var(--size-4-4);
     -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' id='Outline' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z'/%3E%3C/svg%3E%0A");
 }
 

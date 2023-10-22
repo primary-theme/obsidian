@@ -1,18 +1,18 @@
-/*────────────────────────────────────
-            Outline Pane
-────────────────────────────────────*/
-.outline {
-    font-size: var(--font-scale-0-5);
-}
-.workspace-leaf-content[data-type="outline"] {
-    .tree-item-self {
-        padding:    calc(1px + var(--scale-2-2))
-                    var(--scale-2-2)
-                    calc(1px + var(--scale-2-2))
-                    calc(5px + var(--scale-8-3));
-
-        & .tree-item-icon {
-            margin-left: -21px;
-        }
-    }
-}
+///*────────────────────────────────────
+//            Outline Pane
+//────────────────────────────────────*/
+//.outline {
+//    font-size: var(--font-scale-0-5);
+//}
+//.workspace-leaf-content[data-type="outline"] {
+//    .tree-item-self {
+//        padding:    calc(1px + var(--size-2-2))
+//                    var(--size-2-2)
+//                    calc(1px + var(--size-2-2))
+//                    calc(5px + var(--size-4-6));
+//
+//        & .tree-item-icon {
+//            margin-left: -21px;
+//        }
+//    }
+//}

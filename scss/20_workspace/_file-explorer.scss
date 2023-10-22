@@ -12,7 +12,7 @@
     position: sticky;
     justify-content: center;
     border: 1px solid var(--background-modifier-border);
-    margin-bottom: var(--scale-2-2);
+    margin-bottom: var(--size-2-2);
     z-index: 2;
 
     &:hover {
@@ -27,11 +27,11 @@
         font-size: var(--font-scale-0-5);
         line-height: var(--line-height-0-5);
         width: 100%;
-        padding:    calc(1px + var(--scale-2-1))
-                    var(--scale-2-2)
-                    calc(1px + var(--scale-2-1))
-                    var(--scale-2-4);
-        border-radius: var(--scale-2-2);
+        padding:    calc(1px + var(--size-2-1))
+                    var(--size-2-2)
+                    calc(1px + var(--size-2-1))
+                    var(--size-4-2);
+        border-radius: var(--size-2-2);
 
         transition: var(--duration-superfast)
                     var(--motion-smooth);
@@ -40,17 +40,17 @@
     &-folder-title-content {
         display: flex;
         align-items: center;
-        padding:    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-2-2);
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-2-2);
     }
 
     &-file-title-content {
-        padding:    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-0-0)
-                    var(--scale-2-2);
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-2-2);
     }
 
     &-folder-title,
@@ -64,8 +64,8 @@
     }
 
     &-folder-collapse-indicator.collapse-icon {
-        margin-top: var(--scale-2-1);
-        margin-left: var(--scale-0-0);
+        margin-top: var(--size-2-1);
+        margin-left: var(--size-0-0);
     }
 
     &-file-tag {
@@ -120,8 +120,8 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
         }
 
         &-folder-children .nav-folder-children {
-            padding-left: var(--scale-2-2);
-            margin-left: var(--scale-2-8);
+            padding-left: var(--size-2-2);
+            margin-left: var(--size-4-4);
             // Indention Line
             border-left: 1px solid var(--background-modifier-border);
         }
@@ -162,9 +162,9 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
         }
 
         &-folder-children .nav-folder-children {
-            padding-left: var(--scale-2-2);
+            padding-left: var(--size-2-2);
             border-left: 1px solid var(--background-modifier-border);
-            margin-left: var(--scale-2-8);
+            margin-left: var(--size-4-4);
         }
     }
 }

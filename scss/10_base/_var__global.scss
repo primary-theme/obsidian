@@ -2,7 +2,7 @@
 ++++++++++++Variables+++++++++++++++++
 ────────────────────────────────────*/
 
-:root,
+
 body {
     /*──────────Font Families──────────*/
     
@@ -63,43 +63,23 @@ body {
     --tracking-3: 0.64px;
     --tracking-4: 1.28px;
     --tracking-5: 2.56px;
-    
+
+    /* View header */
+    --header-height: 48px;
+
     /*──────────Layout Sizing──────────*/
 
     /* Obsidian Defaults */
     --border-width: 1px;
     
-    --scale-0-0: 0px;
+    --size-0-0: 0px;
     
     /* Multiples of 2 */
     
-    --scale-2-1: 2px;
-    --scale-2-2: 4px;
-    --scale-2-3: 6px;
-    --scale-2-4: 8px;
-    --scale-2-5: 10px;
-    --scale-2-6: 12px;
-    --scale-2-8: 16px;
-    --scale-2-9: 18px;
-    --scale-2-10: 20px;
-    --scale-2-18: 36px;
-    
-    /* Multiples of 8 */
-    
-    --scale-8-1: 8px;
-    --scale-8-2: 16px;
-    --scale-8-3: 24px;
-    --scale-8-4: 32px;
-    --scale-8-5: 40px;
-    --scale-8-6: 48px;
-    --scale-8-7: 54px;
-    --scale-8-8: 64px;
-    --scale-8-9: 72px;
-    --scale-8-10: 80px;
-    
-    --scale-8-12: 96px;
-    --scale-8-18: 144px;
-    --scale-8-36: 288px;
+
+    --size-2-5: 10px;
+    --size-2-10: 20px;
+
 
     /*──────────Shadow Sizing──────────*/
 
@@ -127,5 +107,28 @@ body {
     --motion-smooth: cubic-bezier(0.45,0.05,0.55,0.95); /* easeInOutSine */
     --motion-delay: cubic-bezier(0.65,0.05,0.36,1); /* easeInOutCubic */
     --motion-jumpy: cubic-bezier(0.68,-0.55,0.27,1.55); /* easeInOutBack */
-    
-    } /*    End of Variables (:root)   */
+
+    /* Tabs */
+    --tab-background-active: var(--background-primary);
+    --tab-text-color: var(--text-faint);
+    --tab-text-color-focused: var(--text-muted);
+    --tab-text-color-focused-active: var(--text-normal);
+    --tab-font-size: var(--font-ui-small);
+    --tab-font-weight: inherit;
+    --tab-container-background: var(--background-secondary);
+    --tab-divider-color: var(--background-modifier-border-hover);
+    --tab-outline-color: var(--divider-color);
+    --tab-outline-width: 1px;
+    --tab-curve: 6px;
+    --tab-radius: var(--radius-s);
+    --tab-radius-active: 12px 12px 0 0;
+    --tab-width: 200px;
+    --tab-max-width: 320px;
+
+    --accent-h: 254;
+    --accent-s: 80%;
+    --accent-l: 68%;
+
+    --background-modifier-hover: rgba(var(--mono-rgb-0), 1.0);
+
+    } /*    End of Variables (body)   */

@@ -13,17 +13,17 @@
     margin: auto;
     right: 0;
     bottom: 0;
-    padding:    var(--scale-2-1)
-                var(--scale-2-3)
-                var(--scale-2-1)
-                var(--scale-2-3);
-    border-top-left-radius: var(--scale-2-4);
+    padding:    var(--size-2-1)
+                var(--size-2-3)
+                var(--size-2-1)
+                var(--size-2-3);
+    border-top-left-radius: var(--size-4-2);
 
     &-item {
-        padding:    var(--scale-0-0)
-                    var(--scale-2-3)
-                    var(--scale-0-0)
-                    var(--scale-2-3);
+        padding:    var(--size-0-0)
+                    var(--size-2-3)
+                    var(--size-0-0)
+                    var(--size-2-3);
         display: flex;
         align-items: center;
 
@@ -52,15 +52,15 @@
     .sync-status-icon {
         .mod-working svg {
             color: var(--color-l-red-300);
-            height: var(--scale-8-2);
-            width: var(--scale-8-2);
+            height: var(--size-4-4);
+            width: var(--size-4-4);
         }
 
         .mod-success {
             & svg {
                 color: var(--color-l-gray-60);
-                height: var(--scale-8-2);
-                width: var(--scale-8-2);
+                height: var(--size-4-4);
+                width: var(--size-4-4);
             }
 
             &:hover svg {
@@ -89,16 +89,16 @@
     .sync-status-icon {
         .mod-working svg {
             color: var(--color-d-red-900);
-            height: var(--scale-8-2);
-            width: var(--scale-8-2);
+            height: var(--size-4-4);
+            width: var(--size-4-4);
             vertical-align: -3px;
         }
 
         .mod-success {
             & svg {
                 color: var(--color-d-gray-30);
-                height: var(--scale-8-2);
-                width: var(--scale-8-2);
+                height: var(--size-4-4);
+                width: var(--size-4-4);
                 vertical-align: -3px;
             }
 

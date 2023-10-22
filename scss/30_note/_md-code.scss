@@ -5,10 +5,10 @@
 .theme-dark {
     & pre[class*="language-"] {
         color: var(--md-color-code-red-1);
-        padding:    var(--scale-2-8)
-                    var(--scale-2-8)
-                    var(--scale-2-8)
-                    var(--scale-2-8);
+        padding:    var(--size-4-4)
+                    var(--size-4-4)
+                    var(--size-4-4)
+                    var(--size-4-4);
     }
 
     & code.is-loaded {
@@ -32,7 +32,7 @@ code,
 
 .cm-s-obsidian .HyperMD-codeblock {
     line-height: 1.5;
-    padding: 0 var(--scale-2-8);
+    padding: 0 var(--size-4-4);
 }
 
 pre code {
@@ -46,32 +46,32 @@ pre code {
 code,
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting-code),
 .markdown-preview-view pre code {
-    padding:    var(--scale-2-1)
-                var(--scale-2-3);
-    border-radius: var(--scale-2-2);
+    padding:    var(--size-2-1)
+                var(--size-2-3);
+    border-radius: var(--size-2-2);
 }
 
 .cm-s-obsidian span.cm-inline-code.cm-formatting-code {
-    padding:    var(--scale-2-1)
+    padding:    var(--size-2-1)
                 0;
 }
 
 .cm-s-obsidian div.HyperMD-codeblock {
     &-begin-bg {
-        border-top-left-radius: var(--scale-2-3);
-        border-top-right-radius: var(--scale-2-3);
+        border-top-left-radius: var(--size-2-3);
+        border-top-right-radius: var(--size-2-3);
         border: none;
     }
 
     &-end-bg {
-        border-bottom-left-radius: var(--scale-2-3);
-        border-bottom-right-radius: var(--scale-2-3);
+        border-bottom-left-radius: var(--size-2-3);
+        border-bottom-right-radius: var(--size-2-3);
         border: none;
     }
 }
 
 .markdown-preview-view pre {
-    border-radius: var(--scale-2-3);
+    border-radius: var(--size-2-3);
 }
 
 /*──────────Inline Code/Codeblocks
@@ -85,9 +85,9 @@ Syntax Highlighting──────────*/
 }
 
 .markdown-preview-view code {
-    padding:    var(--scale-2-1)
-                var(--scale-2-3);
-    border-radius: var(--scale-2-2);
+    padding:    var(--size-2-1)
+                var(--size-2-3);
+    border-radius: var(--size-2-2);
 }
 
 
@@ -164,6 +164,6 @@ span.code-block-flair[aria-label="Copy"] {
     font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-1);
     padding: 0;
-    margin-top: var(--scale-2-1);
-    margin-right: var(--scale-2-2);
+    margin-top: var(--size-2-1);
+    margin-right: var(--size-2-2);
 }

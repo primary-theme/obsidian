@@ -3,18 +3,18 @@ progress {
     appearance: none;
     width: calc(var(--font-text-size) + 220px);
     height: calc(var(--font-text-size) - 8px);
-    margin-right: var(--scale-2-4);
+    margin-right: var(--size-4-2);
     vertical-align: 2px;
     
     &[value]::-webkit-progress-bar {
         background: var(--background-secondary);
-        box-shadow: 0px 0px 0px 1px var(--background-modifier-border) inset;
-        border-radius: var(--scale-8-2);
+        box-shadow: 0 0 0 1px var(--background-modifier-border) inset;
+        border-radius: var(--size-4-4);
         overflow: hidden;
     }
 
     &[value]::-webkit-progress-value {
-        border-radius: var(--scale-8-2);
+        border-radius: var(--size-4-4);
     }
 
     &[value="1"]::-webkit-progress-value,
