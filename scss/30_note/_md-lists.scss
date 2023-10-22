@@ -4,30 +4,35 @@
     padding-top: 0;
 }
 
-.markdown-source-view.mod-cm6 .list-bullet:after {
-    top: initial;
-}
-
 .markdown-source-view.mod-cm6 {
     & .list-bullet:after {
-        content: '-';
-        font-family: var(--font-monospace-theme);
-        font-size: 1.25em;
+        //Remove content and use borders to get this working.
+        //Dash
+        height: 1px;
+        width: 7px;
+        border-radius: 0;
     }
 
     & .cm-list-2 .list-bullet:after {
-        content: '•';
+        //Solid Bullet
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
     }
 
     & .cm-list-3 .list-bullet:after {
-        content: '◦';
+        height: 4px;
+        width: 4px;
+        background-color: transparent;
+        border-style: solid;
+        border-radius: 50%;
+        border-width: 1px;
     }
 }
 
 span.cm-formatting.cm-formatting-list,
 span.list-bullet,
 li::marker {
-    color: var(--md-color-bullet);
     font-size: var(--font-scale-0);
     font-family: var(--font-monospace-theme);
     font-variant-numeric: tabular-nums;
@@ -54,6 +59,7 @@ ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol {
     padding-left: 2ch;
     margin-left: var(--size-0-0);
 }
+
 ol ol,
 ol ol ol ol,
 ol ol ol ol ol ol,
@@ -74,6 +80,7 @@ ul ul ul ul ul ul ul ul ul ul ul ul ul {
     padding-left: 2ch;
     margin-left: var(--size-0-0);
 }
+
 ul ul,
 ul ul ul ul ul,
 ul ul ul ul ul ul ul ul,
@@ -81,6 +88,7 @@ ul ul ul ul ul ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
     list-style-type: disc;
 }
+
 ul ul ul,
 ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul ul,
