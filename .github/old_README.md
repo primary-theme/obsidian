@@ -27,15 +27,21 @@ Available in both Light and Dark modes, for both Mobile and Desktop!
 
 ## 📖 Table of Contents
 
-- [Goals](#👁️-goals)
-- [Supported Plugins](#⭐-supported-plugins)
-- [How to Use Primary](#❓-how-to-use-primary)
-    - [Customizing Primary](#⚒️-customizing-primary-through-style-settings)
-    - [Alternate Checkboxes](#✅-alternative-checkboxes)
-    - [Callouts](#⏹️-exclusive-callouts)
-- [Screenshots](#🖼️-screenshots)
-- [Creating Primary](#🧠-creating-primary)
-- [Credits](#❤️-credits)
+- [Primary 🟨🟥🟦](#primary-)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [👁️ Goals](#️-goals)
+  - [⭐ Supported Plugins](#-supported-plugins)
+  - [❓ How to Use Primary](#-how-to-use-primary)
+    - [⚒️ Customizing Primary through Style Settings](#️-customizing-primary-through-style-settings)
+    - [✅ Alternative Checkboxes](#-alternative-checkboxes)
+    - [⏹️ Exclusive Callouts](#️-exclusive-callouts)
+      - [Gradient Party Callouts](#gradient-party-callouts)
+      - [Thinking Callouts](#thinking-callouts)
+      - [Meditation Callouts](#meditation-callouts)
+    - [💯 Progress Bars](#-progress-bars)
+  - [🖼️ Screenshots](#️-screenshots)
+  - [🧠 Creating Primary](#-creating-primary)
+  - [❤️ Credits](#️-credits)
 
 ## 👁️ Goals
 - Help users give instant visual context of their notes through colors and scale that is both beautiful and productive.
