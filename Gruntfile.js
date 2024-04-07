@@ -1,25 +1,50 @@
-/*
+/*───────────────────────────────────
 
 Obsidian Theme Compiler
 
-uses GruntJS (https://gruntjs.com/) to make it easier to develop
-and  test Obsidian themes.
+────────────────────────────────────
 
-Features:
-- allows you to work with the working directory
-- reduces the need to activate sass to css compiler in the terminal
-- automatically compiles sass to css upon saving changes to sass and css files
-- hot reload works by copying the final css copy from the working directory to the obsidian vault you're using to test the theme for (upon saving changes to sass and css files)
-- helps you easily organize separate sass and css files and automatically combines them into one
-- minifies the final css for an optimized performance
+MIT License
+Copyright (c) 2024 Cecilia May 
 
-*/
+uses GruntJS (https://gruntjs.com/) to
+make it easier to develop
+and test Obsidian themes.
+
+● FEATURES ●
+-   allows you to work with the uploaded
+    remote theme directory
+-   reduces the need to activate sass to
+    css compiler in the terminal
+-   automatically compiles sass to css upon
+    saving changes to sass and css files
+-   hot reload works by copying the final
+    css copy from the working directory to the
+    obsidian vault you're using to test the theme
+    for (upon saving changes to sass and css files)
+-   helps you easily organize separate sass
+    and css files and automatically combines
+    them into one
+-   minifies the final css for
+    an optimized performance
+
+Remix from @kepano Minimal Theme Compiler
+
+Read more at https://git.new/primary/obsidian
+
+────────────────────────────────────*/
 
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        /*  Get OBSIDIAN_PATH from .env file   */
+        /*  Get OBSIDIAN_PATH from .env file
+
+            (Make sure to replace OBSIDIAN_PATH in
+            .env.example with your own vault or
+            dev vault's path and remove the ".example"
+            on the end of the filename)
+        */
         env: {
             vault : {
                 src: ".env"
