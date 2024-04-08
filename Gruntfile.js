@@ -93,12 +93,12 @@ module.exports = function(grunt) {
         concat_css: {
             unminified: {
                 files: {
-                    'Primary.css': ['src/css/license.css', 'src/css/table-of-contents.css', 'src/css/main.min.css', 'src/css/plugin-compatibility.css', 'src/css/style-settings.css']
+                    'Primary.css': ['src/css/license.css', 'src/css/table-of-contents.css', 'src/css/fonts/*.css', 'src/css/main.min.css', 'src/css/plugin-compatibility.css', 'src/css/style-settings.css']
                 }
             },
             dist: {
                 files: {
-                    'theme.css': ['src/css/license.css', 'src/css/table-of-contents.css', 'src/css/main.min.css', 'src/css/plugin-compatibility.css', 'src/css/style-settings.css']
+                    'theme.css': ['src/css/license.css', 'src/css/table-of-contents.css', 'src/css/fonts/*.css','src/css/main.min.css', 'src/css/plugin-compatibility.css', 'src/css/style-settings.css']
                 }
             }
         },
