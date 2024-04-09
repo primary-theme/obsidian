@@ -4,7 +4,7 @@ body {
   --font-interface-theme: "Inter";
   --font-text-theme: "Inter";
   --font-monospace-theme: "Cascadia Code";
-  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss02" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
+  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
 }
 
 /*────────── Icons ──────────*/
