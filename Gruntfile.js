@@ -59,7 +59,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'src/css/main.css': 'src/css/index.scss'
+                    'src/css/main.css': 'src/scss/index.scss'
                 }
             },
             minified: {
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
         grunt.config('OBSIDIAN_PATH', process.env.OBSIDIAN_PATH);
     });
 
-    /*  reload command: watches for changes in the working directory
+    /*  default command: watches for changes in the working directory
         and performs tasks as indicated under the grunt-contrib-watch plugin    */
-    grunt.registerTask('reload', ['env:vault', 'loadenv', 'watch']);
+    grunt.registerTask('default', ['env:vault', 'loadenv', 'watch']);
 };

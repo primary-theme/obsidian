@@ -2,7 +2,7 @@
             Note Markdown
 ────────────────────────────────────*/
 /*──────────Headings──────────*/
-:root body {
+:root {
     /* 1.388 Scale Ratio */
     --h1: var(--font-scale-7);
     --h2: var(--font-scale-6);
@@ -91,7 +91,7 @@ h6 {
 }
 
 /* Source View Headings */
-body .cm-s-obsidian .HyperMD-header {
+.cm-s-obsidian .HyperMD-header {
     line-height: var(--header-line-height);
     padding-bottom: 0;
 }

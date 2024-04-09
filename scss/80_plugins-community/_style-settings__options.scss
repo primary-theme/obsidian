@@ -6,7 +6,7 @@ settings:
     -
         id: preset-fonts
         title: 🔤 Fonts & Typography
-        description: Adjust global font settings. Includes settings for Header fonts, Body fonts, Line Height, and other features.
+        description: Adjust global font settings. Includes settings for Header fonts, fonts, Line Height, and other features.
         type: heading
         level: 1
         collapsed: true
@@ -37,7 +37,7 @@ settings:
                 value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
         id: font-preview
-        title: Preset Preview Body Font
+        title: Preset Preview Font
         type: variable-select
         default: '"Karla", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
@@ -87,7 +87,7 @@ settings:
                 value: '"Roboto Slab", Georgia, Times New Roman, serif'
     -
         id: font-editor
-        title: Preset Editor Body Font
+        title: Preset Editor Font
         type: variable-select
         default: '"Karla", -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif'
@@ -165,7 +165,7 @@ settings:
         BlinkMacSystemFont, Helvetica, Arial, sans-serif'
     -
         id: font-preview
-        title: Custom Preview Body Font
+        title: Custom Preview Font
         description:
         type: variable-text
         default: '"Karla", -apple-system,
@@ -179,7 +179,7 @@ settings:
         BlinkMacSystemFont, Helvetica, Arial, sans-serif'
     -
         id: font-editor
-        title: Custom Edit Body Font
+        title: Custom Edit Font
         description:
         type: variable-text
         default: '"Karla", -apple-system,
@@ -1292,7 +1292,7 @@ settings:
         default: md-bullet-color-faint
         options:
             -
-                label: Like Body Text
+                label: Like Text
                 value: md-bullet-color-normal
             -
                 label: Muted
