@@ -1,0 +1,226 @@
+/*───────────────────────────────────
+
+✦ P R I M A R Y ✦
+in Classic Light
+© Cecilia May
+
+If you have any questions on this palette,
+would like to adopt it to your
+website/app/custom theme, please read the
+USAGE, LICENSE, and CONTRIBUTION page ↴
+
+
+───────────────────────────────────*/
+
+.theme-light {
+    color-scheme: light;
+    // Grayscale
+    --color-l-gray-10: hsla(34, 39%, 94%, 1);
+    --color-l-gray-20: hsla(35, 36%, 95%, 1);
+    --color-l-gray-30: hsla(35, 37%, 92%, 1);
+    --color-l-gray-40: hsla(34, 34%, 90%, 1);
+    --color-l-gray-50: hsla(36, 35%, 88%, 1);
+    --color-l-gray-60: hsla(37, 38%, 83%, 1);
+    --color-l-gray-70: hsla(34, 37%, 70%, 1);
+    --color-l-gray-80: hsla(34, 29%, 60%, 1);
+    --color-l-gray-90: hsla(31, 23%, 50%, 1);
+    --color-l-gray-100: hsla(35, 28%, 40%, 1);
+    --color-l-gray-110: hsla(34, 30%, 37%, 1);
+    --color-l-gray-120: hsla(36, 32%, 30%, 1);
+    --color-l-gray-130: hsla(31, 45%, 20%, 1);
+    --color-l-gray-140: hsla(33, 54%, 12%, 1);
+
+    // --color-l-alpha-gray: hsla(34, 29%, 60%, 0.5); // darkest color
+
+    --color-l-white-rgb: 255, 255, 255; // rgba
+    --color-l-black-rgb: 0, 0, 0; // rgba
+
+    // Red
+    --color-l-red-10: hsla(4, 54%, 61%, 1);
+    --color-l-red-20: hsla(4, 72%, 55%, 1);
+    --color-l-red-30: hsla(4, 56%, 48%, 1);
+    --color-l-red-40: hsla(4, 72%, 35%, 1);
+
+    --color-l-alpha-red: hsla(350, 84, 63, 0.2);
+
+    // Orange
+    --color-l-orange-10: hsla(26, 70%, 63%, 1);
+    --color-l-orange-20: hsla(21, 81%, 59%, 1);
+    --color-l-orange-30: hsla(18, 69%, 50%, 1);
+    --color-l-orange-40: hsla(18, 96%, 35%, 1);
+    
+    --color-l-alpha-orange: hsla(27, 100, 50, 0.2);
+
+    // Yellow
+    --color-l-yellow-10: hsla(43, 71%, 67%, 1);
+    --color-l-yellow-20: hsla(43, 83%, 57%, 1);
+    --color-l-yellow-30: hsla(40, 79%, 47%, 1);
+    --color-l-yellow-40: hsla(40, 98%, 36%, 1);
+    
+    --color-l-alpha-yellow: hsla(44, 100, 50, 0.2);
+
+    // Green
+    --color-l-green-10: hsla(154, 47%, 65%, 1);
+    --color-l-green-20: hsla(154, 52%, 49%, 1);
+    --color-l-green-30: hsla(154, 55%, 39%, 1);
+    --color-l-green-40: hsla(159, 65%, 29%, 1);
+    
+    --color-l-alpha-green: hsla(74, 69, 44, 0.2);
+
+    // Blue
+    --color-l-blue-10: hsla(199, 39%, 56%, 1);
+    --color-l-blue-20: hsla(202, 66%, 46%, 1);
+    --color-l-blue-30: hsla(208, 64%, 39%, 1);
+    --color-l-blue-40: hsla(212, 95%, 25%, 1);
+    
+    --color-l-alpha-blue: hsla(186, 64, 46, 0.2);
+
+    // Violet
+    --color-l-violet-10: hsla(280, 43%, 76%, 1);
+    --color-l-violet-20: hsla(277, 35%, 59%, 1);
+    --color-l-violet-30: hsla(275, 37%, 43%, 1);
+    --color-l-violet-40: hsla(265, 70%, 30%, 1);
+    
+    --color-l-alpha-violet: hsla(236, 100, 72, 0.2);
+}
+
+/*────────── Light Theme Override ──────────*/
+
+.theme-light {
+    // App Theme
+    --highlight-mix-blend-mode: darken;
+
+    --mono-rgb-0: var(--color-l-black-rgb);
+    --mono-rgb-100: var(--color-l-white-rgb);
+
+    // Colors are Curated Derivatives of Primary Classic Light
+    --color-red-rgb: 228, 87, 78;
+    --color-red: hsla(0, 58%, 53%, 1);
+
+    --color-orange-rgb: 238, 163, 89;
+    --color-orange: hsla(30, 66%, 52%, 1);
+
+    --color-yellow-rgb: 249, 207, 81;
+    --color-yellow: hsla(42, 80%, 55%, 1);
+
+    --color-green-rgb: 100, 194, 113;
+    --color-green: hsla(131, 56%, 58%, 1);
+
+    --color-cyan-rgb: 124, 180, 206;
+    --color-cyan: hsla(178, 43%, 54%, 1);
+
+    --color-blue-rgb: 99, 156, 192;
+    --color-blue: hsla(206, 57%, 44%, 1);
+
+    --color-purple-rgb: 139, 113, 185;
+    --color-purple: hsla(250, 48%, 57%, 1);
+
+    --color-pink-rgb: 224, 108, 138;
+    --color-pink: rgb(199, 112, 132);
+
+    // Primary Classic Light: color-l-gray-90
+    --accent-h: 31;
+    --accent-s: 23%;
+    --accent-l: 50%;
+
+    --color-accent-hsl: var(--accent-h),
+                        var(--accent-s),
+                        var(--accent-l);
+
+    --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --color-accent-1: hsl(
+                        calc(var(--accent-h) - 1),
+                        calc(var(--accent-s) * 1.01),
+                        calc(var(--accent-l) * 1.075)
+                        );
+    --color-accent-2: hsl(
+                        calc(var(--accent-h) - 3),
+                        calc(var(--accent-s) * 1.02),
+                        calc(var(--accent-l) * 1.15)
+                        );
+
+    --color-base-00: var(--color-l-gray-10);
+    --color-base-05: var(--color-l-gray-20);
+    --color-base-10: var(--color-l-gray-30);
+    --color-base-20: var(--color-l-gray-40);
+    --color-base-25: var(--color-l-gray-50);
+    --color-base-30: var(--color-l-gray-60);
+    --color-base-35: var(--color-l-gray-70);
+    --color-base-40: var(--color-l-gray-80);
+    --color-base-50: var(--color-l-gray-90);
+    --color-base-60: var(--color-l-gray-100); // skipped 110
+    --color-base-70: var(--color-l-gray-120); // skipped 130
+    --color-base-100: var(--color-l-gray-140);
+
+    --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
+                0px 3.4px 6.7px rgba(0, 0, 0, .042),
+                0px 15px 30px rgba(0, 0, 0, .07);
+    --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+                0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+                0px 30px 90px rgba(0, 0, 0, 0.2);
+
+    // Interface Colors
+    --background-primary: var(--color-l-gray-20);
+    --background-primary-alt: var(--color-l-gray-30);
+
+    --background-secondary: var(--color-l-gray-40);
+    --background-secondary-alt: var(--color-l-gray-40);
+
+    --interactive-normal: var(--color-base-00);
+    --interactive-hover: var(--color-base-10);
+
+    --interactive-accent-hsl: var(--color-accent-hsl);
+    --interactive-accent: var(--color-accent-1);
+    --interactive-accent-hover: var(--color-accent-2);
+
+    --drag-ghost-background: var(--color-l-gray-130);
+    --drag-ghost-text-color: var(--color-l-gray-20);
+
+    --background-modifier-hover: var(--color-l-gray-30);
+    --background-modifier-active-hover: var(--color-l-gray-60);
+
+    --background-modifier-border: var(--color-l-gray-60);
+    --background-modifier-border-hover: var(--color-l-gray-70);
+    --background-modifier-border-focus: var(--color-l-gray-60);
+
+    --background-modifier-error-rgb: var(--color-red-rgb);
+    --background-modifier-error: var(--color-l-red-20);
+    --background-modifier-error-hover: var(--color-l-red-30);
+
+    --background-modifier-success-rgb: var(--color-green-rgb);
+    --background-modifier-success: var(--color-l-green-20);
+
+    --background-modifier-message: rgba(0, 0, 0, 0.9);
+
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+    --background-modifier-cover: rgba(220, 220, 220, 0.4);
+
+    --background-modifier-form-field: var(--color-l-gray-30);
+    --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
+                    inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                    0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+    --input-shadow-hover:   inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
+                            inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                            0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08),
+                            0px 3px 4px 1px rgba(var(--color-l-black-rgb), 0.07);
+
+    // Text Colors
+    --text-normal: var(--color-l-gray-130);
+    --text-muted: var(--color-l-gray-90);
+    --text-faint: var(--color-l-gray-70);
+
+    --text-on-accent: var(--color-l-gray-10);
+    --text-on-accent-inverted: var(--color-l-gray-140);
+
+    --text-error: var(--color-l-red-30);
+    --text-warning: var(--color-l-orange-30);
+
+    --text-success: var(--color-l-green-30);
+
+    --text-selection: var(--color-l-gray-60);
+    --text-highlight-bg-rgb: var(--color-yellow-rgb);
+    --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+
+    --text-accent: var(--color-accent);
+    --text-accent-hover: var(--color-accent-2);
+}

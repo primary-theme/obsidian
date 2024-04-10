@@ -1,0 +1,83 @@
+/*───────────────────────────────────
+
+✦ P R I M A R Y ✦
+in Classic Dark
+© Cecilia May
+
+If you have any questions on this palette,
+would like to adopt it to your website,
+please READ the USAGE, LICENSE,
+and CONTRIBUTION page ↴
+
+
+───────────────────────────────────*/
+
+.theme-dark {
+    color-scheme: dark;
+    // Grayscale
+    --cdark-gray-10: hsla(32, 63, 90, 1);
+    --cdark-gray-20: hsla(34, 49, 80, 1);
+    --cdark-gray-30: hsla(34, 31, 68, 1);
+    --cdark-gray-40: hsla(35, 27, 55, 1);
+    --cdark-gray-50: hsla(34, 24, 40, 1);
+    --cdark-gray-60: hsla(33, 27, 28, 1);
+    --cdark-gray-70: hsla(31, 25, 20, 1);
+    --cdark-gray-80: hsla(28, 22, 17, 1);
+    --cdark-gray-90: hsla(33, 18, 15, 1);
+    --cdark-gray-100: hsla(31, 18, 14, 1);
+    --cdark-gray-110: hsla(28, 14, 13, 1);
+    --cdark-gray-120: hsla(28, 16, 12, 1);
+    --cdark-gray-130: hsla(24, 18, 9, 1);
+    --cdark-gray-140: hsla(32, 21, 8, 1);
+
+    --cdark-white: 255, 255, 255; // rgba
+    --cdark-black: 0, 0, 0; // rgba
+
+    // Red
+    --cdark-red-10: hsla(4, 65, 60, 1);
+    --cdark-red-20: hsla(5, 100, 70, 1);
+    --cdark-red-30: hsla(4, 90, 61, 1);
+    --cdark-red-40: hsla(4, 75, 44, 1);
+
+    --cdark-alpha-red: hsla(350, 84, 63, 0.2);
+
+    // Orange
+    --cdark-orange-10: hsla(25, 72, 68, 1);
+    --cdark-orange-20: hsla(22, 91, 61, 1);
+    --cdark-orange-30: hsla(21, 86, 52, 1);
+    --cdark-orange-40: hsla(14, 80, 41, 1);
+
+    --cdark-alpha-orange: hsla(27, 100, 50, 0.2);
+
+    // Yellow
+    --cdark-yellow-10: hsla(46, 91, 69, 1);
+    --cdark-yellow-20: hsla(47, 100, 46, 1);
+    --cdark-yellow-30: hsla(43, 100, 42, 1);
+    --cdark-yellow-40: hsla(39, 92, 33, 1);
+
+    --cdark-alpha-yellow: hsla(44, 100, 50, 0.2);
+
+    // Green
+    --cdark-green-10: hsla(154, 38, 56, 1);
+    --cdark-green-20: hsla(150, 66, 53, 1);
+    --cdark-green-30: hsla(154, 62, 41, 1);
+    --cdark-green-40: hsla(155, 83, 24, 1);
+
+    --cdark-alpha-green: hsla(74, 69, 44, 0.2);
+
+    // Blue
+    --cdark-blue-10: hsla(199, 39, 56, 1);
+    --cdark-blue-20: hsla(198, 75, 61, 1);
+    --cdark-blue-30: hsla(198, 55, 53, 1);
+    --cdark-blue-40: hsla(208, 77, 40, 1);
+
+    --cdark-alpha-blue: hsla(186, 64, 46, 0.2);
+
+    // Violet
+    --cdark-violet-10: hsla(280, 50, 80, 1);
+    --cdark-violet-20: hsla(267, 68, 75, 1);
+    --cdark-violet-30: hsla(266, 45, 57, 1);
+    --cdark-violet-40: hsla(256, 45, 50, 1);
+
+    --cdark-alpha-violet: hsla(236, 100, 72, 0.2);
+}
