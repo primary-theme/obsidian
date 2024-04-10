@@ -7,7 +7,6 @@ body {
   font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
 }
 
-/*────────── Icons ──────────*/
 /*────────── Primary: Custom Icons ──────────*/
 /*
 UIcons (Rounded Regular)
@@ -123,6 +122,7 @@ svg.sidebar-right,
 svg.snap-to-object,
 svg.uppercase-lowercase-a,
 svg.vault {
+  --icon-size: var(--icon-s) !important;
   background-color: currentColor;
 }
 
@@ -571,60 +571,229 @@ in Classic Light
 © Cecilia May
 
 If you have any questions on this palette,
+would like to adopt it to your
+website/app/custom theme, please read the
+USAGE, LICENSE, and CONTRIBUTION page ↴
+
+
+───────────────────────────────────*/
+.theme-light {
+  color-scheme: light;
+  --color-l-gray-10: hsla(34, 39%, 94%, 1);
+  --color-l-gray-20: hsla(35, 36%, 95%, 1);
+  --color-l-gray-30: hsla(35, 37%, 92%, 1);
+  --color-l-gray-40: hsla(34, 34%, 90%, 1);
+  --color-l-gray-50: hsla(36, 35%, 88%, 1);
+  --color-l-gray-60: hsla(37, 38%, 83%, 1);
+  --color-l-gray-70: hsla(34, 37%, 70%, 1);
+  --color-l-gray-80: hsla(34, 29%, 60%, 1);
+  --color-l-gray-90: hsla(31, 23%, 50%, 1);
+  --color-l-gray-100: hsla(35, 28%, 40%, 1);
+  --color-l-gray-110: hsla(34, 30%, 37%, 1);
+  --color-l-gray-120: hsla(36, 32%, 30%, 1);
+  --color-l-gray-130: hsla(31, 45%, 20%, 1);
+  --color-l-gray-140: hsla(33, 54%, 12%, 1);
+  --color-l-white-rgb: 255, 255, 255;
+  --color-l-black-rgb: 0, 0, 0;
+  --color-l-red-10: hsla(4, 54%, 61%, 1);
+  --color-l-red-20: hsla(4, 72%, 55%, 1);
+  --color-l-red-30: hsla(4, 56%, 48%, 1);
+  --color-l-red-40: hsla(4, 72%, 35%, 1);
+  --color-l-alpha-red: hsla(350, 84, 63, 0.2);
+  --color-l-orange-10: hsla(26, 70%, 63%, 1);
+  --color-l-orange-20: hsla(21, 81%, 59%, 1);
+  --color-l-orange-30: hsla(18, 69%, 50%, 1);
+  --color-l-orange-40: hsla(18, 96%, 35%, 1);
+  --color-l-alpha-orange: hsla(27, 100, 50, 0.2);
+  --color-l-yellow-10: hsla(43, 71%, 67%, 1);
+  --color-l-yellow-20: hsla(43, 83%, 57%, 1);
+  --color-l-yellow-30: hsla(40, 79%, 47%, 1);
+  --color-l-yellow-40: hsla(40, 98%, 36%, 1);
+  --color-l-alpha-yellow: hsla(44, 100, 50, 0.2);
+  --color-l-green-10: hsla(154, 47%, 65%, 1);
+  --color-l-green-20: hsla(154, 52%, 49%, 1);
+  --color-l-green-30: hsla(154, 55%, 39%, 1);
+  --color-l-green-40: hsla(159, 65%, 29%, 1);
+  --color-l-alpha-green: hsla(74, 69, 44, 0.2);
+  --color-l-blue-10: hsla(199, 39%, 56%, 1);
+  --color-l-blue-20: hsla(202, 66%, 46%, 1);
+  --color-l-blue-30: hsla(208, 64%, 39%, 1);
+  --color-l-blue-40: hsla(212, 95%, 25%, 1);
+  --color-l-alpha-blue: hsla(186, 64, 46, 0.2);
+  --color-l-violet-10: hsla(280, 43%, 76%, 1);
+  --color-l-violet-20: hsla(277, 35%, 59%, 1);
+  --color-l-violet-30: hsla(275, 37%, 43%, 1);
+  --color-l-violet-40: hsla(265, 70%, 30%, 1);
+  --color-l-alpha-violet: hsla(236, 100, 72, 0.2);
+}
+
+/*────────── Light Theme Override ──────────*/
+.theme-light {
+  --highlight-mix-blend-mode: darken;
+  --mono-rgb-0: var(--color-l-black-rgb);
+  --mono-rgb-100: var(--color-l-white-rgb);
+  --color-red-rgb: 228, 87, 78;
+  --color-red: hsla(0, 58%, 53%, 1);
+  --color-orange-rgb: 238, 163, 89;
+  --color-orange: hsla(30, 66%, 52%, 1);
+  --color-yellow-rgb: 249, 207, 81;
+  --color-yellow: hsla(42, 80%, 55%, 1);
+  --color-green-rgb: 100, 194, 113;
+  --color-green: hsla(131, 56%, 58%, 1);
+  --color-cyan-rgb: 124, 180, 206;
+  --color-cyan: hsla(178, 43%, 54%, 1);
+  --color-blue-rgb: 99, 156, 192;
+  --color-blue: hsla(206, 57%, 44%, 1);
+  --color-purple-rgb: 139, 113, 185;
+  --color-purple: hsla(250, 48%, 57%, 1);
+  --color-pink-rgb: 224, 108, 138;
+  --color-pink: rgb(199, 112, 132);
+  --accent-h: 31;
+  --accent-s: 23%;
+  --accent-l: 50%;
+  --color-accent-hsl: var(--accent-h),
+                      var(--accent-s),
+                      var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(
+                      calc(var(--accent-h) - 1),
+                      calc(var(--accent-s) * 1.01),
+                      calc(var(--accent-l) * 1.075)
+                      );
+  --color-accent-2: hsl(
+                      calc(var(--accent-h) - 3),
+                      calc(var(--accent-s) * 1.02),
+                      calc(var(--accent-l) * 1.15)
+                      );
+  --color-base-00: var(--color-l-gray-10);
+  --color-base-05: var(--color-l-gray-20);
+  --color-base-10: var(--color-l-gray-30);
+  --color-base-20: var(--color-l-gray-40);
+  --color-base-25: var(--color-l-gray-50);
+  --color-base-30: var(--color-l-gray-60);
+  --color-base-35: var(--color-l-gray-70);
+  --color-base-40: var(--color-l-gray-80);
+  --color-base-50: var(--color-l-gray-90);
+  --color-base-60: var(--color-l-gray-100);
+  --color-base-70: var(--color-l-gray-120);
+  --color-base-100: var(--color-l-gray-140);
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
+              0px 3.4px 6.7px rgba(0, 0, 0, .042),
+              0px 15px 30px rgba(0, 0, 0, .07);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+              0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+              0px 30px 90px rgba(0, 0, 0, 0.2);
+  --background-primary: var(--color-l-gray-20);
+  --background-primary-alt: var(--color-l-gray-30);
+  --background-secondary: var(--color-l-gray-40);
+  --background-secondary-alt: var(--color-l-gray-40);
+  --interactive-normal: var(--color-base-00);
+  --interactive-hover: var(--color-base-10);
+  --interactive-accent-hsl: var(--color-accent-hsl);
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent-2);
+  --drag-ghost-background: var(--color-l-gray-130);
+  --drag-ghost-text-color: var(--color-l-gray-20);
+  --background-modifier-hover: var(--color-l-gray-30);
+  --background-modifier-active-hover: var(--color-l-gray-60);
+  --background-modifier-border: var(--color-l-gray-60);
+  --background-modifier-border-hover: var(--color-l-gray-70);
+  --background-modifier-border-focus: var(--color-l-gray-60);
+  --background-modifier-error-rgb: var(--color-red-rgb);
+  --background-modifier-error: var(--color-l-red-20);
+  --background-modifier-error-hover: var(--color-l-red-30);
+  --background-modifier-success-rgb: var(--color-green-rgb);
+  --background-modifier-success: var(--color-l-green-20);
+  --background-modifier-message: rgba(0, 0, 0, 0.9);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-cover: rgba(220, 220, 220, 0.4);
+  --background-modifier-form-field: var(--color-l-gray-30);
+  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
+                  inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                  0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+  --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
+                          inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                          0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08),
+                          0px 3px 4px 1px rgba(var(--color-l-black-rgb), 0.07);
+  --text-normal: var(--color-l-gray-130);
+  --text-muted: var(--color-l-gray-90);
+  --text-faint: var(--color-l-gray-70);
+  --text-on-accent: var(--color-l-gray-10);
+  --text-on-accent-inverted: var(--color-l-gray-140);
+  --text-error: var(--color-l-red-30);
+  --text-warning: var(--color-l-orange-30);
+  --text-success: var(--color-l-green-30);
+  --text-selection: var(--color-l-gray-60);
+  --text-highlight-bg-rgb: var(--color-yellow-rgb);
+  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+}
+
+/*───────────────────────────────────
+
+✦ P R I M A R Y ✦
+in Classic Dark
+© Cecilia May
+
+If you have any questions on this palette,
 would like to adopt it to your website,
 please READ the USAGE, LICENSE,
 and CONTRIBUTION page ↴
 
 
 ───────────────────────────────────*/
-.theme-light.pmr-clight {
-  --clight-gray-10: ;
-  --clight-gray-20: ;
-  --clight-gray-30: ;
-  --clight-gray-40: ;
-  --clight-gray-50: ;
-  --clight-gray-60: ;
-  --clight-gray-70: ;
-  --clight-gray-80: ;
-  --clight-gray-90: ;
-  --clight-gray-100: ;
-  --clight-gray-110: ;
-  --clight-gray-120: ;
-  --clight-gray-130: ;
-  --clight-gray-140: ;
-  --clight-red-10: ;
-  --clight-red-20: ;
-  --clight-red-30: ;
-  --clight-red-40: ;
-  --clight-alpha-red: ;
-  --clight-orange-10: ;
-  --clight-orange-20: ;
-  --clight-orange-30: ;
-  --clight-orange-40: ;
-  --clight-alpha-orange: ;
-  --clight-yellow-10: ;
-  --clight-yellow-20: ;
-  --clight-yellow-30: ;
-  --clight-yellow-40: ;
-  --clight-alpha-yellow: ;
-  --clight-green-10: ;
-  --clight-green-20: ;
-  --clight-green-30: ;
-  --clight-green-40: ;
-  --clight-alpha-green: ;
-  --clight-blue-10: ;
-  --clight-blue-20: ;
-  --clight-blue-30: ;
-  --clight-blue-40: ;
-  --clight-alpha-blue: ;
-  --clight-violet-10: ;
-  --clight-violet-20: ;
-  --clight-violet-30: ;
-  --clight-violet-40: ;
-  --clight-alpha-violet: ;
+.theme-dark {
+  color-scheme: dark;
+  --cdark-gray-10: hsla(32, 63, 90, 1);
+  --cdark-gray-20: hsla(34, 49, 80, 1);
+  --cdark-gray-30: hsla(34, 31, 68, 1);
+  --cdark-gray-40: hsla(35, 27, 55, 1);
+  --cdark-gray-50: hsla(34, 24, 40, 1);
+  --cdark-gray-60: hsla(33, 27, 28, 1);
+  --cdark-gray-70: hsla(31, 25, 20, 1);
+  --cdark-gray-80: hsla(28, 22, 17, 1);
+  --cdark-gray-90: hsla(33, 18, 15, 1);
+  --cdark-gray-100: hsla(31, 18, 14, 1);
+  --cdark-gray-110: hsla(28, 14, 13, 1);
+  --cdark-gray-120: hsla(28, 16, 12, 1);
+  --cdark-gray-130: hsla(24, 18, 9, 1);
+  --cdark-gray-140: hsla(32, 21, 8, 1);
+  --cdark-white: 255, 255, 255;
+  --cdark-black: 0, 0, 0;
+  --cdark-red-10: hsla(4, 65, 60, 1);
+  --cdark-red-20: hsla(5, 100, 70, 1);
+  --cdark-red-30: hsla(4, 90, 61, 1);
+  --cdark-red-40: hsla(4, 75, 44, 1);
+  --cdark-alpha-red: hsla(350, 84, 63, 0.2);
+  --cdark-orange-10: hsla(25, 72, 68, 1);
+  --cdark-orange-20: hsla(22, 91, 61, 1);
+  --cdark-orange-30: hsla(21, 86, 52, 1);
+  --cdark-orange-40: hsla(14, 80, 41, 1);
+  --cdark-alpha-orange: hsla(27, 100, 50, 0.2);
+  --cdark-yellow-10: hsla(46, 91, 69, 1);
+  --cdark-yellow-20: hsla(47, 100, 46, 1);
+  --cdark-yellow-30: hsla(43, 100, 42, 1);
+  --cdark-yellow-40: hsla(39, 92, 33, 1);
+  --cdark-alpha-yellow: hsla(44, 100, 50, 0.2);
+  --cdark-green-10: hsla(154, 38, 56, 1);
+  --cdark-green-20: hsla(150, 66, 53, 1);
+  --cdark-green-30: hsla(154, 62, 41, 1);
+  --cdark-green-40: hsla(155, 83, 24, 1);
+  --cdark-alpha-green: hsla(74, 69, 44, 0.2);
+  --cdark-blue-10: hsla(199, 39, 56, 1);
+  --cdark-blue-20: hsla(198, 75, 61, 1);
+  --cdark-blue-30: hsla(198, 55, 53, 1);
+  --cdark-blue-40: hsla(208, 77, 40, 1);
+  --cdark-alpha-blue: hsla(186, 64, 46, 0.2);
+  --cdark-violet-10: hsla(280, 50, 80, 1);
+  --cdark-violet-20: hsla(267, 68, 75, 1);
+  --cdark-violet-30: hsla(266, 45, 57, 1);
+  --cdark-violet-40: hsla(256, 45, 50, 1);
+  --cdark-alpha-violet: hsla(236, 100, 72, 0.2);
 }
 
-/*────────── Dark Theme ──────────*/
+/*────────── Modal: Settings ──────────*/
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
 .workspace-tab-header[data-type=calendar] svg.lucide-calendar-check {
   background-color: currentColor;
