@@ -1,5 +1,5 @@
 /*────────── Typography ──────────*/
-// Font Family
+
 body {
     --font-interface-theme: 'Inter';
     --font-text-theme: 'Inter';
@@ -18,4 +18,6 @@ body {
         "cv06",
         "cv08",
         "cv11";
+
+    --bold-weight: 600;
 }

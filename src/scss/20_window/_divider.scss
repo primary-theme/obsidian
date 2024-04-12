@@ -1,0 +1,11 @@
+/*────────── Divider ──────────*/
+
+.theme-light {
+    --divider-color: var(--background-modifier-border);
+    --divider-color-hover: var(--background-modifier-border-hover);
+}
+
+.theme-dark {
+    --divider-color: var(--background-modifier-border);
+    --divider-color-hover: var(--background-modifier-border-hover);
+}

@@ -1,0 +1,111 @@
+/*────────── Ribbon ──────────*/
+
+.workspace-ribbon {
+    // Classic Light Theme
+    .theme-light & {
+        & .side-dock-actions,
+        & .side-dock-settings {
+            // General (at rest, on hover, and when active)
+            .clickable-icon {
+                color: var(--color-l-gray-70);
+                
+                &:hover {
+                    background: transparent;
+                    cursor: pointer;
+                }
+
+                &.is-active {
+                    background: transparent;
+                }
+
+                // Alternating Colors (on hover, on pressing, and when active)
+                &:nth-child(3n+1) {
+                    &.is-active,
+                    &:hover {
+                        color: var(--color-l-yellow-30);
+                    }
+
+                    &:active {
+                        color: var(--color-l-yellow-10);
+                    }
+                }
+
+                &:nth-child(3n+2) {
+                    &.is-active,
+                    &:hover {
+                        color: var(--color-l-red-30);
+                    }
+
+                    &:active {
+                        color: var(--color-l-red-10);
+                    }
+                }
+
+                &:nth-child(3n+3) {
+                    &.is-active,
+                    &:hover {
+                        color: var(--color-l-blue-30);
+                    }
+
+                    &:active {
+                        color: var(--color-l-blue-10);
+                    }
+                }
+            }
+        }
+    }
+
+    // Classic Dark Theme
+    .theme-dark & {
+        & .side-dock-actions,
+        & .side-dock-settings {
+            // General (at rest, on hover, and when active)
+            & .clickable-icon {
+                color:var(--color-d-gray-60);
+
+                &:hover {
+                    background: transparent;
+                    cursor: pointer;
+                }
+
+                &.is-active {
+                    background: transparent;
+                }
+
+                // Alternating Colors (on hover, on pressing, and when active)
+                &:nth-child(3n+1) {
+                    &.is-active,
+                    &:hover {
+                        color: var(--color-d-yellow-20);
+                    }
+
+                    &:active {
+                        color: var(--color-d-yellow-40);
+                    }
+                }
+
+                &:nth-child(3n+2) {
+                    &.is-active,
+                    &:hover {
+                        color: var(--color-d-red-20);
+                    }
+
+                    &:active {
+                        color: var(--color-d-red-40);
+                    }
+                }
+
+                &:nth-child(3n+3) {
+                    &.is-active,
+                    &:hover {
+                        color: var(--color-d-blue-20);
+                    }
+
+                    &:active {
+                        color: var(--color-d-blue-40);
+                    }
+                }
+            }
+        }
+    }
+}

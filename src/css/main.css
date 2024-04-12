@@ -5,6 +5,387 @@ body {
   --font-text-theme: "Inter";
   --font-monospace-theme: "Cascadia Code";
   font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
+  --bold-weight: 600;
+}
+
+/*────────── Shape ──────────*/
+/* 
+Variables for
+    sizing, container
+    padding, widths
+    heights, radius
+*/
+body {
+  --radius-xs: 2px;
+}
+
+/*───────────────────────────────────
+
+✦ P R I M A R Y ✦
+in Classic Light
+© Cecilia May
+
+If you have any questions on this palette,
+would like to adopt it to your
+website/app/custom theme, please read the
+USAGE, LICENSE, and CONTRIBUTION page ↴
+
+
+───────────────────────────────────*/
+.theme-light {
+  color-scheme: light;
+  --color-l-gray-10: hsla(34, 39%, 94%, 1);
+  --color-l-gray-20: hsla(35, 36%, 95%, 1);
+  --color-l-gray-30: hsla(35, 37%, 92%, 1);
+  --color-l-gray-40: hsla(34, 34%, 90%, 1);
+  --color-l-gray-50: hsla(36, 35%, 88%, 1);
+  --color-l-gray-60: hsla(37, 38%, 83%, 1);
+  --color-l-gray-70: hsla(34, 37%, 70%, 1);
+  --color-l-gray-80: hsla(34, 29%, 60%, 1);
+  --color-l-gray-90: hsla(31, 23%, 50%, 1);
+  --color-l-gray-100: hsla(35, 28%, 40%, 1);
+  --color-l-gray-110: hsla(34, 30%, 37%, 1);
+  --color-l-gray-120: hsla(36, 32%, 30%, 1);
+  --color-l-gray-130: hsla(31, 45%, 20%, 1);
+  --color-l-gray-140: hsla(33, 54%, 12%, 1);
+  --color-l-white-rgb: 255, 255, 255;
+  --color-l-gray-rgb: 100, 100, 100;
+  --color-l-black-rgb: 0, 0, 0;
+  --color-l-red-10: hsla(4, 54%, 61%, 1);
+  --color-l-red-20: hsla(4, 72%, 55%, 1);
+  --color-l-red-30: hsla(4, 56%, 48%, 1);
+  --color-l-red-40: hsla(4, 72%, 35%, 1);
+  --color-l-alpha-red: hsla(350, 84, 63, 0.2);
+  --color-l-orange-10: hsla(26, 70%, 63%, 1);
+  --color-l-orange-20: hsla(21, 81%, 59%, 1);
+  --color-l-orange-30: hsla(18, 69%, 50%, 1);
+  --color-l-orange-40: hsla(18, 96%, 35%, 1);
+  --color-l-alpha-orange: hsla(27, 100, 50, 0.2);
+  --color-l-yellow-10: hsla(43, 71%, 67%, 1);
+  --color-l-yellow-20: hsla(43, 83%, 57%, 1);
+  --color-l-yellow-30: hsla(40, 79%, 47%, 1);
+  --color-l-yellow-40: hsla(40, 98%, 36%, 1);
+  --color-l-alpha-yellow: hsla(44, 100, 50, 0.2);
+  --color-l-green-10: hsla(154, 47%, 65%, 1);
+  --color-l-green-20: hsla(154, 52%, 49%, 1);
+  --color-l-green-30: hsla(154, 55%, 39%, 1);
+  --color-l-green-40: hsla(159, 65%, 29%, 1);
+  --color-l-alpha-green: hsla(74, 69, 44, 0.2);
+  --color-l-blue-10: hsla(199, 39%, 56%, 1);
+  --color-l-blue-20: hsla(202, 66%, 46%, 1);
+  --color-l-blue-30: hsla(208, 64%, 39%, 1);
+  --color-l-blue-40: hsla(212, 95%, 25%, 1);
+  --color-l-alpha-blue: hsla(186, 64, 46, 0.2);
+  --color-l-violet-10: hsla(280, 43%, 76%, 1);
+  --color-l-violet-20: hsla(277, 35%, 59%, 1);
+  --color-l-violet-30: hsla(275, 37%, 43%, 1);
+  --color-l-violet-40: hsla(265, 70%, 30%, 1);
+  --color-l-alpha-violet: hsla(236, 100, 72, 0.2);
+}
+
+/*────────── Light Theme Override ──────────*/
+/*
+    These variables are from the Obsidian
+    app.css. You can go to Primary for Obsidian's
+    documentation to read more on how to alter,
+    contribute, and customize this part to
+    your own liking.
+*/
+.theme-light {
+  --highlight-mix-blend-mode: darken;
+  --mono-rgb-0: var(--color-l-black-rgb);
+  --mono-rgb-100: var(--color-l-gray-rgb);
+  --color-red-rgb: 228, 87, 78;
+  --color-red: hsla(0, 58%, 53%, 1);
+  --color-orange-rgb: 238, 163, 89;
+  --color-orange: hsla(30, 66%, 52%, 1);
+  --color-yellow-rgb: 249, 207, 81;
+  --color-yellow: hsla(42, 80%, 55%, 1);
+  --color-green-rgb: 100, 194, 113;
+  --color-green: hsla(131, 56%, 58%, 1);
+  --color-cyan-rgb: 124, 180, 206;
+  --color-cyan: hsla(178, 43%, 54%, 1);
+  --color-blue-rgb: 99, 156, 192;
+  --color-blue: hsla(206, 57%, 44%, 1);
+  --color-purple-rgb: 139, 113, 185;
+  --color-purple: hsla(250, 48%, 57%, 1);
+  --color-pink-rgb: 224, 108, 138;
+  --color-pink: hsla(346, 44%, 61%, 1);
+  --accent-h: 31;
+  --accent-s: 23%;
+  --accent-l: 50%;
+  --color-accent-hsl: var(--accent-h),
+                      var(--accent-s),
+                      var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(
+                      calc(var(--accent-h) - 1),
+                      calc(var(--accent-s) * 1.01),
+                      calc(var(--accent-l) * 1.075)
+                      );
+  --color-accent-2: hsl(
+                      calc(var(--accent-h) - 3),
+                      calc(var(--accent-s) * 1.02),
+                      calc(var(--accent-l) * 1.15)
+                      );
+  --color-base-00: var(--color-l-gray-10);
+  --color-base-05: var(--color-l-gray-20);
+  --color-base-10: var(--color-l-gray-30);
+  --color-base-20: var(--color-l-gray-40);
+  --color-base-25: var(--color-l-gray-50);
+  --color-base-30: var(--color-l-gray-60);
+  --color-base-35: var(--color-l-gray-70);
+  --color-base-40: var(--color-l-gray-80);
+  --color-base-50: var(--color-l-gray-90);
+  --color-base-60: var(--color-l-gray-100);
+  --color-base-70: var(--color-l-gray-120);
+  --color-base-100: var(--color-l-gray-140);
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
+              0px 3.4px 6.7px rgba(0, 0, 0, .042),
+              0px 15px 30px rgba(0, 0, 0, .07);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+              0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+              0px 30px 90px rgba(0, 0, 0, 0.2);
+  --background-primary: var(--color-l-gray-20);
+  --background-primary-alt: var(--color-l-gray-30);
+  --background-secondary: var(--color-l-gray-40);
+  --background-secondary-alt: var(--color-l-gray-40);
+  --interactive-normal: var(--color-l-gray-10);
+  --interactive-hover: var(--color-l-gray-30);
+  --interactive-accent-hsl: var(--color-accent-hsl);
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent-2);
+  --background-modifier-hover: var(--color-l-gray-30);
+  --background-modifier-active-hover: var(--color-l-gray-60);
+  --background-modifier-border: var(--color-l-gray-60);
+  --background-modifier-border-hover: var(--color-l-gray-70);
+  --background-modifier-border-focus: var(--color-l-gray-60);
+  --background-modifier-error-rgb: var(--color-red-rgb);
+  --background-modifier-error: var(--color-l-red-20);
+  --background-modifier-error-hover: var(--color-l-red-30);
+  --background-modifier-success-rgb: var(--color-green-rgb);
+  --background-modifier-success: var(--color-l-green-20);
+  --background-modifier-message: var(--color-l-gray-130);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-cover: rgba(220, 220, 220, 0.4);
+  --background-modifier-form-field: var(--color-l-gray-30);
+  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
+                  inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                  0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+  --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
+                          inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                          0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08),
+                          0px 3px 4px 1px rgba(var(--color-l-black-rgb), 0.07);
+  --text-normal: var(--color-l-gray-130);
+  --text-muted: var(--color-l-gray-110);
+  --text-faint: var(--color-l-gray-90);
+  --text-on-accent: var(--color-l-gray-10);
+  --text-on-accent-inverted: var(--color-l-gray-140);
+  --text-error: var(--color-l-red-30);
+  --text-warning: var(--color-l-orange-30);
+  --text-success: var(--color-l-green-30);
+  --text-selection: var(--color-l-gray-60);
+  --text-highlight-bg-rgb: var(--color-yellow-rgb);
+  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+}
+
+/*───────────────────────────────────
+
+✦ P R I M A R Y ✦
+in Classic Dark
+© Cecilia May
+
+If you have any questions on this palette,
+would like to adopt it to your website,
+please READ the USAGE, LICENSE,
+and CONTRIBUTION page ↴
+
+
+───────────────────────────────────*/
+.theme-dark {
+  color-scheme: dark;
+  --color-d-gray-10: hsla(32, 63%, 90%, 1);
+  --color-d-gray-20: hsla(34, 49%, 80%, 1);
+  --color-d-gray-30: hsla(34, 31%, 68%, 1);
+  --color-d-gray-40: hsla(35, 27%, 55%, 1);
+  --color-d-gray-50: hsla(34, 24%, 40%, 1);
+  --color-d-gray-60: hsla(33, 27%, 28%, 1);
+  --color-d-gray-70: hsla(31, 25%, 20%, 1);
+  --color-d-gray-80: hsla(28, 22%, 17%, 1);
+  --color-d-gray-90: hsla(33, 20%, 15%, 1);
+  --color-d-gray-100: hsla(31, 18%, 14%, 1);
+  --color-d-gray-110: hsla(28, 16%, 13%, 1);
+  --color-d-gray-120: hsla(28, 16%, 12%, 1);
+  --color-d-gray-130: hsla(24, 18%, 9%, 1);
+  --color-d-gray-140: hsla(32, 21%, 8%, 1);
+  --color-d-white-rgb: 255, 255, 255;
+  --color-d-gray-rgb: 100, 100, 100;
+  --color-d-black-rgb: 0, 0, 0;
+  --color-d-red-10: hsla(4, 65%, 60%, 1);
+  --color-d-red-20: hsla(5, 100%, 70%, 1);
+  --color-d-red-30: hsla(4, 90%, 61%, 1);
+  --color-d-red-40: hsla(4, 75%, 44%, 1);
+  --color-d-alpha-red: hsla(350, 84%, 63%, 0.2);
+  --color-d-orange-10: hsla(25, 72%, 68%, 1);
+  --color-d-orange-20: hsla(22, 91%, 61%, 1);
+  --color-d-orange-30: hsla(21, 86%, 52%, 1);
+  --color-d-orange-40: hsla(14, 80%, 41%, 1);
+  --color-d-alpha-orange: hsla(27, 100%, 50%, 0.2);
+  --color-d-yellow-10: hsla(46, 91%, 69%, 1);
+  --color-d-yellow-20: hsla(47, 100%, 46%, 1);
+  --color-d-yellow-30: hsla(43, 100%, 42%, 1);
+  --color-d-yellow-40: hsla(39, 92%, 33%, 1);
+  --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
+  --color-d-green-10: hsla(154, 38%, 56%, 1);
+  --color-d-green-20: hsla(150, 66%, 53%, 1);
+  --color-d-green-30: hsla(154, 62%, 41%, 1);
+  --color-d-green-40: hsla(155, 83%, 24%, 1);
+  --color-d-alpha-green: hsla(74, 69%, 44%, 0.2);
+  --color-d-blue-10: hsla(199, 39%, 56%, 1);
+  --color-d-blue-20: hsla(198, 75%, 61%, 1);
+  --color-d-blue-30: hsla(198, 55%, 53%, 1);
+  --color-d-blue-40: hsla(208, 77%, 40%, 1);
+  --color-d-alpha-blue: hsla(186, 64%, 46%, 0.2);
+  --color-d-violet-10: hsla(280, 50%, 80%, 1);
+  --color-d-violet-20: hsla(267, 68%, 75%, 1);
+  --color-d-violet-30: hsla(266, 45%, 57%, 1);
+  --color-d-violet-40: hsla(256, 45%, 50%, 1);
+  --color-d-alpha-violet: hsla(236, 100%, 72%, 0.2);
+}
+
+/*────────── Dark Theme Override ──────────*/
+/*
+    These variables are from the Obsidian
+    app.css. You can go to Primary for Obsidian's
+    documentation to read more on how to alter,
+    contribute, and customize this part to
+    your own liking.
+*/
+.theme-dark {
+  --highlight-mix-blend-mode: lighten;
+  --mono-rgb-0: var(--color-d-black-rgb);
+  --mono-rgb-100: var(--color-d-white-rgb);
+  --color-red-rgb: 228, 87, 78;
+  --color-red: hsla(0, 58%, 53%, 1);
+  --color-orange-rgb: 238, 163, 89;
+  --color-orange: hsla(30, 66%, 52%, 1);
+  --color-yellow-rgb: 249, 207, 81;
+  --color-yellow: hsla(42, 80%, 55%, 1);
+  --color-green-rgb: 100, 194, 113;
+  --color-green: hsla(131, 56%, 58%, 1);
+  --color-cyan-rgb: 124, 180, 206;
+  --color-cyan: hsla(178, 43%, 54%, 1);
+  --color-blue-rgb: 99, 156, 192;
+  --color-blue: hsla(206, 57%, 44%, 1);
+  --color-purple-rgb: 139, 113, 185;
+  --color-purple: hsla(250, 48%, 57%, 1);
+  --color-pink-rgb: 224, 108, 138;
+  --color-pink: hsla(346, 44%, 61%, 1);
+  --accent-h: 33;
+  --accent-s: 27%;
+  --accent-l: 28%;
+  --color-accent-hsl: var(--accent-h),
+                      var(--accent-s),
+                      var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(
+                      calc(var(--accent-h) - 3),
+                      calc(var(--accent-s) * 1.02),
+                      calc(var(--accent-l) * 1.15)
+                      );
+  --color-accent-2: hsl(
+                      calc(var(--accent-h) - 5),
+                      calc(var(--accent-s) * 1.05),
+                      calc(var(--accent-l) * 1.29)
+                      );
+  --color-base-00: var(--color-d-gray-140);
+  --color-base-05: var(--color-d-gray-120);
+  --color-base-10: var(--color-d-gray-100);
+  --color-base-20: var(--color-d-gray-90);
+  --color-base-25: var(--color-d-gray-80);
+  --color-base-30: var(--color-d-gray-70);
+  --color-base-35: var(--color-d-gray-60);
+  --color-base-40: var(--color-d-gray-50);
+  --color-base-50: var(--color-d-gray-40);
+  --color-base-60: var(--color-d-gray-30);
+  --color-base-70: var(--color-d-gray-20);
+  --color-base-100: var(--color-d-gray-10);
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
+              0px 3.4px 6.7px rgba(0, 0, 0, .042),
+              0px 15px 30px rgba(0, 0, 0, .07);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+              0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+              0px 30px 90px rgba(0, 0, 0, 0.2);
+  --background-primary: var(--color-d-gray-90);
+  --background-primary-alt: var(--color-d-gray-100);
+  --background-secondary: var(--color-d-gray-120);
+  --background-secondary-alt: var(--color-d-gray-120);
+  --interactive-normal: var(--color-d-gray-120);
+  --interactive-hover: var(--color-d-gray-130);
+  --interactive-accent-hsl: var(--color-accent-hsl);
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent-2);
+  --background-modifier-hover: var(--color-d-gray-100);
+  --background-modifier-active-hover: var(--color-d-gray-70);
+  --background-modifier-border: var(--color-d-gray-80);
+  --background-modifier-border-hover: var(--color-d-gray-60);
+  --background-modifier-border-focus: var(--color-d-gray-80);
+  --background-modifier-error-rgb: var(--color-red-rgb);
+  --background-modifier-error: var(--color-d-red-40);
+  --background-modifier-error-hover: var(--color-d-red-30);
+  --background-modifier-success-rgb: var(--color-green-rgb);
+  --background-modifier-success: var(--color-d-green-20);
+  --background-modifier-message: var(--color-d-gray-130);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --background-modifier-form-field: var(--color-d-gray-130);
+  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
+                  inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
+                  0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
+  --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
+                          inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
+                          0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38),
+                          0px 3px 4px 1px rgba(var(--color-d-black-rgb), 0.37);
+  --text-normal: var(--color-d-gray-20);
+  --text-muted: var(--color-d-gray-40);
+  --text-faint: var(--color-d-gray-60);
+  --text-on-accent: var(--color-d-gray-10);
+  --text-on-accent-inverted: var(--color-d-gray-140);
+  --text-error: var(--color-d-red-30);
+  --text-warning: var(--color-d-orange-30);
+  --text-success: var(--color-d-green-30);
+  --text-selection: var(--color-d-gray-70);
+  --text-highlight-bg-rgb: var(--color-yellow-rgb);
+  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+}
+
+/*────────── Icons ──────────*/
+body {
+  --clickable-icon-radius: var(--radius-xs);
+}
+
+.theme-light {
+  --icon-color: var(--color-l-gray-80);
+  --icon-opacity: 1;
+  --icon-color-hover: var(--color-l-gray-90);
+  --icon-opacity-hover: 1;
+  --icon-color-focused: var(--color-l-gray-120);
+  --icon-color-active: var(--color-l-gray-120);
+  --icon-opacity-active: 1;
+}
+
+.theme-dark {
+  --icon-color: var(--color-d-gray-60);
+  --icon-opacity: 1;
+  --icon-color-hover: var(--color-d-gray-50);
+  --icon-opacity-hover: 1;
+  --icon-color-focused: var(--color-d-gray-40);
+  --icon-color-active: var(--color-d-gray-40);
+  --icon-opacity-active: 1;
 }
 
 /*────────── Primary: Custom Icons ──────────*/
@@ -564,233 +945,73 @@ svg.vault {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' data-name='Layer 1' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='M19,2h-1V1c0-.552-.447-1-1-1s-1,.448-1,1v1H8V1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h4c.553,0,1-.448,1-1s-.447-1-1-1H5c-1.654,0-3-1.346-3-3V10H23c.553,0,1-.448,1-1v-2c0-2.757-2.243-5-5-5Zm3,6H2v-1c0-1.654,1.346-3,3-3h14c1.654,0,3,1.346,3,3v1Zm-3.121,4.879l-5.707,5.707c-.756,.755-1.172,1.76-1.172,2.828v1.586c0,.552,.447,1,1,1h1.586c1.068,0,2.073-.417,2.828-1.172l5.707-5.707c.566-.567,.879-1.32,.879-2.122s-.313-1.555-.879-2.121c-1.17-1.17-3.072-1.17-4.242,0Zm2.828,2.828l-5.707,5.707c-.378,.378-.88,.586-1.414,.586h-.586v-.586c0-.526,.214-1.042,.586-1.414l5.707-5.707c.391-.39,1.023-.39,1.414,0,.189,.188,.293,.439,.293,.707s-.104,.518-.293,.707Z'/%3E%3C/svg%3E%0A");
 }
 
-/*───────────────────────────────────
-
-✦ P R I M A R Y ✦
-in Classic Light
-© Cecilia May
-
-If you have any questions on this palette,
-would like to adopt it to your
-website/app/custom theme, please read the
-USAGE, LICENSE, and CONTRIBUTION page ↴
-
-
-───────────────────────────────────*/
+/*────────── Divider ──────────*/
 .theme-light {
-  color-scheme: light;
-  --color-l-gray-10: hsla(34, 39%, 94%, 1);
-  --color-l-gray-20: hsla(35, 36%, 95%, 1);
-  --color-l-gray-30: hsla(35, 37%, 92%, 1);
-  --color-l-gray-40: hsla(34, 34%, 90%, 1);
-  --color-l-gray-50: hsla(36, 35%, 88%, 1);
-  --color-l-gray-60: hsla(37, 38%, 83%, 1);
-  --color-l-gray-70: hsla(34, 37%, 70%, 1);
-  --color-l-gray-80: hsla(34, 29%, 60%, 1);
-  --color-l-gray-90: hsla(31, 23%, 50%, 1);
-  --color-l-gray-100: hsla(35, 28%, 40%, 1);
-  --color-l-gray-110: hsla(34, 30%, 37%, 1);
-  --color-l-gray-120: hsla(36, 32%, 30%, 1);
-  --color-l-gray-130: hsla(31, 45%, 20%, 1);
-  --color-l-gray-140: hsla(33, 54%, 12%, 1);
-  --color-l-white-rgb: 255, 255, 255;
-  --color-l-black-rgb: 0, 0, 0;
-  --color-l-red-10: hsla(4, 54%, 61%, 1);
-  --color-l-red-20: hsla(4, 72%, 55%, 1);
-  --color-l-red-30: hsla(4, 56%, 48%, 1);
-  --color-l-red-40: hsla(4, 72%, 35%, 1);
-  --color-l-alpha-red: hsla(350, 84, 63, 0.2);
-  --color-l-orange-10: hsla(26, 70%, 63%, 1);
-  --color-l-orange-20: hsla(21, 81%, 59%, 1);
-  --color-l-orange-30: hsla(18, 69%, 50%, 1);
-  --color-l-orange-40: hsla(18, 96%, 35%, 1);
-  --color-l-alpha-orange: hsla(27, 100, 50, 0.2);
-  --color-l-yellow-10: hsla(43, 71%, 67%, 1);
-  --color-l-yellow-20: hsla(43, 83%, 57%, 1);
-  --color-l-yellow-30: hsla(40, 79%, 47%, 1);
-  --color-l-yellow-40: hsla(40, 98%, 36%, 1);
-  --color-l-alpha-yellow: hsla(44, 100, 50, 0.2);
-  --color-l-green-10: hsla(154, 47%, 65%, 1);
-  --color-l-green-20: hsla(154, 52%, 49%, 1);
-  --color-l-green-30: hsla(154, 55%, 39%, 1);
-  --color-l-green-40: hsla(159, 65%, 29%, 1);
-  --color-l-alpha-green: hsla(74, 69, 44, 0.2);
-  --color-l-blue-10: hsla(199, 39%, 56%, 1);
-  --color-l-blue-20: hsla(202, 66%, 46%, 1);
-  --color-l-blue-30: hsla(208, 64%, 39%, 1);
-  --color-l-blue-40: hsla(212, 95%, 25%, 1);
-  --color-l-alpha-blue: hsla(186, 64, 46, 0.2);
-  --color-l-violet-10: hsla(280, 43%, 76%, 1);
-  --color-l-violet-20: hsla(277, 35%, 59%, 1);
-  --color-l-violet-30: hsla(275, 37%, 43%, 1);
-  --color-l-violet-40: hsla(265, 70%, 30%, 1);
-  --color-l-alpha-violet: hsla(236, 100, 72, 0.2);
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--background-modifier-border-hover);
 }
 
-/*────────── Light Theme Override ──────────*/
-.theme-light {
-  --highlight-mix-blend-mode: darken;
-  --mono-rgb-0: var(--color-l-black-rgb);
-  --mono-rgb-100: var(--color-l-white-rgb);
-  --color-red-rgb: 228, 87, 78;
-  --color-red: hsla(0, 58%, 53%, 1);
-  --color-orange-rgb: 238, 163, 89;
-  --color-orange: hsla(30, 66%, 52%, 1);
-  --color-yellow-rgb: 249, 207, 81;
-  --color-yellow: hsla(42, 80%, 55%, 1);
-  --color-green-rgb: 100, 194, 113;
-  --color-green: hsla(131, 56%, 58%, 1);
-  --color-cyan-rgb: 124, 180, 206;
-  --color-cyan: hsla(178, 43%, 54%, 1);
-  --color-blue-rgb: 99, 156, 192;
-  --color-blue: hsla(206, 57%, 44%, 1);
-  --color-purple-rgb: 139, 113, 185;
-  --color-purple: hsla(250, 48%, 57%, 1);
-  --color-pink-rgb: 224, 108, 138;
-  --color-pink: rgb(199, 112, 132);
-  --accent-h: 31;
-  --accent-s: 23%;
-  --accent-l: 50%;
-  --color-accent-hsl: var(--accent-h),
-                      var(--accent-s),
-                      var(--accent-l);
-  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(
-                      calc(var(--accent-h) - 1),
-                      calc(var(--accent-s) * 1.01),
-                      calc(var(--accent-l) * 1.075)
-                      );
-  --color-accent-2: hsl(
-                      calc(var(--accent-h) - 3),
-                      calc(var(--accent-s) * 1.02),
-                      calc(var(--accent-l) * 1.15)
-                      );
-  --color-base-00: var(--color-l-gray-10);
-  --color-base-05: var(--color-l-gray-20);
-  --color-base-10: var(--color-l-gray-30);
-  --color-base-20: var(--color-l-gray-40);
-  --color-base-25: var(--color-l-gray-50);
-  --color-base-30: var(--color-l-gray-60);
-  --color-base-35: var(--color-l-gray-70);
-  --color-base-40: var(--color-l-gray-80);
-  --color-base-50: var(--color-l-gray-90);
-  --color-base-60: var(--color-l-gray-100);
-  --color-base-70: var(--color-l-gray-120);
-  --color-base-100: var(--color-l-gray-140);
-  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
-              0px 3.4px 6.7px rgba(0, 0, 0, .042),
-              0px 15px 30px rgba(0, 0, 0, .07);
-  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
-              0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
-              0px 30px 90px rgba(0, 0, 0, 0.2);
-  --background-primary: var(--color-l-gray-20);
-  --background-primary-alt: var(--color-l-gray-30);
-  --background-secondary: var(--color-l-gray-40);
-  --background-secondary-alt: var(--color-l-gray-40);
-  --interactive-normal: var(--color-base-00);
-  --interactive-hover: var(--color-base-10);
-  --interactive-accent-hsl: var(--color-accent-hsl);
-  --interactive-accent: var(--color-accent-1);
-  --interactive-accent-hover: var(--color-accent-2);
-  --drag-ghost-background: var(--color-l-gray-130);
-  --drag-ghost-text-color: var(--color-l-gray-20);
-  --background-modifier-hover: var(--color-l-gray-30);
-  --background-modifier-active-hover: var(--color-l-gray-60);
-  --background-modifier-border: var(--color-l-gray-60);
-  --background-modifier-border-hover: var(--color-l-gray-70);
-  --background-modifier-border-focus: var(--color-l-gray-60);
-  --background-modifier-error-rgb: var(--color-red-rgb);
-  --background-modifier-error: var(--color-l-red-20);
-  --background-modifier-error-hover: var(--color-l-red-30);
-  --background-modifier-success-rgb: var(--color-green-rgb);
-  --background-modifier-success: var(--color-l-green-20);
-  --background-modifier-message: rgba(0, 0, 0, 0.9);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-  --background-modifier-cover: rgba(220, 220, 220, 0.4);
-  --background-modifier-form-field: var(--color-l-gray-30);
-  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
-                  inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
-                  0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
-  --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
-                          inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
-                          0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08),
-                          0px 3px 4px 1px rgba(var(--color-l-black-rgb), 0.07);
-  --text-normal: var(--color-l-gray-130);
-  --text-muted: var(--color-l-gray-90);
-  --text-faint: var(--color-l-gray-70);
-  --text-on-accent: var(--color-l-gray-10);
-  --text-on-accent-inverted: var(--color-l-gray-140);
-  --text-error: var(--color-l-red-30);
-  --text-warning: var(--color-l-orange-30);
-  --text-success: var(--color-l-green-30);
-  --text-selection: var(--color-l-gray-60);
-  --text-highlight-bg-rgb: var(--color-yellow-rgb);
-  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
-  --text-accent: var(--color-accent);
-  --text-accent-hover: var(--color-accent-2);
-}
-
-/*───────────────────────────────────
-
-✦ P R I M A R Y ✦
-in Classic Dark
-© Cecilia May
-
-If you have any questions on this palette,
-would like to adopt it to your website,
-please READ the USAGE, LICENSE,
-and CONTRIBUTION page ↴
-
-
-───────────────────────────────────*/
 .theme-dark {
-  color-scheme: dark;
-  --cdark-gray-10: hsla(32, 63, 90, 1);
-  --cdark-gray-20: hsla(34, 49, 80, 1);
-  --cdark-gray-30: hsla(34, 31, 68, 1);
-  --cdark-gray-40: hsla(35, 27, 55, 1);
-  --cdark-gray-50: hsla(34, 24, 40, 1);
-  --cdark-gray-60: hsla(33, 27, 28, 1);
-  --cdark-gray-70: hsla(31, 25, 20, 1);
-  --cdark-gray-80: hsla(28, 22, 17, 1);
-  --cdark-gray-90: hsla(33, 18, 15, 1);
-  --cdark-gray-100: hsla(31, 18, 14, 1);
-  --cdark-gray-110: hsla(28, 14, 13, 1);
-  --cdark-gray-120: hsla(28, 16, 12, 1);
-  --cdark-gray-130: hsla(24, 18, 9, 1);
-  --cdark-gray-140: hsla(32, 21, 8, 1);
-  --cdark-white: 255, 255, 255;
-  --cdark-black: 0, 0, 0;
-  --cdark-red-10: hsla(4, 65, 60, 1);
-  --cdark-red-20: hsla(5, 100, 70, 1);
-  --cdark-red-30: hsla(4, 90, 61, 1);
-  --cdark-red-40: hsla(4, 75, 44, 1);
-  --cdark-alpha-red: hsla(350, 84, 63, 0.2);
-  --cdark-orange-10: hsla(25, 72, 68, 1);
-  --cdark-orange-20: hsla(22, 91, 61, 1);
-  --cdark-orange-30: hsla(21, 86, 52, 1);
-  --cdark-orange-40: hsla(14, 80, 41, 1);
-  --cdark-alpha-orange: hsla(27, 100, 50, 0.2);
-  --cdark-yellow-10: hsla(46, 91, 69, 1);
-  --cdark-yellow-20: hsla(47, 100, 46, 1);
-  --cdark-yellow-30: hsla(43, 100, 42, 1);
-  --cdark-yellow-40: hsla(39, 92, 33, 1);
-  --cdark-alpha-yellow: hsla(44, 100, 50, 0.2);
-  --cdark-green-10: hsla(154, 38, 56, 1);
-  --cdark-green-20: hsla(150, 66, 53, 1);
-  --cdark-green-30: hsla(154, 62, 41, 1);
-  --cdark-green-40: hsla(155, 83, 24, 1);
-  --cdark-alpha-green: hsla(74, 69, 44, 0.2);
-  --cdark-blue-10: hsla(199, 39, 56, 1);
-  --cdark-blue-20: hsla(198, 75, 61, 1);
-  --cdark-blue-30: hsla(198, 55, 53, 1);
-  --cdark-blue-40: hsla(208, 77, 40, 1);
-  --cdark-alpha-blue: hsla(186, 64, 46, 0.2);
-  --cdark-violet-10: hsla(280, 50, 80, 1);
-  --cdark-violet-20: hsla(267, 68, 75, 1);
-  --cdark-violet-30: hsla(266, 45, 57, 1);
-  --cdark-violet-40: hsla(256, 45, 50, 1);
-  --cdark-alpha-violet: hsla(236, 100, 72, 0.2);
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--background-modifier-border-hover);
+}
+
+/*────────── Ribbon ──────────*/
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon {
+  color: var(--color-l-gray-70);
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon:hover, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:hover {
+  background: transparent;
+  cursor: pointer;
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon.is-active, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon.is-active {
+  background: transparent;
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+1).is-active, .theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+1):hover, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+1).is-active, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+1):hover {
+  color: var(--color-l-yellow-30);
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+1):active, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+1):active {
+  color: var(--color-l-yellow-10);
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+2).is-active, .theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+2):hover, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+2).is-active, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+2):hover {
+  color: var(--color-l-red-30);
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+2):active, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+2):active {
+  color: var(--color-l-red-10);
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+3).is-active, .theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+3):hover, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+3).is-active, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+3):hover {
+  color: var(--color-l-blue-30);
+}
+.theme-light .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+3):active, .theme-light .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+3):active {
+  color: var(--color-l-blue-10);
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon {
+  color: var(--color-d-gray-60);
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:hover, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:hover {
+  background: transparent;
+  cursor: pointer;
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon.is-active, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon.is-active {
+  background: transparent;
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+1).is-active, .theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+1):hover, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+1).is-active, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+1):hover {
+  color: var(--color-d-yellow-20);
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+1):active, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+1):active {
+  color: var(--color-d-yellow-40);
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+2).is-active, .theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+2):hover, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+2).is-active, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+2):hover {
+  color: var(--color-d-red-20);
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+2):active, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+2):active {
+  color: var(--color-d-red-40);
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+3).is-active, .theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+3):hover, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+3).is-active, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+3):hover {
+  color: var(--color-d-blue-20);
+}
+.theme-dark .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+3):active, .theme-dark .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+3):active {
+  color: var(--color-d-blue-40);
 }
 
 /*────────── Modal: Settings ──────────*/
