@@ -1,0 +1,33 @@
+/*────────── Icons ──────────*/
+// General Shape
+body {
+    --clickable-icon-radius: var(--radius-xs);
+}
+
+// Classic Light Theme
+.theme-light {
+    --icon-color: var(--color-l-gray-80);
+    --icon-opacity: 1;
+
+    --icon-color-hover: var(--color-l-gray-90);
+    --icon-opacity-hover: 1;
+    
+    --icon-color-focused: var(--color-l-gray-120);
+    
+    --icon-color-active: var(--color-l-gray-120);
+    --icon-opacity-active: 1;
+}
+
+// Classic Dark Theme
+.theme-dark {
+    --icon-color: var(--color-d-gray-60);
+    --icon-opacity: 1;
+
+    --icon-color-hover: var(--color-d-gray-50);
+    --icon-opacity-hover: 1;
+    
+    --icon-color-focused: var(--color-d-gray-40);
+    
+    --icon-color-active: var(--color-d-gray-40);
+    --icon-opacity-active: 1; 
+}

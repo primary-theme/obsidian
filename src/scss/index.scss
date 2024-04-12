@@ -1,7 +1,12 @@
 @use '10_foundations/typography';
-@use '10_foundations/pmr-custom-icons';
+@use '10_foundations/shape';
 @use '10_foundations/pmr-light-theme';
 @use '10_foundations/pmr-dark-theme';
+@use '10_foundations/icons';
+@use '10_foundations/pmr-custom-icons';
+
+@use '20_window/divider';
+@use '20_window/ribbon';
 
 @use '30_components/modal-settings';
 

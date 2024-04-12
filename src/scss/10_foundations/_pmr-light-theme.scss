@@ -30,9 +30,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-gray-130: hsla(31, 45%, 20%, 1);
     --color-l-gray-140: hsla(33, 54%, 12%, 1);
 
-    // --color-l-alpha-gray: hsla(34, 29%, 60%, 0.5); // darkest color
-
     --color-l-white-rgb: 255, 255, 255; // rgba
+    --color-l-gray-rgb: 100, 100, 100; // rgba
     --color-l-black-rgb: 0, 0, 0; // rgba
 
     // Red
@@ -48,7 +47,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-orange-20: hsla(21, 81%, 59%, 1);
     --color-l-orange-30: hsla(18, 69%, 50%, 1);
     --color-l-orange-40: hsla(18, 96%, 35%, 1);
-    
+
     --color-l-alpha-orange: hsla(27, 100, 50, 0.2);
 
     // Yellow
@@ -56,7 +55,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-yellow-20: hsla(43, 83%, 57%, 1);
     --color-l-yellow-30: hsla(40, 79%, 47%, 1);
     --color-l-yellow-40: hsla(40, 98%, 36%, 1);
-    
+
     --color-l-alpha-yellow: hsla(44, 100, 50, 0.2);
 
     // Green
@@ -64,7 +63,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-green-20: hsla(154, 52%, 49%, 1);
     --color-l-green-30: hsla(154, 55%, 39%, 1);
     --color-l-green-40: hsla(159, 65%, 29%, 1);
-    
+
     --color-l-alpha-green: hsla(74, 69, 44, 0.2);
 
     // Blue
@@ -72,7 +71,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-blue-20: hsla(202, 66%, 46%, 1);
     --color-l-blue-30: hsla(208, 64%, 39%, 1);
     --color-l-blue-40: hsla(212, 95%, 25%, 1);
-    
+
     --color-l-alpha-blue: hsla(186, 64, 46, 0.2);
 
     // Violet
@@ -80,20 +79,27 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-violet-20: hsla(277, 35%, 59%, 1);
     --color-l-violet-30: hsla(275, 37%, 43%, 1);
     --color-l-violet-40: hsla(265, 70%, 30%, 1);
-    
+
     --color-l-alpha-violet: hsla(236, 100, 72, 0.2);
 }
 
 /*────────── Light Theme Override ──────────*/
+/*
+    These variables are from the Obsidian
+    app.css. You can go to Primary for Obsidian's
+    documentation to read more on how to alter,
+    contribute, and customize this part to
+    your own liking.
+*/
 
 .theme-light {
-    // App Theme
     --highlight-mix-blend-mode: darken;
 
     --mono-rgb-0: var(--color-l-black-rgb);
-    --mono-rgb-100: var(--color-l-white-rgb);
+    --mono-rgb-100: var(--color-l-gray-rgb);
 
     // Colors are Curated Derivatives of Primary Classic Light
+    // specially for Primary for Obsidian
     --color-red-rgb: 228, 87, 78;
     --color-red: hsla(0, 58%, 53%, 1);
 
@@ -116,7 +122,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-purple: hsla(250, 48%, 57%, 1);
 
     --color-pink-rgb: 224, 108, 138;
-    --color-pink: rgb(199, 112, 132);
+    --color-pink: hsla(346, 44%, 61%, 1);
 
     // Primary Classic Light: color-l-gray-90
     --accent-h: 31;
@@ -166,15 +172,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-secondary: var(--color-l-gray-40);
     --background-secondary-alt: var(--color-l-gray-40);
 
-    --interactive-normal: var(--color-base-00);
-    --interactive-hover: var(--color-base-10);
+    --interactive-normal: var(--color-l-gray-10);
+    --interactive-hover: var(--color-l-gray-30);
 
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
     --interactive-accent-hover: var(--color-accent-2);
-
-    --drag-ghost-background: var(--color-l-gray-130);
-    --drag-ghost-text-color: var(--color-l-gray-20);
 
     --background-modifier-hover: var(--color-l-gray-30);
     --background-modifier-active-hover: var(--color-l-gray-60);
@@ -190,7 +193,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-modifier-success-rgb: var(--color-green-rgb);
     --background-modifier-success: var(--color-l-green-20);
 
-    --background-modifier-message: rgba(0, 0, 0, 0.9);
+    --background-modifier-message: var(--color-l-gray-130);
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
@@ -206,8 +209,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Text Colors
     --text-normal: var(--color-l-gray-130);
-    --text-muted: var(--color-l-gray-90);
-    --text-faint: var(--color-l-gray-70);
+    --text-muted: var(--color-l-gray-110);
+    --text-faint: var(--color-l-gray-90);
 
     --text-on-accent: var(--color-l-gray-10);
     --text-on-accent-inverted: var(--color-l-gray-140);
