@@ -23,7 +23,7 @@
     &:active:not(.is-active) {
         color: var(--settings-nav-item-text-color-active);
         background: var(--settings-nav-item-bg-active);
-        transform: var(--button-axis-offset);
+        transform: translateY(var(--button-axis-offset));
     }
 
     &.is-active:nth-child(3n+1) {

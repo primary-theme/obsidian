@@ -1,2 +1,62 @@
 /*────────── Sidebar ──────────*/
-// TODO
+// Sidebar Tabs
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header {
+    background: var(--sidebar-tab-bg);
+    border: 1px solid transparent;
+    border-radius: var(--radius-m);
+    transition: border, box-shadow, transform var(--button-anim);
+    
+    &-container {
+        border-bottom: none;
+    }
+
+    &.is-active {
+        background: var(--sidebar-tab-active-bg);
+        box-shadow: var(--sidebar-tab-active-shadow);
+        transition: background none none;
+
+        &:hover {
+            background: var(--sidebar-tab-active-bg);
+        }
+
+        &:nth-child(3n+1) {
+            border: 1px solid var(--alternating-color-1);
+            
+            .workspace-tab-header-inner-icon {
+                color: var(--alternating-color-1);
+            }
+        }
+
+        &:nth-child(3n+2) {
+            border: 1px solid var(--alternating-color-2);
+            
+            .workspace-tab-header-inner-icon {
+                color: var(--alternating-color-2);
+            }
+        }
+
+        &:nth-child(3n+3) {
+            border: 1px solid var(--alternating-color-3);
+            
+            .workspace-tab-header-inner-icon {
+                color: var(--alternating-color-3);
+            }
+        }
+    }
+
+    &:not(.is-active) {
+        &:hover {
+            transform: translateY(calc(-1 * var(--button-axis-offset)));
+            cursor: pointer;
+        }
+
+        &:active {
+            transform: translateY(var(--button-axis-offset));
+        }
+
+        &:hover .workspace-tab-header-inner {
+            background: var(--sidebar-tab-bg);
+        }
+    }
+}

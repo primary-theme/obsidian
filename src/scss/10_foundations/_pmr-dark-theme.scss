@@ -262,6 +262,8 @@ and CONTRIBUTION page ↴
     --button-shadow-hover: var(--input-shadow-hover);
     --button-shadow-active: var(--input-shadow-active);
 
+    --button-axis-offset: 2px;
+
     // Status Bar
     --status-bar-item-color: var(--color-d-gray-50);
     --status-bar-item-color-hover: var(--color-d-gray-30);
@@ -293,4 +295,11 @@ and CONTRIBUTION page ↴
 
     --settings-nav-item-text-color-active: var(--color-d-gray-70);
     --settings-nav-item-bg-active: var(--color-d-gray-130);
+
+    // Sidebar Tab
+    --sidebar-tab-bg: transparent;
+    --sidebar-tab-active-bg: var(--color-d-gray-90);
+    --sidebar-tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
+                                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
+                                    0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
 }

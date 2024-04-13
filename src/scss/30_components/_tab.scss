@@ -1,0 +1,33 @@
+/*────────── Tabs ──────────*/
+
+body {
+    // Tabs
+    --tab-background-active: var(--background-primary);
+    --tab-text-color: var(--text-faint);
+    --tab-text-color-active: var(--text-muted);
+    --tab-text-color-focused: var(--text-muted);
+    --tab-text-color-focused-active: var(--text-muted);
+    --tab-text-color-focused-highlighted: var(--text-accent);
+    --tab-text-color-focused-active-current: var(--text-normal);
+    --tab-font-size: var(--font-ui-small);
+    --tab-font-weight: inherit;
+    --tab-container-background: var(--background-secondary);
+    --tab-divider-color: var(--background-modifier-border-hover);
+    --tab-outline-color: var(--divider-color);
+    --tab-outline-width: 1px;
+    --tab-curve: 6px;
+    --tab-radius: var(--radius-s);
+    --tab-radius-active: 6px 6px 0 0;
+    --tab-width: 200px;
+    --tab-max-width: 320px;
+    
+    // Stacked Tabs
+    --tab-stacked-pane-width: 700px;
+    --tab-stacked-header-width: var(--header-height);
+    --tab-stacked-font-size: var(--font-ui-small);
+    --tab-stacked-font-weight: 400;
+    --tab-stacked-text-align: left;
+    --tab-stacked-text-transform: rotate(0deg);
+    --tab-stacked-text-writing-mode: vertical-lr;
+    --tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
+}
