@@ -183,8 +183,8 @@ and CONTRIBUTION page ↴
     --background-modifier-active-hover: var(--color-d-gray-70);
 
     --background-modifier-border: var(--color-d-gray-80);
-    --background-modifier-border-hover: var(--color-d-gray-60);
-    --background-modifier-border-focus: var(--color-d-gray-80);
+    --background-modifier-border-hover: var(--color-d-gray-70);
+    --background-modifier-border-focus: var(--color-d-gray-90);
 
     --background-modifier-error-rgb: var(--color-red-rgb);
     --background-modifier-error: var(--color-d-red-40);
@@ -199,7 +199,7 @@ and CONTRIBUTION page ↴
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
 
     --background-modifier-form-field: var(--color-d-gray-130);
-    // 0.1, 0.09
+
     --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
                     inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
                     0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
@@ -242,11 +242,11 @@ and CONTRIBUTION page ↴
 .theme-dark {
     // Alternating Color for Ribbon and Tabs
     --non-alternating-color: var(--color-d-gray-60);
-    --alternating-color-1: var(--color-d-yellow-20);
+    --alternating-color-1: var(--color-d-yellow-30);
     --alternating-color-1-hover-active: var(--color-d-yellow-40);
-    --alternating-color-2: var(--color-d-red-20);
+    --alternating-color-2: var(--color-d-red-30);
     --alternating-color-2-hover-active: var(--color-d-red-40);
-    --alternating-color-3: var(--color-d-blue-20);
+    --alternating-color-3: var(--color-d-blue-30);
     --alternating-color-3-hover-active: var(--color-d-blue-40);
 
     // Icon Container
@@ -254,6 +254,13 @@ and CONTRIBUTION page ↴
     --icon-bg: transparent;
     --icon-bg-hover: transparent;
     --icon-bg-active: transparent;
+
+    // Buttons
+    --button-radius: var(--size-4-2);
+    --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
+    --button-shadow: var(--input-shadow);
+    --button-shadow-hover: var(--input-shadow-hover);
+    --button-shadow-active: var(--input-shadow-active);
 
     // Status Bar
     --status-bar-item-color: var(--color-d-gray-50);
@@ -270,4 +277,20 @@ and CONTRIBUTION page ↴
     --sync-icon-working: var(--color-d-orange-40);
     --sync-icon-working-hover: var(--color-d-orange-30);
     --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
+
+    // Modals
+    --modal-background: var(--background-primary);
+    --modal-border-color: var(--background-modifier-border-hover);
+    --modal-radius: var(--radius-xl);
+
+    // Settings
+    --settings-nav-group-title-color: var(--color-d-gray-60);
+
+    --settings-nav-item-text-color: var(--color-d-gray-40);
+
+    --settings-nav-item-text-color-hover: var(--color-d-gray-50);
+    --settings-nav-item-bg-hover: var(--color-d-gray-90);
+
+    --settings-nav-item-text-color-active: var(--color-d-gray-70);
+    --settings-nav-item-bg-active: var(--color-d-gray-130);
 }
