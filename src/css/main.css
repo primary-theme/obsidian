@@ -1127,13 +1127,13 @@ button {
   transition: var(--anim-duration-fast) var(--anim-motion-jumpy);
   cursor: pointer;
 }
-button:active, button:focus {
+button:active {
   background: var(--interactive-hover);
   padding: calc(var(--size-4-4) + var(--button-inset-shadow-size)) var(--size-4-3) var(--size-4-4) var(--size-4-3);
   box-shadow: var(--input-shadow-active);
   transition: var(--anim-duration-fast) var(--anim-motion-jumpy);
 }
-button:active.mod-cta, button:focus.mod-cta {
+button.mod-cta:active, button.mod-cta:focus {
   background: var(--interactive-accent-hover);
 }
 

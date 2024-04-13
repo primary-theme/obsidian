@@ -24,8 +24,7 @@ button {
                 var(--anim-motion-jumpy);
     cursor: pointer;
 
-    &:active,
-    &:focus {
+    &:active {
         background: var(--interactive-hover);
         padding: calc(var(--size-4-4) + var(--button-inset-shadow-size))
                  var(--size-4-3)
@@ -34,9 +33,10 @@ button {
         box-shadow: var(--input-shadow-active);
         transition: var(--anim-duration-fast)
                     var(--anim-motion-jumpy);
+    }
 
-        &.mod-cta {
-            background: var(--interactive-accent-hover);
-        }
+    &.mod-cta:active,
+    &.mod-cta:focus {
+        background: var(--interactive-accent-hover);
     }
 }
