@@ -7,7 +7,14 @@
 
 @use '20_window/divider';
 @use '20_window/ribbon';
+@use '20_window/scrollbar';
+@use '20_window/sidebar';
+@use '20_window/status-bar';
+@use '20_window/window-frame';
 
+@use '30_components/button';
+@use '30_components/checkbox';
+@use '30_components/color-input';
 @use '30_components/modal-settings';
 
 @use '70_community-plugins/calendar-liam-cain';

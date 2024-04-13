@@ -1,0 +1,39 @@
+/*────────── Checkbox ──────────*/
+// :checked:after
+input[type=checkbox] {
+    &:hover {
+        cursor: pointer;
+    }
+
+    .theme-light & {
+        --checkbox-marker-color: white;
+
+        --checkbox-color: var(--color-l-green-30);
+        --checkbox-color-hover: var(--color-l-green-20);
+
+        --checkbox-border-color: var(--color-l-gray-60);
+        --checkbox-border-color-hover: var(--color-l-gray-70);
+
+        --checklist-done-color: var(--color-l-gray-10);
+
+        &:hover {
+            box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
+        }
+    }
+
+    .theme-dark & {
+        --checkbox-marker-color: white;
+
+        --checkbox-color: var(--color-d-green-40);
+        --checkbox-color-hover: var(--color-d-green-30);
+
+        --checkbox-border-color: var(--color-d-gray-70);
+        --checkbox-border-color-hover: var(--color-d-gray-60);
+
+        --checklist-done-color: var(--color-d-gray-90);
+
+        &:hover {
+            box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

@@ -172,8 +172,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-secondary: var(--color-l-gray-40);
     --background-secondary-alt: var(--color-l-gray-40);
 
-    --interactive-normal: var(--color-l-gray-10);
-    --interactive-hover: var(--color-l-gray-30);
+    --interactive-normal: var(--color-l-gray-30);
+    --interactive-hover: var(--color-l-gray-10);
 
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
@@ -200,12 +200,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --background-modifier-form-field: var(--color-l-gray-30);
     --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
-                    inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(var(--color-l-black-rgb), 0.09),
                     0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
     --input-shadow-hover:   inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
-                            inset 0px -2px 0px 2px rgba(var(--color-l-black-rgb), 0.09),
+                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(var(--color-l-black-rgb), 0.09),
                             0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08),
                             0px 3px 4px 1px rgba(var(--color-l-black-rgb), 0.07);
+    --input-shadow-active:  inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
+                            inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-l-black-rgb), 0.09),
+                            0px 0px 2px 2px rgba(var(--color-l-black-rgb), 0.03);
 
     // Text Colors
     --text-normal: var(--color-l-gray-130);
@@ -226,4 +229,45 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
+}
+
+/*────────── Primary Styling Variables ──────────*/
+/* 
+    These variables are for future ability to
+    customize Primary to change the style and
+    flavoring of it i.e. premium palettes,
+    custom palettes, style settings etc.
+*/
+
+.theme-light {
+    // Alternating Color for Ribbon, Tabs, and Note Tabs
+    --non-alternating-color: var(--color-l-gray-70);
+    --alternating-color-1: var(--color-l-yellow-30);
+    --alternating-color-1-hover-active: var(--color-l-yellow-10);
+    --alternating-color-2: var(--color-l-red-30);
+    --alternating-color-2-hover-active: var(--color-l-red-10);
+    --alternating-color-3: var(--color-l-blue-30);
+    --alternating-color-3-hover-active: var(--color-l-blue-10);
+
+    // Icon Container
+    --icon-container-radius: ;
+    --icon-bg: transparent;
+    --icon-bg-hover: transparent;
+    --icon-bg-active: transparent;
+
+    // Status Bar
+    --status-bar-item-color: var(--color-l-gray-80);
+    --status-bar-item-color-hover: var(--color-l-gray-100);
+    --status-bar-item-bg-hover: transparent;
+    --status-bar-item-clickable-color-active: var(--color-l-gray-70);
+    --status-bar-item-clickable-bg-active: transparent;
+
+    // Status Bar: Sync Icon
+    --sync-icon-success: var(--color-l-green-30);
+    --sync-icon-success-hover: var(--color-l-green-20);
+    --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
+
+    --sync-icon-working: var(--color-l-orange-10);
+    --sync-icon-working-hover: var(--color-l-orange-20);
+    --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
 }
