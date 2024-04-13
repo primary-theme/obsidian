@@ -184,7 +184,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --background-modifier-border: var(--color-l-gray-60);
     --background-modifier-border-hover: var(--color-l-gray-70);
-    --background-modifier-border-focus: var(--color-l-gray-60);
+    --background-modifier-border-focus: var(--color-l-gray-80);
 
     --background-modifier-error-rgb: var(--color-red-rgb);
     --background-modifier-error: var(--color-l-red-20);
@@ -255,6 +255,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --icon-bg-hover: transparent;
     --icon-bg-active: transparent;
 
+    // Buttons
+    --button-radius: var(--size-4-2);
+    --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
+    --button-shadow: var(--input-shadow);
+    --button-shadow-hover: var(--input-shadow-hover);
+    --button-shadow-active: var(--input-shadow-active);
+
+    --button-axis-offset: translateY(2px);
+
     // Status Bar
     --status-bar-item-color: var(--color-l-gray-80);
     --status-bar-item-color-hover: var(--color-l-gray-100);
@@ -270,4 +279,20 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --sync-icon-working: var(--color-l-orange-10);
     --sync-icon-working-hover: var(--color-l-orange-20);
     --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
+
+    // Modals
+    --modal-background: var(--background-primary);
+    --modal-border-color: var(--background-modifier-border-hover);
+    --modal-radius: var(--radius-xl);
+
+    // Settings
+    --settings-nav-group-title-color: var(--color-l-gray-70);
+
+    --settings-nav-item-text-color: var(--color-l-gray-110);
+
+    --settings-nav-item-text-color-hover: var(--color-l-gray-110);
+    --settings-nav-item-bg-hover: var(--color-l-gray-20);
+
+    --settings-nav-item-text-color-active: var(--color-l-gray-70);
+    --settings-nav-item-bg-active: var(--color-l-gray-60);
 }

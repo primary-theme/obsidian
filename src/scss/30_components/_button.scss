@@ -18,10 +18,9 @@ button {
              var(--size-4-3)
              calc(var(--size-4-4) + var(--button-inset-shadow-size))
              var(--size-4-3);
-    border-radius: var(--size-4-2);
+    border-radius: var(--button-radius);
     margin-bottom: var(--size-2-3);
-    transition: var(--anim-duration-fast)
-                var(--anim-motion-jumpy);
+    transition: var(--button-anim);
     cursor: pointer;
 
     &:active {
@@ -30,9 +29,8 @@ button {
                  var(--size-4-3)
                  var(--size-4-4)
                  var(--size-4-3);
-        box-shadow: var(--input-shadow-active);
-        transition: var(--anim-duration-fast)
-                    var(--anim-motion-jumpy);
+        box-shadow: var(--button-shadow-active);
+        transition: var(--button-anim);
     }
 
     &.mod-cta:active,

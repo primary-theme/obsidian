@@ -160,7 +160,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-active-hover: var(--color-l-gray-60);
   --background-modifier-border: var(--color-l-gray-60);
   --background-modifier-border-hover: var(--color-l-gray-70);
-  --background-modifier-border-focus: var(--color-l-gray-60);
+  --background-modifier-border-focus: var(--color-l-gray-80);
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-l-red-20);
   --background-modifier-error-hover: var(--color-l-red-30);
@@ -214,6 +214,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --icon-bg: transparent;
   --icon-bg-hover: transparent;
   --icon-bg-active: transparent;
+  --button-radius: var(--size-4-2);
+  --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
+  --button-shadow: var(--input-shadow);
+  --button-shadow-hover: var(--input-shadow-hover);
+  --button-shadow-active: var(--input-shadow-active);
+  --button-axis-offset: translateY(2px);
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
   --status-bar-item-bg-hover: transparent;
@@ -225,6 +231,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --sync-icon-working: var(--color-l-orange-10);
   --sync-icon-working-hover: var(--color-l-orange-20);
   --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
+  --modal-background: var(--background-primary);
+  --modal-border-color: var(--background-modifier-border-hover);
+  --modal-radius: var(--radius-xl);
+  --settings-nav-group-title-color: var(--color-l-gray-70);
+  --settings-nav-item-text-color: var(--color-l-gray-110);
+  --settings-nav-item-text-color-hover: var(--color-l-gray-110);
+  --settings-nav-item-bg-hover: var(--color-l-gray-20);
+  --settings-nav-item-text-color-active: var(--color-l-gray-70);
+  --settings-nav-item-bg-active: var(--color-l-gray-60);
 }
 
 /*───────────────────────────────────
@@ -366,8 +381,8 @@ and CONTRIBUTION page ↴
   --background-modifier-hover: var(--color-d-gray-100);
   --background-modifier-active-hover: var(--color-d-gray-70);
   --background-modifier-border: var(--color-d-gray-80);
-  --background-modifier-border-hover: var(--color-d-gray-60);
-  --background-modifier-border-focus: var(--color-d-gray-80);
+  --background-modifier-border-hover: var(--color-d-gray-70);
+  --background-modifier-border-focus: var(--color-d-gray-90);
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
@@ -410,16 +425,21 @@ and CONTRIBUTION page ↴
 */
 .theme-dark {
   --non-alternating-color: var(--color-d-gray-60);
-  --alternating-color-1: var(--color-d-yellow-20);
+  --alternating-color-1: var(--color-d-yellow-30);
   --alternating-color-1-hover-active: var(--color-d-yellow-40);
-  --alternating-color-2: var(--color-d-red-20);
+  --alternating-color-2: var(--color-d-red-30);
   --alternating-color-2-hover-active: var(--color-d-red-40);
-  --alternating-color-3: var(--color-d-blue-20);
+  --alternating-color-3: var(--color-d-blue-30);
   --alternating-color-3-hover-active: var(--color-d-blue-40);
   --icon-container-radius: ;
   --icon-bg: transparent;
   --icon-bg-hover: transparent;
   --icon-bg-active: transparent;
+  --button-radius: var(--size-4-2);
+  --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
+  --button-shadow: var(--input-shadow);
+  --button-shadow-hover: var(--input-shadow-hover);
+  --button-shadow-active: var(--input-shadow-active);
   --status-bar-item-color: var(--color-d-gray-50);
   --status-bar-item-color-hover: var(--color-d-gray-30);
   --status-bar-item-bg-hover: transparent;
@@ -431,6 +451,15 @@ and CONTRIBUTION page ↴
   --sync-icon-working: var(--color-d-orange-40);
   --sync-icon-working-hover: var(--color-d-orange-30);
   --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
+  --modal-background: var(--background-primary);
+  --modal-border-color: var(--background-modifier-border-hover);
+  --modal-radius: var(--radius-xl);
+  --settings-nav-group-title-color: var(--color-d-gray-60);
+  --settings-nav-item-text-color: var(--color-d-gray-40);
+  --settings-nav-item-text-color-hover: var(--color-d-gray-50);
+  --settings-nav-item-bg-hover: var(--color-d-gray-90);
+  --settings-nav-item-text-color-active: var(--color-d-gray-70);
+  --settings-nav-item-bg-active: var(--color-d-gray-130);
 }
 
 /*────────── Icons ──────────*/
@@ -1122,16 +1151,16 @@ svg.vault {
 button {
   font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
   padding: var(--size-4-4) var(--size-4-3) calc(var(--size-4-4) + var(--button-inset-shadow-size)) var(--size-4-3);
-  border-radius: var(--size-4-2);
+  border-radius: var(--button-radius);
   margin-bottom: var(--size-2-3);
-  transition: var(--anim-duration-fast) var(--anim-motion-jumpy);
+  transition: var(--button-anim);
   cursor: pointer;
 }
 button:active {
   background: var(--interactive-hover);
   padding: calc(var(--size-4-4) + var(--button-inset-shadow-size)) var(--size-4-3) var(--size-4-4) var(--size-4-3);
-  box-shadow: var(--input-shadow-active);
-  transition: var(--anim-duration-fast) var(--anim-motion-jumpy);
+  box-shadow: var(--button-shadow-active);
+  transition: var(--button-anim);
 }
 button.mod-cta:active, button.mod-cta:focus {
   background: var(--interactive-accent-hover);
@@ -1166,6 +1195,62 @@ input[type=checkbox]:hover {
 
 /*────────── Color Input ──────────*/
 /*────────── Modal: Settings ──────────*/
+.vertical-tab-header-group-title {
+  color: var(--settings-nav-group-title-color);
+  text-transform: uppercase;
+}
+
+.vertical-tab-nav-item {
+  color: var(--settings-nav-item-text-color);
+  padding: var(--size-4-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  transition: box-shadow var(--button-anim);
+}
+.vertical-tab-nav-item:hover:not(.is-active) {
+  color: var(--settings-nav-item-text-color-hover);
+  background: var(--settings-nav-item-bg-hover);
+  cursor: pointer;
+}
+.vertical-tab-nav-item:active:not(.is-active) {
+  color: var(--settings-nav-item-text-color-active);
+  background: var(--settings-nav-item-bg-active);
+  transform: var(--button-axis-offset);
+}
+.vertical-tab-nav-item.is-active:nth-child(3n+1) {
+  background: var(--alternating-color-1);
+  box-shadow: var(--button-shadow);
+}
+.vertical-tab-nav-item.is-active:nth-child(3n+2) {
+  background: var(--alternating-color-2);
+  box-shadow: var(--button-shadow);
+}
+.vertical-tab-nav-item.is-active:nth-child(3n+3) {
+  background: var(--alternating-color-3);
+  box-shadow: var(--button-shadow);
+}
+
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-control {
+  display: none;
+}
+
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div {
+  display: none;
+}
+
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info::after {
+  content: "Accent Colors are not customizable in Primary. Though, in the future, through the Style Settings plugin, tons of color and style customizations will be available. Premium Palettes will also be released.";
+  font-size: var(--font-ui-small);
+  color: var(--text-error);
+}
+
+body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(20) > div.setting-item-info > div.setting-item-description::after {
+  content: "Translucent Window is not yet supported in Primary. Things may look like they are broken.";
+  display: flex;
+  margin-top: var(--size-4-1);
+  font-size: var(--font-ui-small);
+  color: var(--text-warning);
+}
+
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
 .workspace-tab-header[data-type=calendar] svg.lucide-calendar-check {
   background-color: currentColor;
