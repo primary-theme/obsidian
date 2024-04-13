@@ -18,6 +18,7 @@ Variables for
 body {
   --radius-xs: 2px;
   --button-inset-shadow-size: 2px;
+  --header-height: 48px;
 }
 
 /*───────────────────────────────────
@@ -219,7 +220,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
   --button-shadow-active: var(--input-shadow-active);
-  --button-axis-offset: translateY(2px);
+  --button-axis-offset: 2px;
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
   --status-bar-item-bg-hover: transparent;
@@ -240,6 +241,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --settings-nav-item-bg-hover: var(--color-l-gray-20);
   --settings-nav-item-text-color-active: var(--color-l-gray-70);
   --settings-nav-item-bg-active: var(--color-l-gray-60);
+  --sidebar-tab-bg: transparent;
+  --sidebar-tab-active-bg: var(--color-l-gray-20);
+  --sidebar-tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
+                               inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
+                               0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
 }
 
 /*───────────────────────────────────
@@ -440,6 +446,7 @@ and CONTRIBUTION page ↴
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
   --button-shadow-active: var(--input-shadow-active);
+  --button-axis-offset: 2px;
   --status-bar-item-color: var(--color-d-gray-50);
   --status-bar-item-color-hover: var(--color-d-gray-30);
   --status-bar-item-bg-hover: transparent;
@@ -460,11 +467,16 @@ and CONTRIBUTION page ↴
   --settings-nav-item-bg-hover: var(--color-d-gray-90);
   --settings-nav-item-text-color-active: var(--color-d-gray-70);
   --settings-nav-item-bg-active: var(--color-d-gray-130);
+  --sidebar-tab-bg: transparent;
+  --sidebar-tab-active-bg: var(--color-d-gray-90);
+  --sidebar-tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
+                                  0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
 }
 
 /*────────── Icons ──────────*/
 body {
-  --clickable-icon-radius: var(--radius-xs);
+  --clickable-icon-radius: var(--radius-s);
 }
 
 .theme-light {
@@ -1100,6 +1112,65 @@ svg.vault {
 }
 
 /*────────── Sidebar ──────────*/
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header {
+  background: var(--sidebar-tab-bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-m);
+  transition: border, box-shadow, transform var(--button-anim);
+}
+.mod-left-split .workspace-tab-header-container,
+.mod-right-split .workspace-tab-header-container {
+  border-bottom: none;
+}
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active {
+  background: var(--sidebar-tab-active-bg);
+  box-shadow: var(--sidebar-tab-active-shadow);
+  transition: background none none;
+}
+.mod-left-split .workspace-tab-header.is-active:hover,
+.mod-right-split .workspace-tab-header.is-active:hover {
+  background: var(--sidebar-tab-active-bg);
+}
+.mod-left-split .workspace-tab-header.is-active:nth-child(3n+1),
+.mod-right-split .workspace-tab-header.is-active:nth-child(3n+1) {
+  border: 1px solid var(--alternating-color-1);
+}
+.mod-left-split .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-icon {
+  color: var(--alternating-color-1);
+}
+.mod-left-split .workspace-tab-header.is-active:nth-child(3n+2),
+.mod-right-split .workspace-tab-header.is-active:nth-child(3n+2) {
+  border: 1px solid var(--alternating-color-2);
+}
+.mod-left-split .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-icon {
+  color: var(--alternating-color-2);
+}
+.mod-left-split .workspace-tab-header.is-active:nth-child(3n+3),
+.mod-right-split .workspace-tab-header.is-active:nth-child(3n+3) {
+  border: 1px solid var(--alternating-color-3);
+}
+.mod-left-split .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-icon {
+  color: var(--alternating-color-3);
+}
+.mod-left-split .workspace-tab-header:not(.is-active):hover,
+.mod-right-split .workspace-tab-header:not(.is-active):hover {
+  transform: translateY(calc(-1 * var(--button-axis-offset)));
+  cursor: pointer;
+}
+.mod-left-split .workspace-tab-header:not(.is-active):active,
+.mod-right-split .workspace-tab-header:not(.is-active):active {
+  transform: translateY(var(--button-axis-offset));
+}
+.mod-left-split .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
+.mod-right-split .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background: var(--sidebar-tab-bg);
+}
+
 /*────────── Status Bar ──────────*/
 .status-bar-item {
   color: var(--status-bar-item-color);
@@ -1194,6 +1265,7 @@ input[type=checkbox]:hover {
 }
 
 /*────────── Color Input ──────────*/
+/*────────── Modals ──────────*/
 /*────────── Modal: Settings ──────────*/
 .vertical-tab-header-group-title {
   color: var(--settings-nav-group-title-color);
@@ -1214,7 +1286,7 @@ input[type=checkbox]:hover {
 .vertical-tab-nav-item:active:not(.is-active) {
   color: var(--settings-nav-item-text-color-active);
   background: var(--settings-nav-item-bg-active);
-  transform: var(--button-axis-offset);
+  transform: translateY(var(--button-axis-offset));
 }
 .vertical-tab-nav-item.is-active:nth-child(3n+1) {
   background: var(--alternating-color-1);
@@ -1249,6 +1321,36 @@ body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout >
   margin-top: var(--size-4-1);
   font-size: var(--font-ui-small);
   color: var(--text-warning);
+}
+
+/*────────── Tabs ──────────*/
+body {
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-muted);
+  --tab-text-color-focused-highlighted: var(--text-accent);
+  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-font-size: var(--font-ui-small);
+  --tab-font-weight: inherit;
+  --tab-container-background: var(--background-secondary);
+  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-outline-color: var(--divider-color);
+  --tab-outline-width: 1px;
+  --tab-curve: 6px;
+  --tab-radius: var(--radius-s);
+  --tab-radius-active: 6px 6px 0 0;
+  --tab-width: 200px;
+  --tab-max-width: 320px;
+  --tab-stacked-pane-width: 700px;
+  --tab-stacked-header-width: var(--header-height);
+  --tab-stacked-font-size: var(--font-ui-small);
+  --tab-stacked-font-weight: 400;
+  --tab-stacked-text-align: left;
+  --tab-stacked-text-transform: rotate(0deg);
+  --tab-stacked-text-writing-mode: vertical-lr;
+  --tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
