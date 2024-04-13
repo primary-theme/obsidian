@@ -173,7 +173,7 @@ and CONTRIBUTION page ↴
     --background-secondary-alt: var(--color-d-gray-120);
 
     --interactive-normal: var(--color-d-gray-120);
-    --interactive-hover: var(--color-d-gray-130);
+    --interactive-hover: var(--color-d-gray-100);
 
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
@@ -207,6 +207,9 @@ and CONTRIBUTION page ↴
                             inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
                             0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38),
                             0px 3px 4px 1px rgba(var(--color-d-black-rgb), 0.37);
+    --input-shadow-active:  inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
+                            inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-d-black-rgb), 0.21),
+                            0px 0px 2px 2px rgba(var(--color-d-black-rgb), 0.33);
 
     // Text Colors
     --text-normal: var(--color-d-gray-20);
@@ -227,4 +230,44 @@ and CONTRIBUTION page ↴
 
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
+}
+
+/*────────── Primary Styling Variables ──────────*/
+/* 
+    These variables are for future ability to
+    customize Primary i.e. premium palettes,
+    custom palettes, etc.
+*/
+
+.theme-dark {
+    // Alternating Color for Ribbon and Tabs
+    --non-alternating-color: var(--color-d-gray-60);
+    --alternating-color-1: var(--color-d-yellow-20);
+    --alternating-color-1-hover-active: var(--color-d-yellow-40);
+    --alternating-color-2: var(--color-d-red-20);
+    --alternating-color-2-hover-active: var(--color-d-red-40);
+    --alternating-color-3: var(--color-d-blue-20);
+    --alternating-color-3-hover-active: var(--color-d-blue-40);
+
+    // Icon Container
+    --icon-container-radius: ;
+    --icon-bg: transparent;
+    --icon-bg-hover: transparent;
+    --icon-bg-active: transparent;
+
+    // Status Bar
+    --status-bar-item-color: var(--color-d-gray-50);
+    --status-bar-item-color-hover: var(--color-d-gray-30);
+    --status-bar-item-bg-hover: transparent;
+    --status-bar-item-clickable-color-active: var(--color-d-gray-60);
+    --status-bar-item-clickable-bg-active: transparent;
+
+    // Status Bar: Sync Icon
+    --sync-icon-success: var(--color-d-green-40);
+    --sync-icon-success-hover: var(--color-d-green-30);
+    --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
+
+    --sync-icon-working: var(--color-d-orange-40);
+    --sync-icon-working-hover: var(--color-d-orange-30);
+    --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
 }

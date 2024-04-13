@@ -1,0 +1,15 @@
+/*────────── Window Frame ──────────*/
+
+.titlebar {
+    --titlebar-text-weight: 400;
+
+    .theme-light & {
+        --titlebar-text-color: var(--color-l-gray-60);
+        --titlebar-text-color-focused: var(--color-l-gray-70);
+    }
+
+    .theme-dark & {
+        --titlebar-text-color: var(--color-d-gray-70);
+        --titlebar-text-color-focused: var(--color-d-gray-60);
+    }
+}

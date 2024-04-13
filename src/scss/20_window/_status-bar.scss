@@ -1,0 +1,47 @@
+/*────────── Status Bar ──────────*/
+
+.status-bar-item {
+    color: var(--status-bar-item-color);
+
+    &:hover,
+    &.mod-clickable:hover {
+        color: var(--status-bar-item-color-hover);
+        background: var(--status-bar-item-bg-hover);
+    }
+
+    &.mod-clickable:active {
+        color: var(--status-bar-item-clickable-color-active);
+        background: var(--status-bar-item-clickable-bg-active);
+    }
+
+    // Sync Icon
+    &.plugin-sync {
+        &:hover {
+            background: var(--status-bar-item-bg-hover);
+        }
+
+        .mod-success {
+            color: var(--sync-icon-success);
+
+            &:hover {
+                color: var(--sync-icon-success-hover);
+            }
+
+            &:active {
+                color: var(--sync-icon-success-active)
+            }
+        }
+
+        .mod-working {
+            color: var(--sync-icon-working);
+
+            &:hover {
+                color: var(--sync-icon-working-active);
+            }
+
+            &:active {
+                color: var(--sync-icon-working-active)
+            }
+        }
+    }
+}
