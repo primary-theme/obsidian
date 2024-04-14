@@ -1,5 +1,9 @@
 /*────────── Divider ──────────*/
 
+.workspace-leaf-resize-handle {
+    --divider-vertical-height: calc(100% - var(--header-height));
+}
+
 .theme-light {
     --divider-color: var(--background-modifier-border);
     --divider-color-hover: var(--background-modifier-border-hover);

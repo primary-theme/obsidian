@@ -52,4 +52,15 @@
             }
         }
     }
+
+    &.mod-left {
+        &:before {
+            border-bottom: none;
+        }
+    
+        border: 1px solid var(--divider-color);
+        border-top-right-radius: var(--radius-m);
+        border-bottom-right-radius: var(--radius-m);
+        margin-bottom: var(--size-4-2);
+    }
 }
