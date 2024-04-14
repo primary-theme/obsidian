@@ -20,5 +20,8 @@
 @use '30_components/tab';
 
 @use '40_editor/file';
+@use '40_editor/link';
+@use '40_editor/pmr-emphasis';
+@use '40_editor/tag';
 
 @use '70_community-plugins/calendar-liam-cain';

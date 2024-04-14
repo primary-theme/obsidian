@@ -6,6 +6,7 @@ body {
   --font-monospace-theme: "Cascadia Code";
   font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
   --bold-weight: 600;
+  --h1-weight: 600;
 }
 
 /*────────── Shape ──────────*/
@@ -20,6 +21,10 @@ body {
   --button-inset-shadow-size: 2px;
   --header-height: 48px;
   --workspace-margin-bottom: 8px;
+  --file-tab-gap: 0px;
+  --file-border-radius: var(--radius-l);
+  --file-tab-separator-visibility: visible;
+  --close-button-radius: var(--radius-l);
 }
 
 /*───────────────────────────────────
@@ -95,7 +100,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     your own liking.
 */
 .theme-light {
-  --highlight-mix-blend-mode: darken;
   --mono-rgb-0: var(--color-l-black-rgb);
   --mono-rgb-100: var(--color-l-gray-rgb);
   --color-red-rgb: 228, 87, 78;
@@ -195,7 +199,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--background-modifier-border-hover);
   --file-header-border: 1px solid var(--background-modifier-border);
+  --indentation-guide-color: var(--background-modifier-border);
+  --indentation-guide-color-active: var(--background-modifier-border-focus);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -207,12 +215,13 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 */
 .theme-light {
   --non-alternating-color: var(--color-l-gray-70);
+  --non-alternating-color-hover-active: var(--color-l-gray-60);
   --alternating-color-1: var(--color-l-yellow-30);
-  --alternating-color-1-hover-active: var(--color-l-yellow-10);
+  --alternating-color-1-hover-active: var(--color-l-yellow-40);
   --alternating-color-2: var(--color-l-red-30);
-  --alternating-color-2-hover-active: var(--color-l-red-10);
+  --alternating-color-2-hover-active: var(--color-l-red-40);
   --alternating-color-3: var(--color-l-blue-30);
-  --alternating-color-3-hover-active: var(--color-l-blue-10);
+  --alternating-color-3-hover-active: var(--color-l-blue-40);
   --icon-container-radius: ;
   --icon-bg: transparent;
   --icon-bg-hover: transparent;
@@ -234,9 +243,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --sync-icon-working: var(--color-l-orange-10);
   --sync-icon-working-hover: var(--color-l-orange-20);
   --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
-  --modal-background: var(--background-primary);
   --modal-border-color: var(--background-modifier-border-hover);
   --modal-radius: var(--radius-xl);
+  --prompt-border-color: var(--background-modifier-border-hover);
   --settings-nav-group-title-color: var(--color-l-gray-70);
   --settings-nav-item-text-color: var(--color-l-gray-110);
   --settings-nav-item-text-color-hover: var(--color-l-gray-110);
@@ -248,6 +257,27 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                                inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
                                0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+  --link-unresolved-color: var(--color-l-gray-80);
+  --link-unresolved-color-hover: var(--color-l-gray-70);
+  --link-unresolved-color-active: var(--color-l-gray-90);
+  --link-color: var(--color-l-yellow-30);
+  --link-color-hover: var(--color-l-yellow-20);
+  --link-color-active: var(--color-l-yellow-40);
+  --link-external-color: var(--color-l-green-30);
+  --link-external-color-hover: var(--color-l-green-20);
+  --link-external-color-active: var(--color-l-green-40);
+  --bold-color: var(--color-l-red-30);
+  --italic-color: var(--color-l-blue-30);
+  --strikethrough-color: var(--text-faint);
+  --tag-size: var(--font-smaller);
+  --tag-color: var(--color-l-blue-40);
+  --tag-color-hover: var(--color-l-blue-30);
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --tag-background: var(--color-l-gray-20);
+  --tag-background-hover: var(--color-l-gray-10);
+  --tag-border-color: none;
+  --tag-border-color-hover: none;
 }
 
 /*───────────────────────────────────
@@ -323,7 +353,6 @@ and CONTRIBUTION page ↴
     your own liking.
 */
 .theme-dark {
-  --highlight-mix-blend-mode: lighten;
   --mono-rgb-0: var(--color-d-black-rgb);
   --mono-rgb-100: var(--color-d-white-rgb);
   --color-red-rgb: 228, 87, 78;
@@ -388,9 +417,9 @@ and CONTRIBUTION page ↴
   --interactive-accent-hover: var(--color-accent-2);
   --background-modifier-hover: var(--color-d-gray-100);
   --background-modifier-active-hover: var(--color-d-gray-70);
-  --background-modifier-border: var(--color-d-gray-80);
-  --background-modifier-border-hover: var(--color-d-gray-70);
-  --background-modifier-border-focus: var(--color-d-gray-90);
+  --background-modifier-border: var(--color-d-gray-70);
+  --background-modifier-border-hover: var(--color-d-gray-60);
+  --background-modifier-border-focus: var(--color-d-gray-80);
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
@@ -423,6 +452,11 @@ and CONTRIBUTION page ↴
   --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--background-modifier-border-hover);
+  --file-header-border: 1px solid var(--background-modifier-border);
+  --indentation-guide-color: var(--background-modifier-border);
+  --indentation-guide-color-active: var(--background-modifier-border-focus);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -433,6 +467,7 @@ and CONTRIBUTION page ↴
 */
 .theme-dark {
   --non-alternating-color: var(--color-d-gray-60);
+  --non-alternating-color-hover-active: var(--color-d-gray-70);
   --alternating-color-1: var(--color-d-yellow-30);
   --alternating-color-1-hover-active: var(--color-d-yellow-40);
   --alternating-color-2: var(--color-d-red-30);
@@ -474,11 +509,35 @@ and CONTRIBUTION page ↴
   --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
                                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
                                   0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
+  --link-unresolved-color: var(--color-d-gray-40);
+  --link-unresolved-color-hover: var(--color-d-gray-30);
+  --link-unresolved-color-active: var(--color-d-gray-50);
+  --link-color: var(--color-d-yellow-30);
+  --link-color-hover: var(--color-d-yellow-20);
+  --link-color-active: var(--color-d-yellow-40);
+  --link-external-color: var(--color-d-green-30);
+  --link-external-color-hover: var(--color-d-green-20);
+  --link-external-color-active: var(--color-d-green-40);
+  --bold-color: var(--color-d-red-30);
+  --italic-color: var(--color-d-blue-30);
+  --strikethrough-color: var(--text-faint);
 }
 
 /*────────── Icons ──────────*/
 body {
   --clickable-icon-radius: var(--radius-s);
+}
+
+.clickable-icon:hover {
+  color: var(--icon-color-hover);
+  background: transparent;
+  cursor: pointer;
+}
+.clickable-icon:active {
+  background: transparent;
+}
+.clickable-icon.has-active-menu {
+  background: transparent;
 }
 
 .theme-light {
@@ -1059,18 +1118,13 @@ svg.vault {
 }
 
 /*────────── Divider ──────────*/
-.workspace-leaf-resize-handle {
-  --divider-vertical-height: calc(100% - var(--header-height));
-}
-
-.theme-light {
-  --divider-color: var(--background-modifier-border);
-  --divider-color-hover: var(--background-modifier-border-hover);
-}
-
-.theme-dark {
-  --divider-color: var(--background-modifier-border);
-  --divider-color-hover: var(--background-modifier-border-hover);
+.workspace-split.mod-horizontal > .workspace-leaf-resize-handle {
+  bottom: calc(var(--workspace-margin-bottom) + var(--file-border-radius));
+  --divider-vertical-height: calc(
+                                  100% - calc(var(--header-height) + var(--workspace-margin-bottom)) - calc(var(--file-border-radius) * 2)
+                                  );
+  --divider-color: transparent;
+  border-radius: var(--radius-l);
 }
 
 /*────────── Ribbon ──────────*/
@@ -1105,8 +1159,8 @@ svg.vault {
 }
 .workspace-ribbon.mod-left {
   border: 1px solid var(--divider-color);
-  border-top-right-radius: var(--radius-m);
-  border-bottom-right-radius: var(--radius-m);
+  border-top-right-radius: var(--file-border-radius);
+  border-bottom-right-radius: var(--file-border-radius);
   margin-bottom: var(--size-4-2);
 }
 .workspace-ribbon.mod-left:before {
@@ -1221,6 +1275,21 @@ svg.vault {
 }
 
 /*────────── Window Frame ──────────*/
+.workspace,
+.workspace-ribbon.mod-left.is-collapsed,
+.mod-left-split .workspace-tabs .workspace-leaf,
+.mod-right-split .workspace-tabs .workspace-leaf,
+.mod-left-split,
+.mod-vertical .workspace-tab-container,
+.mod-vertical,
+.workspace-split.mod-vertical,
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.mod-root .workspace-tabs .workspace-leaf,
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-left:before {
+  background: var(--titlebar-background);
+}
+
 .titlebar {
   --titlebar-text-weight: 400;
 }
@@ -1316,20 +1385,6 @@ input[type=checkbox]:hover {
   box-shadow: var(--button-shadow);
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-control {
-  display: none;
-}
-
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div {
-  display: none;
-}
-
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info::after {
-  content: "Accent Colors are not customizable in Primary. Though, in the future, through the Style Settings plugin, tons of color and style customizations will be available. Premium Palettes will also be released.";
-  font-size: var(--font-ui-small);
-  color: var(--text-error);
-}
-
 body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(20) > div.setting-item-info > div.setting-item-description::after {
   content: "Translucent Window is not yet supported in Primary. Things may look like they are broken.";
   display: flex;
@@ -1369,30 +1424,14 @@ body {
 }
 
 /*────────── File ──────────*/
-.workspace,
-.workspace-ribbon.mod-left.is-collapsed,
-.mod-left-split .workspace-tabs .workspace-leaf,
-.mod-right-split .workspace-tabs .workspace-leaf,
-.mod-left-split,
-.mod-vertical .workspace-tab-container,
-.mod-vertical,
-.workspace-split.mod-vertical,
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-.mod-root .workspace-tabs .workspace-leaf,
-.workspace-ribbon.mod-left,
-.workspace-ribbon.mod-left:before {
-  background: var(--titlebar-background);
-}
-
-.mod-vertical .workspace-tabs {
-  padding-left: var(--size-4-1);
-  padding-right: var(--size-4-1);
-}
-
 .mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);
-  border-radius: var(--radius-l);
+  border-radius: var(--file-border-radius);
   margin-bottom: var(--workspace-margin-bottom);
+}
+.mod-root .workspace-tabs.mod-top-left-space, .mod-root .workspace-tabs.mod-top-right-space, .mod-root .workspace-tabs.mod-top-left-space.mod-top-right-space {
+  margin-left: var(--workspace-margin-bottom);
+  margin-right: var(--workspace-margin-bottom);
 }
 .mod-root .workspace-tab-header-container {
   border-bottom: none;
@@ -1400,11 +1439,24 @@ body {
   transition: padding-bottom none;
 }
 .mod-root .workspace-tab-header-container-inner {
-  gap: var(--size-4-1);
+  gap: var(--file-tab-gap);
+  padding-top: var(--button-axis-offset);
   padding-bottom: var(--button-axis-offset);
 }
 .mod-root .workspace-tab-header {
   --tab-radius-active: var(--radius-m);
+}
+.workspace .mod-root .workspace-tab-header {
+  padding-bottom: 0px;
+}
+.mod-root .workspace-tab-header-inner::after {
+  visibility: var(--file-tab-separator-visibility);
+  transform: none;
+}
+.mod-root .workspace-tab-header .workspace-tab-header-inner-close-button {
+  padding: 0;
+  border-radius: var(--close-button-radius);
+  cursor: pointer;
 }
 .mod-root .workspace-tab-header.is-active {
   background: var(--tab-active-bg);
@@ -1417,40 +1469,97 @@ body {
 .mod-root .workspace-tab-header.is-active:nth-child(3n+1) {
   border: 1px solid var(--alternating-color-1);
 }
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-icon {
+  color: var(--alternating-color-1);
+}
 .mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-title {
   color: var(--alternating-color-1);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button {
+  color: var(--alternating-color-1);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-1);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-1-hover-active);
 }
 .mod-root .workspace-tab-header.is-active:nth-child(3n+2) {
   border: 1px solid var(--alternating-color-2);
 }
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-icon {
+  color: var(--alternating-color-2);
+}
 .mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-title {
   color: var(--alternating-color-2);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button {
+  color: var(--alternating-color-2);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-2);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-2-hover-active);
 }
 .mod-root .workspace-tab-header.is-active:nth-child(3n+3) {
   border: 1px solid var(--alternating-color-3);
 }
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-icon {
+  color: var(--alternating-color-3);
+}
 .mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-title {
   color: var(--alternating-color-3);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button {
+  color: var(--alternating-color-3);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-3);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-3-hover-active);
 }
 .mod-root .workspace-tab-header:not(.is-active) {
   color: var(--icon-color);
   border: 1px solid transparent;
-  transition: border, box-shadow, transform var(--button-anim);
+  transition: border, border-color, box-shadow, transform var(--button-anim);
 }
 .mod-root .workspace-tab-header:not(.is-active):hover {
+  color: var(--icon-color-hover);
+  border-color: transparent;
   background: var(--tab-bg);
   transform: translateY(calc(-1 * var(--button-axis-offset)));
   cursor: pointer;
+}
+.mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background: transparent;
 }
 .mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
   color: var(--icon-color-hover);
 }
 .mod-root .workspace-tab-header:not(.is-active):active {
+  color: var(--icon-color-focused);
+  border-color: transparent;
   background: var(--tab-bg);
   transform: translateY(var(--button-axis-offset));
 }
 .mod-root .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
   color: var(--icon-color-active);
+}
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button:hover {
+  color: var(--text-on-accent);
+  background: var(--non-alternating-color);
+}
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button:active {
+  color: var(--text-on-accent);
+  background: var(--non-alternating-color-hover-active);
 }
 
 .view-header {
@@ -1459,7 +1568,131 @@ body {
 .view-header button {
   margin-bottom: 0;
 }
+.view-header button:hover, .view-header button:active {
+  padding: var(--size-2-2) var(--size-2-3);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+1):hover {
+  color: var(--alternating-color-1);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+1).mod-filled:hover svg {
+  fill: var(--alternating-color-1);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+1):active, .view-header .view-action.clickable-icon:nth-child(3n+1).has-active-menu {
+  color: var(--alternating-color-1-hover-active);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+1).mod-filled:active svg {
+  fill: var(--alternating-color-1-hover-active);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+2):hover {
+  color: var(--alternating-color-2);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+2).mod-filled:hover svg {
+  fill: var(--alternating-color-2);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+2):active, .view-header .view-action.clickable-icon:nth-child(3n+2).has-active-menu {
+  color: var(--alternating-color-2-hover-active);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+2).mod-filled:active svg {
+  fill: var(--alternating-color-2-hover-active);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+3):hover {
+  color: var(--alternating-color-3);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+3).mod-filled:hover svg {
+  fill: var(--alternating-color-3);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+3):active, .view-header .view-action.clickable-icon:nth-child(3n+3).has-active-menu {
+  color: var(--alternating-color-3-hover-active);
+}
+.view-header .view-action.clickable-icon:nth-child(3n+3).mod-filled:hover svg {
+  fill: var(--alternating-color-3-hover-active);
+}
 
+/*────────── Link ──────────*/
+body {
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-unresolved-opacity: 1;
+  --link-unresolved-decoration: none;
+  --link-unresolved-decoration-hover: none;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: none;
+}
+
+.internal-link {
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
+}
+.internal-link.is-unresolved {
+  color: var(--link-unresolved-color);
+  border-bottom: 1px solid var(--link-unresolved-color);
+}
+.internal-link.is-unresolved:hover {
+  color: var(--link-unresolved-color-hover);
+  border-color: var(--link-unresolved-color-hover);
+}
+.internal-link.is-unresolved:hover:active, .internal-link.is-unresolved:active {
+  color: var(--link-unresolved-color-active);
+  border-color: var(--link-unresolved-color-active);
+}
+.internal-link:hover {
+  color: var(--link-color-hover);
+  border-color: var(--link-color-hover);
+}
+.internal-link:hover:active, .internal-link:active {
+  color: var(--link-color-active);
+  border-color: var(--link-color-active);
+}
+
+.cm-hmd-internal-link {
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
+}
+.cm-hmd-internal-link .is-unresolved .cm-underline {
+  color: var(--link-unresolved-color);
+  border-bottom: 1px solid var(--link-unresolved-color);
+}
+.cm-hmd-internal-link .is-unresolved .cm-underline:hover {
+  color: var(--link-unresolved-color-hover);
+  border-color: var(--link-unresolved-color-hover);
+}
+.cm-hmd-internal-link .is-unresolved .cm-underline:hover:active, .cm-hmd-internal-link .is-unresolved .cm-underline:active {
+  color: var(--link-unresolved-color-active);
+  border-color: var(--link-unresolved-color-active);
+}
+.cm-hmd-internal-link:hover {
+  color: var(--link-color-hover);
+  border-color: var(--link-color-hover);
+}
+.cm-hmd-internal-link:hover:active, .cm-hmd-internal-link:active {
+  color: var(--link-color-active);
+  border-color: var(--link-color-active);
+}
+
+.external-link,
+.cm-link .cm-underline {
+  color: var(--link-external-color);
+  border-bottom: 1px solid var(--link-external-color);
+}
+.external-link:hover,
+.cm-link .cm-underline:hover {
+  color: var(--link-external-color-hover);
+  border-color: var(--link-external-color-hover);
+}
+.external-link:hover:active, .external-link:active,
+.cm-link .cm-underline:hover:active,
+.cm-link .cm-underline:active {
+  color: var(--link-external-color-active);
+  border-color: var(--link-external-color-active);
+}
+
+/*────────── Emphasis ──────────*/
+.cm-strikethrough,
+p del {
+  color: var(--strikethrough-color);
+}
+
+/*────────── Tag ──────────*/
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
 .workspace-tab-header[data-type=calendar] svg.lucide-calendar-check {
   background-color: currentColor;

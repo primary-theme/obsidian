@@ -1,0 +1,94 @@
+/*────────── Link ──────────*/
+
+body {
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-unresolved-opacity: 1;
+    --link-unresolved-decoration: none;
+    --link-unresolved-decoration-hover: none;
+    --link-external-decoration: none;
+    --link-external-decoration-hover: none;
+}
+
+// Internal Link
+.internal-link {
+    &.is-unresolved {
+        color: var(--link-unresolved-color);
+        border-bottom: 1px solid var(--link-unresolved-color);
+
+        &:hover {
+            color: var(--link-unresolved-color-hover);
+            border-color: var(--link-unresolved-color-hover);
+        }
+
+        &:hover:active,
+        &:active {
+            color: var(--link-unresolved-color-active);
+            border-color: var(--link-unresolved-color-active);
+        }
+    }
+
+    color: var(--link-color);
+    border-bottom: 1px solid var(--link-color);
+
+    &:hover {
+        color: var(--link-color-hover);
+        border-color: var(--link-color-hover);
+    }
+
+    &:hover:active,
+    &:active {
+        color: var(--link-color-active);
+        border-color: var(--link-color-active);
+    }
+}
+
+.cm-hmd-internal-link {
+    & .is-unresolved .cm-underline {
+        color: var(--link-unresolved-color);
+        border-bottom: 1px solid var(--link-unresolved-color);
+
+        &:hover {
+            color: var(--link-unresolved-color-hover);
+            border-color: var(--link-unresolved-color-hover);
+        }
+
+        &:hover:active,
+        &:active {
+            color: var(--link-unresolved-color-active);
+            border-color: var(--link-unresolved-color-active);
+        }
+    }
+
+    color: var(--link-color);
+    border-bottom: 1px solid var(--link-color);
+
+    &:hover {
+        color: var(--link-color-hover);
+        border-color: var(--link-color-hover);
+    }
+
+    &:hover:active,
+    &:active {
+        color: var(--link-color-active);
+        border-color: var(--link-color-active);
+    }
+}
+
+// External Link
+.external-link,
+.cm-link .cm-underline {
+    color: var(--link-external-color);
+    border-bottom: 1px solid var(--link-external-color);
+
+    &:hover {
+        color: var(--link-external-color-hover);
+        border-color: var(--link-external-color-hover);
+    }
+
+    &:hover:active,
+    &:active {
+        color: var(--link-external-color-active);
+        border-color: var(--link-external-color-active);
+    }
+}

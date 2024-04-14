@@ -1,15 +1,13 @@
 /*────────── Divider ──────────*/
+// TODO Fix Dividers showing up on multiple active files
 
-.workspace-leaf-resize-handle {
-    --divider-vertical-height: calc(100% - var(--header-height));
-}
-
-.theme-light {
-    --divider-color: var(--background-modifier-border);
-    --divider-color-hover: var(--background-modifier-border-hover);
-}
-
-.theme-dark {
-    --divider-color: var(--background-modifier-border);
-    --divider-color-hover: var(--background-modifier-border-hover);
+// .mod-horizontal .workspace-tabs.mod-top > .workspace-leaf-resize-handle,
+// .workspace-split .mod-active > .workspace-leaf-resize-handle,
+.workspace-split.mod-horizontal > .workspace-leaf-resize-handle {
+    bottom: calc(var(--workspace-margin-bottom) + var(--file-border-radius));
+    --divider-vertical-height: calc(
+                                    100% - calc(var(--header-height) + var(--workspace-margin-bottom)) - calc(var(--file-border-radius) * 2)
+                                    );
+    --divider-color: transparent;
+    border-radius: var(--radius-l);
 }

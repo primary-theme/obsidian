@@ -1,5 +1,20 @@
 /*────────── Window Frame ──────────*/
 
+.workspace,
+.workspace-ribbon.mod-left.is-collapsed,
+.mod-left-split .workspace-tabs .workspace-leaf,
+.mod-right-split .workspace-tabs .workspace-leaf,
+.mod-left-split,
+.mod-vertical .workspace-tab-container,
+.mod-vertical,
+.workspace-split.mod-vertical,
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.mod-root .workspace-tabs .workspace-leaf,
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-left:before {
+    background: var(--titlebar-background);
+}
+
 .titlebar {
     --titlebar-text-weight: 400;
 
