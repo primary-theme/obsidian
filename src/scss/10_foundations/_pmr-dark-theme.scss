@@ -297,9 +297,9 @@ and CONTRIBUTION page ↴
     --settings-nav-item-bg-active: var(--color-d-gray-130);
 
     // Sidebar Tab
-    --sidebar-tab-bg: transparent;
-    --sidebar-tab-active-bg: var(--color-d-gray-90);
-    --sidebar-tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
+    --tab-bg: transparent;
+    --tab-active-bg: var(--color-d-gray-90);
+    --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
                                     inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
                                     0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
 }

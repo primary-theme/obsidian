@@ -19,6 +19,7 @@ body {
   --radius-xs: 2px;
   --button-inset-shadow-size: 2px;
   --header-height: 48px;
+  --workspace-margin-bottom: 8px;
 }
 
 /*───────────────────────────────────
@@ -194,6 +195,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
+  --file-header-border: 1px solid var(--background-modifier-border);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -241,9 +243,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --settings-nav-item-bg-hover: var(--color-l-gray-20);
   --settings-nav-item-text-color-active: var(--color-l-gray-70);
   --settings-nav-item-bg-active: var(--color-l-gray-60);
-  --sidebar-tab-bg: transparent;
-  --sidebar-tab-active-bg: var(--color-l-gray-20);
-  --sidebar-tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
+  --tab-bg: transparent;
+  --tab-active-bg: var(--color-l-gray-20);
+  --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                                inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
                                0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
 }
@@ -467,9 +469,9 @@ and CONTRIBUTION page ↴
   --settings-nav-item-bg-hover: var(--color-d-gray-90);
   --settings-nav-item-text-color-active: var(--color-d-gray-70);
   --settings-nav-item-bg-active: var(--color-d-gray-130);
-  --sidebar-tab-bg: transparent;
-  --sidebar-tab-active-bg: var(--color-d-gray-90);
-  --sidebar-tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
+  --tab-bg: transparent;
+  --tab-active-bg: var(--color-d-gray-90);
+  --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
                                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
                                   0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
 }
@@ -1057,6 +1059,10 @@ svg.vault {
 }
 
 /*────────── Divider ──────────*/
+.workspace-leaf-resize-handle {
+  --divider-vertical-height: calc(100% - var(--header-height));
+}
+
 .theme-light {
   --divider-color: var(--background-modifier-border);
   --divider-color-hover: var(--background-modifier-border-hover);
@@ -1097,6 +1103,15 @@ svg.vault {
 .workspace-ribbon .side-dock-actions .clickable-icon:nth-child(3n+3):active, .workspace-ribbon .side-dock-settings .clickable-icon:nth-child(3n+3):active {
   color: var(--alternating-color-3-hover-active);
 }
+.workspace-ribbon.mod-left {
+  border: 1px solid var(--divider-color);
+  border-top-right-radius: var(--radius-m);
+  border-bottom-right-radius: var(--radius-m);
+  margin-bottom: var(--size-4-2);
+}
+.workspace-ribbon.mod-left:before {
+  border-bottom: none;
+}
 
 /*────────── Scrollbar ──────────*/
 .theme-light {
@@ -1114,7 +1129,7 @@ svg.vault {
 /*────────── Sidebar ──────────*/
 .mod-left-split .workspace-tab-header,
 .mod-right-split .workspace-tab-header {
-  background: var(--sidebar-tab-bg);
+  background: var(--tab-bg);
   border: 1px solid transparent;
   border-radius: var(--radius-m);
   transition: border, box-shadow, transform var(--button-anim);
@@ -1125,13 +1140,13 @@ svg.vault {
 }
 .mod-left-split .workspace-tab-header.is-active,
 .mod-right-split .workspace-tab-header.is-active {
-  background: var(--sidebar-tab-active-bg);
-  box-shadow: var(--sidebar-tab-active-shadow);
+  background: var(--tab-active-bg);
+  box-shadow: var(--tab-active-shadow);
   transition: background none none;
 }
 .mod-left-split .workspace-tab-header.is-active:hover,
 .mod-right-split .workspace-tab-header.is-active:hover {
-  background: var(--sidebar-tab-active-bg);
+  background: var(--tab-active-bg);
 }
 .mod-left-split .workspace-tab-header.is-active:nth-child(3n+1),
 .mod-right-split .workspace-tab-header.is-active:nth-child(3n+1) {
@@ -1168,7 +1183,7 @@ svg.vault {
 }
 .mod-left-split .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
 .mod-right-split .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-  background: var(--sidebar-tab-bg);
+  background: var(--tab-bg);
 }
 
 /*────────── Status Bar ──────────*/
@@ -1351,6 +1366,98 @@ body {
   --tab-stacked-text-transform: rotate(0deg);
   --tab-stacked-text-writing-mode: vertical-lr;
   --tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+/*────────── File ──────────*/
+.workspace,
+.workspace-ribbon.mod-left.is-collapsed,
+.mod-left-split .workspace-tabs .workspace-leaf,
+.mod-right-split .workspace-tabs .workspace-leaf,
+.mod-left-split,
+.mod-vertical .workspace-tab-container,
+.mod-vertical,
+.workspace-split.mod-vertical,
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.mod-root .workspace-tabs .workspace-leaf,
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-left:before {
+  background: var(--titlebar-background);
+}
+
+.mod-vertical .workspace-tabs {
+  padding-left: var(--size-4-1);
+  padding-right: var(--size-4-1);
+}
+
+.mod-root .workspace-leaf-content {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-l);
+  margin-bottom: var(--workspace-margin-bottom);
+}
+.mod-root .workspace-tab-header-container {
+  border-bottom: none;
+  padding-bottom: var(--size-4-1);
+  transition: padding-bottom none;
+}
+.mod-root .workspace-tab-header-container-inner {
+  gap: var(--size-4-1);
+  padding-bottom: var(--button-axis-offset);
+}
+.mod-root .workspace-tab-header {
+  --tab-radius-active: var(--radius-m);
+}
+.mod-root .workspace-tab-header.is-active {
+  background: var(--tab-active-bg);
+  box-shadow: var(--tab-active-shadow);
+  transition: border, box-shadow, transform var(--button-anim);
+}
+.mod-root .workspace-tab-header.is-active::before, .mod-root .workspace-tab-header.is-active::after {
+  visibility: hidden;
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) {
+  border: 1px solid var(--alternating-color-1);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-title {
+  color: var(--alternating-color-1);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) {
+  border: 1px solid var(--alternating-color-2);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-title {
+  color: var(--alternating-color-2);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) {
+  border: 1px solid var(--alternating-color-3);
+}
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-title {
+  color: var(--alternating-color-3);
+}
+.mod-root .workspace-tab-header:not(.is-active) {
+  color: var(--icon-color);
+  border: 1px solid transparent;
+  transition: border, box-shadow, transform var(--button-anim);
+}
+.mod-root .workspace-tab-header:not(.is-active):hover {
+  background: var(--tab-bg);
+  transform: translateY(calc(-1 * var(--button-axis-offset)));
+  cursor: pointer;
+}
+.mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+  color: var(--icon-color-hover);
+}
+.mod-root .workspace-tab-header:not(.is-active):active {
+  background: var(--tab-bg);
+  transform: translateY(var(--button-axis-offset));
+}
+.mod-root .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
+  color: var(--icon-color-active);
+}
+
+.view-header {
+  --header-height: 40px;
+}
+.view-header button {
+  margin-bottom: 0;
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/

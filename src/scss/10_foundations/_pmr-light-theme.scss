@@ -229,6 +229,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
+
+    // File
+    --file-header-border: 1px solid var(--background-modifier-border);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -297,9 +300,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --settings-nav-item-bg-active: var(--color-l-gray-60);
 
     // Sidebar Tab
-    --sidebar-tab-bg: transparent;
-    --sidebar-tab-active-bg: var(--color-l-gray-20);
-    --sidebar-tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
+    --tab-bg: transparent;
+    --tab-active-bg: var(--color-l-gray-20);
+    --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
                                  0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
 }
