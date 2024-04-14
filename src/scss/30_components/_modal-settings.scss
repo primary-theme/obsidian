@@ -42,20 +42,20 @@
     }
 }
 
-// Disables Color Accent picker and adds Caution
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-control {
-        display: none;
-}
+// TODO Disables Color Accent picker and adds Caution
+// body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-control {
+//         display: none;
+// }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div {
-    display: none;
-}
+// body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info > div {
+//     display: none;
+// }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info::after {
-    content: "Accent Colors are not customizable in Primary. Though, in the future, through the Style Settings plugin, tons of color and style customizations will be available. Premium Palettes will also be released.";
-    font-size: var(--font-ui-small);
-    color: var(--text-error);
-}
+// body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(2) > div.setting-item-info::after {
+//     content: "Accent Colors are not customizable in Primary. Though, in the future, through the Style Settings plugin, tons of color and style customizations will be available. Premium Palettes will also be released.";
+//     font-size: var(--font-ui-small);
+//     color: var(--text-error);
+// }
 
 // Add warning in Translucent Window toggle
 

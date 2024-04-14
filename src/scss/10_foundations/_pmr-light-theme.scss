@@ -93,7 +93,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 */
 
 .theme-light {
-    --highlight-mix-blend-mode: darken;
+    // --highlight-mix-blend-mode: darken;
 
     --mono-rgb-0: var(--color-l-black-rgb);
     --mono-rgb-100: var(--color-l-gray-rgb);
@@ -230,8 +230,16 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
 
+    // Divider
+    --divider-color: var(--background-modifier-border);
+    --divider-color-hover: var(--background-modifier-border-hover);
+
     // File
     --file-header-border: 1px solid var(--background-modifier-border);
+
+    // Indentation Guide
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: var(--background-modifier-border-focus);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -245,12 +253,13 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 .theme-light {
     // Alternating Color for Ribbon, Tabs, and Note Tabs
     --non-alternating-color: var(--color-l-gray-70);
+    --non-alternating-color-hover-active: var(--color-l-gray-60);
     --alternating-color-1: var(--color-l-yellow-30);
-    --alternating-color-1-hover-active: var(--color-l-yellow-10);
+    --alternating-color-1-hover-active: var(--color-l-yellow-40);
     --alternating-color-2: var(--color-l-red-30);
-    --alternating-color-2-hover-active: var(--color-l-red-10);
+    --alternating-color-2-hover-active: var(--color-l-red-40);
     --alternating-color-3: var(--color-l-blue-30);
-    --alternating-color-3-hover-active: var(--color-l-blue-10);
+    --alternating-color-3-hover-active: var(--color-l-blue-40);
 
     // Icon Container
     --icon-container-radius: ;
@@ -284,9 +293,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
 
     // Modals
-    --modal-background: var(--background-primary);
     --modal-border-color: var(--background-modifier-border-hover);
     --modal-radius: var(--radius-xl);
+
+    // Prompt
+    --prompt-border-color: var(--background-modifier-border-hover);
 
     // Settings
     --settings-nav-group-title-color: var(--color-l-gray-70);
@@ -305,4 +316,37 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
                                  0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+    
+    // Links
+    --link-unresolved-color: var(--color-l-gray-80);
+    --link-unresolved-color-hover: var(--color-l-gray-70);
+    --link-unresolved-color-active: var(--color-l-gray-90);
+
+    --link-color: var(--color-l-yellow-30);
+    --link-color-hover: var(--color-l-yellow-20);
+    --link-color-active: var(--color-l-yellow-40);
+
+    --link-external-color: var(--color-l-green-30);
+    --link-external-color-hover: var(--color-l-green-20);
+    --link-external-color-active: var(--color-l-green-40);
+
+    // Bold
+    --bold-color: var(--color-l-red-30);
+
+    // Italic
+    --italic-color: var(--color-l-blue-30);
+
+    // Strikethrough
+    --strikethrough-color: var(--text-faint);
+
+    // Tag
+    --tag-size: var(--font-smaller);
+    --tag-color: var(--color-l-blue-40);
+    --tag-color-hover: var(--color-l-blue-30);
+    --tag-decoration: none;
+    --tag-decoration-hover: none;
+    --tag-background: var(--color-l-gray-20);
+    --tag-background-hover: var(--color-l-gray-10);
+    --tag-border-color: none;
+    --tag-border-color-hover: none;
 }

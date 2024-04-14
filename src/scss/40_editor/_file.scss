@@ -1,47 +1,70 @@
 /*────────── File ──────────*/
 
-.workspace,
-.workspace-ribbon.mod-left.is-collapsed,
-.mod-left-split .workspace-tabs .workspace-leaf,
-.mod-right-split .workspace-tabs .workspace-leaf,
-.mod-left-split,
-.mod-vertical .workspace-tab-container,
-.mod-vertical,
-.workspace-split.mod-vertical,
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-.mod-root .workspace-tabs .workspace-leaf,
-.workspace-ribbon.mod-left,
-.workspace-ribbon.mod-left:before {
-    background: var(--titlebar-background);
-}
+// .mod-vertical .workspace-tabs {
+//     padding-left: var(--size-4-2);
+//     padding-right: var(--size-4-2);
+// }
 
-.mod-vertical .workspace-tabs {
-    padding-left: var(--size-4-1);
-    padding-right: var(--size-4-1);
-}
+// .workspace-split.mod-left-split.is-sidedock-collapsed {
+//     padding-left: var(--size-4-2);
+//     padding-right: var(--size-4-2);
+// }
 
 .mod-root .workspace {
-    // .mod-root Tabs
+    // File
     &-leaf-content {
         border: 1px solid var(--background-modifier-border);
-        border-radius: var(--radius-l);
+        border-radius: var(--file-border-radius);
+        // margin-top: var(--button-axis-offset);
         margin-bottom: var(--workspace-margin-bottom);
     }
 
+    &-tabs.mod-top-left-space,
+    &-tabs.mod-top-right-space,
+    &-tabs.mod-top-left-space.mod-top-right-space {
+        margin-left: var(--workspace-margin-bottom);
+        margin-right: var(--workspace-margin-bottom);
+    }
+    
+    // .mod-root Tabs
     &-tab-header-container {
         border-bottom: none;
         padding-bottom: var(--size-4-1);
         transition: padding-bottom none;
 
         &-inner {
-            gap: var(--size-4-1);
+            gap: var(--file-tab-gap);
+            // overflow-x: visible;
+            padding-top: var(--button-axis-offset);
             padding-bottom: var(--button-axis-offset);
+
+            // &:hover::after {
+            //     transform: none;
+            // }
         }
     }
 
     &-tab-header {
         --tab-radius-active: var(--radius-m);
 
+        // Aligns content inside Tabs
+        .workspace & {
+            padding-bottom: 0px;
+        }
+
+        // Tab Separator
+        &-inner::after {
+            visibility: var(--file-tab-separator-visibility);
+            transform: none;
+        }
+
+        .workspace-tab-header-inner-close-button {
+            padding: 0;
+            border-radius: var(--close-button-radius);
+            cursor: pointer;
+        }
+
+        // Active Tabs
         &.is-active {
             &::before,
             &::after {
@@ -54,38 +77,101 @@
     
             &:nth-child(3n+1) {
                 border: 1px solid var(--alternating-color-1);
+
+                .workspace-tab-header-inner-icon {
+                    color: var(--alternating-color-1);
+                }
                 
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-1);
+                }
+
+                .workspace-tab-header-inner-close-button {
+                    color: var(--alternating-color-1);
+
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1);
+                    }
+
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1-hover-active);
+                    }
                 }
             }
     
             &:nth-child(3n+2) {
                 border: 1px solid var(--alternating-color-2);
+
+                .workspace-tab-header-inner-icon {
+                    color: var(--alternating-color-2);
+                }
     
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-2);
+                }
+
+                .workspace-tab-header-inner-close-button {
+                    color: var(--alternating-color-2);
+
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2);
+                    }
+
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2-hover-active);
+                    }
                 }
             }
     
             &:nth-child(3n+3) {
                 border: 1px solid var(--alternating-color-3);
+
+                .workspace-tab-header-inner-icon {
+                    color: var(--alternating-color-3);
+                }
     
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-3);
                 }
+
+                .workspace-tab-header-inner-close-button {
+                    color: var(--alternating-color-3);
+
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3);
+                    }
+
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3-hover-active);
+                    }
+                }
             }
         }
 
+        // Non-active Tabs
         &:not(.is-active) {
             color: var(--icon-color);
+            // border: 1px solid var(--icon-color);
             border: 1px solid transparent;
-            transition: border, box-shadow, transform var(--button-anim);
+            transition: border, border-color, box-shadow, transform var(--button-anim);
             
             &:hover {
+                color: var(--icon-color-hover);
+                // border-color: var(--icon-color-hover);
+                border-color: transparent;
                 background: var(--tab-bg);
                 transform: translateY(calc(-1 * var(--button-axis-offset)));
                 cursor: pointer;
+
+                .workspace-tab-header-inner {
+                    background: transparent;
+                }
 
                 .workspace-tab-header-inner-title {
                     color: var(--icon-color-hover);
@@ -93,11 +179,26 @@
             }
 
             &:active {
+                color: var(--icon-color-focused);
+                // border-color: var(--icon-color-focused);
+                border-color: transparent;
                 background: var(--tab-bg);
                 transform: translateY(var(--button-axis-offset));
 
                 .workspace-tab-header-inner-title {
                     color: var(--icon-color-active);
+                }
+            }
+
+            .workspace-tab-header-inner-close-button {
+                &:hover {
+                    color: var(--text-on-accent);
+                    background: var(--non-alternating-color);
+                }
+
+                &:active {
+                    color: var(--text-on-accent);
+                    background: var(--non-alternating-color-hover-active);
                 }
             }
         }
@@ -110,5 +211,70 @@
 
     button {
         margin-bottom: 0;
+
+        &:hover,
+        &:active {
+            padding: var(--size-2-2) var(--size-2-3);
+        }
+    }
+
+    // Right Side Action Icons
+    .view-action.clickable-icon {
+        &:nth-child(3n+1) {
+            &:hover {
+                color: var(--alternating-color-1);
+            }
+
+            &.mod-filled:hover svg {
+                fill: var(--alternating-color-1);
+            }
+
+            &:active,
+            &.has-active-menu {
+                color: var(--alternating-color-1-hover-active);
+            }
+
+            &.mod-filled:active svg {
+                fill: var(--alternating-color-1-hover-active);
+            }
+        }
+
+        &:nth-child(3n+2) {
+            &:hover {
+                color: var(--alternating-color-2);
+            }
+
+            &.mod-filled:hover svg {
+                fill: var(--alternating-color-2);
+            }
+
+            &:active,
+            &.has-active-menu {
+                color: var(--alternating-color-2-hover-active);
+            }
+
+            &.mod-filled:active svg {
+                fill: var(--alternating-color-2-hover-active);
+            }
+        }
+
+        &:nth-child(3n+3) {
+            &:hover {
+                color: var(--alternating-color-3);
+            }
+
+            &.mod-filled:hover svg {
+                fill: var(--alternating-color-3);
+            }
+
+            &:active,
+            &.has-active-menu {
+                color: var(--alternating-color-3-hover-active);
+            }
+
+            &.mod-filled:hover svg {
+                fill: var(--alternating-color-3-hover-active);
+            }
+        }
     }
 }

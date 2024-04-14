@@ -11,5 +11,8 @@ body {
     --button-inset-shadow-size: 2px;
     --header-height: 48px;
     --workspace-margin-bottom: 8px;
-    // --tab-radius-active: var(--radius-m);
+    --file-tab-gap: 0px;
+    --file-border-radius: var(--radius-l);
+    --file-tab-separator-visibility: visible;
+    --close-button-radius: var(--radius-l);
 }

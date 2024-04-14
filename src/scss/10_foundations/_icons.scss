@@ -4,6 +4,23 @@ body {
     --clickable-icon-radius: var(--radius-s);
 }
 
+.clickable-icon {
+    &:hover {
+        color: var(--icon-color-hover);
+        background: transparent;
+        cursor: pointer;
+    }
+
+    &:active {
+        // color: va
+        background: transparent;
+    }
+
+    &.has-active-menu {
+        background: transparent;
+    }
+}
+
 // Classic Light Theme
 .theme-light {
     --icon-color: var(--color-l-gray-80);
