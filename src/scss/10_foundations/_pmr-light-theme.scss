@@ -319,16 +319,31 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     
     // Links
     --link-unresolved-color: var(--color-l-gray-80);
+    --link-unresolved-border: 1px solid var(--color-l-gray-80);
+
     --link-unresolved-color-hover: var(--color-l-gray-70);
+    --link-unresolved-border-hover: 1px solid var(--color-l-gray-70);
+
     --link-unresolved-color-active: var(--color-l-gray-90);
+    --link-unresolved-border-active: 1px solid var(--color-l-gray-90);
 
     --link-color: var(--color-l-yellow-30);
+    --link-border: 1px solid var(--color-l-yellow-30);
+
     --link-color-hover: var(--color-l-yellow-20);
+    --link-border-hover: 1px solid var(--color-l-yellow-20);
+    
     --link-color-active: var(--color-l-yellow-40);
+    --link-border-active: 1px solid var(--color-l-yellow-40);
 
     --link-external-color: var(--color-l-green-30);
+    --link-external-border: 1px solid var(--color-l-green-30);
+    
     --link-external-color-hover: var(--color-l-green-20);
+    --link-external-border-hover: 1px solid var(--color-l-green-20);
+    
     --link-external-color-active: var(--color-l-green-40);
+    --link-external-border-active: 1px solid var(--color-l-green-40);
 
     // Bold
     --bold-color: var(--color-l-red-30);
