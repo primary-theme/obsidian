@@ -15,7 +15,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 .theme-light {
     color-scheme: light;
     // Grayscale
-    --color-l-gray-10: hsla(34, 39%, 94%, 1);
+    --color-l-gray-10: hsla(36, 38%, 98%, 1);
     --color-l-gray-20: hsla(35, 36%, 95%, 1);
     --color-l-gray-30: hsla(35, 37%, 92%, 1);
     --color-l-gray-40: hsla(34, 34%, 90%, 1);
@@ -240,6 +240,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Indentation Guide
     --indentation-guide-color: var(--background-modifier-border);
     --indentation-guide-color-active: var(--background-modifier-border-focus);
+
+    // Blockquotes
+    --blockquote-border-thickness: 2px;
+    --blockquote-border-color: var(--background-modifier-border);
+    --blockquote-background-color: var(--color-l-gray-10);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -338,10 +343,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --link-external-color: var(--color-l-green-30);
     --link-external-border: 1px solid var(--color-l-green-30);
-    
+
     --link-external-color-hover: var(--color-l-green-20);
     --link-external-border-hover: 1px solid var(--color-l-green-20);
-    
+
     --link-external-color-active: var(--color-l-green-40);
     --link-external-border-active: 1px solid var(--color-l-green-40);
 
@@ -352,7 +357,17 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --italic-color: var(--color-l-blue-30);
 
     // Strikethrough
-    --strikethrough-color: var(--text-faint);
+    --strikethrough-color: var(--color-l-gray-80);
+
+    // Inline Code
+    --inline-code-color: var(--color-l-red-10);
+    --inline-code-bg: var(--color-l-gray-50);
+
+    // Bold, Italic
+    --bold-italic-color: var(--color-l-gray-140);
+
+    // Bold, Italic, Strikethrough
+    --bold-italic-strikethrough-color: var(--color-l-gray-90);
 
     // Tag
     --tag-size: var(--font-smaller);
