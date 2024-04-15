@@ -1,6 +1,8 @@
 /*────────── Link ──────────*/
+// TODO Dark Mode not showing border-bottom on links
 
-body {
+.theme-light,
+.theme-dark {
     --link-decoration: none;
     --link-decoration-hover: none;
     --link-unresolved-opacity: 1;

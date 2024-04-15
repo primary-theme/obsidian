@@ -42,7 +42,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 ───────────────────────────────────*/
 .theme-light {
   color-scheme: light;
-  --color-l-gray-10: hsla(34, 39%, 94%, 1);
+  --color-l-gray-10: hsla(36, 38%, 98%, 1);
   --color-l-gray-20: hsla(35, 36%, 95%, 1);
   --color-l-gray-30: hsla(35, 37%, 92%, 1);
   --color-l-gray-40: hsla(34, 34%, 90%, 1);
@@ -204,6 +204,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --file-header-border: 1px solid var(--background-modifier-border);
   --indentation-guide-color: var(--background-modifier-border);
   --indentation-guide-color-active: var(--background-modifier-border-focus);
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color: var(--background-modifier-border);
+  --blockquote-background-color: var(--color-l-gray-10);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -277,7 +280,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --link-external-border-active: 1px solid var(--color-l-green-40);
   --bold-color: var(--color-l-red-30);
   --italic-color: var(--color-l-blue-30);
-  --strikethrough-color: var(--text-faint);
+  --strikethrough-color: var(--color-l-gray-80);
+  --inline-code-color: var(--color-l-red-10);
+  --inline-code-bg: var(--color-l-gray-50);
+  --bold-italic-color: var(--color-l-gray-140);
+  --bold-italic-strikethrough-color: var(--color-l-gray-90);
   --tag-size: var(--font-smaller);
   --tag-color: var(--color-l-blue-40);
   --tag-color-hover: var(--color-l-blue-30);
@@ -519,17 +526,39 @@ and CONTRIBUTION page ↴
                                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
                                   0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
   --link-unresolved-color: var(--color-d-gray-40);
+  --link-unresolved-border: var(--color-d-gray-40);
   --link-unresolved-color-hover: var(--color-d-gray-30);
+  --link-unresolved-border-hover: var(--color-d-gray-30);
   --link-unresolved-color-active: var(--color-d-gray-50);
+  --link-unresolved-border-active: var(--color-d-gray-50);
   --link-color: var(--color-d-yellow-30);
+  --link-border: var(--color-d-yellow-30);
   --link-color-hover: var(--color-d-yellow-20);
+  --link-border-hover: var(--color-d-yellow-20);
   --link-color-active: var(--color-d-yellow-40);
+  --link-border-active: var(--color-d-yellow-40);
   --link-external-color: var(--color-d-green-30);
+  --link-external-border: var(--color-d-green-30);
   --link-external-color-hover: var(--color-d-green-20);
+  --link-external-border-hover: var(--color-d-green-20);
   --link-external-color-active: var(--color-d-green-40);
+  --link-external-border-active: var(--color-d-green-40);
   --bold-color: var(--color-d-red-30);
   --italic-color: var(--color-d-blue-30);
-  --strikethrough-color: var(--text-faint);
+  --strikethrough-color: var(--color-d-gray-50);
+  --inline-code-color: var(--color-d-red-10);
+  --inline-code-bg: var(--color-d-gray-120);
+  --bold-italic-color: var(--color-d-gray-10);
+  --bold-italic-strikethrough-color: var(--color-d-gray-40);
+  --tag-size: var(--font-smaller);
+  --tag-color: var(--color-d-blue-20);
+  --tag-color-hover: var(--color-d-blue-10);
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --tag-background: var(--color-d-gray-100);
+  --tag-background-hover: var(--color-d-gray-90);
+  --tag-border-color: none;
+  --tag-border-color-hover: none;
 }
 
 /*────────── Icons ──────────*/
@@ -1652,7 +1681,8 @@ body {
 }
 
 /*────────── Link ──────────*/
-body {
+.theme-light,
+.theme-dark {
   --link-decoration: none;
   --link-decoration-hover: none;
   --link-unresolved-opacity: 1;
@@ -1733,6 +1763,32 @@ body {
 .cm-strikethrough,
 p del {
   color: var(--strikethrough-color);
+}
+
+.cm-s-obsidian span.cm-inline-code,
+code {
+  color: var(--inline-code-color);
+  background: var(--inline-code-bg);
+}
+
+span.cm-quote.cm-strong {
+  color: var(--bold-color);
+}
+span.cm-quote.cm-em {
+  color: var(--italic-color);
+}
+span.cm-quote.cm-strikethrough {
+  color: var(--strikethrough-color);
+}
+span.cm-quote.cm-inline-code {
+  color: var(--inline-code-color);
+  background: var(--inline-code-bg);
+}
+span.cm-quote.cm-strong.cm-em {
+  color: var(--bold-italic-color);
+}
+span.cm-quote.cm-strong.cm-em.cm-strikethrough {
+  color: var(--bold-italic-strikethrough-color);
 }
 
 /*────────── Tag ──────────*/
