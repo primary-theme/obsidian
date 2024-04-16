@@ -416,9 +416,22 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --drag-ghost-text-color: var(--text-on-accent);
 
     // Toggle
+    // TODO Toggle extended styling
     --toggle-thumb-color: var(--color-l-gray-10);
     --toggle-bg: var(--color-l-gray-60);
     --toggle-bg-enabled: var(--color-l-green-30);
     --toggle-thumb-shadow: ;
     --toggle-shadow: ;
+
+    // Slider
+    // --slider-thumb-border-width: 1px;
+    // --slider-thumb-border-color: var(--background-modifier-border);
+    // --slider-thumb-height: 18px;
+    // --slider-thumb-width: 18px;
+    // --slider-thumb-y: -6px;
+    // --slider-thumb-radius: 50%;
+    // --slider-s-thumb-size: 15px;
+    // --slider-s-thumb-position: -5px;
+    // --slider-track-background: var(--background-modifier-border-focus);
+    // --slider-track-height: 4px;
 }
