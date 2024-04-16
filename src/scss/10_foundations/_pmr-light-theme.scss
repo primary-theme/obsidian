@@ -321,6 +321,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
                                  0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+
+    // Inline Title
+    --inline-title-color: var(--color-l-gray-140);
     
     // Links
     --link-unresolved-color: var(--color-l-gray-80);
@@ -379,4 +382,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tag-background-hover: var(--color-l-gray-10);
     --tag-border-color: none;
     --tag-border-color-hover: none;
+    
+    // Embed
+    --embed-title-color: var(--color-l-gray-90);
 }

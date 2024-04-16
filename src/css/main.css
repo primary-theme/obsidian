@@ -25,6 +25,7 @@ body {
   --file-border-radius: var(--radius-l);
   --file-tab-separator-visibility: visible;
   --close-button-radius: var(--radius-l);
+  --hr-thickness: 1px;
 }
 
 /*───────────────────────────────────
@@ -260,6 +261,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                                inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
                                0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+  --inline-title-color: var(--color-l-gray-140);
   --link-unresolved-color: var(--color-l-gray-80);
   --link-unresolved-border: 1px solid var(--color-l-gray-80);
   --link-unresolved-color-hover: var(--color-l-gray-70);
@@ -294,6 +296,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --tag-background-hover: var(--color-l-gray-10);
   --tag-border-color: none;
   --tag-border-color-hover: none;
+  --embed-title-color: var(--color-l-gray-90);
 }
 
 /*───────────────────────────────────
@@ -525,6 +528,7 @@ and CONTRIBUTION page ↴
   --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
                                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
                                   0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
+  --inline-title-color: var(--color-l-gray-140);
   --link-unresolved-color: var(--color-d-gray-40);
   --link-unresolved-border: var(--color-d-gray-40);
   --link-unresolved-color-hover: var(--color-d-gray-30);
@@ -1760,38 +1764,93 @@ body {
 }
 
 /*────────── Emphasis ──────────*/
-.cm-strikethrough,
-p del {
+.theme-light .cm-strikethrough,
+.theme-light p del,
+.theme-dark .cm-strikethrough,
+.theme-dark p del {
   color: var(--strikethrough-color);
 }
-
-.cm-s-obsidian span.cm-inline-code,
-code {
+.theme-light .cm-s-obsidian span.cm-inline-code,
+.theme-light code,
+.theme-dark .cm-s-obsidian span.cm-inline-code,
+.theme-dark code {
   color: var(--inline-code-color);
   background: var(--inline-code-bg);
 }
-
-span.cm-quote.cm-strong {
-  color: var(--bold-color);
-}
-span.cm-quote.cm-em {
-  color: var(--italic-color);
-}
-span.cm-quote.cm-strikethrough {
-  color: var(--strikethrough-color);
-}
-span.cm-quote.cm-inline-code {
-  color: var(--inline-code-color);
-  background: var(--inline-code-bg);
-}
-span.cm-quote.cm-strong.cm-em {
+.theme-light .cm-strong .cm-em,
+.theme-light strong em,
+.theme-light em strong,
+.theme-dark .cm-strong .cm-em,
+.theme-dark strong em,
+.theme-dark em strong {
   color: var(--bold-italic-color);
 }
-span.cm-quote.cm-strong.cm-em.cm-strikethrough {
+.theme-light span.cm-quote.cm-strong,
+.theme-dark span.cm-quote.cm-strong {
+  color: var(--bold-color);
+}
+.theme-light span.cm-quote.cm-em,
+.theme-dark span.cm-quote.cm-em {
+  color: var(--italic-color);
+}
+.theme-light span.cm-quote.cm-strikethrough,
+.theme-dark span.cm-quote.cm-strikethrough {
+  color: var(--strikethrough-color);
+}
+.theme-light span.cm-quote.cm-inline-code,
+.theme-dark span.cm-quote.cm-inline-code {
+  color: var(--inline-code-color);
+  background: var(--inline-code-bg);
+}
+.theme-light span.cm-quote.cm-strong.cm-em,
+.theme-dark span.cm-quote.cm-strong.cm-em {
+  color: var(--bold-italic-color);
+}
+.theme-light span.cm-quote.cm-strong.cm-em.cm-strikethrough,
+.theme-dark span.cm-quote.cm-strong.cm-em.cm-strikethrough {
   color: var(--bold-italic-strikethrough-color);
 }
 
 /*────────── Tag ──────────*/
+/*────────── Embed ──────────*/
+body {
+  --embed-background: var(--background-primary-alt);
+  --embed-padding: 0;
+  --embed-border-top: 1px solid var(--background-modifier-border);
+  --embed-border-right: 1px solid var(--background-modifier-border);
+  --embed-border-bottom: 1px solid var(--background-modifier-border);
+  --embed-border-left: 1px solid var(--background-modifier-border);
+  --embed-border-radius: var(--radius-l);
+  --embed-title-margin-bottom: var(--size-4-2);
+  --embed-title-border: 1px solid var(--background-modifier-border);
+}
+
+.markdown-embed {
+  border-radius: var(--embed-border-radius);
+}
+.markdown-embed > div:not(.embed-title, .markdown-embed-link) {
+  margin-left: var(--size-4-4);
+  margin-right: var(--size-4-4);
+}
+
+.embed-title {
+  text-wrap: wrap;
+  color: var(--embed-title-color);
+  padding: var(--size-4-2) var(--size-4-4);
+  border-bottom: var(--embed-title-border);
+  margin-bottom: var(--embed-title-margin-bottom);
+}
+.embed-title:empty {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.markdown-embed-link {
+  margin-top: var(--size-4-1);
+  margin-right: var(--size-4-1);
+}
+
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
 .workspace-tab-header[data-type=calendar] svg.lucide-calendar-check {
   background-color: currentColor;

@@ -315,6 +315,8 @@ and CONTRIBUTION page ↴
                                     inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
                                     0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
 
+    --inline-title-color: var(--color-l-gray-140);
+
     // Links
     --link-unresolved-color: var(--color-d-gray-40);
     --link-unresolved-border: var(--color-d-gray-40);
