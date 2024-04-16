@@ -1541,6 +1541,7 @@ body {
   background: var(--toggle-bg-enabled);
 }
 
+/*────────── Slider ──────────*/
 /*────────── File ──────────*/
 .mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);
