@@ -1,0 +1,9 @@
+/*────────── Toggle ──────────*/
+
+.checkbox-container {
+    background: var(--toggle-bg);
+    
+    &.is-enabled {
+        background: var(--toggle-bg-enabled);
+    }
+}

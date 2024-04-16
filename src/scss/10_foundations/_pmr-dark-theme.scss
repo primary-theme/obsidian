@@ -377,4 +377,15 @@ and CONTRIBUTION page ↴
 
     // Embed
     --embed-title-color: var(--color-d-gray-50);
+
+    // Drag Ghost
+    --drag-ghost-background: var(--interactive-accent);
+    --drag-ghost-text-color: var(--text-on-accent);
+
+    // Toggle
+    --toggle-thumb-color: var(--color-d-gray-10);
+    --toggle-bg: var(--color-d-gray-60);
+    --toggle-bg-enabled: var(--color-d-green-40);
+    --toggle-thumb-shadow: ;
+    --toggle-shadow: ;
 }

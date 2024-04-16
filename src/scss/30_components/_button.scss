@@ -1,6 +1,5 @@
 /*────────── Button ──────────*/
 // TODO .mod-destructive
-// TODO .modal-close-button
 button {
     // For stylized use of Inter and Cascadia Code:
     font-feature-settings:
@@ -58,5 +57,34 @@ button {
 
     &:active {
         box-shadow: var(--button-shadow-active)
+    }
+}
+
+.modal-close-button {
+    width: var(--modal-close-button-size);
+    height: auto;
+
+    font-size: calc(var(--modal-close-button-size));
+    line-height: var(--modal-close-button-size);
+    color: var(--text-on-accent);
+
+    background: var(--background-modifier-error);
+    border-radius: var(--close-button-radius);
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    &::before {
+        font-weight: 200;
+    }
+
+    &:hover {
+        color: var(--text-on-accent);
+        background: var(--background-modifier-error-hover);
+    }
+    
+    &:active {
+        opacity: 0.8;
     }
 }

@@ -28,6 +28,7 @@ body {
   --hr-thickness: 1px;
   --inline-code-radius: var(--radius-s);
   --copy-code-button-radius: var(--radius-m);
+  --modal-close-button-size: 20px;
 }
 
 /*───────────────────────────────────
@@ -168,11 +169,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-hover: var(--color-l-gray-30);
   --background-modifier-active-hover: var(--color-l-gray-60);
   --background-modifier-border: var(--color-l-gray-60);
-  --background-modifier-border-hover: var(--color-l-gray-70);
-  --background-modifier-border-focus: var(--color-l-gray-80);
+  --background-modifier-border-hover: var(--color-l-gray-80);
+  --background-modifier-border-focus: var(--color-l-gray-70);
   --background-modifier-error-rgb: var(--color-red-rgb);
-  --background-modifier-error: var(--color-l-red-20);
-  --background-modifier-error-hover: var(--color-l-red-30);
+  --background-modifier-error: var(--color-l-red-30);
+  --background-modifier-error-hover: var(--color-l-red-20);
   --background-modifier-success-rgb: var(--color-green-rgb);
   --background-modifier-success: var(--color-l-green-20);
   --background-modifier-message: var(--color-l-gray-130);
@@ -308,6 +309,13 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --metadata-tag-bg-3: var(--color-l-alpha-blue);
   --embed-title-color: var(--color-l-gray-90);
   --code-radius: var(--radius-l);
+  --drag-ghost-background: var(--interactive-accent);
+  --drag-ghost-text-color: var(--text-on-accent);
+  --toggle-thumb-color: var(--color-l-gray-10);
+  --toggle-bg: var(--color-l-gray-60);
+  --toggle-bg-enabled: var(--color-l-green-30);
+  --toggle-thumb-shadow: ;
+  --toggle-shadow: ;
 }
 
 /*───────────────────────────────────
@@ -575,6 +583,13 @@ and CONTRIBUTION page ↴
   --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
   --tag-shadow-active: none;
   --embed-title-color: var(--color-d-gray-50);
+  --drag-ghost-background: var(--interactive-accent);
+  --drag-ghost-text-color: var(--text-on-accent);
+  --toggle-thumb-color: var(--color-d-gray-10);
+  --toggle-bg: var(--color-d-gray-60);
+  --toggle-bg-enabled: var(--color-d-green-40);
+  --toggle-thumb-shadow: ;
+  --toggle-shadow: ;
 }
 
 /*────────── Icons ──────────*/
@@ -1393,6 +1408,29 @@ button.mod-cta:active, button.mod-cta:focus {
   box-shadow: var(--button-shadow-active);
 }
 
+.modal-close-button {
+  width: var(--modal-close-button-size);
+  height: auto;
+  font-size: calc(var(--modal-close-button-size));
+  line-height: var(--modal-close-button-size);
+  color: var(--text-on-accent);
+  background: var(--background-modifier-error);
+  border-radius: var(--close-button-radius);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.modal-close-button::before {
+  font-weight: 200;
+}
+.modal-close-button:hover {
+  color: var(--text-on-accent);
+  background: var(--background-modifier-error-hover);
+}
+.modal-close-button:active {
+  opacity: 0.8;
+}
+
 /*────────── Checkbox ──────────*/
 input[type=checkbox]:hover {
   cursor: pointer;
@@ -1493,6 +1531,14 @@ body {
   --tab-stacked-text-transform: rotate(0deg);
   --tab-stacked-text-writing-mode: vertical-lr;
   --tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+/*────────── Toggle ──────────*/
+.checkbox-container {
+  background: var(--toggle-bg);
+}
+.checkbox-container.is-enabled {
+  background: var(--toggle-bg-enabled);
 }
 
 /*────────── File ──────────*/
