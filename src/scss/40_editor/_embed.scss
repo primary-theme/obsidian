@@ -1,0 +1,41 @@
+/*────────── Embed ──────────*/
+
+body {
+    --embed-background: var(--background-primary-alt);
+    --embed-padding: 0;
+    --embed-border-top: 1px solid var(--background-modifier-border);
+    --embed-border-right: 1px solid var(--background-modifier-border);
+    --embed-border-bottom: 1px solid var(--background-modifier-border);
+    --embed-border-left: 1px solid var(--background-modifier-border);
+    --embed-border-radius: var(--radius-l);
+    --embed-title-margin-bottom: var(--size-4-2);
+    --embed-title-border: 1px solid var(--background-modifier-border);
+}
+
+.markdown-embed {
+    border-radius: var(--embed-border-radius);
+
+    > div:not(.embed-title, .markdown-embed-link) {
+        margin-left: var(--size-4-4);
+        margin-right: var(--size-4-4);
+    }
+}
+
+.embed-title {
+    text-wrap: wrap;
+    color: var(--embed-title-color);
+    padding: var(--size-4-2) var(--size-4-4);
+    border-bottom: var(--embed-title-border);
+    margin-bottom: var(--embed-title-margin-bottom);
+
+    &:empty {
+        padding: 0;
+        border: none;
+        margin: 0;
+    }
+}
+
+.markdown-embed-link {
+    margin-top: var(--size-4-1);
+    margin-right: var(--size-4-1);
+}

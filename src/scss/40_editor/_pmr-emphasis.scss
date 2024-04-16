@@ -2,43 +2,53 @@
 // TODO Make emphasis rendering in Reading Mode consistent
 // TODO Some emphasis in Dark Mode needs higher specificity
 
-// Strikethrough
-.cm-strikethrough,
-p del {
-    color: var(--strikethrough-color);
-}
-
-// Code
-.cm-s-obsidian span.cm-inline-code,
-code {
-    color: var(--inline-code-color);
-    background: var(--inline-code-bg);
-}
-
-// Blockquote Writing Mode Overrides
-span.cm-quote {
-    &.cm-strong {
-        color: var(--bold-color);
-    }
-
-    &.cm-em {
-        color: var(--italic-color);
-    }
-
-    &.cm-strikethrough {
+.theme-light,
+.theme-dark {    
+    // Strikethrough
+    .cm-strikethrough,
+    p del {
         color: var(--strikethrough-color);
     }
 
-    &.cm-inline-code {
+    // Code
+    .cm-s-obsidian span.cm-inline-code,
+    code {
         color: var(--inline-code-color);
         background: var(--inline-code-bg);
     }
 
-    &.cm-strong.cm-em {
+    // Bold, Italic
+    .cm-strong .cm-em,
+    strong em,
+    em strong {
         color: var(--bold-italic-color);
     }
 
-    &.cm-strong.cm-em.cm-strikethrough {
-        color: var(--bold-italic-strikethrough-color);
+    // Blockquote Writing Mode Overrides
+    span.cm-quote {
+        &.cm-strong {
+            color: var(--bold-color);
+        }
+    
+        &.cm-em {
+            color: var(--italic-color);
+        }
+    
+        &.cm-strikethrough {
+            color: var(--strikethrough-color);
+        }
+    
+        &.cm-inline-code {
+            color: var(--inline-code-color);
+            background: var(--inline-code-bg);
+        }
+    
+        &.cm-strong.cm-em {
+            color: var(--bold-italic-color);
+        }
+    
+        &.cm-strong.cm-em.cm-strikethrough {
+            color: var(--bold-italic-strikethrough-color);
+        }
     }
 }
