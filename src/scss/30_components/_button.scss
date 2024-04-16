@@ -39,3 +39,24 @@ button {
         background: var(--interactive-accent-hover);
     }
 }
+
+.markdown-rendered button.copy-code-button,
+.markdown-source-view.mod-cm6 .code-block-flair {
+    color: var(--text-on-accent);
+    background: var(--interactive-accent);
+    padding: var(--size-4-1)
+             var(--size-4-2)
+             calc(var(--size-4-1) + var(--button-inset-shadow-size))
+             var(--size-4-2);
+    border-radius: var(--copy-code-button-radius);
+    box-shadow: var(--button-shadow);
+
+    &:hover {
+        background: var(--interactive-accent-hover);
+        cursor: pointer;
+    }
+
+    &:active {
+        box-shadow: var(--button-shadow-active)
+    }
+}

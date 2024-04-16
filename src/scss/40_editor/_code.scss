@@ -1,0 +1,7 @@
+/*────────── Code ──────────*/
+
+// Ensures that inline code radius
+// is not as big as code block radius
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+    border-radius: var(--inline-code-radius);
+}

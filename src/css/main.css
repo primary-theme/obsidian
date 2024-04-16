@@ -26,6 +26,8 @@ body {
   --file-tab-separator-visibility: visible;
   --close-button-radius: var(--radius-l);
   --hr-thickness: 1px;
+  --inline-code-radius: var(--radius-s);
+  --copy-code-button-radius: var(--radius-m);
 }
 
 /*───────────────────────────────────
@@ -305,6 +307,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --metadata-tag-color-3: var(--color-l-blue-40);
   --metadata-tag-bg-3: var(--color-l-alpha-blue);
   --embed-title-color: var(--color-l-gray-90);
+  --code-radius: var(--radius-l);
 }
 
 /*───────────────────────────────────
@@ -1372,6 +1375,24 @@ button.mod-cta:active, button.mod-cta:focus {
   background: var(--interactive-accent-hover);
 }
 
+.markdown-rendered button.copy-code-button,
+.markdown-source-view.mod-cm6 .code-block-flair {
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+  padding: var(--size-4-1) var(--size-4-2) calc(var(--size-4-1) + var(--button-inset-shadow-size)) var(--size-4-2);
+  border-radius: var(--copy-code-button-radius);
+  box-shadow: var(--button-shadow);
+}
+.markdown-rendered button.copy-code-button:hover,
+.markdown-source-view.mod-cm6 .code-block-flair:hover {
+  background: var(--interactive-accent-hover);
+  cursor: pointer;
+}
+.markdown-rendered button.copy-code-button:active,
+.markdown-source-view.mod-cm6 .code-block-flair:active {
+  box-shadow: var(--button-shadow-active);
+}
+
 /*────────── Checkbox ──────────*/
 input[type=checkbox]:hover {
   cursor: pointer;
@@ -1871,6 +1892,11 @@ body {
 .markdown-embed-link {
   margin-top: var(--size-4-1);
   margin-right: var(--size-4-1);
+}
+
+/*────────── Code ──────────*/
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+  border-radius: var(--inline-code-radius);
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
