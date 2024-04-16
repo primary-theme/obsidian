@@ -394,6 +394,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --metadata-tag-bg-3: var(--color-l-alpha-blue);
     
     // Embed
+    --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
     --embed-title-color: var(--color-l-gray-90);
 
     // Code

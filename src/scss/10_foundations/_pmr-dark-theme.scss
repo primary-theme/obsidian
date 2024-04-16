@@ -241,6 +241,11 @@ and CONTRIBUTION page ↴
     // Indentation Guide
     --indentation-guide-color: var(--background-modifier-border);
     --indentation-guide-color-active: var(--background-modifier-border-focus);
+
+    // Blockquotes
+    --blockquote-border-thickness: 2px;
+    --blockquote-border-color: var(--background-modifier-border);
+    --blockquote-background-color: var(--color-d-gray-110);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -376,6 +381,7 @@ and CONTRIBUTION page ↴
     --tag-shadow-active: none;
 
     // Embed
+    --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
     --embed-title-color: var(--color-d-gray-50);
 
     // Drag Ghost

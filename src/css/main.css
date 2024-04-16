@@ -307,6 +307,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --metadata-tag-bg-2: var(--color-l-alpha-red);
   --metadata-tag-color-3: var(--color-l-blue-40);
   --metadata-tag-bg-3: var(--color-l-alpha-blue);
+  --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
   --embed-title-color: var(--color-l-gray-90);
   --code-radius: var(--radius-l);
   --drag-ghost-background: var(--interactive-accent);
@@ -495,6 +496,9 @@ and CONTRIBUTION page ↴
   --file-header-border: 1px solid var(--background-modifier-border);
   --indentation-guide-color: var(--background-modifier-border);
   --indentation-guide-color-active: var(--background-modifier-border-focus);
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color: var(--background-modifier-border);
+  --blockquote-background-color: var(--color-d-gray-110);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -582,6 +586,7 @@ and CONTRIBUTION page ↴
   --tag-border-color-hover: rgba(var(--color-d-black-rgb), 0.6);
   --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
   --tag-shadow-active: none;
+  --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
   --embed-title-color: var(--color-d-gray-50);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
@@ -1904,7 +1909,7 @@ body {
 
 /*────────── Embed ──────────*/
 body {
-  --embed-background: var(--background-primary-alt);
+  --embed-background: var(--embed-bg-color-mix);
   --embed-padding: 0;
   --embed-border-top: 1px solid var(--background-modifier-border);
   --embed-border-right: 1px solid var(--background-modifier-border);
