@@ -64,32 +64,32 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --color-l-red-20: hsla(4, 72%, 55%, 1);
   --color-l-red-30: hsla(4, 56%, 48%, 1);
   --color-l-red-40: hsla(4, 72%, 35%, 1);
-  --color-l-alpha-red: hsla(350, 84, 63, 0.2);
+  --color-l-alpha-red: hsla(350, 84%, 63%, 0.2);
   --color-l-orange-10: hsla(26, 70%, 63%, 1);
   --color-l-orange-20: hsla(21, 81%, 59%, 1);
   --color-l-orange-30: hsla(18, 69%, 50%, 1);
   --color-l-orange-40: hsla(18, 96%, 35%, 1);
-  --color-l-alpha-orange: hsla(27, 100, 50, 0.2);
+  --color-l-alpha-orange: hsla(27, 100%, 50%, 0.2);
   --color-l-yellow-10: hsla(43, 71%, 67%, 1);
   --color-l-yellow-20: hsla(43, 83%, 57%, 1);
   --color-l-yellow-30: hsla(40, 79%, 47%, 1);
   --color-l-yellow-40: hsla(40, 98%, 36%, 1);
-  --color-l-alpha-yellow: hsla(44, 100, 50, 0.2);
+  --color-l-alpha-yellow: hsla(44, 100%, 50%, 0.2);
   --color-l-green-10: hsla(154, 47%, 65%, 1);
   --color-l-green-20: hsla(154, 52%, 49%, 1);
   --color-l-green-30: hsla(154, 55%, 39%, 1);
   --color-l-green-40: hsla(159, 65%, 29%, 1);
-  --color-l-alpha-green: hsla(74, 69, 44, 0.2);
+  --color-l-alpha-green: hsla(74, 69%, 44%, 0.2);
   --color-l-blue-10: hsla(199, 39%, 56%, 1);
   --color-l-blue-20: hsla(202, 66%, 46%, 1);
   --color-l-blue-30: hsla(208, 64%, 39%, 1);
   --color-l-blue-40: hsla(212, 95%, 25%, 1);
-  --color-l-alpha-blue: hsla(186, 64, 46, 0.2);
+  --color-l-alpha-blue: hsla(186, 64%, 46%, 0.2);
   --color-l-violet-10: hsla(280, 43%, 76%, 1);
   --color-l-violet-20: hsla(277, 35%, 59%, 1);
   --color-l-violet-30: hsla(275, 37%, 43%, 1);
   --color-l-violet-40: hsla(265, 70%, 30%, 1);
-  --color-l-alpha-violet: hsla(236, 100, 72, 0.2);
+  --color-l-alpha-violet: hsla(236, 100%, 72%, 0.2);
 }
 
 /*────────── Light Theme Override ──────────*/
@@ -287,15 +287,23 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --inline-code-bg: var(--color-l-gray-50);
   --bold-italic-color: var(--color-l-gray-140);
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
-  --tag-size: var(--font-smaller);
-  --tag-color: var(--color-l-blue-40);
-  --tag-color-hover: var(--color-l-blue-30);
-  --tag-decoration: none;
-  --tag-decoration-hover: none;
-  --tag-background: var(--color-l-gray-20);
+  --tag-color: var(--color-l-blue-30);
+  --tag-color-hover: var(--color-l-blue-20);
+  --tag-background: var(--color-l-gray-10);
   --tag-background-hover: var(--color-l-gray-10);
-  --tag-border-color: none;
-  --tag-border-color-hover: none;
+  --tag-border-width: 1px;
+  --tag-border-color: rgba(var(--color-l-black-rgb), 0.2);
+  --tag-border-color-hover: rgba(var(--color-l-black-rgb), 0.3);
+  --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-l-black-rgb), 0.1);
+  --tag-shadow-active: none;
+  --metadata-tag-opacity: 0.7;
+  --metadata-tag-opacity-hover: 1;
+  --metadata-tag-color-1: var(--color-l-yellow-40);
+  --metadata-tag-bg-1: var(--color-l-alpha-yellow);
+  --metadata-tag-color-2: var(--color-l-red-40);
+  --metadata-tag-bg-2: var(--color-l-alpha-red);
+  --metadata-tag-color-3: var(--color-l-blue-40);
+  --metadata-tag-bg-3: var(--color-l-alpha-blue);
   --embed-title-color: var(--color-l-gray-90);
 }
 
@@ -554,15 +562,16 @@ and CONTRIBUTION page ↴
   --inline-code-bg: var(--color-d-gray-120);
   --bold-italic-color: var(--color-d-gray-10);
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
-  --tag-size: var(--font-smaller);
-  --tag-color: var(--color-d-blue-20);
-  --tag-color-hover: var(--color-d-blue-10);
-  --tag-decoration: none;
-  --tag-decoration-hover: none;
+  --tag-color: var(--color-d-blue-30);
+  --tag-color-hover: var(--color-d-blue-20);
   --tag-background: var(--color-d-gray-100);
-  --tag-background-hover: var(--color-d-gray-90);
-  --tag-border-color: none;
-  --tag-border-color-hover: none;
+  --tag-background-hover: var(--color-d-gray-100);
+  --tag-border-width: 1px;
+  --tag-border-color: rgba(var(--color-d-black-rgb), 0.5);
+  --tag-border-color-hover: rgba(var(--color-d-black-rgb), 0.6);
+  --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
+  --tag-shadow-active: none;
+  --embed-title-color: var(--color-d-gray-50);
 }
 
 /*────────── Icons ──────────*/
@@ -1812,6 +1821,19 @@ body {
 }
 
 /*────────── Tag ──────────*/
+body {
+  --tag-radius: var(--font-text-size);
+}
+
+.cm-hashtag,
+.tag {
+  box-shadow: var(--tag-shadow);
+}
+.cm-hashtag:active,
+.tag:active {
+  box-shadow: var(--tag-shadow-active);
+}
+
 /*────────── Embed ──────────*/
 body {
   --embed-background: var(--background-primary-alt);

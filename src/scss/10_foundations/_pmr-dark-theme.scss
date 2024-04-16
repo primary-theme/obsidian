@@ -365,13 +365,16 @@ and CONTRIBUTION page ↴
     --bold-italic-strikethrough-color: var(--color-d-gray-40);
 
     // Tag
-    --tag-size: var(--font-smaller);
-    --tag-color: var(--color-d-blue-20);
-    --tag-color-hover: var(--color-d-blue-10);
-    --tag-decoration: none;
-    --tag-decoration-hover: none;
+    --tag-color: var(--color-d-blue-30);
+    --tag-color-hover: var(--color-d-blue-20);
     --tag-background: var(--color-d-gray-100);
-    --tag-background-hover: var(--color-d-gray-90);
-    --tag-border-color: none;
-    --tag-border-color-hover: none;
+    --tag-background-hover: var(--color-d-gray-100);
+    --tag-border-width: 1px;
+    --tag-border-color: rgba(var(--color-d-black-rgb), 0.5);
+    --tag-border-color-hover: rgba(var(--color-d-black-rgb), 0.6);
+    --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
+    --tag-shadow-active: none;
+
+    // Embed
+    --embed-title-color: var(--color-d-gray-50);
 }

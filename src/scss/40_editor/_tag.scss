@@ -1,3 +1,55 @@
 /*────────── Tag ──────────*/
 
 //  TODO Style Tags
+
+body {
+    --tag-radius: var(--font-text-size);
+}
+
+.cm-hashtag,
+.tag {
+    box-shadow: var(--tag-shadow);
+
+    &:active {
+        box-shadow: var(--tag-shadow-active);
+    }
+}
+
+// .cm-hashtag,
+// .tag {
+//     opacity: var(--tag-opacity);
+
+//     &:hover {
+//         opacity: var(--tag-opacity-hover);
+//     }
+
+//     &:nth-child(3n+1) {
+//         color: var(--tag-color-1);
+//         background: var(--tag-bg-1);
+
+//         &:hover {
+//             color: var(--tag-color-1);
+//             background: var(--tag-bg-1);
+//         }
+//     }
+
+//     &:nth-child(3n+2) {
+//         color: var(--tag-color-2);
+//         background: var(--tag-bg-2);
+
+//         &:hover {
+//             color: var(--tag-color-2);
+//             background: var(--tag-bg-2);
+//         }
+//     }
+
+//     &:nth-child(3n+3) {
+//         color: var(--tag-color-3);
+//         background: var(--tag-bg-3);
+
+//             &:hover {
+//             color: var(--tag-color-3);
+//             background: var(--tag-bg-3);
+//         }
+//     }
+// }
