@@ -183,12 +183,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-modifier-active-hover: var(--color-l-gray-60);
 
     --background-modifier-border: var(--color-l-gray-60);
-    --background-modifier-border-hover: var(--color-l-gray-70);
-    --background-modifier-border-focus: var(--color-l-gray-80);
+    --background-modifier-border-hover: var(--color-l-gray-80);
+    --background-modifier-border-focus: var(--color-l-gray-70);
 
     --background-modifier-error-rgb: var(--color-red-rgb);
-    --background-modifier-error: var(--color-l-red-20);
-    --background-modifier-error-hover: var(--color-l-red-30);
+    --background-modifier-error: var(--color-l-red-30);
+    --background-modifier-error-hover: var(--color-l-red-20);
 
     --background-modifier-success-rgb: var(--color-green-rgb);
     --background-modifier-success: var(--color-l-green-20);
@@ -410,4 +410,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // --code-string: var(--color-l-yellow-30);
     // --code-tag: var(--color-l-yellow-10);
     // --code-value: var(--color-l-green-20);
+
+    // Drag Ghost
+    --drag-ghost-background: var(--interactive-accent);
+    --drag-ghost-text-color: var(--text-on-accent);
+
+    // Toggle
+    --toggle-thumb-color: var(--color-l-gray-10);
+    --toggle-bg: var(--color-l-gray-60);
+    --toggle-bg-enabled: var(--color-l-green-30);
+    --toggle-thumb-shadow: ;
+    --toggle-shadow: ;
 }
