@@ -1872,6 +1872,7 @@ body {
   border-radius: var(--embed-border-radius);
 }
 .markdown-embed > div:not(.embed-title, .markdown-embed-link) {
+  margin-top: var(--size-4-4);
   margin-left: var(--size-4-4);
   margin-right: var(--size-4-4);
 }
