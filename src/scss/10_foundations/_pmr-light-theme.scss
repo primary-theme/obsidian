@@ -248,6 +248,17 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Prompt
     --prompt-border-color: var(--background-modifier-border-focus);
+
+    // Checkbox
+    --checkbox-marker-color: white;
+
+    --checkbox-color: var(--color-l-green-30);
+    --checkbox-color-hover: var(--color-l-green-20);
+
+    --checkbox-border-color: var(--color-l-gray-60);
+    --checkbox-border-color-hover: var(--color-l-gray-70);
+
+    --checklist-done-color: var(--color-l-gray-10);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -421,6 +432,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Checkbox
     --checklist-bg: var(--color-l-gray-10);
+    --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
 
     // Toggle
     // TODO Toggle extended styling
