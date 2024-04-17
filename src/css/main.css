@@ -42,6 +42,10 @@ body {
                               var(--size-4-3)
                               var(--size-4-4)
                               var(--size-4-3);
+  --button-s-padding: var(--size-2-2)
+                      var(--size-4-2)
+                      calc(var(--size-2-2) + var(--button-inset-shadow-size))
+                      var(--size-4-2);
 }
 
 /*───────────────────────────────────
@@ -225,6 +229,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --blockquote-border-color: var(--background-modifier-border);
   --blockquote-background-color: var(--color-l-gray-10);
   --prompt-border-color: var(--background-modifier-border-focus);
+  --checkbox-marker-color: white;
+  --checkbox-color: var(--color-l-green-30);
+  --checkbox-color-hover: var(--color-l-green-20);
+  --checkbox-border-color: var(--color-l-gray-60);
+  --checkbox-border-color-hover: var(--color-l-gray-70);
+  --checklist-done-color: var(--color-l-gray-10);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -327,6 +337,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
   --checklist-bg: var(--color-l-gray-10);
+  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
   --toggle-thumb-color: var(--color-l-gray-10);
   --toggle-bg: var(--color-l-gray-60);
   --toggle-bg-enabled: var(--color-l-green-30);
@@ -361,7 +372,7 @@ and CONTRIBUTION page ↴
   --color-d-gray-100: hsla(31, 18%, 14%, 1);
   --color-d-gray-110: hsla(28, 16%, 13%, 1);
   --color-d-gray-120: hsla(28, 16%, 12%, 1);
-  --color-d-gray-130: hsla(24, 18%, 9%, 1);
+  --color-d-gray-130: hsla(24, 18%, 10%, 1);
   --color-d-gray-140: hsla(32, 21%, 8%, 1);
   --color-d-white-rgb: 255, 255, 255;
   --color-d-gray-rgb: 100, 100, 100;
@@ -460,8 +471,8 @@ and CONTRIBUTION page ↴
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
               0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
               0px 30px 90px rgba(0, 0, 0, 0.2);
-  --background-primary: var(--color-d-gray-90);
-  --background-primary-alt: var(--color-d-gray-100);
+  --background-primary: var(--color-d-gray-100);
+  --background-primary-alt: var(--color-d-gray-110);
   --background-secondary: var(--color-d-gray-120);
   --background-secondary-alt: var(--color-d-gray-120);
   --interactive-normal: var(--color-d-gray-120);
@@ -515,6 +526,12 @@ and CONTRIBUTION page ↴
   --blockquote-border-color: var(--background-modifier-border);
   --blockquote-background-color: var(--color-d-gray-110);
   --prompt-border-color: var(--background-modifier-border-focus);
+  --checkbox-marker-color: white;
+  --checkbox-color: var(--color-d-green-40);
+  --checkbox-color-hover: var(--color-d-green-30);
+  --checkbox-border-color: var(--color-d-gray-70);
+  --checkbox-border-color-hover: var(--color-d-gray-60);
+  --checklist-done-color: var(--color-d-gray-90);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -606,7 +623,8 @@ and CONTRIBUTION page ↴
   --embed-title-color: var(--color-d-gray-50);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
-  --checklist-bg: var(--color-d-gray-100);
+  --checklist-bg: var(--color-d-gray-90);
+  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
   --toggle-thumb-color: var(--color-d-gray-10);
   --toggle-bg: var(--color-d-gray-60);
   --toggle-bg-enabled: var(--color-d-green-40);
@@ -1415,7 +1433,7 @@ button.mod-cta:active, button.mod-cta:focus {
 .markdown-source-view.mod-cm6 .code-block-flair {
   color: var(--text-on-accent);
   background: var(--interactive-accent);
-  padding: var(--button-padding);
+  padding: var(--button-s-padding);
   border-radius: var(--copy-code-button-radius);
   box-shadow: var(--button-shadow);
 }
@@ -1457,29 +1475,11 @@ button.mod-cta:active, button.mod-cta:focus {
 input[type=checkbox]:hover {
   cursor: pointer;
 }
-.theme-light input[type=checkbox] {
-  --checkbox-marker-color: white;
-  --checkbox-color: var(--color-l-green-30);
-  --checkbox-color-hover: var(--color-l-green-20);
-  --checkbox-border-color: var(--color-l-gray-60);
-  --checkbox-border-color-hover: var(--color-l-gray-70);
-  --checklist-done-color: var(--color-l-gray-10);
+.theme-light input[type=checkbox]:not(:checked), .theme-dark input[type=checkbox]:not(:checked) {
   background: var(--checklist-bg);
 }
-.theme-light input[type=checkbox]:hover {
-  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
-}
-.theme-dark input[type=checkbox] {
-  --checkbox-marker-color: white;
-  --checkbox-color: var(--color-d-green-40);
-  --checkbox-color-hover: var(--color-d-green-30);
-  --checkbox-border-color: var(--color-d-gray-70);
-  --checkbox-border-color-hover: var(--color-d-gray-60);
-  --checklist-done-color: var(--color-d-gray-90);
-  background: var(--checklist-bg);
-}
-.theme-dark input[type=checkbox]:hover {
-  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+.theme-light input[type=checkbox]:hover, .theme-dark input[type=checkbox]:hover {
+  box-shadow: var(--checklist-shadow-hover);
 }
 
 /*────────── Color Input ──────────*/

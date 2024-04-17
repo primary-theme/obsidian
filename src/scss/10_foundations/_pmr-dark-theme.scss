@@ -27,7 +27,7 @@ and CONTRIBUTION page ↴
     --color-d-gray-100: hsla(31, 18%, 14%, 1);
     --color-d-gray-110: hsla(28, 16%, 13%, 1);
     --color-d-gray-120: hsla(28, 16%, 12%, 1);
-    --color-d-gray-130: hsla(24, 18%, 9%, 1);
+    --color-d-gray-130: hsla(24, 18%, 10%, 1);
     --color-d-gray-140: hsla(32, 21%, 8%, 1);
 
     --color-d-white-rgb: 255, 255, 255; // rgba
@@ -166,8 +166,8 @@ and CONTRIBUTION page ↴
                 0px 30px 90px rgba(0, 0, 0, 0.2);
 
     // Interface Colors
-    --background-primary: var(--color-d-gray-90);
-    --background-primary-alt: var(--color-d-gray-100);
+    --background-primary: var(--color-d-gray-100);
+    --background-primary-alt: var(--color-d-gray-110);
 
     --background-secondary: var(--color-d-gray-120);
     --background-secondary-alt: var(--color-d-gray-120);
@@ -249,6 +249,17 @@ and CONTRIBUTION page ↴
 
     // Prompt
     --prompt-border-color: var(--background-modifier-border-focus);
+
+    // Checkbox
+    --checkbox-marker-color: white;
+
+    --checkbox-color: var(--color-d-green-40);
+    --checkbox-color-hover: var(--color-d-green-30);
+
+    --checkbox-border-color: var(--color-d-gray-70);
+    --checkbox-border-color-hover: var(--color-d-gray-60);
+
+    --checklist-done-color: var(--color-d-gray-90);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -392,7 +403,8 @@ and CONTRIBUTION page ↴
     --drag-ghost-text-color: var(--text-on-accent);
 
     // Checkbox
-    --checklist-bg: var(--color-d-gray-100);
+    --checklist-bg: var(--color-d-gray-90);
+    --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
 
     // Toggle
     --toggle-thumb-color: var(--color-d-gray-10);
