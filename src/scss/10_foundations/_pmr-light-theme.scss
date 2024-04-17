@@ -183,8 +183,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-modifier-active-hover: var(--color-l-gray-60);
 
     --background-modifier-border: var(--color-l-gray-60);
-    --background-modifier-border-hover: var(--color-l-gray-80);
-    --background-modifier-border-focus: var(--color-l-gray-70);
+    --background-modifier-border-hover: var(--color-l-gray-70);
+    --background-modifier-border-focus: var(--color-l-gray-80);
 
     --background-modifier-error-rgb: var(--color-red-rgb);
     --background-modifier-error: var(--color-l-red-30);
@@ -245,6 +245,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --blockquote-border-thickness: 2px;
     --blockquote-border-color: var(--background-modifier-border);
     --blockquote-background-color: var(--color-l-gray-10);
+
+    // Prompt
+    --prompt-border-color: var(--background-modifier-border-focus);
 }
 
 /*────────── Primary Styling Variables ──────────*/
