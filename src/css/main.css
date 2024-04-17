@@ -1568,6 +1568,7 @@ body {
 select,
 .dropdown {
   height: var(--dropdown-height);
+  border-radius: var(--button-radius);
 }
 select:hover,
 .dropdown:hover {
