@@ -279,8 +279,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --prompt-border-color: var(--background-modifier-border-hover);
   --settings-nav-group-title-color: var(--color-l-gray-70);
   --settings-nav-item-text-color: var(--color-l-gray-110);
-  --settings-nav-item-text-color-hover: var(--color-l-gray-110);
-  --settings-nav-item-bg-hover: var(--color-l-gray-20);
+  --settings-nav-item-text-color-hover: var(--color-l-gray-130);
+  --settings-nav-item-bg-hover: transparent;
   --settings-nav-item-text-color-active: var(--color-l-gray-70);
   --settings-nav-item-bg-active: var(--color-l-gray-60);
   --tab-bg: transparent;
@@ -1495,11 +1495,13 @@ input[type=checkbox]:hover {
   padding: var(--size-4-2) var(--size-4-3);
   border-radius: var(--radius-m);
   transition: box-shadow var(--button-anim);
+  transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
 }
 .vertical-tab-nav-item:hover:not(.is-active) {
   color: var(--settings-nav-item-text-color-hover);
   background: var(--settings-nav-item-bg-hover);
   cursor: pointer;
+  padding-left: var(--size-4-5);
 }
 .vertical-tab-nav-item:active:not(.is-active) {
   color: var(--settings-nav-item-text-color-active);
@@ -1552,6 +1554,9 @@ body {
 /*────────── Toggle ──────────*/
 .checkbox-container {
   background: var(--toggle-bg);
+}
+.checkbox-container:hover {
+  cursor: pointer;
 }
 .checkbox-container.is-enabled {
   background: var(--toggle-bg-enabled);
