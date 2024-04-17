@@ -1,0 +1,15 @@
+/*────────── Dropdown ──────────*/
+
+select,
+.dropdown {
+    height: var(--dropdown-height);
+    
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus,
+    &:active {
+        box-shadow: var(--button-shadow-active);
+    }
+}
