@@ -1517,14 +1517,6 @@ input[type=checkbox]:hover {
   box-shadow: var(--button-shadow);
 }
 
-body > div.modal-container.mod-dim > div.modal.mod-settings.mod-sidebar-layout > div.modal-content.vertical-tabs-container > div.vertical-tab-content-container > div > div:nth-child(20) > div.setting-item-info > div.setting-item-description::after {
-  content: "Translucent Window is not yet supported in Primary. Things may look like they are broken.";
-  display: flex;
-  margin-top: var(--size-4-1);
-  font-size: var(--font-ui-small);
-  color: var(--text-warning);
-}
-
 /*────────── Tabs ──────────*/
 body {
   --tab-background-active: var(--background-primary);
