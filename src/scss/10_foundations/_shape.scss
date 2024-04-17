@@ -19,4 +19,17 @@ body {
     --inline-code-radius: var(--radius-s);
     --copy-code-button-radius: var(--radius-m);
     --modal-close-button-size: 20px;
+    --dropdown-height:  calc(
+                            var(--font-ui-small) + 
+                            calc(var(--size-4-4) + var(--button-inset-shadow-size)) +
+                            var(--size-2-2)
+                        );
+    --button-padding:   var(--size-4-4)
+                        var(--size-4-3)
+                        calc(var(--size-4-4) + var(--button-inset-shadow-size))
+                        var(--size-4-3);
+    --button-padding-active:    calc(var(--size-4-4) + var(--button-inset-shadow-size))
+                                var(--size-4-3)
+                                var(--size-4-4)
+                                var(--size-4-3);
 }

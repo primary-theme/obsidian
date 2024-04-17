@@ -29,6 +29,19 @@ body {
   --inline-code-radius: var(--radius-s);
   --copy-code-button-radius: var(--radius-m);
   --modal-close-button-size: 20px;
+  --dropdown-height: calc(
+                          var(--font-ui-small) +
+                          calc(var(--size-4-4) + var(--button-inset-shadow-size)) +
+                          var(--size-2-2)
+                      );
+  --button-padding: var(--size-4-4)
+                      var(--size-4-3)
+                      calc(var(--size-4-4) + var(--button-inset-shadow-size))
+                      var(--size-4-3);
+  --button-padding-active: calc(var(--size-4-4) + var(--button-inset-shadow-size))
+                              var(--size-4-3)
+                              var(--size-4-4)
+                              var(--size-4-3);
 }
 
 /*───────────────────────────────────
@@ -1381,15 +1394,14 @@ svg.vault {
 /*────────── Button ──────────*/
 button {
   font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
-  padding: var(--size-4-4) var(--size-4-3) calc(var(--size-4-4) + var(--button-inset-shadow-size)) var(--size-4-3);
+  padding: var(--button-padding);
   border-radius: var(--button-radius);
-  margin-bottom: var(--size-2-3);
   transition: var(--button-anim);
   cursor: pointer;
 }
 button:active {
   background: var(--interactive-hover);
-  padding: calc(var(--size-4-4) + var(--button-inset-shadow-size)) var(--size-4-3) var(--size-4-4) var(--size-4-3);
+  padding: var(--button-padding-active);
   box-shadow: var(--button-shadow-active);
   transition: var(--button-anim);
 }
@@ -1401,7 +1413,7 @@ button.mod-cta:active, button.mod-cta:focus {
 .markdown-source-view.mod-cm6 .code-block-flair {
   color: var(--text-on-accent);
   background: var(--interactive-accent);
-  padding: var(--size-4-1) var(--size-4-2) calc(var(--size-4-1) + var(--button-inset-shadow-size)) var(--size-4-2);
+  padding: var(--button-padding);
   border-radius: var(--copy-code-button-radius);
   box-shadow: var(--button-shadow);
 }
@@ -1412,6 +1424,7 @@ button.mod-cta:active, button.mod-cta:focus {
 }
 .markdown-rendered button.copy-code-button:active,
 .markdown-source-view.mod-cm6 .code-block-flair:active {
+  padding: vaR(--button-padding-active);
   box-shadow: var(--button-shadow-active);
 }
 
@@ -1551,6 +1564,21 @@ body {
 }
 
 /*────────── Slider ──────────*/
+/*────────── Dropdown ──────────*/
+select,
+.dropdown {
+  height: var(--dropdown-height);
+}
+select:hover,
+.dropdown:hover {
+  cursor: pointer;
+}
+select:focus, select:active,
+.dropdown:focus,
+.dropdown:active {
+  box-shadow: var(--button-shadow-active);
+}
+
 /*────────── File ──────────*/
 .mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);

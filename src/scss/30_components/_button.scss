@@ -14,21 +14,14 @@ button {
         "cv06",
         "cv08",
         "cv11";
-    padding: var(--size-4-4)
-             var(--size-4-3)
-             calc(var(--size-4-4) + var(--button-inset-shadow-size))
-             var(--size-4-3);
+    padding: var(--button-padding);
     border-radius: var(--button-radius);
-    margin-bottom: var(--size-2-3);
     transition: var(--button-anim);
     cursor: pointer;
 
     &:active {
         background: var(--interactive-hover);
-        padding: calc(var(--size-4-4) + var(--button-inset-shadow-size))
-                 var(--size-4-3)
-                 var(--size-4-4)
-                 var(--size-4-3);
+        padding: var(--button-padding-active);
         box-shadow: var(--button-shadow-active);
         transition: var(--button-anim);
     }
@@ -43,10 +36,7 @@ button {
 .markdown-source-view.mod-cm6 .code-block-flair {
     color: var(--text-on-accent);
     background: var(--interactive-accent);
-    padding: var(--size-4-1)
-             var(--size-4-2)
-             calc(var(--size-4-1) + var(--button-inset-shadow-size))
-             var(--size-4-2);
+    padding: var(--button-padding);
     border-radius: var(--copy-code-button-radius);
     box-shadow: var(--button-shadow);
 
@@ -56,7 +46,8 @@ button {
     }
 
     &:active {
-        box-shadow: var(--button-shadow-active)
+        padding: vaR(--button-padding-active);
+        box-shadow: var(--button-shadow-active);
     }
 }
 
