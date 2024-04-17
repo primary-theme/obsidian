@@ -260,6 +260,10 @@ and CONTRIBUTION page ↴
     --checkbox-border-color-hover: var(--color-d-gray-60);
 
     --checklist-done-color: var(--color-d-gray-90);
+
+    // Search
+    --search-clear-button-color: var(--color-d-gray-60);
+    --search-icon-color: var(--color-d-gray-60);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -412,4 +416,8 @@ and CONTRIBUTION page ↴
     --toggle-bg-enabled: var(--color-d-green-40);
     --toggle-thumb-shadow: ;
     --toggle-shadow: ;
+
+    // Text Input
+    --text-input-bg-active: var(--color-d-gray-140);
+    --text-input-shadow-active: 0 0 0 3px var(--color-d-gray-80);
 }

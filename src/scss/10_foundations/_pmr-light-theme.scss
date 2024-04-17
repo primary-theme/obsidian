@@ -263,7 +263,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Search
     --search-clear-button-color: var(--color-l-gray-80);
     --search-icon-color: var(--color-l-gray-80);
-    --search-icon-size: 14px;
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -462,5 +461,4 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Text Input
     --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
     --text-input-shadow-active: 0 0 0 3px var(--color-l-gray-60);
-    // --text-input-shadow-active: none;
 }
