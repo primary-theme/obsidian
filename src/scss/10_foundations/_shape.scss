@@ -36,4 +36,5 @@ body {
                         var(--size-4-2)
                         calc(var(--size-2-2) + var(--button-inset-shadow-size))
                         var(--size-4-2);
+    --input-radius: var(--button-radius);
 }

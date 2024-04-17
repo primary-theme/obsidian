@@ -184,7 +184,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --background-modifier-border: var(--color-l-gray-60);
     --background-modifier-border-hover: var(--color-l-gray-70);
-    --background-modifier-border-focus: var(--color-l-gray-80);
+    --background-modifier-border-focus: var(--color-l-gray-70);
 
     --background-modifier-error-rgb: var(--color-red-rgb);
     --background-modifier-error: var(--color-l-red-30);
@@ -453,4 +453,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // --slider-s-thumb-position: -5px;
     // --slider-track-background: var(--background-modifier-border-focus);
     // --slider-track-height: 4px;
+
+    // Text Input
+    --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 70%, var(--color-l-gray-10));
+    // --text-input-shadow-active: 0 0 0 2px var(--color-l-gray-60);
+    --text-input-shadow-active: none;
 }
