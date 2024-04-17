@@ -2,6 +2,10 @@
 
 .checkbox-container {
     background: var(--toggle-bg);
+
+    &:hover {
+        cursor: pointer;
+    }
     
     &.is-enabled {
         background: var(--toggle-bg-enabled);

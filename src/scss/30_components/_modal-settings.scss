@@ -12,12 +12,13 @@
     padding: var(--size-4-2) var(--size-4-3);
     border-radius: var(--radius-m);
     transition: box-shadow var(--button-anim);
+    transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
     
     &:hover:not(.is-active) {
         color: var(--settings-nav-item-text-color-hover);
         background: var(--settings-nav-item-bg-hover);
-        // box-shadow: var(--input-shadow-hover);
         cursor: pointer;
+        padding-left: var(--size-4-5);
     }
 
     &:active:not(.is-active) {
