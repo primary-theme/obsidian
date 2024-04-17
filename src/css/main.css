@@ -47,6 +47,7 @@ body {
                       calc(var(--size-2-2) + var(--button-inset-shadow-size))
                       var(--size-4-2);
   --input-radius: var(--button-radius);
+  --input-height: 32px;
 }
 
 /*───────────────────────────────────
@@ -236,6 +237,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --checkbox-border-color: var(--color-l-gray-60);
   --checkbox-border-color-hover: var(--color-l-gray-70);
   --checklist-done-color: var(--color-l-gray-10);
+  --search-clear-button-color: var(--color-l-gray-80);
+  --search-icon-color: var(--color-l-gray-80);
+  --search-icon-size: 14px;
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -344,8 +348,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --toggle-bg-enabled: var(--color-l-green-30);
   --toggle-thumb-shadow: ;
   --toggle-shadow: ;
-  --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 70%, var(--color-l-gray-10));
-  --text-input-shadow-active: none;
+  --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
+  --text-input-shadow-active: 0 0 0 3px var(--color-l-gray-60);
 }
 
 /*───────────────────────────────────
@@ -1583,6 +1587,11 @@ select:focus, select:active,
 }
 
 /*────────── Text Input ──────────*/
+textarea,
+input {
+  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
+}
+
 textarea:active,
 input.metadata-input-text:active,
 input[type=date]:active,
@@ -1610,7 +1619,6 @@ input[type=search]:focus-visible,
 input[type=email]:focus-visible,
 input[type=password]:focus-visible,
 input[type=number]:focus-visible {
-  background: var(--text-input-bg-active);
   box-shadow: var(--text-input-shadow-active);
 }
 
