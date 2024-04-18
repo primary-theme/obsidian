@@ -8,9 +8,11 @@
 }
 // Nav Items
 .vertical-tab-nav-item {
+    text-transform: capitalize;
     color: var(--settings-nav-item-text-color);
-    padding: var(--size-4-2) var(--size-4-3);
+    padding: var(--settings-nav-item-padding);
     border-radius: var(--radius-m);
+    margin-bottom: var(--size-2-1);
     transition: box-shadow var(--button-anim);
     transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
     

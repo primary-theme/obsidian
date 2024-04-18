@@ -42,4 +42,8 @@ body {
     --input-height: 32px;
     --search-icon-size: 14px;
     --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
+    --settings-nav-item-padding: var(--size-4-2)
+                                 var(--size-4-3)
+                                 calc(var(--size-4-2) + var(--button-inset-shadow-size))
+                                 var(--size-4-3);
 }

@@ -52,6 +52,10 @@ body {
   --input-height: 32px;
   --search-icon-size: 14px;
   --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
+  --settings-nav-item-padding: var(--size-4-2)
+                               var(--size-4-3)
+                               calc(var(--size-4-2) + var(--button-inset-shadow-size))
+                               var(--size-4-3);
 }
 
 /*───────────────────────────────────
@@ -587,8 +591,8 @@ and CONTRIBUTION page ↴
   --modal-radius: var(--radius-xl);
   --settings-nav-group-title-color: var(--color-d-gray-60);
   --settings-nav-item-text-color: var(--color-d-gray-40);
-  --settings-nav-item-text-color-hover: var(--color-d-gray-50);
-  --settings-nav-item-bg-hover: var(--color-d-gray-90);
+  --settings-nav-item-text-color-hover: var(--color-d-gray-20);
+  --settings-nav-item-bg-hover: transparent;
   --settings-nav-item-text-color-active: var(--color-d-gray-70);
   --settings-nav-item-bg-active: var(--color-d-gray-130);
   --tab-bg: transparent;
@@ -1506,9 +1510,11 @@ input[type=checkbox]:hover {
 }
 
 .vertical-tab-nav-item {
+  text-transform: capitalize;
   color: var(--settings-nav-item-text-color);
-  padding: var(--size-4-2) var(--size-4-3);
+  padding: var(--settings-nav-item-padding);
   border-radius: var(--radius-m);
+  margin-bottom: var(--size-2-1);
   transition: box-shadow var(--button-anim);
   transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
 }
