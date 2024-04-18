@@ -163,8 +163,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                       );
   --color-accent-2: hsl(
                       calc(var(--accent-h) - 3),
-                      calc(var(--accent-s) * 1.02),
-                      calc(var(--accent-l) * 1.15)
+                      calc(var(--accent-s) * 1.42),
+                      calc(var(--accent-l) * 1.29)
                       );
   --color-base-00: var(--color-l-gray-10);
   --color-base-05: var(--color-l-gray-20);
@@ -478,8 +478,8 @@ and CONTRIBUTION page ↴
                       );
   --color-accent-2: hsl(
                       calc(var(--accent-h) - 5),
-                      calc(var(--accent-s) * 1.05),
-                      calc(var(--accent-l) * 1.29)
+                      calc(var(--accent-s) * 1.13),
+                      calc(var(--accent-l) * 1.31)
                       );
   --color-base-00: var(--color-d-gray-140);
   --color-base-05: var(--color-d-gray-120);
