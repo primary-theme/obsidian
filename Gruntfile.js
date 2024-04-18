@@ -136,7 +136,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: ['src/**/*.scss', 'src/**/*.css'],
-                tasks: ['env', 'sass:unminified', 'sass:minified', 'cssmin', 'concat_css', 'copy']
+                tasks: ['env', 'sass:unminified', 'sass:minified', 'cssmin', 'concat_css', 'copy', 'copy']
             }
         }
     });
