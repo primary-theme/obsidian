@@ -4,6 +4,7 @@ select,
 .dropdown {
     height: var(--dropdown-height);
     border-radius: var(--button-radius);
+    transition: var(--background-anim);
     
     &:hover {
         cursor: pointer;
