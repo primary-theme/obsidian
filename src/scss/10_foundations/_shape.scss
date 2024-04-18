@@ -4,6 +4,8 @@ Variables for
     sizing, container
     padding, widths
     heights, radius
+    and other non-color related
+    variables
 */
 
 body {
@@ -39,4 +41,5 @@ body {
     --input-radius: var(--button-radius);
     --input-height: 32px;
     --search-icon-size: 14px;
+    --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
 }

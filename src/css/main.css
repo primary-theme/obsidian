@@ -15,6 +15,8 @@ Variables for
     sizing, container
     padding, widths
     heights, radius
+    and other non-color related
+    variables
 */
 body {
   --radius-xs: 2px;
@@ -49,6 +51,7 @@ body {
   --input-radius: var(--button-radius);
   --input-height: 32px;
   --search-icon-size: 14px;
+  --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
 }
 
 /*───────────────────────────────────
@@ -1428,6 +1431,7 @@ button {
   padding: var(--button-padding);
   border-radius: var(--button-radius);
   transition: var(--button-anim);
+  transition: var(--background-anim);
   cursor: pointer;
 }
 button:active {
@@ -1579,6 +1583,7 @@ select,
 .dropdown {
   height: var(--dropdown-height);
   border-radius: var(--button-radius);
+  transition: var(--background-anim);
 }
 select:hover,
 .dropdown:hover {
