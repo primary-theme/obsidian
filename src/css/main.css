@@ -266,7 +266,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --alternating-color-2-hover-active: var(--color-l-red-40);
   --alternating-color-3: var(--color-l-blue-30);
   --alternating-color-3-hover-active: var(--color-l-blue-40);
-  --icon-container-radius: ;
+  --icon-container-radius: 0;
   --icon-bg: transparent;
   --icon-bg-hover: transparent;
   --icon-bg-active: transparent;
@@ -580,10 +580,10 @@ and CONTRIBUTION page ↴
   --alternating-color-2-hover-active: var(--color-d-red-40);
   --alternating-color-3: var(--color-d-blue-30);
   --alternating-color-3-hover-active: var(--color-d-blue-40);
-  --icon-container-radius: ;
-  --icon-bg: transparent;
-  --icon-bg-hover: transparent;
-  --icon-bg-active: transparent;
+  --icon-container-radius: 0;
+  --icon-bg: transparent !important;
+  --icon-bg-hover: transparent !important;
+  --icon-bg-active: transparent !important;
   --button-radius: var(--size-4-2);
   --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
   --button-shadow: var(--input-shadow);
@@ -684,16 +684,16 @@ body {
   --clickable-icon-radius: var(--radius-s);
 }
 
-.clickable-icon:hover {
+.clickable-icon.clickable-icon:hover {
   color: var(--icon-color-hover);
-  background: transparent;
+  background: var(--icon-bg-hover);
   cursor: pointer;
 }
-.clickable-icon:active {
-  background: transparent;
+.clickable-icon.clickable-icon:active {
+  background: var(--icon-bg-active);
 }
-.clickable-icon.has-active-menu {
-  background: transparent;
+.clickable-icon.clickable-icon.has-active-menu {
+  background: var(--icon-bg-active);
 }
 
 .theme-light {
