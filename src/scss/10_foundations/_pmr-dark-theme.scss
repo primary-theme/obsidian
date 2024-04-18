@@ -417,6 +417,24 @@ and CONTRIBUTION page ↴
     --toggle-thumb-shadow: ;
     --toggle-shadow: ;
 
+    // Slider
+    --slider-track-background: var(--color-d-gray-120);
+    --slider-track-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                            0px 0px 0px 1px rgba(255, 255, 255, 0.02);
+
+    --slider-thumb-bg: var(--color-d-gray-30);
+    --slider-thumb-border-width: 0px;
+    --slider-thumb-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+                            inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
+                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
+                            0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+
+    --slider-thumb-shadow-hover:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+                                    inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
+                                    inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
+                                    0px 1px 2px 0px rgba(0, 0, 0, 0.5),
+                                    0px 0px 0px 6px rgba(255, 255, 255, 0.08);
+
     // Text Input
     --text-input-bg-active: var(--color-d-gray-140);
     --text-input-shadow-active: 0 0 0 3px var(--color-d-gray-80);
