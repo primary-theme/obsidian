@@ -285,10 +285,10 @@ and CONTRIBUTION page ↴
     --alternating-color-3-hover-active: var(--color-d-blue-40);
 
     // Icon Container
-    --icon-container-radius: ;
-    --icon-bg: transparent;
-    --icon-bg-hover: transparent;
-    --icon-bg-active: transparent;
+    --icon-container-radius: 0;
+    --icon-bg: transparent !important;
+    --icon-bg-hover: transparent !important;
+    --icon-bg-active: transparent !important;
 
     // Buttons
     --button-radius: var(--size-4-2);

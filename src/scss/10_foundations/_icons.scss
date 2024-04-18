@@ -4,20 +4,19 @@ body {
     --clickable-icon-radius: var(--radius-s);
 }
 
-.clickable-icon {
+.clickable-icon.clickable-icon {
     &:hover {
         color: var(--icon-color-hover);
-        background: transparent;
+        background: var(--icon-bg-hover);
         cursor: pointer;
     }
 
     &:active {
-        // color: va
-        background: transparent;
+        background: var(--icon-bg-active);
     }
 
     &.has-active-menu {
-        background: transparent;
+        background: var(--icon-bg-active);
     }
 }
 
