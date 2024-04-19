@@ -1,22 +1,5 @@
 /*────────── Text Input ──────────*/
 
-textarea,
-input {
-    // For stylized use of Inter and Cascadia Code:
-    font-feature-settings:
-    "calt" on,
-    "dlig" on,
-    "case" on,
-    "ccmp" on,
-    "ss03" on,
-    "ss19" on,
-    "cv01",
-    "cv05",
-    "cv06",
-    "cv08",
-    "cv11";
-}
-
 textarea:active,
 input.metadata-input-text:active,
 input[type='date']:active,

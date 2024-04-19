@@ -9,6 +9,13 @@ body {
   --h1-weight: 600;
 }
 
+input,
+textarea,
+select,
+button {
+  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
+}
+
 /*────────── Shape ──────────*/
 /* 
 Variables for
@@ -618,23 +625,23 @@ and CONTRIBUTION page ↴
                                   0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
   --inline-title-color: var(--color-l-gray-140);
   --link-unresolved-color: var(--color-d-gray-40);
-  --link-unresolved-border: var(--color-d-gray-40);
+  --link-unresolved-border: 1px solid var(--color-d-gray-40);
   --link-unresolved-color-hover: var(--color-d-gray-30);
-  --link-unresolved-border-hover: var(--color-d-gray-30);
+  --link-unresolved-border-hover: 1px solid var(--color-d-gray-30);
   --link-unresolved-color-active: var(--color-d-gray-50);
-  --link-unresolved-border-active: var(--color-d-gray-50);
+  --link-unresolved-border-active: 1px solid var(--color-d-gray-50);
   --link-color: var(--color-d-yellow-30);
-  --link-border: var(--color-d-yellow-30);
+  --link-border: 1px solid var(--color-d-yellow-30);
   --link-color-hover: var(--color-d-yellow-20);
-  --link-border-hover: var(--color-d-yellow-20);
+  --link-border-hover: 1px solid var(--color-d-yellow-20);
   --link-color-active: var(--color-d-yellow-40);
-  --link-border-active: var(--color-d-yellow-40);
+  --link-border-active: 1px solid var(--color-d-yellow-40);
   --link-external-color: var(--color-d-green-30);
-  --link-external-border: var(--color-d-green-30);
+  --link-external-border: 1px solid var(--color-d-green-30);
   --link-external-color-hover: var(--color-d-green-20);
-  --link-external-border-hover: var(--color-d-green-20);
+  --link-external-border-hover: 1px solid var(--color-d-green-20);
   --link-external-color-active: var(--color-d-green-40);
-  --link-external-border-active: var(--color-d-green-40);
+  --link-external-border-active: 1px solid var(--color-d-green-40);
   --bold-color: var(--color-d-red-30);
   --italic-color: var(--color-d-blue-30);
   --strikethrough-color: var(--color-d-gray-50);
@@ -1464,7 +1471,6 @@ svg.vault {
 
 /*────────── Button ──────────*/
 button {
-  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
   padding: var(--button-padding);
   border-radius: var(--button-radius);
   transition: var(--button-anim);
@@ -1658,11 +1664,6 @@ select:focus, select:active,
 }
 
 /*────────── Text Input ──────────*/
-textarea,
-input {
-  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
-}
-
 textarea:active,
 input.metadata-input-text:active,
 input[type=date]:active,
@@ -1996,6 +1997,10 @@ input[type=number]:focus-visible {
 .cm-link .cm-underline:active {
   color: var(--link-external-color-active);
   border-bottom: var(--link-external-border-active);
+}
+
+.external-link img {
+  border-bottom: none;
 }
 
 /*────────── Emphasis ──────────*/

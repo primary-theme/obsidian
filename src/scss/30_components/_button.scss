@@ -1,20 +1,8 @@
 /*────────── Button ──────────*/
 // TODO .mod-destructive
 // TODO .document-search-close-button
+
 button {
-    // For stylized use of Inter and Cascadia Code:
-    font-feature-settings:
-        "calt" on,
-        "dlig" on,
-        "case" on,
-        "ccmp" on,
-        "ss03" on,
-        "ss19" on,
-        "cv01",
-        "cv05",
-        "cv06",
-        "cv08",
-        "cv11";
     padding: var(--button-padding);
     border-radius: var(--button-radius);
     transition: var(--button-anim);
