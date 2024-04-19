@@ -12,7 +12,7 @@ body {
     --embed-title-border: 1px solid var(--background-modifier-border);
 }
 
-.markdown-embed {
+.markdown-embed:not(.popover.hover-popover .markdown-embed) {
     border-radius: var(--embed-border-radius);
 
     > div:not(.embed-title, .markdown-embed-link) {

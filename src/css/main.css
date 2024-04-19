@@ -245,7 +245,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --checkbox-color-hover: var(--color-l-green-20);
   --checkbox-border-color: var(--color-l-gray-60);
   --checkbox-border-color-hover: var(--color-l-gray-70);
-  --checklist-done-color: var(--color-l-gray-10);
   --search-clear-button-color: var(--color-l-gray-80);
   --search-icon-color: var(--color-l-gray-80);
 }
@@ -563,7 +562,6 @@ and CONTRIBUTION page ↴
   --checkbox-color-hover: var(--color-d-green-30);
   --checkbox-border-color: var(--color-d-gray-70);
   --checkbox-border-color-hover: var(--color-d-gray-60);
-  --checklist-done-color: var(--color-d-gray-90);
   --search-clear-button-color: var(--color-d-gray-60);
   --search-icon-color: var(--color-d-gray-60);
 }
@@ -2075,10 +2073,10 @@ body {
   --embed-title-border: 1px solid var(--background-modifier-border);
 }
 
-.markdown-embed {
+.markdown-embed:not(.popover.hover-popover .markdown-embed) {
   border-radius: var(--embed-border-radius);
 }
-.markdown-embed > div:not(.embed-title, .markdown-embed-link) {
+.markdown-embed:not(.popover.hover-popover .markdown-embed) > div:not(.embed-title, .markdown-embed-link) {
   margin-top: var(--size-4-4);
   margin-left: var(--size-4-4);
   margin-right: var(--size-4-4);
