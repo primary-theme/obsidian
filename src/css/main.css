@@ -235,7 +235,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --text-success: var(--color-l-green-30);
   --text-selection: var(--color-l-gray-60);
   --text-highlight-bg-rgb: var(--color-yellow-rgb);
-  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+  --text-highlight-bg: var(--color-l-alpha-yellow);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
   --divider-color: var(--background-modifier-border);
@@ -552,7 +552,7 @@ and CONTRIBUTION page ↴
   --text-success: var(--color-d-green-30);
   --text-selection: var(--color-d-gray-70);
   --text-highlight-bg-rgb: var(--color-yellow-rgb);
-  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+  --text-highlight-bg: var(--color-d-alpha-yellow);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
   --divider-color: var(--background-modifier-border);
@@ -562,7 +562,7 @@ and CONTRIBUTION page ↴
   --indentation-guide-color-active: var(--background-modifier-border-focus);
   --blockquote-border-thickness: 2px;
   --blockquote-border-color: var(--background-modifier-border);
-  --blockquote-background-color: var(--color-d-gray-110);
+  --blockquote-background-color: var(--color-d-gray-120);
   --prompt-border-color: var(--background-modifier-border-focus);
   --checkbox-marker-color: white;
   --checkbox-color: var(--color-d-green-40);
@@ -662,7 +662,7 @@ and CONTRIBUTION page ↴
   --embed-title-color: var(--color-d-gray-50);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
-  --checklist-bg: var(--color-d-gray-90);
+  --checklist-bg: var(--color-d-gray-110);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
   --toggle-thumb-color: var(--color-d-gray-10);
   --toggle-bg: var(--color-d-gray-60);
