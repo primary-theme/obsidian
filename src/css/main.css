@@ -354,8 +354,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --toggle-thumb-color: var(--color-l-gray-10);
   --toggle-bg: var(--color-l-gray-60);
   --toggle-bg-enabled: var(--color-l-green-30);
-  --toggle-thumb-shadow: ;
-  --toggle-shadow: ;
+  --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          0 2px 2px rgba(0, 0, 0, 0.2);
   --slider-track-background: var(--color-l-gray-60);
   --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
                           0px 0px 0px 1px rgba(255, 255, 255, 0.07);
@@ -371,7 +372,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                0px 1px 2px 0px rgba(0, 0, 0, 0.1),
                                0px 0px 0px 6px rgba(0, 0, 0, 0.03);
   --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
-  --text-input-shadow-active: 0 0 0 3px var(--color-l-gray-60);
+  --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
+                              inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
+                              0px 1px 6px 0px rgba(0, 0, 0, 0.07);
 }
 
 /*───────────────────────────────────
@@ -1608,8 +1611,18 @@ body {
 .checkbox-container:hover {
   cursor: pointer;
 }
+.checkbox-container:active::after {
+  width: calc(var(--toggle-thumb-width) + 4px);
+}
+.checkbox-container:focus-within, .checkbox-container.mod-small:focus-within {
+  outline: none;
+  box-shadow: var(--toggle-shadow-focus);
+}
 .checkbox-container.is-enabled {
   background: var(--toggle-bg-enabled);
+}
+.checkbox-container:after {
+  box-shadow: var(--toggle-thumb-shadow);
 }
 
 /*────────── Slider ──────────*/
@@ -1653,7 +1666,7 @@ textarea:active,
 input.metadata-input-text:active,
 input[type=date]:active,
 input[type=datetime-local]:active,
-input[type=text]:active,
+input[type=text]:active:not(.prompt-input),
 input[type=search]:active,
 input[type=email]:active,
 input[type=password]:active,
@@ -1662,7 +1675,7 @@ textarea:focus,
 input.metadata-input-text:focus,
 input[type=date]:focus,
 input[type=datetime-local]:focus,
-input[type=text]:focus,
+input[type=text]:focus:not(.prompt-input),
 input[type=search]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
@@ -1671,12 +1684,19 @@ textarea:focus-visible,
 input.metadata-input-text:focus-visible,
 input[type=date]:focus-visible,
 input[type=datetime-local]:focus-visible,
-input[type=text]:focus-visible,
+input[type=text]:focus-visible:not(.prompt-input),
 input[type=search]:focus-visible,
 input[type=email]:focus-visible,
 input[type=password]:focus-visible,
 input[type=number]:focus-visible {
+  border: 1px solid var(--background-modifier-border);
+  background: var(--text-input-bg-active);
   box-shadow: var(--text-input-shadow-active);
+  transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
+}
+
+.search-input-container input {
+  padding-left: 28px;
 }
 
 /*────────── File ──────────*/

@@ -6,8 +6,24 @@
     &:hover {
         cursor: pointer;
     }
+
+    &:active {
+        &::after {
+            width: calc(var(--toggle-thumb-width) + 4px);
+        }
+    }
+
+    &:focus-within,
+    &.mod-small:focus-within {
+        outline: none;
+        box-shadow: var(--toggle-shadow-focus);
+    }
     
     &.is-enabled {
         background: var(--toggle-bg-enabled);
+    }
+
+    &:after {
+        box-shadow: var(--toggle-thumb-shadow);
     }
 }

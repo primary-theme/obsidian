@@ -21,7 +21,7 @@ textarea:active,
 input.metadata-input-text:active,
 input[type='date']:active,
 input[type='datetime-local']:active,
-input[type='text']:active,
+input[type='text']:active:not(.prompt-input),
 input[type='search']:active,
 input[type='email']:active,
 input[type='password']:active,
@@ -30,7 +30,7 @@ textarea:focus,
 input.metadata-input-text:focus,
 input[type='date']:focus,
 input[type='datetime-local']:focus,
-input[type='text']:focus,
+input[type='text']:focus:not(.prompt-input),
 input[type='search']:focus,
 input[type='email']:focus,
 input[type='password']:focus,
@@ -39,11 +39,17 @@ textarea:focus-visible,
 input.metadata-input-text:focus-visible,
 input[type='date']:focus-visible,
 input[type='datetime-local']:focus-visible,
-input[type='text']:focus-visible,
+input[type='text']:focus-visible:not(.prompt-input),
 input[type='search']:focus-visible,
 input[type='email']:focus-visible,
 input[type='password']:focus-visible,
 input[type='number']:focus-visible {
-    // background: var(--text-input-bg-active);
+    border: 1px solid var(--background-modifier-border);
+    background: var(--text-input-bg-active);
     box-shadow: var(--text-input-shadow-active);
+    transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
+}
+
+.search-input-container input {
+    padding-left: 28px;
 }

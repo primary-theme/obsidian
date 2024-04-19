@@ -443,8 +443,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --toggle-thumb-color: var(--color-l-gray-10);
     --toggle-bg: var(--color-l-gray-60);
     --toggle-bg-enabled: var(--color-l-green-30);
-    --toggle-thumb-shadow: ;
-    --toggle-shadow: ;
+    --toggle-thumb-shadow:  inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
+                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                            0 2px 2px rgba(0, 0, 0, 0.2);
 
     // Slider
     --slider-track-background: var(--color-l-gray-60);
@@ -466,5 +467,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Text Input
     --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
-    --text-input-shadow-active: 0 0 0 3px var(--color-l-gray-60);
+    --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
+                                inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
+                                0px 1px 6px 0px rgba(0, 0, 0, 0.07);
 }
