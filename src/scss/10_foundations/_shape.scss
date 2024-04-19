@@ -47,4 +47,6 @@ body {
                                  calc(var(--size-4-2) + var(--button-inset-shadow-size))
                                  var(--size-4-3);
     --slider-track-height: 5px;
+    // --toggle-width: calc(var(--toggle-thumb-width) * 1.6);
+    // --toggle-height: 12px;
 }
