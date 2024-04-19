@@ -24,7 +24,7 @@ and CONTRIBUTION page ↴
     --color-d-gray-70: hsla(31, 25%, 20%, 1);
     --color-d-gray-80: hsla(28, 22%, 17%, 1);
     --color-d-gray-90: hsla(33, 20%, 15%, 1);
-    --color-d-gray-100: hsla(31, 18%, 14%, 1);
+    --color-d-gray-100: hsla(31, 19%, 14%, 1);
     --color-d-gray-110: hsla(28, 16%, 13%, 1);
     --color-d-gray-120: hsla(28, 16%, 12%, 1);
     --color-d-gray-130: hsla(24, 18%, 10%, 1);
@@ -414,8 +414,9 @@ and CONTRIBUTION page ↴
     --toggle-thumb-color: var(--color-d-gray-10);
     --toggle-bg: var(--color-d-gray-60);
     --toggle-bg-enabled: var(--color-d-green-40);
-    --toggle-thumb-shadow: ;
-    --toggle-shadow: ;
+    --toggle-thumb-shadow:  inset 0px 1px 0px 1px rgba(255, 255, 255, 0.5),
+                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+                            0 2px 2px rgba(0, 0, 0, 0.35);
 
     // Slider
     --slider-track-background: var(--color-d-gray-120);
@@ -437,5 +438,7 @@ and CONTRIBUTION page ↴
 
     // Text Input
     --text-input-bg-active: var(--color-d-gray-140);
-    --text-input-shadow-active: 0 0 0 3px var(--color-d-gray-80);
+    --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
+                                inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
+                                0px 1px 6px 0px rgba(0, 0, 0, 0.37);
 }

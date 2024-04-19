@@ -44,8 +44,8 @@ input[type='search']:focus-visible,
 input[type='email']:focus-visible,
 input[type='password']:focus-visible,
 input[type='number']:focus-visible {
-    border: 1px solid var(--background-modifier-border);
     background: var(--text-input-bg-active);
+    border: 1px solid var(--background-modifier-border);
     box-shadow: var(--text-input-shadow-active);
     transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
 }
