@@ -226,7 +226,7 @@ and CONTRIBUTION page ↴
 
     --text-selection: var(--color-d-gray-70);
     --text-highlight-bg-rgb: var(--color-yellow-rgb);
-    --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+    --text-highlight-bg: var(--color-d-alpha-yellow);
 
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
@@ -245,7 +245,7 @@ and CONTRIBUTION page ↴
     // Blockquotes
     --blockquote-border-thickness: 2px;
     --blockquote-border-color: var(--background-modifier-border);
-    --blockquote-background-color: var(--color-d-gray-110);
+    --blockquote-background-color: var(--color-d-gray-120);
 
     // Prompt
     --prompt-border-color: var(--background-modifier-border-focus);
@@ -405,7 +405,7 @@ and CONTRIBUTION page ↴
     --drag-ghost-text-color: var(--text-on-accent);
 
     // Checkbox
-    --checklist-bg: var(--color-d-gray-90);
+    --checklist-bg: var(--color-d-gray-110);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
 
     // Toggle

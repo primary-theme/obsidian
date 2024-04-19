@@ -225,7 +225,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --text-selection: var(--color-l-gray-60);
     --text-highlight-bg-rgb: var(--color-yellow-rgb);
-    --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
+    --text-highlight-bg: var(--color-l-alpha-yellow);
 
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
