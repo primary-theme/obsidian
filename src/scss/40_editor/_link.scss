@@ -94,3 +94,7 @@
         border-bottom: var(--link-external-border-active);
     }
 }
+
+.external-link img {
+    border-bottom: none;
+}

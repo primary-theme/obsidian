@@ -22,3 +22,22 @@ body {
     --bold-weight: 600;
     --h1-weight: 600;
 }
+
+input,
+textarea,
+select,
+button {
+    // For stylized use of Inter and Cascadia Code:
+    font-feature-settings:
+        "calt" on,
+        "dlig" on,
+        "case" on,
+        "ccmp" on,
+        "ss03" on,
+        "ss19" on,
+        "cv01",
+        "cv05",
+        "cv06",
+        "cv08",
+        "cv11";
+}
