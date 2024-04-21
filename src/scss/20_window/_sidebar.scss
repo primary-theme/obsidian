@@ -60,3 +60,12 @@
         }
     }
 }
+
+// Sidebar Buttons
+.nav-buttons-container {
+    gap: var(--size-4-1);
+}
+
+.nav-action-button {
+    padding: var(--size-2-3) var(--size-2-3);
+}

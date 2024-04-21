@@ -10,6 +10,7 @@ Variables for
 
 body {
     --radius-xs: 2px;
+    --icon-container-radius: 0px;
     --button-inset-shadow-size: 2px;
     --header-height: 48px;
     --workspace-margin-bottom: 8px;
@@ -47,6 +48,4 @@ body {
                                  calc(var(--size-4-2) + var(--button-inset-shadow-size))
                                  var(--size-4-3);
     --slider-track-height: 5px;
-    // --toggle-width: calc(var(--toggle-thumb-width) * 1.6);
-    // --toggle-height: 12px;
 }
