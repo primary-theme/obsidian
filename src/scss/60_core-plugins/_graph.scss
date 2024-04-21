@@ -1,0 +1,19 @@
+/*────────── Graph ──────────*/
+
+.graph-view {
+    &.color-fill-unresolved {
+        opacity: var(--graph-node-unresolved-opacity);
+    }
+
+    &.color-arrow {
+        color: var(--graph-arrow);
+    }
+
+    &.color-fill-highlight {
+        color: var(--graph-node-highlight-fill);
+    }
+
+    &.color-line-highlight {
+        color: var(--graph-node-highlight-line);
+    }
+}

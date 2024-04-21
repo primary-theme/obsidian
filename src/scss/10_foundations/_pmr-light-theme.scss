@@ -467,4 +467,18 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
                                 inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
                                 0px 1px 6px 0px rgba(0, 0, 0, 0.07);
+                            
+    // Graph
+    // TODO Adjust border line color on the palette
+    --graph-text: var(--color-l-gray-80);
+    --graph-line: var(--background-modifier-border);
+    --graph-node: var(--color-l-blue-20);
+    --graph-node-highlight-fill: var(--color-l-gray-100);
+    --graph-node-highlight-line: var(--color-l-gray-60);
+    --graph-node-unresolved: var(--color-l-yellow-30);
+    --graph-node-unresolved-opacity: 0.7;
+    --graph-node-focused: var(--color-l-gray-120);
+    --graph-node-tag: var(--color-l-red-20);
+    --graph-node-attachment: var(--color-l-green-10);
+    --graph-arrow: var(--color-l-gray-90);
 }
