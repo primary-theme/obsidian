@@ -282,11 +282,19 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --alternating-color-3: var(--color-l-blue-30);
     --alternating-color-3-hover-active: var(--color-l-blue-40);
 
-    // Icon Container
-    --icon-container-radius: 0;
+    // Icons and Sidebar Action Buttons
+    --icon-color: var(--color-l-gray-80);
+    --icon-opacity: 1;
     --icon-bg: transparent;
+    --icon-color-hover: var(--color-l-gray-90);
+    --icon-opacity-hover: 1;
     --icon-bg-hover: transparent;
-    --icon-bg-active: transparent;
+    --icon-color-focused: var(--color-l-gray-90);
+    --icon-bg-pressed: transparent;
+    --icon-color-active: var(--color-l-gray-110);
+    --icon-opacity-active: 1;
+    --icon-bg-active: var(--color-l-gray-60);
+    --icon-bg-active-menu: transparent;
 
     // Buttons
     --button-radius: var(--size-4-2);

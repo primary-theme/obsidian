@@ -282,11 +282,19 @@ and CONTRIBUTION page ↴
     --alternating-color-3: var(--color-d-blue-30);
     --alternating-color-3-hover-active: var(--color-d-blue-40);
 
-    // Icon Container
-    --icon-container-radius: 0;
-    --icon-bg: transparent !important;
-    --icon-bg-hover: transparent !important;
-    --icon-bg-active: transparent !important;
+    // Icons and Sidebar Action Buttons
+    --icon-color: var(--color-d-gray-60);
+    --icon-opacity: 1;
+    --icon-bg: transparent;
+    --icon-color-hover: var(--color-d-gray-50);
+    --icon-opacity-hover: 1;
+    --icon-bg-hover: transparent;
+    --icon-color-focused: var(--color-d-gray-40);
+    --icon-bg-pressed: transparent;
+    --icon-color-active: var(--color-d-gray-50);
+    --icon-opacity-active: 1;
+    --icon-bg-active: var(--color-d-gray-90);
+    --icon-bg-active-menu: transparent;
 
     // Buttons
     --button-radius: var(--size-4-2);
