@@ -381,6 +381,17 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
                               inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
                               0px 1px 6px 0px rgba(0, 0, 0, 0.07);
+  --graph-text: var(--color-l-gray-80);
+  --graph-line: var(--background-modifier-border);
+  --graph-node: var(--color-l-blue-20);
+  --graph-node-highlight-fill: var(--color-l-gray-100);
+  --graph-node-highlight-line: var(--color-l-gray-60);
+  --graph-node-unresolved: var(--color-l-yellow-30);
+  --graph-node-unresolved-opacity: 0.7;
+  --graph-node-focused: var(--color-l-gray-120);
+  --graph-node-tag: var(--color-l-red-20);
+  --graph-node-attachment: var(--color-l-green-10);
+  --graph-arrow: var(--color-l-gray-90);
 }
 
 /*───────────────────────────────────
@@ -688,6 +699,17 @@ and CONTRIBUTION page ↴
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
                               inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
                               0px 1px 6px 0px rgba(0, 0, 0, 0.37);
+  --graph-text: var(--color-d-gray-80);
+  --graph-line: var(--background-modifier-border);
+  --graph-node: var(--color-d-blue-30);
+  --graph-node-highlight-fill: var(--);
+  --graph-node-highlight-line: var(--);
+  --graph-node-unresolved: var(--color-d-yellow-20);
+  --graph-node-unresolved-opacity: 0.7;
+  --graph-node-focused: var(--color-d-gray-120);
+  --graph-node-tag: var(--color-d-red-30);
+  --graph-node-attachment: var(--color-d-green-30);
+  --graph-arrow: var(--color-d-gray-50);
 }
 
 /*────────── Icons ──────────*/
@@ -2108,6 +2130,20 @@ body {
 /*────────── Code ──────────*/
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
   border-radius: var(--inline-code-radius);
+}
+
+/*────────── Graph ──────────*/
+.graph-view.color-fill-unresolved {
+  opacity: var(--graph-node-unresolved-opacity);
+}
+.graph-view.color-arrow {
+  color: var(--graph-arrow);
+}
+.graph-view.color-fill-highlight {
+  color: var(--graph-node-highlight-fill);
+}
+.graph-view.color-line-highlight {
+  color: var(--graph-node-highlight-line);
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
