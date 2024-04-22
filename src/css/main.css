@@ -65,6 +65,16 @@ body {
                                calc(var(--size-4-2) + var(--button-inset-shadow-size))
                                var(--size-4-3);
   --slider-track-height: 5px;
+  --nav-item-white-space: nowrap;
+  --nav-item-radius: 7px;
+  --nav-item-padding: var(--size-4-1)
+                      var(--size-4-2)
+                      var(--size-4-1)
+                      var(--size-4-6);
+  --nav-file-padding: var(--size-4-1)
+                      var(--size-4-2)
+                      calc(var(--size-4-1) + var(--button-axis-offset))
+                      var(--size-4-6);
 }
 
 /*───────────────────────────────────
@@ -401,6 +411,29 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --graph-node-tag: var(--color-l-red-20);
   --graph-node-attachment: var(--color-l-green-10);
   --graph-arrow: var(--color-l-gray-90);
+  --nav-item-color: var(--color-l-gray-110);
+  --nav-item-color-hover: var(--color-l-gray-130);
+  --nav-item-color-active: var(--color-l-gray-130);
+  --nav-item-color-selected: var(--color-l-gray-130);
+  --nav-item-color-highlighted: var(--text-accent-hover);
+  --nav-item-background-hover: transparent;
+  --nav-item-background-active: rgba(255, 255, 255, 0.25);
+  --nav-item-background-selected: transparent;
+  --nav-indentation-guide-color: var(--indentation-guide-color);
+  --nav-collapse-icon-color: var(--collapse-icon-color);
+  --nav-collapse-icon-color-collapsed: var(--text-faint);
+  --nav-heading-color: var(--color-l-gray-100);
+  --nav-heading-color-hover: var(--color-l-gray-100);
+  --nav-heading-color-collapsed: var(--color-l-gray-100);
+  --nav-heading-color-collapsed-hover: var(--color-l-gray-100);
+  --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
+  --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                              inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.07),
+                              0px 2px 3px 0px rgba(0, 0, 0, 0.05);
+  --nav-file-tag-color: var(--color-l-gray-100);
+  --nav-file-tag-bg: var(--color-l-gray-60);
+  --collapse-icon-color: var(--color-l-gray-70);
+  --collapse-icon-color-collapsed: var(--color-l-gray-70);
 }
 
 /*───────────────────────────────────
@@ -727,6 +760,29 @@ and CONTRIBUTION page ↴
   --graph-node-tag: var(--color-d-red-30);
   --graph-node-attachment: var(--color-d-green-30);
   --graph-arrow: var(--color-d-gray-50);
+  --nav-item-color: var(--color-d-gray-40);
+  --nav-item-color-hover: var(--color-d-gray-30);
+  --nav-item-color-active: var(--color-d-gray-30);
+  --nav-item-color-selected: var(--color-d-gray-30);
+  --nav-item-color-highlighted: var(--text-accent-hover);
+  --nav-item-background-hover: transparent;
+  --nav-item-background-active: rgba(0, 0, 0, 0.2);
+  --nav-item-background-selected: transparent;
+  --nav-indentation-guide-color: var(--indentation-guide-color);
+  --nav-collapse-icon-color: var(--collapse-icon-color);
+  --nav-collapse-icon-color-collapsed: var(--text-faint);
+  --nav-heading-color: var(--color-d-gray-50);
+  --nav-heading-color-hover: var(--color-d-gray-50);
+  --nav-heading-color-collapsed: var(--color-d-gray-50);
+  --nav-heading-color-collapsed-hover: var(--color-d-gray-50);
+  --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23);
+  --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
+                              inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.24),
+                              0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+  --nav-file-tag-color: var(--color-d-gray-50);
+  --nav-file-tag-bg: var(--color-d-gray-100);
+  --collapse-icon-color: var(--color-d-gray-60);
+  --collapse-icon-color-collapsed: var(--color-d-gray-60);
 }
 
 /*────────── Icons ──────────*/
@@ -1735,6 +1791,34 @@ input[type=number]:focus-visible {
 
 .search-input-container input {
   padding-left: 28px;
+}
+
+/*────────── Navigation Items ──────────*/
+.tree-item-self {
+  border-radius: var(--nav-item-radius);
+}
+.tree-item-self.is-clickable {
+  cursor: pointer;
+}
+.tree-item-self.is-clickable.is-active:not(.nav-file-title) {
+  box-shadow: var(--nav-item-shadow-active);
+}
+
+.nav-file-title {
+  padding: var(--nav-file-padding);
+}
+.nav-file-title.is-active {
+  box-shadow: var(--nav-file-shadow-active);
+}
+
+.nav-file-tag {
+  color: var(--nav-file-tag-color);
+  background: var(--nav-file-tag-bg);
+}
+
+.backlink-pane > .tree-item-self,
+.outgoing-link-pane > .tree-item-self {
+  text-transform: capitalize;
 }
 
 /*────────── File ──────────*/

@@ -1,0 +1,31 @@
+/*────────── Navigation Items ──────────*/
+
+.tree-item-self {
+    border-radius: var(--nav-item-radius);
+    
+    &.is-clickable {
+        cursor: pointer;
+
+        &.is-active:not(.nav-file-title) {
+            box-shadow: var(--nav-item-shadow-active);
+        }
+    }
+}
+
+.nav-file-title {
+    padding: var(--nav-file-padding);
+    
+    &.is-active {
+        box-shadow: var(--nav-file-shadow-active);
+    }
+}
+
+.nav-file-tag {
+    color: var(--nav-file-tag-color);
+    background: var(--nav-file-tag-bg);
+}
+
+.backlink-pane > .tree-item-self,
+.outgoing-link-pane > .tree-item-self {
+    text-transform: capitalize;
+}
