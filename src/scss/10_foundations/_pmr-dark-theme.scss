@@ -460,4 +460,30 @@ and CONTRIBUTION page ↴
     --graph-node-tag: var(--color-d-red-30);
     --graph-node-attachment: var(--color-d-green-30);
     --graph-arrow: var(--color-d-gray-50);
+
+    // Navigation Item
+    --nav-item-color: var(--color-d-gray-40);
+    --nav-item-color-hover: var(--color-d-gray-30);
+    --nav-item-color-active: var(--color-d-gray-30);
+    --nav-item-color-selected: var(--color-d-gray-30);
+    --nav-item-color-highlighted: var(--text-accent-hover);
+    --nav-item-background-hover: transparent;
+    --nav-item-background-active: rgba(0, 0, 0, 0.2);
+    --nav-item-background-selected: transparent;
+    --nav-indentation-guide-color: var(--indentation-guide-color);
+    --nav-collapse-icon-color: var(--collapse-icon-color);
+    --nav-collapse-icon-color-collapsed: var(--text-faint);
+    --nav-heading-color: var(--color-d-gray-50);
+    --nav-heading-color-hover: var(--color-d-gray-50);
+    --nav-heading-color-collapsed: var(--color-d-gray-50);
+    --nav-heading-color-collapsed-hover: var(--color-d-gray-50);
+    --nav-item-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23);
+    --nav-file-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
+                                inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.24),
+                                0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+    --nav-file-tag-color: var(--color-d-gray-50);
+    --nav-file-tag-bg: var(--color-d-gray-100);
+
+    --collapse-icon-color: var(--color-d-gray-60);
+    --collapse-icon-color-collapsed: var(--color-d-gray-60);
 }

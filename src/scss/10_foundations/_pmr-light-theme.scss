@@ -489,4 +489,30 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --graph-node-tag: var(--color-l-red-20);
     --graph-node-attachment: var(--color-l-green-10);
     --graph-arrow: var(--color-l-gray-90);
+
+    // Navigation Item
+    --nav-item-color: var(--color-l-gray-110);
+    --nav-item-color-hover: var(--color-l-gray-130);
+    --nav-item-color-active: var(--color-l-gray-130);
+    --nav-item-color-selected: var(--color-l-gray-130);
+    --nav-item-color-highlighted: var(--text-accent-hover);
+    --nav-item-background-hover: transparent;
+    --nav-item-background-active: rgba(255, 255, 255, 0.25);
+    --nav-item-background-selected: transparent;
+    --nav-indentation-guide-color: var(--indentation-guide-color);
+    --nav-collapse-icon-color: var(--collapse-icon-color);
+    --nav-collapse-icon-color-collapsed: var(--text-faint);
+    --nav-heading-color: var(--color-l-gray-100);
+    --nav-heading-color-hover: var(--color-l-gray-100);
+    --nav-heading-color-collapsed: var(--color-l-gray-100);
+    --nav-heading-color-collapsed-hover: var(--color-l-gray-100);
+    --nav-item-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
+    --nav-file-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                                inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.07),
+                                0px 2px 3px 0px rgba(0, 0, 0, 0.05);
+    --nav-file-tag-color: var(--color-l-gray-100);
+    --nav-file-tag-bg: var(--color-l-gray-60);
+
+    --collapse-icon-color: var(--color-l-gray-70);
+    --collapse-icon-color-collapsed: var(--color-l-gray-70);
 }

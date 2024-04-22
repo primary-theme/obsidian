@@ -48,4 +48,15 @@ body {
                                  calc(var(--size-4-2) + var(--button-inset-shadow-size))
                                  var(--size-4-3);
     --slider-track-height: 5px;
+    
+    --nav-item-white-space: nowrap;
+    --nav-item-radius: 7px;
+    --nav-item-padding: var(--size-4-1)
+                        var(--size-4-2)
+                        var(--size-4-1)
+                        var(--size-4-6);
+    --nav-file-padding: var(--size-4-1)
+                        var(--size-4-2)
+                        calc(var(--size-4-1) + var(--button-axis-offset))
+                        var(--size-4-6);
 }
