@@ -60,10 +60,19 @@ body {
   --input-height: 32px;
   --search-icon-size: 14px;
   --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
-  --settings-nav-item-padding: var(--size-2-3)
+  --settings-nav-item-padding: calc(var(--size-2-3) + 1px)
+                               var(--size-4-3)
+                               calc(var(--size-2-3) + 1px)
+                               var(--size-4-3);
+  --settings-nav-item-padding-hover: calc(var(--size-2-3) + 1px)
+                               var(--size-4-3)
+                               calc(var(--size-2-3) + 1px)
+                               var(--size-4-5);
+  --settings-nav-item-padding-active: var(--size-2-3)
                                var(--size-4-3)
                                calc(var(--size-2-3) + var(--button-inset-shadow-size))
-                               var(--size-4-3);
+                               var(--size-4-5);
+  --settings-nav-item-radius: calc(var(--radius-m) - 1px);
   --slider-track-height: 5px;
   --nav-item-white-space: nowrap;
   --nav-item-radius: 6px;
@@ -1695,6 +1704,7 @@ input[type=checkbox]:hover {
 }
 
 .vertical-tab-header-group-title {
+  font-size: calc(var(--font-ui-smaller) - 1px);
   color: var(--settings-nav-group-title-color);
   text-transform: uppercase;
   font-feature-settings: "calt" off;
@@ -1706,7 +1716,7 @@ input[type=checkbox]:hover {
   font-size: var(--font-ui-small);
   color: var(--settings-nav-item-text-color);
   padding: var(--settings-nav-item-padding);
-  border-radius: var(--radius-m);
+  border-radius: var(--settings-nav-item-radius);
   margin-bottom: var(--size-2-1);
   transition: box-shadow var(--button-anim);
   transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
@@ -1715,12 +1725,15 @@ input[type=checkbox]:hover {
   color: var(--settings-nav-item-text-color-hover);
   background: var(--settings-nav-item-bg-hover);
   cursor: pointer;
-  padding-left: var(--size-4-5);
+  padding: var(--settings-nav-item-padding-hover);
 }
 .vertical-tab-nav-item:active:not(.is-active) {
   color: var(--settings-nav-item-text-color-active);
   background: var(--settings-nav-item-bg-active);
   transform: translateY(var(--button-axis-offset));
+}
+.vertical-tab-nav-item.is-active {
+  padding: var(--settings-nav-item-padding-active);
 }
 .vertical-tab-nav-item.is-active:nth-child(3n+1) {
   background: var(--alternating-color-1);
