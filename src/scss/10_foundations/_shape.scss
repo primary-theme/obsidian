@@ -24,12 +24,11 @@ body {
     --modal-close-button-size: 20px;
     --dropdown-height:  calc(
                             var(--font-ui-small) + 
-                            calc(var(--size-4-4) + var(--button-inset-shadow-size)) +
-                            var(--size-2-2)
+                            calc(var(--size-4-4) + var(--button-inset-shadow-size))
                         );
-    --button-padding:   var(--size-4-4)
+    --button-padding:   var(--size-4-2)
                         var(--size-4-3)
-                        calc(var(--size-4-4) + var(--button-inset-shadow-size))
+                        calc(var(--size-4-2) + var(--button-inset-shadow-size))
                         var(--size-4-3);
     --button-padding-active:    calc(var(--size-4-4) + var(--button-inset-shadow-size))
                                 var(--size-4-3)
@@ -43,9 +42,9 @@ body {
     --input-height: 32px;
     --search-icon-size: 14px;
     --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
-    --settings-nav-item-padding: var(--size-4-2)
+    --settings-nav-item-padding: var(--size-2-3)
                                  var(--size-4-3)
-                                 calc(var(--size-4-2) + var(--button-inset-shadow-size))
+                                 calc(var(--size-2-3) + var(--button-inset-shadow-size))
                                  var(--size-4-3);
     --slider-track-height: 5px;
     
@@ -59,4 +58,7 @@ body {
                         var(--size-4-2)
                         calc(var(--size-4-1) + var(--button-axis-offset))
                         var(--size-4-6);
+
+    --vault-name-font-size: var(--font-ui-small);
+    --vault-name-font-weight: var(--font-semibold);
 }

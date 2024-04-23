@@ -324,3 +324,28 @@
         }
     }
 }
+
+// Breadcrumb
+.view-header-title-parent {
+    .view-header {
+        &-breadcrumb {
+            color: var(--breadcrumb-color);
+            
+            &:hover {
+                color: var(--breadcrumb-color-hover);
+                background: var(--breadcrumb-bg-hover);
+                cursor: pointer;
+            }
+        }
+    
+        &-breadcrumb-separator {
+            color: var(--breadcrumb-separator-color);
+        }
+
+    }
+}
+
+// File Title
+.view-header-title.view-header-title.view-header-title.view-header-title {
+    color: var(--file-header-title-color);
+}
