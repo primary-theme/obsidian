@@ -1,0 +1,36 @@
+/*────────── Core Plugin: Search ──────────*/
+
+// Search Result Count
+.more-options-icon {
+    color: var(--icon-color);
+    background: var(--icon-bg);
+}
+
+.clickable-icon:hover .more-options-icon,
+.clickable-icon:hover .more-options-icon:hover {
+    color: var(--icon-color-hover);
+    background: var(--icon-bg-hover);
+}
+
+.clickable-icon.search-result-count.has-active-menu {
+    color: var(--icon-color-active);
+    background: var(--icon-bg-active);
+}
+
+// Search Result Dropdown
+.search-results-info select.dropdown {
+    color: var(--icon-color);
+
+    &:hover {
+        color: var(--icon-color-hover);
+    }
+
+    &:active,
+    &:focus {
+        color: var(--icon-color-active);
+        box-shadow: none;
+    }
+}
+
+// Search Result Items
+// includes styling for Search, Backlinks, Outgoing, etc.

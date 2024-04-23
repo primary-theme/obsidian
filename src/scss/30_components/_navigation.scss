@@ -12,20 +12,16 @@
     }
 }
 
-.nav-file-title {
-    padding: var(--nav-file-padding);
-    
-    &.is-active {
-        box-shadow: var(--nav-file-shadow-active);
+// Backlink Pane | Outgoing Link Pane
+.backlink-pane,
+.outgoing-link-pane {
+    padding-left: var(--size-4-1);
+    padding-right: var(--size-4-1);
+
+    > .tree-item-self {
+        font-size: 11px;
+        font-feature-settings: "calt" off;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
     }
-}
-
-.nav-file-tag {
-    color: var(--nav-file-tag-color);
-    background: var(--nav-file-tag-bg);
-}
-
-.backlink-pane > .tree-item-self,
-.outgoing-link-pane > .tree-item-self {
-    text-transform: capitalize;
 }

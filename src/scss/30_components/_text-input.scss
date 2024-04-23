@@ -1,5 +1,17 @@
 /*────────── Text Input ──────────*/
 
+textarea,
+input.metadata-input-text,
+input[type='date'],
+input[type='datetime-local'],
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    color: var(--text-input-color);
+}
+
 textarea:active,
 input.metadata-input-text:active,
 input[type='date']:active,
@@ -27,6 +39,7 @@ input[type='search']:focus-visible,
 input[type='email']:focus-visible,
 input[type='password']:focus-visible,
 input[type='number']:focus-visible {
+    color: var(--text-input-color-focused);
     background: var(--text-input-bg-active);
     border: 1px solid var(--background-modifier-border);
     box-shadow: var(--text-input-shadow-active);

@@ -1,0 +1,29 @@
+/*────────── Core Plugin: File Explorer ──────────*/
+
+// File Explorer
+.nav-folder.mod-root > .nav-folder-title {
+    justify-content: center;
+    background: var(--vault-name-background);
+    padding: var(--size-2-3)
+             var(--size-4-2);
+    border: var(--vault-name-border);
+    border-radius: var(--radius-m);
+
+    &:hover {
+        color: var(--vault-name-color);
+        background: var(--vault-name-background);
+    }
+}
+
+.nav-file-title {
+    padding: var(--nav-file-padding);
+    
+    &.is-active {
+        box-shadow: var(--nav-file-shadow-active);
+    }
+}
+
+.nav-file-tag {
+    color: var(--nav-file-tag-color);
+    background: var(--nav-file-tag-bg);
+}

@@ -41,12 +41,11 @@ body {
   --modal-close-button-size: 20px;
   --dropdown-height: calc(
                           var(--font-ui-small) +
-                          calc(var(--size-4-4) + var(--button-inset-shadow-size)) +
-                          var(--size-2-2)
+                          calc(var(--size-4-4) + var(--button-inset-shadow-size))
                       );
-  --button-padding: var(--size-4-4)
+  --button-padding: var(--size-4-2)
                       var(--size-4-3)
-                      calc(var(--size-4-4) + var(--button-inset-shadow-size))
+                      calc(var(--size-4-2) + var(--button-inset-shadow-size))
                       var(--size-4-3);
   --button-padding-active: calc(var(--size-4-4) + var(--button-inset-shadow-size))
                               var(--size-4-3)
@@ -60,9 +59,9 @@ body {
   --input-height: 32px;
   --search-icon-size: 14px;
   --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
-  --settings-nav-item-padding: var(--size-4-2)
+  --settings-nav-item-padding: var(--size-2-3)
                                var(--size-4-3)
-                               calc(var(--size-4-2) + var(--button-inset-shadow-size))
+                               calc(var(--size-2-3) + var(--button-inset-shadow-size))
                                var(--size-4-3);
   --slider-track-height: 5px;
   --nav-item-white-space: nowrap;
@@ -75,6 +74,8 @@ body {
                       var(--size-4-2)
                       calc(var(--size-4-1) + var(--button-axis-offset))
                       var(--size-4-6);
+  --vault-name-font-size: var(--font-ui-small);
+  --vault-name-font-weight: var(--font-semibold);
 }
 
 /*───────────────────────────────────
@@ -323,9 +324,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --settings-nav-item-bg-active: var(--color-l-gray-60);
   --tab-bg: transparent;
   --tab-active-bg: var(--color-l-gray-20);
-  --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
-                               inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
-                               0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+  --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
+                      inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
+                      0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
   --inline-title-color: var(--color-l-gray-140);
   --link-unresolved-color: var(--color-l-gray-80);
   --link-unresolved-border: 1px solid var(--color-l-gray-80);
@@ -349,7 +350,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --italic-color: var(--color-l-blue-30);
   --strikethrough-color: var(--color-l-gray-80);
   --inline-code-color: var(--color-l-red-10);
-  --inline-code-bg: var(--color-l-gray-50);
+  --inline-code-bg: var(--color-l-gray-30);
   --bold-italic-color: var(--color-l-gray-140);
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
   --tag-color: var(--color-l-blue-30);
@@ -396,6 +397,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
                                0px 1px 2px 0px rgba(0, 0, 0, 0.1),
                                0px 0px 0px 6px rgba(0, 0, 0, 0.03);
+  --text-input-color: var(--color-l-gray-90);
+  --text-input-color-focused: var(--color-l-gray-120);
   --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
                               inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
@@ -413,7 +416,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --graph-arrow: var(--color-l-gray-90);
   --nav-item-color: var(--color-l-gray-110);
   --nav-item-color-hover: var(--color-l-gray-130);
-  --nav-item-color-active: var(--color-l-gray-130);
+  --nav-item-color-active: var(--color-l-gray-110);
   --nav-item-color-selected: var(--color-l-gray-130);
   --nav-item-color-highlighted: var(--text-accent-hover);
   --nav-item-background-hover: transparent;
@@ -434,6 +437,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --nav-file-tag-bg: var(--color-l-gray-60);
   --collapse-icon-color: var(--color-l-gray-70);
   --collapse-icon-color-collapsed: var(--color-l-gray-70);
+  --vault-name-color: var(--color-l-gray-90);
+  --vault-name-background: var(--color-l-gray-30);
+  --vault-name-border: 1px solid var(--background-modifier-border);
+  --breadcrumb-color: var(--color-l-gray-90);
+  --breadcrumb-color-hover: var(--color-l-gray-90);
+  --breadcrumb-bg-hover: var(--color-l-gray-40);
+  --breadcrumb-separator-color: var(--background-modifier-border);
+  --file-header-title-color: var(--color-l-gray-120);
 }
 
 /*───────────────────────────────────
@@ -681,9 +692,9 @@ and CONTRIBUTION page ↴
   --settings-nav-item-bg-active: var(--color-d-gray-130);
   --tab-bg: transparent;
   --tab-active-bg: var(--color-d-gray-90);
-  --tab-active-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
-                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
-                                  0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
+  --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
+                       inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
+                       0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
   --inline-title-color: var(--color-l-gray-140);
   --link-unresolved-color: var(--color-d-gray-40);
   --link-unresolved-border: 1px solid var(--color-d-gray-40);
@@ -707,7 +718,7 @@ and CONTRIBUTION page ↴
   --italic-color: var(--color-d-blue-30);
   --strikethrough-color: var(--color-d-gray-50);
   --inline-code-color: var(--color-d-red-10);
-  --inline-code-bg: var(--color-d-gray-120);
+  --inline-code-bg: var(--color-d-gray-110);
   --bold-italic-color: var(--color-d-gray-10);
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
   --tag-color: var(--color-d-blue-30);
@@ -745,6 +756,8 @@ and CONTRIBUTION page ↴
                                   inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
                                   0px 1px 2px 0px rgba(0, 0, 0, 0.5),
                                   0px 0px 0px 6px rgba(255, 255, 255, 0.08);
+  --text-input-color: var(--color-d-gray-50);
+  --text-input-color-focused: var(--color-d-gray-30);
   --text-input-bg-active: var(--color-d-gray-140);
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
                               inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
@@ -762,7 +775,7 @@ and CONTRIBUTION page ↴
   --graph-arrow: var(--color-d-gray-50);
   --nav-item-color: var(--color-d-gray-40);
   --nav-item-color-hover: var(--color-d-gray-20);
-  --nav-item-color-active: var(--color-d-gray-20);
+  --nav-item-color-active: var(--color-d-gray-40);
   --nav-item-color-selected: var(--color-d-gray-20);
   --nav-item-color-highlighted: var(--text-accent-hover);
   --nav-item-background-hover: transparent;
@@ -783,6 +796,14 @@ and CONTRIBUTION page ↴
   --nav-file-tag-bg: var(--color-d-gray-100);
   --collapse-icon-color: var(--color-d-gray-60);
   --collapse-icon-color-collapsed: var(--color-d-gray-60);
+  --vault-name-color: var(--color-d-gray-50);
+  --vault-name-background: var(--color-d-gray-110);
+  --vault-name-border: 1px solid var(--background-modifier-border);
+  --breadcrumb-color: var(--color-d-gray-50);
+  --breadcrumb-color-hover: var(--color-d-gray-50);
+  --breadcrumb-bg-hover: var(--color-d-gray-80);
+  --breadcrumb-separator-color: var(--background-modifier-border);
+  --file-header-title-color: var(--color-d-gray-40);
 }
 
 /*────────── Icons ──────────*/
@@ -1635,13 +1656,20 @@ input[type=checkbox]:hover {
 /*────────── Color Input ──────────*/
 /*────────── Modals ──────────*/
 /*────────── Modal: Settings ──────────*/
+.vertical-tab-header-group {
+  padding-top: 0;
+}
+
 .vertical-tab-header-group-title {
   color: var(--settings-nav-group-title-color);
   text-transform: uppercase;
+  font-feature-settings: "calt" off;
+  letter-spacing: 0.1em;
 }
 
 .vertical-tab-nav-item {
   text-transform: capitalize;
+  font-size: var(--font-ui-small);
   color: var(--settings-nav-item-text-color);
   padding: var(--settings-nav-item-padding);
   border-radius: var(--radius-m);
@@ -1756,6 +1784,18 @@ select:focus, select:active,
 }
 
 /*────────── Text Input ──────────*/
+textarea,
+input.metadata-input-text,
+input[type=date],
+input[type=datetime-local],
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=password],
+input[type=number] {
+  color: var(--text-input-color);
+}
+
 textarea:active,
 input.metadata-input-text:active,
 input[type=date]:active,
@@ -1783,6 +1823,7 @@ input[type=search]:focus-visible,
 input[type=email]:focus-visible,
 input[type=password]:focus-visible,
 input[type=number]:focus-visible {
+  color: var(--text-input-color-focused);
   background: var(--text-input-bg-active);
   border: 1px solid var(--background-modifier-border);
   box-shadow: var(--text-input-shadow-active);
@@ -1804,21 +1845,17 @@ input[type=number]:focus-visible {
   box-shadow: var(--nav-item-shadow-active);
 }
 
-.nav-file-title {
-  padding: var(--nav-file-padding);
+.backlink-pane,
+.outgoing-link-pane {
+  padding-left: var(--size-4-1);
+  padding-right: var(--size-4-1);
 }
-.nav-file-title.is-active {
-  box-shadow: var(--nav-file-shadow-active);
-}
-
-.nav-file-tag {
-  color: var(--nav-file-tag-color);
-  background: var(--nav-file-tag-bg);
-}
-
 .backlink-pane > .tree-item-self,
 .outgoing-link-pane > .tree-item-self {
-  text-transform: capitalize;
+  font-size: 11px;
+  font-feature-settings: "calt" off;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /*────────── File ──────────*/
@@ -2040,6 +2077,22 @@ input[type=number]:focus-visible {
   fill: var(--alternating-color-3-hover-active);
 }
 
+.view-header-title-parent .view-header-breadcrumb {
+  color: var(--breadcrumb-color);
+}
+.view-header-title-parent .view-header-breadcrumb:hover {
+  color: var(--breadcrumb-color-hover);
+  background: var(--breadcrumb-bg-hover);
+  cursor: pointer;
+}
+.view-header-title-parent .view-header-breadcrumb-separator {
+  color: var(--breadcrumb-separator-color);
+}
+
+.view-header-title.view-header-title.view-header-title.view-header-title {
+  color: var(--file-header-title-color);
+}
+
 /*────────── Link ──────────*/
 .theme-light,
 .theme-dark {
@@ -2230,7 +2283,7 @@ body {
   border-radius: var(--inline-code-radius);
 }
 
-/*────────── Graph ──────────*/
+/*────────── Core Plugin: Graph ──────────*/
 .graph-view.color-fill-unresolved {
   opacity: var(--graph-node-unresolved-opacity);
 }
@@ -2242,6 +2295,59 @@ body {
 }
 .graph-view.color-line-highlight {
   color: var(--graph-node-highlight-line);
+}
+
+/*────────── Core Plugin: File Explorer ──────────*/
+.nav-folder.mod-root > .nav-folder-title {
+  justify-content: center;
+  background: var(--vault-name-background);
+  padding: var(--size-2-3) var(--size-4-2);
+  border: var(--vault-name-border);
+  border-radius: var(--radius-m);
+}
+.nav-folder.mod-root > .nav-folder-title:hover {
+  color: var(--vault-name-color);
+  background: var(--vault-name-background);
+}
+
+.nav-file-title {
+  padding: var(--nav-file-padding);
+}
+.nav-file-title.is-active {
+  box-shadow: var(--nav-file-shadow-active);
+}
+
+.nav-file-tag {
+  color: var(--nav-file-tag-color);
+  background: var(--nav-file-tag-bg);
+}
+
+/*────────── Core Plugin: Search ──────────*/
+.more-options-icon {
+  color: var(--icon-color);
+  background: var(--icon-bg);
+}
+
+.clickable-icon:hover .more-options-icon,
+.clickable-icon:hover .more-options-icon:hover {
+  color: var(--icon-color-hover);
+  background: var(--icon-bg-hover);
+}
+
+.clickable-icon.search-result-count.has-active-menu {
+  color: var(--icon-color-active);
+  background: var(--icon-bg-active);
+}
+
+.search-results-info select.dropdown {
+  color: var(--icon-color);
+}
+.search-results-info select.dropdown:hover {
+  color: var(--icon-color-hover);
+}
+.search-results-info select.dropdown:active, .search-results-info select.dropdown:focus {
+  color: var(--icon-color-active);
+  box-shadow: none;
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/

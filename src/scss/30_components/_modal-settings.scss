@@ -1,14 +1,22 @@
 /*────────── Modal: Settings ──────────*/
 // Settings Left Sidebar
+.vertical-tab-header-group {
+    padding-top: 0;
+}
+
 // Tab Header
 .vertical-tab-header-group-title {
     // font-family: var(--font-monospace-theme);
     color: var(--settings-nav-group-title-color);
     text-transform: uppercase;
+    font-feature-settings: "calt" off;
+    letter-spacing: 0.1em;
 }
+
 // Nav Items
 .vertical-tab-nav-item {
     text-transform: capitalize;
+    font-size: var(--font-ui-small);
     color: var(--settings-nav-item-text-color);
     padding: var(--settings-nav-item-padding);
     border-radius: var(--radius-m);
