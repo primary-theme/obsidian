@@ -30,9 +30,9 @@ body {
                         var(--size-4-3)
                         calc(var(--size-4-2) + var(--button-inset-shadow-size))
                         var(--size-4-3);
-    --button-padding-active:    calc(var(--size-4-4) + var(--button-inset-shadow-size))
+    --button-padding-active:    calc(var(--size-4-2) + var(--button-inset-shadow-size))
                                 var(--size-4-3)
-                                var(--size-4-4)
+                                var(--size-4-2)
                                 var(--size-4-3);
     --button-s-padding: var(--size-2-2)
                         var(--size-4-2)

@@ -1,7 +1,8 @@
 /*────────── Icons ──────────*/
 // General Shape
 body {
-    --clickable-icon-radius: calc(var(--radius-m) - 2px);
+    // --clickable-icon-radius: calc(var(--radius-m) - 2px);
+    --clickable-icon-radius: calc(var(--radius-s) + 1px);
 }
 
 .clickable-icon.clickable-icon {

@@ -62,10 +62,21 @@
 }
 
 // Sidebar Buttons
+.nav-header {
+    padding-bottom: 0px;
+}
+
 .nav-buttons-container {
     gap: var(--size-4-1);
+    justify-content: left;
+    padding-left: var(--size-2-3);
 }
 
 .nav-action-button {
     padding: var(--size-2-3) var(--size-2-3);
+
+    & > svg {
+        width: 15px;
+        height: 15px;
+    }
 }

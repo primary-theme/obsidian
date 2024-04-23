@@ -15,9 +15,6 @@
 // Backlink Pane | Outgoing Link Pane
 .backlink-pane,
 .outgoing-link-pane {
-    padding-left: var(--size-4-1);
-    padding-right: var(--size-4-1);
-
     > .tree-item-self {
         font-size: 11px;
         font-feature-settings: "calt" off;

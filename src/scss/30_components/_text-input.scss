@@ -46,6 +46,11 @@ input[type='number']:focus-visible {
     transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
 }
 
+.nav-header .search-input-container {
+    margin: var(--size-4-2) 0px;
+    margin-bottom: 0px;
+}
+
 .search-input-container input {
     padding-left: 28px;
 }
