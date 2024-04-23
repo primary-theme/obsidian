@@ -494,11 +494,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Navigation Item
     --nav-item-color: var(--color-l-gray-110);
-    --nav-item-color-hover: var(--color-l-gray-130);
+    --nav-item-color-hover: var(--color-l-gray-110);
     --nav-item-color-active: var(--color-l-gray-110);
     --nav-item-color-selected: var(--color-l-gray-130);
     --nav-item-color-highlighted: var(--text-accent-hover);
-    --nav-item-background-hover: transparent;
+    --nav-item-background-hover: rgba(255, 255, 255, 0.25);
     --nav-item-background-active: rgba(255, 255, 255, 0.25);
     --nav-item-background-selected: transparent;
     --nav-indentation-guide-color: var(--indentation-guide-color);
@@ -512,8 +512,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --nav-file-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
                                 inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.07),
                                 0px 2px 3px 0px rgba(0, 0, 0, 0.05);
-    --nav-file-tag-color: var(--color-l-gray-100);
-    --nav-file-tag-bg: var(--color-l-gray-60);
+    --nav-file-tag-color: var(--color-l-gray-90);
+    // --nav-file-tag-bg: var(--color-l-gray-60);
+    --nav-file-tag-bg: transparent;
 
     --collapse-icon-color: var(--color-l-gray-70);
     --collapse-icon-color-collapsed: var(--color-l-gray-70);
@@ -527,7 +528,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --search-clear-button-color: var(--icon-color);
     --search-clear-button-color-hover: var(--background-modifier-error-hover);
     --search-icon-color: var(--icon-color);
-    --search-result-background: var(--background-primary);
+    --search-result-background: var(--background-primary-alt);
 
     // File Header Title | File Header Breadcrumbs
     --breadcrumb-color: var(--color-l-gray-90);

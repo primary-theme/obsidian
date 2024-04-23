@@ -9,6 +9,7 @@ Variables for
 */
 
 body {
+    --cursor: pointer;
     --radius-xs: 2px;
     --icon-container-radius: 0px;
     --button-inset-shadow-size: 2px;
@@ -49,14 +50,14 @@ body {
     --slider-track-height: 5px;
     
     --nav-item-white-space: nowrap;
-    --nav-item-radius: 7px;
-    --nav-item-padding: var(--size-4-1)
+    --nav-item-radius: 6px;
+    --nav-item-padding: calc(var(--size-4-1) + 1px)
                         var(--size-4-2)
-                        var(--size-4-1)
+                        calc(var(--size-4-1) + 1px)
                         var(--size-4-6);
-    --nav-file-padding: var(--size-4-1)
+    --nav-file-padding-active: calc(var(--size-4-1))
                         var(--size-4-2)
-                        calc(var(--size-4-1) + var(--button-axis-offset))
+                        calc(var(--size-4-1) + var(--button-inset-shadow-size))
                         var(--size-4-6);
 
     --vault-name-font-size: var(--font-ui-small);

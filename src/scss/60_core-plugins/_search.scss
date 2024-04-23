@@ -34,3 +34,15 @@
 
 // Search Result Items
 // includes styling for Search, Backlinks, Outgoing, etc.
+.search-result-file-matches {
+    border-radius: var(--radius-m);
+}
+
+.search-result-file-match {
+    transition: var(--anim-duration-fast) var(--anim-motion-smooth);
+    cursor: pointer;
+
+    &:hover {
+        background: var(--background-primary);
+    }
+}
