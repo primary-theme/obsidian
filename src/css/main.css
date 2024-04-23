@@ -76,6 +76,8 @@ body {
                       var(--size-4-6);
   --vault-name-font-size: var(--font-ui-small);
   --vault-name-font-weight: var(--font-semibold);
+  --search-icon-size: 14px;
+  --search-clear-button-size: 12px;
 }
 
 /*───────────────────────────────────
@@ -440,6 +442,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --vault-name-color: var(--color-l-gray-90);
   --vault-name-background: var(--color-l-gray-30);
   --vault-name-border: 1px solid var(--background-modifier-border);
+  --search-clear-button-color: var(--icon-color);
+  --search-clear-button-color-hover: var(--background-modifier-error-hover);
+  --search-icon-color: var(--icon-color);
+  --search-result-background: var(--background-primary);
   --breadcrumb-color: var(--color-l-gray-90);
   --breadcrumb-color-hover: var(--color-l-gray-90);
   --breadcrumb-bg-hover: var(--color-l-gray-40);
@@ -1834,6 +1840,13 @@ input[type=number]:focus-visible {
   padding-left: 28px;
 }
 
+.search-input-clear-button {
+  cursor: pointer;
+}
+.search-input-clear-button:hover {
+  color: var(--search-clear-button-color-hover);
+}
+
 /*────────── Navigation Items ──────────*/
 .tree-item-self {
   border-radius: var(--nav-item-radius);
@@ -1864,7 +1877,13 @@ input[type=number]:focus-visible {
   border-radius: var(--file-border-radius);
   margin-bottom: var(--workspace-margin-bottom);
 }
-.mod-root .workspace-tabs.mod-top-left-space, .mod-root .workspace-tabs.mod-top-right-space, .mod-root .workspace-tabs.mod-top-left-space.mod-top-right-space {
+.mod-root .workspace-tabs.mod-top-left-space {
+  margin-left: var(--workspace-margin-bottom);
+}
+.mod-root .workspace-tabs.mod-top-right-space {
+  margin-right: var(--workspace-margin-bottom);
+}
+.mod-root .workspace-tabs.mod-top-left-space.mod-top-right-space {
   margin-left: var(--workspace-margin-bottom);
   margin-right: var(--workspace-margin-bottom);
 }

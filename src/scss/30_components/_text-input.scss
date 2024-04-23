@@ -49,3 +49,11 @@ input[type='number']:focus-visible {
 .search-input-container input {
     padding-left: 28px;
 }
+
+.search-input-clear-button {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--search-clear-button-color-hover);
+    }
+}

@@ -524,6 +524,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --vault-name-border: 1px solid var(--background-modifier-border);
 
     // Search
+    --search-clear-button-color: var(--icon-color);
+    --search-clear-button-color-hover: var(--background-modifier-error-hover);
+    --search-icon-color: var(--icon-color);
+    --search-result-background: var(--background-primary);
 
     // File Header Title | File Header Breadcrumbs
     --breadcrumb-color: var(--color-l-gray-90);
