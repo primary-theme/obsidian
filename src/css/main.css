@@ -47,9 +47,9 @@ body {
                       var(--size-4-3)
                       calc(var(--size-4-2) + var(--button-inset-shadow-size))
                       var(--size-4-3);
-  --button-padding-active: calc(var(--size-4-4) + var(--button-inset-shadow-size))
+  --button-padding-active: calc(var(--size-4-2) + var(--button-inset-shadow-size))
                               var(--size-4-3)
-                              var(--size-4-4)
+                              var(--size-4-2)
                               var(--size-4-3);
   --button-s-padding: var(--size-2-2)
                       var(--size-4-2)
@@ -814,7 +814,7 @@ and CONTRIBUTION page ↴
 
 /*────────── Icons ──────────*/
 body {
-  --clickable-icon-radius: calc(var(--radius-m) - 2px);
+  --clickable-icon-radius: calc(var(--radius-s) + 1px);
 }
 
 .clickable-icon.clickable-icon:hover {
@@ -1518,12 +1518,22 @@ svg.vault {
   background: var(--tab-bg);
 }
 
+.nav-header {
+  padding-bottom: 0px;
+}
+
 .nav-buttons-container {
   gap: var(--size-4-1);
+  justify-content: left;
+  padding-left: var(--size-2-3);
 }
 
 .nav-action-button {
   padding: var(--size-2-3) var(--size-2-3);
+}
+.nav-action-button > svg {
+  width: 15px;
+  height: 15px;
 }
 
 /*────────── Status Bar ──────────*/
@@ -1836,6 +1846,11 @@ input[type=number]:focus-visible {
   transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
 }
 
+.nav-header .search-input-container {
+  margin: var(--size-4-2) 0px;
+  margin-bottom: 0px;
+}
+
 .search-input-container input {
   padding-left: 28px;
 }
@@ -1858,11 +1873,6 @@ input[type=number]:focus-visible {
   box-shadow: var(--nav-item-shadow-active);
 }
 
-.backlink-pane,
-.outgoing-link-pane {
-  padding-left: var(--size-4-1);
-  padding-right: var(--size-4-1);
-}
 .backlink-pane > .tree-item-self,
 .outgoing-link-pane > .tree-item-self {
   font-size: 11px;
@@ -2318,11 +2328,12 @@ body {
 
 /*────────── Core Plugin: File Explorer ──────────*/
 .nav-folder.mod-root > .nav-folder-title {
+  letter-spacing: 0.1em;
   justify-content: center;
   background: var(--vault-name-background);
   padding: var(--size-2-3) var(--size-4-2);
   border: var(--vault-name-border);
-  border-radius: var(--radius-m);
+  border-radius: calc(var(--radius-s) + 1px);
 }
 .nav-folder.mod-root > .nav-folder-title:hover {
   color: var(--vault-name-color);

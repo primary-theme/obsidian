@@ -1,13 +1,17 @@
 /*────────── Core Plugin: File Explorer ──────────*/
 
-// File Explorer
+// Vault Title
 .nav-folder.mod-root > .nav-folder-title {
+    // font-size: 0.7em;
+    // font-feature-settings: "calt" off;
+    // text-transform: uppercase;
+    letter-spacing: 0.1em;
     justify-content: center;
     background: var(--vault-name-background);
     padding: var(--size-2-3)
              var(--size-4-2);
     border: var(--vault-name-border);
-    border-radius: var(--radius-m);
+    border-radius: calc(var(--radius-s) + 1px);
 
     &:hover {
         color: var(--vault-name-color);
