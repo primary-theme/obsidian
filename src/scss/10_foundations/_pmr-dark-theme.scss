@@ -183,8 +183,8 @@ and CONTRIBUTION page ↴
     --background-modifier-active-hover: var(--color-d-gray-70);
 
     --background-modifier-border: var(--color-d-gray-80);
-    --background-modifier-border-hover: var(--color-d-gray-70);
-    --background-modifier-border-focus: var(--color-d-gray-70);
+    --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
+    --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
 
     --background-modifier-error-rgb: var(--color-red-rgb);
     --background-modifier-error: var(--color-d-red-40);
@@ -507,4 +507,11 @@ and CONTRIBUTION page ↴
     --breadcrumb-separator-color: var(--background-modifier-border);
 
     --file-header-title-color: var(--color-d-gray-40);
+
+    // Menu
+    --menu-item-icon-color: var(--color-d-gray-50);
+    --menu-item-bg-hover: rgba(0, 0, 0, 0.25);
+    --menu-item-icon-color-active: var(--color-d-gray-60);
+    --menu-item-color-active: var(--color-d-gray-60);
+    --menu-item-bg-active: var(--color-d-gray-130);
 }

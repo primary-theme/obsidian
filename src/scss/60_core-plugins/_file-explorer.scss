@@ -17,7 +17,7 @@
 }
 
 .nav-file-title {
-    transition: padding, transform var(--anim-duration-superfast) var(--anim-motion-jumpy);
+    transition: padding, transform var(--anim-duration-fast) var(--anim-motion-smooth);
     
     &:active {
         transform: translateY(2px);
