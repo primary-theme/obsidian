@@ -465,12 +465,12 @@ and CONTRIBUTION page ↴
 
     // Navigation Item
     --nav-item-color: var(--color-d-gray-40);
-    --nav-item-color-hover: var(--color-d-gray-20);
+    --nav-item-color-hover: var(--color-d-gray-40);
     --nav-item-color-active: var(--color-d-gray-40);
     --nav-item-color-selected: var(--color-d-gray-20);
     --nav-item-color-highlighted: var(--text-accent-hover);
-    --nav-item-background-hover: transparent;
-    --nav-item-background-active: rgba(0, 0, 0, 0.2);
+    --nav-item-background-hover: rgba(0, 0, 0, 0.15);
+    --nav-item-background-active: rgba(0, 0, 0, 0.15);
     --nav-item-background-selected: transparent;
     --nav-indentation-guide-color: var(--indentation-guide-color);
     --nav-collapse-icon-color: var(--collapse-icon-color);
@@ -494,6 +494,10 @@ and CONTRIBUTION page ↴
     --vault-name-border: 1px solid var(--background-modifier-border);
 
     // Search
+    --search-clear-button-color: var(--icon-color);
+    --search-clear-button-color-hover: var(--background-modifier-error-hover);
+    --search-icon-color: var(--icon-color);
+    --search-result-background: var(--background-primary-alt);
 
     // File Header Title | File Header Breadcrumbs
     --breadcrumb-color: var(--color-d-gray-50);

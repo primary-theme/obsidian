@@ -26,6 +26,7 @@ Variables for
     variables
 */
 body {
+  --cursor: pointer;
   --radius-xs: 2px;
   --icon-container-radius: 0px;
   --button-inset-shadow-size: 2px;
@@ -65,14 +66,14 @@ body {
                                var(--size-4-3);
   --slider-track-height: 5px;
   --nav-item-white-space: nowrap;
-  --nav-item-radius: 7px;
-  --nav-item-padding: var(--size-4-1)
+  --nav-item-radius: 6px;
+  --nav-item-padding: calc(var(--size-4-1) + 1px)
                       var(--size-4-2)
-                      var(--size-4-1)
+                      calc(var(--size-4-1) + 1px)
                       var(--size-4-6);
-  --nav-file-padding: var(--size-4-1)
+  --nav-file-padding-active: calc(var(--size-4-1))
                       var(--size-4-2)
-                      calc(var(--size-4-1) + var(--button-axis-offset))
+                      calc(var(--size-4-1) + var(--button-inset-shadow-size))
                       var(--size-4-6);
   --vault-name-font-size: var(--font-ui-small);
   --vault-name-font-weight: var(--font-semibold);
@@ -417,11 +418,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --graph-node-attachment: var(--color-l-green-10);
   --graph-arrow: var(--color-l-gray-90);
   --nav-item-color: var(--color-l-gray-110);
-  --nav-item-color-hover: var(--color-l-gray-130);
+  --nav-item-color-hover: var(--color-l-gray-110);
   --nav-item-color-active: var(--color-l-gray-110);
   --nav-item-color-selected: var(--color-l-gray-130);
   --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: transparent;
+  --nav-item-background-hover: rgba(255, 255, 255, 0.25);
   --nav-item-background-active: rgba(255, 255, 255, 0.25);
   --nav-item-background-selected: transparent;
   --nav-indentation-guide-color: var(--indentation-guide-color);
@@ -435,8 +436,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
                               inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.07),
                               0px 2px 3px 0px rgba(0, 0, 0, 0.05);
-  --nav-file-tag-color: var(--color-l-gray-100);
-  --nav-file-tag-bg: var(--color-l-gray-60);
+  --nav-file-tag-color: var(--color-l-gray-90);
+  --nav-file-tag-bg: transparent;
   --collapse-icon-color: var(--color-l-gray-70);
   --collapse-icon-color-collapsed: var(--color-l-gray-70);
   --vault-name-color: var(--color-l-gray-90);
@@ -445,7 +446,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --search-clear-button-color: var(--icon-color);
   --search-clear-button-color-hover: var(--background-modifier-error-hover);
   --search-icon-color: var(--icon-color);
-  --search-result-background: var(--background-primary);
+  --search-result-background: var(--background-primary-alt);
   --breadcrumb-color: var(--color-l-gray-90);
   --breadcrumb-color-hover: var(--color-l-gray-90);
   --breadcrumb-bg-hover: var(--color-l-gray-40);
@@ -780,12 +781,12 @@ and CONTRIBUTION page ↴
   --graph-node-attachment: var(--color-d-green-30);
   --graph-arrow: var(--color-d-gray-50);
   --nav-item-color: var(--color-d-gray-40);
-  --nav-item-color-hover: var(--color-d-gray-20);
+  --nav-item-color-hover: var(--color-d-gray-40);
   --nav-item-color-active: var(--color-d-gray-40);
   --nav-item-color-selected: var(--color-d-gray-20);
   --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: transparent;
-  --nav-item-background-active: rgba(0, 0, 0, 0.2);
+  --nav-item-background-hover: rgba(0, 0, 0, 0.15);
+  --nav-item-background-active: rgba(0, 0, 0, 0.15);
   --nav-item-background-selected: transparent;
   --nav-indentation-guide-color: var(--indentation-guide-color);
   --nav-collapse-icon-color: var(--collapse-icon-color);
@@ -805,6 +806,10 @@ and CONTRIBUTION page ↴
   --vault-name-color: var(--color-d-gray-50);
   --vault-name-background: var(--color-d-gray-110);
   --vault-name-border: 1px solid var(--background-modifier-border);
+  --search-clear-button-color: var(--icon-color);
+  --search-clear-button-color-hover: var(--background-modifier-error-hover);
+  --search-icon-color: var(--icon-color);
+  --search-result-background: var(--background-primary-alt);
   --breadcrumb-color: var(--color-d-gray-50);
   --breadcrumb-color-hover: var(--color-d-gray-50);
   --breadcrumb-bg-hover: var(--color-d-gray-80);
@@ -1519,13 +1524,15 @@ svg.vault {
 }
 
 .nav-header {
-  padding-bottom: 0px;
+  padding: 0px var(--size-4-2) 0px var(--size-4-2);
 }
 
 .nav-buttons-container {
   gap: var(--size-4-1);
   justify-content: left;
   padding-left: var(--size-2-3);
+  margin-top: var(--size-4-1);
+  margin-bottom: var(--size-4-1);
 }
 
 .nav-action-button {
@@ -2327,29 +2334,34 @@ body {
 }
 
 /*────────── Core Plugin: File Explorer ──────────*/
-.nav-folder.mod-root > .nav-folder-title {
-  letter-spacing: 0.1em;
+.nav-folder.mod-root > .nav-folder-title[data-path="/"] {
   justify-content: center;
   background: var(--vault-name-background);
   padding: var(--size-2-3) var(--size-4-2);
   border: var(--vault-name-border);
   border-radius: calc(var(--radius-s) + 1px);
+  margin-bottom: var(--size-4-1);
 }
-.nav-folder.mod-root > .nav-folder-title:hover {
+.nav-folder.mod-root > .nav-folder-title[data-path="/"]:hover {
   color: var(--vault-name-color);
   background: var(--vault-name-background);
 }
 
 .nav-file-title {
-  padding: var(--nav-file-padding);
+  transition: padding, transform var(--anim-duration-superfast) var(--anim-motion-jumpy);
+}
+.nav-file-title:active {
+  transform: translateY(2px);
 }
 .nav-file-title.is-active {
+  padding: var(--nav-file-padding-active);
   box-shadow: var(--nav-file-shadow-active);
 }
 
 .nav-file-tag {
   color: var(--nav-file-tag-color);
   background: var(--nav-file-tag-bg);
+  margin-top: 1px;
 }
 
 /*────────── Core Plugin: Search ──────────*/
@@ -2378,6 +2390,18 @@ body {
 .search-results-info select.dropdown:active, .search-results-info select.dropdown:focus {
   color: var(--icon-color-active);
   box-shadow: none;
+}
+
+.search-result-file-matches {
+  border-radius: var(--radius-m);
+}
+
+.search-result-file-match {
+  transition: var(--anim-duration-fast) var(--anim-motion-smooth);
+  cursor: pointer;
+}
+.search-result-file-match:hover {
+  background: var(--background-primary);
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
