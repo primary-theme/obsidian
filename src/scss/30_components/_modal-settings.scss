@@ -7,6 +7,7 @@
 // Tab Header
 .vertical-tab-header-group-title {
     // font-family: var(--font-monospace-theme);
+    font-size: calc(var(--font-ui-smaller) - 1px);
     color: var(--settings-nav-group-title-color);
     text-transform: uppercase;
     font-feature-settings: "calt" off;
@@ -19,7 +20,7 @@
     font-size: var(--font-ui-small);
     color: var(--settings-nav-item-text-color);
     padding: var(--settings-nav-item-padding);
-    border-radius: var(--radius-m);
+    border-radius: var(--settings-nav-item-radius);
     margin-bottom: var(--size-2-1);
     transition: box-shadow var(--button-anim);
     transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
@@ -28,13 +29,17 @@
         color: var(--settings-nav-item-text-color-hover);
         background: var(--settings-nav-item-bg-hover);
         cursor: pointer;
-        padding-left: var(--size-4-5);
+        padding: var(--settings-nav-item-padding-hover);
     }
 
     &:active:not(.is-active) {
         color: var(--settings-nav-item-text-color-active);
         background: var(--settings-nav-item-bg-active);
         transform: translateY(var(--button-axis-offset));
+    }
+
+    &.is-active {
+        padding: var(--settings-nav-item-padding-active);
     }
 
     &.is-active:nth-child(3n+1) {
