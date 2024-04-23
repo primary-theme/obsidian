@@ -79,6 +79,7 @@ body {
   --vault-name-font-weight: var(--font-semibold);
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
+  --menu-item-radius: calc(var(--radius-m) - 1px);
 }
 
 /*───────────────────────────────────
@@ -219,8 +220,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-hover: var(--color-l-gray-30);
   --background-modifier-active-hover: var(--color-l-gray-60);
   --background-modifier-border: var(--color-l-gray-60);
-  --background-modifier-border-hover: var(--color-l-gray-70);
-  --background-modifier-border-focus: var(--color-l-gray-70);
+  --background-modifier-border-hover: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
+  --background-modifier-border-focus: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-l-red-30);
   --background-modifier-error-hover: var(--color-l-red-20);
@@ -452,6 +453,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --breadcrumb-bg-hover: var(--color-l-gray-40);
   --breadcrumb-separator-color: var(--background-modifier-border);
   --file-header-title-color: var(--color-l-gray-120);
+  --menu-item-icon-color: var(--color-l-gray-80);
+  --menu-item-bg-hover: rgba(255, 255, 255, 0.35);
+  --menu-item-icon-color-active: var(--color-l-gray-70);
+  --menu-item-color-active: var(--color-l-gray-70);
+  --menu-item-bg-active: var(--color-l-gray-50);
 }
 
 /*───────────────────────────────────
@@ -592,8 +598,8 @@ and CONTRIBUTION page ↴
   --background-modifier-hover: var(--color-d-gray-100);
   --background-modifier-active-hover: var(--color-d-gray-70);
   --background-modifier-border: var(--color-d-gray-80);
-  --background-modifier-border-hover: var(--color-d-gray-70);
-  --background-modifier-border-focus: var(--color-d-gray-70);
+  --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
+  --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
@@ -815,6 +821,11 @@ and CONTRIBUTION page ↴
   --breadcrumb-bg-hover: var(--color-d-gray-80);
   --breadcrumb-separator-color: var(--background-modifier-border);
   --file-header-title-color: var(--color-d-gray-40);
+  --menu-item-icon-color: var(--color-d-gray-50);
+  --menu-item-bg-hover: rgba(0, 0, 0, 0.25);
+  --menu-item-icon-color-active: var(--color-d-gray-60);
+  --menu-item-color-active: var(--color-d-gray-60);
+  --menu-item-bg-active: var(--color-d-gray-130);
 }
 
 /*────────── Icons ──────────*/
@@ -1888,6 +1899,29 @@ input[type=number]:focus-visible {
   text-transform: uppercase;
 }
 
+/*────────── Menu ──────────*/
+.menu-item {
+  border-radius: var(--menu-item-radius);
+}
+.menu-item.selected:not(.is-label):not(.is-disabled) {
+  background: var(--menu-item-bg-hover);
+}
+.menu-item.selected:not(.is-label):not(.is-disabled):active {
+  color: var(--menu-item-color-active);
+  background: var(--menu-item-bg-active);
+}
+.menu-item.selected:not(.is-label):not(.is-disabled):active .menu-item-icon {
+  color: var(--menu-item-icon-color-active);
+}
+
+.menu-item-icon {
+  color: var(--menu-item-icon-color);
+}
+.menu-item-icon.mod-checked > svg {
+  width: 12px;
+  height: 12px;
+}
+
 /*────────── File ──────────*/
 .mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);
@@ -2287,10 +2321,10 @@ body {
   --embed-title-border: 1px solid var(--background-modifier-border);
 }
 
-.markdown-embed:not(.popover.hover-popover .markdown-embed) {
+.markdown-embed:not(.popover.hover-popover .markdown-embed, .canvas-node-content) {
   border-radius: var(--embed-border-radius);
 }
-.markdown-embed:not(.popover.hover-popover .markdown-embed) > div:not(.embed-title, .markdown-embed-link) {
+.markdown-embed:not(.popover.hover-popover .markdown-embed, .canvas-node-content) > div:not(.embed-title, .markdown-embed-link) {
   margin-top: var(--size-4-4);
   margin-left: var(--size-4-4);
   margin-right: var(--size-4-4);
@@ -2348,7 +2382,7 @@ body {
 }
 
 .nav-file-title {
-  transition: padding, transform var(--anim-duration-superfast) var(--anim-motion-jumpy);
+  transition: padding, transform var(--anim-duration-fast) var(--anim-motion-smooth);
 }
 .nav-file-title:active {
   transform: translateY(2px);

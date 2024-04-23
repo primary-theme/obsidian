@@ -183,8 +183,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-modifier-active-hover: var(--color-l-gray-60);
 
     --background-modifier-border: var(--color-l-gray-60);
-    --background-modifier-border-hover: var(--color-l-gray-70);
-    --background-modifier-border-focus: var(--color-l-gray-70);
+    --background-modifier-border-hover: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
+    --background-modifier-border-focus: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
 
     --background-modifier-error-rgb: var(--color-red-rgb);
     --background-modifier-error: var(--color-l-red-30);
@@ -538,4 +538,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --breadcrumb-separator-color: var(--background-modifier-border);
 
     --file-header-title-color: var(--color-l-gray-120);
+
+    // Menu
+    --menu-item-icon-color: var(--color-l-gray-80);
+    --menu-item-bg-hover: rgba(255, 255, 255, 0.35);
+    --menu-item-icon-color-active: var(--color-l-gray-70);
+    --menu-item-color-active: var(--color-l-gray-70);
+    --menu-item-bg-active: var(--color-l-gray-50);
 }

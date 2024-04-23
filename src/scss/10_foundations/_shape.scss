@@ -65,4 +65,6 @@ body {
 
     --search-icon-size: 14px;
     --search-clear-button-size: 12px;
+
+    --menu-item-radius: calc(var(--radius-m) - 1px);
 }

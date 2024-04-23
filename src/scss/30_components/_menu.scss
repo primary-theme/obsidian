@@ -1,0 +1,27 @@
+/*────────── Menu ──────────*/
+
+.menu-item {
+    border-radius: var(--menu-item-radius);
+
+    &.selected:not(.is-label):not(.is-disabled) {
+        background: var(--menu-item-bg-hover);
+
+        &:active {
+            color: var(--menu-item-color-active);
+            background: var(--menu-item-bg-active);
+
+            .menu-item-icon {
+                color: var(--menu-item-icon-color-active);
+            }
+        }
+    }
+}
+
+.menu-item-icon {
+    color: var(--menu-item-icon-color);
+
+    &.mod-checked > svg {
+        width: 12px;
+        height: 12px;
+    }
+}
