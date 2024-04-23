@@ -34,4 +34,8 @@
     color: var(--nav-file-tag-color);
     background: var(--nav-file-tag-bg);
     margin-top: 1px;
+
+    .nav-file-title.is-active & {
+        margin-top: 0px;
+    }
 }
