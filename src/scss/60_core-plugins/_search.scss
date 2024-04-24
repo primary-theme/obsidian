@@ -74,3 +74,25 @@
         background: var(--background-primary);
     }
 }
+
+.search-result-file-match-destination-file,
+.search-result-file-match:hover .search-result-file-match-destination-file {
+    color: var(--search-result-dest-file-color);
+    background: var(--search-result-dest-file-bg);
+    border-radius: calc(var(--radius-m) - 2px);
+    box-shadow: var(--search-result-dest-file-shadow);
+
+    .search-result-file-match-destination-file-icon {
+        color: var(--search-result-dest-file-icon-color)
+    }
+}
+
+.search-result-file-match:hover .search-result-file-match-destination-file {
+    &:hover {
+        box-shadow: var(--search-result-dest-file-shadow-hover);
+    }
+
+    &:active {
+        box-shadow: var(--search-result-dest-file-shadow-active);
+    }
+}

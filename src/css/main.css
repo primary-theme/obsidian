@@ -457,6 +457,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --search-clear-button-color-hover: var(--background-modifier-error-hover);
   --search-icon-color: var(--icon-color);
   --search-result-background: var(--background-primary-alt);
+  --search-result-dest-file-color: var(--color-l-gray-90);
+  --search-result-dest-file-bg: var(--color-l-gray-20);
+  --search-result-dest-file-icon-color: var(--color-l-gray-70);
+  --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
+  --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
+                                      0px 2px 3px 0px rgba(0, 0, 0, 0.09);
+  --search-result-dest-file-shadow-active: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
   --breadcrumb-color: var(--color-l-gray-90);
   --breadcrumb-color-hover: var(--color-l-gray-90);
   --breadcrumb-bg-hover: var(--color-l-gray-40);
@@ -2230,7 +2239,6 @@ span.setting-hotkey {
 }
 .view-header .view-header-nav-buttons {
   margin-bottom: 0;
-  transition: transform var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
 .view-header .view-header-nav-buttons:hover, .view-header .view-header-nav-buttons:active {
   padding: var(--size-2-2) var(--size-2-3);
@@ -2593,6 +2601,25 @@ body {
 }
 .search-result-file-match:hover {
   background: var(--background-primary);
+}
+
+.search-result-file-match-destination-file,
+.search-result-file-match:hover .search-result-file-match-destination-file {
+  color: var(--search-result-dest-file-color);
+  background: var(--search-result-dest-file-bg);
+  border-radius: calc(var(--radius-m) - 2px);
+  box-shadow: var(--search-result-dest-file-shadow);
+}
+.search-result-file-match-destination-file .search-result-file-match-destination-file-icon,
+.search-result-file-match:hover .search-result-file-match-destination-file .search-result-file-match-destination-file-icon {
+  color: var(--search-result-dest-file-icon-color);
+}
+
+.search-result-file-match:hover .search-result-file-match-destination-file:hover {
+  box-shadow: var(--search-result-dest-file-shadow-hover);
+}
+.search-result-file-match:hover .search-result-file-match-destination-file:active {
+  box-shadow: var(--search-result-dest-file-shadow-active);
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/

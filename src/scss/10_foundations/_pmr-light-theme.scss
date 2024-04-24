@@ -530,6 +530,18 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --search-icon-color: var(--icon-color);
     --search-result-background: var(--background-primary-alt);
 
+    --search-result-dest-file-color: var(--color-l-gray-90);
+    --search-result-dest-file-bg: var(--color-l-gray-20);
+    --search-result-dest-file-icon-color: var(--color-l-gray-70);
+    --search-result-dest-file-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
+
+    --search-result-dest-file-shadow-hover:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
+                                        0px 2px 3px 0px rgba(0, 0, 0, 0.09);
+
+    --search-result-dest-file-shadow-active: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+
     // File Header Title | File Header Breadcrumbs
     --breadcrumb-color: var(--color-l-gray-90);
     --breadcrumb-color-hover: var(--color-l-gray-90);

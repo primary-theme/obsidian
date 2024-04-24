@@ -264,7 +264,6 @@
     // File Navigation Buttons
     .view-header-nav-buttons {
         margin-bottom: 0;
-        transition: transform var(--anim-duration-superfast) var(--anim-motion-smooth);
 
         &:hover,
         &:active {
