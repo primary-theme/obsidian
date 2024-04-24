@@ -19,12 +19,19 @@ input.prompt-input:focus-visible {
 
 .suggestion-item:not(.mod-search-suggestion .suggestion-item) {
     color: var(--prompt-suggestion-color);
-    border-radius: var(--radius-m);
+    padding: var(--size-4-2) var(--size-4-3);
+    border-radius: calc(var(--radius-m) - 1px);
+    transition: padding var(--anim-duration-fast) var(--anim-motion-smooth);
+
+    .suggestion-title {
+        font-size: calc(var(--font-ui-medium) - 1px);
+    }
 
     &.is-selected {
         color: var(--prompt-suggestion-color-selected);
         background: var(--prompt-suggestion-background-selected);
-        box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
+        padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
+        box-shadow: var(--prompt-suggestion-shadow-selected);
     }
 
     &.mod-complex .suggestion-highlight {
@@ -43,6 +50,8 @@ input.prompt-input:focus-visible {
 
 .prompt-instructions {
     background: var(--prompt-instructions-background);
+    padding: var(--size-4-3) var(--size-4-4);
+    justify-content: right;
 }
 
 .prompt-instructions,
