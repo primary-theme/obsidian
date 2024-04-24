@@ -483,7 +483,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --prompt-suggestion-highlight-color: var(--color-l-gray-120);
   --prompt-suggestion-color-selected: var(--color-l-gray-130);
   --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
-  --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.5);
+  --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.35);
+  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
   --prompt-separator-border: 1px solid var(--color-l-gray-40);
   --prompt-border-color: var(--background-modifier-border-focus);
@@ -840,8 +841,8 @@ and CONTRIBUTION page ↴
   --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
                               inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.24),
                               0px 2px 3px 0px rgba(0, 0, 0, 0.22);
-  --nav-file-tag-color: var(--color-d-gray-50);
-  --nav-file-tag-bg: var(--color-d-gray-100);
+  --nav-file-tag-color: var(--color-d-gray-60);
+  --nav-file-tag-bg: transparent;
   --collapse-icon-color: var(--color-d-gray-60);
   --collapse-icon-color-collapsed: var(--color-d-gray-60);
   --vault-name-color: var(--color-d-gray-50);
@@ -877,7 +878,8 @@ and CONTRIBUTION page ↴
   --prompt-suggestion-highlight-color: var(--color-d-gray-30);
   --prompt-suggestion-color-selected: var(--color-d-gray-20);
   --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
-  --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.3);
+  --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
+  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
   --prompt-separator-border: 1px solid var(--color-d-gray-90);
   --prompt-border-color: var(--background-modifier-border-focus);
@@ -2016,12 +2018,18 @@ input.prompt-input:focus-visible {
 
 .suggestion-item:not(.mod-search-suggestion .suggestion-item) {
   color: var(--prompt-suggestion-color);
-  border-radius: var(--radius-m);
+  padding: var(--size-4-2) var(--size-4-3);
+  border-radius: calc(var(--radius-m) - 1px);
+  transition: padding var(--anim-duration-fast) var(--anim-motion-smooth);
+}
+.suggestion-item:not(.mod-search-suggestion .suggestion-item) .suggestion-title {
+  font-size: calc(var(--font-ui-medium) - 1px);
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).is-selected {
   color: var(--prompt-suggestion-color-selected);
   background: var(--prompt-suggestion-background-selected);
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
+  padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
+  box-shadow: var(--prompt-suggestion-shadow-selected);
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex .suggestion-highlight {
   color: var(--prompt-suggestion-highlight-color);
@@ -2037,6 +2045,8 @@ input.prompt-input:focus-visible {
 
 .prompt-instructions {
   background: var(--prompt-instructions-background);
+  padding: var(--size-4-3) var(--size-4-4);
+  justify-content: right;
 }
 
 .prompt-instructions,

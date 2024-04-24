@@ -483,8 +483,8 @@ and CONTRIBUTION page ↴
     --nav-file-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
                                 inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.24),
                                 0px 2px 3px 0px rgba(0, 0, 0, 0.22);
-    --nav-file-tag-color: var(--color-d-gray-50);
-    --nav-file-tag-bg: var(--color-d-gray-100);
+    --nav-file-tag-color: var(--color-d-gray-60);
+    --nav-file-tag-bg: transparent;
 
     --collapse-icon-color: var(--color-d-gray-60);
     --collapse-icon-color-collapsed: var(--color-d-gray-60);
@@ -536,7 +536,8 @@ and CONTRIBUTION page ↴
     --prompt-suggestion-highlight-color: var(--color-d-gray-30);
     --prompt-suggestion-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
-    --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.3);
+    --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
+    --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
 
     --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
 
