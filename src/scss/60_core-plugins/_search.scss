@@ -75,12 +75,14 @@
     }
 }
 
+// Search Result Destination File
 .search-result-file-match-destination-file,
 .search-result-file-match:hover .search-result-file-match-destination-file {
     color: var(--search-result-dest-file-color);
     background: var(--search-result-dest-file-bg);
     border-radius: calc(var(--radius-m) - 2px);
     box-shadow: var(--search-result-dest-file-shadow);
+    transition: background, box-shadow var(--anim-duration-superfast) var(--anim-motion-smooth);
 
     .search-result-file-match-destination-file-icon {
         color: var(--search-result-dest-file-icon-color)
@@ -89,10 +91,8 @@
 
 .search-result-file-match:hover .search-result-file-match-destination-file {
     &:hover {
+        color: var(--search-result-dest-file-color);
+        background: var(--search-result-dest-file-bg-hover);
         box-shadow: var(--search-result-dest-file-shadow-hover);
-    }
-
-    &:active {
-        box-shadow: var(--search-result-dest-file-shadow-active);
     }
 }

@@ -499,6 +499,18 @@ and CONTRIBUTION page ↴
     --search-icon-color: var(--icon-color);
     --search-result-background: var(--background-primary-alt);
 
+    // Search Result Destination File
+    --search-result-dest-file-color: var(--color-d-gray-50);
+    --search-result-dest-file-bg: var(--color-d-gray-120);
+    --search-result-dest-file-icon-color: var(--color-d-gray-70);
+    --search-result-dest-file-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25);
+
+    --search-result-dest-file-bg-hover: var(--color-d-gray-140);
+    --search-result-dest-file-shadow-hover:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25),
+                                        0px 2px 3px 0px rgba(0, 0, 0, 0.29);
+
     // File Header Title | File Header Breadcrumbs
     --breadcrumb-color: var(--color-d-gray-50);
     --breadcrumb-color-hover: var(--color-d-gray-50);
