@@ -2,8 +2,6 @@
 
 // Vault Title
 .nav-folder.mod-root > .nav-folder-title[data-path="/"] {
-    position: sticky;
-    top: 6px;
     justify-content: center;
     background: var(--vault-name-background);
     padding: var(--size-2-3)
