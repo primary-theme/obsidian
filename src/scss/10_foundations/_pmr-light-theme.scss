@@ -179,7 +179,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --interactive-accent: var(--color-accent-1);
     --interactive-accent-hover: var(--color-accent-2);
 
-    --background-modifier-hover: var(--color-l-gray-30);
+    --background-modifier-hover: rgba(255, 255, 255, 0.25);
     --background-modifier-active-hover: var(--color-l-gray-60);
 
     --background-modifier-border: var(--color-l-gray-60);
@@ -545,4 +545,26 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --menu-item-icon-color-active: var(--color-l-gray-70);
     --menu-item-color-active: var(--color-l-gray-70);
     --menu-item-bg-active: var(--color-l-gray-50);
+
+    // Prompt
+    --text-input-color: var(--color-l-gray-130);
+    --prompt-input-background: var(--background-primary);
+
+    --prompt-results-background: var(--background-primary);
+    --prompt-suggestion-color: var(--color-l-gray-110);
+    --prompt-suggestion-highlight-color: var(--color-l-gray-120);
+    --prompt-suggestion-color-selected: var(--color-l-gray-130);
+    --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
+    --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.5);
+
+    --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
+
+    --prompt-separator-border: 1px solid var(--color-l-gray-40);
+    --prompt-border-color: var(--background-modifier-border-focus);
+
+    // KBD
+    --kbd-color: var(--color-l-red-10);
+    --kbd-background: var(--color-l-gray-40);
+    --kbd-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
+                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
 }

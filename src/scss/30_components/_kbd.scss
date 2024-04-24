@@ -1,0 +1,12 @@
+/*────────── kbd ──────────*/
+
+kbd,
+span.prompt-instruction-command {
+    color: var(--kbd-color);
+    background: var(--kbd-background);
+    padding:    var(--size-2-1)
+                var(--size-2-3)
+                var(--size-2-1)
+                var(--size-2-3);
+    box-shadow: var(--kbd-shadow);
+}

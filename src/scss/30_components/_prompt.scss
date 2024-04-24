@@ -1,0 +1,61 @@
+/*────────── Prompt ──────────*/
+
+input.prompt-input {
+    background: var(--prompt-input-background);
+    padding: 28px var(--size-4-6);
+}
+
+input.prompt-input,
+input.prompt-input:hover,
+input.prompt-input:active,
+input.prompt-input:focus,
+input.prompt-input:focus-visible {
+    border-bottom: var(--prompt-separator-border);
+}
+
+.prompt-results {
+    background: var(--prompt-results-background);
+}
+
+.suggestion-item {
+    color: var(--prompt-suggestion-color);
+    border-radius: var(--radius-m);
+
+    &.is-selected {
+        color: var(--prompt-suggestion-color-selected);
+        background: var(--prompt-suggestion-background-selected);
+        box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
+    }
+}
+
+.suggestion-item.mod-complex .suggestion-highlight {
+    color: var(--prompt-suggestion-highlight-color);
+    font-weight: var(--font-semibold);
+}
+
+.suggestion-item.mod-complex.is-selected .suggestion-highlight {
+    color: var(--prompt-suggestion-highlight-color-selected);
+}
+
+.suggestion-aux .suggestion-flair > svg {
+    transform: rotate(45deg);
+}
+
+.prompt-instructions {
+    background: var(--prompt-instructions-background);
+}
+
+.prompt-instructions,
+.prompt-instructions:hover,
+.prompt-instructions:active,
+.prompt-instructions:focus,
+.prompt-instructions:focus-visible {
+    border-top: var(--prompt-separator-border);
+}
+
+.prompt-instruction-command {
+    color: var(--inline-code-color);
+    background-color: var(--background-secondary);
+    padding: 2px 4px;
+    border-radius: 4px;
+}

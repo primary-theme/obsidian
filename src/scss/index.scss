@@ -24,6 +24,8 @@
 @use '30_components/text-input';
 @use '30_components/navigation';
 @use '30_components/menu';
+@use '30_components/prompt';
+@use '30_components/kbd';
 
 @use '40_editor/file';
 @use '40_editor/link';
