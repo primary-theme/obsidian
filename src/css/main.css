@@ -484,7 +484,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --prompt-suggestion-color-selected: var(--color-l-gray-130);
   --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
   --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.35);
-  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                                       0px 2px 6px 0px rgba(0, 0, 0, 0.03);
   --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
   --prompt-separator-border: 1px solid var(--color-l-gray-40);
   --prompt-border-color: var(--background-modifier-border-focus);
@@ -879,7 +880,8 @@ and CONTRIBUTION page ↴
   --prompt-suggestion-color-selected: var(--color-d-gray-20);
   --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
   --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
-  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                                       0px 2px 6px 0px rgba(0, 0, 0, 0.08);
   --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
   --prompt-separator-border: 1px solid var(--color-d-gray-90);
   --prompt-border-color: var(--background-modifier-border-focus);
@@ -2045,7 +2047,7 @@ input.prompt-input:focus-visible {
 
 .prompt-instructions {
   background: var(--prompt-instructions-background);
-  padding: var(--size-4-3) var(--size-4-4);
+  padding: var(--size-4-2) var(--size-4-3);
   justify-content: right;
 }
 
@@ -2506,6 +2508,12 @@ body {
 .markdown-embed-link {
   margin-top: var(--size-4-1);
   margin-right: var(--size-4-1);
+}
+
+.workspace-leaf-content img:not([width]),
+.workspace-leaf-content audio,
+.workspace-leaf-content video {
+  border-radius: var(--radius-m);
 }
 
 /*────────── Code ──────────*/

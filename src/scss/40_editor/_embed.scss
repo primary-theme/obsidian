@@ -1,5 +1,6 @@
 /*────────── Embed ──────────*/
 
+// Markdown Embeds
 body {
     --embed-background: var(--embed-bg-color-mix);
     --embed-padding: 0;
@@ -39,4 +40,11 @@ body {
 .markdown-embed-link {
     margin-top: var(--size-4-1);
     margin-right: var(--size-4-1);
+}
+
+// Media Embeds
+.workspace-leaf-content img:not([width]),
+.workspace-leaf-content audio,
+.workspace-leaf-content video {
+    border-radius: var(--radius-m);
 }

@@ -537,7 +537,8 @@ and CONTRIBUTION page ↴
     --prompt-suggestion-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
-    --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+    --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                                         0px 2px 6px 0px rgba(0, 0, 0, 0.08);
 
     --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
 
