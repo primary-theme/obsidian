@@ -483,7 +483,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
   --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
-  --gutter-color-active: var(--color-l-gray-120);
+  --gutter-color-active: var(--color-l-gray-90);
 }
 
 /*───────────────────────────────────
@@ -867,6 +867,8 @@ and CONTRIBUTION page ↴
   --kbd-background: var(--color-d-gray-110);
   --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.17),
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
+  --gutter-color: color-mix(in hsl, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
+  --gutter-color-active: var(--color-d-gray-50);
 }
 
 /*────────── Icons ──────────*/
@@ -2226,10 +2228,11 @@ span.setting-hotkey {
 .view-header {
   --header-height: 40px;
 }
-.view-header button {
+.view-header .view-header-nav-buttons {
   margin-bottom: 0;
+  transition: transform var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
-.view-header button:hover, .view-header button:active {
+.view-header .view-header-nav-buttons:hover, .view-header .view-header-nav-buttons:active {
   padding: var(--size-2-2) var(--size-2-3);
 }
 .view-header .view-action.clickable-icon:nth-child(3n+1):hover {
