@@ -1,5 +1,33 @@
 /*────────── Core Plugin: Search ──────────*/
 
+// Search Options Menu
+.mod-search-suggestion {
+    .mod-group {
+        font-size: calc(var(--font-ui-smaller) - 1px);
+        color: var(--settings-nav-group-title-color);
+        text-transform: uppercase;
+        font-feature-settings: "calt" off;
+        letter-spacing: 0.1em;
+    }
+
+    .search-suggest-item:not(.mod-group) {
+        border-radius: var(--menu-item-radius);
+
+        &.is-selected {
+            background: var(--menu-item-bg-hover);
+        }
+
+        &:active {
+            color: var(--menu-item-color-active);
+            background: var(--menu-item-bg-active);
+
+            .search-suggest-info-text {
+                color: var(--menu-item-color-active);
+            }
+        }
+    }
+}
+
 // Search Result Count
 .more-options-icon {
     color: var(--icon-color);

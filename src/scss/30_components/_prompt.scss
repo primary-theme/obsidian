@@ -17,7 +17,7 @@ input.prompt-input:focus-visible {
     background: var(--prompt-results-background);
 }
 
-.suggestion-item {
+.suggestion-item:not(.mod-search-suggestion .suggestion-item) {
     color: var(--prompt-suggestion-color);
     border-radius: var(--radius-m);
 
@@ -26,15 +26,15 @@ input.prompt-input:focus-visible {
         background: var(--prompt-suggestion-background-selected);
         box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
     }
-}
 
-.suggestion-item.mod-complex .suggestion-highlight {
-    color: var(--prompt-suggestion-highlight-color);
-    font-weight: var(--font-semibold);
-}
+    &.mod-complex .suggestion-highlight {
+        color: var(--prompt-suggestion-highlight-color);
+        font-weight: var(--font-semibold);
+    }
 
-.suggestion-item.mod-complex.is-selected .suggestion-highlight {
-    color: var(--prompt-suggestion-highlight-color-selected);
+    &.mod-complex.is-selected .suggestion-highlight {
+        color: var(--prompt-suggestion-highlight-color-selected);
+    }
 }
 
 .suggestion-aux .suggestion-flair > svg {

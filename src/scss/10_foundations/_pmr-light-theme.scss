@@ -567,4 +567,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --kbd-background: var(--color-l-gray-40);
     --kbd-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
                     inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
+
+    // Gutter
+    --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
+    --gutter-color-active: var(--color-l-gray-120);
 }
