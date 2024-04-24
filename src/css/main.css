@@ -1939,11 +1939,16 @@ input[type=number]:focus-visible {
 }
 
 .backlink-pane > .tree-item-self,
+.embedded-backlinks .backlink-pane > .tree-item-self,
 .outgoing-link-pane > .tree-item-self {
   font-size: 11px;
   font-feature-settings: "calt" off;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.embedded-backlinks .backlink-pane > .tree-item-self {
+  margin-top: 5px;
 }
 
 /*────────── Menu ──────────*/
@@ -2031,7 +2036,8 @@ input.prompt-input:focus-visible {
 
 /*────────── kbd ──────────*/
 kbd,
-span.prompt-instruction-command {
+span.prompt-instruction-command,
+span.setting-hotkey {
   color: var(--kbd-color);
   background: var(--kbd-background);
   padding: var(--size-2-1) var(--size-2-3) var(--size-2-1) var(--size-2-3);
