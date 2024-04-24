@@ -514,4 +514,26 @@ and CONTRIBUTION page ↴
     --menu-item-icon-color-active: var(--color-d-gray-60);
     --menu-item-color-active: var(--color-d-gray-60);
     --menu-item-bg-active: var(--color-d-gray-130);
+
+    // Prompt
+    --text-input-color: var(--color-d-gray-20);
+    --prompt-input-background: var(--background-primary);
+
+    --prompt-results-background: var(--background-primary);
+    --prompt-suggestion-color: var(--color-d-gray-40);
+    --prompt-suggestion-highlight-color: var(--color-d-gray-30);
+    --prompt-suggestion-color-selected: var(--color-d-gray-20);
+    --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
+    --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.3);
+
+    --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
+
+    --prompt-separator-border: 1px solid var(--color-d-gray-90);
+    --prompt-border-color: var(--background-modifier-border-focus);
+
+    // KBD
+    --kbd-color: var(--color-d-red-10);
+    --kbd-background: var(--color-d-gray-110);
+    --kbd-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.17),
+                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
 }
