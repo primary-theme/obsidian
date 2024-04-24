@@ -2237,10 +2237,10 @@ span.setting-hotkey {
 .view-header {
   --header-height: 40px;
 }
-.view-header .view-header-nav-buttons {
+.view-header button {
   margin-bottom: 0;
 }
-.view-header .view-header-nav-buttons:hover, .view-header .view-header-nav-buttons:active {
+.view-header button:hover, .view-header button:active {
   padding: var(--size-2-2) var(--size-2-3);
 }
 .view-header .view-action.clickable-icon:nth-child(3n+1):hover {
