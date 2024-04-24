@@ -2,13 +2,15 @@
 
 // Vault Title
 .nav-folder.mod-root > .nav-folder-title[data-path="/"] {
+    position: sticky;
+    top: 6px;
     justify-content: center;
     background: var(--vault-name-background);
     padding: var(--size-2-3)
              var(--size-4-2);
     border: var(--vault-name-border);
     border-radius: calc(var(--radius-s) + 1px);
-    margin-bottom: var(--size-4-1);
+    margin-bottom: var(--size-4-2);
 
     &:hover {
         color: var(--vault-name-color);
