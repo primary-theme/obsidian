@@ -482,6 +482,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --kbd-background: var(--color-l-gray-40);
   --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
+  --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
+  --gutter-color-active: var(--color-l-gray-120);
 }
 
 /*───────────────────────────────────
@@ -1992,22 +1994,20 @@ input.prompt-input:focus-visible {
   background: var(--prompt-results-background);
 }
 
-.suggestion-item {
+.suggestion-item:not(.mod-search-suggestion .suggestion-item) {
   color: var(--prompt-suggestion-color);
   border-radius: var(--radius-m);
 }
-.suggestion-item.is-selected {
+.suggestion-item:not(.mod-search-suggestion .suggestion-item).is-selected {
   color: var(--prompt-suggestion-color-selected);
   background: var(--prompt-suggestion-background-selected);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
 }
-
-.suggestion-item.mod-complex .suggestion-highlight {
+.suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex .suggestion-highlight {
   color: var(--prompt-suggestion-highlight-color);
   font-weight: var(--font-semibold);
 }
-
-.suggestion-item.mod-complex.is-selected .suggestion-highlight {
+.suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex.is-selected .suggestion-highlight {
   color: var(--prompt-suggestion-highlight-color-selected);
 }
 
@@ -2416,6 +2416,14 @@ span.setting-hotkey {
   color: var(--bold-italic-strikethrough-color);
 }
 
+.cm-gutterElement {
+  font-size: calc(var(--font-ui-smaller) - 1px);
+  color: var(--gutter-color);
+}
+.cm-gutterElement.cm-active {
+  color: var(--gutter-color-active);
+}
+
 /*────────── Tag ──────────*/
 body {
   --tag-radius: var(--font-text-size);
@@ -2524,6 +2532,27 @@ body {
 }
 
 /*────────── Core Plugin: Search ──────────*/
+.mod-search-suggestion .mod-group {
+  font-size: calc(var(--font-ui-smaller) - 1px);
+  color: var(--settings-nav-group-title-color);
+  text-transform: uppercase;
+  font-feature-settings: "calt" off;
+  letter-spacing: 0.1em;
+}
+.mod-search-suggestion .search-suggest-item:not(.mod-group) {
+  border-radius: var(--menu-item-radius);
+}
+.mod-search-suggestion .search-suggest-item:not(.mod-group).is-selected {
+  background: var(--menu-item-bg-hover);
+}
+.mod-search-suggestion .search-suggest-item:not(.mod-group):active {
+  color: var(--menu-item-color-active);
+  background: var(--menu-item-bg-active);
+}
+.mod-search-suggestion .search-suggest-item:not(.mod-group):active .search-suggest-info-text {
+  color: var(--menu-item-color-active);
+}
+
 .more-options-icon {
   color: var(--icon-color);
   background: var(--icon-bg);
