@@ -1,7 +1,8 @@
 /*────────── kbd ──────────*/
 
 kbd,
-span.prompt-instruction-command {
+span.prompt-instruction-command,
+span.setting-hotkey {
     color: var(--kbd-color);
     background: var(--kbd-background);
     padding:    var(--size-2-1)
