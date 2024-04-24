@@ -2519,8 +2519,6 @@ body {
 
 /*────────── Core Plugin: File Explorer ──────────*/
 .nav-folder.mod-root > .nav-folder-title[data-path="/"] {
-  position: sticky;
-  top: 6px;
   justify-content: center;
   background: var(--vault-name-background);
   padding: var(--size-2-3) var(--size-4-2);
