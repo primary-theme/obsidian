@@ -29,6 +29,7 @@ body {
   --cursor: pointer;
   --radius-xs: 2px;
   --icon-container-radius: 0px;
+  --icon-xl: 24px;
   --button-inset-shadow-size: 2px;
   --header-height: 48px;
   --workspace-margin-bottom: 8px;
@@ -94,6 +95,10 @@ body {
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
   --table-row-last-border-width: 0;
+}
+
+body svg.svg-icon:not(.canvas-card-menu-button svg) {
+  --icon-size: var(--icon-s) !important;
 }
 
 /*───────────────────────────────────
@@ -227,7 +232,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-secondary: var(--color-l-gray-40);
   --background-secondary-alt: var(--color-l-gray-40);
   --interactive-normal: var(--color-l-gray-30);
-  --interactive-hover: var(--color-l-gray-10);
+  --interactive-hover: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-30));
   --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
@@ -506,6 +511,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
   --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
   --gutter-color-active: var(--color-l-gray-90);
+  --canvas-menu-bg: var(--background-primary);
+  --canvas-menu-border: 1px solid var(--background-modifier-border);
+  --canvas-menu-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.07);
 }
 
 /*───────────────────────────────────
@@ -1051,7 +1059,6 @@ svg.sidebar-right,
 svg.snap-to-object,
 svg.uppercase-lowercase-a,
 svg.vault {
-  --icon-size: var(--icon-s) !important;
   background-color: currentColor;
 }
 
@@ -2653,6 +2660,27 @@ body {
   color: var(--search-result-dest-file-color);
   background: var(--search-result-dest-file-bg-hover);
   box-shadow: var(--search-result-dest-file-shadow-hover);
+}
+
+/*────────── Core Plugin: Canvas ──────────*/
+.canvas-card-menu {
+  background: var(--canvas-menu-bg);
+  border: var(--canvas-menu-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--canvas-menu-shadow);
+}
+.canvas-card-menu .canvas-card-menu-button {
+  --icon-stroke: 1px;
+  color: var(--icon-color);
+}
+.canvas-card-menu .canvas-card-menu-button:hover {
+  color: var(--icon-color-hover);
+}
+.canvas-card-menu .canvas-card-menu-button:hover svg {
+  transform: translateY(-3px);
+}
+.canvas-card-menu .canvas-card-menu-button svg {
+  fill: none;
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
