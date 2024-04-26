@@ -37,11 +37,12 @@ body {
                                 var(--size-4-3);
     --button-s-padding: var(--size-2-2)
                         var(--size-4-2)
-                        calc(var(--size-2-2) + var(--button-inset-shadow-size))
+                        var(--size-2-2)
                         var(--size-4-2);
     --input-radius: var(--button-radius);
     --input-height: 32px;
     --search-icon-size: 14px;
+    --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
     --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
     --settings-nav-item-padding: calc(var(--size-2-3) + 1px)
                                  var(--size-4-3)

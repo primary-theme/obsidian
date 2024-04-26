@@ -1,15 +1,4 @@
 /*────────── File ──────────*/
-// TODO spacing between file center tabs and sidebars
-
-// .mod-vertical .workspace-tabs {
-//     padding-left: var(--size-4-2);
-//     padding-right: var(--size-4-2);
-// }
-
-// .workspace-split.mod-left-split.is-sidedock-collapsed {
-//     padding-left: var(--size-4-2);
-//     padding-right: var(--size-4-2);
-// }
 
 .mod-root .workspace {
     // File
@@ -355,4 +344,9 @@
 // File Title
 .view-header-title.view-header-title.view-header-title.view-header-title {
     color: var(--file-header-title-color);
+}
+
+// Document Search
+.document-search {
+    align-items: center;
 }
