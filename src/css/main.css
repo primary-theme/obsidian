@@ -252,8 +252,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                           inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-l-black-rgb), 0.09),
                           0px 0px 2px 2px rgba(var(--color-l-black-rgb), 0.03);
   --text-normal: var(--color-l-gray-130);
-  --text-muted: var(--color-l-gray-90);
-  --text-faint: var(--color-l-gray-70);
+  --text-muted: var(--color-l-gray-100);
+  --text-faint: var(--color-l-gray-80);
   --text-on-accent: var(--color-l-gray-10);
   --text-on-accent-inverted: var(--color-l-gray-140);
   --text-error: var(--color-l-red-30);
@@ -665,7 +665,7 @@ and CONTRIBUTION page ↴
                           0px 0px 2px 2px rgba(var(--color-d-black-rgb), 0.08);
   --text-normal: var(--color-d-gray-20);
   --text-muted: var(--color-d-gray-40);
-  --text-faint: var(--color-d-gray-60);
+  --text-faint: var(--color-d-gray-50);
   --text-on-accent: var(--color-d-gray-10);
   --text-on-accent-inverted: var(--color-d-gray-140);
   --text-error: var(--color-d-red-30);
