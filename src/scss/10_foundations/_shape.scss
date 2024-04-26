@@ -12,6 +12,7 @@ body {
     --cursor: pointer;
     --radius-xs: 2px;
     --icon-container-radius: 0px;
+    --icon-xl: 24px;
     --button-inset-shadow-size: 2px;
     --header-height: 48px;
     --workspace-margin-bottom: 8px;
@@ -83,4 +84,9 @@ body {
     --table-column-first-border-width: 0;
     --table-column-last-border-width: 0;
     --table-row-last-border-width: 0;
+}
+
+body svg.svg-icon:not(.canvas-card-menu-button svg) {
+    // icon-s = 16px for all Custom Icons only
+    --icon-size: var(--icon-s) !important;
 }

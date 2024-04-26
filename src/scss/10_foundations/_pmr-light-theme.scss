@@ -173,7 +173,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-secondary-alt: var(--color-l-gray-40);
 
     --interactive-normal: var(--color-l-gray-30);
-    --interactive-hover: var(--color-l-gray-10);
+    --interactive-hover: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-30));
 
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
@@ -592,4 +592,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Gutter
     --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
     --gutter-color-active: var(--color-l-gray-90);
+
+    // Canvas
+    --canvas-menu-bg: var(--background-primary);
+    --canvas-menu-border: 1px solid var(--background-modifier-border);
+    --canvas-menu-shadow:   0px 2px 6px 0px rgba(0, 0, 0, 0.07);
 }
