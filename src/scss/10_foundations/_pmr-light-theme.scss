@@ -420,6 +420,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Embed
     --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
     --embed-title-color: var(--color-l-gray-90);
+    --embed-block-shadow-hover: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
 
     // Code
     --code-radius: var(--radius-l);
@@ -446,7 +447,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Toggle
     --toggle-thumb-color: var(--color-l-gray-10);
-    --toggle-bg: var(--color-l-gray-60);
+    --toggle-bg: color-mix(in hsl, var(--color-l-gray-60) 80%, var(--color-l-gray-70));
     --toggle-bg-enabled: var(--color-l-green-30);
     --toggle-thumb-shadow:  inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
                             inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
