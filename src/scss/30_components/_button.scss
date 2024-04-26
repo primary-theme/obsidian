@@ -21,24 +21,24 @@ button {
     }
 }
 
-.markdown-rendered button.copy-code-button,
-.markdown-source-view.mod-cm6 .code-block-flair {
-    color: var(--text-on-accent);
-    background: var(--interactive-accent);
-    padding: var(--button-s-padding);
-    border-radius: var(--copy-code-button-radius);
-    box-shadow: var(--button-shadow);
+// .markdown-rendered button.copy-code-button,
+// .markdown-source-view.mod-cm6 .code-block-flair {
+//     color: var(--text-on-accent);
+//     background: var(--interactive-accent);
+//     padding: var(--button-s-padding);
+//     border-radius: var(--copy-code-button-radius);
+//     box-shadow: var(--button-shadow);
 
-    &:hover {
-        background: var(--interactive-accent-hover);
-        cursor: pointer;
-    }
+//     &:hover {
+//         background: var(--interactive-accent-hover);
+//         cursor: pointer;
+//     }
 
-    &:active {
-        padding: vaR(--button-padding-active);
-        box-shadow: var(--button-shadow-active);
-    }
-}
+//     &:active {
+//         padding: vaR(--button-padding-active);
+//         box-shadow: var(--button-shadow-active);
+//     }
+// }
 
 .document-search-close-button,
 .modal-close-button {
