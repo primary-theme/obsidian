@@ -1,6 +1,5 @@
 /*────────── Button ──────────*/
 // TODO .mod-destructive
-// TODO .document-search-close-button
 
 button {
     padding: var(--button-padding);
@@ -41,9 +40,10 @@ button {
     }
 }
 
+.document-search-close-button,
 .modal-close-button {
     width: var(--modal-close-button-size);
-    height: auto;
+    height: fit-content;
 
     font-size: calc(var(--modal-close-button-size));
     line-height: var(--modal-close-button-size);

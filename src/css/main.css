@@ -54,11 +54,12 @@ body {
                               var(--size-4-3);
   --button-s-padding: var(--size-2-2)
                       var(--size-4-2)
-                      calc(var(--size-2-2) + var(--button-inset-shadow-size))
+                      var(--size-2-2)
                       var(--size-4-2);
   --input-radius: var(--button-radius);
   --input-height: 32px;
   --search-icon-size: 14px;
+  --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
   --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
   --settings-nav-item-padding: calc(var(--size-2-3) + 1px)
                                var(--size-4-3)
@@ -245,8 +246,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                   0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
   --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
                           inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(var(--color-l-black-rgb), 0.09),
-                          0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08),
-                          0px 3px 4px 1px rgba(var(--color-l-black-rgb), 0.07);
+                          0px 1px 3px 0px rgba(var(--color-l-black-rgb), 0.12),
+                          0px 2px 8px 0px rgba(var(--color-l-black-rgb), 0.09);
   --input-shadow-active: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
                           inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-l-black-rgb), 0.09),
                           0px 0px 2px 2px rgba(var(--color-l-black-rgb), 0.03);
@@ -310,7 +311,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --icon-bg-active: var(--color-l-gray-60);
   --icon-bg-active-menu: transparent;
   --button-radius: var(--size-4-2);
-  --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
   --button-shadow-active: var(--input-shadow-active);
@@ -647,16 +647,16 @@ and CONTRIBUTION page ↴
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --background-modifier-form-field: var(--color-d-gray-130);
-  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.4),
-                  inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
-                  0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
+  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.29),
+                  inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.19),
+                  0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.3);
   --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
                           inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
-                          0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38),
-                          0px 3px 4px 1px rgba(var(--color-d-black-rgb), 0.37);
+                          0px 1px 3px 0px rgba(var(--color-d-black-rgb), 0.3),
+                          0px 2px 8px 0px rgba(var(--color-d-black-rgb), 0.37);
   --input-shadow-active: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
                           inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-d-black-rgb), 0.21),
-                          0px 0px 2px 2px rgba(var(--color-d-black-rgb), 0.33);
+                          0px 0px 2px 2px rgba(var(--color-d-black-rgb), 0.08);
   --text-normal: var(--color-d-gray-20);
   --text-muted: var(--color-d-gray-40);
   --text-faint: var(--color-d-gray-60);
@@ -716,7 +716,6 @@ and CONTRIBUTION page ↴
   --icon-bg-active: var(--color-d-gray-90);
   --icon-bg-active-menu: transparent;
   --button-radius: var(--size-4-2);
-  --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
   --button-shadow-active: var(--input-shadow-active);
@@ -1720,9 +1719,10 @@ button.mod-cta:active, button.mod-cta:focus {
   box-shadow: var(--button-shadow-active);
 }
 
+.document-search-close-button,
 .modal-close-button {
   width: var(--modal-close-button-size);
-  height: auto;
+  height: fit-content;
   font-size: calc(var(--modal-close-button-size));
   line-height: var(--modal-close-button-size);
   color: var(--text-on-accent);
@@ -1732,13 +1732,16 @@ button.mod-cta:active, button.mod-cta:focus {
   justify-content: center;
   cursor: pointer;
 }
+.document-search-close-button::before,
 .modal-close-button::before {
   font-weight: 200;
 }
+.document-search-close-button:hover,
 .modal-close-button:hover {
   color: var(--text-on-accent);
   background: var(--background-modifier-error-hover);
 }
+.document-search-close-button:active,
 .modal-close-button:active {
   opacity: 0.8;
 }
@@ -2317,6 +2320,10 @@ span.setting-hotkey {
 
 .view-header-title.view-header-title.view-header-title.view-header-title {
   color: var(--file-header-title-color);
+}
+
+.document-search {
+  align-items: center;
 }
 
 /*────────── Link ──────────*/
