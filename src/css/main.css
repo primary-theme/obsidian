@@ -916,6 +916,9 @@ and CONTRIBUTION page ↴
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
   --gutter-color: color-mix(in hsl, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
   --gutter-color-active: var(--color-d-gray-50);
+  --canvas-menu-bg: var(--background-primary);
+  --canvas-menu-border: 1px solid var(--background-modifier-border);
+  --canvas-menu-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
 /*────────── Icons ──────────*/
@@ -2680,7 +2683,7 @@ body {
   transform: translateY(-3px);
 }
 .canvas-card-menu .canvas-card-menu-button svg {
-  fill: none;
+  fill: none !important;
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/

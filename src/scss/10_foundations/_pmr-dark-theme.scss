@@ -563,4 +563,9 @@ and CONTRIBUTION page ↴
     // Gutter
     --gutter-color: color-mix(in hsl, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
     --gutter-color-active: var(--color-d-gray-50);
+
+    // Canvas
+    --canvas-menu-bg: var(--background-primary);
+    --canvas-menu-border: 1px solid var(--background-modifier-border);
+    --canvas-menu-shadow:   0px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
