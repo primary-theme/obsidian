@@ -77,4 +77,10 @@ body {
     --search-clear-button-size: 12px;
 
     --menu-item-radius: calc(var(--radius-m) - 1px);
+
+    // Table
+    --table-header-border-width: 0;
+    --table-column-first-border-width: 0;
+    --table-column-last-border-width: 0;
+    --table-row-last-border-width: 0;
 }

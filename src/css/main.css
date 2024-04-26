@@ -90,6 +90,10 @@ body {
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
   --menu-item-radius: calc(var(--radius-m) - 1px);
+  --table-header-border-width: 0;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+  --table-row-last-border-width: 0;
 }
 
 /*───────────────────────────────────
@@ -139,15 +143,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --color-l-yellow-30: hsla(40, 79%, 47%, 1);
   --color-l-yellow-40: hsla(40, 98%, 36%, 1);
   --color-l-alpha-yellow: hsla(44, 100%, 50%, 0.2);
-  --color-l-green-10: hsla(154, 47%, 65%, 1);
-  --color-l-green-20: hsla(154, 52%, 49%, 1);
-  --color-l-green-30: hsla(154, 55%, 39%, 1);
-  --color-l-green-40: hsla(159, 65%, 29%, 1);
+  --color-l-green-10: hsla(148, 30%, 65%, 1);
+  --color-l-green-20: hsla(148, 48%, 47%, 1);
+  --color-l-green-30: hsla(149, 50%, 39%, 1);
+  --color-l-green-40: hsla(153, 65%, 29%, 1);
   --color-l-alpha-green: hsla(74, 69%, 44%, 0.2);
-  --color-l-blue-10: hsla(199, 39%, 56%, 1);
-  --color-l-blue-20: hsla(202, 66%, 46%, 1);
-  --color-l-blue-30: hsla(208, 64%, 39%, 1);
-  --color-l-blue-40: hsla(212, 95%, 25%, 1);
+  --color-l-blue-10: hsla(197, 39%, 56%, 1);
+  --color-l-blue-20: hsla(202, 66%, 48%, 1);
+  --color-l-blue-30: hsla(200, 64%, 37%, 1);
+  --color-l-blue-40: hsla(205, 85%, 25%, 1);
   --color-l-alpha-blue: hsla(186, 64%, 46%, 0.2);
   --color-l-violet-10: hsla(280, 43%, 76%, 1);
   --color-l-violet-20: hsla(277, 35%, 59%, 1);
@@ -167,22 +171,22 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 .theme-light {
   --mono-rgb-0: var(--color-l-black-rgb);
   --mono-rgb-100: var(--color-l-gray-rgb);
-  --color-red-rgb: 228, 87, 78;
+  --color-red-rgb: 223, 90, 90;
   --color-red: hsla(0, 58%, 53%, 1);
-  --color-orange-rgb: 238, 163, 89;
+  --color-orange-rgb: 231, 130, 63;
   --color-orange: hsla(30, 66%, 52%, 1);
-  --color-yellow-rgb: 249, 207, 81;
-  --color-yellow: hsla(42, 80%, 55%, 1);
-  --color-green-rgb: 100, 194, 113;
-  --color-green: hsla(131, 56%, 58%, 1);
+  --color-yellow-rgb: 248, 197, 46;
+  --color-yellow: hsla(42, 89%, 46%, 1);
+  --color-green-rgb: 87, 185, 132;
+  --color-green: hsla(146, 37%, 49%, 1);
   --color-cyan-rgb: 124, 180, 206;
-  --color-cyan: hsla(178, 43%, 54%, 1);
-  --color-blue-rgb: 99, 156, 192;
+  --color-cyan: hsla(178, 39%, 49%, 1);
+  --color-blue-rgb: 99, 164, 198;
   --color-blue: hsla(206, 57%, 44%, 1);
-  --color-purple-rgb: 139, 113, 185;
-  --color-purple: hsla(250, 48%, 57%, 1);
-  --color-pink-rgb: 224, 108, 138;
-  --color-pink: hsla(346, 44%, 61%, 1);
+  --color-purple-rgb: 135, 106, 193;
+  --color-purple: hsla(249, 39%, 60%, 1);
+  --color-pink-rgb: 217, 102, 122;
+  --color-pink: hsla(351, 44%, 61%, 1);
   --accent-h: 31;
   --accent-s: 23%;
   --accent-l: 50%;
