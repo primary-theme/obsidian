@@ -212,8 +212,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Text Colors
     --text-normal: var(--color-l-gray-130);
-    --text-muted: var(--color-l-gray-110);
-    --text-faint: var(--color-l-gray-90);
+    --text-muted: var(--color-l-gray-90);
+    --text-faint: var(--color-l-gray-70);
 
     --text-on-accent: var(--color-l-gray-10);
     --text-on-accent-inverted: var(--color-l-gray-140);
@@ -340,13 +340,21 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Sidebar Tab
     --tab-bg: transparent;
-    --tab-active-bg: var(--color-l-gray-20);
+    --tab-active-bg: var(--background-primary);
     --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
                         inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
                         0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
 
     // Inline Title
     --inline-title-color: var(--color-l-gray-140);
+
+    // Headings
+    --h1-color: var(--color-l-gray-140);
+    --h2-color: var(--color-l-gray-140);
+    --h3-color: var(--color-l-gray-140);
+    --h4-color: var(--color-l-gray-140);
+    --h5-color: var(--color-l-gray-140);
+    --h6-color: var(--color-l-gray-140);
     
     // Links
     --link-unresolved-color: var(--color-l-gray-80);
