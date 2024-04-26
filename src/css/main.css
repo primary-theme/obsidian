@@ -385,13 +385,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --metadata-tag-bg-3: var(--color-l-alpha-blue);
   --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
   --embed-title-color: var(--color-l-gray-90);
+  --embed-block-shadow-hover: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
   --code-radius: var(--radius-l);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
   --checklist-bg: var(--color-l-gray-10);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
   --toggle-thumb-color: var(--color-l-gray-10);
-  --toggle-bg: var(--color-l-gray-60);
+  --toggle-bg: color-mix(in hsl, var(--color-l-gray-60) 80%, var(--color-l-gray-70));
   --toggle-bg-enabled: var(--color-l-green-30);
   --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
@@ -517,10 +518,10 @@ and CONTRIBUTION page ↴
   --color-d-gray-30: hsla(34, 31%, 68%, 1);
   --color-d-gray-40: hsla(35, 27%, 55%, 1);
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
-  --color-d-gray-60: hsla(33, 27%, 25%, 1);
-  --color-d-gray-70: hsla(31, 25%, 20%, 1);
-  --color-d-gray-80: hsla(28, 22%, 17%, 1);
-  --color-d-gray-90: hsla(33, 20%, 15%, 1);
+  --color-d-gray-60: hsla(33, 27%, 30%, 1);
+  --color-d-gray-70: hsla(31, 25%, 24%, 1);
+  --color-d-gray-80: hsla(28, 23%, 19%, 1);
+  --color-d-gray-90: hsla(33, 20%, 17%, 1);
   --color-d-gray-100: hsla(31, 19%, 14%, 1);
   --color-d-gray-110: hsla(28, 16%, 13%, 1);
   --color-d-gray-120: hsla(28, 16%, 12%, 1);
@@ -782,12 +783,13 @@ and CONTRIBUTION page ↴
   --tag-shadow-active: none;
   --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
   --embed-title-color: var(--color-d-gray-50);
+  --embed-block-shadow-hover: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
   --checklist-bg: var(--color-d-gray-110);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
   --toggle-thumb-color: var(--color-d-gray-10);
-  --toggle-bg: var(--color-d-gray-60);
+  --toggle-bg: color-mix(in hsl, var(--color-d-gray-70) 50%, var(--color-d-gray-60));
   --toggle-bg-enabled: var(--color-d-green-40);
   --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 0.5),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
@@ -2022,7 +2024,7 @@ input.prompt-input:focus-visible {
   color: var(--prompt-suggestion-color);
   padding: var(--size-4-2) var(--size-4-3);
   border-radius: calc(var(--radius-m) - 1px);
-  transition: padding var(--anim-duration-fast) var(--anim-motion-smooth);
+  transition: padding var(--anim-duration-fast) var(--anim-motion-swing);
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item) .suggestion-title {
   font-size: calc(var(--font-ui-medium) - 1px);

@@ -21,7 +21,7 @@ input.prompt-input:focus-visible {
     color: var(--prompt-suggestion-color);
     padding: var(--size-4-2) var(--size-4-3);
     border-radius: calc(var(--radius-m) - 1px);
-    transition: padding var(--anim-duration-fast) var(--anim-motion-smooth);
+    transition: padding var(--anim-duration-fast) var(--anim-motion-swing);
 
     .suggestion-title {
         font-size: calc(var(--font-ui-medium) - 1px);
