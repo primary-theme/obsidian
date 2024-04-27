@@ -1,6 +1,6 @@
 /*────────── Core Plugin: Canvas ──────────*/
 
-.canvas-card-menu {
+.canvas-card-menu.canvas-card-menu {
     background: var(--canvas-menu-bg);
     border: var(--canvas-menu-border);
     border-radius: var(--radius-m);
@@ -8,10 +8,10 @@
 
     .canvas-card-menu-button {
         --icon-stroke: 1px;
-        color: var(--icon-color);
+        color: var(--canvas-icon-color);
 
         &:hover {
-            color: var(--icon-color-hover);
+            color: var(--canvas-icon-color-hover);
 
             svg {
                 transform: translateY(-3px);
@@ -20,6 +20,33 @@
 
         svg {
             fill: none !important;
+        }
+    }
+}
+
+.canvas-control-group {
+    background: var(--canvas-menu-bg);
+    border: var(--canvas-menu-border);
+    border-radius: var(--radius-m);
+    box-shadow: var(--canvas-menu-shadow);
+
+    .canvas-control-item {
+        color: var(--canvas-icon-color);
+        background: var(--canvas-menu-bg);
+
+        &:hover {
+            color: var(--canvas-icon-color-hover);
+            background: var(--canvas-menu-bg-hover);
+        }
+
+        &.is-disabled {
+            svg {
+                color: var(--canvas-icon-color-disabled);
+            }
+
+            &:hover {
+                background: inherit;
+            }
         }
     }
 }

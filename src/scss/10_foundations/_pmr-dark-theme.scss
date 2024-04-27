@@ -565,7 +565,12 @@ and CONTRIBUTION page ↴
     --gutter-color-active: var(--color-d-gray-50);
 
     // Canvas
-    --canvas-menu-bg: var(--background-primary);
+    --canvas-icon-color: var(--color-d-gray-50);
+    --canvas-icon-color-hover: var(--color-d-gray-30);
+    --canvas-icon-color-disabled: var(--color-d-gray-70);
+    --canvas-menu-bg: color-mix(in hsl, var(--color-d-gray-90) 60%, var(--color-d-gray-100));
+    --canvas-menu-bg-hover: color-mix(in hsl, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
     --canvas-menu-border: 1px solid var(--background-modifier-border);
-    --canvas-menu-shadow:   0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    --canvas-menu-shadow:   0px 1px 2px 1px rgba(0, 0, 0, 0.14),
+                            0px 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
