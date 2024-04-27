@@ -29,6 +29,7 @@ body {
   --cursor: pointer;
   --radius-xs: 2px;
   --icon-container-radius: 0px;
+  --icon-xs: 12px;
   --icon-xl: 24px;
   --button-inset-shadow-size: 2px;
   --header-height: 48px;
@@ -511,9 +512,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
   --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
   --gutter-color-active: var(--color-l-gray-90);
-  --canvas-menu-bg: var(--background-primary);
+  --canvas-icon-color: var(--color-l-gray-80);
+  --canvas-icon-color-hover: var(--color-l-gray-120);
+  --canvas-icon-color-disabled: var(--color-l-gray-60);
+  --canvas-menu-bg: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
+  --canvas-menu-bg-hover: var(--color-l-gray-10);
   --canvas-menu-border: 1px solid var(--background-modifier-border);
-  --canvas-menu-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.07);
+  --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.02),
+                          0px 2px 6px 0px rgba(0, 0, 0, 0.03);
 }
 
 /*───────────────────────────────────
@@ -916,9 +922,14 @@ and CONTRIBUTION page ↴
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
   --gutter-color: color-mix(in hsl, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
   --gutter-color-active: var(--color-d-gray-50);
-  --canvas-menu-bg: var(--background-primary);
+  --canvas-icon-color: var(--color-d-gray-50);
+  --canvas-icon-color-hover: var(--color-d-gray-30);
+  --canvas-icon-color-disabled: var(--color-d-gray-70);
+  --canvas-menu-bg: color-mix(in hsl, var(--color-d-gray-90) 60%, var(--color-d-gray-100));
+  --canvas-menu-bg-hover: color-mix(in hsl, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
   --canvas-menu-border: 1px solid var(--background-modifier-border);
-  --canvas-menu-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14),
+                          0px 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
 
 /*────────── Icons ──────────*/
@@ -2666,24 +2677,45 @@ body {
 }
 
 /*────────── Core Plugin: Canvas ──────────*/
-.canvas-card-menu {
+.canvas-card-menu.canvas-card-menu {
   background: var(--canvas-menu-bg);
   border: var(--canvas-menu-border);
   border-radius: var(--radius-m);
   box-shadow: var(--canvas-menu-shadow);
 }
-.canvas-card-menu .canvas-card-menu-button {
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button {
   --icon-stroke: 1px;
-  color: var(--icon-color);
+  color: var(--canvas-icon-color);
 }
-.canvas-card-menu .canvas-card-menu-button:hover {
-  color: var(--icon-color-hover);
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button:hover {
+  color: var(--canvas-icon-color-hover);
 }
-.canvas-card-menu .canvas-card-menu-button:hover svg {
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button:hover svg {
   transform: translateY(-3px);
 }
-.canvas-card-menu .canvas-card-menu-button svg {
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button svg {
   fill: none !important;
+}
+
+.canvas-control-group {
+  background: var(--canvas-menu-bg);
+  border: var(--canvas-menu-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--canvas-menu-shadow);
+}
+.canvas-control-group .canvas-control-item {
+  color: var(--canvas-icon-color);
+  background: var(--canvas-menu-bg);
+}
+.canvas-control-group .canvas-control-item:hover {
+  color: var(--canvas-icon-color-hover);
+  background: var(--canvas-menu-bg-hover);
+}
+.canvas-control-group .canvas-control-item.is-disabled svg {
+  color: var(--canvas-icon-color-disabled);
+}
+.canvas-control-group .canvas-control-item.is-disabled:hover {
+  background: inherit;
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/
