@@ -2064,7 +2064,7 @@ input.prompt-input:focus-visible {
   color: var(--prompt-suggestion-highlight-color-selected);
 }
 
-.suggestion-aux .suggestion-flair > svg {
+.suggestion-aux .suggestion-flair > svg.lucide-pin {
   transform: rotate(45deg);
 }
 
