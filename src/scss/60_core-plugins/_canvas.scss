@@ -1,5 +1,9 @@
 /*────────── Core Plugin: Canvas ──────────*/
 
+.canvas-menu {
+    border-radius: var(--radius-m);
+}
+
 .canvas-card-menu.canvas-card-menu {
     background: var(--canvas-menu-bg);
     border: var(--canvas-menu-border);
