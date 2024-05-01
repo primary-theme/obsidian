@@ -410,19 +410,56 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tag-background-hover: var(--color-l-gray-10);
     --tag-border-width: 1px;
     --tag-border-color: rgba(var(--color-l-black-rgb), 0.2);
-    --tag-border-color-hover: rgba(var(--color-l-black-rgb), 0.3);
-    --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-l-black-rgb), 0.1);
-    --tag-shadow-active: none;
+    --tag-border-color-hover: rgba(var(--color-l-black-rgb), 0.25);
+    --tag-shadow: inset 0px -0.125em 0px 0px rgba(var(--color-l-black-rgb), 0.1);
+    --tag-shadow-active: inset 0px 0px 0px 0.125em rgba(var(--color-l-black-rgb), 0.1);
 
-    // Metadata Tag
-    --metadata-tag-opacity: 0.7;
-    --metadata-tag-opacity-hover: 1;
-    --metadata-tag-color-1: var(--color-l-yellow-40);
-    --metadata-tag-bg-1: var(--color-l-alpha-yellow);
-    --metadata-tag-color-2: var(--color-l-red-40);
-    --metadata-tag-bg-2: var(--color-l-alpha-red);
-    --metadata-tag-color-3: var(--color-l-blue-40);
-    --metadata-tag-bg-3: var(--color-l-alpha-blue);
+    // Metadata
+    --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+    // --metadata-background: var(--background-primary);
+    --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
+    --metadata-properties-title-color-hover: var(--color-l-gray-80);
+    --metadata-properties-title-color: var(--color-l-gray-70);
+    --metadata-input-text-color: var(--color-l-gray-120);
+    --metadata-input-background: transparent;
+    --metadata-input-background-hover: rgba(255, 255, 255, 0.25);
+    --metadata-input-background-active: rgba(255, 255, 255, 0.45);
+    --metadata-input-shadow-hover: none;
+    --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
+                                    0px 0px 0px 1px var(--background-modifier-border);
+    --metadata-key-input-color: var(--color-l-gray-100);
+    --metadata-key-input-color-active: var(--color-l-gray-120);
+    // --metadata-label-text-color: var(--color-l-gray-100);
+    // --metadata-label-text-color-hover: var(--color-l-gray-100);
+
+    --metadata-divider-color: var(--background-modifier-border);
+    --metadata-divider-color-hover: transparent;
+    --metadata-divider-color-focus: transparent;
+
+    // Multi-select Pills
+    --pill-color: var(--color-l-gray-120);
+    --pill-color-hover: var(--color-l-gray-140);
+    --pill-color-remove: var(--color-l-gray-70);
+    --pill-color-remove-hover: var(--text-error);
+    --pill-background: rgba(255, 255, 255, 0.4);
+    --pill-background-hover: var(--pill-background);
+    --pill-border-color: var(--background-modifier-border);
+    --pill-border-color-hover: var(--background-modifier-border-hover);
+
+    --pill-tag-opacity: 0.7;
+    --pill-tag-opacity-hover: 1;
+    --pill-tag-weight: 600;
+    --pill-tag-color-1: var(--color-l-yellow-40);
+    --pill-tag-bg-1: var(--color-l-alpha-yellow);
+    --pill-tag-color-2: var(--color-l-red-40);
+    --pill-tag-bg-2: var(--color-l-alpha-red);
+    --pill-tag-color-3: var(--color-l-blue-40);
+    --pill-tag-bg-3: var(--color-l-alpha-blue);
+    --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+
+    // Properties Tab
+    --metadata-tab-background: var(--background-secondary);
+
     
     // Embed
     --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
@@ -487,7 +524,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                 0px 1px 6px 0px rgba(0, 0, 0, 0.07);
                             
     // Graph
-    // TODO Adjust border line color on the palette
     --graph-text: var(--color-l-gray-80);
     --graph-line: var(--background-modifier-border);
     --graph-node: var(--color-l-blue-20);
