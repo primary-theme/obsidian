@@ -40,6 +40,8 @@ button {
 //     }
 // }
 
+// Document Search Close Button
+// Modal Close Button
 .document-search-close-button,
 .modal-close-button {
     width: var(--modal-close-button-size);
@@ -67,5 +69,45 @@ button {
     
     &:active {
         opacity: 0.8;
+    }
+}
+
+// Property Box Add Property Button
+.metadata-container .metadata-add-button {
+    text-transform: capitalize;
+    color: var(--text-on-accent);
+    background: var(--interactive-accent);
+    padding: var(--button-metadata-padding);
+    border-radius: var(--button-s-radius);
+    margin: var(--size-2-2) var(--size-2-2);
+    box-shadow: var(--input-shadow);
+
+    transition: var(--button-anim);
+    transition: var(--background-anim);
+
+    &:hover {
+        color: var(--text-on-accent);
+        background: var(--interactive-accent-hover);
+        box-shadow: var(--input-shadow);
+
+        .text-button-icon {
+            color: var(--text-on-accent);
+        }
+    }
+
+    &:active {
+        padding: var(--button-metadata-padding-active);
+    }
+
+    &.text-icon-button:active {
+        color: var(--text-on-accent);
+        background: var(--interactive-accent-hover);
+        padding: var(--button-metadata-padding-active);
+        box-shadow: var(--button-shadow-active);
+        transition: var(--button-anim);
+
+        .text-button-icon {
+            color: var(--text-on-accent);
+        }
     }
 }

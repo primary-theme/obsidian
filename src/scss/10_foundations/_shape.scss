@@ -23,12 +23,13 @@ body {
     --close-button-radius: var(--radius-l);
     --hr-thickness: 1px;
     --inline-code-radius: var(--radius-s);
-    --copy-code-button-radius: var(--radius-m);
+    --copy-code-button-radius: var(--radius-s);
     --modal-close-button-size: 20px;
     --dropdown-height:  calc(
                             var(--font-ui-small) + 
                             calc(var(--size-4-4) + var(--button-inset-shadow-size))
                         );
+
     --button-padding:   var(--size-4-2)
                         var(--size-4-3)
                         calc(var(--size-4-2) + var(--button-inset-shadow-size))
@@ -37,6 +38,16 @@ body {
                                 var(--size-4-3)
                                 var(--size-4-2)
                                 var(--size-4-3);
+
+    --button-metadata-padding:  var(--size-2-3)
+                                var(--size-4-2)
+                                calc(var(--size-2-3) + var(--button-inset-shadow-size))
+                                var(--size-2-3);
+    --button-metadata-padding-active:   calc(var(--size-2-2) + var(--button-inset-shadow-size))
+                                        var(--size-4-2)
+                                        var(--size-2-3)                                   
+                                        var(--size-2-3);
+    --button-s-radius: var(--size-2-3);
     --button-s-padding: var(--size-2-2)
                         var(--size-4-2)
                         var(--size-2-2)
@@ -85,9 +96,23 @@ body {
     --table-column-first-border-width: 0;
     --table-column-last-border-width: 0;
     --table-row-last-border-width: 0;
+
+    // Tag
+    --tag-radius: 1em;
+}
+
+.metadata-property:not([data-property-key="tags"]) {
+    --pill-border-width: 1px;
+    --pill-padding-x: 0.5em;
+    --pill-padding-y: 0.1em;
+    --pill-radius: 0.35em;
 }
 
 body svg.svg-icon:not(.canvas-card-menu-button svg) {
     // icon-s = 16px for all Custom Icons only
     --icon-size: var(--icon-s) !important;
+}
+
+body .metadata-property-icon svg.svg-icon.svg-icon {
+    --icon-size: calc(var(--icon-s) - 3px) !important;
 }
