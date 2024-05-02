@@ -404,13 +404,15 @@ and CONTRIBUTION page ↴
     // Tag
     --tag-color: var(--color-d-blue-30);
     --tag-color-hover: var(--color-d-blue-20);
-    --tag-background: var(--color-d-gray-100);
-    --tag-background-hover: var(--color-d-gray-100);
+    --tag-background: rgba(0, 0, 0, 0.3);
+    --tag-background-hover: rgba(0, 0, 0, 0.2);
     --tag-border-width: 1px;
-    --tag-border-color: rgba(var(--color-d-black-rgb), 0.5);
-    --tag-border-color-hover: rgba(var(--color-d-black-rgb), 0.6);
-    --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
-    --tag-shadow-active: none;
+    --tag-border-color: rgba(0, 0, 0, 0.25);
+    --tag-border-color-hover: rgba(0, 0, 0, 0.35);
+    --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
+    --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2),
+                        0px 0px 0px 3px rgba(0, 0, 0, 0.15);
+    --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
 
     // Metadata
     --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));

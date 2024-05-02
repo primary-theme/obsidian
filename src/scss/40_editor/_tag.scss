@@ -1,51 +1,21 @@
 /*────────── Tag ──────────*/
 
-//  TODO Style Tags
-
 .cm-hashtag,
 .tag {
     box-shadow: var(--tag-shadow);
+    transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 
-    &:active {
-        box-shadow: var(--tag-shadow-active);
+    &:hover {
+        color: var(--tag-color-hover);
     }
 }
 
-// .cm-hashtag,
-// .tag {
-//     opacity: var(--tag-opacity);
+.tag {
+    &:hover {
+        box-shadow: var(--tag-shadow-hover);
+    }
 
-//     &:hover {
-//         opacity: var(--tag-opacity-hover);
-//     }
-
-//     &:nth-child(3n+1) {
-//         color: var(--tag-color-1);
-//         background: var(--tag-bg-1);
-
-//         &:hover {
-//             color: var(--tag-color-1);
-//             background: var(--tag-bg-1);
-//         }
-//     }
-
-//     &:nth-child(3n+2) {
-//         color: var(--tag-color-2);
-//         background: var(--tag-bg-2);
-
-//         &:hover {
-//             color: var(--tag-color-2);
-//             background: var(--tag-bg-2);
-//         }
-//     }
-
-//     &:nth-child(3n+3) {
-//         color: var(--tag-color-3);
-//         background: var(--tag-bg-3);
-
-//             &:hover {
-//             color: var(--tag-color-3);
-//             background: var(--tag-bg-3);
-//         }
-//     }
-// }
+    &:active {
+        box-shadow: var(--tag-shadow-active);
+    }   
+}
