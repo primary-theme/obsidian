@@ -14,6 +14,10 @@ input.prompt-input:focus-visible {
 }
 
 // prompt for adding Tags, linking Files
+.suggestion-container {
+    animation: var(--anim-popup);
+}
+
 .suggestion-item:not(.mod-search-suggestion .suggestion-item) {
     font-size: calc(var(--font-ui-medium) - 1px);
     color: var(--prompt-suggestion-color);
