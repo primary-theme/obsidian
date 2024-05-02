@@ -1,10 +1,6 @@
 /*────────── Emphasis ──────────*/
-// TODO Make emphasis rendering in Reading Mode consistent
-// TODO Make emphasis rendering in Writing Mode consistent
-// TODO Some emphasis in Dark Mode needs higher specificity
 
-.theme-light,
-.theme-dark {    
+body {    
     // Strikethrough
     .cm-strikethrough,
     p del {
@@ -19,7 +15,9 @@
     }
 
     // Bold, Italic
+    .cm-strong.cm-em,
     .cm-strong .cm-em,
+    .cm-em .cm-strong,
     strong em,
     em strong {
         color: var(--bold-italic-color);
@@ -51,15 +49,5 @@
         &.cm-strong.cm-em.cm-strikethrough {
             color: var(--bold-italic-strikethrough-color);
         }
-    }
-}
-
-// Activeline Gutter Highlight
-.cm-gutterElement {
-    font-size: calc(var(--font-ui-smaller) - 1px);
-    color: var(--gutter-color);
-
-    &.cm-active {
-        color: var(--gutter-color-active);
     }
 }
