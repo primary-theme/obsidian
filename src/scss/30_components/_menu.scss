@@ -1,5 +1,9 @@
 /*────────── Menu ──────────*/
 
+.menu {
+    animation: var(--anim-popup);
+}
+
 .menu-item {
     border-radius: var(--menu-item-radius);
 

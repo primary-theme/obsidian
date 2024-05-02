@@ -109,6 +109,9 @@ body {
   --tag-padding-x: 0.6em;
   --tag-padding-y: 0.15em;
   --tag-radius: 1em;
+  --link-unresolved-opacity: 1;
+  --link-underline-offset: 3.5px;
+  --link-decoration-thickness: 1.5px;
   --anim-popup: 0.3s forwards slideUp;
 }
 
@@ -406,23 +409,23 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --h5-color: var(--color-l-gray-140);
   --h6-color: var(--color-l-gray-140);
   --link-unresolved-color: var(--color-l-gray-80);
-  --link-unresolved-border: 1px solid var(--color-l-gray-80);
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
   --link-unresolved-color-hover: var(--color-l-gray-70);
-  --link-unresolved-border-hover: 1px solid var(--color-l-gray-70);
+  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
   --link-unresolved-color-active: var(--color-l-gray-90);
-  --link-unresolved-border-active: 1px solid var(--color-l-gray-90);
+  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
   --link-color: var(--color-l-yellow-30);
-  --link-border: 1px solid var(--color-l-yellow-30);
+  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
   --link-color-hover: var(--color-l-yellow-20);
-  --link-border-hover: 1px solid var(--color-l-yellow-20);
+  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
   --link-color-active: var(--color-l-yellow-40);
-  --link-border-active: 1px solid var(--color-l-yellow-40);
+  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
   --link-external-color: var(--color-l-green-30);
-  --link-external-border: 1px solid var(--color-l-green-30);
+  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
   --link-external-color-hover: var(--color-l-green-20);
-  --link-external-border-hover: 1px solid var(--color-l-green-20);
+  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
   --link-external-color-active: var(--color-l-green-40);
-  --link-external-border-active: 1px solid var(--color-l-green-40);
+  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
   --bold-color: var(--color-l-red-30);
   --italic-color: var(--color-l-blue-30);
   --strikethrough-color: var(--color-l-gray-80);
@@ -441,7 +444,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1),
                       0px 0px 0px 3px rgba(0, 0, 0, 0.03);
   --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
-  --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+  --metadata-background: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
   --metadata-tab-background: var(--background-secondary);
   --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
   --metadata-properties-title-color-hover: var(--color-l-gray-80);
@@ -2161,6 +2164,10 @@ input[type=number]:focus-visible {
 }
 
 /*────────── Menu ──────────*/
+.menu {
+  animation: var(--anim-popup);
+}
+
 .menu-item {
   border-radius: var(--menu-item-radius);
 }
@@ -2513,86 +2520,85 @@ span.setting-hotkey {
 }
 
 /*────────── Link ──────────*/
-.theme-light,
-.theme-dark {
-  --link-decoration: none;
-  --link-decoration-hover: none;
-  --link-unresolved-opacity: 1;
-  --link-unresolved-decoration: none;
-  --link-unresolved-decoration-hover: none;
-  --link-external-decoration: none;
-  --link-external-decoration-hover: none;
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-link:hover {
+  text-decoration-line: unset;
+  color: unset;
 }
 
-.internal-link {
+.markdown-rendered .internal-link {
   color: var(--link-color);
-  border-bottom: var(--link-border);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-decoration-color);
 }
-.internal-link.is-unresolved {
+.markdown-rendered .internal-link.is-unresolved {
   color: var(--link-unresolved-color);
-  border-bottom: var(--link-unresolved-border);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-unresolved-decoration-color);
 }
-.internal-link.is-unresolved:hover {
+.markdown-rendered .internal-link.is-unresolved:hover {
   color: var(--link-unresolved-color-hover);
-  border-bottom: var(--link-unresolved-border-hover);
+  text-decoration-color: var(--link-unresolved-decoration-color-hover);
 }
-.internal-link.is-unresolved:hover:active, .internal-link.is-unresolved:active {
+.markdown-rendered .internal-link.is-unresolved:hover:active, .markdown-rendered .internal-link.is-unresolved:active {
   color: var(--link-unresolved-color-active);
-  border-bottom: var(--link-unresolved-border-active);
+  text-decoration-color: var(--link-unresolved-decoration-color-active);
 }
-.internal-link:hover {
+.markdown-rendered .internal-link:hover {
   color: var(--link-color-hover);
-  border-bottom: var(--link-border-hover);
+  text-decoration-color: var(--link-decoration-color-hover);
 }
-.internal-link:hover:active, .internal-link:active {
+.markdown-rendered .internal-link:hover:active, .markdown-rendered .internal-link:active {
   color: var(--link-color-active);
-  border-bottom: var(--link-border-active);
+  text-decoration-color: var(--link-decoration-color-active);
 }
 
-.cm-hmd-internal-link {
-  color: var(--link-color);
-  border-bottom: var(--link-border);
-}
 .cm-hmd-internal-link .is-unresolved .cm-underline {
   color: var(--link-unresolved-color);
-  border-bottom: var(--link-unresolved-border);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-unresolved-decoration-color);
 }
 .cm-hmd-internal-link .is-unresolved .cm-underline:hover {
   color: var(--link-unresolved-color-hover);
-  border-bottom: var(--link-unresolved-border-hover);
+  text-decoration-color: var(--link-unresolved-decoration-color-hover);
 }
-.cm-hmd-internal-link .is-unresolved .cm-underline:hover:active, .cm-hmd-internal-link .is-unresolved .cm-underline:active {
+.cm-hmd-internal-link .is-unresolved .cm-underline:active {
   color: var(--link-unresolved-color-active);
-  border-bottom: var(--link-unresolved-border-active);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-unresolved-decoration-color-active);
 }
-.cm-hmd-internal-link:hover {
+.cm-hmd-internal-link .cm-underline {
+  color: var(--link-color);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-decoration-color);
+}
+.cm-hmd-internal-link .cm-underline:hover {
   color: var(--link-color-hover);
-  border-bottom: var(--link-border-hover);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-decoration-color-hover);
 }
-.cm-hmd-internal-link:hover:active, .cm-hmd-internal-link:active {
-  color: var(--link-color-active);
-  border-bottom: var(--link-border-active);
+.cm-hmd-internal-link .cm-underline:active {
+  opacity: var(--link-opacity-active);
 }
 
 .external-link,
 .cm-link .cm-underline {
   color: var(--link-external-color);
-  border-bottom: var(--link-external-border);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-external-decoration-color);
 }
 .external-link:hover,
 .cm-link .cm-underline:hover {
   color: var(--link-external-color-hover);
-  border-bottom: var(--link-external-border-hover);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-external-decoration-color-hover);
 }
 .external-link:hover:active, .external-link:active,
 .cm-link .cm-underline:hover:active,
 .cm-link .cm-underline:active {
   color: var(--link-external-color-active);
-  border-bottom: var(--link-external-border-active);
-}
-
-.external-link img {
-  border-bottom: none;
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-external-decoration-color-hover);
 }
 
 /*────────── Emphasis ──────────*/
