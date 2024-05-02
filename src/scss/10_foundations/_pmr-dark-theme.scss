@@ -412,6 +412,46 @@ and CONTRIBUTION page ↴
     --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
     --tag-shadow-active: none;
 
+    // Metadata
+    --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+    --metadata-tab-background: var(--background-secondary);
+    --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
+    --metadata-properties-title-color-hover: var(--color-d-gray-50);
+    --metadata-properties-title-color: var(--color-d-gray-60);
+    --metadata-input-text-color: var(--color-d-gray-40);
+    --metadata-input-background: transparent;
+    --metadata-input-background-hover: transparent;
+    --metadata-input-background-active: rgba(0, 0, 0, 0.2);
+    --metadata-label-background-active: var(--metadata-input-background-active);
+    --metadata-input-shadow-hover: none;
+    --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
+                                    0px 0px 0px 1px var(--background-modifier-border);
+    --metadata-key-input-color: var(--color-d-gray-50);
+    --metadata-key-input-color-active: var(--color-d-gray-30);
+
+    --metadata-divider-color: var(--background-modifier-border);
+    --metadata-divider-color-hover: transparent;
+    --metadata-divider-color-focus: transparent;
+
+    // Multi-select Pills
+    --pill-color: var(--color-d-gray-30);
+    --pill-color-hover: var(--color-d-gray-20);
+    --pill-color-remove: var(--color-d-gray-50);
+    --pill-color-remove-hover: var(--text-error);
+    --pill-background: rgba(0, 0, 0, 0.2);
+    --pill-background-hover: var(--pill-background);
+    --pill-border-color: var(--background-modifier-border);
+    --pill-border-color-hover: var(--background-modifier-border-hover);
+
+    --pill-tag-weight: 600;
+    --pill-tag-color-1: var(--color-d-yellow-20);
+    --pill-tag-bg-1: var(--color-d-alpha-yellow);
+    --pill-tag-color-2: var(--color-d-red-20);
+    --pill-tag-bg-2: var(--color-d-alpha-red);
+    --pill-tag-color-3: var(--color-d-blue-20);
+    --pill-tag-bg-3: var(--color-d-alpha-blue);
+    --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
+
     // Embed
     --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
     --embed-title-color: var(--color-d-gray-50);

@@ -424,6 +424,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --metadata-input-background: transparent;
     --metadata-input-background-hover: transparent;
     --metadata-input-background-active: rgba(255, 255, 255, 0.45);
+    --metadata-label-background-active: var(--metadata-input-background-active);
     --metadata-input-shadow-hover: none;
     --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
                                     0px 0px 0px 1px var(--background-modifier-border);
