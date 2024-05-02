@@ -456,6 +456,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --pill-tag-bg-3: var(--color-l-alpha-blue);
     --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
 
+    // YAML Source Code
+    --yaml-base-color: var(--color-l-red-10);
+    --yaml-def-meta-color: var(--color-l-gray-70);
+    --yaml-atom-color: var(--color-l-blue-10);
+    --yaml-keyword-color: var(--color-l-yellow-30);
+    --yaml-number-color: var(--color-l-red-10);
+    --yaml-string-color: var(--color-l-yellow-30);
+
     // Embed
     --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
     --embed-title-color: var(--color-l-gray-90);

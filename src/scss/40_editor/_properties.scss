@@ -229,3 +229,27 @@ div.metadata-container {
 }
 
 // Source Code Properties
+.cm-hmd-frontmatter.cm-hmd-frontmatter {
+    color: var(--yaml-base-color);
+
+    &.cm-def,
+    &.cm-meta {
+        color: var(--yaml-def-meta-color);
+    }
+
+    &.cm-atom {
+        color: var(--yaml-atom-color);
+    }
+
+    &.cm-keyword {
+        color: var(--yaml-keyword-color);
+    }
+
+    &.cm-number {
+        color: var(--yaml-number-color);
+    }
+
+    &.cm-string {
+        color: var(--yaml-string-color);
+    }
+}

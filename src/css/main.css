@@ -455,6 +455,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --pill-tag-color-3: var(--color-l-blue-40);
   --pill-tag-bg-3: var(--color-l-alpha-blue);
   --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+  --yaml-base-color: var(--color-l-red-10);
+  --yaml-def-meta-color: var(--color-l-gray-70);
+  --yaml-atom-color: var(--color-l-blue-10);
+  --yaml-keyword-color: var(--color-l-yellow-30);
+  --yaml-number-color: var(--color-l-red-10);
+  --yaml-string-color: var(--color-l-yellow-30);
   --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
   --embed-title-color: var(--color-l-gray-90);
   --embed-block-shadow-hover: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
@@ -902,6 +908,12 @@ and CONTRIBUTION page ↴
   --pill-tag-color-3: var(--color-d-blue-20);
   --pill-tag-bg-3: var(--color-d-alpha-blue);
   --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
+  --yaml-base-color: var(--color-d-red-10);
+  --yaml-def-meta-color: var(--color-d-gray-50);
+  --yaml-atom-color: var(--color-d-blue-10);
+  --yaml-keyword-color: var(--color-d-yellow-30);
+  --yaml-number-color: var(--color-d-red-10);
+  --yaml-string-color: var(--color-d-yellow-30);
   --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
   --embed-title-color: var(--color-d-gray-50);
   --embed-block-shadow-hover: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
@@ -2856,6 +2868,25 @@ input[type=number],
   padding: 0;
   margin-bottom: 0;
   border-radius: 0;
+}
+
+.cm-hmd-frontmatter.cm-hmd-frontmatter {
+  color: var(--yaml-base-color);
+}
+.cm-hmd-frontmatter.cm-hmd-frontmatter.cm-def, .cm-hmd-frontmatter.cm-hmd-frontmatter.cm-meta {
+  color: var(--yaml-def-meta-color);
+}
+.cm-hmd-frontmatter.cm-hmd-frontmatter.cm-atom {
+  color: var(--yaml-atom-color);
+}
+.cm-hmd-frontmatter.cm-hmd-frontmatter.cm-keyword {
+  color: var(--yaml-keyword-color);
+}
+.cm-hmd-frontmatter.cm-hmd-frontmatter.cm-number {
+  color: var(--yaml-number-color);
+}
+.cm-hmd-frontmatter.cm-hmd-frontmatter.cm-string {
+  color: var(--yaml-string-color);
 }
 
 /*────────── Core Plugin: Graph ──────────*/
