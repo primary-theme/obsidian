@@ -1,8 +1,7 @@
 /*────────── Code ──────────*/
-// TODO Adjust code radius in preview mode
-
 // Ensures that inline code radius
 // is not as big as code block radius
-.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting),
+.cm-s-obsidian code {
     border-radius: var(--inline-code-radius);
 }
