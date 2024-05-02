@@ -454,6 +454,14 @@ and CONTRIBUTION page ↴
     --pill-tag-bg-3: var(--color-d-alpha-blue);
     --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
 
+    // YAML Source Code
+    --yaml-base-color: var(--color-d-red-10);
+    --yaml-def-meta-color: var(--color-d-gray-50);
+    --yaml-atom-color: var(--color-d-blue-10);
+    --yaml-keyword-color: var(--color-d-yellow-30);
+    --yaml-number-color: var(--color-d-red-10);
+    --yaml-string-color: var(--color-d-yellow-30);
+
     // Embed
     --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
     --embed-title-color: var(--color-d-gray-50);
