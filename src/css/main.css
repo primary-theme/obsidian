@@ -109,6 +109,7 @@ body {
   --tag-padding-x: 0.6em;
   --tag-padding-y: 0.15em;
   --tag-radius: 1em;
+  --anim-popup: 0.3s forwards slideUp;
 }
 
 .metadata-property:not([data-property-key=tags]) {
@@ -131,7 +132,24 @@ body .metadata-property-icon svg.svg-icon.svg-icon {
   --icon-size: calc(var(--icon-s) - 3px) !important;
 }
 
-@keyframes slideUp {}
+@keyframes slideUp {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(10%);
+    opacity: 0.2;
+  }
+  40% {
+    transform: translateY(-1%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*───────────────────────────────────
 
 ✦ P R I M A R Y ✦
@@ -1919,6 +1937,10 @@ input[type=checkbox]:hover {
   backdrop-filter: blur(3px);
 }
 
+.modal {
+  animation: var(--anim-popup);
+}
+
 /*────────── Modal: Settings ──────────*/
 .vertical-tab-header-group {
   padding-top: 0;
@@ -2216,7 +2238,7 @@ input.prompt-input:focus-visible {
 }
 
 .prompt {
-  animation: 0.2s slideUp forwards;
+  animation: var(--anim-popup);
 }
 .prompt-results {
   background: var(--prompt-results-background);
