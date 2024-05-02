@@ -416,21 +416,19 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Metadata
     --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
-    // --metadata-background: var(--background-primary);
+    --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
     --metadata-properties-title-color-hover: var(--color-l-gray-80);
     --metadata-properties-title-color: var(--color-l-gray-70);
     --metadata-input-text-color: var(--color-l-gray-120);
     --metadata-input-background: transparent;
-    --metadata-input-background-hover: rgba(255, 255, 255, 0.25);
+    --metadata-input-background-hover: transparent;
     --metadata-input-background-active: rgba(255, 255, 255, 0.45);
     --metadata-input-shadow-hover: none;
     --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
                                     0px 0px 0px 1px var(--background-modifier-border);
     --metadata-key-input-color: var(--color-l-gray-100);
     --metadata-key-input-color-active: var(--color-l-gray-120);
-    // --metadata-label-text-color: var(--color-l-gray-100);
-    // --metadata-label-text-color-hover: var(--color-l-gray-100);
 
     --metadata-divider-color: var(--background-modifier-border);
     --metadata-divider-color-hover: transparent;
@@ -446,8 +444,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --pill-border-color: var(--background-modifier-border);
     --pill-border-color-hover: var(--background-modifier-border-hover);
 
-    --pill-tag-opacity: 0.7;
-    --pill-tag-opacity-hover: 1;
     --pill-tag-weight: 600;
     --pill-tag-color-1: var(--color-l-yellow-40);
     --pill-tag-bg-1: var(--color-l-alpha-yellow);
@@ -455,12 +451,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --pill-tag-bg-2: var(--color-l-alpha-red);
     --pill-tag-color-3: var(--color-l-blue-40);
     --pill-tag-bg-3: var(--color-l-alpha-blue);
-    --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+    --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
 
-    // Properties Tab
-    --metadata-tab-background: var(--background-secondary);
-
-    
     // Embed
     --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
     --embed-title-color: var(--color-l-gray-90);
