@@ -1,0 +1,12 @@
+/*────────── Gutter ──────────*/
+
+// Activeline Gutter Highlight
+// (does not highlight activeline)
+.cm-gutterElement {
+    font-size: calc(var(--font-ui-smaller) - 1px);
+    color: var(--gutter-color);
+
+    &.cm-active {
+        color: var(--gutter-color-active);
+    }
+}

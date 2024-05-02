@@ -3,5 +3,6 @@
 // is not as big as code block radius
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting),
 .cm-s-obsidian code {
+    color: var(--inline-code-color);
     border-radius: var(--inline-code-radius);
 }

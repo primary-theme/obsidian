@@ -131,6 +131,7 @@ body .metadata-property-icon svg.svg-icon.svg-icon {
   --icon-size: calc(var(--icon-s) - 3px) !important;
 }
 
+@keyframes slideUp {}
 /*───────────────────────────────────
 
 ✦ P R I M A R Y ✦
@@ -2214,6 +2215,9 @@ input.prompt-input:focus-visible {
   border-radius: 4px;
 }
 
+.prompt {
+  animation: 0.2s slideUp forwards;
+}
 .prompt-results {
   background: var(--prompt-results-background);
 }
@@ -2566,59 +2570,40 @@ span.setting-hotkey {
 }
 
 /*────────── Emphasis ──────────*/
-.theme-light .cm-strikethrough,
-.theme-light p del,
-.theme-dark .cm-strikethrough,
-.theme-dark p del {
+body .cm-strikethrough,
+body p del {
   color: var(--strikethrough-color);
 }
-.theme-light .cm-s-obsidian span.cm-inline-code,
-.theme-light code,
-.theme-dark .cm-s-obsidian span.cm-inline-code,
-.theme-dark code {
+body .cm-s-obsidian span.cm-inline-code,
+body code {
   color: var(--inline-code-color);
   background: var(--inline-code-bg);
 }
-.theme-light .cm-strong .cm-em,
-.theme-light strong em,
-.theme-light em strong,
-.theme-dark .cm-strong .cm-em,
-.theme-dark strong em,
-.theme-dark em strong {
+body .cm-strong.cm-em,
+body .cm-strong .cm-em,
+body .cm-em .cm-strong,
+body strong em,
+body em strong {
   color: var(--bold-italic-color);
 }
-.theme-light span.cm-quote.cm-strong,
-.theme-dark span.cm-quote.cm-strong {
+body span.cm-quote.cm-strong {
   color: var(--bold-color);
 }
-.theme-light span.cm-quote.cm-em,
-.theme-dark span.cm-quote.cm-em {
+body span.cm-quote.cm-em {
   color: var(--italic-color);
 }
-.theme-light span.cm-quote.cm-strikethrough,
-.theme-dark span.cm-quote.cm-strikethrough {
+body span.cm-quote.cm-strikethrough {
   color: var(--strikethrough-color);
 }
-.theme-light span.cm-quote.cm-inline-code,
-.theme-dark span.cm-quote.cm-inline-code {
+body span.cm-quote.cm-inline-code {
   color: var(--inline-code-color);
   background: var(--inline-code-bg);
 }
-.theme-light span.cm-quote.cm-strong.cm-em,
-.theme-dark span.cm-quote.cm-strong.cm-em {
+body span.cm-quote.cm-strong.cm-em {
   color: var(--bold-italic-color);
 }
-.theme-light span.cm-quote.cm-strong.cm-em.cm-strikethrough,
-.theme-dark span.cm-quote.cm-strong.cm-em.cm-strikethrough {
+body span.cm-quote.cm-strong.cm-em.cm-strikethrough {
   color: var(--bold-italic-strikethrough-color);
-}
-
-.cm-gutterElement {
-  font-size: calc(var(--font-ui-smaller) - 1px);
-  color: var(--gutter-color);
-}
-.cm-gutterElement.cm-active {
-  color: var(--gutter-color-active);
 }
 
 /*────────── Tag ──────────*/
@@ -2688,6 +2673,7 @@ body {
 /*────────── Code ──────────*/
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting),
 .cm-s-obsidian code {
+  color: var(--inline-code-color);
   border-radius: var(--inline-code-radius);
 }
 
@@ -2888,6 +2874,15 @@ input[type=number],
 }
 .cm-hmd-frontmatter.cm-hmd-frontmatter.cm-string {
   color: var(--yaml-string-color);
+}
+
+/*────────── Gutter ──────────*/
+.cm-gutterElement {
+  font-size: calc(var(--font-ui-smaller) - 1px);
+  color: var(--gutter-color);
+}
+.cm-gutterElement.cm-active {
+  color: var(--gutter-color-active);
 }
 
 /*────────── Core Plugin: Graph ──────────*/

@@ -60,6 +60,8 @@ input.prompt-input:focus-visible {
 
 // Quick Switcher, Command Palette
 .prompt {
+    animation: 0.2s slideUp forwards;
+
     &-results {
         background: var(--prompt-results-background);
     }
