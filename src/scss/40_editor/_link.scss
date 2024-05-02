@@ -74,10 +74,9 @@
         }
     
         &:active {
-            opacity: var(--link-opacity-active);
-            // color: var(--link-color-active);
-            // text-underline-offset: var(--link-underline-offset);
-            // text-decoration-color: var(--link-decoration-color-active);
+            color: var(--link-color-active);
+            text-underline-offset: var(--link-underline-offset);
+            text-decoration-color: var(--link-decoration-color-active);
         }
     }
 }

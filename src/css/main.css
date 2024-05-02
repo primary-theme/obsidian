@@ -2578,7 +2578,9 @@ span.setting-hotkey {
   text-decoration-color: var(--link-decoration-color-hover);
 }
 .cm-hmd-internal-link .cm-underline:active {
-  opacity: var(--link-opacity-active);
+  color: var(--link-color-active);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-decoration-color-active);
 }
 
 .external-link,
