@@ -39,6 +39,7 @@ body {
   --file-tab-separator-visibility: visible;
   --close-button-radius: var(--radius-l);
   --hr-thickness: 1px;
+  --code-radius: var(--radius-m);
   --inline-code-radius: var(--radius-s);
   --copy-code-button-radius: var(--radius-s);
   --modal-close-button-size: 20px;
@@ -464,7 +465,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
   --embed-title-color: var(--color-l-gray-90);
   --embed-block-shadow-hover: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
-  --code-radius: var(--radius-l);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
   --checklist-bg: var(--color-l-gray-10);
@@ -2686,7 +2686,8 @@ body {
 }
 
 /*────────── Code ──────────*/
-.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting),
+.cm-s-obsidian code {
   border-radius: var(--inline-code-radius);
 }
 
