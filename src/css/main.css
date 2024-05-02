@@ -105,6 +105,8 @@ body {
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
   --table-row-last-border-width: 0;
+  --tag-padding-x: 0.6em;
+  --tag-padding-y: 0.15em;
   --tag-radius: 1em;
 }
 
@@ -410,13 +412,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
   --tag-color: var(--color-l-blue-30);
   --tag-color-hover: var(--color-l-blue-20);
-  --tag-background: var(--color-l-gray-10);
-  --tag-background-hover: var(--color-l-gray-10);
+  --tag-background: rgba(255, 255, 255, 0.5);
+  --tag-background-hover: rgba(255, 255, 255, 0.8);
   --tag-border-width: 1px;
-  --tag-border-color: rgba(var(--color-l-black-rgb), 0.2);
-  --tag-border-color-hover: rgba(var(--color-l-black-rgb), 0.25);
-  --tag-shadow: inset 0px -0.125em 0px 0px rgba(var(--color-l-black-rgb), 0.1);
-  --tag-shadow-active: inset 0px 0px 0px 0.125em rgba(var(--color-l-black-rgb), 0.1);
+  --tag-border-color: rgba(0, 0, 0, 0.15);
+  --tag-border-color-hover: rgba(0, 0, 0, 0.25);
+  --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
+  --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1),
+                      0px 0px 0px 3px rgba(0, 0, 0, 0.03);
+  --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
   --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
   --metadata-tab-background: var(--background-secondary);
   --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
@@ -855,13 +859,15 @@ and CONTRIBUTION page ↴
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
   --tag-color: var(--color-d-blue-30);
   --tag-color-hover: var(--color-d-blue-20);
-  --tag-background: var(--color-d-gray-100);
-  --tag-background-hover: var(--color-d-gray-100);
+  --tag-background: rgba(0, 0, 0, 0.3);
+  --tag-background-hover: rgba(0, 0, 0, 0.2);
   --tag-border-width: 1px;
-  --tag-border-color: rgba(var(--color-d-black-rgb), 0.5);
-  --tag-border-color-hover: rgba(var(--color-d-black-rgb), 0.6);
-  --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
-  --tag-shadow-active: none;
+  --tag-border-color: rgba(0, 0, 0, 0.25);
+  --tag-border-color-hover: rgba(0, 0, 0, 0.35);
+  --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
+  --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2),
+                      0px 0px 0px 3px rgba(0, 0, 0, 0.15);
+  --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
   --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
   --metadata-tab-background: var(--background-secondary);
   --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
@@ -2607,8 +2613,16 @@ span.setting-hotkey {
 .cm-hashtag,
 .tag {
   box-shadow: var(--tag-shadow);
+  transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
-.cm-hashtag:active,
+.cm-hashtag:hover,
+.tag:hover {
+  color: var(--tag-color-hover);
+}
+
+.tag:hover {
+  box-shadow: var(--tag-shadow-hover);
+}
 .tag:active {
   box-shadow: var(--tag-shadow-active);
 }
