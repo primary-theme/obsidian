@@ -4,6 +4,10 @@
     backdrop-filter: blur(3px);
 }
 
+.modal {
+    animation: var(--anim-popup);
+}
+
 /*────────── Modal: Settings ──────────*/
 // Settings Left Sidebar
 .vertical-tab-header-group {

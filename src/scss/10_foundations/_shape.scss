@@ -102,6 +102,8 @@ body {
     --tag-padding-x: 0.6em;
     --tag-padding-y: 0.15em;
     --tag-radius: 1em;
+
+    --anim-popup: 0.3s forwards slideUp;
 }
 
 .metadata-property {
@@ -131,5 +133,20 @@ body .metadata-property-icon svg.svg-icon.svg-icon {
 }
 
 @keyframes slideUp {
-    
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(10%);
+        opacity: 0.2;
+    }
+    40% {
+        transform: translateY(-1%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
