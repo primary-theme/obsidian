@@ -111,8 +111,13 @@ body {
 .metadata-property:not([data-property-key=tags]) {
   --pill-border-width: 1px;
   --pill-padding-x: 0.5em;
-  --pill-padding-y: 0.1em;
+  --pill-padding-y: 0.15em;
   --pill-radius: 0.35em;
+}
+.metadata-property[data-property-key=tags] {
+  --pill-padding-x: 0.6em;
+  --pill-padding-y: 0.15em;
+  --pill-radius: 1em;
 }
 
 body svg.svg-icon:not(.canvas-card-menu-button svg) {
@@ -413,12 +418,13 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --tag-shadow: inset 0px -0.125em 0px 0px rgba(var(--color-l-black-rgb), 0.1);
   --tag-shadow-active: inset 0px 0px 0px 0.125em rgba(var(--color-l-black-rgb), 0.1);
   --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+  --metadata-tab-background: var(--background-secondary);
   --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
   --metadata-properties-title-color-hover: var(--color-l-gray-80);
   --metadata-properties-title-color: var(--color-l-gray-70);
   --metadata-input-text-color: var(--color-l-gray-120);
   --metadata-input-background: transparent;
-  --metadata-input-background-hover: rgba(255, 255, 255, 0.25);
+  --metadata-input-background-hover: transparent;
   --metadata-input-background-active: rgba(255, 255, 255, 0.45);
   --metadata-input-shadow-hover: none;
   --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
@@ -436,8 +442,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --pill-background-hover: var(--pill-background);
   --pill-border-color: var(--background-modifier-border);
   --pill-border-color-hover: var(--background-modifier-border-hover);
-  --pill-tag-opacity: 0.7;
-  --pill-tag-opacity-hover: 1;
   --pill-tag-weight: 600;
   --pill-tag-color-1: var(--color-l-yellow-40);
   --pill-tag-bg-1: var(--color-l-alpha-yellow);
@@ -445,8 +449,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --pill-tag-bg-2: var(--color-l-alpha-red);
   --pill-tag-color-3: var(--color-l-blue-40);
   --pill-tag-bg-3: var(--color-l-alpha-blue);
-  --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
-  --metadata-tab-background: var(--background-secondary);
+  --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
   --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
   --embed-title-color: var(--color-l-gray-90);
   --embed-block-shadow-hover: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
@@ -2669,7 +2672,7 @@ body {
   cursor: var(--cursor);
 }
 .metadata-properties-heading:hover .metadata-properties-title,
-.metadata-properties-heading:hover .collapse-indicator {
+.metadata-properties-heading:hover .collapse-indicator.collapse-indicator svg {
   color: var(--metadata-properties-title-color-hover);
 }
 .metadata-properties-heading:not(.is-collapsed) {
@@ -2677,6 +2680,10 @@ body {
 }
 .metadata-properties-heading:not(.is-collapsed) .metadata-properties-title {
   color: var(--metadata-properties-title-color);
+}
+.metadata-properties-heading:not(.is-collapsed):hover .metadata-properties-title,
+.metadata-properties-heading:not(.is-collapsed):hover .collapse-indicator svg {
+  color: var(--metadata-properties-title-color-hover);
 }
 
 .metadata-content {
@@ -2779,6 +2786,9 @@ input[type=number],
 }
 
 @container (width < 250px) {
+  div.metadata-container .metadata-property .metadata-property-value {
+    padding-left: calc(var(--icon-size) + var(--size-4-2) + 2px);
+  }
   div.metadata-container .metadata-property:last-of-type {
     margin-bottom: var(--size-4-2);
   }

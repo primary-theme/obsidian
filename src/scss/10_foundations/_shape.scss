@@ -101,11 +101,21 @@ body {
     --tag-radius: 1em;
 }
 
-.metadata-property:not([data-property-key="tags"]) {
-    --pill-border-width: 1px;
-    --pill-padding-x: 0.5em;
-    --pill-padding-y: 0.1em;
-    --pill-radius: 0.35em;
+.metadata-property {
+    // Multi-select Pills
+    &:not([data-property-key="tags"]) {
+        --pill-border-width: 1px;
+        --pill-padding-x: 0.5em;
+        --pill-padding-y: 0.15em;
+        --pill-radius: 0.35em;
+    }
+
+    // Tag Pills
+    &[data-property-key="tags"] {
+        --pill-padding-x: 0.6em;
+        --pill-padding-y: 0.15em;
+        --pill-radius: 1em;
+    }
 }
 
 body svg.svg-icon:not(.canvas-card-menu-button svg) {

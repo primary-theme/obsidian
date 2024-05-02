@@ -48,7 +48,7 @@ body {
         cursor: var(--cursor);
 
         .metadata-properties-title,
-        .collapse-indicator {
+        .collapse-indicator.collapse-indicator svg {
             color: var(--metadata-properties-title-color-hover);
         }
     }
@@ -60,6 +60,13 @@ body {
 
         .metadata-properties-title {
             color: var(--metadata-properties-title-color);
+        }
+
+        &:hover {
+            .metadata-properties-title,
+            .collapse-indicator svg {
+                color: var(--metadata-properties-title-color-hover);
+            }
         }
     }
     
@@ -191,9 +198,13 @@ body {
 // Smaller Properties
 div.metadata-container {
     @container (width < 250px) {
+        .metadata-property .metadata-property-value {
+            padding-left: calc(var(--icon-size) + var(--size-4-2) + 2px);
+        }
+
         .metadata-property:last-of-type {
             margin-bottom: var(--size-4-2);
-
+            
             .metadata-property-value {
                 border-bottom: none;
             }
