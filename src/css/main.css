@@ -426,6 +426,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --metadata-input-background: transparent;
   --metadata-input-background-hover: transparent;
   --metadata-input-background-active: rgba(255, 255, 255, 0.45);
+  --metadata-label-background-active: var(--metadata-input-background-active);
   --metadata-input-shadow-hover: none;
   --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
                                   0px 0px 0px 1px var(--background-modifier-border);
@@ -861,6 +862,40 @@ and CONTRIBUTION page ↴
   --tag-border-color-hover: rgba(var(--color-d-black-rgb), 0.6);
   --tag-shadow: inset 0px -2px 0px 0px rgba(var(--color-d-black-rgb), 0.3);
   --tag-shadow-active: none;
+  --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+  --metadata-tab-background: var(--background-secondary);
+  --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
+  --metadata-properties-title-color-hover: var(--color-d-gray-50);
+  --metadata-properties-title-color: var(--color-d-gray-60);
+  --metadata-input-text-color: var(--color-d-gray-40);
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: transparent;
+  --metadata-input-background-active: rgba(0, 0, 0, 0.2);
+  --metadata-label-background-active: var(--metadata-input-background-active);
+  --metadata-input-shadow-hover: none;
+  --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
+                                  0px 0px 0px 1px var(--background-modifier-border);
+  --metadata-key-input-color: var(--color-d-gray-50);
+  --metadata-key-input-color-active: var(--color-d-gray-30);
+  --metadata-divider-color: var(--background-modifier-border);
+  --metadata-divider-color-hover: transparent;
+  --metadata-divider-color-focus: transparent;
+  --pill-color: var(--color-d-gray-30);
+  --pill-color-hover: var(--color-d-gray-20);
+  --pill-color-remove: var(--color-d-gray-50);
+  --pill-color-remove-hover: var(--text-error);
+  --pill-background: rgba(0, 0, 0, 0.2);
+  --pill-background-hover: var(--pill-background);
+  --pill-border-color: var(--background-modifier-border);
+  --pill-border-color-hover: var(--background-modifier-border-hover);
+  --pill-tag-weight: 600;
+  --pill-tag-color-1: var(--color-d-yellow-20);
+  --pill-tag-bg-1: var(--color-d-alpha-yellow);
+  --pill-tag-color-2: var(--color-d-red-20);
+  --pill-tag-bg-2: var(--color-d-alpha-red);
+  --pill-tag-color-3: var(--color-d-blue-20);
+  --pill-tag-bg-3: var(--color-d-alpha-blue);
+  --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
   --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
   --embed-title-color: var(--color-d-gray-50);
   --embed-block-shadow-hover: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
@@ -2121,23 +2156,15 @@ input.prompt-input:focus-visible {
   border-bottom: var(--prompt-separator-border);
 }
 
-.prompt-results {
-  background: var(--prompt-results-background);
-}
-
 .suggestion-item:not(.mod-search-suggestion .suggestion-item) {
+  font-size: calc(var(--font-ui-medium) - 1px);
   color: var(--prompt-suggestion-color);
-  padding: var(--size-4-2) var(--size-4-3);
   border-radius: calc(var(--radius-m) - 1px);
   transition: padding var(--anim-duration-fast) var(--anim-motion-swing);
-}
-.suggestion-item:not(.mod-search-suggestion .suggestion-item) .suggestion-title {
-  font-size: calc(var(--font-ui-medium) - 1px);
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).is-selected {
   color: var(--prompt-suggestion-color-selected);
   background: var(--prompt-suggestion-background-selected);
-  padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
   box-shadow: var(--prompt-suggestion-shadow-selected);
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex .suggestion-highlight {
@@ -2146,10 +2173,6 @@ input.prompt-input:focus-visible {
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex.is-selected .suggestion-highlight {
   color: var(--prompt-suggestion-highlight-color-selected);
-}
-
-.suggestion-aux .suggestion-flair > svg.lucide-pin {
-  transform: rotate(45deg);
 }
 
 .prompt-instructions {
@@ -2171,6 +2194,19 @@ input.prompt-input:focus-visible {
   background-color: var(--background-secondary);
   padding: 2px 4px;
   border-radius: 4px;
+}
+
+.prompt-results {
+  background: var(--prompt-results-background);
+}
+.prompt .suggestion-item {
+  padding: var(--size-4-2) var(--size-4-3);
+}
+.prompt .suggestion-item.is-selected {
+  padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
+}
+.prompt .suggestion-aux .suggestion-flair > svg.lucide-pin {
+  transform: rotate(45deg);
 }
 
 /*────────── kbd ──────────*/
