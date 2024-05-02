@@ -103,6 +103,12 @@ body {
     --tag-padding-y: 0.15em;
     --tag-radius: 1em;
 
+    // Link
+    --link-unresolved-opacity: 1;
+    --link-underline-offset: 3.5px;
+    --link-decoration-thickness: 1.5px;
+
+    // Animation
     --anim-popup: 0.3s forwards slideUp;
 }
 

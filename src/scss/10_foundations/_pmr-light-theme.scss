@@ -358,31 +358,31 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     
     // Links
     --link-unresolved-color: var(--color-l-gray-80);
-    --link-unresolved-border: 1px solid var(--color-l-gray-80);
+    --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
 
     --link-unresolved-color-hover: var(--color-l-gray-70);
-    --link-unresolved-border-hover: 1px solid var(--color-l-gray-70);
+    --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
 
     --link-unresolved-color-active: var(--color-l-gray-90);
-    --link-unresolved-border-active: 1px solid var(--color-l-gray-90);
+    --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
 
     --link-color: var(--color-l-yellow-30);
-    --link-border: 1px solid var(--color-l-yellow-30);
+    --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
 
     --link-color-hover: var(--color-l-yellow-20);
-    --link-border-hover: 1px solid var(--color-l-yellow-20);
+    --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
     
     --link-color-active: var(--color-l-yellow-40);
-    --link-border-active: 1px solid var(--color-l-yellow-40);
+    --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
 
     --link-external-color: var(--color-l-green-30);
-    --link-external-border: 1px solid var(--color-l-green-30);
+    --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
 
     --link-external-color-hover: var(--color-l-green-20);
-    --link-external-border-hover: 1px solid var(--color-l-green-20);
+    --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
 
     --link-external-color-active: var(--color-l-green-40);
-    --link-external-border-active: 1px solid var(--color-l-green-40);
+    --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
 
     // Bold
     --bold-color: var(--color-l-red-30);
@@ -417,7 +417,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
 
     // Metadata
-    --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+    --metadata-background: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
     --metadata-properties-title-color-hover: var(--color-l-gray-80);

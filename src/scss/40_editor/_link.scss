@@ -1,80 +1,84 @@
 /*────────── Link ──────────*/
-// TODO Dark Mode not showing border-bottom on links
 // TODO Change border-bottom to use text decoration + text underline offset
 
-.theme-light,
-.theme-dark {
-    --link-decoration: none;
-    --link-decoration-hover: none;
-    --link-unresolved-opacity: 1;
-    --link-unresolved-decoration: none;
-    --link-unresolved-decoration-hover: none;
-    --link-external-decoration: none;
-    --link-external-decoration-hover: none;
+// Reset
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-link:hover {
+    text-decoration-line: unset;
+    color: unset;
 }
 
-// Internal Link
-.internal-link {
+// Internal Link Reading Mode
+.markdown-rendered .internal-link {
     &.is-unresolved {
         color: var(--link-unresolved-color);
-        border-bottom: var(--link-unresolved-border);
+        text-underline-offset: var(--link-underline-offset);
+        text-decoration-color: var(--link-unresolved-decoration-color);
 
         &:hover {
             color: var(--link-unresolved-color-hover);
-            border-bottom: var(--link-unresolved-border-hover);
+            text-decoration-color: var(--link-unresolved-decoration-color-hover);
         }
 
         &:hover:active,
         &:active {
             color: var(--link-unresolved-color-active);
-            border-bottom: var(--link-unresolved-border-active);
+            text-decoration-color: var(--link-unresolved-decoration-color-active);
         }
     }
 
     color: var(--link-color);
-    border-bottom: var(--link-border);
+    text-underline-offset: var(--link-underline-offset);
+    text-decoration-color: var(--link-decoration-color);
 
     &:hover {
         color: var(--link-color-hover);
-        border-bottom: var(--link-border-hover);
+        text-decoration-color: var(--link-decoration-color-hover);
     }
 
     &:hover:active,
     &:active {
         color: var(--link-color-active);
-        border-bottom: var(--link-border-active);
+        text-decoration-color: var(--link-decoration-color-active);
     }
 }
 
+// Internal Link Source Mode/Live Preview
 .cm-hmd-internal-link {
-    & .is-unresolved .cm-underline {
+    .is-unresolved .cm-underline {
         color: var(--link-unresolved-color);
-        border-bottom: var(--link-unresolved-border);
+        text-underline-offset: var(--link-underline-offset);
+        text-decoration-color: var(--link-unresolved-decoration-color);
 
         &:hover {
             color: var(--link-unresolved-color-hover);
-            border-bottom: var(--link-unresolved-border-hover);
+            text-decoration-color: var(--link-unresolved-decoration-color-hover);
         }
 
-        &:hover:active,
         &:active {
             color: var(--link-unresolved-color-active);
-            border-bottom: var(--link-unresolved-border-active);
+            text-underline-offset: var(--link-underline-offset);
+            text-decoration-color: var(--link-unresolved-decoration-color-active);
         }
     }
 
-    color: var(--link-color);
-    border-bottom: var(--link-border);
-
-    &:hover {
-        color: var(--link-color-hover);
-        border-bottom: var(--link-border-hover);
-    }
-
-    &:hover:active,
-    &:active {
-        color: var(--link-color-active);
-        border-bottom: var(--link-border-active);
+    .cm-underline {
+        color: var(--link-color);
+        text-underline-offset: var(--link-underline-offset);
+        text-decoration-color: var(--link-decoration-color);
+    
+        &:hover {
+            color: var(--link-color-hover);
+            text-underline-offset: var(--link-underline-offset);
+            text-decoration-color: var(--link-decoration-color-hover);
+        }
+    
+        &:active {
+            opacity: var(--link-opacity-active);
+            // color: var(--link-color-active);
+            // text-underline-offset: var(--link-underline-offset);
+            // text-decoration-color: var(--link-decoration-color-active);
+        }
     }
 }
 
@@ -82,20 +86,19 @@
 .external-link,
 .cm-link .cm-underline {
     color: var(--link-external-color);
-    border-bottom: var(--link-external-border);
+    text-underline-offset: var(--link-underline-offset);
+    text-decoration-color: var(--link-external-decoration-color);
 
     &:hover {
         color: var(--link-external-color-hover);
-        border-bottom: var(--link-external-border-hover);
+        text-underline-offset: var(--link-underline-offset);
+        text-decoration-color: var(--link-external-decoration-color-hover);
     }
 
     &:hover:active,
     &:active {
         color: var(--link-external-color-active);
-        border-bottom: var(--link-external-border-active);
+        text-underline-offset: var(--link-underline-offset);
+        text-decoration-color: var(--link-external-decoration-color-hover);
     }
-}
-
-.external-link img {
-    border-bottom: none;
 }
