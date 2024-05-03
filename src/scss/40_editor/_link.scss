@@ -1,5 +1,4 @@
 /*────────── Link ──────────*/
-// TODO Change border-bottom to use text decoration + text underline offset
 
 // Reset
 .cm-s-obsidian span.cm-hmd-internal-link:hover,
@@ -8,8 +7,41 @@
     color: unset;
 }
 
+// ahref Links
+a {
+    color: var(--link-ahref-color);
+    text-underline-offset: var(--link-underline-offset);
+    text-decoration-color: var(--link-ahref-decoration-color);
+
+    &:hover {
+        color: var(--link-ahref-color-hover);
+        text-decoration-color: var(--link-ahref-decoration-color-hover);
+    }
+
+    &:active {
+        color: var(--link-ahref-color-active);
+        text-decoration-color: var(--link-ahref-decoration-color-active);
+    }
+}
+
 // Internal Link Reading Mode
-.markdown-rendered .internal-link {
+.markdown-rendered .internal-link,
+.metadata-container .internal-link,
+.internal-link {
+    color: var(--link-color);
+    text-underline-offset: var(--link-underline-offset);
+    text-decoration-color: var(--link-decoration-color);
+
+    &:hover {
+        color: var(--link-color-hover);
+        text-decoration-color: var(--link-decoration-color-hover);
+    }
+
+    &:active {
+        color: var(--link-color-active);
+        text-decoration-color: var(--link-decoration-color-active);
+    }
+
     &.is-unresolved {
         color: var(--link-unresolved-color);
         text-underline-offset: var(--link-underline-offset);
@@ -20,26 +52,10 @@
             text-decoration-color: var(--link-unresolved-decoration-color-hover);
         }
 
-        &:hover:active,
         &:active {
             color: var(--link-unresolved-color-active);
             text-decoration-color: var(--link-unresolved-decoration-color-active);
         }
-    }
-
-    color: var(--link-color);
-    text-underline-offset: var(--link-underline-offset);
-    text-decoration-color: var(--link-decoration-color);
-
-    &:hover {
-        color: var(--link-color-hover);
-        text-decoration-color: var(--link-decoration-color-hover);
-    }
-
-    &:hover:active,
-    &:active {
-        color: var(--link-color-active);
-        text-decoration-color: var(--link-decoration-color-active);
     }
 }
 
@@ -94,7 +110,6 @@
         text-decoration-color: var(--link-external-decoration-color-hover);
     }
 
-    &:hover:active,
     &:active {
         color: var(--link-external-color-active);
         text-underline-offset: var(--link-underline-offset);
