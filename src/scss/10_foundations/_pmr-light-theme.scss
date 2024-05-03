@@ -401,7 +401,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Underline
     --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
-    
+
     // Strikethrough
     --strikethrough-color: var(--color-l-gray-80);
 
@@ -459,7 +459,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
     --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
 
-    --pill-tag-weight: 600;
     --pill-tag-color-1: var(--color-l-yellow-40);
     --pill-tag-bg-1: var(--color-l-alpha-yellow);
     --pill-tag-color-2: var(--color-l-red-40);

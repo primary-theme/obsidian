@@ -59,7 +59,7 @@ button {
     cursor: pointer;
 
     &::before {
-        font-weight: 200;
+        font-weight: var(--font-extralight);
     }
 
     &:hover {

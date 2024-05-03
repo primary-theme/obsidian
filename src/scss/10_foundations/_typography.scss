@@ -19,8 +19,8 @@ body {
         "cv08",
         "cv11";
 
-    --bold-weight: 600;
-    --h1-weight: 600;
+    --bold-weight: var(--font-semibold);
+    --h1-weight: var(--font-semibold);
 }
 
 input,

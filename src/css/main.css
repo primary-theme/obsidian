@@ -5,8 +5,8 @@ body {
   --font-text-theme: "Inter";
   --font-monospace-theme: "Cascadia Code";
   font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
-  --bold-weight: 600;
-  --h1-weight: 600;
+  --bold-weight: var(--font-semibold);
+  --h1-weight: var(--font-semibold);
 }
 
 input,
@@ -107,6 +107,7 @@ body {
   --metadata-border-radius: var(--radius-m);
   --metadata-property-radius: calc(var(--radius-m) - 1px);
   --metadata-gap: 0px;
+  --pill-tag-weight: var(--font-semibold);
   --table-header-border-width: 0;
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
@@ -482,7 +483,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --pill-background-hover: var(--pill-background);
   --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
   --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
-  --pill-tag-weight: 600;
   --pill-tag-color-1: var(--color-l-yellow-40);
   --pill-tag-bg-1: var(--color-l-alpha-yellow);
   --pill-tag-color-2: var(--color-l-red-40);
@@ -941,7 +941,6 @@ and CONTRIBUTION page ↴
   --pill-background-hover: var(--pill-background);
   --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
   --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
-  --pill-tag-weight: 600;
   --pill-tag-color-1: var(--color-d-yellow-20);
   --pill-tag-bg-1: var(--color-d-alpha-yellow);
   --pill-tag-color-2: var(--color-d-red-20);
@@ -1853,7 +1852,7 @@ svg.vault {
 }
 
 .titlebar {
-  --titlebar-text-weight: 400;
+  --titlebar-text-weight: var(--font-normal);
 }
 .theme-light .titlebar {
   --titlebar-text-color: var(--color-l-gray-60);
@@ -1897,7 +1896,7 @@ button.mod-cta:active, button.mod-cta:focus {
 }
 .document-search-close-button::before,
 .modal-close-button::before {
-  font-weight: 200;
+  font-weight: var(--font-extralight);
 }
 .document-search-close-button:hover,
 .modal-close-button:hover {
@@ -2775,7 +2774,7 @@ body {
 }
 .metadata-properties-heading .metadata-properties-title {
   color: var(--metadata-properties-title-color-collapsed);
-  font-weight: 600;
+  font-weight: var(--font-semibold);
   font-size: calc(var(--font-smallest) - 0.1em);
   text-transform: uppercase;
   font-feature-settings: "calt" off;

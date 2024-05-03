@@ -16,7 +16,7 @@
 }
 
 .titlebar {
-    --titlebar-text-weight: 400;
+    --titlebar-text-weight: var(--font-normal);
 
     .theme-light & {
         --titlebar-text-color: var(--color-l-gray-60);
