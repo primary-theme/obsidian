@@ -1,6 +1,13 @@
 /*────────── Emphasis ──────────*/
+// Bold and Italic are set in the Theme Palette
 
-body {    
+body {   
+    // Underline 
+    u {
+        text-underline-offset: var(--link-underline-offset);
+        text-decoration-color: var(--underline-decoration-color);
+    }
+
     // Strikethrough
     .cm-strikethrough,
     p del {

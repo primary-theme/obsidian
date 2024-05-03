@@ -357,6 +357,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --h6-color: var(--color-l-gray-140);
     
     // Links
+    --link-ahref-color: var(--color-l-red-10);
+    --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+
+    --link-ahref-color-hover: var(--color-l-red-20);
+    --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
+
+    --link-ahref-color-active: var(--color-l-red-30);
+    --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
+
     --link-unresolved-color: var(--color-l-gray-80);
     --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
 
@@ -390,6 +399,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Italic
     --italic-color: var(--color-l-blue-30);
 
+    // Underline
+    --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+    
     // Strikethrough
     --strikethrough-color: var(--color-l-gray-80);
 
@@ -417,7 +429,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
 
     // Metadata
-    --metadata-background: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+    --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
     --metadata-properties-title-color-hover: var(--color-l-gray-80);
@@ -441,11 +453,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --pill-color: var(--color-l-gray-120);
     --pill-color-hover: var(--color-l-gray-140);
     --pill-color-remove: var(--color-l-gray-70);
-    --pill-color-remove-hover: var(--text-error);
+    --pill-color-remove-hover: var(--color-l-gray-70);
     --pill-background: rgba(255, 255, 255, 0.4);
     --pill-background-hover: var(--pill-background);
-    --pill-border-color: var(--background-modifier-border);
-    --pill-border-color-hover: var(--background-modifier-border-hover);
+    --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
+    --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
 
     --pill-tag-weight: 600;
     --pill-tag-color-1: var(--color-l-yellow-40);

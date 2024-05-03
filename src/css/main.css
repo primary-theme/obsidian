@@ -102,6 +102,11 @@ body {
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
   --menu-item-radius: calc(var(--radius-m) - 1px);
+  --metadata-border-width: 1px;
+  --metadata-divider-width: 0px;
+  --metadata-border-radius: var(--radius-m);
+  --metadata-property-radius: calc(var(--radius-m) - 1px);
+  --metadata-gap: 0px;
   --table-header-border-width: 0;
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
@@ -110,9 +115,9 @@ body {
   --tag-padding-y: 0.15em;
   --tag-radius: 1em;
   --link-unresolved-opacity: 1;
-  --link-underline-offset: 3.5px;
+  --link-underline-offset: 2px;
   --link-decoration-thickness: 1.5px;
-  --anim-popup: 0.3s forwards slideUp;
+  --anim-popup: 0.2s forwards slideUp;
 }
 
 .metadata-property:not([data-property-key=tags]) {
@@ -144,7 +149,7 @@ body .metadata-property-icon svg.svg-icon.svg-icon {
     transform: translateY(10%);
     opacity: 0.2;
   }
-  40% {
+  80% {
     transform: translateY(-1%);
     opacity: 0.8;
   }
@@ -408,6 +413,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --h4-color: var(--color-l-gray-140);
   --h5-color: var(--color-l-gray-140);
   --h6-color: var(--color-l-gray-140);
+  --link-ahref-color: var(--color-l-red-10);
+  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --link-ahref-color-hover: var(--color-l-red-20);
+  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
+  --link-ahref-color-active: var(--color-l-red-30);
+  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
   --link-unresolved-color: var(--color-l-gray-80);
   --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
   --link-unresolved-color-hover: var(--color-l-gray-70);
@@ -428,6 +439,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
   --bold-color: var(--color-l-red-30);
   --italic-color: var(--color-l-blue-30);
+  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --strikethrough-color: var(--color-l-gray-80);
   --inline-code-color: var(--color-l-red-10);
   --inline-code-bg: var(--color-l-gray-30);
@@ -444,7 +456,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1),
                       0px 0px 0px 3px rgba(0, 0, 0, 0.03);
   --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
-  --metadata-background: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+  --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
   --metadata-tab-background: var(--background-secondary);
   --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
   --metadata-properties-title-color-hover: var(--color-l-gray-80);
@@ -465,11 +477,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --pill-color: var(--color-l-gray-120);
   --pill-color-hover: var(--color-l-gray-140);
   --pill-color-remove: var(--color-l-gray-70);
-  --pill-color-remove-hover: var(--text-error);
+  --pill-color-remove-hover: var(--color-l-gray-70);
   --pill-background: rgba(255, 255, 255, 0.4);
   --pill-background-hover: var(--pill-background);
-  --pill-border-color: var(--background-modifier-border);
-  --pill-border-color-hover: var(--background-modifier-border-hover);
+  --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
+  --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
   --pill-tag-weight: 600;
   --pill-tag-color-1: var(--color-l-yellow-40);
   --pill-tag-bg-1: var(--color-l-alpha-yellow);
@@ -860,26 +872,33 @@ and CONTRIBUTION page ↴
   --h4-color: var(--color-d-gray-10);
   --h5-color: var(--color-d-gray-10);
   --h6-color: var(--color-d-gray-10);
+  --link-ahref-color: var(--color-d-red-10);
+  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --link-ahref-color-hover: var(--color-d-red-20);
+  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
+  --link-ahref-color-active: var(--color-d-red-30);
+  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
   --link-unresolved-color: var(--color-d-gray-40);
-  --link-unresolved-border: 1px solid var(--color-d-gray-40);
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
   --link-unresolved-color-hover: var(--color-d-gray-30);
-  --link-unresolved-border-hover: 1px solid var(--color-d-gray-30);
+  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
   --link-unresolved-color-active: var(--color-d-gray-50);
-  --link-unresolved-border-active: 1px solid var(--color-d-gray-50);
+  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
   --link-color: var(--color-d-yellow-30);
-  --link-border: 1px solid var(--color-d-yellow-30);
+  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
   --link-color-hover: var(--color-d-yellow-20);
-  --link-border-hover: 1px solid var(--color-d-yellow-20);
+  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
   --link-color-active: var(--color-d-yellow-40);
-  --link-border-active: 1px solid var(--color-d-yellow-40);
+  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
   --link-external-color: var(--color-d-green-30);
-  --link-external-border: 1px solid var(--color-d-green-30);
+  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
   --link-external-color-hover: var(--color-d-green-20);
-  --link-external-border-hover: 1px solid var(--color-d-green-20);
+  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
   --link-external-color-active: var(--color-d-green-40);
-  --link-external-border-active: 1px solid var(--color-d-green-40);
+  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
   --bold-color: var(--color-d-red-30);
   --italic-color: var(--color-d-blue-30);
+  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --strikethrough-color: var(--color-d-gray-50);
   --inline-code-color: var(--color-d-red-10);
   --inline-code-bg: var(--color-d-gray-110);
@@ -916,12 +935,12 @@ and CONTRIBUTION page ↴
   --metadata-divider-color-focus: transparent;
   --pill-color: var(--color-d-gray-30);
   --pill-color-hover: var(--color-d-gray-20);
-  --pill-color-remove: var(--color-d-gray-50);
-  --pill-color-remove-hover: var(--text-error);
+  --pill-color-remove: var(--color-d-gray-60);
+  --pill-color-remove-hover: var(--color-d-gray-60);
   --pill-background: rgba(0, 0, 0, 0.2);
   --pill-background-hover: var(--pill-background);
-  --pill-border-color: var(--background-modifier-border);
-  --pill-border-color-hover: var(--background-modifier-border-hover);
+  --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
+  --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
   --pill-tag-weight: 600;
   --pill-tag-color-1: var(--color-d-yellow-20);
   --pill-tag-bg-1: var(--color-d-alpha-yellow);
@@ -2526,31 +2545,57 @@ span.setting-hotkey {
   color: unset;
 }
 
-.markdown-rendered .internal-link {
+a {
+  color: var(--link-ahref-color);
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--link-ahref-decoration-color);
+}
+a:hover {
+  color: var(--link-ahref-color-hover);
+  text-decoration-color: var(--link-ahref-decoration-color-hover);
+}
+a:active {
+  color: var(--link-ahref-color-active);
+  text-decoration-color: var(--link-ahref-decoration-color-active);
+}
+
+.markdown-rendered .internal-link,
+.metadata-container .internal-link,
+.internal-link {
   color: var(--link-color);
   text-underline-offset: var(--link-underline-offset);
   text-decoration-color: var(--link-decoration-color);
 }
-.markdown-rendered .internal-link.is-unresolved {
+.markdown-rendered .internal-link:hover,
+.metadata-container .internal-link:hover,
+.internal-link:hover {
+  color: var(--link-color-hover);
+  text-decoration-color: var(--link-decoration-color-hover);
+}
+.markdown-rendered .internal-link:active,
+.metadata-container .internal-link:active,
+.internal-link:active {
+  color: var(--link-color-active);
+  text-decoration-color: var(--link-decoration-color-active);
+}
+.markdown-rendered .internal-link.is-unresolved,
+.metadata-container .internal-link.is-unresolved,
+.internal-link.is-unresolved {
   color: var(--link-unresolved-color);
   text-underline-offset: var(--link-underline-offset);
   text-decoration-color: var(--link-unresolved-decoration-color);
 }
-.markdown-rendered .internal-link.is-unresolved:hover {
+.markdown-rendered .internal-link.is-unresolved:hover,
+.metadata-container .internal-link.is-unresolved:hover,
+.internal-link.is-unresolved:hover {
   color: var(--link-unresolved-color-hover);
   text-decoration-color: var(--link-unresolved-decoration-color-hover);
 }
-.markdown-rendered .internal-link.is-unresolved:hover:active, .markdown-rendered .internal-link.is-unresolved:active {
+.markdown-rendered .internal-link.is-unresolved:active,
+.metadata-container .internal-link.is-unresolved:active,
+.internal-link.is-unresolved:active {
   color: var(--link-unresolved-color-active);
   text-decoration-color: var(--link-unresolved-decoration-color-active);
-}
-.markdown-rendered .internal-link:hover {
-  color: var(--link-color-hover);
-  text-decoration-color: var(--link-decoration-color-hover);
-}
-.markdown-rendered .internal-link:hover:active, .markdown-rendered .internal-link:active {
-  color: var(--link-color-active);
-  text-decoration-color: var(--link-decoration-color-active);
 }
 
 .cm-hmd-internal-link .is-unresolved .cm-underline {
@@ -2595,8 +2640,7 @@ span.setting-hotkey {
   text-underline-offset: var(--link-underline-offset);
   text-decoration-color: var(--link-external-decoration-color-hover);
 }
-.external-link:hover:active, .external-link:active,
-.cm-link .cm-underline:hover:active,
+.external-link:active,
 .cm-link .cm-underline:active {
   color: var(--link-external-color-active);
   text-underline-offset: var(--link-underline-offset);
@@ -2604,6 +2648,10 @@ span.setting-hotkey {
 }
 
 /*────────── Emphasis ──────────*/
+body u {
+  text-underline-offset: var(--link-underline-offset);
+  text-decoration-color: var(--underline-decoration-color);
+}
 body .cm-strikethrough,
 body p del {
   color: var(--strikethrough-color);
@@ -2713,14 +2761,6 @@ body {
 }
 
 /*────────── Properties ──────────*/
-body {
-  --metadata-border-width: 1px;
-  --metadata-divider-width: 0px;
-  --metadata-border-radius: var(--radius-m);
-  --metadata-property-radius: var(--radius-s);
-  --metadata-gap: 0px;
-}
-
 .metadata-container {
   padding: var(--size-4-3) var(--size-4-3);
 }
@@ -2796,12 +2836,12 @@ input[type=number],
 }
 
 .multi-select-pill-remove-button {
-  color: var(--pill-border-color);
+  color: var(--pill-color-remove);
   margin-right: calc(var(--pill-padding-x) / 2);
   border-radius: 1em;
 }
 .multi-select-pill:hover .multi-select-pill-remove-button {
-  color: var(--pill-border-color-hover);
+  color: var(--pill-color-remove-hover);
 }
 .multi-select-pill:hover .multi-select-pill-remove-button:hover {
   color: var(--text-on-accent);
