@@ -16,7 +16,7 @@
 
     .metadata-properties-title {
         color: var(--metadata-properties-title-color-collapsed);
-        font-weight: 600;
+        font-weight: var(--font-semibold);
         font-size: calc(var(--font-smallest) - 0.1em);
         text-transform: uppercase;
         font-feature-settings: "calt" off;
