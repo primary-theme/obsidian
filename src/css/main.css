@@ -3222,6 +3222,9 @@ input[type=number],
   font-feature-settings: "calt" off;
   font-weight: var(--font-normal);
 }
+#calendar-container td {
+  width: 12.5%;
+}
 #calendar-container td .day,
 #calendar-container td .week-num {
   padding: var(--cp-cal-td-padding);

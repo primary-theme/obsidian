@@ -53,6 +53,10 @@
         font-weight: var(--font-normal);
     }
 
+    td {
+        width: calc(100% / 8);
+    }
+
     td .day,
     td .week-num {
         padding: var(--cp-cal-td-padding);
