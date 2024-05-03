@@ -5,7 +5,6 @@
     &-leaf-content {
         border: 1px solid var(--background-modifier-border);
         border-radius: var(--file-border-radius);
-        // margin-top: var(--button-axis-offset);
         margin-bottom: var(--workspace-margin-bottom);
     }
 
@@ -30,13 +29,8 @@
 
         &-inner {
             gap: var(--file-tab-gap);
-            // overflow-x: visible;
             padding-top: var(--button-axis-offset);
             padding-bottom: var(--button-axis-offset);
-
-            // &:hover::after {
-            //     transform: none;
-            // }
         }
     }
 
@@ -154,13 +148,11 @@
         // Non-active Tabs
         &:not(.is-active) {
             color: var(--icon-color);
-            // border: 1px solid var(--icon-color);
             border: 1px solid transparent;
             transition: border, border-color, box-shadow, transform var(--button-anim);
             
             &:hover {
                 color: var(--icon-color-hover);
-                // border-color: var(--icon-color-hover);
                 border-color: transparent;
                 background: var(--tab-bg);
                 transform: translateY(calc(-1 * var(--button-axis-offset)));
@@ -177,7 +169,6 @@
 
             &:active {
                 color: var(--icon-color-focused);
-                // border-color: var(--icon-color-focused);
                 border-color: transparent;
                 background: var(--tab-bg);
                 transform: translateY(var(--button-axis-offset));
