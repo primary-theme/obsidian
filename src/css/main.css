@@ -308,7 +308,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-error: var(--color-l-red-30);
   --background-modifier-error-hover: var(--color-l-red-20);
   --background-modifier-success-rgb: var(--color-green-rgb);
-  --background-modifier-success: var(--color-l-green-20);
+  --background-modifier-success: var(--color-l-green-30);
   --background-modifier-message: var(--color-l-gray-130);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
@@ -789,7 +789,7 @@ and CONTRIBUTION page ↴
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
   --background-modifier-success-rgb: var(--color-green-rgb);
-  --background-modifier-success: var(--color-d-green-20);
+  --background-modifier-success: var(--color-d-green-30);
   --background-modifier-message: var(--color-d-gray-130);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
@@ -2341,6 +2341,34 @@ span.setting-hotkey {
   box-shadow: var(--kbd-shadow);
 }
 
+/*────────── Loading ──────────*/
+.is-loading:before {
+  background-color: var(--background-modifier-success);
+  animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+}
+
+.progress-bar {
+  background: var(--background-primary);
+}
+.progress-bar-message {
+  display: none;
+}
+.progress-bar-indicator {
+  width: 35%;
+  height: var(--size-4-3);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--size-4-3);
+}
+.progress-bar-line {
+  height: var(--size-4-3);
+  background: var(--background-secondary);
+}
+.progress-bar-subline {
+  height: var(--size-4-3);
+  background: var(--background-modifier-success);
+  animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+}
+
 /*────────── File ──────────*/
 .mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);
@@ -2383,6 +2411,11 @@ span.setting-hotkey {
   margin-bottom: var(--button-axis-offset);
   cursor: pointer;
 }
+.mod-root .workspace-tab-header .workspace-tab-header-status-icon {
+  padding: var(--size-2-1) 0;
+  margin-bottom: var(--button-axis-offset);
+  cursor: pointer;
+}
 .mod-root .workspace-tab-header.is-active {
   background: var(--tab-active-bg);
   box-shadow: var(--tab-active-shadow);
@@ -2400,14 +2433,17 @@ span.setting-hotkey {
 .mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-title {
   color: var(--alternating-color-1);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon {
   color: var(--alternating-color-1);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:hover {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:hover,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:hover {
   color: var(--text-on-accent);
   background: var(--alternating-color-1);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:active {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:active,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:active {
   color: var(--text-on-accent);
   background: var(--alternating-color-1-hover-active);
 }
@@ -2420,14 +2456,17 @@ span.setting-hotkey {
 .mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-title {
   color: var(--alternating-color-2);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon {
   color: var(--alternating-color-2);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:hover {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:hover,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:hover {
   color: var(--text-on-accent);
   background: var(--alternating-color-2);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:active {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:active,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:active {
   color: var(--text-on-accent);
   background: var(--alternating-color-2-hover-active);
 }
@@ -2440,14 +2479,17 @@ span.setting-hotkey {
 .mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-title {
   color: var(--alternating-color-3);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon {
   color: var(--alternating-color-3);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:hover {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:hover,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:hover {
   color: var(--text-on-accent);
   background: var(--alternating-color-3);
 }
-.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:active {
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:active,
+.mod-root .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:active {
   color: var(--text-on-accent);
   background: var(--alternating-color-3-hover-active);
 }
@@ -2469,6 +2511,9 @@ span.setting-hotkey {
 .mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
   color: var(--icon-color-hover);
 }
+.mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-status-icon {
+  color: var(--icon-color-hover);
+}
 .mod-root .workspace-tab-header:not(.is-active):active {
   color: var(--icon-color-focused);
   border-color: transparent;
@@ -2478,11 +2523,16 @@ span.setting-hotkey {
 .mod-root .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
   color: var(--icon-color-active);
 }
-.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button:hover {
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-status-icon {
+  color: var(--icon-color);
+}
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button:hover,
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-status-icon:hover {
   color: var(--text-on-accent);
   background: var(--non-alternating-color);
 }
-.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button:active {
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button:active,
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-status-icon:active {
   color: var(--text-on-accent);
   background: var(--non-alternating-color-hover-active);
 }
@@ -2586,6 +2636,52 @@ span.setting-hotkey {
   align-items: center;
 }
 
+.workspace-leaf-content[data-type=empty] .view-header {
+  border-color: transparent;
+}
+.workspace-leaf-content[data-type=empty] .view-header-nav-buttons, .workspace-leaf-content[data-type=empty] .view-header-title-container {
+  visibility: hidden;
+}
+
+.empty-state {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.empty-state-title {
+  display: none;
+}
+.empty-state-container {
+  max-width: 100%;
+}
+.empty-state-action-list {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+.empty-state-action {
+  color: var(--text-faint);
+  font-size: var(--font-ui-small);
+  line-height: normal;
+  background: var(--base-00);
+  padding: var(--size-4-2) var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 2em;
+  margin: var(--size-2-3) var(--size-2-3);
+  transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
+}
+.empty-state-action:hover {
+  color: var(--text-muted);
+  border-color: var(--background-modifier-border-hover);
+  transform: translateY(-4px);
+}
+.empty-state-action:active {
+  opacity: 0.5;
+  transform: translateY(2px);
+}
+.empty-state-action.mod-close {
+  display: none;
+}
+
 /*────────── Link ──────────*/
 .cm-s-obsidian span.cm-hmd-internal-link:hover,
 .cm-s-obsidian span.cm-link:hover {
@@ -2677,19 +2773,25 @@ a:active {
 }
 
 .external-link,
-.cm-link .cm-underline {
+.cm-link .cm-underline,
+.cm-url,
+.cm-underline {
   color: var(--link-external-color);
   text-underline-offset: var(--link-underline-offset);
   text-decoration-color: var(--link-external-decoration-color);
 }
 .external-link:hover,
-.cm-link .cm-underline:hover {
+.cm-link .cm-underline:hover,
+.cm-url:hover,
+.cm-underline:hover {
   color: var(--link-external-color-hover);
   text-underline-offset: var(--link-underline-offset);
   text-decoration-color: var(--link-external-decoration-color-hover);
 }
 .external-link:active,
-.cm-link .cm-underline:active {
+.cm-link .cm-underline:active,
+.cm-url:active,
+.cm-underline:active {
   color: var(--link-external-color-active);
   text-underline-offset: var(--link-underline-offset);
   text-decoration-color: var(--link-external-decoration-color-hover);

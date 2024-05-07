@@ -99,7 +99,9 @@ a {
 
 // External Link
 .external-link,
-.cm-link .cm-underline {
+.cm-link .cm-underline,
+.cm-url,
+.cm-underline {
     color: var(--link-external-color);
     text-underline-offset: var(--link-underline-offset);
     text-decoration-color: var(--link-external-decoration-color);
