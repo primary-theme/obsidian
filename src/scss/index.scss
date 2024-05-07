@@ -25,6 +25,7 @@
 @use '30_components/menu';
 @use '30_components/prompt';
 @use '30_components/kbd';
+@use '30_components/loading';
 
 @use '40_editor/file';
 @use '40_editor/link';
@@ -35,9 +36,9 @@
 @use '40_editor/properties';
 @use '40_editor/pmr-gutter';
 
-@use '60_core-plugins/graph';
-@use '60_core-plugins/file-explorer';
-@use '60_core-plugins/search';
-@use '60_core-plugins/canvas';
+@use '50_core-plugins/graph';
+@use '50_core-plugins/file-explorer';
+@use '50_core-plugins/search';
+@use '50_core-plugins/canvas';
 
-@use '70_community-plugins/calendar-liam-cain';
+@use '60_community-plugins/calendar-liam-cain';

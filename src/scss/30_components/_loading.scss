@@ -1,0 +1,32 @@
+/*────────── Loading ──────────*/
+
+.is-loading:before {
+    background-color: var(--background-modifier-success);
+    animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+}
+
+.progress-bar {
+    background: var(--background-primary);
+
+    &-message {
+        display: none;
+    }
+    
+    &-indicator {
+        width: 35%;
+        height: var(--size-4-3);
+        border: 1px solid var(--background-modifier-border);
+        border-radius: var(--size-4-3);
+    }
+
+    &-line {
+        height: var(--size-4-3);
+        background: var(--background-secondary);
+    }
+
+    &-subline {
+        height: var(--size-4-3);
+        background: var(--background-modifier-success);
+        animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+    }
+}
