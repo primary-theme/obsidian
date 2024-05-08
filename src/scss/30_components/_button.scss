@@ -21,25 +21,6 @@ button {
     }
 }
 
-// .markdown-rendered button.copy-code-button,
-// .markdown-source-view.mod-cm6 .code-block-flair {
-//     color: var(--text-on-accent);
-//     background: var(--interactive-accent);
-//     padding: var(--button-s-padding);
-//     border-radius: var(--copy-code-button-radius);
-//     box-shadow: var(--button-shadow);
-
-//     &:hover {
-//         background: var(--interactive-accent-hover);
-//         cursor: pointer;
-//     }
-
-//     &:active {
-//         padding: vaR(--button-padding-active);
-//         box-shadow: var(--button-shadow-active);
-//     }
-// }
-
 // Document Search Close Button
 // Modal Close Button
 .document-search-close-button,
@@ -109,5 +90,20 @@ button {
         .text-button-icon {
             color: var(--text-on-accent);
         }
+    }
+}
+
+// Embed Block
+.markdown-source-view.mod-cm6
+.cm-embed-block:not(.cm-table-widget):hover
+.edit-block-button {
+    padding: var(--size-2-2) var(--size-2-2);
+    background: var(--embed-edit-btn-bg);
+    border-radius: var(--radius-m);
+    box-shadow: var(--embed-edit-btn-shadow);
+
+    &:hover {
+        background: var(--embed-edit-btn-bg-hover);
+        box-shadow: var(--embed-edit-btn-shadow-hover);
     }
 }
