@@ -476,7 +476,15 @@ and CONTRIBUTION page ↴
     // Embed
     --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
     --embed-title-color: var(--color-d-gray-50);
-    --embed-block-shadow-hover: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
+    --embed-block-shadow-hover: none;
+
+    --embed-edit-btn-bg: color-mix(in srgb, var(--color-d-gray-130) 70%, transparent);
+    --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-d-gray-130) 100%, transparent);
+    --embed-edit-btn-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
+                                inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5);
+    --embed-edit-btn-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
+                                    inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5),
+                                    0px 1px 2px 0px rgba(0, 0, 0, 0.5);
 
     // Drag Ghost
     --drag-ghost-background: var(--interactive-accent);
@@ -624,6 +632,25 @@ and CONTRIBUTION page ↴
     // Gutter
     --gutter-color: color-mix(in hsl, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
     --gutter-color-active: var(--color-d-gray-50);
+
+    // Callout
+    --callout-color-opacity: 0.325;
+    --callout-border-opacity: 0.1;
+    --callout-icon-fold-filter: brightness(1);
+
+    --callout-title-color: var(--text-normal);
+    --callout-content-background: color-mix(
+                                    in hsl, 
+                                    var(--background-primary-alt) 50%, 
+                                    var(--background-primary)
+                                    );
+
+    --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
+                                0px 2px 6px 0px rgba(0, 0, 0, 0.28);
+    --callout-title-shadow: inset 0px -1px 1px 0px rgba(0, 0, 0, 0.25),
+                            inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
+    --callout-content-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
+                                inset 0px calc(-1 * var(--callout-shadow-offset) - 1px) var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
 
     // Canvas
     --canvas-icon-color: var(--color-d-gray-50);

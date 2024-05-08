@@ -118,6 +118,17 @@ body {
     --link-underline-offset: 2px;
     --link-decoration-thickness: 1.5px;
 
+    // Callout
+    --callout-shadow-offset: 4px;
+    --callout-content-shadow-blur: 3px;
+    --callout-title-padding: var(--size-4-3) var(--size-4-4);
+    --callout-content-padding:  var(--size-4-1)
+                                var(--size-4-4)
+                                calc(var(--size-4-1) + var(--callout-shadow-offset))
+                                var(--size-4-4);
+    // --callout-border-width: 1px;
+    --callout-radius: var(--radius-m);
+
     // Animation
     --anim-popup: 0.2s forwards slideUp;
 

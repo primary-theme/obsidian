@@ -1,0 +1,233 @@
+/*────────── Callout ──────────*/
+
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+    contain: unset !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget):hover {
+    overflow: visible;
+}
+
+.callout {
+    background-color: rgba(var(--callout-color), var(--callout-color-opacity));
+    padding: 0;
+    box-shadow: var(--callout-container-shadow);
+
+    // Border Radius Fix for Collapsible and Collapsed
+    &.is-collapsible.is-collapsed .callout-title {
+        border-radius: var(--callout-radius);
+    }
+    
+    // Callout Title
+    &-title {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0; 
+
+        box-shadow: var(--callout-title-shadow);
+
+        gap: var(--size-4-2);
+
+        .callout-icon,
+        .callout-fold {
+            filter: var(--callout-icon-fold-filter);
+
+            & svg {
+                height: var(--font-text-size);
+                width: var(--font-text-size);
+            }
+        }
+    }
+
+    // Aligns the Fold Icon to the right
+    .callout-title {
+        margin-right: auto;
+    }
+
+    .callout-fold {
+        margin-left: auto;
+    }
+    
+    // Callout Content
+    &-content {
+        box-shadow: var(--callout-content-shadow);
+        border-bottom-right-radius: var(--callout-radius);
+        border-bottom-left-radius: var(--callout-radius);
+    }
+}
+
+// Callout Type Styling
+// you can create custom callout types with custom icons
+// via adding the --callout-icon variable and using lucide class names
+// you can also specify an SVG icon
+
+body {
+    // Native Callout Icons
+    --callout-icon-general: shapes;
+    --callout-icon-note: sticker;
+    --callout-icon-abstract: loader;
+    --callout-icon-summary: align-justify;
+    --callout-icon-tldr: book-open-text;
+    --callout-icon-info: badge-info;
+    --callout-icon-todo: list-todo;
+    --callout-icon-tip: clover;
+    --callout-icon-hint: search-slash;
+    --callout-icon-important: square-asterisk;
+    --callout-icon-success: check-check;
+    --callout-icon-check: check-check;
+    --callout-icon-done: check-check;
+    --callout-icon-question: circle-help;
+    --callout-icon-help: life-buoy;
+    --callout-icon-faq: circle-help;
+    --callout-icon-warning: triangle-alert;
+    --callout-icon-caution: construction;
+    --callout-icon-attention: megaphone;
+    --callout-icon-fail: circle-slash;
+    --callout-icon-missing: search;
+    --callout-icon-danger: shield-alert;
+    --callout-icon-error: ban;
+    --callout-icon-bug: bug;
+    --callout-icon-example: scroll-text;
+    --callout-icon-quote: message-square-note;
+    --callout-icon-cite: book-marked;
+
+    // Native Callout Colors
+    --callout-rgb-general: 182, 196, 182;
+    --callout-rgb-note: 200, 175, 155;
+    --callout-rgb-summary: 234, 181, 52;
+    --callout-rgb-abstract: 34, 152, 225;
+    --callout-rgb-tldr: 240, 180, 225;
+    --callout-rgb-info: 71, 162, 187;
+    --callout-rgb-todo: 58, 173, 252;
+    --callout-rgb-tip: 70, 206, 185;
+    --callout-rgb-hint: 70, 206, 185;
+    --callout-rgb-important: 246, 113, 118;
+    --callout-rgb-success: 87, 200, 83;
+    --callout-rgb-check: 87, 200, 83;
+    --callout-rgb-done: 87, 200, 83;
+    --callout-rgb-question: 130, 190, 235;
+    --callout-rgb-help: 250, 128, 96;
+    --callout-rgb-faq: 130, 190, 235;
+    --callout-rgb-warning: 255, 161, 32;
+    --callout-rgb-caution: 255, 161, 32;
+    --callout-rgb-attention: 255, 161, 32;
+    --callout-rgb-fail: 226, 72, 86;
+    --callout-rgb-missing: 226, 72, 86;
+    --callout-rgb-danger: 226, 72, 86;
+    --callout-rgb-error: 226, 72, 86;
+    --callout-rgb-bug: 153, 93, 133;
+    --callout-rgb-example: 216, 141, 130;
+    --callout-rgb-quote: 173, 214, 171;
+    --callout-rgb-cite: 237, 217, 162;
+}
+
+.callout {
+    --callout-icon: var(--callout-icon-general);
+    --callout-color: var(--callout-rgb-general);
+
+    &[data-callout="note"] {
+        --callout-icon: var(--callout-icon-note);
+        --callout-color: var(--callout-rgb-note);
+    }
+    &[data-callout="abstract"] {
+        --callout-icon: var(--callout-icon-abstract);
+        --callout-color: var(--callout-rgb-abstract);
+    }
+    &[data-callout="summary"] {
+        --callout-icon: var(--callout-icon-summary);
+        --callout-color: var(--callout-rgb-summary);
+    }
+    &[data-callout="tldr"],
+    &[data-callout="tl;dr"] {
+        --callout-icon: var(--callout-icon-tldr);
+        --callout-color: var(--callout-rgb-tldr);
+    }
+    &[data-callout="info"] {
+        --callout-icon: var(--callout-icon-info);
+        --callout-color: var(--callout-rgb-info);
+    }
+    &[data-callout="todo"] {
+        --callout-icon: var(--callout-icon-todo);
+        --callout-color: var(--callout-rgb-todo);
+    }
+    &[data-callout="tip"] {
+        --callout-icon: var(--callout-icon-tip);
+        --callout-color: var(--callout-rgb-tip);
+    }
+    &[data-callout="hint"] {
+        --callout-icon: var(--callout-icon-hint);
+        --callout-color: var(--callout-rgb-hint);
+    }
+    &[data-callout="important"] {
+        --callout-icon: var(--callout-icon-important);
+        --callout-color: var(--callout-rgb-important);
+    }
+    &[data-callout="success"] {
+        --callout-icon: var(--callout-icon-success);
+        --callout-color: var(--callout-rgb-success);
+    }
+    &[data-callout="check"] {
+        --callout-icon: var(--callout-icon-check);
+        --callout-color: var(--callout-rgb-check);
+    }
+    &[data-callout="done"] {
+        --callout-icon: var(--callout-icon-done);
+        --callout-color: var(--callout-rgb-done);
+    }
+    &[data-callout="question"] {
+        // --callout-icon: var(--callout-icon-question);
+        --callout-color: var(--callout-rgb-question);
+    }
+    &[data-callout="help"] {
+        --callout-icon: var(--callout-icon-help);
+        --callout-color: var(--callout-rgb-help);
+    }
+    &[data-callout="faq"] {
+        // --callout-icon: var(--callout-icon-faq);
+        --callout-color: var(--callout-rgb-faq);
+    }
+    &[data-callout="warning"] {
+        // --callout-icon: var(--callout-icon-warning);
+        --callout-color: var(--callout-rgb-warning);
+    }
+    &[data-callout="caution"] {
+        --callout-icon: var(--callout-icon-caution);
+        --callout-color: var(--callout-rgb-caution);
+    }
+    &[data-callout="attention"] {
+        --callout-icon: var(--callout-icon-attention);
+        --callout-color: var(--callout-rgb-attention);
+    }
+    &[data-callout="failure"],
+    &[data-callout="fail"] {
+        --callout-icon: var(--callout-icon-fail);
+        --callout-color: var(--callout-rgb-fail);
+    }
+    &[data-callout="missing"] {
+        --callout-icon: var(--callout-icon-missing);
+        --callout-color: var(--callout-rgb-missing);
+    }
+    &[data-callout="danger"] {
+        --callout-icon: var(--callout-icon-danger);
+        --callout-color: var(--callout-rgb-danger);
+    }
+    &[data-callout="error"] {
+        --callout-icon: var(--callout-icon-error);
+        --callout-color: var(--callout-rgb-error);
+    }
+    &[data-callout="bug"] {
+        --callout-icon: var(--callout-icon-bug);
+        --callout-color: var(--callout-rgb-bug);
+    }
+    &[data-callout="example"] {
+        --callout-icon: var(--callout-icon-example);
+        --callout-color: var(--callout-rgb-example);
+    }
+    &[data-callout="quote"] {
+        // --callout-icon: var(--callout-icon-quote);
+        --callout-color: var(--callout-rgb-quote);
+    }
+    &[data-callout="cite"] {
+        --callout-icon: var(--callout-icon-cite);
+        --callout-color: var(--callout-rgb-cite);
+    }
+}
