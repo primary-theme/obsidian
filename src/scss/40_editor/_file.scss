@@ -1,260 +1,5 @@
 /*────────── File ──────────*/
 
-.mod-root .workspace {
-    // File
-    &-leaf-content {
-        border: 1px solid var(--background-modifier-border);
-        border-radius: var(--file-border-radius);
-        margin-bottom: var(--workspace-margin-bottom);
-    }
-
-    &-tabs.mod-top-left-space {
-        margin-left: var(--workspace-margin-bottom);
-    }
-
-    &-tabs.mod-top-right-space {
-        margin-right: var(--workspace-margin-bottom);
-    }
-
-    &-tabs.mod-top-left-space.mod-top-right-space {
-        margin-left: var(--workspace-margin-bottom);
-        margin-right: var(--workspace-margin-bottom);
-    }
-    
-    // .mod-root Tabs
-    &-tab-header-container {
-        border-bottom: none;
-        padding-bottom: var(--size-4-1);
-        transition: padding-bottom none;
-
-        &-inner {
-            gap: var(--file-tab-gap);
-            padding-top: var(--button-axis-offset);
-            padding-bottom: var(--button-axis-offset);
-        }
-    }
-
-    &-tab-header {
-        --tab-radius-active: var(--radius-m);
-
-        // Aligns content inside Tabs
-        .workspace & {
-            padding-bottom: 0px;
-        }
-
-        // Tab Separator
-        &-inner::after {
-            visibility: var(--file-tab-separator-visibility);
-            transform: none;
-        }
-
-        .workspace-tab-header-inner-close-button {
-            padding: 0;
-            border-radius: var(--close-button-radius);
-            margin-bottom: var(--button-axis-offset);
-            cursor: pointer;
-        }
-
-        .workspace-tab-header-status-icon {
-            padding: var(--size-2-1) 0;
-            margin-bottom: var(--button-axis-offset);
-            cursor: pointer;
-        }
-
-        // Active Tabs
-        &.is-active {
-            &::before,
-            &::after {
-                visibility: hidden;
-            }
-    
-            background: var(--tab-active-bg);
-            box-shadow: var(--tab-active-shadow);
-            transition: border, box-shadow, transform var(--button-anim);
-    
-            &:nth-child(3n+1) {
-                border: 1px solid var(--alternating-color-1);
-
-                .workspace-tab-header-inner-icon {
-                    color: var(--alternating-color-1);
-                }
-                
-                .workspace-tab-header-inner-title {
-                    color: var(--alternating-color-1);
-                }
-
-                .workspace-tab-header-inner-close-button,
-                .workspace-tab-header-status-icon {
-                    color: var(--alternating-color-1);
-
-                    &:hover {
-                        color: var(--text-on-accent);
-                        background: var(--alternating-color-1);
-                    }
-
-                    &:active {
-                        color: var(--text-on-accent);
-                        background: var(--alternating-color-1-hover-active);
-                    }
-                }
-            }
-    
-            &:nth-child(3n+2) {
-                border: 1px solid var(--alternating-color-2);
-
-                .workspace-tab-header-inner-icon {
-                    color: var(--alternating-color-2);
-                }
-    
-                .workspace-tab-header-inner-title {
-                    color: var(--alternating-color-2);
-                }
-
-                .workspace-tab-header-inner-close-button,
-                .workspace-tab-header-status-icon {
-                    color: var(--alternating-color-2);
-
-                    &:hover {
-                        color: var(--text-on-accent);
-                        background: var(--alternating-color-2);
-                    }
-
-                    &:active {
-                        color: var(--text-on-accent);
-                        background: var(--alternating-color-2-hover-active);
-                    }
-                }
-            }
-    
-            &:nth-child(3n+3) {
-                border: 1px solid var(--alternating-color-3);
-
-                .workspace-tab-header-inner-icon {
-                    color: var(--alternating-color-3);
-                }
-    
-                .workspace-tab-header-inner-title {
-                    color: var(--alternating-color-3);
-                }
-
-                .workspace-tab-header-inner-close-button,
-                .workspace-tab-header-status-icon {
-                    color: var(--alternating-color-3);
-
-                    &:hover {
-                        color: var(--text-on-accent);
-                        background: var(--alternating-color-3);
-                    }
-
-                    &:active {
-                        color: var(--text-on-accent);
-                        background: var(--alternating-color-3-hover-active);
-                    }
-                }
-            }
-        }
-
-        // Non-active Tabs
-        &:not(.is-active) {
-            color: var(--icon-color);
-            border: 1px solid transparent;
-            transition: border, border-color, box-shadow, transform var(--button-anim);
-            
-            &:hover {
-                color: var(--icon-color-hover);
-                border-color: transparent;
-                background: var(--tab-bg);
-                transform: translateY(calc(-1 * var(--button-axis-offset)));
-                cursor: pointer;
-
-                .workspace-tab-header-inner {
-                    background: transparent;
-                }
-
-                .workspace-tab-header-inner-title {
-                    color: var(--icon-color-hover);
-                }
-
-                .workspace-tab-header-status-icon {
-                    color: var(--icon-color-hover);
-                }
-            }
-
-            &:active {
-                color: var(--icon-color-focused);
-                border-color: transparent;
-                background: var(--tab-bg);
-                transform: translateY(var(--button-axis-offset));
-
-                .workspace-tab-header-inner-title {
-                    color: var(--icon-color-active);
-                }
-            }
-
-            .workspace-tab-header-status-icon {
-                color: var(--icon-color);
-            }
-
-            .workspace-tab-header-inner-close-button,
-            .workspace-tab-header-status-icon {
-                &:hover {
-                    color: var(--text-on-accent);
-                    background: var(--non-alternating-color);
-                }
-
-                &:active {
-                    color: var(--text-on-accent);
-                    background: var(--non-alternating-color-hover-active);
-                }
-            }
-        }
-
-        // New Tab
-        &-new-tab {
-            padding-bottom: calc(-1 * var(--button-axis-offset));
-
-            .clickable-icon {
-                color: var(--icon-color);
-                padding: 0px;
-                border-radius: var(--radius-m);
-
-                &:hover {
-                    color: var(--text-on-accent);
-                    background: var(--non-alternating-color);
-                }
-
-                &:active {
-                    color: var(--text-on-accent);
-                    background: var(--non-alternating-color-hover-active);
-                }
-            }
-        }
-
-        // Tab List
-        &-tab-list {
-            padding-bottom: calc(-1 * var(--button-axis-offset));
-
-            .clickable-icon {
-                color: var(--icon-color);
-                padding: 0px;
-                border-radius: var(--radius-m);
-
-                &:hover {
-                    color: var(--icon-color-hover);
-                }
-
-                &:active {
-                    color: var(--icon-color-focused);
-                }
-
-                &.has-active-menu {
-                    color: var(--icon-color-active);
-                }
-            }
-        }
-    }
-}
-
 // Note Header
 .view-header {
     --header-height: 40px;
@@ -330,6 +75,24 @@
     }
 }
 
+// Stacked Tab Note Header Styling
+// Stacked Tabs .view-header Styling
+.mod-root .workspace-tabs.mod-stacked {
+    .view-header {
+        border-bottom: none;
+
+        .view-header-title-container {
+            opacity: 0;
+            transition: var(--anim-duration-fast) var(--anim-motion-delay);
+
+            &:hover {
+                opacity: 1;
+                transition: var(--anim-duration-fast) var(--anim-motion-delay);
+            }
+        }
+    }
+}
+
 // Breadcrumb
 .view-header-title-parent {
     .view-header {
@@ -394,7 +157,6 @@
         color: var(--text-faint);
         font-size: var(--font-ui-small);
         line-height: normal;
-        background: var(--base-00);
         padding: var(--size-4-2) var(--size-4-4);
         border: 1px solid var(--background-modifier-border);
         border-radius: 2em;
