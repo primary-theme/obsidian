@@ -134,11 +134,11 @@ body {
 
     // Community Plugin
     // Calendar by Liam Cain
-    --cp-cal-td-padding:    var(--size-4-1)
+    --pmr-cal-td-padding:    var(--size-4-1)
                             var(--size-4-1)
                             calc(var(--size-4-1) + var(--button-inset-shadow-size))
                             var(--size-4-1);
-    --cp-cal-td-radius: calc(var(--radius-s) + 1px);
+    --pmr-cal-td-radius: calc(var(--radius-s) + 1px);
 }
 
 .metadata-property {

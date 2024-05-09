@@ -672,8 +672,8 @@ and CONTRIBUTION page ↴
         --color-arrow-active: var(--color-d-gray-30);
         --color-button: var(--color-l-gray-30);
       
-        --cp-cal-month-color: var(--color-d-gray-30);
-        --cp-cal-year-color: var(--color-d-gray-50);
+        --pmr-cal-month-color: var(--color-d-gray-30);
+        --pmr-cal-year-color: var(--color-d-gray-50);
 
         --color-text-heading: var(--color-d-gray-50);
 
@@ -682,15 +682,39 @@ and CONTRIBUTION page ↴
 
         --color-text-weeknum: var(--color-d-gray-60);
 
-        --cp-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-        --cp-cal-day-color-active: var(--color-d-gray-50);
-        --cp-cal-day-dot-opacity-active: 0.5;
-        --cp-cal-day-background-active:  var(--color-d-gray-140);
-        --cp-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+        --pmr-cal-day-color-active: var(--color-d-gray-50);
+        --pmr-cal-day-dot-opacity-active: 0.5;
+        --pmr-cal-day-background-active:  var(--color-d-gray-140);
+        --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
                                     inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
 
-        --cp-cal-active-day-color: var(--color-d-gray-10);
-        --cp-cal-active-day-background: rgba(0, 0, 0, 0.15);
-        --cp-cal-active-day-shadow: var(--nav-file-shadow-active);
+        --pmr-cal-active-day-color: var(--color-d-gray-10);
+        --pmr-cal-active-day-background: rgba(0, 0, 0, 0.15);
+        --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
     }
+
+    // Kanban by mgmeyers
+    --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-secondary));
+    --kanban-lane-border: 1px solid color-mix(in srgb, var(--color-d-gray-90) 40%, var(--color-d-gray-100));
+    --kanban-lane-shadow:   none;
+    
+    --kanban-title-text-input-color: var(--text-normal);
+    --kanban-title-count-radius: var(--radius-l);
+    --kanban-title-count-color: var(--color-d-gray-40);
+    --kanban-title-count-bg: var(--color-d-gray-80);
+
+    --kanban-item-bg: var(--color-d-gray-90);
+    --kanban-item-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.4),
+                            inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
+                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+                            0px 2px 2px 0px rgba(0, 0, 0, 0.13);
+
+    --kanban-new-item-color: var(--text-faint);
+    --kanban-new-item-color-hover: var(--text-muted);
+    --kanban-new-item-bg: transparent;
+    --kanban-new-item-bg-hover: var(--color-d-gray-100);
+    --kanban-new-item-shadow: none;
+    --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.22),
+                                    0px 2px 4px 0px rgba(0, 0, 0, 0.14);
 }
