@@ -146,8 +146,8 @@ body {
   --pill-radius: 1em;
 }
 
-body svg.svg-icon:not(.canvas-card-menu-button svg) {
-  --icon-size: var(--icon-s) !important;
+body svg.svg-icon.svg-icon.svg-icon {
+  --icon-size: var(--icon-s);
 }
 
 body .metadata-property-icon svg.svg-icon.svg-icon {
