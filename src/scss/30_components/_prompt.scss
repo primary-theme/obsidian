@@ -32,7 +32,6 @@ input.prompt-input:focus-visible {
 
     &.mod-complex .suggestion-highlight {
         color: var(--prompt-suggestion-highlight-color);
-        font-weight: var(--font-semibold);
     }
 
     &.mod-complex.is-selected .suggestion-highlight {

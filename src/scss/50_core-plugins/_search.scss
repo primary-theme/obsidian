@@ -1,5 +1,10 @@
 /*────────── Core Plugin: Search ──────────*/
 
+// Global Search
+.suggestion-highlight {
+    font-weight: var(--font-semibold);
+}
+
 // Search Options Menu
 .mod-search-suggestion {
     .mod-group {
