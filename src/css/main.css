@@ -29,7 +29,6 @@ body {
   --cursor: pointer;
   --radius-xs: 2px;
   --icon-container-radius: 0px;
-  --icon-xs: 12px;
   --icon-xl: 24px;
   --button-inset-shadow-size: 2px;
   --header-height: 48px;
@@ -2350,12 +2349,14 @@ body {
 }
 
 .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-inner-close-button {
+  --icon-size: var(--icon-xs);
   padding: 0;
   border-radius: var(--close-button-radius);
   margin-bottom: var(--button-axis-offset);
   cursor: pointer;
 }
 .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-status-icon {
+  --icon-size: var(--icon-xs);
   padding: var(--size-2-1) 0;
   margin-bottom: var(--button-axis-offset);
   border-radius: var(--tab-status-radius);
