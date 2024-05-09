@@ -164,8 +164,7 @@ body {
     .workspace-tab-container {
         border-radius: var(--file-border-radius);
         margin-bottom: var(--workspace-margin-bottom);
-        border-left: 1px solid var(--background-modifier-border);
-        border-right: 1px solid var(--background-modifier-border);
+        border: 1px solid var(--background-modifier-border);
 
         .workspace-tab-header:first-child {
             border-top-left-radius: var(--file-border-radius);
@@ -178,16 +177,12 @@ body {
         border: unset;
         border-radius: unset;
         margin-bottom: unset;
-
-        border-top: 1px solid var(--background-modifier-border);
-        border-bottom: 1px solid var(--background-modifier-border);
     }
 }
 
 .workspace-tabs.mod-stacked .workspace {
     &-tab-header {
         --tab-radius-active: var(--radius-m);
-        border: 1px solid var(--background-modifier-border);
 
         // Active Tabs
         &.is-active {
@@ -196,7 +191,6 @@ body {
     
             &:nth-child(3n+1) {
                 border-left: 1px solid var(--alternating-color-1);
-                border-right-color: transparent;
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-1);
@@ -209,7 +203,6 @@ body {
     
             &:nth-child(3n+2) {
                 border-left: 1px solid var(--alternating-color-2);
-                border-right-color: transparent;
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-2);
@@ -222,7 +215,6 @@ body {
     
             &:nth-child(3n+3) {
                 border-left: 1px solid var(--alternating-color-3);
-                border-right-color: transparent;
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-3);
@@ -237,8 +229,6 @@ body {
         // Non-active Tabs
         &:not(.is-active) {
             color: var(--icon-color);
-            border-left-color: transparent;
-            border-right-color: transparent;
             transition: border, border-color var(--anim-duration-fast) var(--anim-motion-swing);
             
             &:hover {
