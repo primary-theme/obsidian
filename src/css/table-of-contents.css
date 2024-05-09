@@ -1,10 +1,9 @@
 /*───────────────────────────────────
 
-TABLE OF CONTENTS
-
-    STRUCTURE
+STRUCTURE OF SOURCE FOLDER
     * General (overrides, spacing, sizing, radius, shape, fonts, animation) ->
     * Specific (usually colors, icons) ->
+    * Mobile Styling ->
     * Light Theme (base then options via style settings) ->
     * Dark Theme (base then options via style settings) ->
 
@@ -13,83 +12,5 @@ TABLE OF CONTENTS
         houses code for additional Primary features
     + ss-*.css / ss-*.scss
         scripts for customizable features togglable via Style Settings
-
-Fonts
-    Inter (default)
-    Cascadia Code (default monospace)
-    Karla
-    Quicksand
-    Lora
-
-Foundations
-    Typography
-    Custom Icons
-    Color Scheme
-        Light Theme
-            Classic Palette
-            Override
-        Dark Theme
-            Classic Palette
-            Override
-
-Window
-    Window Frame
-    Workspace
-    Ribbon
-    Sidebar
-    Divider
-    Scrollbar
-    Status Bar
-
-Components
-    Button
-    Checkbox
-    Color Input
-    Dialog
-    Dragging
-    Indentation Guides
-    Modal
-    Multi-select
-    Navigation
-    Popover
-    Prompt
-    Slider
-    Tabs
-    Text Input
-    Toggle
-
-Editor
-    Block
-    Blockquote
-    Callout
-    Code
-    Embed
-    File
-    Footnote
-    Headings
-    Horizontal Rule
-    Inline Title
-    Link
-    List
-    Properties
-    Table
-    Tag
-
-Mobile
-    Tablet
-    Phone
-
-Core Plugins Support
-    File Explorer
-    Search
-    Graph
-    Canvas
-    
-Community Plugin Support
-    Calendar by Liam Cain
-    Dataview by Michael Brenan
-    Kanban by mgmeyers
-    Style Settings by mgmeyers
-    Hider by kepano
 
 ───────────────────────────────────*/
