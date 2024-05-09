@@ -479,7 +479,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
     --embed-title-color: var(--color-l-gray-90);
     --embed-block-shadow-hover: none;
-    
+
     --embed-edit-btn-bg: color-mix(in srgb, var(--color-l-gray-20) 70%, transparent);
     --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 100%, transparent);
     --embed-edit-btn-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
@@ -689,8 +689,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
         --color-arrow-active: var(--color-l-gray-100);
         --color-button: var(--color-l-gray-100);
       
-        --cp-cal-month-color: var(--color-l-gray-120);
-        --cp-cal-year-color: var(--color-l-gray-90);
+        --pmr-cal-month-color: var(--color-l-gray-120);
+        --pmr-cal-year-color: var(--color-l-gray-90);
 
         --color-text-heading: var(--color-l-gray-90);
 
@@ -699,15 +699,39 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
         --color-text-weeknum: var(--color-l-gray-80);
 
-        --cp-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-        --cp-cal-day-color-active: var(--color-l-gray-80);
-        --cp-cal-day-dot-opacity-active: 0.5;
-        --cp-cal-day-background-active:  var(--color-l-gray-60);
-        --cp-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.2),
+        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+        --pmr-cal-day-color-active: var(--color-l-gray-80);
+        --pmr-cal-day-dot-opacity-active: 0.5;
+        --pmr-cal-day-background-active:  var(--color-l-gray-60);
+        --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.2),
                                     inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
 
-        --cp-cal-active-day-color: var(--color-l-gray-140);
-        --cp-cal-active-day-background: rgba(255, 255, 255, 0.25);
-        --cp-cal-active-day-shadow: var(--nav-file-shadow-active);
+        --pmr-cal-active-day-color: var(--color-l-gray-140);
+        --pmr-cal-active-day-background: rgba(255, 255, 255, 0.25);
+        --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
     }
+
+    // Kanban by mgmeyers
+    --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-primary));
+    --kanban-lane-border: 1px solid var(--color-l-gray-40);
+    --kanban-lane-shadow:   none;
+    
+    --kanban-title-text-input-color: var(--text-normal);
+    --kanban-title-count-radius: var(--radius-l);
+    --kanban-title-count-color: var(--color-l-gray-120);
+    --kanban-title-count-bg: var(--color-l-gray-60);
+
+    --kanban-item-bg: var(--color-l-gray-10);
+    --kanban-item-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                            inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
+                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+                            0px 2px 2px 0px rgba(0, 0, 0, 0.03);
+
+    --kanban-new-item-color: var(--text-faint);
+    --kanban-new-item-color-hover: var(--text-muted);
+    --kanban-new-item-bg: transparent;
+    --kanban-new-item-bg-hover: var(--background-primary);
+    --kanban-new-item-shadow: none;
+    --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+                                    0px 2px 4px 0px rgba(0, 0, 0, 0.04);
 }

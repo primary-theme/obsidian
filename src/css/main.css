@@ -127,11 +127,11 @@ body {
                               var(--size-4-4);
   --callout-radius: var(--radius-m);
   --anim-popup: 0.2s forwards slideUp;
-  --cp-cal-td-padding: var(--size-4-1)
+  --pmr-cal-td-padding: var(--size-4-1)
                           var(--size-4-1)
                           calc(var(--size-4-1) + var(--button-inset-shadow-size))
                           var(--size-4-1);
-  --cp-cal-td-radius: calc(var(--radius-s) + 1px);
+  --pmr-cal-td-radius: calc(var(--radius-s) + 1px);
 }
 
 .metadata-property:not([data-property-key=tags]) {
@@ -651,6 +651,25 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --canvas-menu-border: 1px solid var(--background-modifier-border);
   --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.02),
                           0px 2px 6px 0px rgba(0, 0, 0, 0.03);
+  --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-primary));
+  --kanban-lane-border: 1px solid var(--color-l-gray-40);
+  --kanban-lane-shadow: none;
+  --kanban-title-text-input-color: var(--text-normal);
+  --kanban-title-count-radius: var(--radius-l);
+  --kanban-title-count-color: var(--color-l-gray-120);
+  --kanban-title-count-bg: var(--color-l-gray-60);
+  --kanban-item-bg: var(--color-l-gray-10);
+  --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                          inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
+                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+                          0px 2px 2px 0px rgba(0, 0, 0, 0.03);
+  --kanban-new-item-color: var(--text-faint);
+  --kanban-new-item-color-hover: var(--text-muted);
+  --kanban-new-item-bg: transparent;
+  --kanban-new-item-bg-hover: var(--background-primary);
+  --kanban-new-item-shadow: none;
+  --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+                                  0px 2px 4px 0px rgba(0, 0, 0, 0.04);
 }
 .theme-light #calendar-container {
   --color-dot: var(--color-l-blue-20);
@@ -658,21 +677,21 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --color-arrow-hover: var(--color-l-gray-90);
   --color-arrow-active: var(--color-l-gray-100);
   --color-button: var(--color-l-gray-100);
-  --cp-cal-month-color: var(--color-l-gray-120);
-  --cp-cal-year-color: var(--color-l-gray-90);
+  --pmr-cal-month-color: var(--color-l-gray-120);
+  --pmr-cal-year-color: var(--color-l-gray-90);
   --color-text-heading: var(--color-l-gray-90);
   --color-text-day: var(--color-l-gray-130);
   --color-text-today: var(--color-l-gray-140);
   --color-text-weeknum: var(--color-l-gray-80);
-  --cp-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  --cp-cal-day-color-active: var(--color-l-gray-80);
-  --cp-cal-day-dot-opacity-active: 0.5;
-  --cp-cal-day-background-active: var(--color-l-gray-60);
-  --cp-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.2),
+  --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  --pmr-cal-day-color-active: var(--color-l-gray-80);
+  --pmr-cal-day-dot-opacity-active: 0.5;
+  --pmr-cal-day-background-active: var(--color-l-gray-60);
+  --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.2),
                               inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
-  --cp-cal-active-day-color: var(--color-l-gray-140);
-  --cp-cal-active-day-background: rgba(255, 255, 255, 0.25);
-  --cp-cal-active-day-shadow: var(--nav-file-shadow-active);
+  --pmr-cal-active-day-color: var(--color-l-gray-140);
+  --pmr-cal-active-day-background: rgba(255, 255, 255, 0.25);
+  --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
 }
 
 /*───────────────────────────────────
@@ -1153,6 +1172,25 @@ and CONTRIBUTION page ↴
   --canvas-menu-border: 1px solid var(--background-modifier-border);
   --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14),
                           0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+  --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-secondary));
+  --kanban-lane-border: 1px solid color-mix(in srgb, var(--color-d-gray-90) 40%, var(--color-d-gray-100));
+  --kanban-lane-shadow: none;
+  --kanban-title-text-input-color: var(--text-normal);
+  --kanban-title-count-radius: var(--radius-l);
+  --kanban-title-count-color: var(--color-d-gray-40);
+  --kanban-title-count-bg: var(--color-d-gray-80);
+  --kanban-item-bg: var(--color-d-gray-90);
+  --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.4),
+                          inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
+                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+                          0px 2px 2px 0px rgba(0, 0, 0, 0.13);
+  --kanban-new-item-color: var(--text-faint);
+  --kanban-new-item-color-hover: var(--text-muted);
+  --kanban-new-item-bg: transparent;
+  --kanban-new-item-bg-hover: var(--color-d-gray-100);
+  --kanban-new-item-shadow: none;
+  --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.22),
+                                  0px 2px 4px 0px rgba(0, 0, 0, 0.14);
 }
 .theme-dark #calendar-container {
   --color-dot: var(--color-d-blue-20);
@@ -1160,21 +1198,21 @@ and CONTRIBUTION page ↴
   --color-arrow-hover: var(--color-d-gray-40);
   --color-arrow-active: var(--color-d-gray-30);
   --color-button: var(--color-l-gray-30);
-  --cp-cal-month-color: var(--color-d-gray-30);
-  --cp-cal-year-color: var(--color-d-gray-50);
+  --pmr-cal-month-color: var(--color-d-gray-30);
+  --pmr-cal-year-color: var(--color-d-gray-50);
   --color-text-heading: var(--color-d-gray-50);
   --color-text-day: var(--color-d-gray-40);
   --color-text-today: var(--color-d-gray-20);
   --color-text-weeknum: var(--color-d-gray-60);
-  --cp-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  --cp-cal-day-color-active: var(--color-d-gray-50);
-  --cp-cal-day-dot-opacity-active: 0.5;
-  --cp-cal-day-background-active: var(--color-d-gray-140);
-  --cp-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+  --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  --pmr-cal-day-color-active: var(--color-d-gray-50);
+  --pmr-cal-day-dot-opacity-active: 0.5;
+  --pmr-cal-day-background-active: var(--color-d-gray-140);
+  --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
                               inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
-  --cp-cal-active-day-color: var(--color-d-gray-10);
-  --cp-cal-active-day-background: rgba(0, 0, 0, 0.15);
-  --cp-cal-active-day-shadow: var(--nav-file-shadow-active);
+  --pmr-cal-active-day-color: var(--color-d-gray-10);
+  --pmr-cal-active-day-background: rgba(0, 0, 0, 0.15);
+  --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
 }
 
 /*────────── Icons ──────────*/
@@ -3574,11 +3612,11 @@ body {
   margin-top: 0;
 }
 #calendar-container .title .month {
-  color: var(--cp-cal-month-color);
+  color: var(--pmr-cal-month-color);
   font-weight: var(--font-normal);
 }
 #calendar-container .title .year {
-  color: var(--cp-cal-year-color);
+  color: var(--pmr-cal-year-color);
   font-weight: var(--font-medium);
 }
 #calendar-container .right-nav {
@@ -3602,8 +3640,8 @@ body {
 }
 #calendar-container td .day,
 #calendar-container td .week-num {
-  padding: var(--cp-cal-td-padding);
-  border-radius: var(--cp-cal-td-radius);
+  padding: var(--pmr-cal-td-padding);
+  border-radius: var(--pmr-cal-td-radius);
 }
 #calendar-container .day {
   font-variant: tabular-nums;
@@ -3611,41 +3649,141 @@ body {
   transition: box-shadow var(--anim-duration-superfast) var(--anim-motion-jumpy);
 }
 #calendar-container .day:hover {
-  box-shadow: var(--cp-cal-day-shadow-hover);
+  box-shadow: var(--pmr-cal-day-shadow-hover);
 }
 #calendar-container .day:active {
-  color: var(--cp-cal-day-color-active);
-  background: var(--cp-cal-day-background-active);
-  box-shadow: var(--cp-cal-day-shadow-active);
+  color: var(--pmr-cal-day-color-active);
+  background: var(--pmr-cal-day-background-active);
+  box-shadow: var(--pmr-cal-day-shadow-active);
 }
 #calendar-container .day:active .dot-container {
-  opacity: var(--cp-cal-day-dot-opacity-active);
+  opacity: var(--pmr-cal-day-dot-opacity-active);
 }
 #calendar-container .week-num {
   transition: box-shadow var(--anim-duration-superfast) var(--anim-motion-jumpy);
 }
 #calendar-container .week-num:hover {
-  box-shadow: var(--cp-cal-day-shadow-hover);
+  box-shadow: var(--pmr-cal-day-shadow-hover);
 }
 #calendar-container .week-num:active {
-  color: var(--cp-cal-day-color-active);
-  background: var(--cp-cal-day-background-active);
-  box-shadow: var(--cp-cal-day-shadow-active);
+  color: var(--pmr-cal-day-color-active);
+  background: var(--pmr-cal-day-background-active);
+  box-shadow: var(--pmr-cal-day-shadow-active);
 }
 #calendar-container .week-num:active .dot-container {
-  opacity: var(--cp-cal-day-dot-opacity-active);
+  opacity: var(--pmr-cal-day-dot-opacity-active);
 }
 #calendar-container .today {
   font-weight: var(--font-medium);
 }
 #calendar-container .active {
-  color: var(--cp-cal-active-day-color);
-  background: var(--cp-cal-active-day-background);
-  box-shadow: var(--cp-cal-active-day-shadow);
+  color: var(--pmr-cal-active-day-color);
+  background: var(--pmr-cal-active-day-background);
+  box-shadow: var(--pmr-cal-active-day-shadow);
   transition: box-shadow var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
 #calendar-container .active:hover {
-  box-shadow: var(--cp-cal-active-day-shadow);
+  box-shadow: var(--pmr-cal-active-day-shadow);
+}
+
+/*────────── Kanban by mgmeyers ──────────*/
+.kanban-plugin__lane {
+  background: var(--kanban-lane-bg);
+  border: var(--kanban-lane-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--kanban-lane-shadow);
+}
+.kanban-plugin__lane-wrapper {
+  margin-right: var(--size-4-3);
+}
+.kanban-plugin__lane-header-wrapper {
+  padding: var(--size-4-2) var(--size-4-3) var(--size-2-3);
+  border-bottom: none;
+}
+.kanban-plugin__item-button-wrapper {
+  border-top: none;
+}
+.kanban-plugin__lane-title-count:is(div) {
+  font-size: 0.8em;
+  font-weight: 500;
+  font-variant: tabular-nums;
+  color: var(--kanban-title-count-color);
+  background: var(--kanban-title-count-bg);
+  padding: var(--size-2-2) var(--size-4-2);
+  border-radius: var(--kanban-title-count-radius);
+  margin: 0 var(--size-2-2);
+}
+.kanban-plugin__lane-grip {
+  margin-right: 0;
+}
+.kanban-plugin__grow-wrap .kanban-plugin__lane-input, .kanban-plugin__lane-title-text, .kanban-plugin__lane-input {
+  color: var(--kanban-title-text-input-color);
+  background: transparent;
+  border-radius: calc(var(--radius-m) - 2px);
+  padding: var(--size-2-1) var(--size-4-2);
+}
+.kanban-plugin__lane-settings-button.is-enabled {
+  padding-right: 0;
+}
+.kanban-plugin__lane-setting-wrapper > div {
+  padding-top: var(--size-4-1);
+}
+.kanban-plugin__lane-setting-wrapper > div:last-child {
+  border-bottom: var(--kanban-lane-border);
+  margin-bottom: var(--size-4-1);
+}
+.kanban-plugin__lane-items .kanban-plugin__item-wrapper:first-of-type {
+  margin-top: 0;
+}
+.kanban-plugin__item {
+  border: none;
+  overflow: visible;
+}
+.kanban-plugin__item-title-wrapper {
+  background: var(--kanban-item-bg);
+  padding: var(--size-2-3) var(--size-4-3);
+  border-radius: var(--radius-m);
+  box-shadow: var(--kanban-item-shadow);
+}
+.kanban-plugin__item-content-wrapper {
+  border-radius: var(--radius-m);
+}
+.kanban-plugin__item-button-wrapper {
+  padding-top: 0;
+}
+.kanban-plugin__new-item-button:is(button) {
+  display: flex;
+  gap: var(--size-2-2);
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--kanban-new-item-color);
+  background: var(--kanban-new-item-bg);
+  padding: var(--size-4-2) var(--size-4-3);
+  box-shadow: var(--kanban-new-item-shadow);
+  transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
+}
+.kanban-plugin__new-item-button:is(button):hover {
+  color: var(--kanban-new-item-color-hover);
+  background: var(--kanban-new-item-bg-hover);
+  box-shadow: var(--kanban-new-item-shadow-hover);
+}
+.kanban-plugin__new-item-button:is(button):active {
+  opacity: 0.7;
+  padding: var(--size-4-2) var(--size-4-3);
+}
+.kanban-plugin__item-form {
+  border-top: none;
+  padding-top: 0;
+}
+.kanban-plugin__item-form .kanban-plugin__item-input-wrapper {
+  color: var(--text-input-color-focused);
+  background: var(--text-input-bg-active);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: var(--text-input-shadow-active);
+  transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
+}
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+  filter: none;
 }
 
 /*# sourceMappingURL=main.css.map */

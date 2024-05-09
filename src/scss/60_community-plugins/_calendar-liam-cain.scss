@@ -21,12 +21,12 @@
     }
 
     .title .month {
-        color: var(--cp-cal-month-color);
+        color: var(--pmr-cal-month-color);
         font-weight: var(--font-normal);
     }
 
     .title .year {
-        color: var(--cp-cal-year-color);
+        color: var(--pmr-cal-year-color);
         font-weight: var(--font-medium);
     }
 
@@ -59,8 +59,8 @@
 
     td .day,
     td .week-num {
-        padding: var(--cp-cal-td-padding);
-        border-radius: var(--cp-cal-td-radius);
+        padding: var(--pmr-cal-td-padding);
+        border-radius: var(--pmr-cal-td-radius);
     }
 
     .day {
@@ -69,16 +69,16 @@
         transition: box-shadow var(--anim-duration-superfast) var(--anim-motion-jumpy);
 
         &:hover {
-            box-shadow: var(--cp-cal-day-shadow-hover);
+            box-shadow: var(--pmr-cal-day-shadow-hover);
         }
 
         &:active {
-            color: var(--cp-cal-day-color-active);
-            background: var(--cp-cal-day-background-active);
-            box-shadow: var(--cp-cal-day-shadow-active);
+            color: var(--pmr-cal-day-color-active);
+            background: var(--pmr-cal-day-background-active);
+            box-shadow: var(--pmr-cal-day-shadow-active);
 
             .dot-container {
-                opacity: var(--cp-cal-day-dot-opacity-active);
+                opacity: var(--pmr-cal-day-dot-opacity-active);
             }
         }
     }
@@ -87,16 +87,16 @@
         transition: box-shadow var(--anim-duration-superfast) var(--anim-motion-jumpy);
 
         &:hover {
-            box-shadow: var(--cp-cal-day-shadow-hover);
+            box-shadow: var(--pmr-cal-day-shadow-hover);
         }
 
         &:active {
-            color: var(--cp-cal-day-color-active);
-            background: var(--cp-cal-day-background-active);
-            box-shadow: var(--cp-cal-day-shadow-active);
+            color: var(--pmr-cal-day-color-active);
+            background: var(--pmr-cal-day-background-active);
+            box-shadow: var(--pmr-cal-day-shadow-active);
 
             .dot-container {
-                opacity: var(--cp-cal-day-dot-opacity-active);
+                opacity: var(--pmr-cal-day-dot-opacity-active);
             }
         }
     }
@@ -106,13 +106,13 @@
     }
 
     .active {
-        color: var(--cp-cal-active-day-color);
-        background: var(--cp-cal-active-day-background);
-        box-shadow: var(--cp-cal-active-day-shadow);
+        color: var(--pmr-cal-active-day-color);
+        background: var(--pmr-cal-active-day-background);
+        box-shadow: var(--pmr-cal-active-day-shadow);
         transition: box-shadow var(--anim-duration-superfast) var(--anim-motion-smooth);
 
         &:hover {
-            box-shadow: var(--cp-cal-active-day-shadow);
+            box-shadow: var(--pmr-cal-active-day-shadow);
         }
     }
 }
