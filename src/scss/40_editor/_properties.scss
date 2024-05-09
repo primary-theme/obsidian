@@ -17,6 +17,11 @@
     }
 }
 
+// Metadata Property Box icon resizing
+body .metadata-property-icon svg {
+    --icon-size: calc(var(--icon-s) - 2px);
+}
+
 .metadata-container {
     padding: var(--size-4-3) var(--size-4-3);
 }
