@@ -31,6 +31,7 @@
         .callout-fold {
             filter: var(--callout-icon-fold-filter);
 
+            // Ensures the icons resize if user resizes font size in Settings
             & svg {
                 height: var(--font-text-size);
                 width: var(--font-text-size);

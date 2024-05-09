@@ -1,11 +1,18 @@
 /*────────── Icons ──────────*/
-// General Shape
+// Workspace Icon Size (selectors from app.css)
+.clickable-icon.side-dock-ribbon-action .svg-icon,
+.mod-left-split .workspace-tab-header-inner-icon .svg-icon,
+.mod-right-split .workspace-tab-header-inner-icon .svg-icon,
+.clickable-icon {
+    --icon-size: var(--icon-s);
+}
+
+// .clickable-icon
 body {
-    // --clickable-icon-radius: calc(var(--radius-m) - 2px);
     --clickable-icon-radius: calc(var(--radius-s) + 1px);
 }
 
-.clickable-icon.clickable-icon {
+.clickable-icon {
     &:hover {
         color: var(--icon-color-hover);
         background: var(--icon-bg-hover);
