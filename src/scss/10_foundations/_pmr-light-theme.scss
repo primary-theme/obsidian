@@ -565,7 +565,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --nav-item-color-highlighted: var(--text-accent-hover);
     --nav-item-background-hover: rgba(255, 255, 255, 0.25);
     --nav-item-background-active: rgba(255, 255, 255, 0.25);
-    --nav-item-background-selected: transparent;
+    --nav-item-background-selected: var(--color-l-alpha-green);
     --nav-indentation-guide-color: var(--indentation-guide-color);
     --nav-collapse-icon-color: var(--collapse-icon-color);
     --nav-collapse-icon-color-collapsed: var(--text-faint);
@@ -678,6 +678,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --canvas-menu-border: 1px solid var(--background-modifier-border);
     --canvas-menu-shadow:   0px 1px 2px 1px rgba(0, 0, 0, 0.02),
                             0px 2px 6px 0px rgba(0, 0, 0, 0.03);
+
+    // Stacked Tabs
+    --tab-stacked-shadow: -2px 1px 8px 0px rgba(0, 0, 0, 0.09);
 
     // Community Plugins
 

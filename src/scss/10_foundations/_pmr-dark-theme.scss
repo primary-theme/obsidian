@@ -549,7 +549,7 @@ and CONTRIBUTION page ↴
     --nav-item-color-highlighted: var(--text-accent-hover);
     --nav-item-background-hover: rgba(0, 0, 0, 0.15);
     --nav-item-background-active: rgba(0, 0, 0, 0.15);
-    --nav-item-background-selected: transparent;
+    --nav-item-background-selected: var(--color-d-alpha-green);
     --nav-indentation-guide-color: var(--indentation-guide-color);
     --nav-collapse-icon-color: var(--collapse-icon-color);
     --nav-collapse-icon-color-collapsed: var(--text-faint);
