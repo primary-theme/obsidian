@@ -1196,28 +1196,35 @@ and CONTRIBUTION page ↴
 }
 
 /*────────── Icons ──────────*/
+.clickable-icon.side-dock-ribbon-action .svg-icon,
+.mod-left-split .workspace-tab-header-inner-icon .svg-icon,
+.mod-right-split .workspace-tab-header-inner-icon .svg-icon,
+.clickable-icon {
+  --icon-size: var(--icon-s);
+}
+
 body {
   --clickable-icon-radius: calc(var(--radius-s) + 1px);
 }
 
-.clickable-icon.clickable-icon:hover {
+.clickable-icon:hover {
   color: var(--icon-color-hover);
   background: var(--icon-bg-hover);
   cursor: pointer;
 }
-.clickable-icon.clickable-icon:active {
+.clickable-icon:active {
   background: var(--icon-bg-pressed);
 }
-.clickable-icon.clickable-icon.has-active-menu {
+.clickable-icon.has-active-menu {
   background: var(--icon-bg-active-menu);
 }
-.clickable-icon.clickable-icon.has-active-menu:hover {
+.clickable-icon.has-active-menu:hover {
   color: var(--icon-color-focused);
 }
-.clickable-icon.clickable-icon.is-active {
+.clickable-icon.is-active {
   background: var(--icon-bg-active);
 }
-.clickable-icon.clickable-icon.is-active:hover {
+.clickable-icon.is-active:hover {
   color: var(--icon-color-active);
 }
 
@@ -1918,10 +1925,6 @@ svg.vault {
 
 .nav-action-button {
   padding: var(--size-2-3) var(--size-2-3);
-}
-.nav-action-button > svg {
-  width: 15px;
-  height: 15px;
 }
 
 /*────────── Status Bar ──────────*/
@@ -3005,10 +3008,6 @@ body {
   --pill-padding-x: 0.6em;
   --pill-padding-y: 0.15em;
   --pill-radius: 1em;
-}
-
-body .metadata-property-icon svg.svg-icon.svg-icon {
-  --icon-size: calc(var(--icon-s) - 3px);
 }
 
 .metadata-container {
