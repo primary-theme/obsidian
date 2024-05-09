@@ -265,6 +265,7 @@ body {
 .workspace .mod-root .workspace-tabs .workspace-tab-header {
     // Note Close Button Shaping
     .workspace-tab-header-inner-close-button {
+        --icon-size: var(--icon-xs);
         padding: 0;
         border-radius: var(--close-button-radius);
         margin-bottom: var(--button-axis-offset);
@@ -273,6 +274,7 @@ body {
     
     // Note Status Icon Shaping
     .workspace-tab-header-status-icon {
+        --icon-size: var(--icon-xs);
         padding: var(--size-2-1) 0;
         margin-bottom: var(--button-axis-offset);
         border-radius: var(--tab-status-radius);
