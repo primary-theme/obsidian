@@ -141,32 +141,6 @@ body {
     --pmr-cal-td-radius: calc(var(--radius-s) + 1px);
 }
 
-.metadata-property {
-    // Multi-select Pills
-    &:not([data-property-key="tags"]) {
-        --pill-border-width: 1px;
-        --pill-padding-x: 0.5em;
-        --pill-padding-y: 0.15em;
-        --pill-radius: 0.35em;
-    }
-
-    // Tag Pills
-    &[data-property-key="tags"] {
-        --pill-padding-x: 0.6em;
-        --pill-padding-y: 0.15em;
-        --pill-radius: 1em;
-    }
-}
-
-// Resize most icons except smaller icons
-body svg.svg-icon.svg-icon.svg-icon {
-    --icon-size: var(--icon-s);
-}
-
-body .metadata-property-icon svg.svg-icon.svg-icon {
-    --icon-size: calc(var(--icon-s) - 3px) !important;
-}
-
 @keyframes slideUp {
     0% {
         transform: translateY(20%);
