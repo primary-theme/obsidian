@@ -587,8 +587,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --collapse-icon-color: var(--color-l-gray-70);
     --collapse-icon-color-collapsed: var(--color-l-gray-70);
 
-    // Vault
-    --vault-name-color: var(--color-l-gray-90);
+    // Vault Name
+    --vault-profile-color: var(--vault-name-color);
+    --vault-name-color: var(--color-l-gray-100);
+    --vault-name-color-hover: var(--color-l-gray-110);
     --vault-name-background: var(--color-l-gray-30);
     --vault-name-border: 1px solid var(--background-modifier-border);
 

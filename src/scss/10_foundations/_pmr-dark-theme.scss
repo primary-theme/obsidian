@@ -500,7 +500,7 @@ and CONTRIBUTION page ↴
     // --code-value: var(--color-l-green-20);
 
     --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.39),
-                            0px 2px 4px -2px rgba(0, 0, 0, 0.36);
+                            0px 2px 4px -2px rgba(0, 0, 0, 0.39);
 
     // Drag Ghost
     --drag-ghost-background: var(--interactive-accent);
@@ -584,7 +584,10 @@ and CONTRIBUTION page ↴
     --collapse-icon-color: var(--color-d-gray-60);
     --collapse-icon-color-collapsed: var(--color-d-gray-60);
 
-    --vault-name-color: var(--color-d-gray-50);
+    // Vault Name
+    --vault-profile-color: var(--vault-name-color);
+    --vault-name-color: var(--color-d-gray-40);
+    --vault-name-color-hover: var(--color-d-gray-30);
     --vault-name-background: var(--color-d-gray-110);
     --vault-name-border: 1px solid var(--background-modifier-border);
 

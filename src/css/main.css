@@ -570,7 +570,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --nav-file-tag-bg: transparent;
   --collapse-icon-color: var(--color-l-gray-70);
   --collapse-icon-color-collapsed: var(--color-l-gray-70);
-  --vault-name-color: var(--color-l-gray-90);
+  --vault-profile-color: var(--vault-name-color);
+  --vault-name-color: var(--color-l-gray-100);
+  --vault-name-color-hover: var(--color-l-gray-110);
   --vault-name-background: var(--color-l-gray-30);
   --vault-name-border: 1px solid var(--background-modifier-border);
   --search-clear-button-color: var(--icon-color);
@@ -1037,7 +1039,7 @@ and CONTRIBUTION page ↴
                                   inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5),
                                   0px 1px 2px 0px rgba(0, 0, 0, 0.5);
   --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.39),
-                          0px 2px 4px -2px rgba(0, 0, 0, 0.36);
+                          0px 2px 4px -2px rgba(0, 0, 0, 0.39);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
   --checklist-bg: var(--color-d-gray-110);
@@ -1103,7 +1105,9 @@ and CONTRIBUTION page ↴
   --nav-file-tag-bg: transparent;
   --collapse-icon-color: var(--color-d-gray-60);
   --collapse-icon-color-collapsed: var(--color-d-gray-60);
-  --vault-name-color: var(--color-d-gray-50);
+  --vault-profile-color: var(--vault-name-color);
+  --vault-name-color: var(--color-d-gray-40);
+  --vault-name-color-hover: var(--color-d-gray-30);
   --vault-name-background: var(--color-d-gray-110);
   --vault-name-border: 1px solid var(--background-modifier-border);
   --search-clear-button-color: var(--icon-color);
@@ -1958,6 +1962,30 @@ svg.vault {
 
 .nav-action-button {
   padding: var(--size-2-3) var(--size-2-3);
+}
+
+body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile {
+  background: var(--vault-name-background);
+  padding: var(--size-2-2) var(--size-2-2);
+  border: var(--vault-name-border);
+  border-radius: var(--radius-m);
+  margin: 0px var(--size-4-2) var(--workspace-margin-bottom);
+}
+body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile .workspace-drawer-vault-switcher-icon {
+  display: none;
+}
+body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile .workspace-drawer-vault-name {
+  color: var(--vault-name-color);
+}
+body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  border-radius: calc(var(--radius-m) - 3px);
+  cursor: var(--cursor);
+}
+body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:hover .workspace-drawer-vault-name {
+  color: var(--vault-name-color-hover);
+}
+body:not(.is-mobile) .workspace-split.mod-horizontal > * {
+  width: unset;
 }
 
 /*────────── Status Bar ──────────*/
