@@ -301,7 +301,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-error-hover: var(--color-l-red-20);
   --background-modifier-success-rgb: var(--color-green-rgb);
   --background-modifier-success: var(--color-l-green-30);
-  --background-modifier-message: var(--color-l-gray-130);
+  --background-modifier-message: var(--color-l-gray-100);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
   --background-modifier-form-field: var(--color-l-gray-30);
@@ -344,6 +344,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --checkbox-border-color-hover: var(--color-l-gray-70);
   --search-clear-button-color: var(--color-l-gray-80);
   --search-icon-color: var(--color-l-gray-80);
+  --caret-color: var(--color-l-gray-80);
 }
 
 /*────────── Primary Styling Variables ──────────*/
@@ -572,7 +573,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --collapse-icon-color-collapsed: var(--color-l-gray-70);
   --vault-profile-color: var(--vault-name-color);
   --vault-name-color: var(--color-l-gray-100);
-  --vault-name-color-hover: var(--color-l-gray-110);
   --vault-name-background: var(--color-l-gray-30);
   --vault-name-border: 1px solid var(--background-modifier-border);
   --search-clear-button-color: var(--icon-color);
@@ -837,7 +837,7 @@ and CONTRIBUTION page ↴
   --background-modifier-error-hover: var(--color-d-red-30);
   --background-modifier-success-rgb: var(--color-green-rgb);
   --background-modifier-success: var(--color-d-green-30);
-  --background-modifier-message: var(--color-d-gray-130);
+  --background-modifier-message: var(--color-d-gray-60);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --background-modifier-form-field: var(--color-d-gray-130);
@@ -880,6 +880,7 @@ and CONTRIBUTION page ↴
   --checkbox-border-color-hover: var(--color-d-gray-60);
   --search-clear-button-color: var(--color-d-gray-60);
   --search-icon-color: var(--color-d-gray-60);
+  --caret-color: var(--color-d-gray-50);
 }
 
 /*────────── Primary Styling Variables ──────────*/

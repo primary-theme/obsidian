@@ -193,7 +193,7 @@ and CONTRIBUTION page ↴
     --background-modifier-success-rgb: var(--color-green-rgb);
     --background-modifier-success: var(--color-d-green-30);
 
-    --background-modifier-message: var(--color-d-gray-130);
+    --background-modifier-message: var(--color-d-gray-60);
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
@@ -261,6 +261,9 @@ and CONTRIBUTION page ↴
     // Search
     --search-clear-button-color: var(--color-d-gray-60);
     --search-icon-color: var(--color-d-gray-60);
+
+    // Caret
+    --caret-color: var(--color-d-gray-50);
 }
 
 /*────────── Primary Styling Variables ──────────*/
