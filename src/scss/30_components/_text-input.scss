@@ -41,7 +41,7 @@ input[type='password']:focus-visible,
 input[type='number']:focus-visible {
     color: var(--text-input-color-focused);
     background: var(--text-input-bg-active);
-    border: 1px solid var(--background-modifier-border);
+    border: 1px solid var(--input-border-color);
     box-shadow: var(--text-input-shadow-active);
     transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
 }

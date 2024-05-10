@@ -199,7 +199,7 @@ and CONTRIBUTION page ↴
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
 
     --background-modifier-form-field: var(--color-d-gray-130);
-
+    --input-border-color: var(--color-d-gray-140);
     --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.29),
                     inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.19),
                     0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.3);
@@ -289,9 +289,9 @@ and CONTRIBUTION page ↴
     --icon-color-hover: var(--color-d-gray-50);
     --icon-opacity-hover: 1;
     --icon-bg-hover: transparent;
-    --icon-color-focused: var(--color-d-gray-40);
+    --icon-color-focused: var(--color-d-gray-50);
     --icon-bg-pressed: transparent;
-    --icon-color-active: var(--color-d-gray-50);
+    --icon-color-active: var(--color-d-gray-60);
     --icon-opacity-active: 1;
     --icon-bg-active: var(--color-d-gray-90);
     --icon-bg-active-menu: transparent;
