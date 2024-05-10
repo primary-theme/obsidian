@@ -2664,6 +2664,7 @@ input.prompt-input:focus-visible {
   box-shadow: var(--prompt-suggestion-shadow-selected);
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex .suggestion-highlight {
+  font-weight: var(--font-semibold);
   color: var(--prompt-suggestion-highlight-color);
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex.is-selected .suggestion-highlight {
@@ -2673,7 +2674,6 @@ input.prompt-input:focus-visible {
 .prompt-instructions {
   background: var(--prompt-instructions-background);
   padding: var(--size-4-2) var(--size-4-3);
-  justify-content: right;
 }
 
 .prompt-instructions,
