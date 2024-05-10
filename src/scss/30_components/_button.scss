@@ -93,7 +93,7 @@ button {
     }
 }
 
-// Embed Block
+// Edit Embed Block Button
 .markdown-source-view.mod-cm6
 .cm-embed-block:not(.cm-table-widget):hover
 .edit-block-button {
@@ -105,5 +105,19 @@ button {
     &:hover {
         background: var(--embed-edit-btn-bg-hover);
         box-shadow: var(--embed-edit-btn-shadow-hover);
+    }
+}
+
+// Copy Code Block Button
+.markdown-source-view.mod-cm6 .code-block-flair {
+    display: flex;
+    right: 4px;
+    top: 4px;
+    line-height: 1;
+    padding: var(--size-2-3) var(--size-2-3);
+    border-radius: var(--radius-m);
+
+    &:hover {
+        box-shadow: var(--copy-code-btn-shadow);
     }
 }

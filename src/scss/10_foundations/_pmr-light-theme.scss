@@ -179,7 +179,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --interactive-accent: var(--color-accent-1);
     --interactive-accent-hover: var(--color-accent-2);
 
-    --background-modifier-hover: rgba(255, 255, 255, 0.25);
+    --background-modifier-hover: rgba(255, 255, 255, 0.5);
     --background-modifier-active-hover: var(--color-l-gray-60);
 
     --background-modifier-border: var(--color-l-gray-60);
@@ -501,6 +501,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // --code-string: var(--color-l-yellow-30);
     // --code-tag: var(--color-l-yellow-10);
     // --code-value: var(--color-l-green-20);
+
+    --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                            0px 2px 4px -2px rgba(0, 0, 0, 0.06);
 
     // Drag Ghost
     --drag-ghost-background: var(--interactive-accent);
