@@ -370,7 +370,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --icon-bg-hover: transparent;
   --icon-color-focused: var(--color-l-gray-90);
   --icon-bg-pressed: transparent;
-  --icon-color-active: var(--color-l-gray-80);
+  --icon-color-active: var(--color-l-gray-100);
   --icon-opacity-active: 1;
   --icon-bg-active: var(--color-l-gray-60);
   --icon-bg-active-menu: transparent;
@@ -900,7 +900,7 @@ and CONTRIBUTION page ↴
   --icon-bg-hover: transparent;
   --icon-color-focused: var(--color-d-gray-50);
   --icon-bg-pressed: transparent;
-  --icon-color-active: var(--color-d-gray-60);
+  --icon-color-active: var(--color-d-gray-40);
   --icon-opacity-active: 1;
   --icon-bg-active: var(--color-d-gray-90);
   --icon-bg-active-menu: transparent;
@@ -1244,10 +1244,10 @@ body {
 .clickable-icon.has-active-menu:hover {
   color: var(--icon-color-focused);
 }
-.clickable-icon.is-active {
+.clickable-icon.is-active.is-active {
   background: var(--icon-bg-active);
 }
-.clickable-icon.is-active:hover {
+.clickable-icon.is-active.is-active:hover {
   color: var(--icon-color-active);
 }
 
@@ -3805,6 +3805,9 @@ body {
 .kanban-plugin__item-button-wrapper {
   border-top: none;
 }
+.kanban-plugin__lane-title:hover {
+  cursor: text;
+}
 .kanban-plugin__lane-title-count:is(div) {
   font-size: 0.8em;
   font-weight: 500;
@@ -3853,6 +3856,9 @@ body {
 .kanban-plugin__item-button-wrapper {
   padding-top: 0;
 }
+.kanban-plugin__item-input:is(.kanban-plugin__item-title-wrapper textarea) {
+  background: var(--kanban-item-bg);
+}
 .kanban-plugin__new-item-button:is(button) {
   display: flex;
   gap: var(--size-2-2);
@@ -3884,12 +3890,29 @@ body {
 .kanban-plugin__item-form .kanban-plugin__item-input-wrapper {
   color: var(--text-input-color-focused);
   background: var(--text-input-bg-active);
+  padding: var(--size-2-3) var(--size-4-3);
   border: 1px solid var(--text-input-border-color);
   box-shadow: var(--text-input-shadow-active);
   transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
 }
 .kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
   filter: none;
+}
+.kanban-plugin__item-postfix-button-wrapper {
+  padding: var(--size-2-2) var(--size-2-3);
+}
+.kanban-plugin__item-postfix-button {
+  padding: 0;
+}
+.kanban-plugin__item-postfix-button[aria-label=Cancel] {
+  border-radius: var(--close-button-radius);
+}
+.kanban-plugin__item-postfix-button[aria-label=Cancel]:hover {
+  color: var(--text-on-accent);
+  background: var(--background-modifier-error-hover);
+}
+.kanban-plugin__item-postfix-button[aria-label=Cancel]:active {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=main.css.map */
