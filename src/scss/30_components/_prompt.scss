@@ -31,6 +31,7 @@ input.prompt-input:focus-visible {
     }
 
     &.mod-complex .suggestion-highlight {
+        font-weight: var(--font-semibold);
         color: var(--prompt-suggestion-highlight-color);
     }
 
@@ -43,7 +44,6 @@ input.prompt-input:focus-visible {
 .prompt-instructions {
     background: var(--prompt-instructions-background);
     padding: var(--size-4-2) var(--size-4-3);
-    justify-content: right;
 }
 
 .prompt-instructions,
