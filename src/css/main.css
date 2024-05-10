@@ -636,9 +636,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --canvas-menu-border: 1px solid var(--background-modifier-border);
   --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.02),
                           0px 2px 6px 0px rgba(0, 0, 0, 0.03);
-  --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.16),
-                          -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.12),
-                          -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.05);
+  --tab-outline-color: transparent;
+  --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.08),
+                          -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.04),
+                          -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.06);
   --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-primary));
   --kanban-lane-border: 1px solid var(--color-l-gray-40);
   --kanban-lane-shadow: none;
@@ -1166,6 +1167,7 @@ and CONTRIBUTION page ↴
   --canvas-menu-border: 1px solid var(--background-modifier-border);
   --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14),
                           0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+  --tab-outline-color: transparent;
   --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.31),
                           -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.27),
                           -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.2);
@@ -2185,13 +2187,17 @@ body {
   --tab-font-weight: inherit;
   --tab-container-background: var(--background-secondary);
   --tab-divider-color: var(--background-modifier-border-hover);
-  --tab-outline-color: var(--divider-color);
+  --tab-outline-color: var(--color-l-gray-70);
   --tab-outline-width: 1px;
   --tab-curve: 6px;
   --tab-radius: var(--radius-s);
   --tab-radius-active: 6px 6px 0 0;
   --tab-width: 200px;
   --tab-max-width: 320px;
+  /* Stacked tabs */
+  --tab-stacked-pane-width: 700px;
+  --tab-stacked-header-width: var(--header-height);
+  --tab-stacked-font-size: var(--font-ui-small);
 }
 
 .mod-root .workspace-leaf-content {
@@ -2292,6 +2298,9 @@ body {
   padding-bottom: 0;
 }
 
+.mod-root .workspace-tabs.mod-stacked {
+  --tab-stacked-header-width: 40px;
+}
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
   border-radius: var(--file-border-radius);
   margin-bottom: var(--workspace-margin-bottom);
@@ -2344,6 +2353,9 @@ body {
 .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active) {
   color: var(--icon-color);
   transition: border, border-color var(--anim-duration-fast) var(--anim-motion-swing);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):not(:first-child) {
+  border-left: 1px solid var(--background-modifier-border);
 }
 .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover {
   color: var(--icon-color-hover);

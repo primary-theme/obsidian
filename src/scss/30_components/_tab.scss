@@ -14,13 +14,18 @@ body {
     --tab-font-weight: inherit;
     --tab-container-background: var(--background-secondary);
     --tab-divider-color: var(--background-modifier-border-hover);
-    --tab-outline-color: var(--divider-color);
+    --tab-outline-color: var(--color-l-gray-70);
     --tab-outline-width: 1px;
     --tab-curve: 6px;
     --tab-radius: var(--radius-s);
     --tab-radius-active: 6px 6px 0 0;
     --tab-width: 200px;
     --tab-max-width: 320px;
+
+    /* Stacked tabs */
+    --tab-stacked-pane-width: 700px;
+    --tab-stacked-header-width: var(--header-height);
+    --tab-stacked-font-size: var(--font-ui-small);
 }
 
 // Default Sizing and Alignment
@@ -160,6 +165,9 @@ body {
 
 // Stacked Tabs
 .mod-root .workspace-tabs.mod-stacked {
+    // 40px is the default size of --header-height in the Default Theme
+    --tab-stacked-header-width: 40px;
+
     .workspace-tab-container {
         border-radius: var(--file-border-radius);
         margin-bottom: var(--workspace-margin-bottom);
@@ -229,6 +237,10 @@ body {
         &:not(.is-active) {
             color: var(--icon-color);
             transition: border, border-color var(--anim-duration-fast) var(--anim-motion-swing);
+
+            &:not(:first-child) {
+                border-left: 1px solid var(--background-modifier-border);
+            }
             
             &:hover {
                 color: var(--icon-color-hover);
