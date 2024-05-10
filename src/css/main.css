@@ -305,7 +305,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
   --background-modifier-form-field: var(--color-l-gray-30);
-  --input-border-color: var(--color-l-gray-60);
   --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(var(--color-l-black-rgb), 0.09),
                   0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
@@ -531,6 +530,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --text-input-color: var(--color-l-gray-90);
   --text-input-color-focused: var(--color-l-gray-120);
   --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
+  --text-input-border-color: var(--color-l-gray-60);
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
                               inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
                               0px 1px 6px 0px rgba(0, 0, 0, 0.07);
@@ -647,10 +647,15 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --kanban-title-count-color: var(--color-l-gray-120);
   --kanban-title-count-bg: var(--color-l-gray-60);
   --kanban-item-bg: var(--color-l-gray-10);
+  --kanban-item-border: none;
   --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
                           inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
                           inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
                           0px 2px 2px 0px rgba(0, 0, 0, 0.03);
+  --kanban-drag-item-border: none;
+  --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.19),
+                              0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.22),
+                              0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.29);
   --kanban-new-item-color: var(--text-faint);
   --kanban-new-item-color-hover: var(--text-muted);
   --kanban-new-item-bg: transparent;
@@ -819,9 +824,9 @@ and CONTRIBUTION page ↴
   --interactive-accent-hover: var(--color-accent-2);
   --background-modifier-hover: var(--color-d-gray-100);
   --background-modifier-active-hover: var(--color-d-gray-70);
-  --background-modifier-border: var(--color-d-gray-80);
-  --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
-  --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
+  --background-modifier-border: var(--color-d-gray-90);
+  --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 80%, var(--color-d-gray-80));
+  --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 80%, var(--color-d-gray-80));
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
@@ -831,7 +836,6 @@ and CONTRIBUTION page ↴
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --background-modifier-form-field: var(--color-d-gray-130);
-  --input-border-color: var(--color-d-gray-140);
   --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.29),
                   inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.19),
                   0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.3);
@@ -1056,6 +1060,7 @@ and CONTRIBUTION page ↴
   --text-input-color: var(--color-d-gray-50);
   --text-input-color-focused: var(--color-d-gray-30);
   --text-input-bg-active: var(--color-d-gray-140);
+  --text-input-border-color: var(--color-d-gray-140);
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
                               inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
                               0px 1px 6px 0px rgba(0, 0, 0, 0.37);
@@ -1172,10 +1177,15 @@ and CONTRIBUTION page ↴
   --kanban-title-count-color: var(--color-d-gray-40);
   --kanban-title-count-bg: var(--color-d-gray-80);
   --kanban-item-bg: var(--color-d-gray-90);
+  --kanban-item-border: none;
   --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.4),
                           inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
                           inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
                           0px 2px 2px 0px rgba(0, 0, 0, 0.13);
+  --kanban-drag-item-border: none;
+  --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.49),
+                              0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.52),
+                              0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.59);
   --kanban-new-item-color: var(--text-faint);
   --kanban-new-item-color-hover: var(--text-muted);
   --kanban-new-item-bg: transparent;
@@ -2552,7 +2562,7 @@ input[type=password]:focus-visible,
 input[type=number]:focus-visible {
   color: var(--text-input-color-focused);
   background: var(--text-input-bg-active);
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--text-input-border-color);
   box-shadow: var(--text-input-shadow-active);
   transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
 }
@@ -3828,7 +3838,7 @@ body {
   margin-top: 0;
 }
 .kanban-plugin__item {
-  border: none;
+  border: var(--kanban-item-border);
   overflow: visible;
 }
 .kanban-plugin__item-title-wrapper {
@@ -3863,6 +3873,10 @@ body {
   opacity: 0.7;
   padding: var(--size-4-2) var(--size-4-3);
 }
+.kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
+  border: var(--kanban-drag-item-border);
+  box-shadow: var(--kanban-drag-item-shadow);
+}
 .kanban-plugin__item-form {
   border-top: none;
   padding-top: 0;
@@ -3870,7 +3884,7 @@ body {
 .kanban-plugin__item-form .kanban-plugin__item-input-wrapper {
   color: var(--text-input-color-focused);
   background: var(--text-input-bg-active);
-  border: 1px solid var(--background-modifier-border);
+  border: 1px solid var(--text-input-border-color);
   box-shadow: var(--text-input-shadow-active);
   transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
 }

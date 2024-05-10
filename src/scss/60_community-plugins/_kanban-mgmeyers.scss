@@ -65,7 +65,7 @@
 
     // Card
     &__item {
-        border: none;
+        border: var(--kanban-item-border);
         overflow: visible;
     }
     
@@ -110,6 +110,12 @@
         }
     }
 
+    // Drag Card
+    &__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
+        border: var(--kanban-drag-item-border);
+        box-shadow: var(--kanban-drag-item-shadow);
+    }
+
     // New Card Form
     &__item-form {
         border-top: none;
@@ -119,7 +125,7 @@
         .kanban-plugin__item-input-wrapper {
             color: var(--text-input-color-focused);
             background: var(--text-input-bg-active);
-            border: 1px solid var(--background-modifier-border);
+            border: 1px solid var(--text-input-border-color);
             box-shadow: var(--text-input-shadow-active);
             transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
         }
