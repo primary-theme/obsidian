@@ -11,6 +11,10 @@
         border-bottom: none;
     }
 
+    &-container-inner {
+        padding: 1px 8px 6px;
+    }
+
     &.is-active {
         background: var(--tab-active-bg);
         box-shadow: var(--tab-active-shadow);
