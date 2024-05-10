@@ -22,6 +22,12 @@
         border-top: none;
     }
 
+    &__lane-title {
+        &:hover {
+            cursor: text;
+        }
+    }
+
     &__lane-title-count:is(div) {
         font-size: 0.8em;
         font-weight: 500;
@@ -84,6 +90,10 @@
         padding-top: 0;
     }
 
+    &__item-input:is(.kanban-plugin__item-title-wrapper textarea) {
+        background: var(--kanban-item-bg);
+    }
+
     // Add a Card Button
     &__new-item-button:is(button) {
         display: flex;
@@ -125,14 +135,38 @@
         .kanban-plugin__item-input-wrapper {
             color: var(--text-input-color-focused);
             background: var(--text-input-bg-active);
+            padding: var(--size-2-3) var(--size-4-3);
             border: 1px solid var(--text-input-border-color);
             box-shadow: var(--text-input-shadow-active);
             transition: background, box-shadow var(--anim-duration-fast) var(--anim-motion-smooth);
         }
     }
-    
+
     // Checkbox
     &__item-prefix-button-wrapper input[type=checkbox] {
         filter: none;
+    }
+
+    // Card Buttons
+    &__item-postfix-button-wrapper {
+        padding: var(--size-2-2) var(--size-2-3);
+    }
+
+    &__item-postfix-button {
+        padding: 0;
+    }
+
+    // Card Cancel Button
+    &__item-postfix-button[aria-label="Cancel"] {
+        border-radius: var(--close-button-radius);
+
+        &:hover {
+            color: var(--text-on-accent);
+            background: var(--background-modifier-error-hover);
+        }
+        
+        &:active {
+            opacity: 0.8;
+        }
     }
 }

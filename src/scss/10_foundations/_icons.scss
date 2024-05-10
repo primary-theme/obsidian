@@ -32,7 +32,7 @@ body {
         }
     }
 
-    &.is-active {
+    &.is-active.is-active {
         background: var(--icon-bg-active);
 
         &:hover {
