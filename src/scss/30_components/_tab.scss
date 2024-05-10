@@ -95,6 +95,21 @@ body {
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-1);
                 }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-1);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1-hover-active);
+                    }
+                }
             }
     
             &:nth-child(3n+2) {
@@ -107,6 +122,21 @@ body {
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-2);
                 }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-2);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2-hover-active);
+                    }
+                }
             }
     
             &:nth-child(3n+3) {
@@ -118,6 +148,21 @@ body {
     
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-3);
+                }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-3);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3-hover-active);
+                    }
                 }
             }
         }
@@ -145,13 +190,13 @@ body {
             }
 
             &:active {
-                color: var(--icon-color-focused);
+                color: var(--icon-color-hover);
                 border-color: transparent;
                 background: var(--tab-bg);
                 transform: translateY(var(--button-axis-offset));
 
                 .workspace-tab-header-inner-title {
-                    color: var(--icon-color-active);
+                    color: var(--icon-color-hover);
                 }
             }
         }
@@ -206,9 +251,57 @@ body {
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-1);
                 }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-1);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1-hover-active);
+                    }
+                }
             }
     
+            // alternating-color should be 2 (as in blue)
+            // but for some reason obsidian renders it switched in stacked tabs
+            // so 3n+2 must be alternating-color-3 not 2
             &:nth-child(3n+2) {
+                border-left: 1px solid var(--alternating-color-3);
+
+                .workspace-tab-header-inner-icon {
+                    color: var(--alternating-color-3);
+                }
+    
+                .workspace-tab-header-inner-title {
+                    color: var(--alternating-color-3);
+                }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-3);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3-hover-active);
+                    }
+                }
+            }
+    
+            // alternating-color should be 3 (as in red)
+            // but for some reason obsidian renders it switched in stacked tabs
+            // so 3n+3 must be alternating-color-2 not 3
+            &:nth-child(3n+3) {
                 border-left: 1px solid var(--alternating-color-2);
 
                 .workspace-tab-header-inner-icon {
@@ -218,17 +311,20 @@ body {
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-2);
                 }
-            }
-    
-            &:nth-child(3n+3) {
-                border-left: 1px solid var(--alternating-color-3);
 
-                .workspace-tab-header-inner-icon {
-                    color: var(--alternating-color-3);
-                }
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-2);
     
-                .workspace-tab-header-inner-title {
-                    color: var(--alternating-color-3);
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2-hover-active);
+                    }
                 }
             }
         }
@@ -242,7 +338,8 @@ body {
                 border-left: 1px solid var(--background-modifier-border);
             }
             
-            &:hover {
+            &:hover,
+            &:active {
                 color: var(--icon-color-hover);
                 cursor: pointer;
 
@@ -252,15 +349,6 @@ body {
 
                 .workspace-tab-header-inner-title {
                     color: var(--icon-color-hover);
-                }
-            }
-
-            &:active {
-                color: var(--icon-color-focused);
-                background: var(--tab-bg);
-
-                .workspace-tab-header-inner-title {
-                    color: var(--icon-color-active);
                 }
             }
         }
@@ -314,60 +402,6 @@ body {
             &:active {
                 color: var(--text-on-accent);
                 background: var(--non-alternating-color-hover-active);
-            }
-        }
-    }
-
-    // Active Tabs
-    &.is-active {
-        &:nth-child(3n+1) {
-            .workspace-tab-header-inner-close-button,
-            .workspace-tab-header-status-icon {
-                color: var(--alternating-color-1);
-
-                &:hover {
-                    color: var(--text-on-accent);
-                    background: var(--alternating-color-1);
-                }
-
-                &:active {
-                    color: var(--text-on-accent);
-                    background: var(--alternating-color-1-hover-active);
-                }
-            }
-        }
-
-        &:nth-child(3n+2) {
-            .workspace-tab-header-inner-close-button,
-            .workspace-tab-header-status-icon {
-                color: var(--alternating-color-2);
-
-                &:hover {
-                    color: var(--text-on-accent);
-                    background: var(--alternating-color-2);
-                }
-
-                &:active {
-                    color: var(--text-on-accent);
-                    background: var(--alternating-color-2-hover-active);
-                }
-            }
-        }
-
-        &:nth-child(3n+3) {
-            .workspace-tab-header-inner-close-button,
-            .workspace-tab-header-status-icon {
-                color: var(--alternating-color-3);
-
-                &:hover {
-                    color: var(--text-on-accent);
-                    background: var(--alternating-color-3);
-                }
-
-                &:active {
-                    color: var(--text-on-accent);
-                    background: var(--alternating-color-3-hover-active);
-                }
             }
         }
     }

@@ -183,8 +183,8 @@ and CONTRIBUTION page ↴
     --background-modifier-active-hover: var(--color-d-gray-70);
 
     --background-modifier-border: var(--color-d-gray-90);
-    --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 80%, var(--color-d-gray-80));
-    --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 80%, var(--color-d-gray-80));
+    --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
+    --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
 
     --background-modifier-error-rgb: var(--color-red-rgb);
     --background-modifier-error: var(--color-d-red-40);
