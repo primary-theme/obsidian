@@ -1888,6 +1888,10 @@ svg.vault {
 .mod-right-split .workspace-tab-header-container {
   border-bottom: none;
 }
+.mod-left-split .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container-inner {
+  padding: 1px 8px 6px;
+}
 .mod-left-split .workspace-tab-header.is-active,
 .mod-right-split .workspace-tab-header.is-active {
   background: var(--tab-active-bg);
