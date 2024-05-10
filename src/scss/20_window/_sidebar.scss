@@ -81,3 +81,38 @@
 .nav-action-button {
     padding: var(--size-2-3) var(--size-2-3);
 }
+
+// Vault Profile
+body:not(.is-mobile) .workspace-split {
+    .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile {
+        background: var(--vault-name-background);
+        padding: var(--size-2-2) var(--size-2-2);
+        border: var(--vault-name-border);
+        border-radius: var(--radius-m);
+        margin: 0px var(--size-4-2) var(--workspace-margin-bottom);
+
+        // Remove chevron-up-down Switcher Icon
+        .workspace-drawer-vault-switcher-icon {
+            display: none;
+        }
+
+        .workspace-drawer-vault-name {
+            color: var(--vault-name-color);
+        }
+
+        .workspace-drawer-vault-switcher {
+            border-radius: calc(var(--radius-m) - 3px);
+            cursor: var(--cursor);
+
+            &:hover {
+                .workspace-drawer-vault-name {
+                    color: var(--vault-name-color-hover);
+                }
+            }
+        }
+    }
+
+    &.mod-horizontal > * {
+        width: unset;
+    }
+}

@@ -1,5 +1,7 @@
 /*────────── Core Plugin: File Explorer ──────────*/
 
+// Vault Title is only available in Obsidian < v1.6
+// keeping this for compatibility until deprecation
 // Vault Title
 .nav-folder.mod-root > .nav-folder-title[data-path="/"] {
     justify-content: center;
