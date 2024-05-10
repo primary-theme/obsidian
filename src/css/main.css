@@ -826,8 +826,8 @@ and CONTRIBUTION page ↴
   --background-modifier-hover: var(--color-d-gray-100);
   --background-modifier-active-hover: var(--color-d-gray-70);
   --background-modifier-border: var(--color-d-gray-90);
-  --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 80%, var(--color-d-gray-80));
-  --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 80%, var(--color-d-gray-80));
+  --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
+  --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
@@ -2249,6 +2249,20 @@ body {
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-title {
   color: var(--alternating-color-1);
 }
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon {
+  color: var(--alternating-color-1);
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:hover,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-1);
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:active,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-1-hover-active);
+}
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) {
   border: 1px solid var(--alternating-color-2);
 }
@@ -2258,6 +2272,20 @@ body {
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-title {
   color: var(--alternating-color-2);
 }
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon {
+  color: var(--alternating-color-2);
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:hover,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-2);
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:active,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-2-hover-active);
+}
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) {
   border: 1px solid var(--alternating-color-3);
 }
@@ -2266,6 +2294,20 @@ body {
 }
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-title {
   color: var(--alternating-color-3);
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon {
+  color: var(--alternating-color-3);
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:hover,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-3);
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:active,
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-3-hover-active);
 }
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active) {
   color: var(--icon-color);
@@ -2286,13 +2328,13 @@ body {
   color: var(--icon-color-hover);
 }
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active):active {
-  color: var(--icon-color-focused);
+  color: var(--icon-color-hover);
   border-color: transparent;
   background: var(--tab-bg);
   transform: translateY(var(--button-axis-offset));
 }
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
-  color: var(--icon-color-active);
+  color: var(--icon-color-hover);
 }
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header-new-tab, .workspace-tabs:not(.mod-stacked) .workspace-tab-header-tab-list {
   padding-bottom: 0;
@@ -2332,23 +2374,65 @@ body {
 .workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-title {
   color: var(--alternating-color-1);
 }
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon {
+  color: var(--alternating-color-1);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:hover,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-1);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:active,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-1-hover-active);
+}
 .workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) {
-  border-left: 1px solid var(--alternating-color-2);
-}
-.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-icon {
-  color: var(--alternating-color-2);
-}
-.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-title {
-  color: var(--alternating-color-2);
-}
-.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) {
   border-left: 1px solid var(--alternating-color-3);
 }
-.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-icon {
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-icon {
   color: var(--alternating-color-3);
 }
-.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-title {
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-title {
   color: var(--alternating-color-3);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon {
+  color: var(--alternating-color-3);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:hover,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-3);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:active,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-3-hover-active);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) {
+  border-left: 1px solid var(--alternating-color-2);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-icon {
+  color: var(--alternating-color-2);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-title {
+  color: var(--alternating-color-2);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon {
+  color: var(--alternating-color-2);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:hover,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:hover {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-2);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:active,
+.workspace-tabs.mod-stacked .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:active {
+  color: var(--text-on-accent);
+  background: var(--alternating-color-2-hover-active);
 }
 .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active) {
   color: var(--icon-color);
@@ -2357,22 +2441,15 @@ body {
 .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):not(:first-child) {
   border-left: 1px solid var(--background-modifier-border);
 }
-.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover {
+.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover, .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active {
   color: var(--icon-color-hover);
   cursor: pointer;
 }
-.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
   background: transparent;
 }
-.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title, .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
   color: var(--icon-color-hover);
-}
-.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active {
-  color: var(--icon-color-focused);
-  background: var(--tab-bg);
-}
-.workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
-  color: var(--icon-color-active);
 }
 .workspace-tabs.mod-stacked .workspace-tab-header-new-tab, .workspace-tabs.mod-stacked .workspace-tab-header-tab-list {
   padding-bottom: var(--size-2-2);
@@ -2409,48 +2486,6 @@ body {
 .workspace .mod-root .workspace-tabs .workspace-tab-header:not(.is-active) .workspace-tab-header-status-icon:active {
   color: var(--text-on-accent);
   background: var(--non-alternating-color-hover-active);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon {
-  color: var(--alternating-color-1);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:hover,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:hover {
-  color: var(--text-on-accent);
-  background: var(--alternating-color-1);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-inner-close-button:active,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+1) .workspace-tab-header-status-icon:active {
-  color: var(--text-on-accent);
-  background: var(--alternating-color-1-hover-active);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon {
-  color: var(--alternating-color-2);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:hover,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:hover {
-  color: var(--text-on-accent);
-  background: var(--alternating-color-2);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-inner-close-button:active,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+2) .workspace-tab-header-status-icon:active {
-  color: var(--text-on-accent);
-  background: var(--alternating-color-2-hover-active);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon {
-  color: var(--alternating-color-3);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:hover,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:hover {
-  color: var(--text-on-accent);
-  background: var(--alternating-color-3);
-}
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-inner-close-button:active,
-.workspace .mod-root .workspace-tabs .workspace-tab-header.is-active:nth-child(3n+3) .workspace-tab-header-status-icon:active {
-  color: var(--text-on-accent);
-  background: var(--alternating-color-3-hover-active);
 }
 .workspace .mod-root .workspace-tabs .workspace-tab-header-new-tab .clickable-icon {
   color: var(--icon-color);
