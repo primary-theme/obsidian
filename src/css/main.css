@@ -1890,7 +1890,7 @@ svg.vault {
 }
 .mod-left-split .workspace-tab-header-container-inner,
 .mod-right-split .workspace-tab-header-container-inner {
-  padding: 1px 8px 6px;
+  padding-bottom: 6px;
 }
 .mod-left-split .workspace-tab-header.is-active,
 .mod-right-split .workspace-tab-header.is-active {
