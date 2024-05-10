@@ -159,7 +159,7 @@
         line-height: normal;
         padding: var(--size-4-2) var(--size-4-4);
         border: 1px solid var(--background-modifier-border);
-        border-radius: 2em;
+        border-radius: var(--new-tab-btn-radius);
         margin: var(--size-2-3) var(--size-2-3);
         transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 

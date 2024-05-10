@@ -199,6 +199,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
 
     --background-modifier-form-field: var(--color-l-gray-30);
+    --input-border-color: var(--color-l-gray-60);
     --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
                     inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(var(--color-l-black-rgb), 0.09),
                     0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
@@ -291,7 +292,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --icon-bg-hover: transparent;
     --icon-color-focused: var(--color-l-gray-90);
     --icon-bg-pressed: transparent;
-    --icon-color-active: var(--color-l-gray-110);
+    --icon-color-active: var(--color-l-gray-80);
     --icon-opacity-active: 1;
     --icon-bg-active: var(--color-l-gray-60);
     --icon-bg-active-menu: transparent;
