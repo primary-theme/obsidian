@@ -109,13 +109,13 @@ button {
 }
 
 // Copy Code Block Button
-.markdown-source-view.mod-cm6 .code-block-flair {
+.markdown-source-view.mod-cm6 .code-block-flair,
+.markdown-rendered button.copy-code-button {
     display: flex;
-    right: 4px;
-    top: 4px;
     line-height: 1;
     padding: var(--size-2-3) var(--size-2-3);
     border-radius: var(--radius-m);
+    transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 
     &:hover {
         box-shadow: var(--copy-code-btn-shadow);

@@ -2135,15 +2135,16 @@ button.mod-cta:active, button.mod-cta:focus {
   box-shadow: var(--embed-edit-btn-shadow-hover);
 }
 
-.markdown-source-view.mod-cm6 .code-block-flair {
+.markdown-source-view.mod-cm6 .code-block-flair,
+.markdown-rendered button.copy-code-button {
   display: flex;
-  right: 4px;
-  top: 4px;
   line-height: 1;
   padding: var(--size-2-3) var(--size-2-3);
   border-radius: var(--radius-m);
+  transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
-.markdown-source-view.mod-cm6 .code-block-flair:hover {
+.markdown-source-view.mod-cm6 .code-block-flair:hover,
+.markdown-rendered button.copy-code-button:hover {
   box-shadow: var(--copy-code-btn-shadow);
 }
 
