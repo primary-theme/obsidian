@@ -550,8 +550,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Slider
     --slider-track-background: var(--color-l-gray-60);
-    --slider-track-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
-                            0px 0px 0px 1px rgba(255, 255, 255, 0.07);
+    --slider-track-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                            0px 0px 0px 1px rgba(255, 255, 255, 0.08);
 
     --slider-thumb-bg: var(--color-l-gray-10);
     --slider-thumb-border-width: 0px;
@@ -564,7 +564,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                  inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
                                  inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
                                  0px 1px 2px 0px rgba(0, 0, 0, 0.1),
-                                 0px 0px 0px 6px rgba(0, 0, 0, 0.03);
+                                 0px 0px 0px 6px rgba(0, 0, 0, 0.04);
 
     // Text Input
     --text-input-color: var(--color-l-gray-90);

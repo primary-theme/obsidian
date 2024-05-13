@@ -2,18 +2,26 @@
 
 // TODO For some reason the slider is not rendering as expected when pressed. 
 
-input[type='range'] {
+body:not(.is-mobile) input[type='range'],
+body:not(.is-mobile) input[type='range']:hover,
+body:not(.is-mobile) input[type='range']:focus {
     box-shadow: var(--slider-track-shadow);
+}
 
-    &::-webkit-slider-thumb {
-        background: var(--slider-thumb-bg);
-        box-shadow: var(--slider-thumb-shadow);
-        cursor: grab;
+body:not(.is-mobile) input[type='range']::-webkit-slider-thumb {
+    background: var(--slider-thumb-bg);
+    box-shadow: var(--slider-thumb-shadow);
+    cursor: grab;
+}
 
-        &:hover,
-        &:active {
-            background: var(--slider-thumb-bg);
-            box-shadow: var(--slider-thumb-shadow-hover);
-        }
-    }
+body:not(.is-mobile) input[type='range']::-webkit-slider-thumb:hover,
+body:not(.is-mobile) input[type='range']::-webkit-slider-thumb:active {
+    background: var(--slider-thumb-bg);
+    box-shadow: var(--slider-thumb-shadow-hover);
+}
+
+body:not(.is-mobile) input[type='range']:focus::-webkit-slider-thumb,
+body:not(.is-mobile) input[type='range']:focus-visible::-webkit-slider-thumb {
+    background: var(--slider-thumb-bg);
+    box-shadow: var(--slider-thumb-shadow-hover);
 }
