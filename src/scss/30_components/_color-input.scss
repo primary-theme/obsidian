@@ -1,2 +1,8 @@
 /*────────── Color Input ──────────*/
-// TODO
+
+@media (hover: hover) {
+    input[type="color"]::-webkit-color-swatch:hover,
+    input[type="color"]::-webkit-color-swatch:hover:focus {
+      box-shadow: var(--swatch-shadow), 0px 0px 0px 3px var(--background-modifier-border-hover);
+    }
+}
