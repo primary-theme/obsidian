@@ -33,7 +33,7 @@ body:not(.is-phone) {
         border-radius: var(--settings-nav-item-radius);
         margin-bottom: var(--size-2-1);
         transition: box-shadow var(--button-anim);
-        transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
+        transition: padding-left var(--anim-duration-fast) var(--anim-motion-swing);
         
         &:hover:not(.is-active) {
             color: var(--settings-nav-item-text-color-hover);
@@ -44,7 +44,6 @@ body:not(.is-phone) {
     
         &:active:not(.is-active) {
             color: var(--settings-nav-item-text-color-active);
-            transform: translateY(var(--button-axis-offset));
         }
     
         &.is-active {

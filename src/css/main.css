@@ -796,7 +796,7 @@ and CONTRIBUTION page ↴
   --color-d-blue-10: hsla(199, 39%, 56%, 1);
   --color-d-blue-20: hsla(198, 75%, 61%, 1);
   --color-d-blue-30: hsla(198, 55%, 53%, 1);
-  --color-d-blue-40: hsla(208, 77%, 40%, 1);
+  --color-d-blue-40: hsla(201, 77%, 40%, 1);
   --color-d-alpha-blue: hsla(186, 64%, 46%, 0.2);
   --color-d-violet-10: hsla(280, 50%, 80%, 1);
   --color-d-violet-20: hsla(267, 68%, 75%, 1);
@@ -951,12 +951,12 @@ and CONTRIBUTION page ↴
 .theme-dark {
   --non-alternating-color: var(--color-d-gray-60);
   --non-alternating-color-hover-active: var(--color-d-gray-70);
-  --alternating-color-1: var(--color-d-yellow-30);
-  --alternating-color-1-hover-active: var(--color-d-yellow-40);
-  --alternating-color-2: var(--color-d-red-30);
-  --alternating-color-2-hover-active: var(--color-d-red-40);
-  --alternating-color-3: var(--color-d-blue-30);
-  --alternating-color-3-hover-active: var(--color-d-blue-40);
+  --alternating-color-1: color-mix(in srgb, var(--color-d-yellow-40) 70%, var(--color-d-yellow-20));
+  --alternating-color-1-hover-active: var(--color-d-yellow-30);
+  --alternating-color-2: color-mix(in srgb, var(--color-d-red-40) 70%, var(--color-d-red-20));
+  --alternating-color-2-hover-active: var(--color-d-red-30);
+  --alternating-color-3: color-mix(in srgb, var(--color-d-blue-40) 70%, var(--color-d-blue-20));
+  --alternating-color-3-hover-active: var(--color-d-blue-30);
   --icon-color: var(--color-d-gray-60);
   --icon-opacity: 1;
   --icon-bg: transparent;
@@ -1066,7 +1066,7 @@ and CONTRIBUTION page ↴
   --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --strikethrough-color: var(--color-d-gray-50);
   --inline-code-color: var(--color-d-red-10);
-  --inline-code-bg: var(--color-d-gray-110);
+  --inline-code-bg: var(--color-d-gray-130);
   --bold-italic-color: var(--color-d-gray-10);
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
   --tag-color: var(--color-d-blue-30);
@@ -2341,7 +2341,7 @@ body:not(.is-phone) .vertical-tab-nav-item {
   border-radius: var(--settings-nav-item-radius);
   margin-bottom: var(--size-2-1);
   transition: box-shadow var(--button-anim);
-  transition: padding-left var(--anim-duration-fast) var(--anim-motion-smooth);
+  transition: padding-left var(--anim-duration-fast) var(--anim-motion-swing);
 }
 body:not(.is-phone) .vertical-tab-nav-item:hover:not(.is-active) {
   color: var(--settings-nav-item-text-color-hover);
@@ -2351,7 +2351,6 @@ body:not(.is-phone) .vertical-tab-nav-item:hover:not(.is-active) {
 }
 body:not(.is-phone) .vertical-tab-nav-item:active:not(.is-active) {
   color: var(--settings-nav-item-text-color-active);
-  transform: translateY(var(--button-axis-offset));
 }
 body:not(.is-phone) .vertical-tab-nav-item.is-active {
   padding: var(--settings-nav-item-padding-active);
