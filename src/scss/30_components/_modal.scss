@@ -44,7 +44,6 @@ body:not(.is-phone) {
     
         &:active:not(.is-active) {
             color: var(--settings-nav-item-text-color-active);
-            background: var(--settings-nav-item-bg-active);
             transform: translateY(var(--button-axis-offset));
         }
     
@@ -54,17 +53,17 @@ body:not(.is-phone) {
     
         &.is-active:nth-child(3n+1) {
             background: var(--alternating-color-1);
-            box-shadow: var(--button-shadow);
+            box-shadow: var(--button-accent-shadow);
         }
     
         &.is-active:nth-child(3n+2) {
             background: var(--alternating-color-2);
-            box-shadow: var(--button-shadow);
+            box-shadow: var(--button-accent-shadow);
         }
     
         &.is-active:nth-child(3n+3) {
             background: var(--alternating-color-3);
-            box-shadow: var(--button-shadow);
+            box-shadow: var(--button-accent-shadow);
         }
     }
 }

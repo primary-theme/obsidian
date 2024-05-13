@@ -186,9 +186,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --color-l-gray-130: hsla(31, 45%, 20%, 1);
   --color-l-gray-140: hsla(33, 54%, 12%, 1);
   --color-l-alpha-gray: hsla(34, 29%, 60%, 0.2);
-  --color-l-white-rgb: 255, 255, 255;
-  --color-l-gray-rgb: 100, 100, 100;
-  --color-l-black-rgb: 0, 0, 0;
   --color-l-red-10: hsla(4, 54%, 61%, 1);
   --color-l-red-20: hsla(4, 72%, 55%, 1);
   --color-l-red-30: hsla(4, 56%, 48%, 1);
@@ -230,8 +227,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     your own liking.
 */
 .theme-light {
-  --mono-rgb-0: var(--color-l-black-rgb);
-  --mono-rgb-100: var(--color-l-gray-rgb);
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255;
   --color-red-rgb: 223, 90, 90;
   --color-red: hsla(0, 58%, 53%, 1);
   --color-orange-rgb: 231, 130, 63;
@@ -308,16 +305,24 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
   --background-modifier-form-field: var(--color-l-gray-30);
-  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.1),
-                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(var(--color-l-black-rgb), 0.09),
-                  0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
-  --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(var(--color-l-black-rgb), 0.09),
-                          0px 1px 3px 0px rgba(var(--color-l-black-rgb), 0.12),
-                          0px 2px 8px 0px rgba(var(--color-l-black-rgb), 0.09);
-  --input-shadow-active: inset 0px 0px 0px 1px rgba(var(--color-l-black-rgb), 0.15),
-                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-l-black-rgb), 0.09),
-                          0px 0px 2px 2px rgba(var(--color-l-black-rgb), 0.03);
+  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
+                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
+                  0px 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.15),
+                          0px 2px 6px -1px rgba(0, 0, 0, 0.1);
+  --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.09),
+                          inset 0px 2px 8px 0px rgba(0, 0, 0, 0.2),
+                          0px 0px 0px 1px rgba(255, 255, 255, 0.6);
   --text-normal: var(--color-l-gray-130);
   --text-muted: var(--color-l-gray-100);
   --text-faint: var(--color-l-gray-80);
@@ -382,6 +387,21 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
   --button-shadow-active: var(--input-shadow-active);
+  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.09),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.22),
+                          0px 2px 4px -1px rgba(0, 0, 0, 0.19);
+  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
+                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
+                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24);
+  --button-accent-shadow-active: var(--input-shadow-active);
   --button-axis-offset: 2px;
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
@@ -401,13 +421,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --settings-nav-item-text-color: var(--color-l-gray-110);
   --settings-nav-item-text-color-hover: var(--color-l-gray-130);
   --settings-nav-item-bg-hover: transparent;
-  --settings-nav-item-text-color-active: var(--color-l-gray-70);
-  --settings-nav-item-bg-active: var(--color-l-gray-60);
+  --settings-nav-item-text-color-active: var(--color-l-gray-80);
   --tab-bg: transparent;
   --tab-active-bg: var(--background-primary);
   --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
-                      inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-l-black-rgb), 0.09),
-                      0px 2px 3px 0px rgba(var(--color-l-black-rgb), 0.08);
+                      inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.09),
+                      0px 1px 2px -0.1px rgba(0, 0, 0, 0.15);
   --inline-title-color: var(--color-l-gray-140);
   --h1-color: var(--color-l-gray-140);
   --h2-color: var(--color-l-gray-140);
@@ -726,9 +745,6 @@ and CONTRIBUTION page ↴
   --color-d-gray-130: hsla(24, 18%, 10%, 1);
   --color-d-gray-140: hsla(32, 21%, 8%, 1);
   --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
-  --color-d-white-rgb: 255, 255, 255;
-  --color-d-gray-rgb: 100, 100, 100;
-  --color-d-black-rgb: 0, 0, 0;
   --color-d-red-10: hsla(4, 65%, 60%, 1);
   --color-d-red-20: hsla(5, 100%, 70%, 1);
   --color-d-red-30: hsla(4, 90%, 61%, 1);
@@ -770,8 +786,8 @@ and CONTRIBUTION page ↴
     your own liking.
 */
 .theme-dark {
-  --mono-rgb-0: var(--color-d-black-rgb);
-  --mono-rgb-100: var(--color-d-white-rgb);
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255;
   --color-red-rgb: 228, 87, 78;
   --color-red: hsla(0, 58%, 53%, 1);
   --color-orange-rgb: 238, 163, 89;
@@ -848,16 +864,16 @@ and CONTRIBUTION page ↴
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --background-modifier-form-field: var(--color-d-gray-130);
-  --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.29),
-                  inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.19),
-                  0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.3);
-  --input-shadow-hover: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
-                          inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
-                          0px 1px 3px 0px rgba(var(--color-d-black-rgb), 0.3),
-                          0px 2px 8px 0px rgba(var(--color-d-black-rgb), 0.37);
-  --input-shadow-active: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
-                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-d-black-rgb), 0.21),
-                          0px 0px 2px 2px rgba(var(--color-d-black-rgb), 0.08);
+  --input-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.29),
+                  inset 0px -2px 0px 2px rgba(0, 0, 0, 0.19),
+                  0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+  --input-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
+                          inset 0px -2px 0px 2px rgba(0, 0, 0, 0.21),
+                          0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+                          0px 2px 8px 0px rgba(0, 0, 0, 0.37);
+  --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
+                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.21),
+                          0px 0px 2px 2px rgba(0, 0, 0, 0.08);
   --text-normal: var(--color-d-gray-20);
   --text-muted: var(--color-d-gray-40);
   --text-faint: var(--color-d-gray-50);
@@ -945,8 +961,8 @@ and CONTRIBUTION page ↴
   --tab-bg: transparent;
   --tab-active-bg: var(--background-primary);
   --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
-                       inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
-                       0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
+                       inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.21),
+                       0px 2px 3px 0px rgba(0, 0, 0, 0.38);
   --inline-title-color: var(--color-d-gray-10);
   --h1-color: var(--color-d-gray-10);
   --h2-color: var(--color-d-gray-10);
@@ -2063,20 +2079,41 @@ button {
   cursor: pointer;
 }
 button:active {
-  background: var(--interactive-hover);
+  background: var(--interactive-normal);
   padding: var(--button-padding-active);
   box-shadow: var(--button-shadow-active);
   transition: var(--button-anim);
 }
-button.mod-cta:active, button.mod-cta:focus {
-  background: var(--interactive-accent-hover);
+button.mod-cta {
+  box-shadow: var(--button-accent-shadow);
+}
+button.mod-cta:hover {
+  box-shadow: var(--button-accent-shadow-hover);
+}
+button.mod-cta:active {
+  background: var(--interactive-accent);
+  box-shadow: var(--button-accent-shadow-active);
+}
+button.mod-warning {
+  box-shadow: var(--button-accent-shadow);
+}
+button.mod-warning:hover {
+  box-shadow: var(--button-accent-shadow-hover);
+}
+button.mod-warning:active {
+  box-shadow: var(--button-accent-shadow-active);
 }
 button.mod-destructive {
   color: var(--text-on-accent);
   background: var(--background-modifier-warning);
+  box-shadow: var(--button-accent-shadow);
 }
 button.mod-destructive:hover {
   background: var(--background-modifier-warning-hover);
+  box-shadow: var(--button-accent-shadow-hover);
+}
+button.mod-destructive:active, button.mod-destructive:focus {
+  box-shadow: var(--button-accent-shadow-active);
 }
 button.mod-loading {
   opacity: 0.3;
@@ -2117,20 +2154,21 @@ button.mod-loading {
   padding: var(--button-metadata-padding);
   border-radius: var(--button-s-radius);
   margin: var(--size-2-2) var(--size-2-2);
-  box-shadow: var(--input-shadow);
+  box-shadow: var(--button-accent-shadow);
   transition: var(--button-anim);
   transition: var(--background-anim);
 }
 .metadata-container .metadata-add-button:hover {
   color: var(--text-on-accent);
   background: var(--interactive-accent-hover);
-  box-shadow: var(--input-shadow);
+  box-shadow: var(--button-accent-shadow-hover);
 }
 .metadata-container .metadata-add-button:hover .text-button-icon {
   color: var(--text-on-accent);
 }
 .metadata-container .metadata-add-button:active {
   padding: var(--button-metadata-padding-active);
+  box-shadow: var(--button-accent-shadow-active);
 }
 .metadata-container .metadata-add-button.text-icon-button:active {
   color: var(--text-on-accent);
@@ -2217,7 +2255,6 @@ body:not(.is-phone) .vertical-tab-nav-item:hover:not(.is-active) {
 }
 body:not(.is-phone) .vertical-tab-nav-item:active:not(.is-active) {
   color: var(--settings-nav-item-text-color-active);
-  background: var(--settings-nav-item-bg-active);
   transform: translateY(var(--button-axis-offset));
 }
 body:not(.is-phone) .vertical-tab-nav-item.is-active {
@@ -2225,15 +2262,15 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 }
 body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+1) {
   background: var(--alternating-color-1);
-  box-shadow: var(--button-shadow);
+  box-shadow: var(--button-accent-shadow);
 }
 body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+2) {
   background: var(--alternating-color-2);
-  box-shadow: var(--button-shadow);
+  box-shadow: var(--button-accent-shadow);
 }
 body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+3) {
   background: var(--alternating-color-3);
-  box-shadow: var(--button-shadow);
+  box-shadow: var(--button-accent-shadow);
 }
 
 /*────────── Tabs ──────────*/
