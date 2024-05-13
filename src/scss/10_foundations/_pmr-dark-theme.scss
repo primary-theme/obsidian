@@ -68,7 +68,7 @@ and CONTRIBUTION page ↴
     --color-d-blue-10: hsla(199, 39%, 56%, 1);
     --color-d-blue-20: hsla(198, 75%, 61%, 1);
     --color-d-blue-30: hsla(198, 55%, 53%, 1);
-    --color-d-blue-40: hsla(208, 77%, 40%, 1);
+    --color-d-blue-40: hsla(201, 77%, 40%, 1);
 
     --color-d-alpha-blue: hsla(186, 64%, 46%, 0.2);
 
@@ -286,12 +286,12 @@ and CONTRIBUTION page ↴
     // Alternating Color for Ribbon and Tabs
     --non-alternating-color: var(--color-d-gray-60);
     --non-alternating-color-hover-active: var(--color-d-gray-70);
-    --alternating-color-1: var(--color-d-yellow-30);
-    --alternating-color-1-hover-active: var(--color-d-yellow-40);
-    --alternating-color-2: var(--color-d-red-30);
-    --alternating-color-2-hover-active: var(--color-d-red-40);
-    --alternating-color-3: var(--color-d-blue-30);
-    --alternating-color-3-hover-active: var(--color-d-blue-40);
+    --alternating-color-1: color-mix(in srgb, var(--color-d-yellow-40) 70%, var(--color-d-yellow-20));
+    --alternating-color-1-hover-active: var(--color-d-yellow-30);
+    --alternating-color-2: color-mix(in srgb, var(--color-d-red-40) 70%, var(--color-d-red-20));
+    --alternating-color-2-hover-active: var(--color-d-red-30);
+    --alternating-color-3: color-mix(in srgb, var(--color-d-blue-40) 70%, var(--color-d-blue-20));
+    --alternating-color-3-hover-active: var(--color-d-blue-30);
 
     // Icons and Sidebar Action Buttons
     --icon-color: var(--color-d-gray-60);
@@ -448,7 +448,7 @@ and CONTRIBUTION page ↴
 
     // Inline Code
     --inline-code-color: var(--color-d-red-10);
-    --inline-code-bg: var(--color-d-gray-110);
+    --inline-code-bg: var(--color-d-gray-130);
 
     // Bold, Italic
     --bold-italic-color: var(--color-d-gray-10);
