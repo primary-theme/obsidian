@@ -43,7 +43,7 @@ body {
 }
 
 // Media Embeds
-.workspace-leaf-content img:not([width]),
+.workspace-leaf-content img,
 .workspace-leaf-content audio,
 .workspace-leaf-content video {
     border-radius: var(--radius-m);

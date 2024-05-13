@@ -4,5 +4,6 @@
 .cm-s-obsidian code:not(pre code),
 .markdown-rendered code:not(pre code) {
     color: var(--inline-code-color);
+    background: var(--inline-code-bg);
     border-radius: var(--inline-code-radius);
 }

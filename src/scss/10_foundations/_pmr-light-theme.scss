@@ -30,6 +30,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-gray-130: hsla(31, 45%, 20%, 1);
     --color-l-gray-140: hsla(33, 54%, 12%, 1);
 
+    --color-l-alpha-gray: hsla(34, 29%, 60%, 0.2); // gray-80s
+
     --color-l-white-rgb: 255, 255, 255; // rgba
     --color-l-gray-rgb: 100, 100, 100; // rgba
     --color-l-black-rgb: 0, 0, 0; // rgba
@@ -190,6 +192,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --background-modifier-error: var(--color-l-red-30);
     --background-modifier-error-hover: var(--color-l-red-20);
 
+    --background-modifier-warning: var(--color-l-orange-30);
+    --background-modifier-warning-hover: var(--color-l-orange-20);
+
     --background-modifier-success-rgb: var(--color-green-rgb);
     --background-modifier-success: var(--color-l-green-30);
 
@@ -223,7 +228,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --text-success: var(--color-l-green-30);
 
-    --text-selection: var(--color-l-gray-60);
+    --text-selection: var(--color-l-alpha-gray);
     --text-highlight-bg-rgb: var(--color-yellow-rgb);
     --text-highlight-bg: var(--color-l-alpha-yellow);
 
@@ -410,7 +415,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Inline Code
     --inline-code-color: var(--color-l-red-10);
-    --inline-code-bg: var(--color-l-gray-30);
+    --inline-code-bg: var(--color-l-gray-10);
 
     // Bold, Italic
     --bold-italic-color: var(--color-l-gray-140);
@@ -601,6 +606,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --search-clear-button-color-hover: var(--background-modifier-error-hover);
     --search-icon-color: var(--icon-color);
     --search-result-background: var(--background-primary-alt);
+    --search-result-background-hover: color-mix(in srgb, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
 
     // Search Result Destination File
     --search-result-dest-file-color: var(--color-l-gray-100);
@@ -609,7 +615,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --search-result-dest-file-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
                                         inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
 
-    --search-result-dest-file-bg-hover: var(--color-l-gray-10);
+    --search-result-dest-file-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 50%, var(--color-l-gray-10));
     --search-result-dest-file-shadow-hover:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
                                         inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
                                         0px 2px 3px 0px rgba(0, 0, 0, 0.09);

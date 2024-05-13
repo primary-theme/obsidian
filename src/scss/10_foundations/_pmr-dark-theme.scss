@@ -30,6 +30,8 @@ and CONTRIBUTION page ↴
     --color-d-gray-130: hsla(24, 18%, 10%, 1);
     --color-d-gray-140: hsla(32, 21%, 8%, 1);
 
+    --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
+
     --color-d-white-rgb: 255, 255, 255; // rgba
     --color-d-gray-rgb: 100, 100, 100; // rgba
     --color-d-black-rgb: 0, 0, 0; // rgba
@@ -190,6 +192,9 @@ and CONTRIBUTION page ↴
     --background-modifier-error: var(--color-d-red-40);
     --background-modifier-error-hover: var(--color-d-red-30);
 
+    --background-modifier-warning: var(--color-d-orange-40);
+    --background-modifier-warning-hover: var(--color-d-orange-30);
+
     --background-modifier-success-rgb: var(--color-green-rgb);
     --background-modifier-success: var(--color-d-green-30);
 
@@ -223,7 +228,7 @@ and CONTRIBUTION page ↴
 
     --text-success: var(--color-d-green-30);
 
-    --text-selection: var(--color-d-gray-70);
+    --text-selection: var(--color-d-alpha-gray);
     --text-highlight-bg-rgb: var(--color-yellow-rgb);
     --text-highlight-bg: var(--color-d-alpha-yellow);
 
@@ -599,6 +604,7 @@ and CONTRIBUTION page ↴
     --search-clear-button-color-hover: var(--background-modifier-error-hover);
     --search-icon-color: var(--icon-color);
     --search-result-background: var(--background-primary-alt);
+    --search-result-background-hover: color-mix(in srgb, var(--color-d-gray-130) 50%, var(--color-d-gray-140));
 
     // Search Result Destination File
     --search-result-dest-file-color: var(--color-d-gray-50);

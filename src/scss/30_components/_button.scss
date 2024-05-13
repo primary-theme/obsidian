@@ -1,6 +1,4 @@
 /*────────── Button ──────────*/
-// TODO .mod-destructive
-
 button {
     padding: var(--button-padding);
     border-radius: var(--button-radius);
@@ -18,6 +16,20 @@ button {
     &.mod-cta:active,
     &.mod-cta:focus {
         background: var(--interactive-accent-hover);
+    }
+
+    &.mod-destructive {
+        color: var(--text-on-accent);
+        background: var(--background-modifier-warning);
+
+        &:hover {
+            background: var(--background-modifier-warning-hover);
+        }
+    }
+
+    &.mod-loading {
+        opacity: 0.3;
+        cursor: wait;
     }
 }
 
