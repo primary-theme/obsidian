@@ -185,6 +185,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --color-l-gray-120: hsla(36, 32%, 30%, 1);
   --color-l-gray-130: hsla(31, 45%, 20%, 1);
   --color-l-gray-140: hsla(33, 54%, 12%, 1);
+  --color-l-alpha-gray: hsla(34, 29%, 60%, 0.2);
   --color-l-white-rgb: 255, 255, 255;
   --color-l-gray-rgb: 100, 100, 100;
   --color-l-black-rgb: 0, 0, 0;
@@ -299,6 +300,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-l-red-30);
   --background-modifier-error-hover: var(--color-l-red-20);
+  --background-modifier-warning: var(--color-l-orange-30);
+  --background-modifier-warning-hover: var(--color-l-orange-20);
   --background-modifier-success-rgb: var(--color-green-rgb);
   --background-modifier-success: var(--color-l-green-30);
   --background-modifier-message: var(--color-l-gray-100);
@@ -323,7 +326,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --text-error: var(--color-l-red-30);
   --text-warning: var(--color-l-orange-30);
   --text-success: var(--color-l-green-30);
-  --text-selection: var(--color-l-gray-60);
+  --text-selection: var(--color-l-alpha-gray);
   --text-highlight-bg-rgb: var(--color-yellow-rgb);
   --text-highlight-bg: var(--color-l-alpha-yellow);
   --text-accent: var(--color-accent);
@@ -441,7 +444,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --strikethrough-color: var(--color-l-gray-80);
   --inline-code-color: var(--color-l-red-10);
-  --inline-code-bg: var(--color-l-gray-30);
+  --inline-code-bg: var(--color-l-gray-10);
   --bold-italic-color: var(--color-l-gray-140);
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
   --tag-color: var(--color-l-blue-30);
@@ -579,12 +582,13 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --search-clear-button-color-hover: var(--background-modifier-error-hover);
   --search-icon-color: var(--icon-color);
   --search-result-background: var(--background-primary-alt);
+  --search-result-background-hover: color-mix(in srgb, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
   --search-result-dest-file-color: var(--color-l-gray-100);
   --search-result-dest-file-bg: var(--color-l-gray-20);
   --search-result-dest-file-icon-color: var(--color-l-gray-70);
   --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
                                       inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
-  --search-result-dest-file-bg-hover: var(--color-l-gray-10);
+  --search-result-dest-file-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 50%, var(--color-l-gray-10));
   --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
                                       inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
                                       0px 2px 3px 0px rgba(0, 0, 0, 0.09);
@@ -721,6 +725,7 @@ and CONTRIBUTION page ↴
   --color-d-gray-120: hsla(28, 16%, 12%, 1);
   --color-d-gray-130: hsla(24, 18%, 10%, 1);
   --color-d-gray-140: hsla(32, 21%, 8%, 1);
+  --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
   --color-d-white-rgb: 255, 255, 255;
   --color-d-gray-rgb: 100, 100, 100;
   --color-d-black-rgb: 0, 0, 0;
@@ -835,6 +840,8 @@ and CONTRIBUTION page ↴
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
+  --background-modifier-warning: var(--color-d-orange-40);
+  --background-modifier-warning-hover: var(--color-d-orange-30);
   --background-modifier-success-rgb: var(--color-green-rgb);
   --background-modifier-success: var(--color-d-green-30);
   --background-modifier-message: var(--color-d-gray-60);
@@ -859,7 +866,7 @@ and CONTRIBUTION page ↴
   --text-error: var(--color-d-red-30);
   --text-warning: var(--color-d-orange-30);
   --text-success: var(--color-d-green-30);
-  --text-selection: var(--color-d-gray-70);
+  --text-selection: var(--color-d-alpha-gray);
   --text-highlight-bg-rgb: var(--color-yellow-rgb);
   --text-highlight-bg: var(--color-d-alpha-yellow);
   --text-accent: var(--color-accent);
@@ -1115,6 +1122,7 @@ and CONTRIBUTION page ↴
   --search-clear-button-color-hover: var(--background-modifier-error-hover);
   --search-icon-color: var(--icon-color);
   --search-result-background: var(--background-primary-alt);
+  --search-result-background-hover: color-mix(in srgb, var(--color-d-gray-130) 50%, var(--color-d-gray-140));
   --search-result-dest-file-color: var(--color-d-gray-50);
   --search-result-dest-file-bg: var(--color-d-gray-120);
   --search-result-dest-file-icon-color: var(--color-d-gray-70);
@@ -2062,6 +2070,17 @@ button:active {
 }
 button.mod-cta:active, button.mod-cta:focus {
   background: var(--interactive-accent-hover);
+}
+button.mod-destructive {
+  color: var(--text-on-accent);
+  background: var(--background-modifier-warning);
+}
+button.mod-destructive:hover {
+  background: var(--background-modifier-warning-hover);
+}
+button.mod-loading {
+  opacity: 0.3;
+  cursor: wait;
 }
 
 .document-search-close-button,
@@ -3173,7 +3192,7 @@ body {
   margin-right: var(--size-4-1);
 }
 
-.workspace-leaf-content img:not([width]),
+.workspace-leaf-content img,
 .workspace-leaf-content audio,
 .workspace-leaf-content video {
   border-radius: var(--radius-m);
@@ -3184,6 +3203,7 @@ body {
 .cm-s-obsidian code:not(pre code),
 .markdown-rendered code:not(pre code) {
   color: var(--inline-code-color);
+  background: var(--inline-code-bg);
   border-radius: var(--inline-code-radius);
 }
 
@@ -3719,7 +3739,7 @@ body {
   cursor: pointer;
 }
 .search-result-file-match:hover {
-  background: var(--background-primary);
+  background: var(--search-result-background-hover);
 }
 
 .search-result-file-match-destination-file,
