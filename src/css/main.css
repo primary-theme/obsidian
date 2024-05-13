@@ -2649,11 +2649,7 @@ body:not(.is-mobile) input[type=range]::-webkit-slider-thumb {
 }
 
 body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:hover,
-body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:active {
-  background: var(--slider-thumb-bg);
-  box-shadow: var(--slider-thumb-shadow-hover);
-}
-
+body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:active,
 body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb,
 body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
   background: var(--slider-thumb-bg);
