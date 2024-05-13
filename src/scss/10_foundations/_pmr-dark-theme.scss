@@ -32,10 +32,6 @@ and CONTRIBUTION page ↴
 
     --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
 
-    --color-d-white-rgb: 255, 255, 255; // rgba
-    --color-d-gray-rgb: 100, 100, 100; // rgba
-    --color-d-black-rgb: 0, 0, 0; // rgba
-
     // Red
     --color-d-red-10: hsla(4, 65%, 60%, 1);
     --color-d-red-20: hsla(5, 100%, 70%, 1);
@@ -97,8 +93,8 @@ and CONTRIBUTION page ↴
 .theme-dark {
     // --highlight-mix-blend-mode: lighten;
 
-    --mono-rgb-0: var(--color-d-black-rgb);
-    --mono-rgb-100: var(--color-d-white-rgb);
+    --mono-rgb-0: 0, 0, 0;
+    --mono-rgb-100: 255, 255, 255;
 
     // Colors are Curated Derivatives of Primary Classic Dark
     // specially for Primary for Obsidian
@@ -204,16 +200,16 @@ and CONTRIBUTION page ↴
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
 
     --background-modifier-form-field: var(--color-d-gray-130);
-    --input-shadow: inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.29),
-                    inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.19),
-                    0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.3);
-    --input-shadow-hover:   inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
-                            inset 0px -2px 0px 2px rgba(var(--color-d-black-rgb), 0.21),
-                            0px 1px 3px 0px rgba(var(--color-d-black-rgb), 0.3),
-                            0px 2px 8px 0px rgba(var(--color-d-black-rgb), 0.37);
-    --input-shadow-active:  inset 0px 0px 0px 1px rgba(var(--color-d-black-rgb), 0.45),
-                            inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(var(--color-d-black-rgb), 0.21),
-                            0px 0px 2px 2px rgba(var(--color-d-black-rgb), 0.08);
+    --input-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.29),
+                    inset 0px -2px 0px 2px rgba(0, 0, 0, 0.19),
+                    0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    --input-shadow-hover:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
+                            inset 0px -2px 0px 2px rgba(0, 0, 0, 0.21),
+                            0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+                            0px 2px 8px 0px rgba(0, 0, 0, 0.37);
+    --input-shadow-active:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
+                            inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.21),
+                            0px 0px 2px 2px rgba(0, 0, 0, 0.08);
 
     // Text Colors
     --text-normal: var(--color-d-gray-20);
@@ -347,8 +343,8 @@ and CONTRIBUTION page ↴
     --tab-bg: transparent;
     --tab-active-bg: var(--background-primary);
     --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
-                         inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(var(--color-d-black-rgb), 0.21),
-                         0px 2px 3px 0px rgba(var(--color-d-black-rgb), 0.38);
+                         inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.21),
+                         0px 2px 3px 0px rgba(0, 0, 0, 0.38);
 
     // Inline Title
     --inline-title-color: var(--color-d-gray-10);

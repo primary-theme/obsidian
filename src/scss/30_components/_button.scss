@@ -7,23 +7,51 @@ button {
     cursor: pointer;
 
     &:active {
-        background: var(--interactive-hover);
+        background: var(--interactive-normal);
         padding: var(--button-padding-active);
         box-shadow: var(--button-shadow-active);
         transition: var(--button-anim);
     }
 
-    &.mod-cta:active,
-    &.mod-cta:focus {
-        background: var(--interactive-accent-hover);
+    &.mod-cta {
+        box-shadow: var(--button-accent-shadow);
+
+        &:hover {
+            box-shadow: var(--button-accent-shadow-hover);
+        }
+
+        &:active {
+            background: var(--interactive-accent);
+            box-shadow: var(--button-accent-shadow-active);
+        }
+        
+    }
+
+    &.mod-warning {
+        box-shadow: var(--button-accent-shadow);
+
+        &:hover {
+            box-shadow: var(--button-accent-shadow-hover);
+        }
+
+        &:active {
+            box-shadow: var(--button-accent-shadow-active);
+        }
     }
 
     &.mod-destructive {
         color: var(--text-on-accent);
         background: var(--background-modifier-warning);
+        box-shadow: var(--button-accent-shadow);
 
         &:hover {
             background: var(--background-modifier-warning-hover);
+            box-shadow: var(--button-accent-shadow-hover);
+        }
+
+        &:active,
+        &:focus {
+            box-shadow: var(--button-accent-shadow-active);
         }
     }
 
@@ -73,7 +101,7 @@ button {
     padding: var(--button-metadata-padding);
     border-radius: var(--button-s-radius);
     margin: var(--size-2-2) var(--size-2-2);
-    box-shadow: var(--input-shadow);
+    box-shadow: var(--button-accent-shadow);
 
     transition: var(--button-anim);
     transition: var(--background-anim);
@@ -81,7 +109,7 @@ button {
     &:hover {
         color: var(--text-on-accent);
         background: var(--interactive-accent-hover);
-        box-shadow: var(--input-shadow);
+        box-shadow: var(--button-accent-shadow-hover);
 
         .text-button-icon {
             color: var(--text-on-accent);
@@ -90,6 +118,7 @@ button {
 
     &:active {
         padding: var(--button-metadata-padding-active);
+        box-shadow: var(--button-accent-shadow-active);
     }
 
     &.text-icon-button:active {
