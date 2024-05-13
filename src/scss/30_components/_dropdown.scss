@@ -10,8 +10,12 @@ select,
         cursor: pointer;
     }
 
-    &:focus,
     &:active {
         box-shadow: var(--button-shadow-active);
+    }
+
+    &:focus {
+        background-color: var(--interactive-normal-hover);
+        box-shadow: var(--button-shadow-focus);
     }
 }

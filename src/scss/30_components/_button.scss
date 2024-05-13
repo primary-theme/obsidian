@@ -13,6 +13,11 @@ button {
         transition: var(--button-anim);
     }
 
+    &:focus-visible {
+        background: var(--interactive-normal-hover);
+        box-shadow: var(--button-shadow-focus);
+    }
+
     &.mod-cta {
         box-shadow: var(--button-accent-shadow);
 
@@ -25,6 +30,10 @@ button {
             box-shadow: var(--button-accent-shadow-active);
         }
         
+        &:focus-visible {
+            background: var(--interactive-accent-hover);
+            box-shadow: var(--button-shadow-focus);
+        }
     }
 
     &.mod-warning {
@@ -36,6 +45,11 @@ button {
 
         &:active {
             box-shadow: var(--button-accent-shadow-active);
+        }
+
+        &:focus-visible {
+            background: var(--background-modifier-error-hover);
+            box-shadow: var(--button-accent-shadow-focus);
         }
     }
 
@@ -49,8 +63,8 @@ button {
             box-shadow: var(--button-accent-shadow-hover);
         }
 
-        &:active,
-        &:focus {
+        &:active {
+            background: var(--background-modifier-warning-hover);
             box-shadow: var(--button-accent-shadow-active);
         }
     }

@@ -387,6 +387,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
   --button-shadow-active: var(--input-shadow-active);
+  --button-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
+                          0px 2px 4px -1px rgba(0, 0, 0, 0.05),
+                          0px 0px 0px 3px var(--color-l-alpha-green);
   --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.09),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
                           inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
@@ -402,7 +410,17 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                   0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
                                   0px 2px 6px -1px rgba(0, 0, 0, 0.24);
   --button-accent-shadow-active: var(--input-shadow-active);
+  --button-accent-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
+                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
+                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24),
+                                  0px 0px 0px 3px var(--color-l-alpha-green);
   --button-axis-offset: 2px;
+  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                      0px 0px 0px 1px rgba(255, 255, 255, 0.8);
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
   --status-bar-item-bg-hover: transparent;
@@ -2084,6 +2102,10 @@ button:active {
   box-shadow: var(--button-shadow-active);
   transition: var(--button-anim);
 }
+button:focus-visible {
+  background: var(--interactive-normal-hover);
+  box-shadow: var(--button-shadow-focus);
+}
 button.mod-cta {
   box-shadow: var(--button-accent-shadow);
 }
@@ -2094,6 +2116,10 @@ button.mod-cta:active {
   background: var(--interactive-accent);
   box-shadow: var(--button-accent-shadow-active);
 }
+button.mod-cta:focus-visible {
+  background: var(--interactive-accent-hover);
+  box-shadow: var(--button-shadow-focus);
+}
 button.mod-warning {
   box-shadow: var(--button-accent-shadow);
 }
@@ -2102,6 +2128,10 @@ button.mod-warning:hover {
 }
 button.mod-warning:active {
   box-shadow: var(--button-accent-shadow-active);
+}
+button.mod-warning:focus-visible {
+  background: var(--background-modifier-error-hover);
+  box-shadow: var(--button-accent-shadow-focus);
 }
 button.mod-destructive {
   color: var(--text-on-accent);
@@ -2112,7 +2142,8 @@ button.mod-destructive:hover {
   background: var(--background-modifier-warning-hover);
   box-shadow: var(--button-accent-shadow-hover);
 }
-button.mod-destructive:active, button.mod-destructive:focus {
+button.mod-destructive:active {
+  background: var(--background-modifier-warning-hover);
   box-shadow: var(--button-accent-shadow-active);
 }
 button.mod-loading {
@@ -2217,6 +2248,12 @@ input[type=checkbox]:hover {
 }
 
 /*────────── Color Input ──────────*/
+@media (hover: hover) {
+  input[type=color]::-webkit-color-swatch:hover,
+  input[type=color]::-webkit-color-swatch:hover:focus {
+    box-shadow: var(--swatch-shadow), 0px 0px 0px 3px var(--background-modifier-border-hover);
+  }
+}
 /*────────── Modals ──────────*/
 .modal-container {
   backdrop-filter: blur(3px);
@@ -2667,10 +2704,14 @@ select:hover,
 .dropdown:hover {
   cursor: pointer;
 }
-select:focus, select:active,
-.dropdown:focus,
+select:active,
 .dropdown:active {
   box-shadow: var(--button-shadow-active);
+}
+select:focus,
+.dropdown:focus {
+  background-color: var(--interactive-normal-hover);
+  box-shadow: var(--button-shadow-focus);
 }
 
 /*────────── Text Input ──────────*/
