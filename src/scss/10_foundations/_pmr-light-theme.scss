@@ -320,7 +320,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                             0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
                             0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
                             0px 2px 4px -1px rgba(0, 0, 0, 0.05),
-                            0px 0px 0px 3px var(--color-l-alpha-green);
+                            0px 0px 0px 3px var(--color-l-alpha-gray);
 
     --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.09),
                             inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
@@ -330,7 +330,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                             0px 2px 4px -2.7px rgba(0, 0, 0, 0.22),
                             0px 2px 4px -1px rgba(0, 0, 0, 0.19);
     --button-accent-shadow-hover:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
-                                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
+                                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.19),
                                     inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
                                     inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
                                     0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
@@ -344,7 +344,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                     0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
                                     0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
                                     0px 2px 6px -1px rgba(0, 0, 0, 0.24),
-                                    0px 0px 0px 3px var(--color-l-alpha-green);
+                                    0px 0px 0px 3px var(--color-l-alpha-gray);
 
     --button-axis-offset: 2px;
 
@@ -564,6 +564,17 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --toggle-thumb-color: var(--color-l-gray-10);
     --toggle-bg: color-mix(in hsl, var(--color-l-gray-60) 80%, var(--color-l-gray-70));
     --toggle-bg-enabled: var(--color-l-green-30);
+    --toggle-shadow:    inset 0 4px 10px rgba(0, 0, 0, 0.09),
+                        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+                        inset 0 0 1px rgba(0, 0, 0, 0.28);
+    --toggle-shadow-hover:  inset 0 6px 20px rgba(0, 0, 0, 0.18),
+                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+                            inset 0 0 1px rgba(0, 0, 0, 0.32);  
+    --toggle-shadow-focus:  inset 0 6px 20px rgba(0, 0, 0, 0.18),
+                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+                            inset 0 0 1px rgba(0, 0, 0, 0.32),
+                            0px 0px 0px 5px rgba(0, 0, 0, 0.05);
+
     --toggle-thumb-shadow:  inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
                             inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
                             0 2px 2px rgba(0, 0, 0, 0.2);
@@ -584,7 +595,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                  inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
                                  inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
                                  0px 1px 2px 0px rgba(0, 0, 0, 0.1),
-                                 0px 0px 0px 6px rgba(0, 0, 0, 0.04);
+                                 0px 0px 0px 6px rgba(0, 0, 0, 0.05);
 
     // Text Input
     --text-input-color: var(--color-l-gray-90);

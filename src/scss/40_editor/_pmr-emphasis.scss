@@ -28,6 +28,7 @@ body {
     strong em,
     em strong {
         color: var(--bold-italic-color);
+        font-weight: 500;
     }
 
     // Blockquote Writing Mode Overrides

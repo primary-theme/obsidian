@@ -2,8 +2,10 @@
 
 .checkbox-container {
     background: var(--toggle-bg);
+    box-shadow:  var(--toggle-shadow);
 
     &:hover {
+        box-shadow:  var(--toggle-shadow-hover);
         cursor: pointer;
     }
 
@@ -13,6 +15,8 @@
         }
     }
 
+    &:focus,
+    &:focus-visible,
     &:focus-within,
     &.mod-small:focus-within {
         outline: none;
