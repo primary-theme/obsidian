@@ -482,7 +482,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
 
     // Metadata
-    --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+    --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
     --metadata-properties-title-color-hover: var(--color-l-gray-80);
