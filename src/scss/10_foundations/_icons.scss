@@ -25,6 +25,7 @@ body {
     }
 
     &.has-active-menu {
+        color: var(--icon-color-active);
         background: var(--icon-bg-active-menu);
 
         &:hover {

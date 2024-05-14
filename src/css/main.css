@@ -1350,6 +1350,7 @@ body {
   background: var(--icon-bg-pressed);
 }
 .clickable-icon.has-active-menu {
+  color: var(--icon-color-active);
   background: var(--icon-bg-active-menu);
 }
 .clickable-icon.has-active-menu:hover {
@@ -2152,64 +2153,64 @@ body:not(.is-mobile) .workspace-split.mod-horizontal > * {
 }
 
 /*────────── Button ──────────*/
-button:not(.view-header button) {
+button:not(.view-header button, button[aria-label="Change sort order"]) {
   padding: var(--button-padding);
   border-radius: var(--button-radius);
   transition: var(--button-anim);
   transition: var(--background-anim);
   cursor: pointer;
 }
-button:not(.view-header button):active {
+button:not(.view-header button, button[aria-label="Change sort order"]):active {
   background: var(--interactive-normal);
   padding: var(--button-padding-active);
   box-shadow: var(--button-shadow-active);
   transition: var(--button-anim);
 }
-button:not(.view-header button):focus-visible {
+button:not(.view-header button, button[aria-label="Change sort order"]):focus-visible {
   background: var(--interactive-normal-hover);
   box-shadow: var(--button-shadow-focus);
 }
-button:not(.view-header button).mod-cta {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-cta {
   box-shadow: var(--button-accent-shadow);
 }
-button:not(.view-header button).mod-cta:hover {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-cta:hover {
   box-shadow: var(--button-accent-shadow-hover);
 }
-button:not(.view-header button).mod-cta:active {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-cta:active {
   background: var(--interactive-accent);
   box-shadow: var(--button-accent-shadow-active);
 }
-button:not(.view-header button).mod-cta:focus-visible {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-cta:focus-visible {
   background: var(--interactive-accent-hover);
   box-shadow: var(--button-shadow-focus);
 }
-button:not(.view-header button).mod-warning {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-warning {
   box-shadow: var(--button-accent-shadow);
 }
-button:not(.view-header button).mod-warning:hover {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-warning:hover {
   box-shadow: var(--button-accent-shadow-hover);
 }
-button:not(.view-header button).mod-warning:active {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-warning:active {
   box-shadow: var(--button-accent-shadow-active);
 }
-button:not(.view-header button).mod-warning:focus-visible {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-warning:focus-visible {
   background: var(--background-modifier-error-hover);
   box-shadow: var(--button-accent-shadow-focus);
 }
-button:not(.view-header button).mod-destructive {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-destructive {
   color: var(--text-on-accent);
   background: var(--background-modifier-warning);
   box-shadow: var(--button-accent-shadow);
 }
-button:not(.view-header button).mod-destructive:hover {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-destructive:hover {
   background: var(--background-modifier-warning-hover);
   box-shadow: var(--button-accent-shadow-hover);
 }
-button:not(.view-header button).mod-destructive:active {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-destructive:active {
   background: var(--background-modifier-warning-hover);
   box-shadow: var(--button-accent-shadow-active);
 }
-button:not(.view-header button).mod-loading {
+button:not(.view-header button, button[aria-label="Change sort order"]).mod-loading {
   opacity: 0.3;
   cursor: wait;
 }
@@ -2301,6 +2302,27 @@ button:not(.view-header button).mod-loading {
 .markdown-embed-link:hover,
 .file-embed-link:hover {
   box-shadow: var(--copy-code-btn-shadow);
+}
+
+.mod-community-modal .modal-sidebar button.clickable-icon {
+  color: var(--icon-color);
+  padding: unset;
+}
+.mod-community-modal .modal-sidebar button.clickable-icon:hover {
+  color: var(--icon-color-hover);
+  background: var(--icon-bg-hover);
+  cursor: pointer;
+}
+.mod-community-modal .modal-sidebar button.clickable-icon:active {
+  color: var(--icon-color-active);
+  background: var(--icon-bg-pressed);
+}
+.mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu {
+  color: var(--icon-color-active);
+  background: var(--icon-bg-active-menu);
+}
+.mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu:hover {
+  color: var(--icon-color-focused);
 }
 
 /*────────── Checkbox ──────────*/
