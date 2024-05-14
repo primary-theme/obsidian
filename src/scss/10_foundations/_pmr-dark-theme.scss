@@ -22,8 +22,8 @@ and CONTRIBUTION page ↴
     --color-d-gray-50: hsla(34, 24%, 40%, 1);
     --color-d-gray-60: hsla(33, 27%, 30%, 1);
     --color-d-gray-70: hsla(31, 25%, 24%, 1);
-    --color-d-gray-80: hsla(28, 23%, 19%, 1);
-    --color-d-gray-90: hsla(33, 20%, 17%, 1);
+    --color-d-gray-80: hsla(28, 22%, 17%, 1);
+    --color-d-gray-90: hsla(33, 20%, 15%, 1);
     --color-d-gray-100: hsla(31, 19%, 14%, 1);
     --color-d-gray-110: hsla(28, 16%, 13%, 1);
     --color-d-gray-120: hsla(28, 16%, 12%, 1);
@@ -36,7 +36,7 @@ and CONTRIBUTION page ↴
     --color-d-red-10: hsla(4, 65%, 60%, 1);
     --color-d-red-20: hsla(5, 86%, 67%, 1);
     --color-d-red-30: hsla(4, 88%, 61%, 1);
-    --color-d-red-40: hsla(4, 73%, 53%, 1);
+    --color-d-red-40: hsla(4, 73%, 55%, 1);
 
     --color-d-alpha-red: hsla(350, 84%, 63%, 0.2);
 
@@ -51,8 +51,8 @@ and CONTRIBUTION page ↴
     // Yellow
     --color-d-yellow-10: hsla(46, 69%, 52%, 1);
     --color-d-yellow-20: hsla(47, 100%, 46%, 1);
-    --color-d-yellow-30: hsla(43, 100%, 42%, 1);
-    --color-d-yellow-40: hsla(39, 96%, 39%, 1);
+    --color-d-yellow-30: hsla(43, 100%, 43%, 1);
+    --color-d-yellow-40: hsla(39, 96%, 41%, 1);
 
     --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
 
@@ -66,7 +66,7 @@ and CONTRIBUTION page ↴
 
     // Blue
     --color-d-blue-10: hsla(191, 48%, 56%, 1);
-    --color-d-blue-20: hsla(192, 75%, 61%, 1);
+    --color-d-blue-20: hsla(192, 75%, 57%, 1);
     --color-d-blue-30: hsla(193, 55%, 53%, 1);
     --color-d-blue-40: hsla(194, 59%, 46%, 1);
 
@@ -110,8 +110,8 @@ and CONTRIBUTION page ↴
     --color-green-rgb: 100, 194, 113;
     --color-green: rgb(80, 196, 101);
 
-    --color-cyan-rgb: 124, 180, 206;
-    --color-cyan: rgb(96, 183, 180);
+    --color-cyan-rgb: 91, 175, 183;
+    --color-cyan: rgb(70, 169, 180);
 
     --color-blue-rgb: 99, 156, 192;
     --color-blue: rgb(63, 137, 176);
@@ -480,7 +480,7 @@ and CONTRIBUTION page ↴
     --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
 
     // Metadata
-    --metadata-background: color-mix(in hsl, var(--background-primary) 50%, var(--background-primary-alt));
+    --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
     --metadata-properties-title-color-hover: var(--color-d-gray-50);
