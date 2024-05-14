@@ -2,17 +2,7 @@
 
 // Note Header
 .view-header {
-    --header-height: 40px;
-
-    // File Navigation Buttons
-    button {
-        margin-bottom: 0;
-
-        &:hover,
-        &:active {
-            padding: var(--size-2-2) var(--size-2-3);
-        }
-    }
+    --header-height: 38px;
 
     // Right Side Action Icons
     .view-action.clickable-icon {
