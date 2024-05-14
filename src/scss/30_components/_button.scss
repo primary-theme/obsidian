@@ -1,5 +1,5 @@
 /*────────── Button ──────────*/
-button:not(.view-header button, button[aria-label="Change sort order"]) {
+button:not(button.clickable-icon) {
     padding: var(--button-padding);
     border-radius: var(--button-radius);
     transition: var(--button-anim);
