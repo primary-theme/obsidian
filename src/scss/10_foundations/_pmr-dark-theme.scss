@@ -137,10 +137,11 @@ and CONTRIBUTION page ↴
                         calc(var(--accent-s) * 1.02),
                         calc(var(--accent-l) * 1.15)
                         );
+    // default for color-accent-2 is - 5, * 1.13, * 1.31
     --color-accent-2: hsl(
                         calc(var(--accent-h) - 5),
                         calc(var(--accent-s) * 1.13),
-                        calc(var(--accent-l) * 1.31)
+                        calc(var(--accent-l) * 1.34)
                         );
 
     --color-base-00: var(--color-d-gray-140); // skipped 130
