@@ -57,10 +57,10 @@ and CONTRIBUTION page ↴
     --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
 
     // Green
-    --color-d-green-10: hsla(154, 42%, 46%, 1);
-    --color-d-green-20: hsla(150, 66%, 43%, 1);
-    --color-d-green-30: hsla(154, 62%, 37%, 1);
-    --color-d-green-40: hsla(155, 83%, 24%, 1);
+    --color-d-green-10: hsla(154, 42%, 52%, 1);
+    --color-d-green-20: hsla(150, 66%, 48%, 1);
+    --color-d-green-30: hsla(154, 62%, 42%, 1);
+    --color-d-green-40: hsla(155, 83%, 29%, 1);
 
     --color-d-alpha-green: hsla(74, 69%, 44%, 0.2);
 
@@ -98,6 +98,8 @@ and CONTRIBUTION page ↴
 
     // Colors are Curated Derivatives of Primary Classic Dark
     // specially for Primary for Obsidian
+    --color-gray-rgb: 187, 186, 167;
+
     --color-red-rgb: 228, 87, 78;
     --color-red: rgb(192, 78, 78);
 
@@ -739,6 +741,16 @@ and CONTRIBUTION page ↴
                                 inset 0px calc(-1 * var(--callout-shadow-offset) - 1px) var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
 
     // Canvas
+    &.theme-dark {
+        --canvas-color: var(--color-gray-rgb);
+    }
+    --canvas-color-1: var(--color-red-rgb);
+    --canvas-color-2: var(--color-orange-rgb);
+    --canvas-color-3: var(--color-yellow-rgb);
+    --canvas-color-4: var(--color-green-rgb);
+    --canvas-color-5: var(--color-blue-rgb);
+    --canvas-color-6: var(--color-purple-rgb);
+
     --canvas-icon-color: var(--color-d-gray-50);
     --canvas-icon-color-hover: var(--color-d-gray-30);
     --canvas-icon-color-disabled: var(--color-d-gray-70);

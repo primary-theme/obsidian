@@ -98,6 +98,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     // Colors are Curated Derivatives of Primary Classic Light
     // specially for Primary for Obsidian
+    --color-gray-rgb: 182, 175, 166;
+
     --color-red-rgb: 223, 90, 90;
     --color-red: hsla(0, 58%, 53%, 1);
 
@@ -740,6 +742,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                 inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
 
     // Canvas
+    --canvas-color: var(--color-gray-rgb);
+    --canvas-color-1: var(--color-red-rgb);
+    --canvas-color-2: var(--color-orange-rgb);
+    --canvas-color-3: var(--color-yellow-rgb);
+    --canvas-color-4: var(--color-green-rgb);
+    --canvas-color-5: var(--color-blue-rgb);
+    --canvas-color-6: var(--color-purple-rgb);
+
     --canvas-icon-color: var(--color-l-gray-80);
     --canvas-icon-color-hover: var(--color-l-gray-120);
     --canvas-icon-color-disabled: var(--color-l-gray-60);
