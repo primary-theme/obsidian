@@ -39,4 +39,10 @@ body {
             color: var(--icon-color-active);
         }
     }
+
+    &[aria-disabled='true'] {
+        color: var(--icon-color);
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
 }
