@@ -371,6 +371,12 @@ and CONTRIBUTION page ↴
     --modal-background: var(--background-primary);
     --modal-border-color: var(--background-modifier-border-hover);
     --modal-radius: var(--radius-xl);
+    --community-item-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03);
+    --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+    --community-item-selected-shadow:   inset 0px 0px 0px 1px rgba(255, 255, 255, 0.18),
+                                        0px 1px 3px -2.6px rgba(0, 0, 0, 0.33),
+                                        0px 2px 6px -4.2px rgba(0, 0, 0, 0.29),
+                                        0px 4px 12px -6px rgba(0, 0, 0, 0.9);
 
     // Settings
     --settings-nav-group-title-color: var(--color-d-gray-60);

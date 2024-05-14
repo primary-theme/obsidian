@@ -68,4 +68,28 @@ body:not(.is-phone) {
 }
 
 // Community Modals
-// TODO color Community Modal sort icons properly
+
+body:not(.is-phone) .community-item {
+    border: none;
+    box-shadow: var(--community-item-shadow);
+    transition: background var(--anim-duration-superfast) var(--anim-motion-smooth);
+    transition: box-shadow var(--anim-duration-fast) var(--anim-motion-swing);
+
+    &:hover {
+        box-shadow: var(--community-item-shadow-hover);
+    }
+
+    &.is-selected,
+    &.is-selected:hover {
+        box-shadow: var(--community-item-selected-shadow);
+    }
+}
+
+.community-item .flair,
+.flair.mod-pop,
+body:not(.is-phone) .community-item.is-selected .flair,
+body:not(.is-phone) .community-item.is-selected:hover .flair {
+    color: var(--inline-code-color);
+    background: var(--inline-code-bg);
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+}

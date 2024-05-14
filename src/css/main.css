@@ -432,6 +432,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
   --modal-border-color: var(--background-modifier-border-hover);
   --modal-radius: var(--radius-xl);
+  --community-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+  --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23),
+                                      0px 1px 3px -2.6px rgba(0, 0, 0, 0.23),
+                                      0px 2px 6px -4.2px rgba(0, 0, 0, 0.19),
+                                      0px 4px 12px -6px rgba(0, 0, 0, 0.9);
   --prompt-border-color: var(--background-modifier-border-hover);
   --settings-nav-group-title-color: var(--color-l-gray-70);
   --settings-nav-item-text-color: var(--color-l-gray-110);
@@ -1018,6 +1024,12 @@ and CONTRIBUTION page ↴
   --modal-background: var(--background-primary);
   --modal-border-color: var(--background-modifier-border-hover);
   --modal-radius: var(--radius-xl);
+  --community-item-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03);
+  --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+  --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.18),
+                                      0px 1px 3px -2.6px rgba(0, 0, 0, 0.33),
+                                      0px 2px 6px -4.2px rgba(0, 0, 0, 0.29),
+                                      0px 4px 12px -6px rgba(0, 0, 0, 0.9);
   --settings-nav-group-title-color: var(--color-d-gray-60);
   --settings-nav-item-text-color: var(--color-d-gray-40);
   --settings-nav-item-text-color-hover: var(--color-d-gray-20);
@@ -2317,12 +2329,12 @@ button:not(.view-header button, button[aria-label="Change sort order"]).mod-load
   color: var(--icon-color-active);
   background: var(--icon-bg-pressed);
 }
-.mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu {
+.mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu, .mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu {
   color: var(--icon-color-active);
   background: var(--icon-bg-active-menu);
 }
-.mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu:hover {
-  color: var(--icon-color-focused);
+.mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu:hover, .mod-community-modal .modal-sidebar button.clickable-icon.has-active-menu:hover {
+  color: var(--icon-color-active);
 }
 
 /*────────── Checkbox ──────────*/
@@ -2396,6 +2408,28 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+2) {
 body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+3) {
   background: var(--alternating-color-3);
   box-shadow: var(--button-accent-shadow);
+}
+
+body:not(.is-phone) .community-item {
+  border: none;
+  box-shadow: var(--community-item-shadow);
+  transition: background var(--anim-duration-superfast) var(--anim-motion-smooth);
+  transition: box-shadow var(--anim-duration-fast) var(--anim-motion-swing);
+}
+body:not(.is-phone) .community-item:hover {
+  box-shadow: var(--community-item-shadow-hover);
+}
+body:not(.is-phone) .community-item.is-selected, body:not(.is-phone) .community-item.is-selected:hover {
+  box-shadow: var(--community-item-selected-shadow);
+}
+
+.community-item .flair,
+.flair.mod-pop,
+body:not(.is-phone) .community-item.is-selected .flair,
+body:not(.is-phone) .community-item.is-selected:hover .flair {
+  color: var(--inline-code-color);
+  background: var(--inline-code-bg);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
 }
 
 /*────────── Tabs ──────────*/
