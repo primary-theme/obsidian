@@ -1,5 +1,5 @@
 /*────────── Button ──────────*/
-button:not(.view-header button) {
+button:not(.view-header button, button[aria-label="Change sort order"]) {
     padding: var(--button-padding);
     border-radius: var(--button-radius);
     transition: var(--button-anim);
@@ -177,5 +177,30 @@ button:not(.view-header button) {
 
     &:hover {
         box-shadow: var(--copy-code-btn-shadow);
+    }
+}
+
+.mod-community-modal .modal-sidebar button.clickable-icon {
+    color: var(--icon-color);
+    padding: unset;
+
+    &:hover {
+        color: var(--icon-color-hover);
+        background: var(--icon-bg-hover);
+        cursor: pointer;
+    }
+
+    &:active {
+        color: var(--icon-color-active);
+        background: var(--icon-bg-pressed);
+    }
+
+    &.has-active-menu {
+        color: var(--icon-color-active);
+        background: var(--icon-bg-active-menu);
+
+        &:hover {
+            color: var(--icon-color-focused);
+        }
     }
 }
