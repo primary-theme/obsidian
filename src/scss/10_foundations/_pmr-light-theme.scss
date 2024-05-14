@@ -137,10 +137,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                         calc(var(--accent-s) * 1.01),
                         calc(var(--accent-l) * 1.075)
                         );
+    // default for color-accent-2 is - 3, * 1.42, * 1.29
     --color-accent-2: hsl(
                         calc(var(--accent-h) - 3),
                         calc(var(--accent-s) * 1.42),
-                        calc(var(--accent-l) * 1.29)
+                        calc(var(--accent-l) * 1.18) 
                         );
 
     --color-base-00: var(--color-l-gray-10);
