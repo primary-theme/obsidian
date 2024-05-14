@@ -129,7 +129,7 @@ body {
                               calc(var(--size-4-1) + var(--callout-shadow-offset))
                               var(--size-4-4);
   --callout-radius: var(--radius-m);
-  --anim-popup: 0.2s forwards slideUp;
+  --anim-popup: 0.3s slideUp forwards;
   --pmr-cal-td-padding: var(--size-4-1)
                           var(--size-4-1)
                           calc(var(--size-4-1) + var(--button-inset-shadow-size))
@@ -146,9 +146,9 @@ body {
     transform: translateY(10%);
     opacity: 0.2;
   }
-  80% {
-    transform: translateY(-1%);
-    opacity: 0.8;
+  40% {
+    transform: translateY(-2%);
+    opacity: 0.85;
   }
   100% {
     transform: translateY(0);
@@ -2995,7 +2995,8 @@ input.prompt-input:focus-visible {
   border-bottom: var(--prompt-separator-border);
 }
 
-.suggestion-container {
+.suggestion-popover,
+.popover {
   animation: var(--anim-popup);
 }
 

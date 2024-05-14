@@ -133,7 +133,7 @@ body {
     --callout-radius: var(--radius-m);
 
     // Animation
-    --anim-popup: 0.2s forwards slideUp;
+    --anim-popup: 0.3s slideUp forwards;
 
     // Community Plugin
     // Calendar by Liam Cain
@@ -153,9 +153,9 @@ body {
         transform: translateY(10%);
         opacity: 0.2;
     }
-    80% {
-        transform: translateY(-1%);
-        opacity: 0.8;
+    40% {
+        transform: translateY(-2%);
+        opacity: 0.85;
     }
     100% {
         transform: translateY(0);
