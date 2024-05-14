@@ -85,6 +85,7 @@
 // Vault Profile
 body:not(.is-mobile) .workspace-split {
     .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile {
+        width: unset;
         background: var(--vault-name-background);
         padding: var(--size-2-2) var(--size-2-2);
         border: var(--vault-name-border);
@@ -110,9 +111,5 @@ body:not(.is-mobile) .workspace-split {
                 }
             }
         }
-    }
-
-    &.mod-horizontal > * {
-        width: unset;
     }
 }
