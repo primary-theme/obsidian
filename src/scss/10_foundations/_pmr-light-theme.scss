@@ -371,6 +371,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Modals
     --modal-border-color: var(--background-modifier-border-hover);
     --modal-radius: var(--radius-xl);
+    --community-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+    --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    --community-item-selected-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23),
+                                        0px 1px 3px -2.6px rgba(0, 0, 0, 0.23),
+                                        0px 2px 6px -4.2px rgba(0, 0, 0, 0.19),
+                                        0px 4px 12px -6px rgba(0, 0, 0, 0.9);
 
     // Prompt
     --prompt-border-color: var(--background-modifier-border-hover);
