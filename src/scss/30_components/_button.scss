@@ -164,8 +164,11 @@ button:not(.view-header button) {
 }
 
 // Copy Code Block Button
+// Embed Link Button
 .markdown-source-view.mod-cm6 .code-block-flair,
-.markdown-rendered button.copy-code-button {
+.markdown-rendered button.copy-code-button,
+.markdown-embed-link,
+.file-embed-link {
     display: flex;
     line-height: 1;
     padding: var(--size-2-3) var(--size-2-3);
