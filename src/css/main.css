@@ -418,8 +418,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                   0px 2px 6px -1px rgba(0, 0, 0, 0.24),
                                   0px 0px 0px 3px var(--color-l-alpha-gray);
   --button-axis-offset: 2px;
-  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                      0px 0px 0px 1px rgba(255, 255, 255, 0.8);
+  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
   --status-bar-item-bg-hover: transparent;
@@ -1004,6 +1003,7 @@ and CONTRIBUTION page ↴
                                   0px 2px 6px -1px rgba(0, 0, 0, 0.24),
                                   0px 0px 0px 3px var(--color-d-alpha-gray);
   --button-axis-offset: 2px;
+  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
   --status-bar-item-color: var(--color-d-gray-50);
   --status-bar-item-color-hover: var(--color-d-gray-30);
   --status-bar-item-bg-hover: transparent;
