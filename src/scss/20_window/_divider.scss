@@ -20,9 +20,9 @@
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     --divider-vertical-height: calc(
-                                    100% - calc(var(--header-height) + var(--workspace-margin-bottom)) - calc(var(--file-border-radius) * 2)
+                                    100% - calc(var(--header-height) + var(--note-pane-margin)) - calc(var(--file-border-radius) * 2)
                                 );
-    bottom: calc(var(--workspace-margin-bottom) + var(--file-border-radius));
+    bottom: calc(var(--note-pane-margin) + var(--file-border-radius));
 }
 
 // Horizontal Resize Handles
@@ -40,61 +40,61 @@
 .workspace {
     // Tabs
     div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf) {
-        margin-left: calc(var(--workspace-margin-bottom) / 2);
-        margin-right: calc(var(--workspace-margin-bottom) / 2);
+        margin-left: calc(var(--note-pane-margin) / 2);
+        margin-right: calc(var(--note-pane-margin) / 2);
     }
 
     // Stacked Tabs
     .mod-stacked.workspace-tabs {
-        margin-left: calc(var(--workspace-margin-bottom) / 2);
-        margin-right: calc(var(--workspace-margin-bottom) / 2);
+        margin-left: calc(var(--note-pane-margin) / 2);
+        margin-right: calc(var(--note-pane-margin) / 2);
     }
 
     &:not(.is-left-sidedock-open.is-right-sidedock-open) {
         .mod-root.workspace-split.mod-vertical {
-            margin-left: calc(var(--workspace-margin-bottom) / 2);
-            margin-right: calc(var(--workspace-margin-bottom) / 2);
-            padding-bottom: var(--workspace-margin-bottom);
+            margin-left: calc(var(--note-pane-margin) / 2);
+            margin-right: calc(var(--note-pane-margin) / 2);
+            padding-bottom: var(--note-pane-margin);
         }
     }
 
     &:is(.is-left-sidedock-open.is-right-sidedock-open) {
         .workspace-split.mod-left-split {
-            margin-right: calc(-1 * (var(--workspace-margin-bottom) / 2));
+            margin-right: calc(-1 * (var(--note-pane-margin) / 2));
         }
 
         .mod-root.workspace-split.mod-vertical {
             margin-left: 0;
             margin-right: 0;
-            padding-bottom: var(--workspace-margin-bottom);
+            padding-bottom: var(--note-pane-margin);
         }
 
         .workspace-split.mod-right-split {
-            margin-left: calc(-1 * (var(--workspace-margin-bottom) / 2));
+            margin-left: calc(-1 * (var(--note-pane-margin) / 2));
         }
     }
 
     &:is(.is-left-sidedock-open):not(.is-right-sidedock-open) {
         .workspace-split.mod-left-split {
-            margin-right: calc(-1 * (var(--workspace-margin-bottom) / 2));
+            margin-right: calc(-1 * (var(--note-pane-margin) / 2));
         }
 
         .mod-root.workspace-split.mod-vertical {
             margin-left: 0;
-            margin-right: calc(var(--workspace-margin-bottom) / 2);
-            padding-bottom: var(--workspace-margin-bottom);
+            margin-right: calc(var(--note-pane-margin) / 2);
+            padding-bottom: var(--note-pane-margin);
         }
     }
 
     &:is(.is-right-sidedock-open):not(.is-left-sidedock-open) {
         .mod-root.workspace-split.mod-vertical {
-            margin-left: calc(var(--workspace-margin-bottom) / 2);
+            margin-left: calc(var(--note-pane-margin) / 2);
             margin-right: 0;
-            padding-bottom: var(--workspace-margin-bottom);
+            padding-bottom: var(--note-pane-margin);
         }
 
         .workspace-split.mod-right-split {
-            margin-left: calc(-1 * (var(--workspace-margin-bottom) / 2));
+            margin-left: calc(-1 * (var(--note-pane-margin) / 2));
         }
     }
 }

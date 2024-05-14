@@ -90,7 +90,7 @@ body:not(.is-mobile) .workspace-split {
         padding: var(--size-2-2) var(--size-2-2);
         border: var(--vault-name-border);
         border-radius: var(--radius-m);
-        margin: 0px var(--size-4-2) var(--workspace-margin-bottom);
+        margin: 0px var(--size-4-2) var(--note-pane-margin);
 
         // Remove chevron-up-down Switcher Icon
         .workspace-drawer-vault-switcher-icon {
