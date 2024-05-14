@@ -37,6 +37,10 @@
     }
 }
 
+.search-suggest-item.mod-group:not(:first-child) {
+    margin-inline-start: -6px;
+}
+
 // Search Result Count
 .more-options-icon {
     color: var(--icon-color);

@@ -1380,9 +1380,11 @@ body {
   cursor: not-allowed;
 }
 .clickable-icon.list-item-part {
-  background: vaR(--icon-bg);
+  color: var(--icon-color);
+  background: var(--icon-bg);
 }
 .clickable-icon.list-item-part:hover {
+  color: var(--icon-color-hover);
   background: var(--icon-bg-hover);
 }
 
@@ -3910,6 +3912,10 @@ body {
 }
 .mod-search-suggestion .search-suggest-item:not(.mod-group):active .search-suggest-info-text {
   color: var(--menu-item-color-active);
+}
+
+.search-suggest-item.mod-group:not(:first-child) {
+  margin-inline-start: -6px;
 }
 
 .more-options-icon {
