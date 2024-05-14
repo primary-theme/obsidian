@@ -29,7 +29,7 @@ body {
         background: var(--icon-bg-active-menu);
 
         &:hover {
-            color: var(--icon-color-focused);
+            color: var(--icon-color-active);
         }
     }
 
@@ -45,5 +45,13 @@ body {
         color: var(--icon-color);
         opacity: 0.3;
         cursor: not-allowed;
+    }
+
+    &.list-item-part {
+        background: vaR(--icon-bg);
+
+        &:hover {
+            background: var(--icon-bg-hover);
+        }
     }
 }
