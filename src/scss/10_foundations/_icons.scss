@@ -48,9 +48,11 @@ body {
     }
 
     &.list-item-part {
-        background: vaR(--icon-bg);
+        color: var(--icon-color);
+        background: var(--icon-bg);
 
         &:hover {
+            color: var(--icon-color-hover);
             background: var(--icon-bg-hover);
         }
     }
