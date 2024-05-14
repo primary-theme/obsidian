@@ -1,13 +1,100 @@
 /*────────── Divider ──────────*/
-// TODO Fix Dividers showing up on multiple active files
+// All Resize Handles
+.workspace-split.mod-vertical > * >.workspace-leaf-resize-handle,
+.workspace-split.mod-horizontal > * >.workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    border-radius: var(--divider-radius);
+}
 
-// .mod-horizontal .workspace-tabs.mod-top > .workspace-leaf-resize-handle,
-// .workspace-split .mod-active > .workspace-leaf-resize-handle,
-.workspace-split.mod-horizontal > .workspace-leaf-resize-handle {
-    bottom: calc(var(--workspace-margin-bottom) + var(--file-border-radius));
+// All Resize Handles except Left and Right Sidebar Horizontal Handles
+.workspace-split.mod-vertical > * >.workspace-leaf-resize-handle,
+.workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > * >.workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    --divider-color: transparent;
+}
+
+// Vertical Resize Handles
+.workspace-split.mod-vertical > * >.workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     --divider-vertical-height: calc(
                                     100% - calc(var(--header-height) + var(--workspace-margin-bottom)) - calc(var(--file-border-radius) * 2)
-                                    );
-    --divider-color: transparent;
-    border-radius: var(--radius-l);
+                                );
+    bottom: calc(var(--workspace-margin-bottom) + var(--file-border-radius));
+}
+
+// Horizontal Resize Handles
+.workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > * >.workspace-leaf-resize-handle {
+    width: calc(
+                100% - calc(var(--file-border-radius) * 2)
+            );
+    left: var(--file-border-radius);
+    right: var(--file-border-radius);
+}
+
+//----------
+
+// Note Panes Margin
+.workspace {
+    // Tabs
+    div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf) {
+        margin-left: calc(var(--workspace-margin-bottom) / 2);
+        margin-right: calc(var(--workspace-margin-bottom) / 2);
+    }
+
+    // Stacked Tabs
+    .mod-stacked.workspace-tabs {
+        margin-left: calc(var(--workspace-margin-bottom) / 2);
+        margin-right: calc(var(--workspace-margin-bottom) / 2);
+    }
+
+    &:not(.is-left-sidedock-open.is-right-sidedock-open) {
+        .mod-root.workspace-split.mod-vertical {
+            margin-left: calc(var(--workspace-margin-bottom) / 2);
+            margin-right: calc(var(--workspace-margin-bottom) / 2);
+            padding-bottom: var(--workspace-margin-bottom);
+        }
+    }
+
+    &:is(.is-left-sidedock-open.is-right-sidedock-open) {
+        .workspace-split.mod-left-split {
+            margin-right: calc(-1 * (var(--workspace-margin-bottom) / 2));
+        }
+
+        .mod-root.workspace-split.mod-vertical {
+            margin-left: 0;
+            margin-right: 0;
+            padding-bottom: var(--workspace-margin-bottom);
+        }
+
+        .workspace-split.mod-right-split {
+            margin-left: calc(-1 * (var(--workspace-margin-bottom) / 2));
+        }
+    }
+
+    &:is(.is-left-sidedock-open):not(.is-right-sidedock-open) {
+        .workspace-split.mod-left-split {
+            margin-right: calc(-1 * (var(--workspace-margin-bottom) / 2));
+        }
+
+        .mod-root.workspace-split.mod-vertical {
+            margin-left: 0;
+            margin-right: calc(var(--workspace-margin-bottom) / 2);
+            padding-bottom: var(--workspace-margin-bottom);
+        }
+    }
+
+    &:is(.is-right-sidedock-open):not(.is-left-sidedock-open) {
+        .mod-root.workspace-split.mod-vertical {
+            margin-left: calc(var(--workspace-margin-bottom) / 2);
+            margin-right: 0;
+            padding-bottom: var(--workspace-margin-bottom);
+        }
+
+        .workspace-split.mod-right-split {
+            margin-left: calc(-1 * (var(--workspace-margin-bottom) / 2));
+        }
+    }
 }

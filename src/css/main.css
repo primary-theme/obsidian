@@ -106,6 +106,8 @@ body {
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
   --menu-item-radius: calc(var(--radius-m) - 1px);
+  --divider-width-hover: 4px;
+  --divider-radius: var(--radius-m);
   --metadata-border-width: 1px;
   --metadata-divider-width: 0px;
   --metadata-border-radius: var(--radius-m);
@@ -1964,13 +1966,74 @@ svg.vault {
 }
 
 /*────────── Divider ──────────*/
-.workspace-split.mod-horizontal > .workspace-leaf-resize-handle {
-  bottom: calc(var(--workspace-margin-bottom) + var(--file-border-radius));
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  border-radius: var(--divider-radius);
+}
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  --divider-color: transparent;
+}
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   --divider-vertical-height: calc(
                                   100% - calc(var(--header-height) + var(--workspace-margin-bottom)) - calc(var(--file-border-radius) * 2)
-                                  );
-  --divider-color: transparent;
-  border-radius: var(--radius-l);
+                              );
+  bottom: calc(var(--workspace-margin-bottom) + var(--file-border-radius));
+}
+
+.workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > * > .workspace-leaf-resize-handle {
+  width: calc(100% - var(--file-border-radius) * 2);
+  left: var(--file-border-radius);
+  right: var(--file-border-radius);
+}
+
+.workspace div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf) {
+  margin-left: calc(var(--workspace-margin-bottom) / 2);
+  margin-right: calc(var(--workspace-margin-bottom) / 2);
+}
+.workspace .mod-stacked.workspace-tabs {
+  margin-left: calc(var(--workspace-margin-bottom) / 2);
+  margin-right: calc(var(--workspace-margin-bottom) / 2);
+}
+.workspace:not(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
+  margin-left: calc(var(--workspace-margin-bottom) / 2);
+  margin-right: calc(var(--workspace-margin-bottom) / 2);
+  padding-bottom: var(--workspace-margin-bottom);
+}
+.workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-left-split {
+  margin-right: calc(-1 * var(--workspace-margin-bottom) / 2);
+}
+.workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: var(--workspace-margin-bottom);
+}
+.workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-right-split {
+  margin-left: calc(-1 * var(--workspace-margin-bottom) / 2);
+}
+.workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .workspace-split.mod-left-split {
+  margin-right: calc(-1 * var(--workspace-margin-bottom) / 2);
+}
+.workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
+  margin-left: 0;
+  margin-right: calc(var(--workspace-margin-bottom) / 2);
+  padding-bottom: var(--workspace-margin-bottom);
+}
+.workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .mod-root.workspace-split.mod-vertical {
+  margin-left: calc(var(--workspace-margin-bottom) / 2);
+  margin-right: 0;
+  padding-bottom: var(--workspace-margin-bottom);
+}
+.workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .workspace-split.mod-right-split {
+  margin-left: calc(-1 * var(--workspace-margin-bottom) / 2);
 }
 
 /*────────── Ribbon ──────────*/
@@ -2107,6 +2170,7 @@ svg.vault {
 }
 
 body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile {
+  width: unset;
   background: var(--vault-name-background);
   padding: var(--size-2-2) var(--size-2-2);
   border: var(--vault-name-border);
@@ -2125,9 +2189,6 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 }
 body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:hover .workspace-drawer-vault-name {
   color: var(--vault-name-color-hover);
-}
-body:not(.is-mobile) .workspace-split.mod-horizontal > * {
-  width: unset;
 }
 
 /*────────── Status Bar ──────────*/
@@ -2490,26 +2551,13 @@ body {
 .mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--file-border-radius);
-  margin-bottom: var(--workspace-margin-bottom);
-}
-.mod-root .workspace-tabs.mod-top-left-space {
-  margin-left: var(--workspace-margin-bottom);
-}
-.mod-root .workspace-tabs.mod-top-right-space {
-  margin-right: var(--workspace-margin-bottom);
-}
-.mod-root .workspace-tabs.mod-top-left-space.mod-top-right-space:not(.mod-stacked.workspace-tabs) {
-  margin-left: var(--workspace-margin-bottom);
-  margin-right: var(--workspace-margin-bottom);
 }
 .mod-root .workspace-tab-header-container {
-  border-bottom: none;
   padding-bottom: var(--size-4-1);
+  border-bottom: none;
   transition: padding-bottom none;
 }
 .mod-root .workspace-tab-header-container-inner {
-  gap: var(--file-tab-gap);
-  padding-top: var(--button-axis-offset);
   padding-bottom: var(--button-axis-offset);
 }
 
@@ -2632,7 +2680,6 @@ body {
 }
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
   border-radius: var(--file-border-radius);
-  margin-bottom: var(--workspace-margin-bottom);
   border: 1px solid var(--background-modifier-border);
 }
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header:first-child {

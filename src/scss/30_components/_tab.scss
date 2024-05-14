@@ -34,31 +34,15 @@ body {
     &-leaf-content {
         border: 1px solid var(--background-modifier-border);
         border-radius: var(--file-border-radius);
-        margin-bottom: var(--workspace-margin-bottom);
-    }
-
-    &-tabs.mod-top-left-space {
-        margin-left: var(--workspace-margin-bottom);
-    }
-
-    &-tabs.mod-top-right-space {
-        margin-right: var(--workspace-margin-bottom);
-    }
-
-    &-tabs.mod-top-left-space.mod-top-right-space:not(.mod-stacked.workspace-tabs) {
-        margin-left: var(--workspace-margin-bottom);
-        margin-right: var(--workspace-margin-bottom);
     }
     
     // .mod-root Tabs
     &-tab-header-container {
-        border-bottom: none;
         padding-bottom: var(--size-4-1);
+        border-bottom: none;
         transition: padding-bottom none;
 
         &-inner {
-            gap: var(--file-tab-gap);
-            padding-top: var(--button-axis-offset);
             padding-bottom: var(--button-axis-offset);
         }
     }
@@ -215,7 +199,6 @@ body {
 
     .workspace-tab-container {
         border-radius: var(--file-border-radius);
-        margin-bottom: var(--workspace-margin-bottom);
         border: 1px solid var(--background-modifier-border);
 
         .workspace-tab-header:first-child {
