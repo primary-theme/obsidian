@@ -14,7 +14,8 @@ input.prompt-input:focus-visible {
 }
 
 // prompt for adding Tags, linking Files
-.suggestion-container {
+.suggestion-popover,
+.popover {
     animation: var(--anim-popup);
 }
 
