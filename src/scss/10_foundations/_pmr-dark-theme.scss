@@ -758,7 +758,8 @@ and CONTRIBUTION page ↴
     --canvas-menu-bg-hover: color-mix(in hsl, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
     --canvas-menu-border: 1px solid var(--background-modifier-border);
     --canvas-menu-shadow:   0px 1px 2px 1px rgba(0, 0, 0, 0.14),
-                            0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+                            0px 1px 4px -2.1px rgba(0, 0, 0, 0.22),
+                            0px 2px 8px -1.2px rgba(0, 0, 0, 0.15);
 
     // Stacked Tabs
     --tab-outline-color: transparent;
