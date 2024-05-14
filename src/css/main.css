@@ -778,7 +778,7 @@ and CONTRIBUTION page ↴
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
   --color-d-gray-60: hsla(33, 27%, 30%, 1);
   --color-d-gray-70: hsla(31, 25%, 24%, 1);
-  --color-d-gray-80: hsla(28, 22%, 17%, 1);
+  --color-d-gray-80: hsla(28, 22%, 19%, 1);
   --color-d-gray-90: hsla(33, 20%, 16%, 1);
   --color-d-gray-100: hsla(31, 19%, 14%, 1);
   --color-d-gray-110: hsla(28, 16%, 13%, 1);
@@ -981,7 +981,7 @@ and CONTRIBUTION page ↴
   --icon-bg-pressed: transparent;
   --icon-color-active: var(--color-d-gray-40);
   --icon-opacity-active: 1;
-  --icon-bg-active: var(--color-d-gray-90);
+  --icon-bg-active: var(--color-d-gray-80);
   --icon-bg-active-menu: transparent;
   --button-radius: var(--size-4-2);
   --button-shadow: var(--input-shadow);
