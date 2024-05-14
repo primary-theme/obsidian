@@ -228,6 +228,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 .theme-light {
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
+  --color-gray-rgb: 182, 175, 166;
   --color-red-rgb: 223, 90, 90;
   --color-red: hsla(0, 58%, 53%, 1);
   --color-orange-rgb: 231, 130, 63;
@@ -687,6 +688,13 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                           inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2);
   --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
                               inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
+  --canvas-color: var(--color-gray-rgb);
+  --canvas-color-1: var(--color-red-rgb);
+  --canvas-color-2: var(--color-orange-rgb);
+  --canvas-color-3: var(--color-yellow-rgb);
+  --canvas-color-4: var(--color-green-rgb);
+  --canvas-color-5: var(--color-blue-rgb);
+  --canvas-color-6: var(--color-purple-rgb);
   --canvas-icon-color: var(--color-l-gray-80);
   --canvas-icon-color-hover: var(--color-l-gray-120);
   --canvas-icon-color-disabled: var(--color-l-gray-60);
@@ -792,10 +800,10 @@ and CONTRIBUTION page ↴
   --color-d-yellow-30: hsla(43, 100%, 43%, 1);
   --color-d-yellow-40: hsla(39, 96%, 41%, 1);
   --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
-  --color-d-green-10: hsla(154, 42%, 46%, 1);
-  --color-d-green-20: hsla(150, 66%, 43%, 1);
-  --color-d-green-30: hsla(154, 62%, 37%, 1);
-  --color-d-green-40: hsla(155, 83%, 24%, 1);
+  --color-d-green-10: hsla(154, 42%, 52%, 1);
+  --color-d-green-20: hsla(150, 66%, 48%, 1);
+  --color-d-green-30: hsla(154, 62%, 42%, 1);
+  --color-d-green-40: hsla(155, 83%, 29%, 1);
   --color-d-alpha-green: hsla(74, 69%, 44%, 0.2);
   --color-d-blue-10: hsla(191, 48%, 56%, 1);
   --color-d-blue-20: hsla(192, 75%, 57%, 1);
@@ -820,6 +828,7 @@ and CONTRIBUTION page ↴
 .theme-dark {
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
+  --color-gray-rgb: 187, 186, 167;
   --color-red-rgb: 228, 87, 78;
   --color-red: rgb(192, 78, 78);
   --color-orange-rgb: 238, 163, 89;
@@ -1280,6 +1289,12 @@ and CONTRIBUTION page ↴
                           inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
   --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
                               inset 0px calc(-1 * var(--callout-shadow-offset) - 1px) var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
+  --canvas-color-1: var(--color-red-rgb);
+  --canvas-color-2: var(--color-orange-rgb);
+  --canvas-color-3: var(--color-yellow-rgb);
+  --canvas-color-4: var(--color-green-rgb);
+  --canvas-color-5: var(--color-blue-rgb);
+  --canvas-color-6: var(--color-purple-rgb);
   --canvas-icon-color: var(--color-d-gray-50);
   --canvas-icon-color-hover: var(--color-d-gray-30);
   --canvas-icon-color-disabled: var(--color-d-gray-70);
@@ -1316,6 +1331,9 @@ and CONTRIBUTION page ↴
   --kanban-new-item-shadow: none;
   --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.22),
                                   0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+}
+.theme-dark.theme-dark {
+  --canvas-color: var(--color-gray-rgb);
 }
 .theme-dark #calendar-container {
   --color-dot: var(--color-d-blue-20);
@@ -3980,6 +3998,7 @@ body {
 /*────────── Core Plugin: Canvas ──────────*/
 .canvas-menu {
   border-radius: var(--radius-m);
+  box-shadow: var(--canvas-menu-shadow);
 }
 
 .canvas-card-menu.canvas-card-menu {
