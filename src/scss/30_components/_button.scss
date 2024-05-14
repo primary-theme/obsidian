@@ -44,6 +44,7 @@ button:not(.view-header button, button[aria-label="Change sort order"]) {
         }
 
         &:active {
+            background: var(--background-modifier-error);
             box-shadow: var(--button-accent-shadow-active);
         }
 
@@ -64,7 +65,7 @@ button:not(.view-header button, button[aria-label="Change sort order"]) {
         }
 
         &:active {
-            background: var(--background-modifier-warning-hover);
+            background: var(--background-modifier-warning);
             box-shadow: var(--button-accent-shadow-active);
         }
     }

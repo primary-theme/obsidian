@@ -585,7 +585,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                0px 1px 2px 0px rgba(0, 0, 0, 0.1),
                                0px 0px 0px 6px rgba(0, 0, 0, 0.05);
   --text-input-color: var(--color-l-gray-90);
-  --text-input-color-focused: var(--color-l-gray-120);
+  --text-input-color-focused: var(--color-l-gray-130);
   --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
   --text-input-border-color: var(--color-l-gray-60);
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
@@ -778,34 +778,34 @@ and CONTRIBUTION page ↴
   --color-d-gray-140: hsla(32, 21%, 8%, 1);
   --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
   --color-d-red-10: hsla(4, 65%, 60%, 1);
-  --color-d-red-20: hsla(5, 100%, 70%, 1);
-  --color-d-red-30: hsla(4, 90%, 61%, 1);
-  --color-d-red-40: hsla(4, 75%, 44%, 1);
+  --color-d-red-20: hsla(5, 86%, 67%, 1);
+  --color-d-red-30: hsla(4, 88%, 61%, 1);
+  --color-d-red-40: hsla(4, 73%, 53%, 1);
   --color-d-alpha-red: hsla(350, 84%, 63%, 0.2);
-  --color-d-orange-10: hsla(25, 72%, 68%, 1);
-  --color-d-orange-20: hsla(22, 91%, 61%, 1);
-  --color-d-orange-30: hsla(21, 86%, 52%, 1);
-  --color-d-orange-40: hsla(14, 80%, 41%, 1);
+  --color-d-orange-10: hsla(23, 81%, 61%, 1);
+  --color-d-orange-20: hsla(22, 79%, 58%, 1);
+  --color-d-orange-30: hsla(21, 76%, 50%, 1);
+  --color-d-orange-40: hsla(14, 70%, 47%, 1);
   --color-d-alpha-orange: hsla(27, 100%, 50%, 0.2);
-  --color-d-yellow-10: hsla(46, 91%, 69%, 1);
+  --color-d-yellow-10: hsla(46, 69%, 52%, 1);
   --color-d-yellow-20: hsla(47, 100%, 46%, 1);
   --color-d-yellow-30: hsla(43, 100%, 42%, 1);
-  --color-d-yellow-40: hsla(39, 92%, 33%, 1);
+  --color-d-yellow-40: hsla(39, 96%, 39%, 1);
   --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
-  --color-d-green-10: hsla(154, 38%, 56%, 1);
-  --color-d-green-20: hsla(150, 66%, 53%, 1);
-  --color-d-green-30: hsla(154, 62%, 41%, 1);
+  --color-d-green-10: hsla(154, 42%, 46%, 1);
+  --color-d-green-20: hsla(150, 66%, 43%, 1);
+  --color-d-green-30: hsla(154, 62%, 37%, 1);
   --color-d-green-40: hsla(155, 83%, 24%, 1);
   --color-d-alpha-green: hsla(74, 69%, 44%, 0.2);
-  --color-d-blue-10: hsla(199, 39%, 56%, 1);
-  --color-d-blue-20: hsla(198, 75%, 61%, 1);
-  --color-d-blue-30: hsla(198, 55%, 53%, 1);
-  --color-d-blue-40: hsla(201, 77%, 40%, 1);
+  --color-d-blue-10: hsla(191, 48%, 56%, 1);
+  --color-d-blue-20: hsla(192, 75%, 61%, 1);
+  --color-d-blue-30: hsla(193, 55%, 53%, 1);
+  --color-d-blue-40: hsla(194, 59%, 46%, 1);
   --color-d-alpha-blue: hsla(186, 64%, 46%, 0.2);
   --color-d-violet-10: hsla(280, 50%, 80%, 1);
   --color-d-violet-20: hsla(267, 68%, 75%, 1);
   --color-d-violet-30: hsla(266, 45%, 57%, 1);
-  --color-d-violet-40: hsla(256, 45%, 50%, 1);
+  --color-d-violet-40: hsla(256, 45%, 51%, 1);
   --color-d-alpha-violet: hsla(236, 100%, 72%, 0.2);
 }
 
@@ -821,21 +821,21 @@ and CONTRIBUTION page ↴
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
   --color-red-rgb: 228, 87, 78;
-  --color-red: hsla(0, 58%, 53%, 1);
+  --color-red: rgb(192, 78, 78);
   --color-orange-rgb: 238, 163, 89;
-  --color-orange: hsla(30, 66%, 52%, 1);
+  --color-orange: rgb(203, 128, 53);
   --color-yellow-rgb: 249, 207, 81;
-  --color-yellow: hsla(42, 80%, 55%, 1);
+  --color-yellow: rgb(225, 178, 67);
   --color-green-rgb: 100, 194, 113;
-  --color-green: hsla(131, 56%, 58%, 1);
+  --color-green: rgb(80, 196, 101);
   --color-cyan-rgb: 124, 180, 206;
-  --color-cyan: hsla(178, 43%, 54%, 1);
+  --color-cyan: rgb(96, 183, 180);
   --color-blue-rgb: 99, 156, 192;
-  --color-blue: hsla(206, 57%, 44%, 1);
+  --color-blue: rgb(63, 137, 176);
   --color-purple-rgb: 139, 113, 185;
-  --color-purple: hsla(250, 48%, 57%, 1);
+  --color-purple: rgb(113, 97, 194);
   --color-pink-rgb: 224, 108, 138;
-  --color-pink: hsla(346, 44%, 61%, 1);
+  --color-pink: rgb(180, 100, 100);
   --accent-h: 31;
   --accent-s: 25%;
   --accent-l: 24%;
@@ -955,11 +955,11 @@ and CONTRIBUTION page ↴
 .theme-dark {
   --non-alternating-color: var(--color-d-gray-60);
   --non-alternating-color-hover-active: var(--color-d-gray-70);
-  --alternating-color-1: color-mix(in srgb, var(--color-d-yellow-40) 70%, var(--color-d-yellow-20));
+  --alternating-color-1: var(--color-d-yellow-40);
   --alternating-color-1-hover-active: var(--color-d-yellow-30);
-  --alternating-color-2: color-mix(in srgb, var(--color-d-red-40) 70%, var(--color-d-red-20));
+  --alternating-color-2: var(--color-d-red-40);
   --alternating-color-2-hover-active: var(--color-d-red-30);
-  --alternating-color-3: color-mix(in srgb, var(--color-d-blue-40) 70%, var(--color-d-blue-20));
+  --alternating-color-3: var(--color-d-blue-40);
   --alternating-color-3-hover-active: var(--color-d-blue-30);
   --icon-color: var(--color-d-gray-60);
   --icon-opacity: 1;
@@ -1177,7 +1177,7 @@ and CONTRIBUTION page ↴
                                   0px 1px 2px 0px rgba(0, 0, 0, 0.5),
                                   0px 0px 0px 6px rgba(255, 255, 255, 0.08);
   --text-input-color: var(--color-d-gray-50);
-  --text-input-color-focused: var(--color-d-gray-30);
+  --text-input-color-focused: var(--color-d-gray-20);
   --text-input-bg-active: var(--color-d-gray-140);
   --text-input-border-color: var(--color-d-gray-140);
   --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
@@ -2211,6 +2211,7 @@ button:not(.view-header button, button[aria-label="Change sort order"]).mod-warn
   box-shadow: var(--button-accent-shadow-hover);
 }
 button:not(.view-header button, button[aria-label="Change sort order"]).mod-warning:active {
+  background: var(--background-modifier-error);
   box-shadow: var(--button-accent-shadow-active);
 }
 button:not(.view-header button, button[aria-label="Change sort order"]).mod-warning:focus-visible {
@@ -2227,7 +2228,7 @@ button:not(.view-header button, button[aria-label="Change sort order"]).mod-dest
   box-shadow: var(--button-accent-shadow-hover);
 }
 button:not(.view-header button, button[aria-label="Change sort order"]).mod-destructive:active {
-  background: var(--background-modifier-warning-hover);
+  background: var(--background-modifier-warning);
   box-shadow: var(--button-accent-shadow-active);
 }
 button:not(.view-header button, button[aria-label="Change sort order"]).mod-loading {
