@@ -47,3 +47,9 @@ video {
 .popover.hover-popover .markdown-embed {
     --embed-background: var(--background-primary);
 }
+
+// Mathjax | LaTeX
+mjx-math {
+    overflow: scroll;
+    width: 100%;
+}
