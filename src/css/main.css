@@ -2228,17 +2228,11 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 /*────────── Window Frame ──────────*/
 .workspace,
 .workspace-ribbon.mod-left.is-collapsed,
-.mod-left-split .workspace-tabs .workspace-leaf,
-.mod-right-split .workspace-tabs .workspace-leaf,
-.mod-left-split,
-.mod-vertical .workspace-tab-container,
-.mod-vertical,
-.workspace-split.mod-vertical,
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.mod-root.workspace-split,
 .mod-root .workspace-tabs .workspace-leaf,
-.workspace-ribbon.mod-left,
-.workspace-ribbon.mod-left:before {
-  background: var(--titlebar-background);
+.workspace-leaf.mod-active,
+.mod-vertical .workspace-tab-container {
+  background: var(--background-secondary);
 }
 
 .titlebar {
@@ -2548,7 +2542,7 @@ body {
   --tab-stacked-font-size: var(--font-ui-small);
 }
 
-.mod-root .workspace-leaf-content {
+.mod-root .workspace-leaf {
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--file-border-radius);
 }
