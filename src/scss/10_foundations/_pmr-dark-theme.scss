@@ -15,8 +15,8 @@ and CONTRIBUTION page ↴
 .theme-dark {
     color-scheme: dark;
     // Grayscale
-    --color-d-gray-10: hsla(32, 63%, 90%, 1);
-    --color-d-gray-20: hsla(34, 49%, 80%, 1);
+    --color-d-gray-10: hsla(32, 63%, 83%, 1);
+    --color-d-gray-20: hsla(34, 49%, 76%, 1);
     --color-d-gray-30: hsla(34, 31%, 68%, 1);
     --color-d-gray-40: hsla(35, 27%, 55%, 1);
     --color-d-gray-50: hsla(34, 24%, 40%, 1);
@@ -221,6 +221,12 @@ and CONTRIBUTION page ↴
                             inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.19),
                             inset 0px 2px 8px 0px rgba(0, 0, 0, 0.31),
                             0px 0px 0px 1px rgba(255, 255, 255, 0.08);
+
+    // Titlebar
+    --titlebar-background: var(--background-secondary);
+    --titlebar-background-focused: var(--background-secondary);
+    --titlebar-text-color: var(--color-d-gray-70);
+    --titlebar-text-color-focused: var(--color-d-gray-60);
 
     // Text Colors
     --text-normal: var(--color-d-gray-20);

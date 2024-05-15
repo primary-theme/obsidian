@@ -18,8 +18,9 @@ body {
     --icon-l: 18px;
     --icon-xl: 24px;
     --button-inset-shadow-size: 2px;
+    --titlebar-text-weight: var(--font-normal);
     --header-height: 46px;
-    --note-pane-margin: 8px;
+    --note-pane-margin: 6px;
     --file-tab-gap: 0px;
     --file-border-radius: var(--radius-l);
     --close-button-radius: var(--radius-l);
@@ -96,7 +97,7 @@ body {
 
     --menu-item-radius: calc(var(--radius-m) - 1px);
 
-    --divider-width-hover: 2px;
+    --divider-width-hover: 4px;
     --divider-radius: var(--radius-m);
 
     // Metadata
