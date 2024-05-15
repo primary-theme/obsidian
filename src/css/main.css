@@ -3483,6 +3483,11 @@ video {
   --embed-background: var(--background-primary);
 }
 
+mjx-math {
+  overflow: scroll;
+  width: 100%;
+}
+
 /*────────── Code ──────────*/
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting),
 .cm-s-obsidian code:not(pre code),
