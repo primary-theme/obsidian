@@ -38,17 +38,10 @@
 
 // Note Panes Margin
 .workspace {
-    // Tabs
-    // except Stacked Tabs and Sidedock Tabs
-    div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf, .workspace-split.mod-sidedock .workspace-leaf) {
-        margin-left: calc(var(--note-pane-margin) / 2);
-        margin-right: calc(var(--note-pane-margin) / 2);
-    }
-
-    // Stacked Tabs
-    .mod-stacked.workspace-tabs {
-        margin-left: calc(var(--note-pane-margin) / 2);
-        margin-right: calc(var(--note-pane-margin) / 2);
+    // Tabs including Stacked Tabs except Sidedock Tabs
+    .workspace-tabs .workspace-tab-container {
+        margin-left: calc(var(--note-pane-margin) / 3);
+        margin-right: calc(var(--note-pane-margin) / 3);
     }
 
     &:not(.is-left-sidedock-open.is-right-sidedock-open) {
@@ -61,7 +54,7 @@
 
     &:is(.is-left-sidedock-open.is-right-sidedock-open) {
         .workspace-split.mod-left-split {
-            margin-right: calc(-1 * (var(--note-pane-margin) / 2));
+            margin-right: calc(-1 * (var(--note-pane-margin) / 3));
         }
 
         .mod-root.workspace-split.mod-vertical {
@@ -71,13 +64,13 @@
         }
 
         .workspace-split.mod-right-split {
-            margin-left: calc(-1 * (var(--note-pane-margin) / 2));
+            margin-left: calc(-1 * (var(--note-pane-margin) / 3));
         }
     }
 
     &:is(.is-left-sidedock-open):not(.is-right-sidedock-open) {
         .workspace-split.mod-left-split {
-            margin-right: calc(-1 * (var(--note-pane-margin) / 2));
+            margin-right: calc(-1 * (var(--note-pane-margin) / 3));
         }
 
         .mod-root.workspace-split.mod-vertical {
@@ -95,7 +88,7 @@
         }
 
         .workspace-split.mod-right-split {
-            margin-left: calc(-1 * (var(--note-pane-margin) / 2));
+            margin-left: calc(-1 * (var(--note-pane-margin) / 3));
         }
     }
 }

@@ -4,21 +4,7 @@
 .workspace-ribbon.mod-left.is-collapsed,
 .mod-root.workspace-split,
 .mod-root .workspace-tabs .workspace-leaf,
-.workspace-leaf.mod-active,
-.mod-vertical .workspace-tab-container {
-    background: var(--background-secondary);
-}
-
-.titlebar {
-    --titlebar-text-weight: var(--font-normal);
-
-    .theme-light & {
-        --titlebar-text-color: var(--color-l-gray-60);
-        --titlebar-text-color-focused: var(--color-l-gray-70);
-    }
-
-    .theme-dark & {
-        --titlebar-text-color: var(--color-d-gray-70);
-        --titlebar-text-color-focused: var(--color-d-gray-60);
-    }
+.workspace-tab-container,
+.is-grabbing .workspace-tabs {
+    background: var(--titlebar-background);
 }

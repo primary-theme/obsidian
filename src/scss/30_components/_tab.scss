@@ -31,7 +31,11 @@ body {
 // Default Sizing and Alignment
 .mod-root .workspace {
     // File
-    &-leaf {
+    &-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
+        border-radius: var(--file-border-radius);
+    }
+
+    &-leaf-content {
         border: 1px solid var(--background-modifier-border);
         border-radius: var(--file-border-radius);
     }

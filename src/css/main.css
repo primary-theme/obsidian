@@ -35,8 +35,9 @@ body {
   --icon-l: 18px;
   --icon-xl: 24px;
   --button-inset-shadow-size: 2px;
+  --titlebar-text-weight: var(--font-normal);
   --header-height: 46px;
-  --note-pane-margin: 8px;
+  --note-pane-margin: 6px;
   --file-tab-gap: 0px;
   --file-border-radius: var(--radius-l);
   --close-button-radius: var(--radius-l);
@@ -106,7 +107,7 @@ body {
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
   --menu-item-radius: calc(var(--radius-m) - 1px);
-  --divider-width-hover: 2px;
+  --divider-width-hover: 4px;
   --divider-radius: var(--radius-m);
   --metadata-border-width: 1px;
   --metadata-divider-width: 0px;
@@ -184,8 +185,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --color-l-gray-100: hsla(35, 28%, 40%, 1);
   --color-l-gray-110: hsla(34, 30%, 37%, 1);
   --color-l-gray-120: hsla(36, 32%, 30%, 1);
-  --color-l-gray-130: hsla(31, 45%, 20%, 1);
-  --color-l-gray-140: hsla(33, 54%, 12%, 1);
+  --color-l-gray-130: hsla(31, 45%, 24%, 1);
+  --color-l-gray-140: hsla(33, 54%, 17%, 1);
   --color-l-alpha-gray: hsla(34, 29%, 60%, 0.2);
   --color-l-red-10: hsla(4, 54%, 61%, 1);
   --color-l-red-20: hsla(4, 72%, 55%, 1);
@@ -325,6 +326,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                           inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.09),
                           inset 0px 2px 8px 0px rgba(0, 0, 0, 0.2),
                           0px 0px 0px 1px rgba(255, 255, 255, 0.6);
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --titlebar-text-color: var(--color-l-gray-60);
+  --titlebar-text-color-focused: var(--color-l-gray-70);
   --text-normal: var(--color-l-gray-130);
   --text-muted: var(--color-l-gray-100);
   --text-faint: var(--color-l-gray-80);
@@ -773,8 +778,8 @@ and CONTRIBUTION page ↴
 ───────────────────────────────────*/
 .theme-dark {
   color-scheme: dark;
-  --color-d-gray-10: hsla(32, 63%, 90%, 1);
-  --color-d-gray-20: hsla(34, 49%, 80%, 1);
+  --color-d-gray-10: hsla(32, 63%, 83%, 1);
+  --color-d-gray-20: hsla(34, 49%, 76%, 1);
   --color-d-gray-30: hsla(34, 31%, 68%, 1);
   --color-d-gray-40: hsla(35, 27%, 55%, 1);
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
@@ -926,6 +931,10 @@ and CONTRIBUTION page ↴
                           inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.19),
                           inset 0px 2px 8px 0px rgba(0, 0, 0, 0.31),
                           0px 0px 0px 1px rgba(255, 255, 255, 0.08);
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --titlebar-text-color: var(--color-d-gray-70);
+  --titlebar-text-color-focused: var(--color-d-gray-60);
   --text-normal: var(--color-d-gray-20);
   --text-muted: var(--color-d-gray-40);
   --text-faint: var(--color-d-gray-50);
@@ -1995,13 +2004,9 @@ svg.vault {
   right: var(--file-border-radius);
 }
 
-.workspace div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf, .workspace-split.mod-sidedock .workspace-leaf) {
-  margin-left: calc(var(--note-pane-margin) / 2);
-  margin-right: calc(var(--note-pane-margin) / 2);
-}
-.workspace .mod-stacked.workspace-tabs {
-  margin-left: calc(var(--note-pane-margin) / 2);
-  margin-right: calc(var(--note-pane-margin) / 2);
+.workspace .workspace-tabs .workspace-tab-container {
+  margin-left: calc(var(--note-pane-margin) / 3);
+  margin-right: calc(var(--note-pane-margin) / 3);
 }
 .workspace:not(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: calc(var(--note-pane-margin) / 2);
@@ -2009,7 +2014,7 @@ svg.vault {
   padding-bottom: var(--note-pane-margin);
 }
 .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-left-split {
-  margin-right: calc(-1 * var(--note-pane-margin) / 2);
+  margin-right: calc(-1 * var(--note-pane-margin) / 3);
 }
 .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: 0;
@@ -2017,10 +2022,10 @@ svg.vault {
   padding-bottom: var(--note-pane-margin);
 }
 .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-right-split {
-  margin-left: calc(-1 * var(--note-pane-margin) / 2);
+  margin-left: calc(-1 * var(--note-pane-margin) / 3);
 }
 .workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .workspace-split.mod-left-split {
-  margin-right: calc(-1 * var(--note-pane-margin) / 2);
+  margin-right: calc(-1 * var(--note-pane-margin) / 3);
 }
 .workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: 0;
@@ -2033,7 +2038,7 @@ svg.vault {
   padding-bottom: var(--note-pane-margin);
 }
 .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .workspace-split.mod-right-split {
-  margin-left: calc(-1 * var(--note-pane-margin) / 2);
+  margin-left: calc(-1 * var(--note-pane-margin) / 3);
 }
 
 /*────────── Ribbon ──────────*/
@@ -2070,7 +2075,7 @@ svg.vault {
   border: 1px solid var(--divider-color);
   border-top-right-radius: var(--file-border-radius);
   border-bottom-right-radius: var(--file-border-radius);
-  margin-bottom: var(--size-4-2);
+  margin-bottom: var(--note-pane-margin);
 }
 .workspace-ribbon.mod-left:before {
   border-bottom: none;
@@ -2230,21 +2235,9 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 .workspace-ribbon.mod-left.is-collapsed,
 .mod-root.workspace-split,
 .mod-root .workspace-tabs .workspace-leaf,
-.workspace-leaf.mod-active,
-.mod-vertical .workspace-tab-container {
-  background: var(--background-secondary);
-}
-
-.titlebar {
-  --titlebar-text-weight: var(--font-normal);
-}
-.theme-light .titlebar {
-  --titlebar-text-color: var(--color-l-gray-60);
-  --titlebar-text-color-focused: var(--color-l-gray-70);
-}
-.theme-dark .titlebar {
-  --titlebar-text-color: var(--color-d-gray-70);
-  --titlebar-text-color-focused: var(--color-d-gray-60);
+.workspace-tab-container,
+.is-grabbing .workspace-tabs {
+  background: var(--titlebar-background);
 }
 
 /*────────── Button ──────────*/
@@ -2542,7 +2535,10 @@ body {
   --tab-stacked-font-size: var(--font-ui-small);
 }
 
-.mod-root .workspace-leaf {
+.mod-root .workspace-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
+  border-radius: var(--file-border-radius);
+}
+.mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--file-border-radius);
 }
