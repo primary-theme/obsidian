@@ -39,7 +39,8 @@
 // Note Panes Margin
 .workspace {
     // Tabs
-    div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf) {
+    // except Stacked Tabs and Sidedock Tabs
+    div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf, .workspace-split.mod-sidedock .workspace-leaf) {
         margin-left: calc(var(--note-pane-margin) / 2);
         margin-right: calc(var(--note-pane-margin) / 2);
     }

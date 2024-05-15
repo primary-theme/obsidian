@@ -106,7 +106,7 @@ body {
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
   --menu-item-radius: calc(var(--radius-m) - 1px);
-  --divider-width-hover: 4px;
+  --divider-width-hover: 2px;
   --divider-radius: var(--radius-m);
   --metadata-border-width: 1px;
   --metadata-divider-width: 0px;
@@ -1995,7 +1995,7 @@ svg.vault {
   right: var(--file-border-radius);
 }
 
-.workspace div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf) {
+.workspace div:not(.mod-stacked) .workspace-leaf:not(.mod-stacked.workspace-tabs .workspace-leaf, .workspace-split.mod-sidedock .workspace-leaf) {
   margin-left: calc(var(--note-pane-margin) / 2);
   margin-right: calc(var(--note-pane-margin) / 2);
 }
