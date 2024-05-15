@@ -778,8 +778,8 @@ and CONTRIBUTION page ↴
 ───────────────────────────────────*/
 .theme-dark {
   color-scheme: dark;
-  --color-d-gray-10: hsla(32, 63%, 85%, 1);
-  --color-d-gray-20: hsla(34, 49%, 76%, 1);
+  --color-d-gray-10: hsla(32, 63%, 87%, 1);
+  --color-d-gray-20: hsla(34, 49%, 79%, 1);
   --color-d-gray-30: hsla(34, 31%, 68%, 1);
   --color-d-gray-40: hsla(35, 27%, 55%, 1);
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
@@ -792,37 +792,37 @@ and CONTRIBUTION page ↴
   --color-d-gray-120: hsla(28, 16%, 12%, 1);
   --color-d-gray-130: hsla(24, 18%, 10%, 1);
   --color-d-gray-140: hsla(32, 21%, 8%, 1);
-  --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
+  --color-d-alpha-gray: hsla(34, 24%, 40%, 0.15);
   --color-d-red-10: hsla(4, 65%, 60%, 1);
   --color-d-red-20: hsla(5, 86%, 67%, 1);
   --color-d-red-30: hsla(4, 88%, 61%, 1);
   --color-d-red-40: hsla(4, 73%, 55%, 1);
-  --color-d-alpha-red: hsla(350, 84%, 63%, 0.2);
+  --color-d-alpha-red: hsla(350, 84%, 63%, 0.15);
   --color-d-orange-10: hsla(23, 81%, 61%, 1);
   --color-d-orange-20: hsla(22, 79%, 58%, 1);
   --color-d-orange-30: hsla(21, 76%, 50%, 1);
   --color-d-orange-40: hsla(14, 70%, 47%, 1);
-  --color-d-alpha-orange: hsla(27, 100%, 50%, 0.2);
+  --color-d-alpha-orange: hsla(27, 100%, 50%, 0.15);
   --color-d-yellow-10: hsla(46, 69%, 52%, 1);
   --color-d-yellow-20: hsla(47, 100%, 46%, 1);
   --color-d-yellow-30: hsla(43, 100%, 43%, 1);
   --color-d-yellow-40: hsla(39, 96%, 41%, 1);
-  --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
+  --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.15);
   --color-d-green-10: hsla(154, 42%, 52%, 1);
   --color-d-green-20: hsla(150, 66%, 48%, 1);
   --color-d-green-30: hsla(154, 62%, 42%, 1);
   --color-d-green-40: hsla(155, 83%, 29%, 1);
-  --color-d-alpha-green: hsla(74, 69%, 44%, 0.2);
+  --color-d-alpha-green: hsla(74, 69%, 44%, 0.15);
   --color-d-blue-10: hsla(191, 48%, 56%, 1);
   --color-d-blue-20: hsla(192, 75%, 57%, 1);
   --color-d-blue-30: hsla(193, 55%, 53%, 1);
   --color-d-blue-40: hsla(194, 59%, 46%, 1);
-  --color-d-alpha-blue: hsla(186, 64%, 46%, 0.2);
+  --color-d-alpha-blue: hsla(186, 64%, 46%, 0.15);
   --color-d-violet-10: hsla(280, 50%, 80%, 1);
   --color-d-violet-20: hsla(267, 68%, 75%, 1);
   --color-d-violet-30: hsla(266, 45%, 57%, 1);
   --color-d-violet-40: hsla(256, 45%, 51%, 1);
-  --color-d-alpha-violet: hsla(236, 100%, 72%, 0.2);
+  --color-d-alpha-violet: hsla(236, 100%, 72%, 0.15);
 }
 
 /*────────── Dark Theme Override ──────────*/
