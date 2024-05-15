@@ -40,8 +40,8 @@ svg.lucide-check-square,
 svg.lucide-check,
 // svg.lucide-chevron-down,
 // svg.lucide-chevron-up,
-svg.lucide-chevrons-down-up:is(.nav-action-button[aria-label="Collapse all"] svg.lucide-chevrons-down-up),
-svg.lucide-chevrons-up-down:is(.nav-action-button[aria-label="Expand all"] svg.lucide-chevrons-up-down),
+svg.lucide-chevrons-down-up:is(.nav-action-button svg.lucide-chevrons-down-up),
+svg.lucide-chevrons-up-down:is(.nav-action-button svg.lucide-chevrons-up-down),
 svg.lucide-clipboard-check,
 svg.lucide-clipboard-list,
 svg.lucide-clock,
@@ -545,12 +545,12 @@ svg.vault {
 }
 
 // Collapse All Action Button Icon
-.nav-action-button[aria-label="Collapse all"] svg.lucide-chevrons-down-up {
+.nav-action-button svg.lucide-chevrons-down-up {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' data-name='Layer 1' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='M10,11c.552,0,1,.448,1,1s-.448,1-1,1-1-.448-1-1,.448-1,1-1Zm-8,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm11,1c0,.552,.448,1,1,1s1-.448,1-1-.448-1-1-1-1,.448-1,1Zm-7-1c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm12,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm4,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm-11.414-2.586c.39,.39,.902,.585,1.414,.585s1.024-.195,1.414-.585l3.293-3.293c.391-.391,.391-1.023,0-1.414s-1.023-.391-1.414,0l-2.293,2.293V1c0-.553-.448-1-1-1s-1,.447-1,1V6l-2.293-2.293c-.391-.391-1.023-.391-1.414,0s-.391,1.023,0,1.414l3.293,3.293Zm2.828,7.172c-.779-.779-2.049-.779-2.828,0l-3.293,3.293c-.391,.391-.391,1.023,0,1.414s1.023,.391,1.414,0l2.293-2.293v5c0,.553,.448,1,1,1s1-.447,1-1v-5l2.293,2.293c.195,.195,.451,.293,.707,.293s.512-.098,.707-.293c.391-.391,.391-1.023,0-1.414l-3.293-3.293Z'/%3E%3C/svg%3E%0A");
 }
 
 // Expand All Action Button Icon
-.nav-action-button[aria-label="Expand all"] svg.lucide-chevrons-up-down {
+.nav-action-button svg.lucide-chevrons-up-down {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' data-name='Layer 1' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='M10,11c.552,0,1,.448,1,1s-.448,1-1,1-1-.448-1-1,.448-1,1-1Zm-8,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm11,1c0,.552,.448,1,1,1s1-.448,1-1-.448-1-1-1-1,.448-1,1Zm-7-1c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm16,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1Zm-4,0c-.552,0-1,.448-1,1s.448,1,1,1,1-.448,1-1-.448-1-1-1ZM8.707,5.293l2.293-2.293v5c0,.552,.447,1,1,1s1-.448,1-1V3l2.293,2.293c.195,.195,.451,.293,.707,.293s.512-.098,.707-.293c.391-.391,.391-1.023,0-1.414L13.414,.586c-.779-.78-2.049-.78-2.828,0l-3.293,3.293c-.391,.391-.391,1.023,0,1.414s1.023,.391,1.414,0Zm6.586,13.414l-2.293,2.293v-5c0-.552-.447-1-1-1s-1,.448-1,1v5l-2.293-2.293c-.391-.391-1.023-.391-1.414,0s-.391,1.023,0,1.414l3.293,3.293c.39,.39,.902,.585,1.414,.585s1.024-.195,1.414-.585l3.293-3.293c.391-.391,.391-1.023,0-1.414s-1.023-.391-1.414,0Z'/%3E%3C/svg%3E%0A");
 }
 
