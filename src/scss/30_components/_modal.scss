@@ -10,7 +10,7 @@
 
 /*────────── Modal: Settings ──────────*/
 // Settings Left Sidebar
-body:not(.is-phone) {
+.modal {
     .vertical-tab-header-group {
         padding-top: 0;
     }
@@ -69,7 +69,7 @@ body:not(.is-phone) {
 
 // Community Modals
 
-body:not(.is-phone) .community-item {
+.community-item {
     border: none;
     box-shadow: var(--community-item-shadow);
     transition: background var(--anim-duration-superfast) var(--anim-motion-smooth);
@@ -86,10 +86,15 @@ body:not(.is-phone) .community-item {
 }
 
 .community-item .flair,
-.flair.mod-pop,
-body:not(.is-phone) .community-item.is-selected .flair,
-body:not(.is-phone) .community-item.is-selected:hover .flair {
+.flair.mod-pop {
     color: var(--inline-code-color);
     background: var(--inline-code-bg);
-    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--community-item-flair-shadow);
+}
+
+.modal.modal .community-item.is-selected .flair,
+.modal.modal .community-item.is-selected:hover .flair {
+    color: var(--inline-code-bg);
+    background: var(--inline-code-color);
+    box-shadow: var(--community-item-flair-shadow);
 }

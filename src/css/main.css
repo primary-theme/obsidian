@@ -1050,6 +1050,7 @@ and CONTRIBUTION page ↴
   --modal-background: var(--background-primary);
   --modal-border-color: var(--background-modifier-border-hover);
   --modal-radius: var(--radius-xl);
+  --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   --community-item-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03);
   --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
   --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.18),
@@ -2457,17 +2458,17 @@ input[type=checkbox]:hover {
 }
 
 /*────────── Modal: Settings ──────────*/
-body:not(.is-phone) .vertical-tab-header-group {
+.modal .vertical-tab-header-group {
   padding-top: 0;
 }
-body:not(.is-phone) .vertical-tab-header-group-title {
+.modal .vertical-tab-header-group-title {
   font-size: calc(var(--font-ui-smaller) - 1px);
   color: var(--settings-nav-group-title-color);
   text-transform: uppercase;
   font-feature-settings: "calt" off;
   letter-spacing: 0.1em;
 }
-body:not(.is-phone) .vertical-tab-nav-item {
+.modal .vertical-tab-nav-item {
   text-transform: capitalize;
   font-size: var(--font-ui-small);
   color: var(--settings-nav-item-text-color);
@@ -2477,51 +2478,56 @@ body:not(.is-phone) .vertical-tab-nav-item {
   transition: box-shadow var(--button-anim);
   transition: padding-left var(--anim-duration-fast) var(--anim-motion-swing);
 }
-body:not(.is-phone) .vertical-tab-nav-item:hover:not(.is-active) {
+.modal .vertical-tab-nav-item:hover:not(.is-active) {
   color: var(--settings-nav-item-text-color-hover);
   background: var(--settings-nav-item-bg-hover);
   cursor: pointer;
   padding: var(--settings-nav-item-padding-hover);
 }
-body:not(.is-phone) .vertical-tab-nav-item:active:not(.is-active) {
+.modal .vertical-tab-nav-item:active:not(.is-active) {
   color: var(--settings-nav-item-text-color-active);
 }
-body:not(.is-phone) .vertical-tab-nav-item.is-active {
+.modal .vertical-tab-nav-item.is-active {
   padding: var(--settings-nav-item-padding-active);
 }
-body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+1) {
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+1) {
   background: var(--alternating-color-1);
   box-shadow: var(--button-accent-shadow);
 }
-body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+2) {
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+2) {
   background: var(--alternating-color-2);
   box-shadow: var(--button-accent-shadow);
 }
-body:not(.is-phone) .vertical-tab-nav-item.is-active:nth-child(3n+3) {
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+3) {
   background: var(--alternating-color-3);
   box-shadow: var(--button-accent-shadow);
 }
 
-body:not(.is-phone) .community-item {
+.community-item {
   border: none;
   box-shadow: var(--community-item-shadow);
   transition: background var(--anim-duration-superfast) var(--anim-motion-smooth);
   transition: box-shadow var(--anim-duration-fast) var(--anim-motion-swing);
 }
-body:not(.is-phone) .community-item:hover {
+.community-item:hover {
   box-shadow: var(--community-item-shadow-hover);
 }
-body:not(.is-phone) .community-item.is-selected, body:not(.is-phone) .community-item.is-selected:hover {
+.community-item.is-selected, .community-item.is-selected:hover {
   box-shadow: var(--community-item-selected-shadow);
 }
 
 .community-item .flair,
-.flair.mod-pop,
-body:not(.is-phone) .community-item.is-selected .flair,
-body:not(.is-phone) .community-item.is-selected:hover .flair {
+.flair.mod-pop {
   color: var(--inline-code-color);
   background: var(--inline-code-bg);
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--community-item-flair-shadow);
+}
+
+.modal.modal .community-item.is-selected .flair,
+.modal.modal .community-item.is-selected:hover .flair {
+  color: var(--inline-code-bg);
+  background: var(--inline-code-color);
+  box-shadow: var(--community-item-flair-shadow);
 }
 
 /*────────── Tabs ──────────*/
