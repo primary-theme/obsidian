@@ -5,19 +5,7 @@ body {
     --font-text-theme: 'Inter';
     --font-monospace-theme: 'Cascadia Code';
 
-    // For stylized use of Inter and Cascadia Code:
-    font-feature-settings:
-        "calt" on,
-        "dlig" on,
-        "case" on,
-        "ccmp" on,
-        "ss03" on,
-        "ss19" on,
-        "cv01",
-        "cv05",
-        "cv06",
-        "cv08",
-        "cv11";
+    font-feature-settings: var(--inter-font-features);
 
     --bold-weight: var(--font-medium);
     --h1-weight: var(--font-semibold);
@@ -27,17 +15,12 @@ input,
 textarea,
 select,
 button {
-    // For stylized use of Inter and Cascadia Code:
-    font-feature-settings:
-        "calt" on,
-        "dlig" on,
-        "case" on,
-        "ccmp" on,
-        "ss03" on,
-        "ss19" on,
-        "cv01",
-        "cv05",
-        "cv06",
-        "cv08",
-        "cv11";
+    font-feature-settings: var(--inter-font-features);
+}
+
+pre,
+code,
+.HyperMD-codeblock,
+.cm-inline-code {
+    font-feature-settings: var(--cascadia-font-features);
 }

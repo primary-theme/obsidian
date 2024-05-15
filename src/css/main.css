@@ -4,7 +4,7 @@ body {
   --font-interface-theme: "Inter";
   --font-text-theme: "Inter";
   --font-monospace-theme: "Cascadia Code";
-  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
+  font-feature-settings: var(--inter-font-features);
   --bold-weight: var(--font-medium);
   --h1-weight: var(--font-semibold);
 }
@@ -13,7 +13,14 @@ input,
 textarea,
 select,
 button {
-  font-feature-settings: "calt" on, "dlig" on, "case" on, "ccmp" on, "ss03" on, "ss19" on, "cv01", "cv05", "cv06", "cv08", "cv11";
+  font-feature-settings: var(--inter-font-features);
+}
+
+pre,
+code,
+.HyperMD-codeblock,
+.cm-inline-code {
+  font-feature-settings: var(--cascadia-font-features);
 }
 
 /*────────── Shape ──────────*/
@@ -26,6 +33,10 @@ Variables for
     variables
 */
 body {
+  --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+  --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
+  --bold-italic-weight: 500;
+  --bold-modifier: 100;
   --cursor: pointer;
   --radius-xs: 2px;
   --icon-container-radius: 0px;
@@ -194,31 +205,37 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --color-l-red-30: hsla(4, 56%, 48%, 1);
   --color-l-red-40: hsla(4, 72%, 35%, 1);
   --color-l-alpha-red: hsla(350, 84%, 63%, 0.2);
+  --color-l-opaque-red: hsla(1, 68%, 90%, 1);
   --color-l-orange-10: hsla(26, 70%, 63%, 1);
   --color-l-orange-20: hsla(21, 81%, 59%, 1);
   --color-l-orange-30: hsla(18, 69%, 50%, 1);
   --color-l-orange-40: hsla(18, 96%, 35%, 1);
   --color-l-alpha-orange: hsla(27, 100%, 50%, 0.2);
+  --color-l-opaque-orange: hsla(1, 68%, 90%, 1);
   --color-l-yellow-10: hsla(43, 71%, 67%, 1);
   --color-l-yellow-20: hsla(43, 83%, 57%, 1);
   --color-l-yellow-30: hsla(40, 79%, 47%, 1);
   --color-l-yellow-40: hsla(40, 98%, 36%, 1);
   --color-l-alpha-yellow: hsla(44, 100%, 50%, 0.2);
+  --color-l-opaque-yellow: hsla(1, 68%, 90%, 1);
   --color-l-green-10: hsla(148, 30%, 65%, 1);
   --color-l-green-20: hsla(148, 48%, 47%, 1);
   --color-l-green-30: hsla(149, 50%, 39%, 1);
   --color-l-green-40: hsla(153, 65%, 29%, 1);
   --color-l-alpha-green: hsla(74, 69%, 44%, 0.2);
+  --color-l-opaque-green: hsla(67, 40%, 85%, 1);
   --color-l-blue-10: hsla(197, 39%, 56%, 1);
   --color-l-blue-20: hsla(202, 66%, 48%, 1);
   --color-l-blue-30: hsla(200, 64%, 37%, 1);
   --color-l-blue-40: hsla(205, 85%, 25%, 1);
   --color-l-alpha-blue: hsla(186, 64%, 46%, 0.2);
+  --color-l-opaque-blue: hsla(175, 26%, 87%, 1);
   --color-l-violet-10: hsla(280, 43%, 76%, 1);
   --color-l-violet-20: hsla(277, 35%, 59%, 1);
   --color-l-violet-30: hsla(275, 37%, 43%, 1);
   --color-l-violet-40: hsla(265, 70%, 30%, 1);
   --color-l-alpha-violet: hsla(236, 100%, 72%, 0.2);
+  --color-l-opaque-violet: hsla(1, 68%, 90%, 1);
 }
 
 /*────────── Light Theme Override ──────────*/
@@ -441,6 +458,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
   --modal-border-color: var(--background-modifier-border-hover);
   --modal-radius: var(--radius-xl);
+  --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   --community-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
   --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23),
@@ -497,6 +515,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --inline-code-bg: var(--color-l-gray-10);
   --bold-italic-color: var(--color-l-gray-140);
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
+  --bold-highlight-color: var(--text-normal);
+  --bold-highlight-bg: var(--color-l-alpha-red);
+  --italic-highlight-color: var(--text-normal);
+  --italic-highlight-bg: var(--color-l-opaque-blue);
+  --bold-italic-highlight-color: var(--text-normal);
+  --bold-italic-highlight-bg: var(--color-l-opaque-green);
+  --strikethrough-highlight-color: var(--strikethrough-color);
+  --strikethrough-highlight-bg: var(--color-l-alpha-yellow);
   --tag-color: var(--color-l-blue-30);
   --tag-color-hover: var(--color-l-blue-20);
   --tag-background: rgba(255, 255, 255, 0.5);
@@ -3404,7 +3430,27 @@ body .cm-em .cm-strong,
 body strong em,
 body em strong {
   color: var(--bold-italic-color);
-  font-weight: 500;
+  font-weight: var(--bold-italic-weight);
+}
+body .markdown-rendered mark {
+  background-color: var(--text-highlight-bg);
+}
+body .cm-highlight.cm-strong,
+body .markdown-rendered strong mark {
+  color: var(--bold-highlight-color);
+  background-color: var(--bold-highlight-bg);
+}
+body .cm-highlight.cm-em,
+body .markdown-rendered em mark {
+  color: var(--italic-highlight-color);
+  background-color: var(--italic-highlight-bg);
+}
+body .cm-highlight.cm-em.cm-strong,
+body .markdown-rendered em > mark > strong,
+body .markdown-rendered strong > mark > em,
+body .markdown-rendered strong > em > mark {
+  color: var(--bold-italic-highlight-color);
+  background-color: var(--bold-italic-highlight-bg);
 }
 body span.cm-quote.cm-strong {
   color: var(--bold-color);
