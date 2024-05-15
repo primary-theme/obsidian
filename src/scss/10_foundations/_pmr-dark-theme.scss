@@ -15,8 +15,8 @@ and CONTRIBUTION page ↴
 .theme-dark {
     color-scheme: dark;
     // Grayscale
-    --color-d-gray-10: hsla(32, 63%, 87%, 1);
-    --color-d-gray-20: hsla(34, 49%, 79%, 1);
+    --color-d-gray-10: hsla(32, 48%, 85%, 1);
+    --color-d-gray-20: hsla(34, 39%, 74%, 1);
     --color-d-gray-30: hsla(34, 31%, 68%, 1);
     --color-d-gray-40: hsla(35, 27%, 55%, 1);
     --color-d-gray-50: hsla(34, 24%, 40%, 1);
@@ -535,7 +535,11 @@ and CONTRIBUTION page ↴
     --yaml-string-color: var(--color-d-yellow-30);
 
     // Embed
-    --embed-bg-color-mix: color-mix(in hsl, var(--color-d-gray-100) 30%, var(--color-d-gray-140));
+    --embed-bg-color-mix: color-mix(
+                                    in srgb, 
+                                    var(--background-primary-alt) 50%, 
+                                    var(--background-primary)
+                                    );
     --embed-title-color: var(--color-d-gray-50);
     --embed-block-shadow-hover: none;
 
@@ -734,7 +738,7 @@ and CONTRIBUTION page ↴
 
     --callout-title-color: var(--text-normal);
     --callout-content-background: color-mix(
-                                    in hsl, 
+                                    in srgb, 
                                     var(--background-primary-alt) 50%, 
                                     var(--background-primary)
                                     );

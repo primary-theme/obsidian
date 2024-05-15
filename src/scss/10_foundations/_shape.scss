@@ -133,8 +133,8 @@ body {
                                 var(--size-4-4)
                                 calc(var(--size-4-1) + var(--callout-shadow-offset))
                                 var(--size-4-4);
-    // --callout-border-width: 1px;
     --callout-radius: var(--radius-m);
+    --callout-blend-mode: unset;
 
     // Animation
     --anim-popup: 0.3s slideUp forwards;

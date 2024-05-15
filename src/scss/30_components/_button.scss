@@ -181,6 +181,15 @@ button:not(button.clickable-icon) {
     }
 }
 
+@media (hover: hover) {
+    .markdown-embed-link,
+    .file-embed-link {
+        &:hover {
+            box-shadow: var(--copy-code-btn-shadow);
+        }
+    }
+}
+
 .mod-community-modal .modal-sidebar button.clickable-icon {
     color: var(--icon-color);
     padding: unset;

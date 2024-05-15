@@ -537,7 +537,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --yaml-string-color: var(--color-l-yellow-30);
 
     // Embed
-    --embed-bg-color-mix: color-mix(in hsl, var(--color-l-gray-30) 70%, var(--color-l-gray-10));
+    --embed-bg-color-mix: color-mix(
+                                in srgb, 
+                                var(--background-primary-alt) 50%, 
+                                var(--background-primary)
+                                );
     --embed-title-color: var(--color-l-gray-90);
     --embed-block-shadow-hover: none;
 
@@ -735,7 +739,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --callout-title-color: var(--text-normal);
     --callout-content-background: color-mix(
-                                    in hsl, 
+                                    in srgb, 
                                     var(--background-primary-alt) 50%, 
                                     var(--background-primary)
                                     );
