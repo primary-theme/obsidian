@@ -778,14 +778,14 @@ and CONTRIBUTION page ↴
 ───────────────────────────────────*/
 .theme-dark {
   color-scheme: dark;
-  --color-d-gray-10: hsla(32, 63%, 83%, 1);
+  --color-d-gray-10: hsla(32, 63%, 85%, 1);
   --color-d-gray-20: hsla(34, 49%, 76%, 1);
   --color-d-gray-30: hsla(34, 31%, 68%, 1);
   --color-d-gray-40: hsla(35, 27%, 55%, 1);
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
   --color-d-gray-60: hsla(33, 27%, 30%, 1);
   --color-d-gray-70: hsla(31, 25%, 24%, 1);
-  --color-d-gray-80: hsla(28, 22%, 19%, 1);
+  --color-d-gray-80: hsla(28, 22%, 17%, 1);
   --color-d-gray-90: hsla(33, 20%, 16%, 1);
   --color-d-gray-100: hsla(31, 19%, 14%, 1);
   --color-d-gray-110: hsla(28, 16%, 13%, 1);
