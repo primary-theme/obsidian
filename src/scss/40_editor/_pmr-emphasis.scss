@@ -28,7 +28,36 @@ body {
     strong em,
     em strong {
         color: var(--bold-italic-color);
-        font-weight: 500;
+        font-weight: var(--bold-italic-weight);
+    }
+
+    // Multi-colored Highlights
+    // Normal Highlight
+    .markdown-rendered mark {
+        background-color: var(--text-highlight-bg);
+    }
+
+    // Bold Highlight
+    .cm-highlight.cm-strong,
+    .markdown-rendered strong mark {
+        color: var(--bold-highlight-color);
+        background-color: var(--bold-highlight-bg);
+    }
+
+    // Italic Highlight
+    .cm-highlight.cm-em,
+    .markdown-rendered em mark {
+        color: var(--italic-highlight-color);
+        background-color: var(--italic-highlight-bg);
+    }
+
+    // Bold Italic Highlight
+    .cm-highlight.cm-em.cm-strong,
+    .markdown-rendered em > mark > strong,
+    .markdown-rendered strong > mark > em,
+    .markdown-rendered strong > em > mark {
+        color: var(--bold-italic-highlight-color);
+        background-color: var(--bold-italic-highlight-bg);
     }
 
     // Blockquote Writing Mode Overrides
