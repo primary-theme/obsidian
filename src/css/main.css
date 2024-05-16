@@ -2344,11 +2344,12 @@ button:not(button.clickable-icon).mod-loading {
   border-radius: var(--close-button-radius);
   display: flex;
   justify-content: center;
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .document-search-close-button::before,
 .modal-close-button::before {
   font-weight: var(--font-extralight);
+  font-feature-settings: "case";
 }
 .document-search-close-button:hover,
 .modal-close-button:hover {
@@ -2358,6 +2359,10 @@ button:not(button.clickable-icon).mod-loading {
 .document-search-close-button:active,
 .modal-close-button:active {
   opacity: 0.8;
+}
+
+.document-search-close-button {
+  top: unset;
 }
 
 .metadata-container .metadata-add-button {
