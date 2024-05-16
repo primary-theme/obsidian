@@ -16,7 +16,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     color-scheme: light;
     // Grayscale
     --color-l-gray-10: hsla(36, 38%, 98%, 1);
-    --color-l-gray-20: hsla(35, 36%, 95%, 1);
+    --color-l-gray-20: hsla(35, 36%, 96%, 1);
     --color-l-gray-30: hsla(35, 37%, 92%, 1);
     --color-l-gray-40: hsla(34, 34%, 90%, 1);
     --color-l-gray-50: hsla(36, 35%, 88%, 1);
@@ -33,7 +33,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --color-l-alpha-gray: hsla(34, 29%, 60%, 0.2); // gray-80s
 
     // Red
-    --color-l-red-10: hsla(4, 54%, 61%, 1);
+    --color-l-red-10: hsla(4, 59%, 64%, 1);
     --color-l-red-20: hsla(4, 72%, 55%, 1);
     --color-l-red-30: hsla(4, 56%, 48%, 1);
     --color-l-red-40: hsla(4, 72%, 35%, 1);
@@ -433,10 +433,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --h6-color: var(--color-l-gray-140);
     
     // Links
-    --link-ahref-color: var(--color-l-red-10);
+    --link-ahref-color: var(--color-l-red-20);
     --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
 
-    --link-ahref-color-hover: var(--color-l-red-20);
+    --link-ahref-color-hover: var(--color-l-red-10);
     --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
 
     --link-ahref-color-active: var(--color-l-red-30);
@@ -491,17 +491,18 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Bold, Italic, Strikethrough
     --bold-italic-strikethrough-color: var(--color-l-gray-90);
 
+    // Multi-colored Highlights
     // Bold Highlight
     --bold-highlight-color: var(--text-normal);
     --bold-highlight-bg: var(--color-l-alpha-red);
 
     // Italic Highlight
     --italic-highlight-color: var(--text-normal);
-    --italic-highlight-bg: var(--color-l-opaque-blue);
+    --italic-highlight-bg: var(--color-l-alpha-blue);
 
     // Bold Italic Highlight
-    --bold-italic-highlight-color: var(--text-normal);
-    --bold-italic-highlight-bg: var(--color-l-opaque-green);
+    --bold-italic-highlight-color: var(--bold-italic-color);
+    --bold-italic-highlight-bg: var(--color-l-alpha-green);
 
     // Strikethrough Highlight
     --strikethrough-highlight-color: var(--strikethrough-color);
