@@ -29,7 +29,7 @@ body {
 }
 
 // Default Sizing and Alignment
-.mod-root .workspace {
+body:not(.is-phone) .mod-root .workspace {
     // File
     &-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
         border-radius: var(--file-border-radius);

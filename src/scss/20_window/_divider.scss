@@ -37,7 +37,7 @@
 //----------
 
 // Note Panes Margin
-.workspace {
+body:not(.is-phone) .workspace {
     // Tabs including Stacked Tabs except Sidedock Tabs
     .workspace-tabs .workspace-tab-container {
         margin-left: calc(var(--note-pane-margin) / 3);
