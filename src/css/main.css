@@ -2053,40 +2053,40 @@ svg.vault {
   right: var(--file-border-radius);
 }
 
-.workspace .workspace-tabs .workspace-tab-container {
+body:not(.is-phone) .workspace .workspace-tabs .workspace-tab-container {
   margin-left: calc(var(--note-pane-margin) / 3);
   margin-right: calc(var(--note-pane-margin) / 3);
 }
-.workspace:not(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
+body:not(.is-phone) .workspace:not(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: calc(var(--note-pane-margin) / 2);
   margin-right: calc(var(--note-pane-margin) / 2);
   padding-bottom: var(--note-pane-margin);
 }
-.workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-left-split {
+body:not(.is-phone) .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-left-split {
   margin-right: calc(-1 * var(--note-pane-margin) / 3);
 }
-.workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
+body:not(.is-phone) .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: 0;
   margin-right: 0;
   padding-bottom: var(--note-pane-margin);
 }
-.workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-right-split {
+body:not(.is-phone) .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-right-split {
   margin-left: calc(-1 * var(--note-pane-margin) / 3);
 }
-.workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .workspace-split.mod-left-split {
+body:not(.is-phone) .workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .workspace-split.mod-left-split {
   margin-right: calc(-1 * var(--note-pane-margin) / 3);
 }
-.workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
+body:not(.is-phone) .workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: 0;
   margin-right: calc(var(--note-pane-margin) / 2);
   padding-bottom: var(--note-pane-margin);
 }
-.workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .mod-root.workspace-split.mod-vertical {
+body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: calc(var(--note-pane-margin) / 2);
   margin-right: 0;
   padding-bottom: var(--note-pane-margin);
 }
-.workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .workspace-split.mod-right-split {
+body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .workspace-split.mod-right-split {
   margin-left: calc(-1 * var(--note-pane-margin) / 3);
 }
 
@@ -2602,19 +2602,19 @@ body {
   --tab-stacked-font-size: var(--font-ui-small);
 }
 
-.mod-root .workspace-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
+body:not(.is-phone) .mod-root .workspace-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
   border-radius: var(--file-border-radius);
 }
-.mod-root .workspace-leaf-content {
+body:not(.is-phone) .mod-root .workspace-leaf-content {
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--file-border-radius);
 }
-.mod-root .workspace-tab-header-container {
+body:not(.is-phone) .mod-root .workspace-tab-header-container {
   padding-bottom: var(--size-4-1);
   border-bottom: none;
   transition: padding-bottom none;
 }
-.mod-root .workspace-tab-header-container-inner {
+body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
   padding-bottom: var(--button-axis-offset);
 }
 
