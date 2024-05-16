@@ -18,9 +18,9 @@ button {
     font-feature-settings: var(--inter-font-features);
 }
 
-pre,
-code,
-.HyperMD-codeblock,
-.cm-inline-code {
+pre:not(> *),
+code:not(> *),
+.HyperMD-codeblock:not(> *),
+.cm-inline-code:not(> *) {
     font-feature-settings: var(--cascadia-font-features);
 }
