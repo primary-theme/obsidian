@@ -273,8 +273,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                       );
   --color-accent-2: hsl(
                       calc(var(--accent-h) - 3),
-                      calc(var(--accent-s) * 1.42),
-                      calc(var(--accent-l) * 1.18)
+                      calc(var(--accent-s) * 1.33),
+                      calc(var(--accent-l) * 1.19)
                       );
   --color-base-00: var(--color-l-gray-10);
   --color-base-05: var(--color-l-gray-20);
@@ -415,14 +415,14 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                           0px 0px 0px 3px var(--color-l-alpha-gray);
   --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.09),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
                           inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
                           0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
                           0px 2px 4px -2.7px rgba(0, 0, 0, 0.22),
                           0px 2px 4px -1px rgba(0, 0, 0, 0.19);
   --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
                                   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.19),
-                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
                                   inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
                                   0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
                                   0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
@@ -430,7 +430,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --button-accent-shadow-active: var(--input-shadow-active);
   --button-accent-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
                                   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
-                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
                                   inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
                                   0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
                                   0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
@@ -891,7 +891,7 @@ and CONTRIBUTION page ↴
                       );
   --color-accent-2: hsl(
                       calc(var(--accent-h) - 5),
-                      calc(var(--accent-s) * 1.16 ),
+                      calc(var(--accent-s) * 1.16),
                       calc(var(--accent-l) * 1.34)
                       );
   --color-base-00: var(--color-d-gray-140);

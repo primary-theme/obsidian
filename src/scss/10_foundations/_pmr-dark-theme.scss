@@ -142,7 +142,7 @@ and CONTRIBUTION page ↴
     // default for color-accent-2 is - 5, * 1.13, * 1.31
     --color-accent-2: hsl(
                         calc(var(--accent-h) - 5),
-                        calc(var(--accent-s) * 1.16 ),
+                        calc(var(--accent-s) * 1.16),
                         calc(var(--accent-l) * 1.34)
                         );
 
