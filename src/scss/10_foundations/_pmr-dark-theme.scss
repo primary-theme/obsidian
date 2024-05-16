@@ -197,7 +197,7 @@ and CONTRIBUTION page ↴
     --background-modifier-success-rgb: var(--color-green-rgb);
     --background-modifier-success: var(--color-d-green-30);
 
-    --background-modifier-message: var(--color-d-gray-60);
+    --background-modifier-message: var(--color-d-gray-70);
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
@@ -572,18 +572,18 @@ and CONTRIBUTION page ↴
                                     0px 1px 2px 0px rgba(0, 0, 0, 0.5);
 
     // Code
-    --code-background: var(--background-primary-alt);
-    --code-normal: var(--color-d-gray-40);
-    --code-comment: var(--color-d-gray-60);
-    --code-function: var(--color-d-blue-10);
-    --code-important: var(--color-d-orange-20);
-    --code-keyword: var(--color-d-red-30);
-    --code-operator: var(--color-d-blue-30);
-    --code-property: var(--color-d-blue-20);
-    --code-punctuation: var(--color-d-gray-70);
-    --code-string: var(--color-d-yellow-30);
-    --code-tag: var(--color-d-yellow-10);
-    --code-value: var(--color-d-green-20);
+    // --code-background: var(--background-primary-alt);
+    // --code-normal: var(--color-d-gray-40);
+    // --code-comment: var(--color-d-gray-60);
+    // --code-function: var(--color-d-blue-10);
+    // --code-important: var(--color-d-orange-20);
+    // --code-keyword: var(--color-d-red-30);
+    // --code-operator: var(--color-d-blue-30);
+    // --code-property: var(--color-d-blue-20);
+    // --code-punctuation: var(--color-d-gray-70);
+    // --code-string: var(--color-d-yellow-30);
+    // --code-tag: var(--color-d-yellow-10);
+    // --code-value: var(--color-d-green-20);
 
     --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.39),
                             0px 2px 4px -2px rgba(0, 0, 0, 0.39);
@@ -740,6 +740,16 @@ and CONTRIBUTION page ↴
 
     --prompt-separator-border: 1px solid var(--color-d-gray-90);
     --prompt-border-color: var(--background-modifier-border-focus);
+
+    // Notice
+    --notice-color: var(--text-normal);
+    --notice-shadow:    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+                        0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
+                        0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
+                        0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
+    --tooltip-shadow:   inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3),
+                        0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
+                        0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
 
     // KBD
     --kbd-color: var(--color-d-red-20);
