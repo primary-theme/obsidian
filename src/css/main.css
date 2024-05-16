@@ -817,30 +817,30 @@ and CONTRIBUTION page ↴
   --color-d-gray-130: hsla(24, 18%, 10%, 1);
   --color-d-gray-140: hsla(32, 21%, 8%, 1);
   --color-d-alpha-gray: hsla(34, 24%, 40%, 0.15);
-  --color-d-red-10: hsla(5, 86%, 67%, 1);
-  --color-d-red-20: hsla(4, 65%, 60%, 1);
+  --color-d-red-10: hsla(5, 94%, 73%, 1);
+  --color-d-red-20: hsla(4, 87%, 67%, 1);
   --color-d-red-30: hsla(4, 88%, 61%, 1);
-  --color-d-red-40: hsla(4, 70%, 52%, 1);
+  --color-d-red-40: hsla(2, 75%, 52%, 1);
   --color-d-alpha-red: hsla(350, 84%, 63%, 0.15);
   --color-d-orange-10: hsla(26, 85%, 58%, 1);
   --color-d-orange-20: hsla(24, 84%, 50%, 1);
   --color-d-orange-30: hsla(22, 82%, 47%, 1);
   --color-d-orange-40: hsla(19, 81%, 41%, 1);
   --color-d-alpha-orange: hsla(27, 100%, 50%, 0.15);
-  --color-d-yellow-10: hsla(43, 93%, 54%, 1);
-  --color-d-yellow-20: hsla(42, 87%, 46%, 1);
-  --color-d-yellow-30: hsla(39, 84%, 44%, 1);
-  --color-d-yellow-40: hsla(39, 81%, 39%, 1);
+  --color-d-yellow-10: hsla(43, 100%, 63%, 1);
+  --color-d-yellow-20: hsla(42, 79%, 51%, 1);
+  --color-d-yellow-30: hsla(40, 78%, 48%, 1);
+  --color-d-yellow-40: hsla(38, 76%, 42%, 1);
   --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.15);
   --color-d-green-10: hsla(152, 73%, 49%, 1);
   --color-d-green-20: hsla(154, 57%, 42%, 1);
   --color-d-green-30: hsla(155, 78%, 29%, 1);
   --color-d-green-40: hsla(154, 75%, 26%, 1);
   --color-d-alpha-green: hsla(74, 69%, 44%, 0.15);
-  --color-d-blue-10: hsla(191, 53%, 65%, 1);
-  --color-d-blue-20: hsla(192, 49%, 57%, 1);
-  --color-d-blue-30: hsla(193, 46%, 46%, 1);
-  --color-d-blue-40: hsla(194, 42%, 37%, 1);
+  --color-d-blue-10: hsla(191, 46%, 58%, 1);
+  --color-d-blue-20: hsla(194, 41%, 53%, 1);
+  --color-d-blue-30: hsla(197, 43%, 46%, 1);
+  --color-d-blue-40: hsla(201, 45%, 40%, 1);
   --color-d-alpha-blue: hsla(186, 64%, 46%, 0.15);
   --color-d-violet-10: hsla(242, 52%, 69%, 1);
   --color-d-violet-20: hsla(241, 45%, 57%, 1);
@@ -916,8 +916,8 @@ and CONTRIBUTION page ↴
   --background-primary-alt: var(--color-d-gray-110);
   --background-secondary: var(--color-d-gray-120);
   --background-secondary-alt: var(--color-d-gray-120);
-  --interactive-normal: var(--color-d-gray-130);
-  --interactive-hover: var(--color-d-gray-120);
+  --interactive-normal: var(--color-d-gray-90);
+  --interactive-hover: var(--color-d-gray-80);
   --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
@@ -937,22 +937,22 @@ and CONTRIBUTION page ↴
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --background-modifier-form-field: var(--color-d-gray-130);
-  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.099),
+  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.02),
                   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
-                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.24),
+                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
                   inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
                   0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
                   0px 2px 4px -2.7px rgba(0, 0, 0, 0.25),
                   0px 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.24),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
                           inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
                           0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
                           0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
                           0px 2px 6px -1px rgba(0, 0, 0, 0.25);
   --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
-                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.19),
+                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.15),
                           inset 0px 2px 8px 0px rgba(0, 0, 0, 0.57),
                           0px 0px 0px 1px rgba(255, 255, 255, 0.02);
   --titlebar-background: var(--background-secondary);
@@ -1030,14 +1030,14 @@ and CONTRIBUTION page ↴
                           0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
                           0px 2px 6px -1px rgba(0, 0, 0, 0.25),
                           0px 0px 0px 3px var(--color-d-alpha-gray);
-  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.14),
+  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
                           inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
                           inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
                           0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
                           0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
                           0px 2px 4px -1px rgba(0, 0, 0, 0.14);
-  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
+  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
                                   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.34),
                                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
                                   inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
@@ -1119,7 +1119,7 @@ and CONTRIBUTION page ↴
   --link-external-color-active: var(--color-d-green-30);
   --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
   --bold-color: var(--color-d-red-30);
-  --italic-color: var(--color-d-blue-30);
+  --italic-color: var(--color-d-blue-20);
   --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --strikethrough-color: var(--color-d-gray-50);
   --inline-code-color: var(--color-d-red-20);
@@ -1190,6 +1190,18 @@ and CONTRIBUTION page ↴
   --embed-edit-btn-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
                                   inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5),
                                   0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--color-d-gray-40);
+  --code-comment: var(--color-d-gray-60);
+  --code-function: var(--color-d-blue-10);
+  --code-important: var(--color-d-orange-20);
+  --code-keyword: var(--color-d-red-30);
+  --code-operator: var(--color-d-blue-30);
+  --code-property: var(--color-d-blue-20);
+  --code-punctuation: var(--color-d-gray-70);
+  --code-string: var(--color-d-yellow-30);
+  --code-tag: var(--color-d-yellow-10);
+  --code-value: var(--color-d-green-20);
   --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.39),
                           0px 2px 4px -2px rgba(0, 0, 0, 0.39);
   --drag-ghost-background: var(--interactive-accent);
