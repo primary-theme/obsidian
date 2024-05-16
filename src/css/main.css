@@ -16,13 +16,6 @@ button {
   font-feature-settings: var(--inter-font-features);
 }
 
-pre,
-code,
-.HyperMD-codeblock,
-.cm-inline-code {
-  font-feature-settings: var(--cascadia-font-features);
-}
-
 /*────────── Shape ──────────*/
 /* 
 Variables for
