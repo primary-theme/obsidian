@@ -92,10 +92,11 @@ button:not(button.clickable-icon) {
 
     display: flex;
     justify-content: center;
-    cursor: pointer;
+    cursor: var(--cursor);
 
     &::before {
         font-weight: var(--font-extralight);
+        font-feature-settings: "case";
     }
 
     &:hover {
@@ -106,6 +107,10 @@ button:not(button.clickable-icon) {
     &:active {
         opacity: 0.8;
     }
+}
+
+.document-search-close-button {
+    top: unset;
 }
 
 // Property Box Add Property Button
