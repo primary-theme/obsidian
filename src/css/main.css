@@ -937,14 +937,14 @@ and CONTRIBUTION page ↴
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --background-modifier-form-field: var(--color-d-gray-130);
-  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
+  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06),
                   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.24),
                   inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
                   0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
                   0px 2px 4px -2.7px rgba(0, 0, 0, 0.25),
                   0px 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.05),
+  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
                           inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.24),
                           inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
@@ -1030,14 +1030,14 @@ and CONTRIBUTION page ↴
                           0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
                           0px 2px 6px -1px rgba(0, 0, 0, 0.25),
                           0px 0px 0px 3px var(--color-d-alpha-gray);
-  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
+  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.14),
                           inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
                           inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
                           inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
                           0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
                           0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
                           0px 2px 4px -1px rgba(0, 0, 0, 0.14);
-  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.17),
+  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
                                   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.34),
                                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
                                   inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
