@@ -120,7 +120,7 @@ button:not(button.clickable-icon) {
     background: var(--interactive-accent);
     padding: var(--button-metadata-padding);
     border-radius: var(--button-s-radius);
-    margin: var(--size-2-2) var(--size-2-2);
+    margin-left: var(--size-2-2);
     box-shadow: var(--button-accent-shadow);
 
     transition: var(--button-anim);
