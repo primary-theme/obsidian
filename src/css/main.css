@@ -815,44 +815,44 @@ and CONTRIBUTION page ↴
   --color-d-gray-40: hsla(35, 27%, 55%, 1);
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
   --color-d-gray-60: hsla(33, 27%, 30%, 1);
-  --color-d-gray-70: hsla(31, 25%, 24%, 1);
+  --color-d-gray-70: hsla(31, 27%, 24%, 1);
   --color-d-gray-80: hsla(28, 22%, 17%, 1);
   --color-d-gray-90: hsla(33, 20%, 16%, 1);
-  --color-d-gray-100: hsla(31, 19%, 14%, 1);
-  --color-d-gray-110: hsla(28, 16%, 13%, 1);
-  --color-d-gray-120: hsla(28, 16%, 12%, 1);
+  --color-d-gray-100: hsla(30, 19%, 14%, 1);
+  --color-d-gray-110: hsla(30, 17%, 13%, 1);
+  --color-d-gray-120: hsla(29, 16%, 12%, 1);
   --color-d-gray-130: hsla(24, 18%, 10%, 1);
   --color-d-gray-140: hsla(32, 21%, 8%, 1);
   --color-d-alpha-gray: hsla(34, 24%, 40%, 0.15);
-  --color-d-red-10: hsla(4, 65%, 60%, 1);
-  --color-d-red-20: hsla(5, 86%, 67%, 1);
+  --color-d-red-10: hsla(5, 86%, 67%, 1);
+  --color-d-red-20: hsla(4, 65%, 60%, 1);
   --color-d-red-30: hsla(4, 88%, 61%, 1);
-  --color-d-red-40: hsla(4, 73%, 55%, 1);
+  --color-d-red-40: hsla(4, 70%, 52%, 1);
   --color-d-alpha-red: hsla(350, 84%, 63%, 0.15);
-  --color-d-orange-10: hsla(23, 81%, 61%, 1);
-  --color-d-orange-20: hsla(22, 79%, 58%, 1);
-  --color-d-orange-30: hsla(21, 76%, 50%, 1);
-  --color-d-orange-40: hsla(14, 70%, 47%, 1);
+  --color-d-orange-10: hsla(26, 85%, 58%, 1);
+  --color-d-orange-20: hsla(24, 84%, 50%, 1);
+  --color-d-orange-30: hsla(22, 82%, 47%, 1);
+  --color-d-orange-40: hsla(19, 81%, 41%, 1);
   --color-d-alpha-orange: hsla(27, 100%, 50%, 0.15);
-  --color-d-yellow-10: hsla(46, 69%, 52%, 1);
-  --color-d-yellow-20: hsla(47, 100%, 46%, 1);
-  --color-d-yellow-30: hsla(43, 100%, 43%, 1);
-  --color-d-yellow-40: hsla(39, 96%, 41%, 1);
+  --color-d-yellow-10: hsla(47, 100%, 46%, 1);
+  --color-d-yellow-20: hsla(43, 100%, 43%, 1);
+  --color-d-yellow-30: hsla(39, 96%, 41%, 1);
+  --color-d-yellow-40: hsla(37, 92%, 38%, 1);
   --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.15);
-  --color-d-green-10: hsla(154, 42%, 52%, 1);
-  --color-d-green-20: hsla(150, 66%, 48%, 1);
-  --color-d-green-30: hsla(154, 62%, 42%, 1);
-  --color-d-green-40: hsla(155, 83%, 29%, 1);
+  --color-d-green-10: hsla(152, 78%, 49%, 1);
+  --color-d-green-20: hsla(154, 62%, 42%, 1);
+  --color-d-green-30: hsla(155, 83%, 29%, 1);
+  --color-d-green-40: hsla(154, 80%, 26%, 1);
   --color-d-alpha-green: hsla(74, 69%, 44%, 0.15);
   --color-d-blue-10: hsla(191, 48%, 56%, 1);
   --color-d-blue-20: hsla(192, 75%, 57%, 1);
   --color-d-blue-30: hsla(193, 55%, 53%, 1);
   --color-d-blue-40: hsla(194, 59%, 46%, 1);
   --color-d-alpha-blue: hsla(186, 64%, 46%, 0.15);
-  --color-d-violet-10: hsla(280, 50%, 80%, 1);
-  --color-d-violet-20: hsla(267, 68%, 75%, 1);
-  --color-d-violet-30: hsla(266, 45%, 57%, 1);
-  --color-d-violet-40: hsla(256, 45%, 51%, 1);
+  --color-d-violet-10: hsla(245, 68%, 75%, 1);
+  --color-d-violet-20: hsla(241, 45%, 57%, 1);
+  --color-d-violet-30: hsla(239, 45%, 51%, 1);
+  --color-d-violet-40: hsla(238, 47%, 48%, 1);
   --color-d-alpha-violet: hsla(236, 100%, 72%, 0.15);
 }
 
@@ -885,7 +885,7 @@ and CONTRIBUTION page ↴
   --color-pink-rgb: 224, 108, 138;
   --color-pink: rgb(180, 100, 100);
   --accent-h: 31;
-  --accent-s: 25%;
+  --accent-s: 27%;
   --accent-l: 24%;
   --color-accent-hsl: var(--accent-h),
                       var(--accent-s),
@@ -898,7 +898,7 @@ and CONTRIBUTION page ↴
                       );
   --color-accent-2: hsl(
                       calc(var(--accent-h) - 5),
-                      calc(var(--accent-s) * 1.13),
+                      calc(var(--accent-s) * 1.16 ),
                       calc(var(--accent-l) * 1.34)
                       );
   --color-base-00: var(--color-d-gray-140);
@@ -931,8 +931,8 @@ and CONTRIBUTION page ↴
   --background-modifier-hover: rgba(0, 0, 0, 0.3);
   --background-modifier-active-hover: var(--color-d-gray-70);
   --background-modifier-border: var(--color-d-gray-80);
-  --background-modifier-border-hover: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
-  --background-modifier-border-focus: color-mix(in hsl, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
+  --background-modifier-border-hover: color-mix(in srgb, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
+  --background-modifier-border-focus: color-mix(in srgb, var(--color-d-gray-70) 60%, var(--color-d-gray-80));
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-d-red-40);
   --background-modifier-error-hover: var(--color-d-red-30);
@@ -1101,9 +1101,9 @@ and CONTRIBUTION page ↴
   --h4-color: var(--color-d-gray-10);
   --h5-color: var(--color-d-gray-10);
   --h6-color: var(--color-d-gray-10);
-  --link-ahref-color: var(--color-d-red-10);
+  --link-ahref-color: var(--color-d-red-20);
   --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
-  --link-ahref-color-hover: var(--color-d-red-20);
+  --link-ahref-color-hover: var(--color-d-red-10);
   --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
   --link-ahref-color-active: var(--color-d-red-30);
   --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
@@ -1113,23 +1113,23 @@ and CONTRIBUTION page ↴
   --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
   --link-unresolved-color-active: var(--color-d-gray-50);
   --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
-  --link-color: var(--color-d-yellow-30);
+  --link-color: var(--color-d-yellow-20);
   --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
-  --link-color-hover: var(--color-d-yellow-20);
+  --link-color-hover: var(--color-d-yellow-10);
   --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
-  --link-color-active: var(--color-d-yellow-40);
+  --link-color-active: var(--color-d-yellow-30);
   --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
-  --link-external-color: var(--color-d-green-30);
+  --link-external-color: var(--color-d-green-20);
   --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
-  --link-external-color-hover: var(--color-d-green-20);
+  --link-external-color-hover: var(--color-d-green-10);
   --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
-  --link-external-color-active: var(--color-d-green-40);
+  --link-external-color-active: var(--color-d-green-30);
   --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
   --bold-color: var(--color-d-red-30);
   --italic-color: var(--color-d-blue-30);
   --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --strikethrough-color: var(--color-d-gray-50);
-  --inline-code-color: var(--color-d-red-10);
+  --inline-code-color: var(--color-d-red-20);
   --inline-code-bg: var(--color-d-gray-130);
   --bold-italic-color: var(--color-d-gray-10);
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
@@ -1177,11 +1177,11 @@ and CONTRIBUTION page ↴
   --pill-tag-color-3: var(--color-d-blue-20);
   --pill-tag-bg-3: var(--color-d-alpha-blue);
   --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
-  --yaml-base-color: var(--color-d-red-10);
+  --yaml-base-color: var(--color-d-red-20);
   --yaml-def-meta-color: var(--color-d-gray-50);
   --yaml-atom-color: var(--color-d-blue-10);
   --yaml-keyword-color: var(--color-d-yellow-30);
-  --yaml-number-color: var(--color-d-red-10);
+  --yaml-number-color: var(--color-d-red-20);
   --yaml-string-color: var(--color-d-yellow-30);
   --embed-bg-color-mix: color-mix(
                                   in srgb,
@@ -1204,7 +1204,7 @@ and CONTRIBUTION page ↴
   --checklist-bg: var(--color-d-gray-110);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
   --toggle-thumb-color: var(--color-d-gray-10);
-  --toggle-bg: color-mix(in hsl, var(--color-d-gray-70) 50%, var(--color-d-gray-60));
+  --toggle-bg: color-mix(in srgb, var(--color-d-gray-70) 50%, var(--color-d-gray-60));
   --toggle-bg-enabled: var(--color-d-green-40);
   --toggle-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.19),
                       inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
@@ -1222,7 +1222,7 @@ and CONTRIBUTION page ↴
   --slider-track-background: var(--color-d-gray-120);
   --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2),
                           0px 0px 0px 1px rgba(255, 255, 255, 0.04);
-  --slider-thumb-bg: var(--color-d-gray-30);
+  --slider-thumb-bg: var(--color-d-gray-20);
   --slider-thumb-border-width: 0px;
   --slider-thumb-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
                           inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
@@ -1316,11 +1316,11 @@ and CONTRIBUTION page ↴
   --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
   --prompt-separator-border: 1px solid var(--color-d-gray-90);
   --prompt-border-color: var(--background-modifier-border-focus);
-  --kbd-color: var(--color-d-red-10);
+  --kbd-color: var(--color-d-red-20);
   --kbd-background: var(--color-d-gray-110);
   --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.17),
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
-  --gutter-color: color-mix(in hsl, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
+  --gutter-color: color-mix(in srgb, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
   --gutter-color-active: var(--color-d-gray-50);
   --callout-color-opacity: 0.325;
   --callout-border-opacity: 0.1;
@@ -1346,8 +1346,8 @@ and CONTRIBUTION page ↴
   --canvas-icon-color: var(--color-d-gray-50);
   --canvas-icon-color-hover: var(--color-d-gray-30);
   --canvas-icon-color-disabled: var(--color-d-gray-70);
-  --canvas-menu-bg: color-mix(in hsl, var(--color-d-gray-90) 60%, var(--color-d-gray-100));
-  --canvas-menu-bg-hover: color-mix(in hsl, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
+  --canvas-menu-bg: color-mix(in srgb, var(--color-d-gray-90) 60%, var(--color-d-gray-100));
+  --canvas-menu-bg-hover: color-mix(in srgb, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
   --canvas-menu-border: 1px solid var(--background-modifier-border);
   --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14),
                           0px 1px 4px -2.1px rgba(0, 0, 0, 0.22),
@@ -2507,7 +2507,6 @@ input[type=checkbox]:hover {
 .modal .vertical-tab-nav-item:hover:not(.is-active) {
   color: var(--settings-nav-item-text-color-hover);
   background: var(--settings-nav-item-bg-hover);
-  cursor: pointer;
   padding: var(--settings-nav-item-padding-hover);
 }
 .modal .vertical-tab-nav-item:active:not(.is-active) {
