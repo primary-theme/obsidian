@@ -1,0 +1,11 @@
+/*────────── Notice ──────────*/
+
+.notice-container {
+    overflow: visible;
+}
+
+.notice {
+    color: var(--notice-color);
+    border-radius: var(--radius-l);
+    box-shadow: var(--notice-shadow);
+}

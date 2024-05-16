@@ -26,6 +26,8 @@
 @use '30_components/prompt';
 @use '30_components/kbd';
 @use '30_components/loading';
+@use '30_components/notice';
+@use '30_components/tooltip';
 
 @use '40_editor/file';
 @use '40_editor/link';

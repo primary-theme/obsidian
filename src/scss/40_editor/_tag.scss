@@ -1,7 +1,7 @@
 /*────────── Tag ──────────*/
 
 .cm-hashtag,
-.tag {
+a.tag {
     box-shadow: var(--tag-shadow);
     transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 
@@ -10,7 +10,7 @@
     }
 }
 
-.tag {
+a.tag {
     &:hover {
         box-shadow: var(--tag-shadow-hover);
     }
