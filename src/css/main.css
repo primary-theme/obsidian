@@ -10,6 +10,11 @@ body:not(.is-phone, .is-mobile) .clickable-icon {
 body:is(.is-phone, .is-mobile) .clickable-icon svg {
   --icon-size: var(--icon-m);
 }
+body:is(.is-phone, .is-mobile) .workspace-drawer-active-tab-icon,
+body:is(.is-phone, .is-mobile) .workspace-drawer-tab-option-item-icon {
+  --icon-size: var(--icon-m);
+  color: var(--icon-color);
+}
 
 body {
   --clickable-icon-radius: calc(var(--radius-s) + 1px);
@@ -1891,6 +1896,8 @@ body {
   --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
   --popup-bg-blur: 3px;
+  --font-medium: 400;
+  --font-bold: 500;
   --bold-italic-weight: 500;
   --bold-modifier: 100;
   --cursor: pointer;
@@ -1970,7 +1977,7 @@ body {
                       calc(var(--size-4-1) + var(--button-inset-shadow-size))
                       var(--size-4-6);
   --vault-name-font-size: var(--font-ui-small);
-  --vault-name-font-weight: var(--font-semibold);
+  --vault-name-font-weight: var(--font-bold);
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
   --menu-item-radius: calc(var(--radius-m) - 1px);
@@ -2007,7 +2014,6 @@ body {
                           var(--size-4-1);
   --pmr-cal-td-radius: calc(var(--radius-s) + 1px);
 }
-
 @keyframes slideUp {
   0% {
     transform: translateY(20%);
@@ -2698,14 +2704,20 @@ span.setting-hotkey {
 .modal .vertical-tab-header-group {
   padding-top: 0;
 }
-.modal .vertical-tab-header-group-title:not(body.is-phone .vertical-tab-header-group-title) {
+.modal .vertical-tab-header-group-title {
   font-size: calc(var(--font-ui-smaller) - 1px);
   color: var(--settings-nav-group-title-color);
   text-transform: uppercase;
   font-feature-settings: "calt" off;
   letter-spacing: 0.1em;
 }
-.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item) {
+.is-phone .modal .vertical-tab-header-group-title {
+  font-size: var(--font-ui-small);
+}
+.is-phone .modal .vertical-tab-header-group-title:first-child {
+  margin-top: var(--size-4-4);
+}
+.modal .vertical-tab-nav-item {
   text-transform: capitalize;
   font-size: var(--font-ui-small);
   color: var(--settings-nav-item-text-color);
@@ -2715,33 +2727,36 @@ span.setting-hotkey {
   transition: box-shadow var(--button-anim);
   transition: padding-left var(--anim-duration-fast) var(--anim-motion-swing);
 }
-.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item):hover:not(.is-active) {
+.modal .vertical-tab-nav-item:hover:not(.is-active):not(body.is-phone .vertical-tab-nav-item) {
   color: var(--settings-nav-item-text-color-hover);
   background: var(--settings-nav-item-bg-hover);
   padding: var(--settings-nav-item-padding-hover);
 }
-.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item):active:not(.is-active) {
+.modal .vertical-tab-nav-item:active:not(.is-active):not(body.is-phone .vertical-tab-nav-item) {
   color: var(--settings-nav-item-text-color-active);
 }
-.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active {
+.modal .vertical-tab-nav-item.is-active:not(body.is-phone .vertical-tab-nav-item) {
   padding: var(--settings-nav-item-padding-active);
 }
-.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active:nth-child(3n+1) {
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+1):not(body.is-phone .vertical-tab-nav-item) {
   color: var(--settings-nav-item-active-color);
   background: var(--alternating-color-1);
   box-shadow: var(--button-accent-shadow);
 }
-.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active:nth-child(3n+2) {
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+2):not(body.is-phone .vertical-tab-nav-item) {
   color: var(--settings-nav-item-active-color);
   background: var(--alternating-color-2);
   box-shadow: var(--button-accent-shadow);
 }
-.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active:nth-child(3n+3) {
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+3):not(body.is-phone .vertical-tab-nav-item) {
   color: var(--settings-nav-item-active-color);
   background: var(--alternating-color-3);
   box-shadow: var(--button-accent-shadow);
 }
 
+.is-phone .modal-title {
+  text-transform: capitalize;
+}
 .is-phone .mod-confirmation .modal:not(.mod-lg) {
   border: 1px solid var(--background-modifier-border-hover);
 }
@@ -3266,15 +3281,23 @@ input[type=password],
 input[type=number] {
   color: var(--text-input-color);
 }
-.workspace-drawer textarea,
+.workspace-drawer textarea, .is-mobile .modal textarea,
 .workspace-drawer input.metadata-input-text,
+.is-mobile .modal input.metadata-input-text,
 .workspace-drawer input[type=date],
+.is-mobile .modal input[type=date],
 .workspace-drawer input[type=datetime-local],
+.is-mobile .modal input[type=datetime-local],
 .workspace-drawer input[type=text],
+.is-mobile .modal input[type=text],
 .workspace-drawer input[type=search],
+.is-mobile .modal input[type=search],
 .workspace-drawer input[type=email],
+.is-mobile .modal input[type=email],
 .workspace-drawer input[type=password],
-.workspace-drawer input[type=number] {
+.is-mobile .modal input[type=password],
+.workspace-drawer input[type=number],
+.is-mobile .modal input[type=number] {
   border: 1px solid var(--background-modifier-border);
 }
 

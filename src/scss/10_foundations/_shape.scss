@@ -12,6 +12,8 @@ body {
     --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
     --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
     --popup-bg-blur: 3px;
+    --font-medium: 400;
+    --font-bold: 500;
     --bold-italic-weight: 500;
     --bold-modifier: 100;
     --cursor: pointer;
@@ -95,7 +97,7 @@ body {
                         var(--size-4-6);
 
     --vault-name-font-size: var(--font-ui-small);
-    --vault-name-font-weight: var(--font-semibold);
+    --vault-name-font-weight: var(--font-bold);
 
     --search-icon-size: 14px;
     --search-clear-button-size: 12px;
@@ -145,10 +147,10 @@ body {
     --anim-popup: 0.3s slideUp forwards;
 
     // Mobile
-    // &.is-mobile {
-    //     --input-height: 36px;
-    //     --metadata-input-height: calc(var(--font-text-size) * 2);
-    // }
+    &.is-mobile {
+        // --input-height: 36px;
+        // --metadata-input-height: calc(var(--font-text-size) * 2);
+    }
     
     // &.is-phone {
     //     --input-height: 36px;
