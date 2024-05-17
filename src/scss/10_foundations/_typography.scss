@@ -17,10 +17,3 @@ select,
 button {
     font-feature-settings: var(--inter-font-features);
 }
-
-pre:not(pre > *),
-code:not(code > *),
-.HyperMD-codeblock:not(.HyperMD-codeblock > *),
-.cm-inline-code:not(.cm-inline-code > *) {
-    font-feature-settings: var(--cascadia-font-features);
-}

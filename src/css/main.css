@@ -1,1449 +1,4 @@
 @charset "UTF-8";
-/*────────── Typography ──────────*/
-body {
-  --font-interface-theme: "Inter";
-  --font-text-theme: "Inter";
-  --font-monospace-theme: "Cascadia Code";
-  font-feature-settings: var(--inter-font-features);
-  --bold-weight: var(--font-medium);
-  --h1-weight: var(--font-semibold);
-}
-
-input,
-textarea,
-select,
-button {
-  font-feature-settings: var(--inter-font-features);
-}
-
-pre:not(pre > *),
-code:not(code > *),
-.HyperMD-codeblock:not(.HyperMD-codeblock > *),
-.cm-inline-code:not(.cm-inline-code > *) {
-  font-feature-settings: var(--cascadia-font-features);
-}
-
-/*────────── Shape ──────────*/
-/* 
-Variables for
-    sizing, container
-    padding, widths
-    heights, radius
-    and other non-color related
-    variables
-*/
-body {
-  --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
-  --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
-  --popup-bg-blur: 3px;
-  --bold-italic-weight: 500;
-  --bold-modifier: 100;
-  --cursor: pointer;
-  --radius-xs: 2px;
-  --icon-container-radius: 0px;
-  --icon-xs: 13px;
-  --icon-s: 15px;
-  --icon-m: 16px;
-  --icon-l: 18px;
-  --icon-xl: 24px;
-  --button-inset-shadow-size: 2px;
-  --titlebar-text-weight: var(--font-normal);
-  --header-height: 46px;
-  --note-pane-margin: 10px;
-  --file-tab-gap: 0px;
-  --file-border-radius: var(--radius-l);
-  --close-button-radius: var(--radius-l);
-  --tab-status-radius: var(--radius-s);
-  --new-tab-btn-radius: 2em;
-  --hr-thickness: 1px;
-  --code-radius: var(--radius-m);
-  --inline-code-radius: var(--radius-s);
-  --copy-code-button-radius: var(--radius-s);
-  --modal-close-button-size: 20px;
-  --dropdown-height: calc(
-                          var(--font-ui-small) +
-                          calc(var(--size-4-4) + var(--button-inset-shadow-size))
-                      );
-  --button-padding: var(--size-4-2)
-                      var(--size-4-3)
-                      calc(var(--size-4-2) + var(--button-inset-shadow-size))
-                      var(--size-4-3);
-  --button-padding-active: calc(var(--size-4-2) + var(--button-inset-shadow-size))
-                              var(--size-4-3)
-                              var(--size-4-2)
-                              var(--size-4-3);
-  --button-metadata-padding: var(--size-2-3)
-                              var(--size-4-2)
-                              calc(var(--size-2-3) + var(--button-inset-shadow-size))
-                              var(--size-2-3);
-  --button-metadata-padding-active: calc(var(--size-2-2) + var(--button-inset-shadow-size))
-                                      var(--size-4-2)
-                                      var(--size-2-3)
-                                      var(--size-2-3);
-  --button-s-radius: var(--size-2-3);
-  --button-s-padding: var(--size-2-2)
-                      var(--size-4-2)
-                      var(--size-2-2)
-                      var(--size-4-2);
-  --input-radius: var(--button-radius);
-  --input-height: 32px;
-  --search-icon-size: 14px;
-  --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
-  --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
-  --settings-nav-item-padding: calc(var(--size-2-3) + 1px)
-                               var(--size-4-3)
-                               calc(var(--size-2-3) + 1px)
-                               var(--size-4-3);
-  --settings-nav-item-padding-hover: calc(var(--size-2-3) + 1px)
-                               var(--size-4-3)
-                               calc(var(--size-2-3) + 1px)
-                               var(--size-4-5);
-  --settings-nav-item-padding-active: var(--size-2-3)
-                               var(--size-4-3)
-                               calc(var(--size-2-3) + var(--button-inset-shadow-size))
-                               var(--size-4-5);
-  --settings-nav-item-radius: calc(var(--radius-m) - 1px);
-  --slider-track-height: 5px;
-  --nav-item-white-space: nowrap;
-  --nav-item-radius: 6px;
-  --nav-item-padding: calc(var(--size-4-1) + 1px)
-                      var(--size-4-2)
-                      calc(var(--size-4-1) + 1px)
-                      var(--size-4-6);
-  --nav-file-padding-active: calc(var(--size-4-1))
-                      var(--size-4-2)
-                      calc(var(--size-4-1) + var(--button-inset-shadow-size))
-                      var(--size-4-6);
-  --vault-name-font-size: var(--font-ui-small);
-  --vault-name-font-weight: var(--font-semibold);
-  --search-icon-size: 14px;
-  --search-clear-button-size: 12px;
-  --menu-item-radius: calc(var(--radius-m) - 1px);
-  --divider-width-hover: 4px;
-  --divider-radius: var(--radius-m);
-  --metadata-border-width: 1px;
-  --metadata-divider-width: 0px;
-  --metadata-border-radius: var(--radius-m);
-  --metadata-property-radius: calc(var(--radius-m) - 1px);
-  --pill-tag-weight: var(--font-semibold);
-  --table-header-border-width: 0;
-  --table-column-first-border-width: 0;
-  --table-column-last-border-width: 0;
-  --table-row-last-border-width: 0;
-  --tag-padding-x: 0.6em;
-  --tag-padding-y: 0.15em;
-  --tag-radius: 1em;
-  --link-unresolved-opacity: 1;
-  --link-underline-offset: 2px;
-  --link-decoration-thickness: 1.5px;
-  --callout-shadow-offset: 4px;
-  --callout-content-shadow-blur: 3px;
-  --callout-title-padding: var(--size-4-3) var(--size-4-4);
-  --callout-content-padding: var(--size-4-1)
-                              var(--size-4-4)
-                              calc(var(--size-4-1) + var(--callout-shadow-offset))
-                              var(--size-4-4);
-  --callout-radius: var(--radius-m);
-  --callout-blend-mode: unset;
-  --anim-popup: 0.3s slideUp forwards;
-  --pmr-cal-td-padding: var(--size-4-1)
-                          var(--size-4-1)
-                          calc(var(--size-4-1) + var(--button-inset-shadow-size))
-                          var(--size-4-1);
-  --pmr-cal-td-radius: calc(var(--radius-s) + 1px);
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(10%);
-    opacity: 0.2;
-  }
-  40% {
-    transform: translateY(-2%);
-    opacity: 0.85;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/*───────────────────────────────────
-
-✦ P R I M A R Y ✦
-in Classic Light
-© Cecilia May
-
-If you have any questions on this palette,
-would like to adopt it to your
-website/app/custom theme, please read the
-USAGE, LICENSE, and CONTRIBUTION page ↴
-
-
-───────────────────────────────────*/
-.theme-light {
-  color-scheme: light;
-  --color-l-gray-10: hsla(36, 38%, 98%, 1);
-  --color-l-gray-20: hsla(35, 36%, 96%, 1);
-  --color-l-gray-30: hsla(35, 37%, 92%, 1);
-  --color-l-gray-40: hsla(34, 34%, 90%, 1);
-  --color-l-gray-50: hsla(36, 35%, 88%, 1);
-  --color-l-gray-60: hsla(37, 38%, 83%, 1);
-  --color-l-gray-70: hsla(34, 37%, 70%, 1);
-  --color-l-gray-80: hsla(34, 29%, 60%, 1);
-  --color-l-gray-90: hsla(31, 23%, 50%, 1);
-  --color-l-gray-100: hsla(35, 28%, 40%, 1);
-  --color-l-gray-110: hsla(34, 30%, 37%, 1);
-  --color-l-gray-120: hsla(36, 32%, 30%, 1);
-  --color-l-gray-130: hsla(31, 45%, 24%, 1);
-  --color-l-gray-140: hsla(33, 54%, 17%, 1);
-  --color-l-alpha-gray: hsla(34, 29%, 60%, 0.2);
-  --color-l-red-10: hsla(4, 59%, 64%, 1);
-  --color-l-red-20: hsla(4, 72%, 55%, 1);
-  --color-l-red-30: hsla(4, 56%, 48%, 1);
-  --color-l-red-40: hsla(4, 72%, 35%, 1);
-  --color-l-alpha-red: hsla(350, 84%, 63%, 0.2);
-  --color-l-orange-10: hsla(26, 70%, 63%, 1);
-  --color-l-orange-20: hsla(21, 81%, 59%, 1);
-  --color-l-orange-30: hsla(18, 69%, 50%, 1);
-  --color-l-orange-40: hsla(18, 96%, 35%, 1);
-  --color-l-alpha-orange: hsla(27, 100%, 50%, 0.2);
-  --color-l-yellow-10: hsla(43, 71%, 67%, 1);
-  --color-l-yellow-20: hsla(43, 83%, 57%, 1);
-  --color-l-yellow-30: hsla(40, 79%, 47%, 1);
-  --color-l-yellow-40: hsla(40, 98%, 36%, 1);
-  --color-l-alpha-yellow: hsla(44, 100%, 50%, 0.2);
-  --color-l-green-10: hsla(148, 30%, 65%, 1);
-  --color-l-green-20: hsla(148, 48%, 47%, 1);
-  --color-l-green-30: hsla(149, 50%, 39%, 1);
-  --color-l-green-40: hsla(153, 65%, 29%, 1);
-  --color-l-alpha-green: hsla(74, 69%, 44%, 0.2);
-  --color-l-blue-10: hsla(197, 39%, 56%, 1);
-  --color-l-blue-20: hsla(202, 66%, 48%, 1);
-  --color-l-blue-30: hsla(200, 64%, 37%, 1);
-  --color-l-blue-40: hsla(205, 85%, 25%, 1);
-  --color-l-alpha-blue: hsla(186, 64%, 46%, 0.2);
-  --color-l-violet-10: hsla(280, 43%, 76%, 1);
-  --color-l-violet-20: hsla(277, 35%, 59%, 1);
-  --color-l-violet-30: hsla(275, 37%, 43%, 1);
-  --color-l-violet-40: hsla(265, 70%, 30%, 1);
-  --color-l-alpha-violet: hsla(236, 100%, 72%, 0.2);
-}
-
-/*────────── Light Theme Override ──────────*/
-/*
-    These variables are from the Obsidian
-    app.css. You can go to Primary for Obsidian's
-    documentation to read more on how to alter,
-    contribute, and customize this part to
-    your own liking.
-*/
-.theme-light {
-  --mono-rgb-0: 0, 0, 0;
-  --mono-rgb-100: 255, 255, 255;
-  --color-gray-rgb: 182, 175, 166;
-  --color-red-rgb: 223, 90, 90;
-  --color-red: hsla(0, 58%, 53%, 1);
-  --color-orange-rgb: 231, 130, 63;
-  --color-orange: hsla(30, 66%, 52%, 1);
-  --color-yellow-rgb: 248, 197, 46;
-  --color-yellow: hsla(42, 89%, 46%, 1);
-  --color-green-rgb: 87, 185, 132;
-  --color-green: hsla(146, 37%, 49%, 1);
-  --color-cyan-rgb: 124, 180, 206;
-  --color-cyan: hsla(178, 39%, 49%, 1);
-  --color-blue-rgb: 99, 164, 198;
-  --color-blue: hsla(206, 57%, 44%, 1);
-  --color-purple-rgb: 135, 106, 193;
-  --color-purple: hsla(249, 39%, 60%, 1);
-  --color-pink-rgb: 217, 102, 122;
-  --color-pink: hsla(351, 44%, 61%, 1);
-  --accent-h: 31;
-  --accent-s: 23%;
-  --accent-l: 50%;
-  --color-accent-hsl: var(--accent-h),
-                      var(--accent-s),
-                      var(--accent-l);
-  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(
-                      calc(var(--accent-h) - 1),
-                      calc(var(--accent-s) * 1.01),
-                      calc(var(--accent-l) * 1.075)
-                      );
-  --color-accent-2: hsl(
-                      calc(var(--accent-h) - 3),
-                      calc(var(--accent-s) * 1.33),
-                      calc(var(--accent-l) * 1.19)
-                      );
-  --color-base-00: var(--color-l-gray-10);
-  --color-base-05: var(--color-l-gray-20);
-  --color-base-10: var(--color-l-gray-30);
-  --color-base-20: var(--color-l-gray-40);
-  --color-base-25: var(--color-l-gray-50);
-  --color-base-30: var(--color-l-gray-60);
-  --color-base-35: var(--color-l-gray-70);
-  --color-base-40: var(--color-l-gray-80);
-  --color-base-50: var(--color-l-gray-90);
-  --color-base-60: var(--color-l-gray-100);
-  --color-base-70: var(--color-l-gray-120);
-  --color-base-100: var(--color-l-gray-140);
-  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
-              0px 3.4px 6.7px rgba(0, 0, 0, .042),
-              0px 15px 30px rgba(0, 0, 0, .07);
-  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.091),
-              0px 6.3px 24.7px rgba(0, 0, 0, 0.132),
-              0px 30px 90px rgba(0, 0, 0, 0.22);
-  --background-primary: var(--color-l-gray-20);
-  --background-primary-alt: var(--color-l-gray-30);
-  --background-secondary: var(--color-l-gray-40);
-  --background-secondary-alt: var(--color-l-gray-40);
-  --interactive-normal: var(--color-l-gray-30);
-  --interactive-hover: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-30));
-  --interactive-accent-hsl: var(--color-accent-hsl);
-  --interactive-accent: var(--color-accent-1);
-  --interactive-accent-hover: var(--color-accent-2);
-  --background-modifier-hover: rgba(255, 255, 255, 0.5);
-  --background-modifier-active-hover: var(--color-l-gray-60);
-  --background-modifier-border: var(--color-l-gray-60);
-  --background-modifier-border-hover: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
-  --background-modifier-border-focus: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
-  --background-modifier-error-rgb: var(--color-red-rgb);
-  --background-modifier-error: var(--color-l-red-30);
-  --background-modifier-error-hover: var(--color-l-red-20);
-  --background-modifier-warning: var(--color-l-orange-30);
-  --background-modifier-warning-hover: var(--color-l-orange-20);
-  --background-modifier-success-rgb: var(--color-green-rgb);
-  --background-modifier-success: var(--color-l-green-30);
-  --background-modifier-message: var(--color-l-gray-90);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-  --background-modifier-cover: rgba(220, 220, 220, 0.4);
-  --background-modifier-form-field: var(--color-l-gray-30);
-  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
-                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
-                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
-                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
-                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
-                  0px 2px 4px -1px rgba(0, 0, 0, 0.05);
-  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
-                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
-                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
-                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.15),
-                          0px 2px 6px -1px rgba(0, 0, 0, 0.1);
-  --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.09),
-                          inset 0px 2px 8px 0px rgba(0, 0, 0, 0.2),
-                          0px 0px 0px 1px rgba(255, 255, 255, 0.6);
-  --titlebar-background: var(--background-secondary);
-  --titlebar-background-focused: var(--background-secondary);
-  --titlebar-text-color: var(--color-l-gray-60);
-  --titlebar-text-color-focused: var(--color-l-gray-70);
-  --text-normal: var(--color-l-gray-130);
-  --text-muted: var(--color-l-gray-100);
-  --text-faint: var(--color-l-gray-80);
-  --text-on-accent: var(--color-l-gray-10);
-  --text-on-accent-inverted: var(--color-l-gray-140);
-  --text-error: var(--color-l-red-30);
-  --text-warning: var(--color-l-orange-30);
-  --text-success: var(--color-l-green-30);
-  --text-selection: var(--color-l-alpha-gray);
-  --text-highlight-bg-rgb: var(--color-yellow-rgb);
-  --text-highlight-bg: var(--color-l-alpha-yellow);
-  --text-accent: var(--color-accent);
-  --text-accent-hover: var(--color-accent-2);
-  --divider-color: var(--background-modifier-border);
-  --divider-color-hover: var(--background-modifier-border-hover);
-  --file-header-border: 1px solid var(--background-modifier-border);
-  --indentation-guide-color: var(--background-modifier-border);
-  --indentation-guide-color-active: var(--background-modifier-border-focus);
-  --blockquote-border-thickness: 2px;
-  --blockquote-border-color: var(--background-modifier-border);
-  --blockquote-background-color: var(--color-l-gray-10);
-  --prompt-border-color: var(--background-modifier-border-focus);
-  --checkbox-marker-color: white;
-  --checkbox-color: var(--color-l-green-30);
-  --checkbox-color-hover: var(--color-l-green-20);
-  --checkbox-border-color: var(--color-l-gray-60);
-  --checkbox-border-color-hover: var(--color-l-gray-70);
-  --search-clear-button-color: var(--color-l-gray-80);
-  --search-icon-color: var(--color-l-gray-80);
-  --caret-color: var(--color-l-gray-80);
-}
-
-/*────────── Primary Styling Variables ──────────*/
-/* 
-    These variables are for future ability to
-    customize Primary to change the style and
-    flavoring of it i.e. premium palettes,
-    custom palettes, style settings etc.
-*/
-.theme-light {
-  --non-alternating-color: var(--color-l-gray-70);
-  --non-alternating-color-hover-active: var(--color-l-gray-60);
-  --alternating-color-1: var(--color-l-yellow-30);
-  --alternating-color-1-hover-active: var(--color-l-yellow-40);
-  --alternating-color-2: var(--color-l-red-30);
-  --alternating-color-2-hover-active: var(--color-l-red-40);
-  --alternating-color-3: var(--color-l-blue-30);
-  --alternating-color-3-hover-active: var(--color-l-blue-40);
-  --icon-color: var(--color-l-gray-80);
-  --icon-opacity: 1;
-  --icon-bg: transparent;
-  --icon-color-hover: var(--color-l-gray-90);
-  --icon-opacity-hover: 1;
-  --icon-bg-hover: transparent;
-  --icon-color-focused: var(--color-l-gray-90);
-  --icon-bg-pressed: transparent;
-  --icon-color-active: var(--color-l-gray-100);
-  --icon-opacity-active: 1;
-  --icon-bg-active: var(--color-l-gray-60);
-  --icon-bg-active-menu: transparent;
-  --button-radius: var(--size-4-2);
-  --button-shadow: var(--input-shadow);
-  --button-shadow-hover: var(--input-shadow-hover);
-  --button-shadow-active: var(--input-shadow-active);
-  --button-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
-                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
-                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
-                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
-                          0px 2px 4px -1px rgba(0, 0, 0, 0.05),
-                          0px 0px 0px 3px var(--color-l-alpha-gray);
-  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.09),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
-                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.22),
-                          0px 2px 4px -1px rgba(0, 0, 0, 0.19);
-  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
-                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.19),
-                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
-                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24);
-  --button-accent-shadow-active: var(--input-shadow-active);
-  --button-accent-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
-                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
-                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
-                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24),
-                                  0px 0px 0px 3px var(--color-l-alpha-gray);
-  --button-axis-offset: 2px;
-  --empty-state-action-btn-bg: var(--background-primary);
-  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
-  --status-bar-item-color: var(--color-l-gray-80);
-  --status-bar-item-color-hover: var(--color-l-gray-100);
-  --status-bar-item-bg-hover: transparent;
-  --status-bar-item-clickable-color-active: var(--color-l-gray-70);
-  --status-bar-item-clickable-bg-active: transparent;
-  --sync-icon-success: var(--color-l-green-30);
-  --sync-icon-success-hover: var(--color-l-green-20);
-  --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
-  --sync-icon-working: var(--color-l-orange-10);
-  --sync-icon-working-hover: var(--color-l-orange-20);
-  --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
-  --modal-border-color: var(--background-modifier-border-hover);
-  --modal-radius: var(--radius-xl);
-  --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  --community-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
-  --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
-  --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23),
-                                      0px 1px 3px -2.6px rgba(0, 0, 0, 0.23),
-                                      0px 2px 6px -4.2px rgba(0, 0, 0, 0.19),
-                                      0px 4px 12px -6px rgba(0, 0, 0, 0.9);
-  --prompt-border-color: var(--background-modifier-border-hover);
-  --settings-nav-group-title-color: var(--color-l-gray-70);
-  --settings-nav-item-text-color: var(--color-l-gray-110);
-  --settings-nav-item-text-color-hover: var(--color-l-gray-130);
-  --settings-nav-item-bg-hover: transparent;
-  --settings-nav-item-text-color-active: var(--color-l-gray-80);
-  --settings-nav-item-active-color: var(--color-l-gray-10);
-  --tab-bg: transparent;
-  --tab-active-bg: var(--background-primary);
-  --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
-                      inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.09),
-                      0px 1px 2px -0.1px rgba(0, 0, 0, 0.15);
-  --inline-title-color: var(--color-l-gray-140);
-  --h1-color: var(--color-l-gray-140);
-  --h2-color: var(--color-l-gray-140);
-  --h3-color: var(--color-l-gray-140);
-  --h4-color: var(--color-l-gray-140);
-  --h5-color: var(--color-l-gray-140);
-  --h6-color: var(--color-l-gray-140);
-  --link-ahref-color: var(--color-l-red-20);
-  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
-  --link-ahref-color-hover: var(--color-l-red-10);
-  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
-  --link-ahref-color-active: var(--color-l-red-30);
-  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
-  --link-unresolved-color: var(--color-l-gray-80);
-  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
-  --link-unresolved-color-hover: var(--color-l-gray-70);
-  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
-  --link-unresolved-color-active: var(--color-l-gray-90);
-  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
-  --link-color: var(--color-l-yellow-30);
-  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
-  --link-color-hover: var(--color-l-yellow-20);
-  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
-  --link-color-active: var(--color-l-yellow-40);
-  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
-  --link-external-color: var(--color-l-green-30);
-  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
-  --link-external-color-hover: var(--color-l-green-20);
-  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
-  --link-external-color-active: var(--color-l-green-40);
-  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
-  --bold-color: var(--color-l-red-30);
-  --italic-color: var(--color-l-blue-30);
-  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
-  --strikethrough-color: var(--color-l-gray-80);
-  --inline-code-color: var(--color-l-red-10);
-  --inline-code-bg: var(--color-l-gray-10);
-  --bold-italic-color: var(--color-l-gray-140);
-  --bold-italic-strikethrough-color: var(--color-l-gray-90);
-  --bold-highlight-color: var(--text-normal);
-  --bold-highlight-bg: var(--color-l-alpha-red);
-  --italic-highlight-color: var(--text-normal);
-  --italic-highlight-bg: var(--color-l-alpha-blue);
-  --bold-italic-highlight-color: var(--bold-italic-color);
-  --bold-italic-highlight-bg: var(--color-l-alpha-green);
-  --strikethrough-highlight-color: var(--strikethrough-color);
-  --strikethrough-highlight-bg: var(--color-l-alpha-yellow);
-  --tag-color: var(--color-l-blue-30);
-  --tag-color-hover: var(--color-l-blue-20);
-  --tag-background: rgba(255, 255, 255, 0.5);
-  --tag-background-hover: rgba(255, 255, 255, 0.8);
-  --tag-border-width: 1px;
-  --tag-border-color: rgba(0, 0, 0, 0.15);
-  --tag-border-color-hover: rgba(0, 0, 0, 0.25);
-  --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
-  --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1),
-                      0px 0px 0px 3px rgba(0, 0, 0, 0.03);
-  --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
-  --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
-  --metadata-tab-background: var(--background-secondary);
-  --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
-  --metadata-properties-title-color-hover: var(--color-l-gray-80);
-  --metadata-properties-title-color: var(--color-l-gray-70);
-  --metadata-input-text-color: var(--color-l-gray-120);
-  --metadata-input-background: transparent;
-  --metadata-input-background-hover: transparent;
-  --metadata-input-background-active: rgba(255, 255, 255, 0.45);
-  --metadata-label-background-active: var(--metadata-input-background-active);
-  --metadata-input-shadow-hover: none;
-  --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
-                                  0px 0px 0px 1px var(--background-modifier-border);
-  --metadata-key-input-color: var(--color-l-gray-100);
-  --metadata-key-input-color-active: var(--color-l-gray-120);
-  --metadata-divider-color: var(--background-modifier-border);
-  --metadata-divider-color-hover: transparent;
-  --metadata-divider-color-focus: transparent;
-  --pill-color: var(--color-l-gray-120);
-  --pill-color-hover: var(--color-l-gray-140);
-  --pill-color-remove: var(--color-l-gray-70);
-  --pill-color-remove-hover: var(--color-l-gray-70);
-  --pill-background: rgba(255, 255, 255, 0.4);
-  --pill-background-hover: var(--pill-background);
-  --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
-  --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
-  --pill-tag-color-1: var(--color-l-yellow-40);
-  --pill-tag-bg-1: var(--color-l-alpha-yellow);
-  --pill-tag-color-2: var(--color-l-red-40);
-  --pill-tag-bg-2: var(--color-l-alpha-red);
-  --pill-tag-color-3: var(--color-l-blue-40);
-  --pill-tag-bg-3: var(--color-l-alpha-blue);
-  --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
-  --yaml-base-color: var(--color-l-red-10);
-  --yaml-def-meta-color: var(--color-l-gray-70);
-  --yaml-atom-color: var(--color-l-blue-10);
-  --yaml-keyword-color: var(--color-l-yellow-30);
-  --yaml-number-color: var(--color-l-red-10);
-  --yaml-string-color: var(--color-l-yellow-30);
-  --embed-bg-color-mix: color-mix(
-                              in srgb,
-                              var(--background-primary-alt) 50%,
-                              var(--background-primary)
-                              );
-  --embed-title-color: var(--color-l-gray-90);
-  --embed-block-shadow-hover: none;
-  --embed-edit-btn-bg: color-mix(in srgb, var(--color-l-gray-20) 70%, transparent);
-  --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 100%, transparent);
-  --embed-edit-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                              inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1);
-  --embed-edit-btn-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                  inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1),
-                                  0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
-                          0px 2px 4px -2px rgba(0, 0, 0, 0.06);
-  --drag-ghost-background: var(--interactive-accent);
-  --drag-ghost-text-color: var(--text-on-accent);
-  --checklist-bg: var(--color-l-gray-10);
-  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
-  --toggle-thumb-color: var(--color-l-gray-10);
-  --toggle-bg: color-mix(in hsl, var(--color-l-gray-60) 80%, var(--color-l-gray-70));
-  --toggle-bg-enabled: var(--color-l-green-30);
-  --toggle-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.09),
-                      inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
-                      inset 0 0 1px rgba(0, 0, 0, 0.28);
-  --toggle-shadow-hover: inset 0 6px 20px rgba(0, 0, 0, 0.18),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
-                          inset 0 0 1px rgba(0, 0, 0, 0.32);
-  --toggle-shadow-focus: inset 0 6px 20px rgba(0, 0, 0, 0.18),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
-                          inset 0 0 1px rgba(0, 0, 0, 0.32),
-                          0px 0px 0px 5px rgba(0, 0, 0, 0.05);
-  --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                          0 2px 2px rgba(0, 0, 0, 0.2);
-  --slider-track-background: var(--color-l-gray-60);
-  --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                          0px 0px 0px 1px rgba(255, 255, 255, 0.08);
-  --slider-thumb-bg: var(--color-l-gray-10);
-  --slider-thumb-border-width: 0px;
-  --slider-thumb-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                          inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
-                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
-                          0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  --slider-thumb-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                               inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
-                               inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
-                               0px 1px 2px 0px rgba(0, 0, 0, 0.1),
-                               0px 0px 0px 6px rgba(0, 0, 0, 0.05);
-  --text-input-color: var(--color-l-gray-90);
-  --text-input-color-focused: var(--color-l-gray-130);
-  --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
-  --text-input-border-color: var(--color-l-gray-60);
-  --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
-                              inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
-                              0px 1px 6px 0px rgba(0, 0, 0, 0.07);
-  --graph-text: var(--color-l-gray-80);
-  --graph-line: var(--background-modifier-border);
-  --graph-node: var(--color-l-blue-20);
-  --graph-node-highlight-fill: var(--color-l-gray-90);
-  --graph-node-highlight-line: var(--color-l-gray-70);
-  --graph-node-unresolved: var(--color-l-yellow-20);
-  --graph-node-unresolved-opacity: 1;
-  --graph-node-focused: var(--color-l-gray-130);
-  --graph-node-tag: var(--color-l-red-20);
-  --graph-node-attachment: var(--color-l-green-10);
-  --graph-arrow: var(--color-l-gray-90);
-  --nav-item-color: var(--color-l-gray-110);
-  --nav-item-color-hover: var(--color-l-gray-110);
-  --nav-item-color-active: var(--color-l-gray-110);
-  --nav-item-color-selected: var(--color-l-gray-130);
-  --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: rgba(255, 255, 255, 0.25);
-  --nav-item-background-active: rgba(255, 255, 255, 0.25);
-  --nav-item-background-selected: var(--color-l-alpha-green);
-  --nav-indentation-guide-color: var(--indentation-guide-color);
-  --nav-collapse-icon-color: var(--collapse-icon-color);
-  --nav-collapse-icon-color-collapsed: var(--text-faint);
-  --nav-heading-color: var(--color-l-gray-100);
-  --nav-heading-color-hover: var(--color-l-gray-100);
-  --nav-heading-color-collapsed: var(--color-l-gray-100);
-  --nav-heading-color-collapsed-hover: var(--color-l-gray-100);
-  --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
-  --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
-                              inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.07),
-                              0px 2px 3px 0px rgba(0, 0, 0, 0.05);
-  --nav-file-tag-color: var(--color-l-gray-90);
-  --nav-file-tag-bg: transparent;
-  --collapse-icon-color: var(--color-l-gray-70);
-  --collapse-icon-color-collapsed: var(--color-l-gray-70);
-  --vault-profile-color: var(--vault-name-color);
-  --vault-name-color: var(--color-l-gray-100);
-  --vault-name-background: var(--color-l-gray-30);
-  --vault-name-border: 1px solid var(--background-modifier-border);
-  --search-clear-button-color: var(--icon-color);
-  --search-clear-button-color-hover: var(--background-modifier-error-hover);
-  --search-icon-color: var(--icon-color);
-  --search-result-background: var(--background-primary-alt);
-  --search-result-background-hover: color-mix(in srgb, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
-  --search-result-dest-file-color: var(--color-l-gray-100);
-  --search-result-dest-file-bg: var(--color-l-gray-20);
-  --search-result-dest-file-icon-color: var(--color-l-gray-70);
-  --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
-  --search-result-dest-file-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 50%, var(--color-l-gray-10));
-  --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
-                                      0px 2px 3px 0px rgba(0, 0, 0, 0.09);
-  --breadcrumb-color: var(--color-l-gray-90);
-  --breadcrumb-color-hover: var(--color-l-gray-90);
-  --breadcrumb-bg-hover: var(--color-l-gray-40);
-  --breadcrumb-separator-color: var(--background-modifier-border);
-  --file-header-title-color: var(--color-l-gray-120);
-  --menu-item-icon-color: var(--color-l-gray-80);
-  --menu-item-bg-hover: rgba(255, 255, 255, 0.35);
-  --menu-item-icon-color-active: var(--color-l-gray-70);
-  --menu-item-color-active: var(--color-l-gray-70);
-  --menu-item-bg-active: var(--color-l-gray-50);
-  --text-input-color: var(--color-l-gray-130);
-  --prompt-input-background: var(--background-primary);
-  --prompt-results-background: var(--background-primary);
-  --prompt-suggestion-color: var(--color-l-gray-110);
-  --prompt-suggestion-highlight-color: var(--color-l-gray-120);
-  --prompt-suggestion-color-selected: var(--color-l-gray-130);
-  --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
-  --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.35);
-  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                                       0px 2px 6px 0px rgba(0, 0, 0, 0.03);
-  --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
-  --prompt-separator-border: 1px solid var(--color-l-gray-40);
-  --prompt-border-color: var(--background-modifier-border-focus);
-  --notice-color: var(--text-on-accent);
-  --notice-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
-                          0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
-                          0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
-                          0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
-  --tooltip-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.12),
-                      0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
-                      0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
-  --kbd-color: var(--color-l-red-10);
-  --kbd-background: var(--color-l-gray-40);
-  --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
-                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
-  --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
-  --gutter-color-active: var(--color-l-gray-90);
-  --callout-color-opacity: 0.325;
-  --callout-border-opacity: 0.2;
-  --callout-icon-fold-filter: brightness(0.8);
-  --callout-title-color: var(--text-normal);
-  --callout-content-background: color-mix(
-                                  in srgb,
-                                  var(--background-primary-alt) 50%,
-                                  var(--background-primary)
-                                  );
-  --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                              0px 1px 6px 0px rgba(0, 0, 0, 0.12);
-  --callout-title-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.05),
-                          inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2);
-  --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                              inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
-  --canvas-color: var(--color-gray-rgb);
-  --canvas-color-1: var(--color-red-rgb);
-  --canvas-color-2: var(--color-orange-rgb);
-  --canvas-color-3: var(--color-yellow-rgb);
-  --canvas-color-4: var(--color-green-rgb);
-  --canvas-color-5: var(--color-blue-rgb);
-  --canvas-color-6: var(--color-purple-rgb);
-  --canvas-icon-color: var(--color-l-gray-80);
-  --canvas-icon-color-hover: var(--color-l-gray-120);
-  --canvas-icon-color-disabled: var(--color-l-gray-60);
-  --canvas-menu-bg: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
-  --canvas-menu-bg-hover: var(--color-l-gray-10);
-  --canvas-menu-border: 1px solid var(--background-modifier-border);
-  --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.02),
-                          0px 1px 4px -2.1px rgba(0, 0, 0, 0.1),
-                          0px 2px 8px -1.2px rgba(0, 0, 0, 0.03);
-  --tab-outline-color: transparent;
-  --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.08),
-                          -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.04),
-                          -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.06);
-  --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-primary));
-  --kanban-lane-border: 1px solid var(--color-l-gray-40);
-  --kanban-lane-shadow: none;
-  --kanban-title-text-input-color: var(--text-normal);
-  --kanban-title-count-radius: var(--radius-l);
-  --kanban-title-count-color: var(--color-l-gray-120);
-  --kanban-title-count-bg: var(--color-l-gray-60);
-  --kanban-item-bg: var(--color-l-gray-10);
-  --kanban-item-border: none;
-  --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
-                          inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
-                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
-                          0px 2px 2px 0px rgba(0, 0, 0, 0.03);
-  --kanban-drag-item-border: none;
-  --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.19),
-                              0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.22),
-                              0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.29);
-  --kanban-new-item-color: var(--text-faint);
-  --kanban-new-item-color-hover: var(--text-muted);
-  --kanban-new-item-bg: transparent;
-  --kanban-new-item-bg-hover: var(--background-primary);
-  --kanban-new-item-shadow: none;
-  --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
-                                  0px 2px 4px 0px rgba(0, 0, 0, 0.04);
-}
-.theme-light.is-mobile {
-  --mobile-sidebar-background: var(--background-secondary);
-  --nav-item-color: var(--text-muted);
-  --mobile-navbar-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.17),
-                          0px 5px 32px 0px rgba(0, 0, 0, 0.12);
-  --mobile-sidebar-left-shadow: 5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
-                                  10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
-  --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
-                                  -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
-  --pull-down-action-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
-                              0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
-                              0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
-                              0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
-}
-.theme-light #calendar-container {
-  --color-dot: var(--color-l-blue-20);
-  --color-arrow: var(--color-l-gray-70);
-  --color-arrow-hover: var(--color-l-gray-90);
-  --color-arrow-active: var(--color-l-gray-100);
-  --color-button: var(--color-l-gray-100);
-  --pmr-cal-month-color: var(--color-l-gray-120);
-  --pmr-cal-year-color: var(--color-l-gray-90);
-  --color-text-heading: var(--color-l-gray-90);
-  --color-text-day: var(--color-l-gray-130);
-  --color-text-today: var(--color-l-gray-140);
-  --color-text-weeknum: var(--color-l-gray-80);
-  --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  --pmr-cal-day-color-active: var(--color-l-gray-80);
-  --pmr-cal-day-dot-opacity-active: 0.5;
-  --pmr-cal-day-background-active: var(--color-l-gray-60);
-  --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.2),
-                              inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
-  --pmr-cal-active-day-color: var(--color-l-gray-140);
-  --pmr-cal-active-day-background: rgba(255, 255, 255, 0.25);
-  --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
-}
-
-/*───────────────────────────────────
-
-✦ P R I M A R Y ✦
-in Classic Dark
-© Cecilia May
-
-If you have any questions on this palette,
-would like to adopt it to your website,
-please READ the USAGE, LICENSE,
-and CONTRIBUTION page ↴
-
-
-───────────────────────────────────*/
-.theme-dark {
-  color-scheme: dark;
-  --color-d-gray-10: hsla(32, 48%, 85%, 1);
-  --color-d-gray-20: hsla(34, 39%, 74%, 1);
-  --color-d-gray-30: hsla(34, 31%, 68%, 1);
-  --color-d-gray-40: hsla(35, 27%, 55%, 1);
-  --color-d-gray-50: hsla(34, 24%, 40%, 1);
-  --color-d-gray-60: hsla(33, 27%, 30%, 1);
-  --color-d-gray-70: hsla(31, 27%, 24%, 1);
-  --color-d-gray-80: hsla(28, 22%, 18%, 1);
-  --color-d-gray-90: hsla(33, 20%, 16%, 1);
-  --color-d-gray-100: hsla(30, 19%, 14%, 1);
-  --color-d-gray-110: hsla(30, 17%, 13%, 1);
-  --color-d-gray-120: hsla(29, 16%, 12%, 1);
-  --color-d-gray-130: hsla(24, 18%, 10%, 1);
-  --color-d-gray-140: hsla(32, 21%, 8%, 1);
-  --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
-  --color-d-red-10: hsla(5, 94%, 73%, 1);
-  --color-d-red-20: hsla(4, 91%, 67%, 1);
-  --color-d-red-30: hsla(4, 88%, 61%, 1);
-  --color-d-red-40: hsla(2, 75%, 52%, 1);
-  --color-d-alpha-red: hsla(350, 84%, 63%, 0.2);
-  --color-d-orange-10: hsla(26, 85%, 58%, 1);
-  --color-d-orange-20: hsla(24, 84%, 50%, 1);
-  --color-d-orange-30: hsla(22, 82%, 47%, 1);
-  --color-d-orange-40: hsla(19, 81%, 41%, 1);
-  --color-d-alpha-orange: hsla(27, 100%, 50%, 0.2);
-  --color-d-yellow-10: hsla(43, 69%, 63%, 1);
-  --color-d-yellow-20: hsla(42, 79%, 51%, 1);
-  --color-d-yellow-30: hsla(40, 78%, 48%, 1);
-  --color-d-yellow-40: hsla(38, 76%, 42%, 1);
-  --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
-  --color-d-green-10: hsla(152, 51%, 54%, 1);
-  --color-d-green-20: hsla(154, 57%, 42%, 1);
-  --color-d-green-30: hsla(155, 78%, 29%, 1);
-  --color-d-green-40: hsla(154, 75%, 26%, 1);
-  --color-d-alpha-green: hsla(74, 69%, 44%, 0.2);
-  --color-d-blue-10: hsla(191, 54%, 62%, 1);
-  --color-d-blue-20: hsla(194, 59%, 56%, 1);
-  --color-d-blue-30: hsla(197, 48%, 49%, 1);
-  --color-d-blue-40: hsla(201, 45%, 40%, 1);
-  --color-d-alpha-blue: hsla(186, 64%, 46%, 0.2);
-  --color-d-violet-10: hsla(242, 52%, 69%, 1);
-  --color-d-violet-20: hsla(241, 45%, 57%, 1);
-  --color-d-violet-30: hsla(239, 45%, 51%, 1);
-  --color-d-violet-40: hsla(238, 47%, 48%, 1);
-  --color-d-alpha-violet: hsla(236, 100%, 72%, 0.2);
-}
-
-/*────────── Dark Theme Override ──────────*/
-/*
-    These variables are from the Obsidian
-    app.css. You can go to Primary for Obsidian's
-    documentation to read more on how to alter,
-    contribute, and customize this part to
-    your own liking.
-*/
-.theme-dark {
-  --mono-rgb-0: 0, 0, 0;
-  --mono-rgb-100: 255, 255, 255;
-  --color-gray-rgb: 187, 186, 167;
-  --color-red-rgb: 228, 87, 78;
-  --color-red: rgb(192, 78, 78);
-  --color-orange-rgb: 238, 163, 89;
-  --color-orange: rgb(203, 128, 53);
-  --color-yellow-rgb: 249, 207, 81;
-  --color-yellow: rgb(225, 178, 67);
-  --color-green-rgb: 100, 194, 113;
-  --color-green: rgb(80, 196, 101);
-  --color-cyan-rgb: 91, 175, 183;
-  --color-cyan: rgb(70, 169, 180);
-  --color-blue-rgb: 99, 156, 192;
-  --color-blue: rgb(63, 137, 176);
-  --color-purple-rgb: 139, 113, 185;
-  --color-purple: rgb(113, 97, 194);
-  --color-pink-rgb: 224, 108, 138;
-  --color-pink: rgb(180, 100, 100);
-  --accent-h: 31;
-  --accent-s: 27%;
-  --accent-l: 24%;
-  --color-accent-hsl: var(--accent-h),
-                      var(--accent-s),
-                      var(--accent-l);
-  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(
-                      calc(var(--accent-h) - 3),
-                      calc(var(--accent-s) * 1.02),
-                      calc(var(--accent-l) * 1.15)
-                      );
-  --color-accent-2: hsl(
-                      calc(var(--accent-h) - 5),
-                      calc(var(--accent-s) * 1.16),
-                      calc(var(--accent-l) * 1.34)
-                      );
-  --color-base-00: var(--color-d-gray-140);
-  --color-base-05: var(--color-d-gray-120);
-  --color-base-10: var(--color-d-gray-100);
-  --color-base-20: var(--color-d-gray-90);
-  --color-base-25: var(--color-d-gray-80);
-  --color-base-30: var(--color-d-gray-70);
-  --color-base-35: var(--color-d-gray-60);
-  --color-base-40: var(--color-d-gray-50);
-  --color-base-50: var(--color-d-gray-40);
-  --color-base-60: var(--color-d-gray-30);
-  --color-base-70: var(--color-d-gray-20);
-  --color-base-100: var(--color-d-gray-10);
-  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.228),
-              0px 3.4px 6.7px rgba(0, 0, 0, .242),
-              0px 15px 30px rgba(0, 0, 0, .27);
-  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.271),
-              0px 6.3px 24.7px rgba(0, 0, 0, 0.312),
-              0px 30px 90px rgba(0, 0, 0, 0.4);
-  --background-primary: var(--color-d-gray-100);
-  --background-primary-alt: var(--color-d-gray-110);
-  --background-secondary: var(--color-d-gray-120);
-  --background-secondary-alt: var(--color-d-gray-120);
-  --interactive-normal: var(--color-d-gray-90);
-  --interactive-hover: var(--color-d-gray-80);
-  --interactive-accent-hsl: var(--color-accent-hsl);
-  --interactive-accent: var(--color-accent-1);
-  --interactive-accent-hover: var(--color-accent-2);
-  --background-modifier-hover: rgba(0, 0, 0, 0.3);
-  --background-modifier-active-hover: var(--color-d-gray-70);
-  --background-modifier-border: var(--color-d-gray-80);
-  --background-modifier-border-hover: color-mix(in srgb, var(--color-d-gray-70) 40%, var(--color-d-gray-80));
-  --background-modifier-border-focus: color-mix(in srgb, var(--color-d-gray-70) 40%, var(--color-d-gray-80));
-  --background-modifier-error-rgb: var(--color-red-rgb);
-  --background-modifier-error: var(--color-d-red-40);
-  --background-modifier-error-hover: var(--color-d-red-30);
-  --background-modifier-warning: var(--color-d-orange-40);
-  --background-modifier-warning-hover: var(--color-d-orange-30);
-  --background-modifier-success-rgb: var(--color-green-rgb);
-  --background-modifier-success: var(--color-d-green-30);
-  --background-modifier-message: var(--color-d-gray-70);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-cover: rgba(10, 10, 10, 0.4);
-  --background-modifier-form-field: var(--color-d-gray-130);
-  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.02),
-                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
-                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
-                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
-                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
-                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.25),
-                  0px 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
-                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
-                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
-                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
-                          0px 2px 6px -1px rgba(0, 0, 0, 0.25);
-  --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
-                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.15),
-                          inset 0px 2px 8px 0px rgba(0, 0, 0, 0.57),
-                          0px 0px 0px 1px rgba(255, 255, 255, 0.02);
-  --titlebar-background: var(--background-secondary);
-  --titlebar-background-focused: var(--background-secondary);
-  --titlebar-text-color: var(--color-d-gray-70);
-  --titlebar-text-color-focused: var(--color-d-gray-60);
-  --text-normal: var(--color-d-gray-20);
-  --text-muted: var(--color-d-gray-40);
-  --text-faint: var(--color-d-gray-50);
-  --text-on-accent: var(--color-d-gray-10);
-  --text-on-accent-inverted: var(--color-d-gray-140);
-  --text-error: var(--color-d-red-30);
-  --text-warning: var(--color-d-orange-30);
-  --text-success: var(--color-d-green-30);
-  --text-selection: var(--color-d-alpha-gray);
-  --text-highlight-bg-rgb: var(--color-yellow-rgb);
-  --text-highlight-bg: var(--color-d-alpha-yellow);
-  --text-accent: var(--color-accent);
-  --text-accent-hover: var(--color-accent-2);
-  --divider-color: var(--background-modifier-border);
-  --divider-color-hover: var(--background-modifier-border-hover);
-  --file-header-border: 1px solid var(--background-modifier-border);
-  --indentation-guide-color: var(--background-modifier-border);
-  --indentation-guide-color-active: var(--background-modifier-border-focus);
-  --blockquote-border-thickness: 2px;
-  --blockquote-border-color: var(--background-modifier-border);
-  --blockquote-background-color: var(--color-d-gray-120);
-  --prompt-border-color: var(--background-modifier-border-focus);
-  --checkbox-marker-color: white;
-  --checkbox-color: var(--color-d-green-40);
-  --checkbox-color-hover: var(--color-d-green-30);
-  --checkbox-border-color: var(--color-d-gray-70);
-  --checkbox-border-color-hover: var(--color-d-gray-60);
-  --search-clear-button-color: var(--color-d-gray-60);
-  --search-icon-color: var(--color-d-gray-60);
-  --caret-color: var(--color-d-gray-50);
-}
-
-/*────────── Primary Styling Variables ──────────*/
-/* 
-    These variables are for future ability to
-    customize Primary i.e. premium palettes,
-    custom palettes, etc.
-*/
-.theme-dark {
-  --non-alternating-color: var(--color-d-gray-60);
-  --non-alternating-color-hover-active: var(--color-d-gray-70);
-  --alternating-color-1: var(--color-d-yellow-30);
-  --alternating-color-1-hover-active: var(--color-d-yellow-40);
-  --alternating-color-2: var(--color-d-red-30);
-  --alternating-color-2-hover-active: var(--color-d-red-40);
-  --alternating-color-3: var(--color-d-blue-30);
-  --alternating-color-3-hover-active: var(--color-d-blue-40);
-  --icon-color: var(--color-d-gray-60);
-  --icon-opacity: 1;
-  --icon-bg: transparent;
-  --icon-color-hover: var(--color-d-gray-50);
-  --icon-opacity-hover: 1;
-  --icon-bg-hover: transparent;
-  --icon-color-focused: var(--color-d-gray-50);
-  --icon-bg-pressed: transparent;
-  --icon-color-active: var(--color-d-gray-40);
-  --icon-opacity-active: 1;
-  --icon-bg-active: var(--color-d-gray-80);
-  --icon-bg-active-menu: transparent;
-  --button-radius: var(--size-4-2);
-  --button-shadow: var(--input-shadow);
-  --button-shadow-hover: var(--input-shadow-hover);
-  --button-shadow-active: var(--input-shadow-active);
-  --button-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.05),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.24),
-                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
-                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
-                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
-                          0px 2px 6px -1px rgba(0, 0, 0, 0.25),
-                          0px 0px 0px 3px var(--color-d-alpha-gray);
-  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
-                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
-                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
-                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                          0px 2px 4px -1px rgba(0, 0, 0, 0.14);
-  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
-                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.34),
-                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
-                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
-                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
-                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
-                                  0px 2px 6px -1px rgba(0, 0, 0, 0.19);
-  --button-accent-shadow-active: var(--input-shadow-active);
-  --button-accent-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
-                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
-                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
-                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24),
-                                  0px 0px 0px 3px var(--color-d-alpha-gray);
-  --button-axis-offset: 2px;
-  --empty-state-action-btn-bg: var(--background-primary);
-  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
-  --status-bar-item-color: var(--color-d-gray-50);
-  --status-bar-item-color-hover: var(--color-d-gray-30);
-  --status-bar-item-bg-hover: transparent;
-  --status-bar-item-clickable-color-active: var(--color-d-gray-60);
-  --status-bar-item-clickable-bg-active: transparent;
-  --sync-icon-success: var(--color-d-green-40);
-  --sync-icon-success-hover: var(--color-d-green-30);
-  --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
-  --sync-icon-working: var(--color-d-orange-40);
-  --sync-icon-working-hover: var(--color-d-orange-30);
-  --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
-  --modal-background: var(--background-primary);
-  --modal-border-color: var(--background-modifier-border-hover);
-  --modal-radius: var(--radius-xl);
-  --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  --community-item-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03);
-  --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
-  --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.18),
-                                      0px 1px 3px -2.6px rgba(0, 0, 0, 0.33),
-                                      0px 2px 6px -4.2px rgba(0, 0, 0, 0.29),
-                                      0px 4px 12px -6px rgba(0, 0, 0, 0.9);
-  --settings-nav-group-title-color: var(--color-d-gray-60);
-  --settings-nav-item-text-color: var(--color-d-gray-40);
-  --settings-nav-item-text-color-hover: var(--color-d-gray-20);
-  --settings-nav-item-bg-hover: transparent;
-  --settings-nav-item-text-color-active: var(--color-d-gray-70);
-  --settings-nav-item-bg-active: var(--color-d-gray-130);
-  --settings-nav-item-active-color: var(--color-d-gray-100);
-  --tab-bg: transparent;
-  --tab-active-bg: var(--background-primary);
-  --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
-                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.25),
-                          0px 1px 2px -0.1px rgba(0, 0, 0, 0.47);
-  --inline-title-color: var(--color-d-gray-10);
-  --h1-color: var(--color-d-gray-10);
-  --h2-color: var(--color-d-gray-10);
-  --h3-color: var(--color-d-gray-10);
-  --h4-color: var(--color-d-gray-10);
-  --h5-color: var(--color-d-gray-10);
-  --h6-color: var(--color-d-gray-10);
-  --link-ahref-color: var(--color-d-red-20);
-  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
-  --link-ahref-color-hover: var(--color-d-red-10);
-  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
-  --link-ahref-color-active: var(--color-d-red-30);
-  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
-  --link-unresolved-color: var(--color-d-gray-50);
-  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
-  --link-unresolved-color-hover: var(--color-d-gray-40);
-  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
-  --link-unresolved-color-active: var(--color-d-gray-60);
-  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
-  --link-color: var(--color-d-yellow-20);
-  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
-  --link-color-hover: var(--color-d-yellow-10);
-  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
-  --link-color-active: var(--color-d-yellow-30);
-  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
-  --link-external-color: var(--color-d-green-20);
-  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
-  --link-external-color-hover: var(--color-d-green-10);
-  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
-  --link-external-color-active: var(--color-d-green-30);
-  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
-  --bold-color: var(--color-d-red-30);
-  --italic-color: var(--color-d-blue-20);
-  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
-  --strikethrough-color: var(--color-d-gray-50);
-  --inline-code-color: var(--color-d-red-20);
-  --inline-code-bg: var(--color-d-gray-130);
-  --bold-italic-color: var(--color-d-gray-10);
-  --bold-italic-strikethrough-color: var(--color-d-gray-40);
-  --bold-highlight-color: var(--text-normal);
-  --bold-highlight-bg: var(--color-d-alpha-red);
-  --italic-highlight-color: var(--text-normal);
-  --italic-highlight-bg: var(--color-d-alpha-blue);
-  --bold-italic-highlight-color: var(--bold-italic-color);
-  --bold-italic-highlight-bg: var(--color-d-alpha-green);
-  --strikethrough-highlight-color: var(--strikethrough-color);
-  --strikethrough-highlight-bg: var(--color-d-alpha-yellow);
-  --tag-color: var(--color-d-blue-30);
-  --tag-color-hover: var(--color-d-blue-20);
-  --tag-background: rgba(0, 0, 0, 0.3);
-  --tag-background-hover: rgba(0, 0, 0, 0.2);
-  --tag-border-width: 1px;
-  --tag-border-color: rgba(0, 0, 0, 0.25);
-  --tag-border-color-hover: rgba(0, 0, 0, 0.35);
-  --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
-  --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2),
-                      0px 0px 0px 3px rgba(0, 0, 0, 0.15);
-  --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
-  --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
-  --metadata-tab-background: var(--background-secondary);
-  --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
-  --metadata-properties-title-color-hover: var(--color-d-gray-50);
-  --metadata-properties-title-color: var(--color-d-gray-60);
-  --metadata-input-text-color: var(--color-d-gray-40);
-  --metadata-input-background: transparent;
-  --metadata-input-background-hover: transparent;
-  --metadata-input-background-active: rgba(0, 0, 0, 0.2);
-  --metadata-label-background-active: var(--metadata-input-background-active);
-  --metadata-input-shadow-hover: none;
-  --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
-                                  0px 0px 0px 1px var(--background-modifier-border);
-  --metadata-key-input-color: var(--color-d-gray-50);
-  --metadata-key-input-color-active: var(--color-d-gray-30);
-  --metadata-divider-color: var(--background-modifier-border);
-  --metadata-divider-color-hover: transparent;
-  --metadata-divider-color-focus: transparent;
-  --pill-color: var(--color-d-gray-30);
-  --pill-color-hover: var(--color-d-gray-20);
-  --pill-color-remove: var(--color-d-gray-60);
-  --pill-color-remove-hover: var(--color-d-gray-60);
-  --pill-background: rgba(0, 0, 0, 0.2);
-  --pill-background-hover: var(--pill-background);
-  --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
-  --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
-  --pill-tag-color-1: var(--color-d-yellow-20);
-  --pill-tag-bg-1: var(--color-d-alpha-yellow);
-  --pill-tag-color-2: var(--color-d-red-20);
-  --pill-tag-bg-2: var(--color-d-alpha-red);
-  --pill-tag-color-3: var(--color-d-blue-20);
-  --pill-tag-bg-3: var(--color-d-alpha-blue);
-  --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
-  --yaml-base-color: var(--color-d-red-20);
-  --yaml-def-meta-color: var(--color-d-gray-50);
-  --yaml-atom-color: var(--color-d-blue-10);
-  --yaml-keyword-color: var(--color-d-yellow-30);
-  --yaml-number-color: var(--color-d-red-20);
-  --yaml-string-color: var(--color-d-yellow-30);
-  --embed-bg-color-mix: color-mix(
-                                  in srgb,
-                                  var(--background-primary-alt) 50%,
-                                  var(--background-primary)
-                                  );
-  --embed-title-color: var(--color-d-gray-50);
-  --embed-block-shadow-hover: none;
-  --embed-edit-btn-bg: color-mix(in srgb, var(--color-d-gray-130) 70%, transparent);
-  --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-d-gray-130) 100%, transparent);
-  --embed-edit-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
-                              inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5);
-  --embed-edit-btn-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
-                                  inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5),
-                                  0px 1px 2px 0px rgba(0, 0, 0, 0.5);
-  --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.39),
-                          0px 2px 4px -2px rgba(0, 0, 0, 0.39);
-  --drag-ghost-background: var(--interactive-accent);
-  --drag-ghost-text-color: var(--text-on-accent);
-  --checklist-bg: var(--color-d-gray-110);
-  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
-  --toggle-thumb-color: var(--color-d-gray-10);
-  --toggle-bg: color-mix(in srgb, var(--color-d-gray-70) 50%, var(--color-d-gray-60));
-  --toggle-bg-enabled: var(--color-d-green-40);
-  --toggle-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.19),
-                      inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                      inset 0 0 1px rgba(0, 0, 0, 0.4);
-  --toggle-shadow-hover: inset 0 6px 20px rgba(0, 0, 0, 0.28),
-                          inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                          inset 0 0 1px rgba(0, 0, 0, 0.44);
-  --toggle-shadow-focus: inset 0 6px 20px rgba(0, 0, 0, 0.28),
-                          inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                          inset 0 0 1px rgba(0, 0, 0, 0.44),
-                          0px 0px 0px 5px rgba(255, 255, 255, 0.08);
-  --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 0.5),
-                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
-                          0 2px 2px rgba(0, 0, 0, 0.35);
-  --slider-track-background: var(--color-d-gray-120);
-  --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2),
-                          0px 0px 0px 1px rgba(255, 255, 255, 0.04);
-  --slider-thumb-bg: var(--color-d-gray-20);
-  --slider-thumb-border-width: 0px;
-  --slider-thumb-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
-                          inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
-                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
-                          0px 1px 2px 0px rgba(0, 0, 0, 0.5);
-  --slider-thumb-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
-                                  inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
-                                  inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
-                                  0px 1px 2px 0px rgba(0, 0, 0, 0.5),
-                                  0px 0px 0px 6px rgba(255, 255, 255, 0.08);
-  --text-input-color: var(--color-d-gray-50);
-  --text-input-color-focused: var(--color-d-gray-20);
-  --text-input-bg-active: var(--color-d-gray-140);
-  --text-input-border-color: var(--color-d-gray-140);
-  --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
-                              inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
-                              0px 1px 6px 0px rgba(0, 0, 0, 0.37);
-  --graph-text: var(--color-d-gray-80);
-  --graph-line: var(--background-modifier-border);
-  --graph-node: var(--color-d-blue-30);
-  --graph-node-highlight-fill: var(--color-d-gray-30);
-  --graph-node-highlight-line: var(--color-d-gray-60);
-  --graph-node-unresolved: var(--color-d-yellow-20);
-  --graph-node-unresolved-opacity: 1;
-  --graph-node-focused: var(--color-d-gray-20);
-  --graph-node-tag: var(--color-d-red-30);
-  --graph-node-attachment: var(--color-d-green-30);
-  --graph-arrow: var(--color-d-gray-50);
-  --nav-item-color: var(--color-d-gray-40);
-  --nav-item-color-hover: var(--color-d-gray-40);
-  --nav-item-color-active: var(--color-d-gray-40);
-  --nav-item-color-selected: var(--color-d-gray-20);
-  --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: rgba(0, 0, 0, 0.15);
-  --nav-item-background-active: rgba(0, 0, 0, 0.15);
-  --nav-item-background-selected: var(--color-d-alpha-green);
-  --nav-indentation-guide-color: var(--indentation-guide-color);
-  --nav-collapse-icon-color: var(--collapse-icon-color);
-  --nav-collapse-icon-color-collapsed: var(--text-faint);
-  --nav-heading-color: var(--color-d-gray-50);
-  --nav-heading-color-hover: var(--color-d-gray-50);
-  --nav-heading-color-collapsed: var(--color-d-gray-50);
-  --nav-heading-color-collapsed-hover: var(--color-d-gray-50);
-  --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23);
-  --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
-                              inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.24),
-                              0px 2px 3px 0px rgba(0, 0, 0, 0.22);
-  --nav-file-tag-color: var(--color-d-gray-60);
-  --nav-file-tag-bg: transparent;
-  --collapse-icon-color: var(--color-d-gray-60);
-  --collapse-icon-color-collapsed: var(--color-d-gray-60);
-  --vault-profile-color: var(--vault-name-color);
-  --vault-name-color: var(--color-d-gray-40);
-  --vault-name-color-hover: var(--color-d-gray-30);
-  --vault-name-background: var(--color-d-gray-110);
-  --vault-name-border: 1px solid var(--background-modifier-border);
-  --search-clear-button-color: var(--icon-color);
-  --search-clear-button-color-hover: var(--background-modifier-error-hover);
-  --search-icon-color: var(--icon-color);
-  --search-result-background: var(--background-primary-alt);
-  --search-result-background-hover: color-mix(in srgb, var(--color-d-gray-130) 50%, var(--color-d-gray-140));
-  --search-result-dest-file-color: var(--color-d-gray-50);
-  --search-result-dest-file-bg: var(--color-d-gray-120);
-  --search-result-dest-file-icon-color: var(--color-d-gray-70);
-  --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25);
-  --search-result-dest-file-bg-hover: var(--color-d-gray-140);
-  --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25),
-                                      0px 2px 3px 0px rgba(0, 0, 0, 0.29);
-  --breadcrumb-color: var(--color-d-gray-50);
-  --breadcrumb-color-hover: var(--color-d-gray-50);
-  --breadcrumb-bg-hover: var(--color-d-gray-80);
-  --breadcrumb-separator-color: var(--background-modifier-border);
-  --file-header-title-color: var(--color-d-gray-40);
-  --menu-item-icon-color: var(--color-d-gray-50);
-  --menu-item-bg-hover: rgba(0, 0, 0, 0.25);
-  --menu-item-icon-color-active: var(--color-d-gray-60);
-  --menu-item-color-active: var(--color-d-gray-60);
-  --menu-item-bg-active: var(--color-d-gray-130);
-  --text-input-color: var(--color-d-gray-20);
-  --prompt-input-background: var(--background-primary);
-  --prompt-results-background: var(--background-primary);
-  --prompt-suggestion-color: var(--color-d-gray-40);
-  --prompt-suggestion-highlight-color: var(--color-d-gray-30);
-  --prompt-suggestion-color-selected: var(--color-d-gray-20);
-  --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
-  --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
-  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                                       0px 2px 6px 0px rgba(0, 0, 0, 0.08);
-  --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
-  --prompt-separator-border: 1px solid var(--color-d-gray-90);
-  --prompt-border-color: var(--background-modifier-border-focus);
-  --notice-color: var(--text-normal);
-  --notice-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                      0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
-                      0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
-                      0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
-  --tooltip-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3),
-                      0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
-                      0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
-  --kbd-color: var(--color-d-red-20);
-  --kbd-background: var(--color-d-gray-110);
-  --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.17),
-                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
-  --gutter-color: color-mix(in srgb, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
-  --gutter-color-active: var(--color-d-gray-50);
-  --callout-color-opacity: 0.325;
-  --callout-border-opacity: 0.1;
-  --callout-icon-fold-filter: brightness(1);
-  --callout-title-color: var(--text-normal);
-  --callout-content-background: color-mix(
-                                  in srgb,
-                                  var(--background-primary-alt) 50%,
-                                  var(--background-primary)
-                                  );
-  --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
-                              0px 2px 6px 0px rgba(0, 0, 0, 0.28);
-  --callout-title-shadow: inset 0px -1px 1px 0px rgba(0, 0, 0, 0.25),
-                          inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
-  --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
-                              inset 0px calc(-1 * var(--callout-shadow-offset) - 1px) var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
-  --canvas-color-1: var(--color-red-rgb);
-  --canvas-color-2: var(--color-orange-rgb);
-  --canvas-color-3: var(--color-yellow-rgb);
-  --canvas-color-4: var(--color-green-rgb);
-  --canvas-color-5: var(--color-blue-rgb);
-  --canvas-color-6: var(--color-purple-rgb);
-  --canvas-icon-color: var(--color-d-gray-50);
-  --canvas-icon-color-hover: var(--color-d-gray-30);
-  --canvas-icon-color-disabled: var(--color-d-gray-70);
-  --canvas-menu-bg: color-mix(in srgb, var(--color-d-gray-90) 60%, var(--color-d-gray-100));
-  --canvas-menu-bg-hover: color-mix(in srgb, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
-  --canvas-menu-border: 1px solid var(--background-modifier-border);
-  --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14),
-                          0px 1px 4px -2.1px rgba(0, 0, 0, 0.22),
-                          0px 2px 8px -1.2px rgba(0, 0, 0, 0.15);
-  --tab-outline-color: transparent;
-  --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.31),
-                          -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.27),
-                          -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.2);
-  --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-secondary));
-  --kanban-lane-border: 1px solid color-mix(in srgb, var(--color-d-gray-90) 40%, var(--color-d-gray-100));
-  --kanban-lane-shadow: none;
-  --kanban-title-text-input-color: var(--text-normal);
-  --kanban-title-count-radius: var(--radius-l);
-  --kanban-title-count-color: var(--color-d-gray-40);
-  --kanban-title-count-bg: var(--color-d-gray-80);
-  --kanban-item-bg: var(--color-d-gray-90);
-  --kanban-item-border: none;
-  --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.4),
-                          inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
-                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
-                          0px 2px 2px 0px rgba(0, 0, 0, 0.13);
-  --kanban-drag-item-border: none;
-  --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.49),
-                              0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.52),
-                              0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.59);
-  --kanban-new-item-color: var(--text-faint);
-  --kanban-new-item-color-hover: var(--text-muted);
-  --kanban-new-item-bg: transparent;
-  --kanban-new-item-bg-hover: var(--color-d-gray-100);
-  --kanban-new-item-shadow: none;
-  --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.22),
-                                  0px 2px 4px 0px rgba(0, 0, 0, 0.14);
-}
-.theme-dark.theme-dark {
-  --canvas-color: var(--color-gray-rgb);
-}
-.theme-dark #calendar-container {
-  --color-dot: var(--color-d-blue-20);
-  --color-arrow: var(--color-d-gray-60);
-  --color-arrow-hover: var(--color-d-gray-40);
-  --color-arrow-active: var(--color-d-gray-30);
-  --color-button: var(--color-l-gray-30);
-  --pmr-cal-month-color: var(--color-d-gray-30);
-  --pmr-cal-year-color: var(--color-d-gray-50);
-  --color-text-heading: var(--color-d-gray-50);
-  --color-text-day: var(--color-d-gray-40);
-  --color-text-today: var(--color-d-gray-20);
-  --color-text-weeknum: var(--color-d-gray-60);
-  --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  --pmr-cal-day-color-active: var(--color-d-gray-50);
-  --pmr-cal-day-dot-opacity-active: 0.5;
-  --pmr-cal-day-background-active: var(--color-d-gray-140);
-  --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
-                              inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
-  --pmr-cal-active-day-color: var(--color-d-gray-10);
-  --pmr-cal-active-day-background: rgba(0, 0, 0, 0.15);
-  --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
-}
-
 /*────────── Icons ──────────*/
 body:not(.is-phone, .is-mobile) .clickable-icon.side-dock-ribbon-action .svg-icon,
 body:not(.is-phone, .is-mobile) .mod-left-split .workspace-tab-header-inner-icon .svg-icon,
@@ -2051,6 +606,1442 @@ svg.vault {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-pen-line'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E");
 }
 
+/*───────────────────────────────────
+
+✦ P R I M A R Y ✦
+in Classic Dark
+© Cecilia May
+
+If you have any questions on this palette,
+would like to adopt it to your website,
+please READ the USAGE, LICENSE,
+and CONTRIBUTION page ↴
+
+
+───────────────────────────────────*/
+.theme-dark {
+  color-scheme: dark;
+  --color-d-gray-10: hsla(32, 48%, 85%, 1);
+  --color-d-gray-20: hsla(34, 39%, 74%, 1);
+  --color-d-gray-30: hsla(34, 31%, 68%, 1);
+  --color-d-gray-40: hsla(35, 27%, 55%, 1);
+  --color-d-gray-50: hsla(34, 24%, 40%, 1);
+  --color-d-gray-60: hsla(33, 27%, 30%, 1);
+  --color-d-gray-70: hsla(31, 27%, 24%, 1);
+  --color-d-gray-80: hsla(28, 22%, 18%, 1);
+  --color-d-gray-90: hsla(33, 20%, 16%, 1);
+  --color-d-gray-100: hsla(30, 19%, 14%, 1);
+  --color-d-gray-110: hsla(30, 17%, 13%, 1);
+  --color-d-gray-120: hsla(29, 16%, 12%, 1);
+  --color-d-gray-130: hsla(24, 18%, 10%, 1);
+  --color-d-gray-140: hsla(32, 21%, 8%, 1);
+  --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
+  --color-d-red-10: hsla(5, 94%, 73%, 1);
+  --color-d-red-20: hsla(4, 91%, 67%, 1);
+  --color-d-red-30: hsla(4, 88%, 61%, 1);
+  --color-d-red-40: hsla(2, 75%, 52%, 1);
+  --color-d-alpha-red: hsla(350, 84%, 63%, 0.2);
+  --color-d-orange-10: hsla(26, 85%, 58%, 1);
+  --color-d-orange-20: hsla(24, 84%, 50%, 1);
+  --color-d-orange-30: hsla(22, 82%, 47%, 1);
+  --color-d-orange-40: hsla(19, 81%, 41%, 1);
+  --color-d-alpha-orange: hsla(27, 100%, 50%, 0.2);
+  --color-d-yellow-10: hsla(43, 69%, 63%, 1);
+  --color-d-yellow-20: hsla(42, 79%, 51%, 1);
+  --color-d-yellow-30: hsla(40, 78%, 48%, 1);
+  --color-d-yellow-40: hsla(38, 76%, 42%, 1);
+  --color-d-alpha-yellow: hsla(44, 100%, 50%, 0.2);
+  --color-d-green-10: hsla(152, 51%, 54%, 1);
+  --color-d-green-20: hsla(154, 57%, 42%, 1);
+  --color-d-green-30: hsla(155, 78%, 29%, 1);
+  --color-d-green-40: hsla(154, 75%, 26%, 1);
+  --color-d-alpha-green: hsla(74, 69%, 44%, 0.2);
+  --color-d-blue-10: hsla(191, 54%, 62%, 1);
+  --color-d-blue-20: hsla(194, 59%, 56%, 1);
+  --color-d-blue-30: hsla(197, 48%, 49%, 1);
+  --color-d-blue-40: hsla(201, 45%, 40%, 1);
+  --color-d-alpha-blue: hsla(186, 64%, 46%, 0.2);
+  --color-d-violet-10: hsla(242, 52%, 69%, 1);
+  --color-d-violet-20: hsla(241, 45%, 57%, 1);
+  --color-d-violet-30: hsla(239, 45%, 51%, 1);
+  --color-d-violet-40: hsla(238, 47%, 48%, 1);
+  --color-d-alpha-violet: hsla(236, 100%, 72%, 0.2);
+}
+
+/*────────── Dark Theme Override ──────────*/
+/*
+    These variables are from the Obsidian
+    app.css. You can go to Primary for Obsidian's
+    documentation to read more on how to alter,
+    contribute, and customize this part to
+    your own liking.
+*/
+.theme-dark {
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255;
+  --color-gray-rgb: 187, 186, 167;
+  --color-red-rgb: 228, 87, 78;
+  --color-red: rgb(192, 78, 78);
+  --color-orange-rgb: 238, 163, 89;
+  --color-orange: rgb(203, 128, 53);
+  --color-yellow-rgb: 249, 207, 81;
+  --color-yellow: rgb(225, 178, 67);
+  --color-green-rgb: 100, 194, 113;
+  --color-green: rgb(80, 196, 101);
+  --color-cyan-rgb: 91, 175, 183;
+  --color-cyan: rgb(70, 169, 180);
+  --color-blue-rgb: 99, 156, 192;
+  --color-blue: rgb(63, 137, 176);
+  --color-purple-rgb: 139, 113, 185;
+  --color-purple: rgb(113, 97, 194);
+  --color-pink-rgb: 224, 108, 138;
+  --color-pink: rgb(180, 100, 100);
+  --accent-h: 31;
+  --accent-s: 27%;
+  --accent-l: 24%;
+  --color-accent-hsl: var(--accent-h),
+                      var(--accent-s),
+                      var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(
+                      calc(var(--accent-h) - 3),
+                      calc(var(--accent-s) * 1.02),
+                      calc(var(--accent-l) * 1.15)
+                      );
+  --color-accent-2: hsl(
+                      calc(var(--accent-h) - 5),
+                      calc(var(--accent-s) * 1.16),
+                      calc(var(--accent-l) * 1.34)
+                      );
+  --color-base-00: var(--color-d-gray-140);
+  --color-base-05: var(--color-d-gray-120);
+  --color-base-10: var(--color-d-gray-100);
+  --color-base-20: var(--color-d-gray-90);
+  --color-base-25: var(--color-d-gray-80);
+  --color-base-30: var(--color-d-gray-70);
+  --color-base-35: var(--color-d-gray-60);
+  --color-base-40: var(--color-d-gray-50);
+  --color-base-50: var(--color-d-gray-40);
+  --color-base-60: var(--color-d-gray-30);
+  --color-base-70: var(--color-d-gray-20);
+  --color-base-100: var(--color-d-gray-10);
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.228),
+              0px 3.4px 6.7px rgba(0, 0, 0, .242),
+              0px 15px 30px rgba(0, 0, 0, .27);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.271),
+              0px 6.3px 24.7px rgba(0, 0, 0, 0.312),
+              0px 30px 90px rgba(0, 0, 0, 0.4);
+  --background-primary: var(--color-d-gray-100);
+  --background-primary-alt: var(--color-d-gray-110);
+  --background-secondary: var(--color-d-gray-120);
+  --background-secondary-alt: var(--color-d-gray-120);
+  --interactive-normal: var(--color-d-gray-90);
+  --interactive-hover: var(--color-d-gray-80);
+  --interactive-accent-hsl: var(--color-accent-hsl);
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent-2);
+  --background-modifier-hover: rgba(0, 0, 0, 0.3);
+  --background-modifier-active-hover: var(--color-d-gray-70);
+  --background-modifier-border: var(--color-d-gray-80);
+  --background-modifier-border-hover: color-mix(in srgb, var(--color-d-gray-70) 40%, var(--color-d-gray-80));
+  --background-modifier-border-focus: color-mix(in srgb, var(--color-d-gray-70) 40%, var(--color-d-gray-80));
+  --background-modifier-error-rgb: var(--color-red-rgb);
+  --background-modifier-error: var(--color-d-red-40);
+  --background-modifier-error-hover: var(--color-d-red-30);
+  --background-modifier-warning: var(--color-d-orange-40);
+  --background-modifier-warning-hover: var(--color-d-orange-30);
+  --background-modifier-success-rgb: var(--color-green-rgb);
+  --background-modifier-success: var(--color-d-green-30);
+  --background-modifier-message: var(--color-d-gray-70);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --background-modifier-form-field: var(--color-d-gray-130);
+  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.02),
+                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
+                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
+                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
+                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.25),
+                  0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
+                          0px 2px 6px -1px rgba(0, 0, 0, 0.25);
+  --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
+                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.15),
+                          inset 0px 2px 8px 0px rgba(0, 0, 0, 0.57),
+                          0px 0px 0px 1px rgba(255, 255, 255, 0.02);
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --titlebar-text-color: var(--color-d-gray-70);
+  --titlebar-text-color-focused: var(--color-d-gray-60);
+  --text-normal: var(--color-d-gray-20);
+  --text-muted: var(--color-d-gray-40);
+  --text-faint: var(--color-d-gray-50);
+  --text-on-accent: var(--color-d-gray-10);
+  --text-on-accent-inverted: var(--color-d-gray-140);
+  --text-error: var(--color-d-red-30);
+  --text-warning: var(--color-d-orange-30);
+  --text-success: var(--color-d-green-30);
+  --text-selection: var(--color-d-alpha-gray);
+  --text-highlight-bg-rgb: var(--color-yellow-rgb);
+  --text-highlight-bg: var(--color-d-alpha-yellow);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--background-modifier-border-hover);
+  --file-header-border: 1px solid var(--background-modifier-border);
+  --indentation-guide-color: var(--background-modifier-border);
+  --indentation-guide-color-active: var(--background-modifier-border-focus);
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color: var(--background-modifier-border);
+  --blockquote-background-color: var(--color-d-gray-120);
+  --prompt-border-color: var(--background-modifier-border-focus);
+  --checkbox-marker-color: white;
+  --checkbox-color: var(--color-d-green-40);
+  --checkbox-color-hover: var(--color-d-green-30);
+  --checkbox-border-color: var(--color-d-gray-70);
+  --checkbox-border-color-hover: var(--color-d-gray-60);
+  --search-clear-button-color: var(--color-d-gray-60);
+  --search-icon-color: var(--color-d-gray-60);
+  --caret-color: var(--color-d-gray-50);
+}
+
+/*────────── Primary Styling Variables ──────────*/
+/* 
+    These variables are for future ability to
+    customize Primary i.e. premium palettes,
+    custom palettes, etc.
+*/
+.theme-dark {
+  --non-alternating-color: var(--color-d-gray-60);
+  --non-alternating-color-hover-active: var(--color-d-gray-70);
+  --alternating-color-1: var(--color-d-yellow-30);
+  --alternating-color-1-hover-active: var(--color-d-yellow-40);
+  --alternating-color-2: var(--color-d-red-30);
+  --alternating-color-2-hover-active: var(--color-d-red-40);
+  --alternating-color-3: var(--color-d-blue-30);
+  --alternating-color-3-hover-active: var(--color-d-blue-40);
+  --icon-color: var(--color-d-gray-60);
+  --icon-opacity: 1;
+  --icon-bg: transparent;
+  --icon-color-hover: var(--color-d-gray-50);
+  --icon-opacity-hover: 1;
+  --icon-bg-hover: transparent;
+  --icon-color-focused: var(--color-d-gray-50);
+  --icon-bg-pressed: transparent;
+  --icon-color-active: var(--color-d-gray-40);
+  --icon-opacity-active: 1;
+  --icon-bg-active: var(--color-d-gray-80);
+  --icon-bg-active-menu: transparent;
+  --button-radius: var(--size-4-2);
+  --button-shadow: var(--input-shadow);
+  --button-shadow-hover: var(--input-shadow-hover);
+  --button-shadow-active: var(--input-shadow-active);
+  --button-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.05),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.24),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
+                          0px 2px 6px -1px rgba(0, 0, 0, 0.25),
+                          0px 0px 0px 3px var(--color-d-alpha-gray);
+  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+                          0px 2px 4px -1px rgba(0, 0, 0, 0.14);
+  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
+                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.34),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
+                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
+                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
+                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
+                                  0px 2px 6px -1px rgba(0, 0, 0, 0.19);
+  --button-accent-shadow-active: var(--input-shadow-active);
+  --button-accent-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
+                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
+                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24),
+                                  0px 0px 0px 3px var(--color-d-alpha-gray);
+  --button-axis-offset: 2px;
+  --empty-state-action-btn-bg: var(--background-primary-alt);
+  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+  --status-bar-item-color: var(--color-d-gray-50);
+  --status-bar-item-color-hover: var(--color-d-gray-30);
+  --status-bar-item-bg-hover: transparent;
+  --status-bar-item-clickable-color-active: var(--color-d-gray-60);
+  --status-bar-item-clickable-bg-active: transparent;
+  --sync-icon-success: var(--color-d-green-40);
+  --sync-icon-success-hover: var(--color-d-green-30);
+  --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
+  --sync-icon-working: var(--color-d-orange-40);
+  --sync-icon-working-hover: var(--color-d-orange-30);
+  --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
+  --modal-background: var(--background-primary);
+  --modal-border-color: var(--background-modifier-border-hover);
+  --modal-radius: var(--radius-xl);
+  --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  --community-item-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03);
+  --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+  --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.18),
+                                      0px 1px 3px -2.6px rgba(0, 0, 0, 0.33),
+                                      0px 2px 6px -4.2px rgba(0, 0, 0, 0.29),
+                                      0px 4px 12px -6px rgba(0, 0, 0, 0.9);
+  --settings-nav-group-title-color: var(--color-d-gray-60);
+  --settings-nav-item-text-color: var(--color-d-gray-40);
+  --settings-nav-item-text-color-hover: var(--color-d-gray-20);
+  --settings-nav-item-bg-hover: transparent;
+  --settings-nav-item-text-color-active: var(--color-d-gray-70);
+  --settings-nav-item-bg-active: var(--color-d-gray-130);
+  --settings-nav-item-active-color: var(--color-d-gray-100);
+  --tab-bg: transparent;
+  --tab-active-bg: var(--background-primary);
+  --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.25),
+                          0px 1px 2px -0.1px rgba(0, 0, 0, 0.47);
+  --inline-title-color: var(--color-d-gray-10);
+  --h1-color: var(--color-d-gray-10);
+  --h2-color: var(--color-d-gray-10);
+  --h3-color: var(--color-d-gray-10);
+  --h4-color: var(--color-d-gray-10);
+  --h5-color: var(--color-d-gray-10);
+  --h6-color: var(--color-d-gray-10);
+  --link-ahref-color: var(--color-d-red-20);
+  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --link-ahref-color-hover: var(--color-d-red-10);
+  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
+  --link-ahref-color-active: var(--color-d-red-30);
+  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
+  --link-unresolved-color: var(--color-d-gray-50);
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
+  --link-unresolved-color-hover: var(--color-d-gray-40);
+  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
+  --link-unresolved-color-active: var(--color-d-gray-60);
+  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
+  --link-color: var(--color-d-yellow-20);
+  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
+  --link-color-hover: var(--color-d-yellow-10);
+  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
+  --link-color-active: var(--color-d-yellow-30);
+  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
+  --link-external-color: var(--color-d-green-20);
+  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
+  --link-external-color-hover: var(--color-d-green-10);
+  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
+  --link-external-color-active: var(--color-d-green-30);
+  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
+  --bold-color: var(--color-d-red-30);
+  --italic-color: var(--color-d-blue-20);
+  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --strikethrough-color: var(--color-d-gray-50);
+  --inline-code-color: var(--color-d-red-20);
+  --inline-code-bg: var(--color-d-gray-130);
+  --bold-italic-color: var(--color-d-gray-10);
+  --bold-italic-strikethrough-color: var(--color-d-gray-40);
+  --bold-highlight-color: var(--text-normal);
+  --bold-highlight-bg: var(--color-d-alpha-red);
+  --italic-highlight-color: var(--text-normal);
+  --italic-highlight-bg: var(--color-d-alpha-blue);
+  --bold-italic-highlight-color: var(--bold-italic-color);
+  --bold-italic-highlight-bg: var(--color-d-alpha-green);
+  --strikethrough-highlight-color: var(--strikethrough-color);
+  --strikethrough-highlight-bg: var(--color-d-alpha-yellow);
+  --tag-color: var(--color-d-blue-30);
+  --tag-color-hover: var(--color-d-blue-20);
+  --tag-background: rgba(0, 0, 0, 0.3);
+  --tag-background-hover: rgba(0, 0, 0, 0.2);
+  --tag-border-width: 1px;
+  --tag-border-color: rgba(0, 0, 0, 0.25);
+  --tag-border-color-hover: rgba(0, 0, 0, 0.35);
+  --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
+  --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2),
+                      0px 0px 0px 3px rgba(0, 0, 0, 0.15);
+  --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
+  --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+  --metadata-tab-background: var(--background-secondary);
+  --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
+  --metadata-properties-title-color-hover: var(--color-d-gray-50);
+  --metadata-properties-title-color: var(--color-d-gray-60);
+  --metadata-input-text-color: var(--color-d-gray-40);
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: transparent;
+  --metadata-input-background-active: rgba(0, 0, 0, 0.2);
+  --metadata-label-background-active: var(--metadata-input-background-active);
+  --metadata-input-shadow-hover: none;
+  --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
+                                  0px 0px 0px 1px var(--background-modifier-border);
+  --metadata-key-input-color: var(--color-d-gray-50);
+  --metadata-key-input-color-active: var(--color-d-gray-30);
+  --metadata-divider-color: var(--background-modifier-border);
+  --metadata-divider-color-hover: transparent;
+  --metadata-divider-color-focus: transparent;
+  --pill-color: var(--color-d-gray-30);
+  --pill-color-hover: var(--color-d-gray-20);
+  --pill-color-remove: var(--color-d-gray-60);
+  --pill-color-remove-hover: var(--color-d-gray-60);
+  --pill-background: rgba(0, 0, 0, 0.2);
+  --pill-background-hover: var(--pill-background);
+  --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
+  --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+  --pill-tag-color-1: var(--color-d-yellow-20);
+  --pill-tag-bg-1: var(--color-d-alpha-yellow);
+  --pill-tag-color-2: var(--color-d-red-20);
+  --pill-tag-bg-2: var(--color-d-alpha-red);
+  --pill-tag-color-3: var(--color-d-blue-20);
+  --pill-tag-bg-3: var(--color-d-alpha-blue);
+  --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
+  --yaml-base-color: var(--color-d-red-20);
+  --yaml-def-meta-color: var(--color-d-gray-50);
+  --yaml-atom-color: var(--color-d-blue-10);
+  --yaml-keyword-color: var(--color-d-yellow-30);
+  --yaml-number-color: var(--color-d-red-20);
+  --yaml-string-color: var(--color-d-yellow-30);
+  --embed-bg-color-mix: color-mix(
+                                  in srgb,
+                                  var(--background-primary-alt) 50%,
+                                  var(--background-primary)
+                                  );
+  --embed-title-color: var(--color-d-gray-50);
+  --embed-block-shadow-hover: none;
+  --embed-edit-btn-bg: color-mix(in srgb, var(--color-d-gray-130) 70%, transparent);
+  --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-d-gray-130) 100%, transparent);
+  --embed-edit-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
+                              inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5);
+  --embed-edit-btn-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
+                                  inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5),
+                                  0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.39),
+                          0px 2px 4px -2px rgba(0, 0, 0, 0.39);
+  --drag-ghost-background: var(--interactive-accent);
+  --drag-ghost-text-color: var(--text-on-accent);
+  --checklist-bg: var(--color-d-gray-110);
+  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+  --toggle-thumb-color: var(--color-d-gray-10);
+  --toggle-bg: color-mix(in srgb, var(--color-d-gray-70) 50%, var(--color-d-gray-60));
+  --toggle-bg-enabled: var(--color-d-green-40);
+  --toggle-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.19),
+                      inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+                      inset 0 0 1px rgba(0, 0, 0, 0.4);
+  --toggle-shadow-hover: inset 0 6px 20px rgba(0, 0, 0, 0.28),
+                          inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+                          inset 0 0 1px rgba(0, 0, 0, 0.44);
+  --toggle-shadow-focus: inset 0 6px 20px rgba(0, 0, 0, 0.28),
+                          inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+                          inset 0 0 1px rgba(0, 0, 0, 0.44),
+                          0px 0px 0px 5px rgba(255, 255, 255, 0.08);
+  --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 0.5),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+                          0 2px 2px rgba(0, 0, 0, 0.35);
+  --slider-track-background: var(--color-d-gray-120);
+  --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2),
+                          0px 0px 0px 1px rgba(255, 255, 255, 0.04);
+  --slider-thumb-bg: var(--color-d-gray-20);
+  --slider-thumb-border-width: 0px;
+  --slider-thumb-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+                          inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
+                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
+                          0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  --slider-thumb-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+                                  inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
+                                  inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
+                                  0px 1px 2px 0px rgba(0, 0, 0, 0.5),
+                                  0px 0px 0px 6px rgba(255, 255, 255, 0.08);
+  --text-input-color: var(--color-d-gray-50);
+  --text-input-color-focused: var(--color-d-gray-20);
+  --text-input-bg-active: var(--color-d-gray-140);
+  --text-input-border-color: var(--color-d-gray-140);
+  --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
+                              inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
+                              0px 1px 6px 0px rgba(0, 0, 0, 0.37);
+  --graph-text: var(--color-d-gray-80);
+  --graph-line: var(--background-modifier-border);
+  --graph-node: var(--color-d-blue-30);
+  --graph-node-highlight-fill: var(--color-d-gray-30);
+  --graph-node-highlight-line: var(--color-d-gray-60);
+  --graph-node-unresolved: var(--color-d-yellow-20);
+  --graph-node-unresolved-opacity: 1;
+  --graph-node-focused: var(--color-d-gray-20);
+  --graph-node-tag: var(--color-d-red-30);
+  --graph-node-attachment: var(--color-d-green-30);
+  --graph-arrow: var(--color-d-gray-50);
+  --nav-item-color: var(--color-d-gray-40);
+  --nav-item-color-hover: var(--color-d-gray-40);
+  --nav-item-color-active: var(--color-d-gray-40);
+  --nav-item-color-selected: var(--color-d-gray-20);
+  --nav-item-color-highlighted: var(--text-accent-hover);
+  --nav-item-background-hover: rgba(0, 0, 0, 0.15);
+  --nav-item-background-active: rgba(0, 0, 0, 0.15);
+  --nav-item-background-selected: var(--color-d-alpha-green);
+  --nav-indentation-guide-color: var(--indentation-guide-color);
+  --nav-collapse-icon-color: var(--collapse-icon-color);
+  --nav-collapse-icon-color-collapsed: var(--text-faint);
+  --nav-heading-color: var(--color-d-gray-50);
+  --nav-heading-color-hover: var(--color-d-gray-50);
+  --nav-heading-color-collapsed: var(--color-d-gray-50);
+  --nav-heading-color-collapsed-hover: var(--color-d-gray-50);
+  --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23);
+  --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
+                              inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.24),
+                              0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+  --nav-file-tag-color: var(--color-d-gray-60);
+  --nav-file-tag-bg: transparent;
+  --collapse-icon-color: var(--color-d-gray-60);
+  --collapse-icon-color-collapsed: var(--color-d-gray-60);
+  --vault-profile-color: var(--vault-name-color);
+  --vault-name-color: var(--color-d-gray-40);
+  --vault-name-color-hover: var(--color-d-gray-30);
+  --vault-name-background: var(--color-d-gray-110);
+  --vault-name-border: 1px solid var(--background-modifier-border);
+  --search-clear-button-color: var(--icon-color);
+  --search-clear-button-color-hover: var(--background-modifier-error-hover);
+  --search-icon-color: var(--icon-color);
+  --search-result-background: var(--background-primary-alt);
+  --search-result-background-hover: color-mix(in srgb, var(--color-d-gray-130) 50%, var(--color-d-gray-140));
+  --search-result-dest-file-color: var(--color-d-gray-50);
+  --search-result-dest-file-bg: var(--color-d-gray-120);
+  --search-result-dest-file-icon-color: var(--color-d-gray-70);
+  --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25);
+  --search-result-dest-file-bg-hover: var(--color-d-gray-140);
+  --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25),
+                                      0px 2px 3px 0px rgba(0, 0, 0, 0.29);
+  --breadcrumb-color: var(--color-d-gray-50);
+  --breadcrumb-color-hover: var(--color-d-gray-50);
+  --breadcrumb-bg-hover: var(--color-d-gray-80);
+  --breadcrumb-separator-color: var(--background-modifier-border);
+  --file-header-title-color: var(--color-d-gray-40);
+  --menu-item-icon-color: var(--color-d-gray-50);
+  --menu-item-bg-hover: rgba(0, 0, 0, 0.25);
+  --menu-item-icon-color-active: var(--color-d-gray-60);
+  --menu-item-color-active: var(--color-d-gray-60);
+  --menu-item-bg-active: var(--color-d-gray-130);
+  --text-input-color: var(--color-d-gray-20);
+  --prompt-input-background: var(--background-primary);
+  --prompt-results-background: var(--background-primary);
+  --prompt-suggestion-color: var(--color-d-gray-40);
+  --prompt-suggestion-highlight-color: var(--color-d-gray-30);
+  --prompt-suggestion-color-selected: var(--color-d-gray-20);
+  --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
+  --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
+  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                                       0px 2px 6px 0px rgba(0, 0, 0, 0.08);
+  --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
+  --prompt-separator-border: 1px solid var(--color-d-gray-90);
+  --prompt-border-color: var(--background-modifier-border-focus);
+  --notice-color: var(--text-normal);
+  --notice-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+                      0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
+                      0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
+                      0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
+  --tooltip-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3),
+                      0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
+                      0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
+  --kbd-color: var(--color-d-red-20);
+  --kbd-background: var(--color-d-gray-110);
+  --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.17),
+                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
+  --gutter-color: color-mix(in srgb, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
+  --gutter-color-active: var(--color-d-gray-50);
+  --callout-color-opacity: 0.325;
+  --callout-border-opacity: 0.1;
+  --callout-icon-fold-filter: brightness(1);
+  --callout-title-color: var(--text-normal);
+  --callout-content-background: color-mix(
+                                  in srgb,
+                                  var(--background-primary-alt) 50%,
+                                  var(--background-primary)
+                                  );
+  --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
+                              0px 2px 6px 0px rgba(0, 0, 0, 0.28);
+  --callout-title-shadow: inset 0px -1px 1px 0px rgba(0, 0, 0, 0.25),
+                          inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
+  --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
+                              inset 0px calc(-1 * var(--callout-shadow-offset) - 1px) var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
+  --canvas-color-1: var(--color-red-rgb);
+  --canvas-color-2: var(--color-orange-rgb);
+  --canvas-color-3: var(--color-yellow-rgb);
+  --canvas-color-4: var(--color-green-rgb);
+  --canvas-color-5: var(--color-blue-rgb);
+  --canvas-color-6: var(--color-purple-rgb);
+  --canvas-icon-color: var(--color-d-gray-50);
+  --canvas-icon-color-hover: var(--color-d-gray-30);
+  --canvas-icon-color-disabled: var(--color-d-gray-70);
+  --canvas-menu-bg: color-mix(in srgb, var(--color-d-gray-90) 60%, var(--color-d-gray-100));
+  --canvas-menu-bg-hover: color-mix(in srgb, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
+  --canvas-menu-border: 1px solid var(--background-modifier-border);
+  --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14),
+                          0px 1px 4px -2.1px rgba(0, 0, 0, 0.22),
+                          0px 2px 8px -1.2px rgba(0, 0, 0, 0.15);
+  --tab-outline-color: transparent;
+  --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.31),
+                          -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.27),
+                          -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.2);
+  --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-secondary));
+  --kanban-lane-border: 1px solid color-mix(in srgb, var(--color-d-gray-90) 40%, var(--color-d-gray-100));
+  --kanban-lane-shadow: none;
+  --kanban-title-text-input-color: var(--text-normal);
+  --kanban-title-count-radius: var(--radius-l);
+  --kanban-title-count-color: var(--color-d-gray-40);
+  --kanban-title-count-bg: var(--color-d-gray-80);
+  --kanban-item-bg: var(--color-d-gray-90);
+  --kanban-item-border: none;
+  --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.4),
+                          inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
+                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+                          0px 2px 2px 0px rgba(0, 0, 0, 0.13);
+  --kanban-drag-item-border: none;
+  --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.49),
+                              0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.52),
+                              0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.59);
+  --kanban-new-item-color: var(--text-faint);
+  --kanban-new-item-color-hover: var(--text-muted);
+  --kanban-new-item-bg: transparent;
+  --kanban-new-item-bg-hover: var(--color-d-gray-100);
+  --kanban-new-item-shadow: none;
+  --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.22),
+                                  0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+}
+.theme-dark.theme-dark {
+  --canvas-color: var(--color-gray-rgb);
+}
+.theme-dark #calendar-container {
+  --color-dot: var(--color-d-blue-20);
+  --color-arrow: var(--color-d-gray-60);
+  --color-arrow-hover: var(--color-d-gray-40);
+  --color-arrow-active: var(--color-d-gray-30);
+  --color-button: var(--color-l-gray-30);
+  --pmr-cal-month-color: var(--color-d-gray-30);
+  --pmr-cal-year-color: var(--color-d-gray-50);
+  --color-text-heading: var(--color-d-gray-50);
+  --color-text-day: var(--color-d-gray-40);
+  --color-text-today: var(--color-d-gray-20);
+  --color-text-weeknum: var(--color-d-gray-60);
+  --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  --pmr-cal-day-color-active: var(--color-d-gray-50);
+  --pmr-cal-day-dot-opacity-active: 0.5;
+  --pmr-cal-day-background-active: var(--color-d-gray-140);
+  --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+                              inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  --pmr-cal-active-day-color: var(--color-d-gray-10);
+  --pmr-cal-active-day-background: rgba(0, 0, 0, 0.15);
+  --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
+}
+
+/*───────────────────────────────────
+
+✦ P R I M A R Y ✦
+in Classic Light
+© Cecilia May
+
+If you have any questions on this palette,
+would like to adopt it to your
+website/app/custom theme, please read the
+USAGE, LICENSE, and CONTRIBUTION page ↴
+
+
+───────────────────────────────────*/
+.theme-light {
+  color-scheme: light;
+  --color-l-gray-10: hsla(36, 38%, 98%, 1);
+  --color-l-gray-20: hsla(35, 36%, 96%, 1);
+  --color-l-gray-30: hsla(35, 37%, 92%, 1);
+  --color-l-gray-40: hsla(34, 34%, 90%, 1);
+  --color-l-gray-50: hsla(36, 35%, 88%, 1);
+  --color-l-gray-60: hsla(37, 38%, 83%, 1);
+  --color-l-gray-70: hsla(34, 37%, 70%, 1);
+  --color-l-gray-80: hsla(34, 29%, 60%, 1);
+  --color-l-gray-90: hsla(31, 23%, 50%, 1);
+  --color-l-gray-100: hsla(35, 28%, 40%, 1);
+  --color-l-gray-110: hsla(34, 30%, 37%, 1);
+  --color-l-gray-120: hsla(36, 32%, 30%, 1);
+  --color-l-gray-130: hsla(31, 45%, 24%, 1);
+  --color-l-gray-140: hsla(33, 54%, 17%, 1);
+  --color-l-alpha-gray: hsla(34, 29%, 60%, 0.2);
+  --color-l-red-10: hsla(4, 59%, 64%, 1);
+  --color-l-red-20: hsla(4, 72%, 55%, 1);
+  --color-l-red-30: hsla(4, 56%, 48%, 1);
+  --color-l-red-40: hsla(4, 72%, 35%, 1);
+  --color-l-alpha-red: hsla(350, 84%, 63%, 0.2);
+  --color-l-orange-10: hsla(26, 70%, 63%, 1);
+  --color-l-orange-20: hsla(21, 81%, 59%, 1);
+  --color-l-orange-30: hsla(18, 69%, 50%, 1);
+  --color-l-orange-40: hsla(18, 96%, 35%, 1);
+  --color-l-alpha-orange: hsla(27, 100%, 50%, 0.2);
+  --color-l-yellow-10: hsla(43, 71%, 67%, 1);
+  --color-l-yellow-20: hsla(43, 83%, 57%, 1);
+  --color-l-yellow-30: hsla(40, 79%, 47%, 1);
+  --color-l-yellow-40: hsla(40, 98%, 36%, 1);
+  --color-l-alpha-yellow: hsla(44, 100%, 50%, 0.2);
+  --color-l-green-10: hsla(148, 30%, 65%, 1);
+  --color-l-green-20: hsla(148, 48%, 47%, 1);
+  --color-l-green-30: hsla(149, 50%, 39%, 1);
+  --color-l-green-40: hsla(153, 65%, 29%, 1);
+  --color-l-alpha-green: hsla(74, 69%, 44%, 0.2);
+  --color-l-blue-10: hsla(197, 39%, 56%, 1);
+  --color-l-blue-20: hsla(202, 66%, 48%, 1);
+  --color-l-blue-30: hsla(200, 64%, 37%, 1);
+  --color-l-blue-40: hsla(205, 85%, 25%, 1);
+  --color-l-alpha-blue: hsla(186, 64%, 46%, 0.2);
+  --color-l-violet-10: hsla(280, 43%, 76%, 1);
+  --color-l-violet-20: hsla(277, 35%, 59%, 1);
+  --color-l-violet-30: hsla(275, 37%, 43%, 1);
+  --color-l-violet-40: hsla(265, 70%, 30%, 1);
+  --color-l-alpha-violet: hsla(236, 100%, 72%, 0.2);
+}
+
+/*────────── Light Theme Override ──────────*/
+/*
+    These variables are from the Obsidian
+    app.css. You can go to Primary for Obsidian's
+    documentation to read more on how to alter,
+    contribute, and customize this part to
+    your own liking.
+*/
+.theme-light {
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255;
+  --color-gray-rgb: 182, 175, 166;
+  --color-red-rgb: 223, 90, 90;
+  --color-red: hsla(0, 58%, 53%, 1);
+  --color-orange-rgb: 231, 130, 63;
+  --color-orange: hsla(30, 66%, 52%, 1);
+  --color-yellow-rgb: 248, 197, 46;
+  --color-yellow: hsla(42, 89%, 46%, 1);
+  --color-green-rgb: 87, 185, 132;
+  --color-green: hsla(146, 37%, 49%, 1);
+  --color-cyan-rgb: 124, 180, 206;
+  --color-cyan: hsla(178, 39%, 49%, 1);
+  --color-blue-rgb: 99, 164, 198;
+  --color-blue: hsla(206, 57%, 44%, 1);
+  --color-purple-rgb: 135, 106, 193;
+  --color-purple: hsla(249, 39%, 60%, 1);
+  --color-pink-rgb: 217, 102, 122;
+  --color-pink: hsla(351, 44%, 61%, 1);
+  --accent-h: 31;
+  --accent-s: 23%;
+  --accent-l: 50%;
+  --color-accent-hsl: var(--accent-h),
+                      var(--accent-s),
+                      var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(
+                      calc(var(--accent-h) - 1),
+                      calc(var(--accent-s) * 1.01),
+                      calc(var(--accent-l) * 1.075)
+                      );
+  --color-accent-2: hsl(
+                      calc(var(--accent-h) - 3),
+                      calc(var(--accent-s) * 1.33),
+                      calc(var(--accent-l) * 1.19)
+                      );
+  --color-base-00: var(--color-l-gray-10);
+  --color-base-05: var(--color-l-gray-20);
+  --color-base-10: var(--color-l-gray-30);
+  --color-base-20: var(--color-l-gray-40);
+  --color-base-25: var(--color-l-gray-50);
+  --color-base-30: var(--color-l-gray-60);
+  --color-base-35: var(--color-l-gray-70);
+  --color-base-40: var(--color-l-gray-80);
+  --color-base-50: var(--color-l-gray-90);
+  --color-base-60: var(--color-l-gray-100);
+  --color-base-70: var(--color-l-gray-120);
+  --color-base-100: var(--color-l-gray-140);
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
+              0px 3.4px 6.7px rgba(0, 0, 0, .042),
+              0px 15px 30px rgba(0, 0, 0, .07);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.091),
+              0px 6.3px 24.7px rgba(0, 0, 0, 0.132),
+              0px 30px 90px rgba(0, 0, 0, 0.22);
+  --background-primary: var(--color-l-gray-20);
+  --background-primary-alt: var(--color-l-gray-30);
+  --background-secondary: var(--color-l-gray-40);
+  --background-secondary-alt: var(--color-l-gray-40);
+  --interactive-normal: var(--color-l-gray-30);
+  --interactive-hover: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-30));
+  --interactive-accent-hsl: var(--color-accent-hsl);
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent-2);
+  --background-modifier-hover: rgba(255, 255, 255, 0.5);
+  --background-modifier-active-hover: var(--color-l-gray-60);
+  --background-modifier-border: var(--color-l-gray-60);
+  --background-modifier-border-hover: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
+  --background-modifier-border-focus: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
+  --background-modifier-error-rgb: var(--color-red-rgb);
+  --background-modifier-error: var(--color-l-red-30);
+  --background-modifier-error-hover: var(--color-l-red-20);
+  --background-modifier-warning: var(--color-l-orange-30);
+  --background-modifier-warning-hover: var(--color-l-orange-20);
+  --background-modifier-success-rgb: var(--color-green-rgb);
+  --background-modifier-success: var(--color-l-green-30);
+  --background-modifier-message: var(--color-l-gray-90);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-cover: rgba(220, 220, 220, 0.4);
+  --background-modifier-form-field: var(--color-l-gray-30);
+  --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
+                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
+                  0px 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.15),
+                          0px 2px 6px -1px rgba(0, 0, 0, 0.1);
+  --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.09),
+                          inset 0px 2px 8px 0px rgba(0, 0, 0, 0.2),
+                          0px 0px 0px 1px rgba(255, 255, 255, 0.6);
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --titlebar-text-color: var(--color-l-gray-60);
+  --titlebar-text-color-focused: var(--color-l-gray-70);
+  --text-normal: var(--color-l-gray-130);
+  --text-muted: var(--color-l-gray-100);
+  --text-faint: var(--color-l-gray-80);
+  --text-on-accent: var(--color-l-gray-10);
+  --text-on-accent-inverted: var(--color-l-gray-140);
+  --text-error: var(--color-l-red-30);
+  --text-warning: var(--color-l-orange-30);
+  --text-success: var(--color-l-green-30);
+  --text-selection: var(--color-l-alpha-gray);
+  --text-highlight-bg-rgb: var(--color-yellow-rgb);
+  --text-highlight-bg: var(--color-l-alpha-yellow);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--background-modifier-border-hover);
+  --file-header-border: 1px solid var(--background-modifier-border);
+  --indentation-guide-color: var(--background-modifier-border);
+  --indentation-guide-color-active: var(--background-modifier-border-focus);
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color: var(--background-modifier-border);
+  --blockquote-background-color: var(--color-l-gray-10);
+  --prompt-border-color: var(--background-modifier-border-focus);
+  --checkbox-marker-color: white;
+  --checkbox-color: var(--color-l-green-30);
+  --checkbox-color-hover: var(--color-l-green-20);
+  --checkbox-border-color: var(--color-l-gray-60);
+  --checkbox-border-color-hover: var(--color-l-gray-70);
+  --search-clear-button-color: var(--color-l-gray-80);
+  --search-icon-color: var(--color-l-gray-80);
+  --caret-color: var(--color-l-gray-80);
+}
+
+/*────────── Primary Styling Variables ──────────*/
+/* 
+    These variables are for future ability to
+    customize Primary to change the style and
+    flavoring of it i.e. premium palettes,
+    custom palettes, style settings etc.
+*/
+.theme-light {
+  --non-alternating-color: var(--color-l-gray-70);
+  --non-alternating-color-hover-active: var(--color-l-gray-60);
+  --alternating-color-1: var(--color-l-yellow-30);
+  --alternating-color-1-hover-active: var(--color-l-yellow-40);
+  --alternating-color-2: var(--color-l-red-30);
+  --alternating-color-2-hover-active: var(--color-l-red-40);
+  --alternating-color-3: var(--color-l-blue-30);
+  --alternating-color-3-hover-active: var(--color-l-blue-40);
+  --icon-color: var(--color-l-gray-80);
+  --icon-opacity: 1;
+  --icon-bg: transparent;
+  --icon-color-hover: var(--color-l-gray-90);
+  --icon-opacity-hover: 1;
+  --icon-bg-hover: transparent;
+  --icon-color-focused: var(--color-l-gray-90);
+  --icon-bg-pressed: transparent;
+  --icon-color-active: var(--color-l-gray-100);
+  --icon-opacity-active: 1;
+  --icon-bg-active: var(--color-l-gray-60);
+  --icon-bg-active-menu: transparent;
+  --button-radius: var(--size-4-2);
+  --button-shadow: var(--input-shadow);
+  --button-shadow-hover: var(--input-shadow-hover);
+  --button-shadow-active: var(--input-shadow-active);
+  --button-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
+                          0px 2px 4px -1px rgba(0, 0, 0, 0.05),
+                          0px 0px 0px 3px var(--color-l-alpha-gray);
+  --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.09),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
+                          inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+                          0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+                          0px 2px 4px -2.7px rgba(0, 0, 0, 0.22),
+                          0px 2px 4px -1px rgba(0, 0, 0, 0.19);
+  --button-accent-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
+                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.19),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
+                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24);
+  --button-accent-shadow-active: var(--input-shadow-active);
+  --button-accent-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
+                                  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
+                                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
+                                  inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+                                  0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+                                  0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+                                  0px 2px 6px -1px rgba(0, 0, 0, 0.24),
+                                  0px 0px 0px 3px var(--color-l-alpha-gray);
+  --button-axis-offset: 2px;
+  --empty-state-action-btn-bg: var(--background-primary-alt);
+  --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+  --status-bar-item-color: var(--color-l-gray-80);
+  --status-bar-item-color-hover: var(--color-l-gray-100);
+  --status-bar-item-bg-hover: transparent;
+  --status-bar-item-clickable-color-active: var(--color-l-gray-70);
+  --status-bar-item-clickable-bg-active: transparent;
+  --sync-icon-success: var(--color-l-green-30);
+  --sync-icon-success-hover: var(--color-l-green-20);
+  --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
+  --sync-icon-working: var(--color-l-orange-10);
+  --sync-icon-working-hover: var(--color-l-orange-20);
+  --sync-icon-working-active: var(--status-bar-item-clickable-color-active);
+  --modal-border-color: var(--background-modifier-border-hover);
+  --modal-radius: var(--radius-xl);
+  --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  --community-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+  --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23),
+                                      0px 1px 3px -2.6px rgba(0, 0, 0, 0.23),
+                                      0px 2px 6px -4.2px rgba(0, 0, 0, 0.19),
+                                      0px 4px 12px -6px rgba(0, 0, 0, 0.9);
+  --prompt-border-color: var(--background-modifier-border-hover);
+  --settings-nav-group-title-color: var(--color-l-gray-70);
+  --settings-nav-item-text-color: var(--color-l-gray-110);
+  --settings-nav-item-text-color-hover: var(--color-l-gray-130);
+  --settings-nav-item-bg-hover: transparent;
+  --settings-nav-item-text-color-active: var(--color-l-gray-80);
+  --settings-nav-item-active-color: var(--color-l-gray-10);
+  --tab-bg: transparent;
+  --tab-active-bg: var(--background-primary);
+  --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
+                      inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.09),
+                      0px 1px 2px -0.1px rgba(0, 0, 0, 0.15);
+  --inline-title-color: var(--color-l-gray-140);
+  --h1-color: var(--color-l-gray-140);
+  --h2-color: var(--color-l-gray-140);
+  --h3-color: var(--color-l-gray-140);
+  --h4-color: var(--color-l-gray-140);
+  --h5-color: var(--color-l-gray-140);
+  --h6-color: var(--color-l-gray-140);
+  --link-ahref-color: var(--color-l-red-20);
+  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --link-ahref-color-hover: var(--color-l-red-10);
+  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
+  --link-ahref-color-active: var(--color-l-red-30);
+  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
+  --link-unresolved-color: var(--color-l-gray-80);
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
+  --link-unresolved-color-hover: var(--color-l-gray-70);
+  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
+  --link-unresolved-color-active: var(--color-l-gray-90);
+  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
+  --link-color: var(--color-l-yellow-30);
+  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
+  --link-color-hover: var(--color-l-yellow-20);
+  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
+  --link-color-active: var(--color-l-yellow-40);
+  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
+  --link-external-color: var(--color-l-green-30);
+  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
+  --link-external-color-hover: var(--color-l-green-20);
+  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
+  --link-external-color-active: var(--color-l-green-40);
+  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
+  --bold-color: var(--color-l-red-30);
+  --italic-color: var(--color-l-blue-30);
+  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --strikethrough-color: var(--color-l-gray-80);
+  --inline-code-color: var(--color-l-red-10);
+  --inline-code-bg: var(--color-l-gray-10);
+  --bold-italic-color: var(--color-l-gray-140);
+  --bold-italic-strikethrough-color: var(--color-l-gray-90);
+  --bold-highlight-color: var(--text-normal);
+  --bold-highlight-bg: var(--color-l-alpha-red);
+  --italic-highlight-color: var(--text-normal);
+  --italic-highlight-bg: var(--color-l-alpha-blue);
+  --bold-italic-highlight-color: var(--bold-italic-color);
+  --bold-italic-highlight-bg: var(--color-l-alpha-green);
+  --strikethrough-highlight-color: var(--strikethrough-color);
+  --strikethrough-highlight-bg: var(--color-l-alpha-yellow);
+  --tag-color: var(--color-l-blue-30);
+  --tag-color-hover: var(--color-l-blue-20);
+  --tag-background: rgba(255, 255, 255, 0.5);
+  --tag-background-hover: rgba(255, 255, 255, 0.8);
+  --tag-border-width: 1px;
+  --tag-border-color: rgba(0, 0, 0, 0.15);
+  --tag-border-color-hover: rgba(0, 0, 0, 0.25);
+  --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
+  --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1),
+                      0px 0px 0px 3px rgba(0, 0, 0, 0.03);
+  --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
+  --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+  --metadata-tab-background: var(--background-secondary);
+  --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
+  --metadata-properties-title-color-hover: var(--color-l-gray-80);
+  --metadata-properties-title-color: var(--color-l-gray-70);
+  --metadata-input-text-color: var(--color-l-gray-120);
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: transparent;
+  --metadata-input-background-active: rgba(255, 255, 255, 0.45);
+  --metadata-label-background-active: var(--metadata-input-background-active);
+  --metadata-input-shadow-hover: none;
+  --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
+                                  0px 0px 0px 1px var(--background-modifier-border);
+  --metadata-key-input-color: var(--color-l-gray-100);
+  --metadata-key-input-color-active: var(--color-l-gray-120);
+  --metadata-divider-color: var(--background-modifier-border);
+  --metadata-divider-color-hover: transparent;
+  --metadata-divider-color-focus: transparent;
+  --pill-color: var(--color-l-gray-120);
+  --pill-color-hover: var(--color-l-gray-140);
+  --pill-color-remove: var(--color-l-gray-70);
+  --pill-color-remove-hover: var(--color-l-gray-70);
+  --pill-background: rgba(255, 255, 255, 0.4);
+  --pill-background-hover: var(--pill-background);
+  --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
+  --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+  --pill-tag-color-1: var(--color-l-yellow-40);
+  --pill-tag-bg-1: var(--color-l-alpha-yellow);
+  --pill-tag-color-2: var(--color-l-red-40);
+  --pill-tag-bg-2: var(--color-l-alpha-red);
+  --pill-tag-color-3: var(--color-l-blue-40);
+  --pill-tag-bg-3: var(--color-l-alpha-blue);
+  --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+  --yaml-base-color: var(--color-l-red-10);
+  --yaml-def-meta-color: var(--color-l-gray-70);
+  --yaml-atom-color: var(--color-l-blue-10);
+  --yaml-keyword-color: var(--color-l-yellow-30);
+  --yaml-number-color: var(--color-l-red-10);
+  --yaml-string-color: var(--color-l-yellow-30);
+  --embed-bg-color-mix: color-mix(
+                              in srgb,
+                              var(--background-primary-alt) 50%,
+                              var(--background-primary)
+                              );
+  --embed-title-color: var(--color-l-gray-90);
+  --embed-block-shadow-hover: none;
+  --embed-edit-btn-bg: color-mix(in srgb, var(--color-l-gray-20) 70%, transparent);
+  --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 100%, transparent);
+  --embed-edit-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                              inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1);
+  --embed-edit-btn-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                  inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1),
+                                  0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                          0px 2px 4px -2px rgba(0, 0, 0, 0.06);
+  --drag-ghost-background: var(--interactive-accent);
+  --drag-ghost-text-color: var(--text-on-accent);
+  --checklist-bg: var(--color-l-gray-10);
+  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
+  --toggle-thumb-color: var(--color-l-gray-10);
+  --toggle-bg: color-mix(in hsl, var(--color-l-gray-60) 80%, var(--color-l-gray-70));
+  --toggle-bg-enabled: var(--color-l-green-30);
+  --toggle-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.09),
+                      inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+                      inset 0 0 1px rgba(0, 0, 0, 0.28);
+  --toggle-shadow-hover: inset 0 6px 20px rgba(0, 0, 0, 0.18),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+                          inset 0 0 1px rgba(0, 0, 0, 0.32);
+  --toggle-shadow-focus: inset 0 6px 20px rgba(0, 0, 0, 0.18),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+                          inset 0 0 1px rgba(0, 0, 0, 0.32),
+                          0px 0px 0px 5px rgba(0, 0, 0, 0.05);
+  --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
+                          inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          0 2px 2px rgba(0, 0, 0, 0.2);
+  --slider-track-background: var(--color-l-gray-60);
+  --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                          0px 0px 0px 1px rgba(255, 255, 255, 0.08);
+  --slider-thumb-bg: var(--color-l-gray-10);
+  --slider-thumb-border-width: 0px;
+  --slider-thumb-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                          inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
+                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
+                          0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  --slider-thumb-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+                               inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
+                               inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
+                               0px 1px 2px 0px rgba(0, 0, 0, 0.1),
+                               0px 0px 0px 6px rgba(0, 0, 0, 0.05);
+  --text-input-color: var(--color-l-gray-90);
+  --text-input-color-focused: var(--color-l-gray-130);
+  --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
+  --text-input-border-color: var(--color-l-gray-60);
+  --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
+                              inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
+                              0px 1px 6px 0px rgba(0, 0, 0, 0.07);
+  --graph-text: var(--color-l-gray-80);
+  --graph-line: var(--background-modifier-border);
+  --graph-node: var(--color-l-blue-20);
+  --graph-node-highlight-fill: var(--color-l-gray-90);
+  --graph-node-highlight-line: var(--color-l-gray-70);
+  --graph-node-unresolved: var(--color-l-yellow-20);
+  --graph-node-unresolved-opacity: 1;
+  --graph-node-focused: var(--color-l-gray-130);
+  --graph-node-tag: var(--color-l-red-20);
+  --graph-node-attachment: var(--color-l-green-10);
+  --graph-arrow: var(--color-l-gray-90);
+  --nav-item-color: var(--color-l-gray-110);
+  --nav-item-color-hover: var(--color-l-gray-110);
+  --nav-item-color-active: var(--color-l-gray-110);
+  --nav-item-color-selected: var(--color-l-gray-130);
+  --nav-item-color-highlighted: var(--text-accent-hover);
+  --nav-item-background-hover: rgba(255, 255, 255, 0.25);
+  --nav-item-background-active: rgba(255, 255, 255, 0.25);
+  --nav-item-background-selected: var(--color-l-alpha-green);
+  --nav-indentation-guide-color: var(--indentation-guide-color);
+  --nav-collapse-icon-color: var(--collapse-icon-color);
+  --nav-collapse-icon-color-collapsed: var(--text-faint);
+  --nav-heading-color: var(--color-l-gray-100);
+  --nav-heading-color-hover: var(--color-l-gray-100);
+  --nav-heading-color-collapsed: var(--color-l-gray-100);
+  --nav-heading-color-collapsed-hover: var(--color-l-gray-100);
+  --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
+  --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                              inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.07),
+                              0px 2px 3px 0px rgba(0, 0, 0, 0.05);
+  --nav-file-tag-color: var(--color-l-gray-90);
+  --nav-file-tag-bg: transparent;
+  --collapse-icon-color: var(--color-l-gray-70);
+  --collapse-icon-color-collapsed: var(--color-l-gray-70);
+  --vault-profile-color: var(--vault-name-color);
+  --vault-name-color: var(--color-l-gray-100);
+  --vault-name-background: var(--color-l-gray-30);
+  --vault-name-border: 1px solid var(--background-modifier-border);
+  --search-clear-button-color: var(--icon-color);
+  --search-clear-button-color-hover: var(--background-modifier-error-hover);
+  --search-icon-color: var(--icon-color);
+  --search-result-background: var(--background-primary-alt);
+  --search-result-background-hover: color-mix(in srgb, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
+  --search-result-dest-file-color: var(--color-l-gray-100);
+  --search-result-dest-file-bg: var(--color-l-gray-20);
+  --search-result-dest-file-icon-color: var(--color-l-gray-70);
+  --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
+  --search-result-dest-file-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 50%, var(--color-l-gray-10));
+  --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                      inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
+                                      0px 2px 3px 0px rgba(0, 0, 0, 0.09);
+  --breadcrumb-color: var(--color-l-gray-90);
+  --breadcrumb-color-hover: var(--color-l-gray-90);
+  --breadcrumb-bg-hover: var(--color-l-gray-40);
+  --breadcrumb-separator-color: var(--background-modifier-border);
+  --file-header-title-color: var(--color-l-gray-120);
+  --menu-item-icon-color: var(--color-l-gray-80);
+  --menu-item-bg-hover: rgba(255, 255, 255, 0.35);
+  --menu-item-icon-color-active: var(--color-l-gray-70);
+  --menu-item-color-active: var(--color-l-gray-70);
+  --menu-item-bg-active: var(--color-l-gray-50);
+  --text-input-color: var(--color-l-gray-130);
+  --prompt-input-background: var(--background-primary);
+  --prompt-results-background: var(--background-primary);
+  --prompt-suggestion-color: var(--color-l-gray-110);
+  --prompt-suggestion-highlight-color: var(--color-l-gray-120);
+  --prompt-suggestion-color-selected: var(--color-l-gray-130);
+  --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
+  --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.35);
+  --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                                       0px 2px 6px 0px rgba(0, 0, 0, 0.03);
+  --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
+  --prompt-separator-border: 1px solid var(--color-l-gray-40);
+  --prompt-border-color: var(--background-modifier-border-focus);
+  --notice-color: var(--text-on-accent);
+  --notice-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+                          0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
+                          0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
+                          0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
+  --tooltip-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.12),
+                      0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
+                      0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
+  --kbd-color: var(--color-l-red-10);
+  --kbd-background: var(--color-l-gray-40);
+  --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
+                  inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
+  --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
+  --gutter-color-active: var(--color-l-gray-90);
+  --callout-color-opacity: 0.325;
+  --callout-border-opacity: 0.2;
+  --callout-icon-fold-filter: brightness(0.8);
+  --callout-title-color: var(--text-normal);
+  --callout-content-background: color-mix(
+                                  in srgb,
+                                  var(--background-primary-alt) 50%,
+                                  var(--background-primary)
+                                  );
+  --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                              0px 1px 6px 0px rgba(0, 0, 0, 0.12);
+  --callout-title-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.05),
+                          inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2);
+  --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+                              inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
+  --canvas-color: var(--color-gray-rgb);
+  --canvas-color-1: var(--color-red-rgb);
+  --canvas-color-2: var(--color-orange-rgb);
+  --canvas-color-3: var(--color-yellow-rgb);
+  --canvas-color-4: var(--color-green-rgb);
+  --canvas-color-5: var(--color-blue-rgb);
+  --canvas-color-6: var(--color-purple-rgb);
+  --canvas-icon-color: var(--color-l-gray-80);
+  --canvas-icon-color-hover: var(--color-l-gray-120);
+  --canvas-icon-color-disabled: var(--color-l-gray-60);
+  --canvas-menu-bg: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
+  --canvas-menu-bg-hover: var(--color-l-gray-10);
+  --canvas-menu-border: 1px solid var(--background-modifier-border);
+  --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.02),
+                          0px 1px 4px -2.1px rgba(0, 0, 0, 0.1),
+                          0px 2px 8px -1.2px rgba(0, 0, 0, 0.03);
+  --tab-outline-color: transparent;
+  --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.08),
+                          -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.04),
+                          -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.06);
+  --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-primary));
+  --kanban-lane-border: 1px solid var(--color-l-gray-40);
+  --kanban-lane-shadow: none;
+  --kanban-title-text-input-color: var(--text-normal);
+  --kanban-title-count-radius: var(--radius-l);
+  --kanban-title-count-color: var(--color-l-gray-120);
+  --kanban-title-count-bg: var(--color-l-gray-60);
+  --kanban-item-bg: var(--color-l-gray-10);
+  --kanban-item-border: none;
+  --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+                          inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
+                          inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+                          0px 2px 2px 0px rgba(0, 0, 0, 0.03);
+  --kanban-drag-item-border: none;
+  --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.19),
+                              0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.22),
+                              0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.29);
+  --kanban-new-item-color: var(--text-faint);
+  --kanban-new-item-color-hover: var(--text-muted);
+  --kanban-new-item-bg: transparent;
+  --kanban-new-item-bg-hover: var(--background-primary);
+  --kanban-new-item-shadow: none;
+  --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+                                  0px 2px 4px 0px rgba(0, 0, 0, 0.04);
+}
+.theme-light.is-mobile {
+  --mobile-sidebar-background: var(--background-secondary);
+  --nav-item-color: var(--text-muted);
+  --mobile-sidebar-left-shadow: 5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+                                  10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+  --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+                                  -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+  --pull-down-action-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+                              0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
+                              0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
+                              0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
+}
+.theme-light #calendar-container {
+  --color-dot: var(--color-l-blue-20);
+  --color-arrow: var(--color-l-gray-70);
+  --color-arrow-hover: var(--color-l-gray-90);
+  --color-arrow-active: var(--color-l-gray-100);
+  --color-button: var(--color-l-gray-100);
+  --pmr-cal-month-color: var(--color-l-gray-120);
+  --pmr-cal-year-color: var(--color-l-gray-90);
+  --color-text-heading: var(--color-l-gray-90);
+  --color-text-day: var(--color-l-gray-130);
+  --color-text-today: var(--color-l-gray-140);
+  --color-text-weeknum: var(--color-l-gray-80);
+  --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  --pmr-cal-day-color-active: var(--color-l-gray-80);
+  --pmr-cal-day-dot-opacity-active: 0.5;
+  --pmr-cal-day-background-active: var(--color-l-gray-60);
+  --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.2),
+                              inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  --pmr-cal-active-day-color: var(--color-l-gray-140);
+  --pmr-cal-active-day-background: rgba(255, 255, 255, 0.25);
+  --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
+}
+
+/*────────── Shape ──────────*/
+/* 
+Variables for
+    sizing, container
+    padding, widths
+    heights, radius
+    and other non-color related
+    variables
+*/
+body {
+  --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+  --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
+  --popup-bg-blur: 3px;
+  --bold-italic-weight: 500;
+  --bold-modifier: 100;
+  --cursor: pointer;
+  --radius-xs: 2px;
+  --icon-container-radius: 0px;
+  --icon-xs: 13px;
+  --icon-s: 15px;
+  --icon-m: 16px;
+  --icon-l: 18px;
+  --icon-xl: 24px;
+  --button-inset-shadow-size: 2px;
+  --titlebar-text-weight: var(--font-normal);
+  --header-height: 46px;
+  --note-pane-margin: 10px;
+  --file-tab-gap: 0px;
+  --file-border-radius: var(--radius-l);
+  --close-button-radius: var(--radius-l);
+  --tab-status-radius: var(--radius-s);
+  --new-tab-btn-radius: 2em;
+  --hr-thickness: 1px;
+  --code-radius: var(--radius-m);
+  --inline-code-radius: var(--radius-s);
+  --copy-code-button-radius: var(--radius-s);
+  --modal-close-button-size: 20px;
+  --dropdown-height: calc(
+                          var(--font-ui-small) +
+                          calc(var(--size-4-4) + var(--button-inset-shadow-size))
+                      );
+  --button-padding: var(--size-4-2)
+                      var(--size-4-3)
+                      calc(var(--size-4-2) + var(--button-inset-shadow-size))
+                      var(--size-4-3);
+  --button-padding-active: calc(var(--size-4-2) + var(--button-inset-shadow-size))
+                              var(--size-4-3)
+                              var(--size-4-2)
+                              var(--size-4-3);
+  --button-metadata-padding: var(--size-2-3)
+                              var(--size-4-2)
+                              calc(var(--size-2-3) + var(--button-inset-shadow-size))
+                              var(--size-2-3);
+  --button-metadata-padding-active: calc(var(--size-2-2) + var(--button-inset-shadow-size))
+                                      var(--size-4-2)
+                                      var(--size-2-3)
+                                      var(--size-2-3);
+  --button-s-radius: var(--size-2-3);
+  --button-s-padding: var(--size-2-2)
+                      var(--size-4-2)
+                      var(--size-2-2)
+                      var(--size-4-2);
+  --input-radius: var(--button-radius);
+  --input-height: 32px;
+  --search-icon-size: 14px;
+  --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
+  --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
+  --settings-nav-item-padding: calc(var(--size-2-3) + 1px)
+                               var(--size-4-3)
+                               calc(var(--size-2-3) + 1px)
+                               var(--size-4-3);
+  --settings-nav-item-padding-hover: calc(var(--size-2-3) + 1px)
+                               var(--size-4-3)
+                               calc(var(--size-2-3) + 1px)
+                               var(--size-4-5);
+  --settings-nav-item-padding-active: var(--size-2-3)
+                               var(--size-4-3)
+                               calc(var(--size-2-3) + var(--button-inset-shadow-size))
+                               var(--size-4-5);
+  --settings-nav-item-radius: calc(var(--radius-m) - 1px);
+  --slider-track-height: 5px;
+  --nav-item-white-space: nowrap;
+  --nav-item-radius: 6px;
+  --nav-item-padding: calc(var(--size-4-1) + 1px)
+                      var(--size-4-2)
+                      calc(var(--size-4-1) + 1px)
+                      var(--size-4-6);
+  --nav-file-padding-active: calc(var(--size-4-1))
+                      var(--size-4-2)
+                      calc(var(--size-4-1) + var(--button-inset-shadow-size))
+                      var(--size-4-6);
+  --vault-name-font-size: var(--font-ui-small);
+  --vault-name-font-weight: var(--font-semibold);
+  --search-icon-size: 14px;
+  --search-clear-button-size: 12px;
+  --menu-item-radius: calc(var(--radius-m) - 1px);
+  --divider-width-hover: 4px;
+  --divider-radius: var(--radius-m);
+  --metadata-border-width: 1px;
+  --metadata-divider-width: 0px;
+  --metadata-border-radius: var(--radius-m);
+  --metadata-property-radius: calc(var(--radius-m) - 1px);
+  --pill-tag-weight: var(--font-semibold);
+  --table-header-border-width: 0;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+  --table-row-last-border-width: 0;
+  --tag-padding-x: 0.6em;
+  --tag-padding-y: 0.15em;
+  --tag-radius: 1em;
+  --link-unresolved-opacity: 1;
+  --link-underline-offset: 2px;
+  --link-decoration-thickness: 1.5px;
+  --callout-shadow-offset: 4px;
+  --callout-content-shadow-blur: 3px;
+  --callout-title-padding: var(--size-4-3) var(--size-4-4);
+  --callout-content-padding: var(--size-4-1)
+                              var(--size-4-4)
+                              calc(var(--size-4-1) + var(--callout-shadow-offset))
+                              var(--size-4-4);
+  --callout-radius: var(--radius-m);
+  --callout-blend-mode: unset;
+  --anim-popup: 0.3s slideUp forwards;
+  --pmr-cal-td-padding: var(--size-4-1)
+                          var(--size-4-1)
+                          calc(var(--size-4-1) + var(--button-inset-shadow-size))
+                          var(--size-4-1);
+  --pmr-cal-td-radius: calc(var(--radius-s) + 1px);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(10%);
+    opacity: 0.2;
+  }
+  40% {
+    transform: translateY(-2%);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*────────── Typography ──────────*/
+body {
+  --font-interface-theme: "Inter";
+  --font-text-theme: "Inter";
+  --font-monospace-theme: "Cascadia Code";
+  font-feature-settings: var(--inter-font-features);
+  --bold-weight: var(--font-medium);
+  --h1-weight: var(--font-semibold);
+}
+
+input,
+textarea,
+select,
+button {
+  font-feature-settings: var(--inter-font-features);
+}
+
 /*────────── Divider ──────────*/
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle,
@@ -2116,6 +2107,11 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 }
 body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .workspace-split.mod-right-split {
   margin-left: calc(-1 * var(--note-pane-margin) / 3);
+}
+
+/*────────── Navbar ──────────*/
+.mobile-navbar {
+  border-top: 1px solid var(--background-modifier-border);
 }
 
 /*────────── Ribbon ──────────*/
@@ -2354,11 +2350,6 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
   background: var(--titlebar-background);
 }
 
-/*────────── Navbar ──────────*/
-.mobile-navbar {
-  border-top: 1px solid var(--background-modifier-border);
-}
-
 /*────────── Button ──────────*/
 .is-mobile button:not(button.clickable-icon),
 button:not(button.clickable-icon) {
@@ -2583,6 +2574,104 @@ input[type=checkbox]:hover {
     box-shadow: var(--swatch-shadow), 0px 0px 0px 3px var(--background-modifier-border-hover);
   }
 }
+/*────────── Dropdown ──────────*/
+select,
+.dropdown {
+  border-radius: var(--button-radius);
+  transition: var(--background-anim);
+}
+select:hover,
+.dropdown:hover {
+  cursor: pointer;
+}
+select:active,
+.dropdown:active {
+  box-shadow: var(--button-shadow-active);
+}
+select:focus,
+.dropdown:focus {
+  background-color: var(--interactive-normal-hover);
+  box-shadow: var(--button-shadow-focus);
+}
+
+/*────────── kbd ──────────*/
+kbd,
+span.prompt-instruction-command,
+span.setting-hotkey {
+  color: var(--kbd-color);
+  background: var(--kbd-background);
+  padding: var(--size-2-1) var(--size-2-3) var(--size-2-1) var(--size-2-3);
+  box-shadow: var(--kbd-shadow);
+}
+
+/*────────── Loading ──────────*/
+.is-loading:before {
+  background-color: var(--background-modifier-success);
+  animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+}
+
+.progress-bar {
+  background: var(--background-primary);
+}
+.progress-bar-message {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  font-feature-settings: "calt" off;
+  letter-spacing: 0.2em;
+}
+.progress-bar-indicator {
+  width: 35%;
+  height: var(--size-4-3);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--size-4-3);
+}
+.progress-bar-line {
+  height: var(--size-4-3);
+  background: var(--background-secondary);
+}
+.progress-bar-subline {
+  height: var(--size-4-3);
+  background: var(--background-modifier-warning);
+  animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+}
+
+.is-mobile .progress-bar-indicator {
+  width: 55%;
+}
+
+/*────────── Menu ──────────*/
+.menu {
+  animation: var(--anim-popup);
+}
+
+.menu-item {
+  border-radius: var(--menu-item-radius);
+}
+.menu-item.selected:not(.is-label):not(.is-disabled) {
+  background: var(--menu-item-bg-hover);
+}
+.menu-item.selected:not(.is-label):not(.is-disabled):active {
+  color: var(--menu-item-color-active);
+  background: var(--menu-item-bg-active);
+}
+.menu-item.selected:not(.is-label):not(.is-disabled):active .menu-item-icon {
+  color: var(--menu-item-icon-color-active);
+}
+
+.menu-item-icon {
+  color: var(--menu-item-icon-color);
+}
+.menu-item-icon.mod-checked > svg {
+  width: 12px;
+  height: 12px;
+}
+
+.is-mobile .menu {
+  border: 1px solid var(--background-modifier-border-hover);
+  border-radius: var(--size-4-4) var(--size-4-4) 0 0;
+}
+
 /*────────── Modals ──────────*/
 .modal-container {
   backdrop-filter: blur(var(--popup-bg-blur));
@@ -2669,6 +2758,151 @@ input[type=checkbox]:hover {
   color: var(--inline-code-bg);
   background: var(--inline-code-color);
   box-shadow: var(--community-item-flair-shadow);
+}
+
+/*────────── Navigation Items ──────────*/
+.tree-item-self {
+  border-radius: var(--nav-item-radius);
+}
+.tree-item-self.is-clickable {
+  cursor: pointer;
+}
+.tree-item-self.is-clickable.is-active:not(.nav-file-title) {
+  box-shadow: var(--nav-item-shadow-active);
+}
+
+.backlink-pane > .tree-item-self,
+.embedded-backlinks .backlink-pane > .tree-item-self,
+.outgoing-link-pane > .tree-item-self {
+  font-size: 11px;
+  font-feature-settings: "calt" off;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.embedded-backlinks .backlink-pane > .tree-item-self {
+  margin-top: 5px;
+}
+
+/*────────── Notice ──────────*/
+.notice-container {
+  overflow: visible;
+}
+
+.notice,
+.is-phone .notice {
+  color: var(--notice-color);
+  border-radius: var(--radius-l);
+  box-shadow: var(--notice-shadow);
+}
+
+/*────────── Prompt ──────────*/
+input.prompt-input {
+  background: var(--prompt-input-background);
+  padding: 28px var(--size-4-6);
+}
+
+input.prompt-input,
+input.prompt-input:hover,
+input.prompt-input:active,
+input.prompt-input:focus,
+input.prompt-input:focus-visible {
+  border-bottom: var(--prompt-separator-border);
+}
+
+.suggestion-popover,
+.popover {
+  animation: var(--anim-popup);
+}
+
+.suggestion-item:not(.mod-search-suggestion .suggestion-item) {
+  font-size: calc(var(--font-ui-medium) - 1px);
+  color: var(--prompt-suggestion-color);
+  border-radius: calc(var(--radius-m) - 1px);
+  transition: padding var(--anim-duration-fast) var(--anim-motion-swing);
+}
+.suggestion-item:not(.mod-search-suggestion .suggestion-item).is-selected {
+  color: var(--prompt-suggestion-color-selected);
+  background: var(--prompt-suggestion-background-selected);
+  box-shadow: var(--prompt-suggestion-shadow-selected);
+}
+.suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex .suggestion-highlight {
+  font-weight: var(--font-semibold);
+  color: var(--prompt-suggestion-highlight-color);
+}
+.suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex.is-selected .suggestion-highlight {
+  color: var(--prompt-suggestion-highlight-color-selected);
+}
+
+.prompt-instructions {
+  background: var(--prompt-instructions-background);
+  padding: var(--size-4-2) var(--size-4-3);
+}
+
+.prompt-instructions,
+.prompt-instructions:hover,
+.prompt-instructions:active,
+.prompt-instructions:focus,
+.prompt-instructions:focus-visible {
+  border-top: var(--prompt-separator-border);
+}
+
+.prompt-instruction-command {
+  color: var(--inline-code-color);
+  background-color: var(--background-secondary);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.prompt {
+  animation: var(--anim-popup);
+}
+.prompt-results {
+  background: var(--prompt-results-background);
+}
+.prompt .suggestion-item {
+  padding: var(--size-4-2) var(--size-4-3);
+}
+.prompt .suggestion-item.is-selected:not(body.is-phone .prompt .suggestion-item.is-selected) {
+  padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
+}
+.prompt .suggestion-aux .suggestion-flair > svg.lucide-pin {
+  transform: rotate(45deg);
+}
+
+.is-mobile .prompt {
+  border: 1px solid var(--background-modifier-border-focus);
+}
+
+.is-phone .suggestion-bg {
+  backdrop-filter: blur(var(--popup-bg-blur));
+}
+
+/*────────── Pull Down Action ──────────*/
+.pull-down-action {
+  border-radius: var(--radius-l);
+  box-shadow: var(--pull-down-action-shadow);
+}
+
+/*────────── Slider ──────────*/
+body:not(.is-mobile) input[type=range],
+body:not(.is-mobile) input[type=range]:hover,
+body:not(.is-mobile) input[type=range]:focus {
+  box-shadow: var(--slider-track-shadow);
+}
+
+body:not(.is-mobile) input[type=range]::-webkit-slider-thumb {
+  background: var(--slider-thumb-bg);
+  box-shadow: var(--slider-thumb-shadow);
+  cursor: grab;
+}
+
+body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:hover,
+body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:active,
+body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb,
+body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
+  background: var(--slider-thumb-bg);
+  box-shadow: var(--slider-thumb-shadow-hover);
 }
 
 /*────────── Tabs ──────────*/
@@ -3001,70 +3235,6 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
   color: var(--icon-color-active);
 }
 
-/*────────── Toggle ──────────*/
-.checkbox-container {
-  background: var(--toggle-bg);
-  box-shadow: var(--toggle-shadow);
-}
-.checkbox-container:hover {
-  box-shadow: var(--toggle-shadow-hover);
-  cursor: pointer;
-}
-.checkbox-container:active::after {
-  width: calc(var(--toggle-thumb-width) + 4px);
-}
-.checkbox-container:focus, .checkbox-container:focus-visible, .checkbox-container:focus-within, .checkbox-container.mod-small:focus-within {
-  outline: none;
-  box-shadow: var(--toggle-shadow-focus);
-}
-.checkbox-container.is-enabled {
-  background: var(--toggle-bg-enabled);
-}
-.checkbox-container:after {
-  box-shadow: var(--toggle-thumb-shadow);
-}
-
-/*────────── Slider ──────────*/
-body:not(.is-mobile) input[type=range],
-body:not(.is-mobile) input[type=range]:hover,
-body:not(.is-mobile) input[type=range]:focus {
-  box-shadow: var(--slider-track-shadow);
-}
-
-body:not(.is-mobile) input[type=range]::-webkit-slider-thumb {
-  background: var(--slider-thumb-bg);
-  box-shadow: var(--slider-thumb-shadow);
-  cursor: grab;
-}
-
-body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:hover,
-body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:active,
-body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb,
-body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
-  background: var(--slider-thumb-bg);
-  box-shadow: var(--slider-thumb-shadow-hover);
-}
-
-/*────────── Dropdown ──────────*/
-select,
-.dropdown {
-  border-radius: var(--button-radius);
-  transition: var(--background-anim);
-}
-select:hover,
-.dropdown:hover {
-  cursor: pointer;
-}
-select:active,
-.dropdown:active {
-  box-shadow: var(--button-shadow-active);
-}
-select:focus,
-.dropdown:focus {
-  background-color: var(--interactive-normal-hover);
-  box-shadow: var(--button-shadow-focus);
-}
-
 /*────────── Text Input ──────────*/
 textarea,
 input.metadata-input-text,
@@ -3076,6 +3246,16 @@ input[type=email],
 input[type=password],
 input[type=number] {
   color: var(--text-input-color);
+}
+.workspace-drawer textarea,
+.workspace-drawer input.metadata-input-text,
+.workspace-drawer input[type=date],
+.workspace-drawer input[type=datetime-local],
+.workspace-drawer input[type=text],
+.workspace-drawer input[type=search],
+.workspace-drawer input[type=email],
+.workspace-drawer input[type=password],
+.workspace-drawer input[type=number] {
   border: 1px solid var(--background-modifier-border);
 }
 
@@ -3118,7 +3298,7 @@ input[type=number]:focus-visible {
   margin-bottom: 0px;
 }
 
-.search-input-container input {
+.search-input-container input:not(.is-mobile .search-input-container input) {
   padding-left: 28px;
 }
 
@@ -3129,200 +3309,27 @@ input[type=number]:focus-visible {
   color: var(--search-clear-button-color-hover);
 }
 
-/*────────── Navigation Items ──────────*/
-.tree-item-self {
-  border-radius: var(--nav-item-radius);
+/*────────── Toggle ──────────*/
+.checkbox-container {
+  background: var(--toggle-bg);
+  box-shadow: var(--toggle-shadow);
 }
-.tree-item-self.is-clickable {
+.checkbox-container:hover {
+  box-shadow: var(--toggle-shadow-hover);
   cursor: pointer;
 }
-.tree-item-self.is-clickable.is-active:not(.nav-file-title) {
-  box-shadow: var(--nav-item-shadow-active);
+.checkbox-container:active::after {
+  width: calc(var(--toggle-thumb-width) + 4px);
 }
-
-.backlink-pane > .tree-item-self,
-.embedded-backlinks .backlink-pane > .tree-item-self,
-.outgoing-link-pane > .tree-item-self {
-  font-size: 11px;
-  font-feature-settings: "calt" off;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.checkbox-container:focus, .checkbox-container:focus-visible, .checkbox-container:focus-within, .checkbox-container.mod-small:focus-within {
+  outline: none;
+  box-shadow: var(--toggle-shadow-focus);
 }
-
-.embedded-backlinks .backlink-pane > .tree-item-self {
-  margin-top: 5px;
+.checkbox-container.is-enabled {
+  background: var(--toggle-bg-enabled);
 }
-
-/*────────── Menu ──────────*/
-.menu {
-  animation: var(--anim-popup);
-}
-
-.menu-item {
-  border-radius: var(--menu-item-radius);
-}
-.menu-item.selected:not(.is-label):not(.is-disabled) {
-  background: var(--menu-item-bg-hover);
-}
-.menu-item.selected:not(.is-label):not(.is-disabled):active {
-  color: var(--menu-item-color-active);
-  background: var(--menu-item-bg-active);
-}
-.menu-item.selected:not(.is-label):not(.is-disabled):active .menu-item-icon {
-  color: var(--menu-item-icon-color-active);
-}
-
-.menu-item-icon {
-  color: var(--menu-item-icon-color);
-}
-.menu-item-icon.mod-checked > svg {
-  width: 12px;
-  height: 12px;
-}
-
-.is-mobile .menu {
-  border: 1px solid var(--background-modifier-border-hover);
-  border-radius: var(--size-4-4) var(--size-4-4) 0 0;
-}
-
-/*────────── Prompt ──────────*/
-input.prompt-input {
-  background: var(--prompt-input-background);
-  padding: 28px var(--size-4-6);
-}
-
-input.prompt-input,
-input.prompt-input:hover,
-input.prompt-input:active,
-input.prompt-input:focus,
-input.prompt-input:focus-visible {
-  border-bottom: var(--prompt-separator-border);
-}
-
-.suggestion-popover,
-.popover {
-  animation: var(--anim-popup);
-}
-
-.suggestion-item:not(.mod-search-suggestion .suggestion-item) {
-  font-size: calc(var(--font-ui-medium) - 1px);
-  color: var(--prompt-suggestion-color);
-  border-radius: calc(var(--radius-m) - 1px);
-  transition: padding var(--anim-duration-fast) var(--anim-motion-swing);
-}
-.suggestion-item:not(.mod-search-suggestion .suggestion-item).is-selected {
-  color: var(--prompt-suggestion-color-selected);
-  background: var(--prompt-suggestion-background-selected);
-  box-shadow: var(--prompt-suggestion-shadow-selected);
-}
-.suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex .suggestion-highlight {
-  font-weight: var(--font-semibold);
-  color: var(--prompt-suggestion-highlight-color);
-}
-.suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex.is-selected .suggestion-highlight {
-  color: var(--prompt-suggestion-highlight-color-selected);
-}
-
-.prompt-instructions {
-  background: var(--prompt-instructions-background);
-  padding: var(--size-4-2) var(--size-4-3);
-}
-
-.prompt-instructions,
-.prompt-instructions:hover,
-.prompt-instructions:active,
-.prompt-instructions:focus,
-.prompt-instructions:focus-visible {
-  border-top: var(--prompt-separator-border);
-}
-
-.prompt-instruction-command {
-  color: var(--inline-code-color);
-  background-color: var(--background-secondary);
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
-.prompt {
-  animation: var(--anim-popup);
-}
-.prompt-results {
-  background: var(--prompt-results-background);
-}
-.prompt .suggestion-item {
-  padding: var(--size-4-2) var(--size-4-3);
-}
-.prompt .suggestion-item.is-selected:not(body.is-phone .prompt .suggestion-item.is-selected) {
-  padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
-}
-.prompt .suggestion-aux .suggestion-flair > svg.lucide-pin {
-  transform: rotate(45deg);
-}
-
-.is-mobile .prompt {
-  border: 1px solid var(--background-modifier-border-focus);
-}
-
-.is-phone .suggestion-bg {
-  backdrop-filter: blur(var(--popup-bg-blur));
-}
-
-/*────────── kbd ──────────*/
-kbd,
-span.prompt-instruction-command,
-span.setting-hotkey {
-  color: var(--kbd-color);
-  background: var(--kbd-background);
-  padding: var(--size-2-1) var(--size-2-3) var(--size-2-1) var(--size-2-3);
-  box-shadow: var(--kbd-shadow);
-}
-
-/*────────── Loading ──────────*/
-.is-loading:before {
-  background-color: var(--background-modifier-success);
-  animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
-}
-
-.progress-bar {
-  background: var(--background-primary);
-}
-.progress-bar-message {
-  font-size: var(--font-ui-smaller);
-  color: var(--text-faint);
-  text-transform: uppercase;
-  font-feature-settings: "calt" off;
-  letter-spacing: 0.2em;
-}
-.progress-bar-indicator {
-  width: 35%;
-  height: var(--size-4-3);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--size-4-3);
-}
-.progress-bar-line {
-  height: var(--size-4-3);
-  background: var(--background-secondary);
-}
-.progress-bar-subline {
-  height: var(--size-4-3);
-  background: var(--background-modifier-warning);
-  animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
-}
-
-.is-mobile .progress-bar-indicator {
-  width: 55%;
-}
-
-/*────────── Notice ──────────*/
-.notice-container {
-  overflow: visible;
-}
-
-.notice,
-.is-phone .notice {
-  color: var(--notice-color);
-  border-radius: var(--radius-l);
-  box-shadow: var(--notice-shadow);
+.checkbox-container:after {
+  box-shadow: var(--toggle-thumb-shadow);
 }
 
 /*────────── Tooltip ──────────*/
@@ -3332,10 +3339,269 @@ span.setting-hotkey {
   box-shadow: var(--tooltip-shadow);
 }
 
-/*────────── Pull Down Action ──────────*/
-.pull-down-action {
-  border-radius: var(--radius-l);
-  box-shadow: var(--pull-down-action-shadow);
+/*────────── Callout ──────────*/
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  contain: unset !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget):hover {
+  overflow: visible;
+}
+
+.callout {
+  background-color: rgba(var(--callout-color), var(--callout-color-opacity));
+  padding: 0;
+  box-shadow: var(--callout-container-shadow);
+}
+.callout.is-collapsible.is-collapsed .callout-title {
+  border-radius: var(--callout-radius);
+}
+.callout-title {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: var(--callout-title-shadow);
+  gap: var(--size-4-2);
+}
+.callout-title .callout-icon,
+.callout-title .callout-fold {
+  filter: var(--callout-icon-fold-filter);
+}
+.callout-title .callout-icon svg,
+.callout-title .callout-fold svg {
+  height: var(--font-text-size);
+  width: var(--font-text-size);
+}
+.callout .callout-title {
+  margin-right: auto;
+}
+.callout .callout-fold {
+  margin-left: auto;
+}
+.callout-content {
+  box-shadow: var(--callout-content-shadow);
+  border-bottom-right-radius: var(--callout-radius);
+  border-bottom-left-radius: var(--callout-radius);
+}
+
+body {
+  --callout-icon-general: shapes;
+  --callout-icon-note: sticker;
+  --callout-icon-abstract: loader;
+  --callout-icon-summary: align-justify;
+  --callout-icon-tldr: book-open-text;
+  --callout-icon-info: badge-info;
+  --callout-icon-todo: list-todo;
+  --callout-icon-tip: clover;
+  --callout-icon-hint: search-slash;
+  --callout-icon-important: square-asterisk;
+  --callout-icon-success: check-check;
+  --callout-icon-check: check-check;
+  --callout-icon-done: check-check;
+  --callout-icon-question: circle-help;
+  --callout-icon-help: life-buoy;
+  --callout-icon-faq: circle-help;
+  --callout-icon-warning: triangle-alert;
+  --callout-icon-caution: construction;
+  --callout-icon-attention: megaphone;
+  --callout-icon-fail: circle-slash;
+  --callout-icon-missing: search;
+  --callout-icon-danger: shield-alert;
+  --callout-icon-error: ban;
+  --callout-icon-bug: bug;
+  --callout-icon-example: scroll-text;
+  --callout-icon-quote: message-square-note;
+  --callout-icon-cite: book-marked;
+  --callout-rgb-general: 182, 196, 182;
+  --callout-rgb-note: 200, 175, 155;
+  --callout-rgb-summary: 234, 181, 52;
+  --callout-rgb-abstract: 34, 152, 225;
+  --callout-rgb-tldr: 240, 180, 225;
+  --callout-rgb-info: 71, 162, 187;
+  --callout-rgb-todo: 58, 173, 252;
+  --callout-rgb-tip: 70, 206, 185;
+  --callout-rgb-hint: 70, 206, 185;
+  --callout-rgb-important: 246, 113, 118;
+  --callout-rgb-success: 87, 200, 83;
+  --callout-rgb-check: 87, 200, 83;
+  --callout-rgb-done: 87, 200, 83;
+  --callout-rgb-question: 130, 190, 235;
+  --callout-rgb-help: 250, 128, 96;
+  --callout-rgb-faq: 130, 190, 235;
+  --callout-rgb-warning: 255, 161, 32;
+  --callout-rgb-caution: 255, 161, 32;
+  --callout-rgb-attention: 255, 161, 32;
+  --callout-rgb-fail: 226, 72, 86;
+  --callout-rgb-missing: 226, 72, 86;
+  --callout-rgb-danger: 226, 72, 86;
+  --callout-rgb-error: 226, 72, 86;
+  --callout-rgb-bug: 153, 93, 133;
+  --callout-rgb-example: 216, 141, 130;
+  --callout-rgb-quote: 173, 214, 171;
+  --callout-rgb-cite: 237, 217, 162;
+}
+
+.callout {
+  --callout-icon: var(--callout-icon-general);
+  --callout-color: var(--callout-rgb-general);
+}
+.callout[data-callout=note] {
+  --callout-icon: var(--callout-icon-note);
+  --callout-color: var(--callout-rgb-note);
+}
+.callout[data-callout=abstract] {
+  --callout-icon: var(--callout-icon-abstract);
+  --callout-color: var(--callout-rgb-abstract);
+}
+.callout[data-callout=summary] {
+  --callout-icon: var(--callout-icon-summary);
+  --callout-color: var(--callout-rgb-summary);
+}
+.callout[data-callout=tldr], .callout[data-callout="tl;dr"] {
+  --callout-icon: var(--callout-icon-tldr);
+  --callout-color: var(--callout-rgb-tldr);
+}
+.callout[data-callout=info] {
+  --callout-icon: var(--callout-icon-info);
+  --callout-color: var(--callout-rgb-info);
+}
+.callout[data-callout=todo] {
+  --callout-icon: var(--callout-icon-todo);
+  --callout-color: var(--callout-rgb-todo);
+}
+.callout[data-callout=tip] {
+  --callout-icon: var(--callout-icon-tip);
+  --callout-color: var(--callout-rgb-tip);
+}
+.callout[data-callout=hint] {
+  --callout-icon: var(--callout-icon-hint);
+  --callout-color: var(--callout-rgb-hint);
+}
+.callout[data-callout=important] {
+  --callout-icon: var(--callout-icon-important);
+  --callout-color: var(--callout-rgb-important);
+}
+.callout[data-callout=success] {
+  --callout-icon: var(--callout-icon-success);
+  --callout-color: var(--callout-rgb-success);
+}
+.callout[data-callout=check] {
+  --callout-icon: var(--callout-icon-check);
+  --callout-color: var(--callout-rgb-check);
+}
+.callout[data-callout=done] {
+  --callout-icon: var(--callout-icon-done);
+  --callout-color: var(--callout-rgb-done);
+}
+.callout[data-callout=question] {
+  --callout-color: var(--callout-rgb-question);
+}
+.callout[data-callout=help] {
+  --callout-icon: var(--callout-icon-help);
+  --callout-color: var(--callout-rgb-help);
+}
+.callout[data-callout=faq] {
+  --callout-color: var(--callout-rgb-faq);
+}
+.callout[data-callout=warning] {
+  --callout-color: var(--callout-rgb-warning);
+}
+.callout[data-callout=caution] {
+  --callout-icon: var(--callout-icon-caution);
+  --callout-color: var(--callout-rgb-caution);
+}
+.callout[data-callout=attention] {
+  --callout-icon: var(--callout-icon-attention);
+  --callout-color: var(--callout-rgb-attention);
+}
+.callout[data-callout=failure], .callout[data-callout=fail] {
+  --callout-icon: var(--callout-icon-fail);
+  --callout-color: var(--callout-rgb-fail);
+}
+.callout[data-callout=missing] {
+  --callout-icon: var(--callout-icon-missing);
+  --callout-color: var(--callout-rgb-missing);
+}
+.callout[data-callout=danger] {
+  --callout-icon: var(--callout-icon-danger);
+  --callout-color: var(--callout-rgb-danger);
+}
+.callout[data-callout=error] {
+  --callout-icon: var(--callout-icon-error);
+  --callout-color: var(--callout-rgb-error);
+}
+.callout[data-callout=bug] {
+  --callout-icon: var(--callout-icon-bug);
+  --callout-color: var(--callout-rgb-bug);
+}
+.callout[data-callout=example] {
+  --callout-icon: var(--callout-icon-example);
+  --callout-color: var(--callout-rgb-example);
+}
+.callout[data-callout=quote] {
+  --callout-color: var(--callout-rgb-quote);
+}
+.callout[data-callout=cite] {
+  --callout-icon: var(--callout-icon-cite);
+  --callout-color: var(--callout-rgb-cite);
+}
+
+/*────────── Code ──────────*/
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting),
+.cm-s-obsidian code:not(pre code),
+.markdown-rendered code:not(pre code) {
+  color: var(--inline-code-color);
+  background: var(--inline-code-bg);
+  border-radius: var(--inline-code-radius);
+}
+
+/*────────── Embed ──────────*/
+body {
+  --embed-background: var(--embed-bg-color-mix);
+  --embed-padding: var(--size-2-3) var(--embed-left-right-padding);
+  --embed-left-right-padding: var(--size-4-4);
+  --embed-border-top: 1px solid var(--background-modifier-border);
+  --embed-border-right: 1px solid var(--background-modifier-border);
+  --embed-border-end: 1px solid var(--background-modifier-border);
+  --embed-border-bottom: 1px solid var(--background-modifier-border);
+  --embed-border-left: 1px solid var(--background-modifier-border);
+  --embed-border-start: 1px solid var(--background-modifier-border);
+  --embed-border-radius: var(--radius-l);
+  --embed-title-margin-bottom: var(--size-4-2);
+  --embed-title-border: 1px solid var(--background-modifier-border);
+}
+
+.markdown-embed:not(.canvas-node-content) {
+  border-radius: var(--embed-border-radius);
+}
+
+.embed-title {
+  text-wrap: wrap;
+  color: var(--embed-title-color);
+  padding: 0 var(--size-4-3) var(--size-2-2);
+  margin-inline-start: calc(-1 * var(--embed-left-right-padding));
+  margin-inline-end: calc(-1 * var(--embed-left-right-padding));
+  border-bottom: var(--embed-title-border);
+  margin-bottom: var(--embed-title-margin-bottom);
+}
+.embed-title:empty {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+img,
+audio,
+video {
+  border-radius: var(--radius-m);
+}
+
+.popover.hover-popover .markdown-embed {
+  --embed-background: var(--background-primary);
+}
+
+mjx-math {
+  overflow: scroll;
+  width: 100%;
 }
 
 /*────────── File ──────────*/
@@ -3648,81 +3914,13 @@ body span.cm-quote.cm-strong.cm-em.cm-strikethrough {
   color: var(--bold-italic-strikethrough-color);
 }
 
-/*────────── Tag ──────────*/
-.cm-hashtag,
-a.tag {
-  box-shadow: var(--tag-shadow);
-  transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
+/*────────── Gutter ──────────*/
+.cm-gutterElement {
+  font-size: calc(var(--font-ui-smaller) - 1px);
+  color: var(--gutter-color);
 }
-.cm-hashtag:hover,
-a.tag:hover {
-  color: var(--tag-color-hover);
-}
-
-a.tag:hover {
-  box-shadow: var(--tag-shadow-hover);
-}
-a.tag:active {
-  box-shadow: var(--tag-shadow-active);
-}
-
-/*────────── Embed ──────────*/
-body {
-  --embed-background: var(--embed-bg-color-mix);
-  --embed-padding: var(--size-2-3) var(--embed-left-right-padding);
-  --embed-left-right-padding: var(--size-4-4);
-  --embed-border-top: 1px solid var(--background-modifier-border);
-  --embed-border-right: 1px solid var(--background-modifier-border);
-  --embed-border-end: 1px solid var(--background-modifier-border);
-  --embed-border-bottom: 1px solid var(--background-modifier-border);
-  --embed-border-left: 1px solid var(--background-modifier-border);
-  --embed-border-start: 1px solid var(--background-modifier-border);
-  --embed-border-radius: var(--radius-l);
-  --embed-title-margin-bottom: var(--size-4-2);
-  --embed-title-border: 1px solid var(--background-modifier-border);
-}
-
-.markdown-embed:not(.canvas-node-content) {
-  border-radius: var(--embed-border-radius);
-}
-
-.embed-title {
-  text-wrap: wrap;
-  color: var(--embed-title-color);
-  padding: 0 var(--size-4-3) var(--size-2-2);
-  margin-inline-start: calc(-1 * var(--embed-left-right-padding));
-  margin-inline-end: calc(-1 * var(--embed-left-right-padding));
-  border-bottom: var(--embed-title-border);
-  margin-bottom: var(--embed-title-margin-bottom);
-}
-.embed-title:empty {
-  padding: 0;
-  border: none;
-  margin: 0;
-}
-
-img,
-audio,
-video {
-  border-radius: var(--radius-m);
-}
-
-.popover.hover-popover .markdown-embed {
-  --embed-background: var(--background-primary);
-}
-
-mjx-math {
-  overflow: scroll;
-  width: 100%;
-}
-
-/*────────── Code ──────────*/
-.cm-s-obsidian .cm-inline-code:not(.cm-formatting),
-.cm-s-obsidian code:not(pre code),
-.markdown-rendered code:not(pre code) {
-  color: var(--inline-code-color);
-  background: var(--inline-code-bg);
-  border-radius: var(--inline-code-radius);
+.cm-gutterElement.cm-active {
+  color: var(--gutter-color-active);
 }
 
 /*────────── Properties ──────────*/
@@ -3932,233 +4130,69 @@ input[type=number],
   color: var(--yaml-string-color);
 }
 
-/*────────── Gutter ──────────*/
-.cm-gutterElement {
-  font-size: calc(var(--font-ui-smaller) - 1px);
-  color: var(--gutter-color);
+/*────────── Tag ──────────*/
+.cm-hashtag,
+a.tag {
+  box-shadow: var(--tag-shadow);
+  transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
-.cm-gutterElement.cm-active {
-  color: var(--gutter-color-active);
-}
-
-/*────────── Callout ──────────*/
-.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-  contain: unset !important;
+.cm-hashtag:hover,
+a.tag:hover {
+  color: var(--tag-color-hover);
 }
 
-.markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget):hover {
-  overflow: visible;
+a.tag:hover {
+  box-shadow: var(--tag-shadow-hover);
+}
+a.tag:active {
+  box-shadow: var(--tag-shadow-active);
 }
 
-.callout {
-  background-color: rgba(var(--callout-color), var(--callout-color-opacity));
-  padding: 0;
-  box-shadow: var(--callout-container-shadow);
-}
-.callout.is-collapsible.is-collapsed .callout-title {
-  border-radius: var(--callout-radius);
-}
-.callout-title {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  box-shadow: var(--callout-title-shadow);
-  gap: var(--size-4-2);
-}
-.callout-title .callout-icon,
-.callout-title .callout-fold {
-  filter: var(--callout-icon-fold-filter);
-}
-.callout-title .callout-icon svg,
-.callout-title .callout-fold svg {
-  height: var(--font-text-size);
-  width: var(--font-text-size);
-}
-.callout .callout-title {
-  margin-right: auto;
-}
-.callout .callout-fold {
-  margin-left: auto;
-}
-.callout-content {
-  box-shadow: var(--callout-content-shadow);
-  border-bottom-right-radius: var(--callout-radius);
-  border-bottom-left-radius: var(--callout-radius);
+/*────────── Core Plugin: Canvas ──────────*/
+.canvas-menu {
+  border-radius: var(--radius-m);
+  box-shadow: var(--canvas-menu-shadow);
 }
 
-body {
-  --callout-icon-general: shapes;
-  --callout-icon-note: sticker;
-  --callout-icon-abstract: loader;
-  --callout-icon-summary: align-justify;
-  --callout-icon-tldr: book-open-text;
-  --callout-icon-info: badge-info;
-  --callout-icon-todo: list-todo;
-  --callout-icon-tip: clover;
-  --callout-icon-hint: search-slash;
-  --callout-icon-important: square-asterisk;
-  --callout-icon-success: check-check;
-  --callout-icon-check: check-check;
-  --callout-icon-done: check-check;
-  --callout-icon-question: circle-help;
-  --callout-icon-help: life-buoy;
-  --callout-icon-faq: circle-help;
-  --callout-icon-warning: triangle-alert;
-  --callout-icon-caution: construction;
-  --callout-icon-attention: megaphone;
-  --callout-icon-fail: circle-slash;
-  --callout-icon-missing: search;
-  --callout-icon-danger: shield-alert;
-  --callout-icon-error: ban;
-  --callout-icon-bug: bug;
-  --callout-icon-example: scroll-text;
-  --callout-icon-quote: message-square-note;
-  --callout-icon-cite: book-marked;
-  --callout-rgb-general: 182, 196, 182;
-  --callout-rgb-note: 200, 175, 155;
-  --callout-rgb-summary: 234, 181, 52;
-  --callout-rgb-abstract: 34, 152, 225;
-  --callout-rgb-tldr: 240, 180, 225;
-  --callout-rgb-info: 71, 162, 187;
-  --callout-rgb-todo: 58, 173, 252;
-  --callout-rgb-tip: 70, 206, 185;
-  --callout-rgb-hint: 70, 206, 185;
-  --callout-rgb-important: 246, 113, 118;
-  --callout-rgb-success: 87, 200, 83;
-  --callout-rgb-check: 87, 200, 83;
-  --callout-rgb-done: 87, 200, 83;
-  --callout-rgb-question: 130, 190, 235;
-  --callout-rgb-help: 250, 128, 96;
-  --callout-rgb-faq: 130, 190, 235;
-  --callout-rgb-warning: 255, 161, 32;
-  --callout-rgb-caution: 255, 161, 32;
-  --callout-rgb-attention: 255, 161, 32;
-  --callout-rgb-fail: 226, 72, 86;
-  --callout-rgb-missing: 226, 72, 86;
-  --callout-rgb-danger: 226, 72, 86;
-  --callout-rgb-error: 226, 72, 86;
-  --callout-rgb-bug: 153, 93, 133;
-  --callout-rgb-example: 216, 141, 130;
-  --callout-rgb-quote: 173, 214, 171;
-  --callout-rgb-cite: 237, 217, 162;
+.canvas-card-menu.canvas-card-menu {
+  background: var(--canvas-menu-bg);
+  border: var(--canvas-menu-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--canvas-menu-shadow);
+}
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button {
+  --icon-stroke: 2px;
+  color: var(--canvas-icon-color);
+}
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button:hover {
+  color: var(--canvas-icon-color-hover);
+}
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button:hover svg {
+  transform: translateY(-3px);
+}
+.canvas-card-menu.canvas-card-menu .canvas-card-menu-button svg {
+  fill: none;
 }
 
-.callout {
-  --callout-icon: var(--callout-icon-general);
-  --callout-color: var(--callout-rgb-general);
+.canvas-control-group {
+  background: var(--canvas-menu-bg);
+  border: var(--canvas-menu-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--canvas-menu-shadow);
 }
-.callout[data-callout=note] {
-  --callout-icon: var(--callout-icon-note);
-  --callout-color: var(--callout-rgb-note);
+.canvas-control-group .canvas-control-item {
+  color: var(--canvas-icon-color);
+  background: var(--canvas-menu-bg);
 }
-.callout[data-callout=abstract] {
-  --callout-icon: var(--callout-icon-abstract);
-  --callout-color: var(--callout-rgb-abstract);
+.canvas-control-group .canvas-control-item:hover {
+  color: var(--canvas-icon-color-hover);
+  background: var(--canvas-menu-bg-hover);
 }
-.callout[data-callout=summary] {
-  --callout-icon: var(--callout-icon-summary);
-  --callout-color: var(--callout-rgb-summary);
+.canvas-control-group .canvas-control-item.is-disabled svg {
+  color: var(--canvas-icon-color-disabled);
 }
-.callout[data-callout=tldr], .callout[data-callout="tl;dr"] {
-  --callout-icon: var(--callout-icon-tldr);
-  --callout-color: var(--callout-rgb-tldr);
-}
-.callout[data-callout=info] {
-  --callout-icon: var(--callout-icon-info);
-  --callout-color: var(--callout-rgb-info);
-}
-.callout[data-callout=todo] {
-  --callout-icon: var(--callout-icon-todo);
-  --callout-color: var(--callout-rgb-todo);
-}
-.callout[data-callout=tip] {
-  --callout-icon: var(--callout-icon-tip);
-  --callout-color: var(--callout-rgb-tip);
-}
-.callout[data-callout=hint] {
-  --callout-icon: var(--callout-icon-hint);
-  --callout-color: var(--callout-rgb-hint);
-}
-.callout[data-callout=important] {
-  --callout-icon: var(--callout-icon-important);
-  --callout-color: var(--callout-rgb-important);
-}
-.callout[data-callout=success] {
-  --callout-icon: var(--callout-icon-success);
-  --callout-color: var(--callout-rgb-success);
-}
-.callout[data-callout=check] {
-  --callout-icon: var(--callout-icon-check);
-  --callout-color: var(--callout-rgb-check);
-}
-.callout[data-callout=done] {
-  --callout-icon: var(--callout-icon-done);
-  --callout-color: var(--callout-rgb-done);
-}
-.callout[data-callout=question] {
-  --callout-color: var(--callout-rgb-question);
-}
-.callout[data-callout=help] {
-  --callout-icon: var(--callout-icon-help);
-  --callout-color: var(--callout-rgb-help);
-}
-.callout[data-callout=faq] {
-  --callout-color: var(--callout-rgb-faq);
-}
-.callout[data-callout=warning] {
-  --callout-color: var(--callout-rgb-warning);
-}
-.callout[data-callout=caution] {
-  --callout-icon: var(--callout-icon-caution);
-  --callout-color: var(--callout-rgb-caution);
-}
-.callout[data-callout=attention] {
-  --callout-icon: var(--callout-icon-attention);
-  --callout-color: var(--callout-rgb-attention);
-}
-.callout[data-callout=failure], .callout[data-callout=fail] {
-  --callout-icon: var(--callout-icon-fail);
-  --callout-color: var(--callout-rgb-fail);
-}
-.callout[data-callout=missing] {
-  --callout-icon: var(--callout-icon-missing);
-  --callout-color: var(--callout-rgb-missing);
-}
-.callout[data-callout=danger] {
-  --callout-icon: var(--callout-icon-danger);
-  --callout-color: var(--callout-rgb-danger);
-}
-.callout[data-callout=error] {
-  --callout-icon: var(--callout-icon-error);
-  --callout-color: var(--callout-rgb-error);
-}
-.callout[data-callout=bug] {
-  --callout-icon: var(--callout-icon-bug);
-  --callout-color: var(--callout-rgb-bug);
-}
-.callout[data-callout=example] {
-  --callout-icon: var(--callout-icon-example);
-  --callout-color: var(--callout-rgb-example);
-}
-.callout[data-callout=quote] {
-  --callout-color: var(--callout-rgb-quote);
-}
-.callout[data-callout=cite] {
-  --callout-icon: var(--callout-icon-cite);
-  --callout-color: var(--callout-rgb-cite);
-}
-
-/*────────── Core Plugin: Graph ──────────*/
-.graph-view.color-fill-unresolved {
-  opacity: var(--graph-node-unresolved-opacity);
-}
-.graph-view.color-arrow {
-  color: var(--graph-arrow);
-}
-.graph-view.color-fill-highlight {
-  color: var(--graph-node-highlight-fill);
-}
-.graph-view.color-line-highlight {
-  color: var(--graph-node-highlight-line);
+.canvas-control-group .canvas-control-item.is-disabled:hover {
+  background: inherit;
 }
 
 /*────────── Core Plugin: File Explorer ──────────*/
@@ -4193,6 +4227,20 @@ body {
 }
 .nav-file-title.is-active .nav-file-tag {
   margin-top: 0px;
+}
+
+/*────────── Core Plugin: Graph ──────────*/
+.graph-view.color-fill-unresolved {
+  opacity: var(--graph-node-unresolved-opacity);
+}
+.graph-view.color-arrow {
+  color: var(--graph-arrow);
+}
+.graph-view.color-fill-highlight {
+  color: var(--graph-node-highlight-fill);
+}
+.graph-view.color-line-highlight {
+  color: var(--graph-node-highlight-line);
 }
 
 /*────────── Core Plugin: Search ──────────*/
@@ -4281,53 +4329,6 @@ body {
   color: var(--search-result-dest-file-color);
   background: var(--search-result-dest-file-bg-hover);
   box-shadow: var(--search-result-dest-file-shadow-hover);
-}
-
-/*────────── Core Plugin: Canvas ──────────*/
-.canvas-menu {
-  border-radius: var(--radius-m);
-  box-shadow: var(--canvas-menu-shadow);
-}
-
-.canvas-card-menu.canvas-card-menu {
-  background: var(--canvas-menu-bg);
-  border: var(--canvas-menu-border);
-  border-radius: var(--radius-m);
-  box-shadow: var(--canvas-menu-shadow);
-}
-.canvas-card-menu.canvas-card-menu .canvas-card-menu-button {
-  --icon-stroke: 1px;
-  color: var(--canvas-icon-color);
-}
-.canvas-card-menu.canvas-card-menu .canvas-card-menu-button:hover {
-  color: var(--canvas-icon-color-hover);
-}
-.canvas-card-menu.canvas-card-menu .canvas-card-menu-button:hover svg {
-  transform: translateY(-3px);
-}
-.canvas-card-menu.canvas-card-menu .canvas-card-menu-button svg {
-  fill: none;
-}
-
-.canvas-control-group {
-  background: var(--canvas-menu-bg);
-  border: var(--canvas-menu-border);
-  border-radius: var(--radius-m);
-  box-shadow: var(--canvas-menu-shadow);
-}
-.canvas-control-group .canvas-control-item {
-  color: var(--canvas-icon-color);
-  background: var(--canvas-menu-bg);
-}
-.canvas-control-group .canvas-control-item:hover {
-  color: var(--canvas-icon-color-hover);
-  background: var(--canvas-menu-bg-hover);
-}
-.canvas-control-group .canvas-control-item.is-disabled svg {
-  color: var(--canvas-icon-color-disabled);
-}
-.canvas-control-group .canvas-control-item.is-disabled:hover {
-  background: inherit;
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/

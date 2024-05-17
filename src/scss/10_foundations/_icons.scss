@@ -9,6 +9,7 @@ body:not(.is-phone, .is-mobile) {
     }
 } 
 
+// Mobile
 body:is(.is-phone, .is-mobile) {
     .clickable-icon svg {
         --icon-size: var(--icon-m);

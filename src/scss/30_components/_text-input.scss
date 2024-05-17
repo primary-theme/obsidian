@@ -10,7 +10,11 @@ input[type='email'],
 input[type='password'],
 input[type='number'] {
     color: var(--text-input-color);
-    border: 1px solid var(--background-modifier-border); // Mobile fix
+
+    // Mobile
+    .workspace-drawer & {
+        border: 1px solid var(--background-modifier-border);
+    }
 }
 
 textarea:active,
@@ -52,7 +56,8 @@ input[type='number']:focus-visible {
     margin-bottom: 0px;
 }
 
-.search-input-container input {
+// Mobile
+.search-input-container input:not(.is-mobile .search-input-container input) {
     padding-left: 28px;
 }
 
