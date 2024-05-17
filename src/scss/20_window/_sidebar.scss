@@ -129,13 +129,29 @@ body:not(.is-mobile) .workspace-split {
     &.mod-left {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        border-right: 1px solid var(--background-modifier-border);
+        
+        &:not(.is-pinned) {
+            border-right: 1px solid var(--background-modifier-border);
+            box-shadow: var(--mobile-sidebar-left-shadow);
+        }
+
+        &.is-pinned {
+            --divider-width: 0;
+        }
     }
 
     &.mod-right {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        border-left: 1px solid var(--background-modifier-border);
+        
+        &:not(.is-pinned) {
+            border-left: 1px solid var(--background-modifier-border);
+            box-shadow: var(--mobile-sidebar-right-shadow);
+        }
+
+        &.is-pinned {
+            --divider-width: 0;
+        }
     }
 
     &-tab-option-item {
