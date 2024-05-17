@@ -772,6 +772,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 .theme-light.is-mobile {
   --mobile-sidebar-background: var(--background-secondary);
   --nav-item-color: var(--text-muted);
+  --mobile-sidebar-left-shadow: 5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+                                  10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+  --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+                                  -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
 }
 .theme-light #calendar-container {
   --color-dot: var(--color-l-blue-20);
@@ -2269,12 +2273,24 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 .workspace-drawer.mod-left {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+.workspace-drawer.mod-left:not(.is-pinned) {
   border-right: 1px solid var(--background-modifier-border);
+  box-shadow: var(--mobile-sidebar-left-shadow);
+}
+.workspace-drawer.mod-left.is-pinned {
+  --divider-width: 0;
 }
 .workspace-drawer.mod-right {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.workspace-drawer.mod-right:not(.is-pinned) {
   border-left: 1px solid var(--background-modifier-border);
+  box-shadow: var(--mobile-sidebar-right-shadow);
+}
+.workspace-drawer.mod-right.is-pinned {
+  --divider-width: 0;
 }
 .workspace-drawer-tab-option-item {
   padding: var(--size-4-4) var(--size-4-2);

@@ -812,6 +812,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     &.is-mobile {
         --mobile-sidebar-background: var(--background-secondary);
         --nav-item-color: var(--text-muted);
+        --mobile-sidebar-left-shadow:   5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+                                        10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+        --mobile-sidebar-right-shadow:  -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+                                        -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
     }
 
     // Community Plugins
