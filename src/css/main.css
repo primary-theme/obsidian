@@ -2679,6 +2679,9 @@ span.setting-hotkey {
 
 .is-mobile .menu {
   border: 1px solid var(--background-modifier-border-hover);
+  border-radius: var(--size-4-4);
+}
+.is-phone .menu {
   border-radius: var(--size-4-4) var(--size-4-4) 0 0;
 }
 
@@ -3192,12 +3195,18 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
   margin-bottom: var(--button-axis-offset);
   cursor: pointer;
 }
+.is-mobile .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-inner-close-button {
+  --icon-size: var(--icon-s);
+}
 .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-status-icon {
   --icon-size: var(--icon-xs);
   padding: var(--size-2-1) 0;
   margin-bottom: var(--button-axis-offset);
   border-radius: var(--tab-status-radius);
   cursor: pointer;
+}
+.is-mobile .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-status-icon {
+  --icon-size: var(--icon-s);
 }
 .workspace .mod-root .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button,
 .workspace .mod-root .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-status-icon {

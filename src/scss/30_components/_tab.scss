@@ -356,6 +356,11 @@ body:not(.is-phone) .mod-root .workspace {
         border-radius: var(--close-button-radius);
         margin-bottom: var(--button-axis-offset);
         cursor: pointer;
+
+        // Mobile
+        .is-mobile & {
+            --icon-size: var(--icon-s);
+        }
     }
     
     // Note Status Icon Shaping
@@ -365,6 +370,11 @@ body:not(.is-phone) .mod-root .workspace {
         margin-bottom: var(--button-axis-offset);
         border-radius: var(--tab-status-radius);
         cursor: pointer;
+
+        // Mobile
+        .is-mobile & {
+            --icon-size: var(--icon-s);
+        }
     }
 
     // Button Coloring
