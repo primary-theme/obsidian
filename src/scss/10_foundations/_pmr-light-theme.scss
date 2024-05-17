@@ -357,6 +357,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --button-axis-offset: 2px;
 
+    --empty-state-action-btn-bg: var(--background-primary);
+
     // Color Picker
     --swatch-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
 
@@ -805,6 +807,12 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --tab-stacked-shadow:   -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.08),
                             -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.04),
                             -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.06);
+
+    // Mobile + Phone
+    &.is-mobile {
+        --mobile-sidebar-background: var(--background-secondary);
+        --nav-item-color: var(--text-muted);
+    }
 
     // Community Plugins
 

@@ -28,6 +28,7 @@ Variables for
 body {
   --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
+  --popup-bg-blur: 3px;
   --bold-italic-weight: 500;
   --bold-modifier: 100;
   --cursor: pointer;
@@ -41,7 +42,7 @@ body {
   --button-inset-shadow-size: 2px;
   --titlebar-text-weight: var(--font-normal);
   --header-height: 46px;
-  --note-pane-margin: 6px;
+  --note-pane-margin: 10px;
   --file-tab-gap: 0px;
   --file-border-radius: var(--radius-l);
   --close-button-radius: var(--radius-l);
@@ -431,6 +432,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                   0px 2px 6px -1px rgba(0, 0, 0, 0.24),
                                   0px 0px 0px 3px var(--color-l-alpha-gray);
   --button-axis-offset: 2px;
+  --empty-state-action-btn-bg: var(--background-primary);
   --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
@@ -767,6 +769,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
                                   0px 2px 4px 0px rgba(0, 0, 0, 0.04);
 }
+.theme-light.is-mobile {
+  --mobile-sidebar-background: var(--background-secondary);
+  --nav-item-color: var(--text-muted);
+}
 .theme-light #calendar-container {
   --color-dot: var(--color-l-blue-20);
   --color-arrow: var(--color-l-gray-70);
@@ -1057,6 +1063,7 @@ and CONTRIBUTION page ↴
                                   0px 2px 6px -1px rgba(0, 0, 0, 0.24),
                                   0px 0px 0px 3px var(--color-d-alpha-gray);
   --button-axis-offset: 2px;
+  --empty-state-action-btn-bg: var(--background-primary);
   --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
   --status-bar-item-color: var(--color-d-gray-50);
   --status-bar-item-color-hover: var(--color-d-gray-30);
@@ -2249,6 +2256,30 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
   color: var(--vault-name-color-hover);
 }
 
+.workspace-drawer-backdrop {
+  backdrop-filter: blur(var(--popup-bg-blur));
+}
+
+.workspace-drawer {
+  background-color: var(--mobile-sidebar-background);
+}
+.workspace-drawer-inner {
+  background-color: var(--mobile-sidebar-background);
+}
+.workspace-drawer.mod-left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 1px solid var(--background-modifier-border);
+}
+.workspace-drawer.mod-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 1px solid var(--background-modifier-border);
+}
+.workspace-drawer-tab-option-item {
+  padding: var(--size-4-4) var(--size-4-2);
+}
+
 /*────────── Status Bar ──────────*/
 .status-bar-item {
   color: var(--status-bar-item-color);
@@ -2498,7 +2529,7 @@ input[type=checkbox]:hover {
 }
 /*────────── Modals ──────────*/
 .modal-container {
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(var(--popup-bg-blur));
 }
 
 .modal {
@@ -3298,23 +3329,24 @@ span.setting-hotkey {
   visibility: hidden;
 }
 
-.empty-state {
+body:not(.is-mobile) .empty-state {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-.empty-state-title {
+body:not(.is-mobile) .empty-state-title {
   display: none;
 }
-.empty-state-container {
+body:not(.is-mobile) .empty-state-container {
   max-width: 100%;
 }
-.empty-state-action-list {
+body:not(.is-mobile) .empty-state-action-list {
   margin-top: 0;
   display: flex;
   justify-content: center;
 }
-.empty-state-action {
+body:not(.is-mobile) .empty-state-action {
   color: var(--text-faint);
+  background: var(--empty-state-action-btn-bg);
   font-size: var(--font-ui-small);
   line-height: normal;
   padding: var(--size-4-2) var(--size-4-4);
@@ -3323,17 +3355,31 @@ span.setting-hotkey {
   margin: var(--size-2-3) var(--size-2-3);
   transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
-.empty-state-action:hover {
+body:not(.is-mobile) .empty-state-action:hover {
   color: var(--text-muted);
   border-color: var(--background-modifier-border-hover);
   transform: translateY(-4px);
 }
-.empty-state-action:active {
+body:not(.is-mobile) .empty-state-action:active {
   opacity: 0.5;
   transform: translateY(2px);
 }
-.empty-state-action.mod-close {
+
+body.is-mobile .empty-state-title {
   display: none;
+}
+body.is-mobile .empty-state-action {
+  color: var(--text-faint);
+  background: var(--empty-state-action-btn-bg);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--new-tab-btn-radius);
+}
+body.is-mobile .empty-state-action:hover {
+  transform: unset;
+}
+body.is-mobile .empty-state-action:active {
+  opacity: 0.5;
+  transform: unset;
 }
 
 /*────────── Link ──────────*/
