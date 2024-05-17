@@ -809,6 +809,25 @@ and CONTRIBUTION page ↴
                             -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.27),
                             -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.2);
 
+    // Mobile
+    &.is-mobile {
+        --mobile-sidebar-background: var(--background-secondary);
+        --nav-item-color: var(--text-muted);
+
+        --mobile-sidebar-left-shadow:   5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
+                                        10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
+        --mobile-sidebar-right-shadow:  -5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
+                                        -10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
+
+        --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+
+        // Same as Notice
+        --pull-down-action-shadow:  inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+                                    0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
+                                    0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
+                                    0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
+    }
+
     // Community Plugins
 
     // Calendar by Liam Cain

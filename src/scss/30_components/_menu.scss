@@ -34,6 +34,7 @@
 .menu {
     .is-mobile & {
         border: 1px solid var(--background-modifier-border-hover);
+        border-bottom: none;
         border-radius: var(--size-4-4);
     }
 
