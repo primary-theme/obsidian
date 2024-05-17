@@ -12,7 +12,8 @@ input[type='number'] {
     color: var(--text-input-color);
 
     // Mobile
-    .workspace-drawer & {
+    .workspace-drawer &,
+    .is-mobile .modal & {
         border: 1px solid var(--background-modifier-border);
     }
 }

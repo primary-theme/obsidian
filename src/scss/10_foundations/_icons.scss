@@ -14,6 +14,12 @@ body:is(.is-phone, .is-mobile) {
     .clickable-icon svg {
         --icon-size: var(--icon-m);
     }
+
+    .workspace-drawer-active-tab-icon,
+    .workspace-drawer-tab-option-item-icon {
+        --icon-size: var(--icon-m);
+        color: var(--icon-color);
+    }
 }
 
 // .clickable-icon
