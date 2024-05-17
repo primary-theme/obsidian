@@ -1,0 +1,9 @@
+/*────────── Toolbar ──────────*/
+
+.mobile-toolbar {
+    width: auto;
+    background: var(--mobile-toolbar-bg);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-l);
+    margin: calc(-1 * var(--size-2-3)) var(--size-4-2) var(--size-4-2) var(--size-4-2);
+}
