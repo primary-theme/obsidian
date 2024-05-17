@@ -112,6 +112,7 @@ body {
     --metadata-divider-width: 0px;
     --metadata-border-radius: var(--radius-m);
     --metadata-property-radius: calc(var(--radius-m) - 1px);
+    --metadata-container-padding: var(--size-4-3) var(--size-4-3);
 
     // Pill
     --pill-tag-weight: var(--font-semibold);
@@ -148,6 +149,7 @@ body {
 
     // Mobile
     &.is-mobile {
+        --metadata-container-padding: var(--size-4-2) var(--size-4-2);
         // --input-height: 36px;
         // --metadata-input-height: calc(var(--font-text-size) * 2);
     }
