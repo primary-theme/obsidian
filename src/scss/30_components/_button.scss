@@ -1,4 +1,5 @@
 /*────────── Button ──────────*/
+.is-mobile button:not(button.clickable-icon),
 button:not(button.clickable-icon) {
     padding: var(--button-padding);
     border-radius: var(--button-radius);
@@ -37,6 +38,8 @@ button:not(button.clickable-icon) {
     }
 
     &.mod-warning {
+        color: var(--text-on-accent);
+        background-color: var(--background-modifier-error);
         box-shadow: var(--button-accent-shadow);
 
         &:hover {
@@ -73,6 +76,10 @@ button:not(button.clickable-icon) {
     &.mod-loading {
         opacity: 0.3;
         cursor: wait;
+    }
+
+    &.mod-cancel {
+        color: var(--text-normal);
     }
 }
 

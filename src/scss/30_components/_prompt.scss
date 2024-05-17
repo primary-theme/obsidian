@@ -73,7 +73,7 @@ input.prompt-input:focus-visible {
     .suggestion-item {
         padding: var(--size-4-2) var(--size-4-3);
     
-        &.is-selected {
+        &.is-selected:not(body.is-phone .prompt .suggestion-item.is-selected) {
             padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
         }
     }
@@ -81,5 +81,18 @@ input.prompt-input:focus-visible {
     // Adds rotated flair to Pinned Commands
     .suggestion-aux .suggestion-flair > svg.lucide-pin {
         transform: rotate(45deg);
+    }
+}
+
+// Mobile
+.is-mobile {
+    .prompt {
+        border: 1px solid var(--background-modifier-border-focus);
+    }
+}
+
+.is-phone  {
+    .suggestion-bg {
+        backdrop-filter: blur(var(--popup-bg-blur));
     }
 }

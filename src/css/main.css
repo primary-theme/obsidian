@@ -16,6 +16,13 @@ button {
   font-feature-settings: var(--inter-font-features);
 }
 
+pre:not(pre > *),
+code:not(code > *),
+.HyperMD-codeblock:not(.HyperMD-codeblock > *),
+.cm-inline-code:not(.cm-inline-code > *) {
+  font-feature-settings: var(--cascadia-font-features);
+}
+
 /*────────── Shape ──────────*/
 /* 
 Variables for
@@ -772,10 +779,16 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 .theme-light.is-mobile {
   --mobile-sidebar-background: var(--background-secondary);
   --nav-item-color: var(--text-muted);
+  --mobile-navbar-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.17),
+                          0px 5px 32px 0px rgba(0, 0, 0, 0.12);
   --mobile-sidebar-left-shadow: 5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
                                   10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
   --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
                                   -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+  --pull-down-action-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+                              0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
+                              0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
+                              0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
 }
 .theme-light #calendar-container {
   --color-dot: var(--color-l-blue-20);
@@ -2293,6 +2306,7 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
   --divider-width: 0;
 }
 .workspace-drawer-tab-option-item {
+  text-transform: capitalize;
   padding: var(--size-4-4) var(--size-4-2);
 }
 
@@ -2340,7 +2354,13 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
   background: var(--titlebar-background);
 }
 
+/*────────── Navbar ──────────*/
+.mobile-navbar {
+  border-top: 1px solid var(--background-modifier-border);
+}
+
 /*────────── Button ──────────*/
+.is-mobile button:not(button.clickable-icon),
 button:not(button.clickable-icon) {
   padding: var(--button-padding);
   border-radius: var(--button-radius);
@@ -2348,60 +2368,80 @@ button:not(button.clickable-icon) {
   transition: var(--background-anim);
   cursor: pointer;
 }
+.is-mobile button:not(button.clickable-icon):active,
 button:not(button.clickable-icon):active {
   background: var(--interactive-normal);
   padding: var(--button-padding-active);
   box-shadow: var(--button-shadow-active);
   transition: var(--button-anim);
 }
+.is-mobile button:not(button.clickable-icon):focus-visible,
 button:not(button.clickable-icon):focus-visible {
   background: var(--interactive-normal-hover);
   box-shadow: var(--button-shadow-focus);
 }
+.is-mobile button:not(button.clickable-icon).mod-cta,
 button:not(button.clickable-icon).mod-cta {
   box-shadow: var(--button-accent-shadow);
 }
+.is-mobile button:not(button.clickable-icon).mod-cta:hover,
 button:not(button.clickable-icon).mod-cta:hover {
   box-shadow: var(--button-accent-shadow-hover);
 }
+.is-mobile button:not(button.clickable-icon).mod-cta:active,
 button:not(button.clickable-icon).mod-cta:active {
   background: var(--interactive-accent);
   box-shadow: var(--button-accent-shadow-active);
 }
+.is-mobile button:not(button.clickable-icon).mod-cta:focus-visible,
 button:not(button.clickable-icon).mod-cta:focus-visible {
   background: var(--interactive-accent-hover);
   box-shadow: var(--button-shadow-focus);
 }
+.is-mobile button:not(button.clickable-icon).mod-warning,
 button:not(button.clickable-icon).mod-warning {
+  color: var(--text-on-accent);
+  background-color: var(--background-modifier-error);
   box-shadow: var(--button-accent-shadow);
 }
+.is-mobile button:not(button.clickable-icon).mod-warning:hover,
 button:not(button.clickable-icon).mod-warning:hover {
   box-shadow: var(--button-accent-shadow-hover);
 }
+.is-mobile button:not(button.clickable-icon).mod-warning:active,
 button:not(button.clickable-icon).mod-warning:active {
   background: var(--background-modifier-error);
   box-shadow: var(--button-accent-shadow-active);
 }
+.is-mobile button:not(button.clickable-icon).mod-warning:focus-visible,
 button:not(button.clickable-icon).mod-warning:focus-visible {
   background: var(--background-modifier-error-hover);
   box-shadow: var(--button-accent-shadow-focus);
 }
+.is-mobile button:not(button.clickable-icon).mod-destructive,
 button:not(button.clickable-icon).mod-destructive {
   color: var(--text-on-accent);
   background: var(--background-modifier-warning);
   box-shadow: var(--button-accent-shadow);
 }
+.is-mobile button:not(button.clickable-icon).mod-destructive:hover,
 button:not(button.clickable-icon).mod-destructive:hover {
   background: var(--background-modifier-warning-hover);
   box-shadow: var(--button-accent-shadow-hover);
 }
+.is-mobile button:not(button.clickable-icon).mod-destructive:active,
 button:not(button.clickable-icon).mod-destructive:active {
   background: var(--background-modifier-warning);
   box-shadow: var(--button-accent-shadow-active);
 }
+.is-mobile button:not(button.clickable-icon).mod-loading,
 button:not(button.clickable-icon).mod-loading {
   opacity: 0.3;
   cursor: wait;
+}
+.is-mobile button:not(button.clickable-icon).mod-cancel,
+button:not(button.clickable-icon).mod-cancel {
+  color: var(--text-normal);
 }
 
 .document-search-close-button,
@@ -2556,14 +2596,14 @@ input[type=checkbox]:hover {
 .modal .vertical-tab-header-group {
   padding-top: 0;
 }
-.modal .vertical-tab-header-group-title {
+.modal .vertical-tab-header-group-title:not(body.is-phone .vertical-tab-header-group-title) {
   font-size: calc(var(--font-ui-smaller) - 1px);
   color: var(--settings-nav-group-title-color);
   text-transform: uppercase;
   font-feature-settings: "calt" off;
   letter-spacing: 0.1em;
 }
-.modal .vertical-tab-nav-item {
+.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item) {
   text-transform: capitalize;
   font-size: var(--font-ui-small);
   color: var(--settings-nav-item-text-color);
@@ -2573,31 +2613,35 @@ input[type=checkbox]:hover {
   transition: box-shadow var(--button-anim);
   transition: padding-left var(--anim-duration-fast) var(--anim-motion-swing);
 }
-.modal .vertical-tab-nav-item:hover:not(.is-active) {
+.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item):hover:not(.is-active) {
   color: var(--settings-nav-item-text-color-hover);
   background: var(--settings-nav-item-bg-hover);
   padding: var(--settings-nav-item-padding-hover);
 }
-.modal .vertical-tab-nav-item:active:not(.is-active) {
+.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item):active:not(.is-active) {
   color: var(--settings-nav-item-text-color-active);
 }
-.modal .vertical-tab-nav-item.is-active {
+.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active {
   padding: var(--settings-nav-item-padding-active);
 }
-.modal .vertical-tab-nav-item.is-active:nth-child(3n+1) {
+.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active:nth-child(3n+1) {
   color: var(--settings-nav-item-active-color);
   background: var(--alternating-color-1);
   box-shadow: var(--button-accent-shadow);
 }
-.modal .vertical-tab-nav-item.is-active:nth-child(3n+2) {
+.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active:nth-child(3n+2) {
   color: var(--settings-nav-item-active-color);
   background: var(--alternating-color-2);
   box-shadow: var(--button-accent-shadow);
 }
-.modal .vertical-tab-nav-item.is-active:nth-child(3n+3) {
+.modal .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item).is-active:nth-child(3n+3) {
   color: var(--settings-nav-item-active-color);
   background: var(--alternating-color-3);
   box-shadow: var(--button-accent-shadow);
+}
+
+.is-phone .mod-confirmation .modal:not(.mod-lg) {
+  border: 1px solid var(--background-modifier-border-hover);
 }
 
 .community-item {
@@ -3032,6 +3076,7 @@ input[type=email],
 input[type=password],
 input[type=number] {
   color: var(--text-input-color);
+  border: 1px solid var(--background-modifier-border);
 }
 
 textarea:active,
@@ -3135,6 +3180,11 @@ input[type=number]:focus-visible {
   height: 12px;
 }
 
+.is-mobile .menu {
+  border: 1px solid var(--background-modifier-border-hover);
+  border-radius: var(--size-4-4) var(--size-4-4) 0 0;
+}
+
 /*────────── Prompt ──────────*/
 input.prompt-input {
   background: var(--prompt-input-background);
@@ -3202,11 +3252,19 @@ input.prompt-input:focus-visible {
 .prompt .suggestion-item {
   padding: var(--size-4-2) var(--size-4-3);
 }
-.prompt .suggestion-item.is-selected {
+.prompt .suggestion-item.is-selected:not(body.is-phone .prompt .suggestion-item.is-selected) {
   padding: var(--size-4-2) var(--size-4-3) var(--size-4-2) var(--size-4-6);
 }
 .prompt .suggestion-aux .suggestion-flair > svg.lucide-pin {
   transform: rotate(45deg);
+}
+
+.is-mobile .prompt {
+  border: 1px solid var(--background-modifier-border-focus);
+}
+
+.is-phone .suggestion-bg {
+  backdrop-filter: blur(var(--popup-bg-blur));
 }
 
 /*────────── kbd ──────────*/
@@ -3229,7 +3287,11 @@ span.setting-hotkey {
   background: var(--background-primary);
 }
 .progress-bar-message {
-  display: none;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  font-feature-settings: "calt" off;
+  letter-spacing: 0.2em;
 }
 .progress-bar-indicator {
   width: 35%;
@@ -3243,8 +3305,12 @@ span.setting-hotkey {
 }
 .progress-bar-subline {
   height: var(--size-4-3);
-  background: var(--background-modifier-success);
+  background: var(--background-modifier-warning);
   animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+}
+
+.is-mobile .progress-bar-indicator {
+  width: 55%;
 }
 
 /*────────── Notice ──────────*/
@@ -3252,7 +3318,8 @@ span.setting-hotkey {
   overflow: visible;
 }
 
-.notice {
+.notice,
+.is-phone .notice {
   color: var(--notice-color);
   border-radius: var(--radius-l);
   box-shadow: var(--notice-shadow);
@@ -3263,6 +3330,12 @@ span.setting-hotkey {
   color: var(--notice-color);
   border-radius: var(--radius-m);
   box-shadow: var(--tooltip-shadow);
+}
+
+/*────────── Pull Down Action ──────────*/
+.pull-down-action {
+  border-radius: var(--radius-l);
+  box-shadow: var(--pull-down-action-shadow);
 }
 
 /*────────── File ──────────*/

@@ -16,7 +16,7 @@
     }
     
     // Tab Header
-    .vertical-tab-header-group-title {
+    .vertical-tab-header-group-title:not(body.is-phone .vertical-tab-header-group-title) {
         font-size: calc(var(--font-ui-smaller) - 1px);
         color: var(--settings-nav-group-title-color);
         text-transform: uppercase;
@@ -25,7 +25,7 @@
     }
     
     // Nav Items
-    .vertical-tab-nav-item {
+    .vertical-tab-nav-item:not(body.is-phone .vertical-tab-nav-item) {
         text-transform: capitalize;
         font-size: var(--font-ui-small);
         color: var(--settings-nav-item-text-color);
@@ -66,6 +66,13 @@
             background: var(--alternating-color-3);
             box-shadow: var(--button-accent-shadow);
         }
+    }
+}
+
+// Mobile
+.is-phone {
+    .mod-confirmation .modal:not(.mod-lg) {
+        border: 1px solid var(--background-modifier-border-hover);
     }
 }
 

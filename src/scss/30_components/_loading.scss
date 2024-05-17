@@ -9,7 +9,11 @@
     background: var(--background-primary);
 
     &-message {
-        display: none;
+        font-size: var(--font-ui-smaller);
+        color: var(--text-faint);
+        text-transform: uppercase;
+        font-feature-settings: "calt" off;
+        letter-spacing: 0.2em;
     }
     
     &-indicator {
@@ -26,7 +30,16 @@
 
     &-subline {
         height: var(--size-4-3);
-        background: var(--background-modifier-success);
+        background: var(--background-modifier-warning);
         animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+    }
+}
+
+// Mobile
+.is-mobile {
+    .progress-bar {
+        &-indicator {
+            width: 55%;
+        }
     }
 }
