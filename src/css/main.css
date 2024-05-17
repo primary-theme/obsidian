@@ -1219,6 +1219,19 @@ and CONTRIBUTION page ↴
 .theme-dark.theme-dark {
   --canvas-color: var(--color-gray-rgb);
 }
+.theme-dark.is-mobile {
+  --mobile-sidebar-background: var(--background-secondary);
+  --nav-item-color: var(--text-muted);
+  --mobile-sidebar-left-shadow: 5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
+                                  10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
+  --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
+                                  -10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
+  --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+  --pull-down-action-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+                              0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
+                              0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
+                              0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
+}
 .theme-dark #calendar-container {
   --color-dot: var(--color-d-blue-20);
   --color-arrow: var(--color-d-gray-60);
@@ -1896,7 +1909,7 @@ body {
   --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
   --popup-bg-blur: 3px;
-  --font-medium: 400;
+  --font-medium: 500;
   --font-bold: 500;
   --bold-italic-weight: 500;
   --bold-modifier: 100;
@@ -2685,6 +2698,7 @@ span.setting-hotkey {
 
 .is-mobile .menu {
   border: 1px solid var(--background-modifier-border-hover);
+  border-bottom: none;
   border-radius: var(--size-4-4);
 }
 .is-phone .menu {
