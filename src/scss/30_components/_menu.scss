@@ -29,3 +29,9 @@
         height: 12px;
     }
 }
+
+// Mobile
+.is-mobile .menu {
+    border: 1px solid var(--background-modifier-border-hover);
+    border-radius: var(--size-4-4) var(--size-4-4) 0 0;
+}

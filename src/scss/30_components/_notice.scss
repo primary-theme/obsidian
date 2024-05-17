@@ -4,7 +4,8 @@
     overflow: visible;
 }
 
-.notice {
+.notice,
+.is-phone .notice {
     color: var(--notice-color);
     border-radius: var(--radius-l);
     box-shadow: var(--notice-shadow);

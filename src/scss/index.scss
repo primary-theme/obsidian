@@ -11,6 +11,7 @@
 @use '20_window/sidebar';
 @use '20_window/status-bar';
 @use '20_window/window-frame';
+@use '20_window/navbar';
 
 @use '30_components/button';
 @use '30_components/checkbox';
@@ -28,6 +29,7 @@
 @use '30_components/loading';
 @use '30_components/notice';
 @use '30_components/tooltip';
+@use '30_components/pull-down-action';
 
 @use '40_editor/file';
 @use '40_editor/link';

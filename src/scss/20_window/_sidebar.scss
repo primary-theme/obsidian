@@ -114,7 +114,7 @@ body:not(.is-mobile) .workspace-split {
     }
 }
 
-// Mobile + Phone
+// Mobile
 .workspace-drawer-backdrop {
     backdrop-filter: blur(var(--popup-bg-blur));
 }
@@ -155,6 +155,7 @@ body:not(.is-mobile) .workspace-split {
     }
 
     &-tab-option-item {
+        text-transform: capitalize;
         padding: var(--size-4-4) var(--size-4-2);
     }
 }
