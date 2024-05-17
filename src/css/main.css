@@ -1510,7 +1510,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                   0px 2px 6px -1px rgba(0, 0, 0, 0.24),
                                   0px 0px 0px 3px var(--color-l-alpha-gray);
   --button-axis-offset: 2px;
-  --empty-state-action-btn-bg: var(--background-primary-alt);
+  --empty-state-action-btn-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
   --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
@@ -3726,22 +3726,22 @@ mjx-math {
   visibility: hidden;
 }
 
-body:not(.is-mobile) .empty-state {
+body:not(.is-phone) .mod-root .workspace-leaf-content .empty-state {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-body:not(.is-mobile) .empty-state-title {
+body:not(.is-phone) .mod-root .workspace-leaf-content .empty-state-title {
   display: none;
 }
-body:not(.is-mobile) .empty-state-container {
+body:not(.is-phone) .mod-root .workspace-leaf-content .empty-state-container {
   max-width: 100%;
 }
-body:not(.is-mobile) .empty-state-action-list {
+body:not(.is-phone) .mod-root .workspace-leaf-content .empty-state-action-list {
   margin-top: 0;
   display: flex;
   justify-content: center;
 }
-body:not(.is-mobile) .empty-state-action {
+body:not(.is-phone) .mod-root .workspace-leaf-content .empty-state-action {
   color: var(--text-faint);
   background: var(--empty-state-action-btn-bg);
   font-size: var(--font-ui-small);
@@ -3752,14 +3752,43 @@ body:not(.is-mobile) .empty-state-action {
   margin: var(--size-2-3) var(--size-2-3);
   transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
-body:not(.is-mobile) .empty-state-action:hover {
+body:not(.is-phone) .mod-root .workspace-leaf-content .empty-state-action:hover {
   color: var(--text-muted);
   border-color: var(--background-modifier-border-hover);
   transform: translateY(-4px);
 }
-body:not(.is-mobile) .empty-state-action:active {
+body:not(.is-phone) .mod-root .workspace-leaf-content .empty-state-action:active {
   opacity: 0.5;
   transform: translateY(2px);
+}
+
+.mod-sidedock .workspace-leaf-content .empty-state-title {
+  font-size: var(--font-ui-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+.mod-sidedock .workspace-leaf-content .empty-state-container div:nth-child(2) {
+  font-size: var(--font-ui-small);
+  color: var(--text-faint);
+}
+.mod-sidedock .workspace-leaf-content .empty-state-action {
+  color: var(--text-faint);
+  background: var(--empty-state-action-btn-bg);
+  font-size: var(--font-ui-small);
+  line-height: normal;
+  padding: var(--size-4-2) var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--new-tab-btn-radius);
+  margin: var(--size-2-3) var(--size-2-3);
+  transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
+}
+.mod-sidedock .workspace-leaf-content .empty-state-action:hover {
+  color: var(--text-muted);
+  border-color: var(--background-modifier-border-hover);
+}
+.mod-sidedock .workspace-leaf-content .empty-state-action:active {
+  opacity: 0.5;
 }
 
 body.is-mobile .empty-state-title {
