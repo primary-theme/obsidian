@@ -113,3 +113,32 @@ body:not(.is-mobile) .workspace-split {
         }
     }
 }
+
+// Mobile + Phone
+.workspace-drawer-backdrop {
+    backdrop-filter: blur(var(--popup-bg-blur));
+}
+
+.workspace-drawer {
+    background-color: var(--mobile-sidebar-background);
+
+    &-inner {
+        background-color: var(--mobile-sidebar-background);
+    }
+
+    &.mod-left {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 1px solid var(--background-modifier-border);
+    }
+
+    &.mod-right {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 1px solid var(--background-modifier-border);
+    }
+
+    &-tab-option-item {
+        padding: var(--size-4-4) var(--size-4-2);
+    }
+}

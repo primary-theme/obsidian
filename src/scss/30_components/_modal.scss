@@ -1,7 +1,7 @@
 /*────────── Modals ──────────*/
 
 .modal-container {
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(var(--popup-bg-blur));
 }
 
 .modal {

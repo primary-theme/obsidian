@@ -11,6 +11,7 @@ Variables for
 body {
     --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
     --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
+    --popup-bg-blur: 3px;
     --bold-italic-weight: 500;
     --bold-modifier: 100;
     --cursor: pointer;
@@ -24,7 +25,7 @@ body {
     --button-inset-shadow-size: 2px;
     --titlebar-text-weight: var(--font-normal);
     --header-height: 46px;
-    --note-pane-margin: 6px;
+    --note-pane-margin: 10px;
     --file-tab-gap: 0px;
     --file-border-radius: var(--radius-l);
     --close-button-radius: var(--radius-l);
