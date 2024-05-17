@@ -817,6 +817,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                         10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
         --mobile-sidebar-right-shadow:  -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
                                         -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+
+        --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+
         --pull-down-action-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
                                     0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
                                     0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),

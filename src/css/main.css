@@ -70,7 +70,6 @@ SVG URL-encoder:
 https://yoksel.github.io/url-encoder/
 */
 svg.dice,
-svg.heading-glyph,
 svg.help,
 svg.lucide-alert-triangle,
 svg.lucide-archive,
@@ -171,10 +170,6 @@ svg.vault {
 /* General Icon Replacements */
 svg.dice {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' data-name='Layer 1' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='M19,24H14a5.006,5.006,0,0,1-5-5V14a5.006,5.006,0,0,1,5-5h5a5.006,5.006,0,0,1,5,5v5A5.006,5.006,0,0,1,19,24ZM14,11a3,3,0,0,0-3,3v5a3,3,0,0,0,3,3h5a3,3,0,0,0,3-3V14a3,3,0,0,0-3-3Zm0,2a1,1,0,1,0,1,1A1,1,0,0,0,14,13Zm5,5a1,1,0,1,0,1,1A1,1,0,0,0,19,18ZM9,7A1,1,0,1,0,8,6,1,1,0,0,0,9,7ZM7,9a1,1,0,1,0-1,1A1,1,0,0,0,7,9Zm-.22,6.826a1,1,0,0,0-.154-1.405,3.15,3.15,0,0,1-.251-.228L2.864,10.634a3.005,3.005,0,0,1,.029-4.243L6.453,2.88a2.98,2.98,0,0,1,2.106-.864h.022a2.981,2.981,0,0,1,2.115.893L14.2,6.465c.057.058.111.117.163.179A1,1,0,1,0,15.9,5.356c-.083-.1-.17-.194-.266-.292L12.12,1.505a5,5,0,0,0-7.071-.049L1.489,4.967a5.007,5.007,0,0,0-.049,7.071L4.951,15.6a4.865,4.865,0,0,0,.423.381,1,1,0,0,0,1.406-.153Z'/%3E%3C/svg%3E%0A");
-}
-
-svg.heading-glyph {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' data-name='Layer 1' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Cpath d='m24,23c0,.553-.447,1-1,1h-4c-.553,0-1-.447-1-1s.447-1,1-1h1v-9.5H4v9.5h1c.553,0,1,.447,1,1s-.447,1-1,1H1c-.553,0-1-.447-1-1s.447-1,1-1h1V2h-1c-.553,0-1-.447-1-1S.447,0,1,0h4c.553,0,1,.447,1,1s-.447,1-1,1h-1v8.5h16V2h-1c-.553,0-1-.447-1-1s.447-1,1-1h4c.553,0,1,.447,1,1s-.447,1-1,1h-1v20h1c.553,0,1,.447,1,1Z'/%3E%3C/svg%3E%0A");
 }
 
 svg.help {
@@ -1849,6 +1844,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                   10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
   --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
                                   -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+  --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
   --pull-down-action-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
                               0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
                               0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
@@ -2112,6 +2108,15 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 /*────────── Navbar ──────────*/
 .mobile-navbar {
   border-top: 1px solid var(--background-modifier-border);
+}
+
+/*────────── Toolbar ──────────*/
+.mobile-toolbar {
+  width: auto;
+  background: var(--mobile-toolbar-bg);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-l);
+  margin: calc(-1 * var(--size-2-3)) var(--size-4-2) var(--size-4-2) var(--size-4-2);
 }
 
 /*────────── Ribbon ──────────*/
