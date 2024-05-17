@@ -357,7 +357,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
 
     --button-axis-offset: 2px;
 
-    --empty-state-action-btn-bg: var(--background-primary-alt);
+    --empty-state-action-btn-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
 
     // Color Picker
     --swatch-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
