@@ -64,3 +64,8 @@
         margin-bottom: var(--note-pane-margin);
     }
 }
+
+// Mobile
+.workspace-drawer-ribbon {
+    border-right: 1px solid var(--background-modifier-border);
+}

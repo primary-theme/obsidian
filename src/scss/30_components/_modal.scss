@@ -80,6 +80,17 @@
 }
 
 // Mobile
+.is-mobile {
+    &.theme-dark .vertical-tab-content {
+        background: var(--background-primary);
+    }
+
+    .modal {
+        border: 1px solid var(--background-modifier-border-hover);
+        border-radius: var(--radius-xl);
+    }
+}
+
 .is-phone {
     .modal {
         border-radius: var(--size-4-4) var(--size-4-4) 0 0;
