@@ -159,3 +159,21 @@ body:not(.is-mobile) .workspace-split {
         padding: var(--size-4-4) var(--size-4-2);
     }
 }
+
+.workspace-drawer-header {
+    padding: var(--size-4-4) var(--size-4-5) 0 var(--size-4-5);
+}
+
+.workspace-drawer-header-switcher {
+    gap: var(--size-4-2);
+}
+
+// Mobile [Tablet]
+.is-tablet {
+    .workspace-drawer:not(.is-pinned) {
+        border: 1px solid var(--background-modifier-border);
+        border-radius: calc(var(--file-border-radius) * 2);
+        margin: calc(var(--note-pane-margin) * 3) calc(var(--note-pane-margin) * 3);
+        box-shadow: var(--mobile-sidebar-tablet-shadow);
+    }
+}

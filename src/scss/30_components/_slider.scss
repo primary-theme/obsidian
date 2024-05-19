@@ -1,21 +1,21 @@
 /*────────── Slider ──────────*/
 
-body:not(.is-mobile) input[type='range'],
-body:not(.is-mobile) input[type='range']:hover,
-body:not(.is-mobile) input[type='range']:focus {
+input[type='range'],
+input[type='range']:hover,
+input[type='range']:focus {
     box-shadow: var(--slider-track-shadow);
 }
 
-body:not(.is-mobile) input[type='range']::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
     background: var(--slider-thumb-bg);
     box-shadow: var(--slider-thumb-shadow);
     cursor: grab;
 }
 
-body:not(.is-mobile) input[type='range']::-webkit-slider-thumb:hover,
-body:not(.is-mobile) input[type='range']::-webkit-slider-thumb:active,
-body:not(.is-mobile) input[type='range']:focus::-webkit-slider-thumb,
-body:not(.is-mobile) input[type='range']:focus-visible::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb:hover,
+input[type='range']::-webkit-slider-thumb:active,
+input[type='range']:focus::-webkit-slider-thumb,
+input[type='range']:focus-visible::-webkit-slider-thumb {
     background: var(--slider-thumb-bg);
     box-shadow: var(--slider-thumb-shadow-hover);
 }

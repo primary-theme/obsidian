@@ -150,6 +150,7 @@ body {
     // Mobile
     &.is-mobile {
         --metadata-container-padding: var(--size-4-2) var(--size-4-2);
+        --clickable-icon-radius: var(--radius-m);
         // --input-height: 36px;
         // --metadata-input-height: calc(var(--font-text-size) * 2);
     }

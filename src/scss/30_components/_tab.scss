@@ -189,9 +189,13 @@ body:not(.is-phone) .mod-root .workspace {
             }
         }
 
-        &-new-tab,
+        &-new-tab {
+            padding-bottom: 0;
+        }
+
         &-tab-list {
             padding-bottom: 0;
+            margin-inline-end: var(--size-4-3);
         }
     }
 }
@@ -340,9 +344,13 @@ body:not(.is-phone) .mod-root .workspace {
             }
         }
 
-        &-new-tab,
+        &-new-tab {
+            padding-bottom: var(--size-2-2);
+        }
+
         &-tab-list {
             padding-bottom: var(--size-2-2);
+            margin-inline-end: var(--size-4-3);
         }
     }
 }
