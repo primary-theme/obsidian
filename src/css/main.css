@@ -2135,7 +2135,7 @@ button {
   right: var(--file-border-radius);
 }
 
-body:not(.is-phone) .workspace .workspace-tabs .workspace-tab-container {
+body:not(.is-phone) .workspace .workspace-tabs .workspace-tab-container:not(.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container) {
   margin-left: calc(var(--note-pane-margin) / 3);
   margin-right: calc(var(--note-pane-margin) / 3);
 }
