@@ -81,6 +81,10 @@
 
 // Mobile
 .is-phone {
+    .modal {
+        border-radius: var(--size-4-4) var(--size-4-4) 0 0;
+    }
+
     .modal-title {
         text-transform: capitalize;
     }

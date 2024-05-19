@@ -1867,6 +1867,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                   10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
   --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
                                   -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+  --mobile-sidebar-tablet-shadow: 0px 2px 6px -0.3px rgba(0, 0, 0, 0.1),
+                                  0px 5px 14px -0.6px rgba(0, 0, 0, 0.09),
+                                  0px 10px 20px -4.9px rgba(0, 0, 0, 0.02);
   --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
   --pull-down-action-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
                               0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
@@ -2030,6 +2033,7 @@ body {
 }
 body.is-mobile {
   --metadata-container-padding: var(--size-4-2) var(--size-4-2);
+  --clickable-icon-radius: var(--radius-m);
 }
 
 @keyframes slideUp {
@@ -2338,6 +2342,21 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 .workspace-drawer-tab-option-item {
   text-transform: capitalize;
   padding: var(--size-4-4) var(--size-4-2);
+}
+
+.workspace-drawer-header {
+  padding: var(--size-4-4) var(--size-4-5) 0 var(--size-4-5);
+}
+
+.workspace-drawer-header-switcher {
+  gap: var(--size-4-2);
+}
+
+.is-tablet .workspace-drawer:not(.is-pinned) {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: calc(var(--file-border-radius) * 2);
+  margin: calc(var(--note-pane-margin) * 3) calc(var(--note-pane-margin) * 3);
+  box-shadow: var(--mobile-sidebar-tablet-shadow);
 }
 
 /*────────── Status Bar ──────────*/
@@ -2773,6 +2792,9 @@ span.setting-hotkey {
   box-shadow: var(--button-accent-shadow);
 }
 
+.is-phone .modal {
+  border-radius: var(--size-4-4) var(--size-4-4) 0 0;
+}
 .is-phone .modal-title {
   text-transform: capitalize;
 }
@@ -2932,22 +2954,22 @@ input.prompt-input:focus-visible {
 }
 
 /*────────── Slider ──────────*/
-body:not(.is-mobile) input[type=range],
-body:not(.is-mobile) input[type=range]:hover,
-body:not(.is-mobile) input[type=range]:focus {
+input[type=range],
+input[type=range]:hover,
+input[type=range]:focus {
   box-shadow: var(--slider-track-shadow);
 }
 
-body:not(.is-mobile) input[type=range]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
   background: var(--slider-thumb-bg);
   box-shadow: var(--slider-thumb-shadow);
   cursor: grab;
 }
 
-body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:hover,
-body:not(.is-mobile) input[type=range]::-webkit-slider-thumb:active,
-body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb,
-body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active,
+input[type=range]:focus::-webkit-slider-thumb,
+input[type=range]:focus-visible::-webkit-slider-thumb {
   background: var(--slider-thumb-bg);
   box-shadow: var(--slider-thumb-shadow-hover);
 }
@@ -3104,8 +3126,12 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
   color: var(--icon-color-hover);
 }
-.workspace-tabs:not(.mod-stacked) .workspace-tab-header-new-tab, .workspace-tabs:not(.mod-stacked) .workspace-tab-header-tab-list {
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header-new-tab {
   padding-bottom: 0;
+}
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header-tab-list {
+  padding-bottom: 0;
+  margin-inline-end: var(--size-4-3);
 }
 
 .mod-root .workspace-tabs.mod-stacked {
@@ -3218,8 +3244,12 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
 .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title, .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner-title {
   color: var(--icon-color-hover);
 }
-.workspace-tabs.mod-stacked .workspace-tab-header-new-tab, .workspace-tabs.mod-stacked .workspace-tab-header-tab-list {
+.workspace-tabs.mod-stacked .workspace-tab-header-new-tab {
   padding-bottom: var(--size-2-2);
+}
+.workspace-tabs.mod-stacked .workspace-tab-header-tab-list {
+  padding-bottom: var(--size-2-2);
+  margin-inline-end: var(--size-4-3);
 }
 
 .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-inner-close-button {
