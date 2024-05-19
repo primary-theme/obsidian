@@ -27,6 +27,7 @@ body {
     --clickable-icon-radius: calc(var(--radius-s) + 1px);
 }
 
+.is-mobile .clickable-icon,
 .clickable-icon {
     &:hover {
         color: var(--icon-color-hover);

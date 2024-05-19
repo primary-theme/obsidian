@@ -151,6 +151,8 @@ body {
     &.is-mobile {
         --metadata-container-padding: var(--size-4-2) var(--size-4-2);
         --clickable-icon-radius: var(--radius-m);
+        --button-radius: calc(var(--radius-l) - 2px);
+        --input-font-weight: var(--font-normal);
         // --input-height: 36px;
         // --metadata-input-height: calc(var(--font-text-size) * 2);
     }

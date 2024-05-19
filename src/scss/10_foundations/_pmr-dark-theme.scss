@@ -735,8 +735,8 @@ and CONTRIBUTION page ↴
     --prompt-suggestion-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
-    --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                                         0px 2px 6px 0px rgba(0, 0, 0, 0.08);
+    --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.14),
+                                         0px 2px 6px 0px rgba(0, 0, 0, 0.12);
 
     --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
 
@@ -811,6 +811,17 @@ and CONTRIBUTION page ↴
 
     // Mobile
     &.is-mobile {
+        // Copied .theme-dark variables
+        --color-base-00: var(--color-d-gray-140);
+        --color-base-10: var(--color-d-gray-100);
+        --color-base-20: var(--color-d-gray-90);
+        --tag-background: rgba(0, 0, 0, 0.3);
+        --search-result-background: var(--background-primary-alt);
+        --background-modifier-form-field: var(--color-d-gray-130);
+        --background-modifier-cover: rgba(10, 10, 10, 0.4);
+        --background-modifier-hover: rgba(0, 0, 0, 0.3);
+        --settings-home-background: var(--background-primary);
+
         --mobile-sidebar-background: var(--background-secondary);
         --nav-item-color: var(--text-muted);
 
@@ -818,14 +829,28 @@ and CONTRIBUTION page ↴
                                         10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
         --mobile-sidebar-right-shadow:  -5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
                                         -10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
+        --mobile-sidebar-tablet-shadow: 0px 2px 6px -0.3px rgba(0, 0, 0, 0.2),
+                                        0px 5px 14px -0.6px rgba(0, 0, 0, 0.19),
+                                        0px 10px 20px -4.9px rgba(0, 0, 0, 0.12);
 
         --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+
+        --navbar-shadow:    0px 4px 20px 0px rgba(0, 0, 0, 0.4),
+                            0px 1px 4px 0px rgba(0, 0, 0, 0.3);
 
         // Same as Notice
         --pull-down-action-shadow:  inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
                                     0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
                                     0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
                                     0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
+    }
+
+    &.is-tablet {
+        --titlebar-background: var(--background-secondary);
+        --titlebar-background-focused: var(--background-secondary);
+        --interactive-normal: var(--color-d-gray-90);
+        --interactive-hover: var(--color-d-gray-80);
+        --modal-background: var(--background-primary);
     }
 
     // Community Plugins

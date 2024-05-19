@@ -126,6 +126,14 @@ body:not(.is-mobile) .workspace-split {
         background-color: var(--mobile-sidebar-background);
     }
 
+    &-header {
+        padding: var(--size-4-4) var(--size-4-5) 0 var(--size-4-5);
+    }
+
+    &-header-switcher {
+        gap: var(--size-4-2);
+    }
+
     &.mod-left {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
@@ -158,14 +166,11 @@ body:not(.is-mobile) .workspace-split {
         text-transform: capitalize;
         padding: var(--size-4-4) var(--size-4-2);
     }
-}
 
-.workspace-drawer-header {
-    padding: var(--size-4-4) var(--size-4-5) 0 var(--size-4-5);
-}
-
-.workspace-drawer-header-switcher {
-    gap: var(--size-4-2);
+    .nav-header {
+        padding-left: var(--size-4-3);
+        padding-right: var(--size-4-3);
+    }
 }
 
 // Mobile [Tablet]
