@@ -17,3 +17,7 @@ select,
 button {
     font-feature-settings: var(--inter-font-features);
 }
+
+.cm-html-embed.cm-embed-block pre code {
+    font-family: var(--font-monospace-theme);
+}
