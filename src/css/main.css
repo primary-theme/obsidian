@@ -1129,6 +1129,8 @@ and CONTRIBUTION page ↴
   --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
                                       inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25),
                                       0px 2px 3px 0px rgba(0, 0, 0, 0.29);
+  --inline-query-bg: color-mix(in srgb, var(--background-secondary) 25%, transparent);
+  --inline-query-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.26);
   --breadcrumb-color: var(--color-d-gray-50);
   --breadcrumb-color-hover: var(--color-d-gray-50);
   --breadcrumb-bg-hover: var(--color-d-gray-80);
@@ -1793,6 +1795,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
                                       inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
                                       0px 2px 3px 0px rgba(0, 0, 0, 0.09);
+  --inline-query-bg: color-mix(in srgb, var(--background-secondary) 20%, transparent);
+  --inline-query-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
   --breadcrumb-color: var(--color-l-gray-90);
   --breadcrumb-color-hover: var(--color-l-gray-90);
   --breadcrumb-bg-hover: var(--color-l-gray-40);
@@ -2103,6 +2107,10 @@ textarea,
 select,
 button {
   font-feature-settings: var(--inter-font-features);
+}
+
+.cm-html-embed.cm-embed-block pre code {
+  font-family: var(--font-monospace-theme);
 }
 
 /*────────── Divider ──────────*/
@@ -3686,6 +3694,7 @@ body {
 }
 
 /*────────── Code ──────────*/
+.cm-html-embed.cm-embed-block pre code,
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting),
 .cm-s-obsidian code:not(pre code),
 .markdown-rendered code:not(pre code) {
@@ -4498,6 +4507,17 @@ a.tag:active {
   color: var(--search-result-dest-file-color);
   background: var(--search-result-dest-file-bg-hover);
   box-shadow: var(--search-result-dest-file-shadow-hover);
+}
+
+.internal-query {
+  border-top: none;
+}
+.internal-query .internal-query-header {
+  padding: var(--size-4-2) var(--size-2-2);
+}
+.internal-query .search-result-container {
+  background-color: var(--inline-query-bg);
+  box-shadow: var(--inline-query-shadow);
 }
 
 /*────────── [Community Plugin] Calendar by Liam Cain ──────────*/

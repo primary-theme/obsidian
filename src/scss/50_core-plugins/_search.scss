@@ -109,3 +109,17 @@
         box-shadow: var(--search-result-dest-file-shadow-hover);
     }
 }
+
+// Inline Query
+.internal-query {
+    border-top: none;
+
+    .internal-query-header {
+        padding: var(--size-4-2) var(--size-2-2);
+    }
+
+    .search-result-container {
+        background-color: var(--inline-query-bg);
+        box-shadow: var(--inline-query-shadow);
+    }
+}
