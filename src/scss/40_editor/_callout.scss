@@ -9,7 +9,8 @@
 }
 
 .callout {
-    background-color: rgba(var(--callout-color), var(--callout-color-opacity));
+    // background-color: rgba(var(--callout-color), var(--callout-color-opacity));
+    background-color: color-mix(in srgb, rgba(var(--callout-color)) var(--callout-color-opacity), var(--background-primary));
     padding: 0;
     box-shadow: var(--callout-container-shadow);
 

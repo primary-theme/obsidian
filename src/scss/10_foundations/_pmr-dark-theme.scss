@@ -710,7 +710,7 @@ and CONTRIBUTION page ↴
                                         0px 2px 3px 0px rgba(0, 0, 0, 0.29);
 
     // Inline Query
-    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 25%, transparent);
+    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 25%, var(--background-primary));
     --inline-query-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.26);
 
     // File Header Title | File Header Breadcrumbs
