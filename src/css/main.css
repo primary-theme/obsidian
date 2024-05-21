@@ -1168,7 +1168,7 @@ and CONTRIBUTION page ↴
                   inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
   --gutter-color: color-mix(in srgb, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
   --gutter-color-active: var(--color-d-gray-50);
-  --callout-color-opacity: 0.325;
+  --callout-color-opacity: 32.5%;
   --callout-border-opacity: 0.1;
   --callout-icon-fold-filter: brightness(1);
   --callout-title-color: var(--text-normal);
