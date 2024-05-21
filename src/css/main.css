@@ -4387,6 +4387,10 @@ a.tag:active {
   background: var(--vault-name-background);
 }
 
+.nav-files-container {
+  padding-top: var(--size-2-1);
+}
+
 .nav-file-title {
   transition: padding, transform var(--anim-duration-fast) var(--anim-motion-smooth);
 }
