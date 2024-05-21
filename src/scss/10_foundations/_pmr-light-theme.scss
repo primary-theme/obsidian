@@ -711,7 +711,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                                         0px 2px 3px 0px rgba(0, 0, 0, 0.09);
 
     // Inline Query
-    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 20%, transparent);
+    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 20%, var(--background-primary));
     --inline-query-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
 
     // File Header Title | File Header Breadcrumbs
@@ -769,7 +769,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --gutter-color-active: var(--color-l-gray-90);
 
     // Callout
-    --callout-color-opacity: 0.325;
+    // --callout-color-opacity: 0.325;
+    --callout-color-opacity: 32.5%;
     --callout-border-opacity: 0.2;
     --callout-icon-fold-filter: brightness(0.8);
 
