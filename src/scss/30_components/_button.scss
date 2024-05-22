@@ -227,3 +227,12 @@ button:not(button.clickable-icon) {
         }
     }
 }
+
+// 
+.search-result-file-match button.search-result-file-match-replace-button {
+    padding: var(--size-4-1) var(--size-4-2) calc(var(--size-4-1) + var(--button-inset-shadow-size));
+
+    &:active {
+        padding: calc(var(--size-4-1) + var(--button-inset-shadow-size)) var(--size-4-2) calc(var(--size-2-1) + var(--button-inset-shadow-size));
+    }
+}
