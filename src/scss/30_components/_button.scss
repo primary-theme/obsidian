@@ -83,6 +83,13 @@ button:not(button.clickable-icon) {
     }
 }
 
+// Disabled Button
+button[disabled],
+button[aria-disabled="true"],
+button[disabled="true"] {
+    opacity: 0.3;
+}
+
 // Document Search Close Button
 // Modal Close Button
 .document-search-close-button,
@@ -228,7 +235,7 @@ button:not(button.clickable-icon) {
     }
 }
 
-// 
+// Search Result File Match Replace Button
 .search-result-file-match button.search-result-file-match-replace-button {
     padding: var(--size-4-1) var(--size-4-2) calc(var(--size-4-1) + var(--button-inset-shadow-size));
 
