@@ -2538,6 +2538,12 @@ button:not(button.clickable-icon).mod-cancel {
   color: var(--text-normal);
 }
 
+button[disabled],
+button[aria-disabled=true],
+button[disabled=true] {
+  opacity: 0.3;
+}
+
 .document-search-close-button,
 .modal-close-button {
   width: var(--modal-close-button-size);
