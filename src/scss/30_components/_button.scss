@@ -74,7 +74,7 @@ button:not(button.clickable-icon) {
     }
 
     &.mod-loading {
-        opacity: 0.3;
+        opacity: var(--disabled-component-opacity);
         cursor: wait;
     }
 
@@ -87,7 +87,8 @@ button:not(button.clickable-icon) {
 button[disabled],
 button[aria-disabled="true"],
 button[disabled="true"] {
-    opacity: 0.3;
+    opacity: var(--disabled-component-opacity);
+    cursor: not-allowed;
 }
 
 // Document Search Close Button
