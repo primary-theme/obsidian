@@ -11,6 +11,13 @@ input[type='password'],
 input[type='number'] {
     color: var(--text-input-color);
 
+    &[disabled],
+    &[aria-disabled="true"],
+    &[disabled="true"] {
+        opacity: var(--disabled-component-opacity);
+        cursor: not-allowed;
+    }
+
     // Mobile
     .workspace-drawer &,
     .is-mobile .modal & {
