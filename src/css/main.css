@@ -2659,6 +2659,13 @@ button:not(button.clickable-icon).mod-cancel {
   color: var(--icon-color-active);
 }
 
+.search-result-file-match button.search-result-file-match-replace-button {
+  padding: var(--size-4-1) var(--size-4-2) calc(var(--size-4-1) + var(--button-inset-shadow-size));
+}
+.search-result-file-match button.search-result-file-match-replace-button:active {
+  padding: calc(var(--size-4-1) + var(--button-inset-shadow-size)) var(--size-4-2) calc(var(--size-2-1) + var(--button-inset-shadow-size));
+}
+
 /*────────── Checkbox ──────────*/
 input[type=checkbox]:hover {
   cursor: pointer;
