@@ -3410,6 +3410,34 @@ input[type=password],
 input[type=number] {
   color: var(--text-input-color);
 }
+textarea[disabled], textarea[aria-disabled=true], textarea[disabled=true],
+input.metadata-input-text[disabled],
+input.metadata-input-text[aria-disabled=true],
+input.metadata-input-text[disabled=true],
+input[type=date][disabled],
+input[type=date][aria-disabled=true],
+input[type=date][disabled=true],
+input[type=datetime-local][disabled],
+input[type=datetime-local][aria-disabled=true],
+input[type=datetime-local][disabled=true],
+input[type=text][disabled],
+input[type=text][aria-disabled=true],
+input[type=text][disabled=true],
+input[type=search][disabled],
+input[type=search][aria-disabled=true],
+input[type=search][disabled=true],
+input[type=email][disabled],
+input[type=email][aria-disabled=true],
+input[type=email][disabled=true],
+input[type=password][disabled],
+input[type=password][aria-disabled=true],
+input[type=password][disabled=true],
+input[type=number][disabled],
+input[type=number][aria-disabled=true],
+input[type=number][disabled=true] {
+  opacity: var(--disabled-component-opacity);
+  cursor: not-allowed;
+}
 .workspace-drawer textarea, .is-mobile .modal textarea,
 .workspace-drawer input.metadata-input-text,
 .is-mobile .modal input.metadata-input-text,
