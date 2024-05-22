@@ -19,3 +19,11 @@ select,
         box-shadow: var(--button-shadow-focus);
     }
 }
+
+select[disabled],
+select[aria-disabled="true"],
+select[disabled="true"]
+.dropdown[disabled] {
+    opacity: var(--disabled-component-opacity);
+    cursor: not-allowed;
+}

@@ -1975,6 +1975,7 @@ body {
   --inline-code-radius: var(--radius-s);
   --copy-code-button-radius: var(--radius-s);
   --modal-close-button-size: 20px;
+  --disabled-component-opacity: 0.3;
   --dropdown-height: calc(
                           var(--font-ui-small) +
                           calc(var(--size-4-4) + var(--button-inset-shadow-size))
@@ -2530,7 +2531,7 @@ button:not(button.clickable-icon).mod-destructive:active {
 }
 .is-mobile button:not(button.clickable-icon).mod-loading,
 button:not(button.clickable-icon).mod-loading {
-  opacity: 0.3;
+  opacity: var(--disabled-component-opacity);
   cursor: wait;
 }
 .is-mobile button:not(button.clickable-icon).mod-cancel,
@@ -2541,7 +2542,8 @@ button:not(button.clickable-icon).mod-cancel {
 button[disabled],
 button[aria-disabled=true],
 button[disabled=true] {
-  opacity: 0.3;
+  opacity: var(--disabled-component-opacity);
+  cursor: not-allowed;
 }
 
 .document-search-close-button,
@@ -2708,6 +2710,13 @@ select:focus,
 .dropdown:focus {
   background-color: var(--interactive-normal-hover);
   box-shadow: var(--button-shadow-focus);
+}
+
+select[disabled],
+select[aria-disabled=true],
+select[disabled=true] .dropdown[disabled] {
+  opacity: var(--disabled-component-opacity);
+  cursor: not-allowed;
 }
 
 /*────────── kbd ──────────*/
