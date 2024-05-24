@@ -317,6 +317,10 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --icon-bg-active: var(--color-l-gray-60);
     --icon-bg-active-menu: transparent;
 
+    // Text Selection
+    --text-selection-theme-text-color: var(--color-l-gray-140);
+    --text-selection-theme-bg: color-mix(in srgb, var(--color-l-gray-80) 30%, transparent);
+
     // Buttons
     --button-radius: var(--size-4-2);
     --button-shadow: var(--input-shadow);

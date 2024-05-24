@@ -316,6 +316,10 @@ and CONTRIBUTION page ↴
     --icon-bg-active: var(--color-d-gray-80);
     --icon-bg-active-menu: transparent;
 
+    // Text Selection
+    --text-selection-theme-text-color: var(--color-d-gray-10);
+    --text-selection-theme-bg: color-mix(in srgb, var(--color-d-gray-40) 30%, transparent);
+
     // Buttons
     --button-radius: var(--size-4-2);
     --button-shadow: var(--input-shadow);
