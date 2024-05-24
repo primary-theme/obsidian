@@ -598,6 +598,11 @@ and CONTRIBUTION page ↴
     --drag-ghost-background: var(--interactive-accent);
     --drag-ghost-text-color: var(--text-on-accent);
 
+    // List
+    --list-marker-color: var(--color-d-gray-50);
+    --list-marker-color-hover: var(--color-d-gray-30);
+    --list-marker-color-collapsed: var(--color-d-gray-40);
+
     // Checkbox
     --checklist-bg: var(--color-d-gray-110);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);

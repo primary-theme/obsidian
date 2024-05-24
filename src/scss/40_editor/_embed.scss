@@ -49,7 +49,7 @@ video {
 }
 
 // Mathjax | LaTeX
-mjx-math {
+.markdown-preview-view .math-block {
     overflow: scroll;
     width: 100%;
 }

@@ -600,6 +600,11 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --drag-ghost-background: var(--interactive-accent);
     --drag-ghost-text-color: var(--text-on-accent);
 
+    // List
+    --list-marker-color: var(--color-l-gray-80);
+    --list-marker-color-hover: var(--color-l-gray-100);
+    --list-marker-color-collapsed: var(--color-l-gray-90);
+
     // Checkbox
     --checklist-bg: var(--color-l-gray-10);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
