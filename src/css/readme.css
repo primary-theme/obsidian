@@ -29,6 +29,7 @@ GitHub : @ceciliamay
 Get ✦ P R I M A R Y ✦ updates right
 in your inbox 📮
 
+TODO Add link to subscribe to updates
 
 ────────────────────────────────────
 
@@ -36,7 +37,6 @@ in your inbox 📮
 https://dub.sh/primary/ko-fi
 + early access to updates
 + Premium Palettes (in progress)
-+ Contribution Guide (in progress)
 + ports to other theme-able Apps (soon)
 
 ● ROADMAP ●
@@ -47,8 +47,27 @@ https://forum.obsidian.md/t/primary-theme/26687
 
 ● README ●
 https://git.new/primary/obsidian
+- Features and How to Use Them (in progress)
+- Supported Plugins
+- Contribution Guide (in progress)
+- Developer Guide (in progress)
 
 ────────────────────────────────────
+
+STRUCTURE OF SOURCE FOLDER
+    * General (overrides, spacing, sizing, radius, shape, fonts, animation) ->
+    * Specific (usually colors, icons) ->
+    * Mobile Styling ->
+    * Light Theme (base then options via style settings) ->
+    * Dark Theme (base then options via style settings) ->
+
+    + setup follows Obsidian Developer Docs
+    + pmr-*.css / primary-*.scss
+        houses code for additional Primary features
+    + ss-*.css / ss-*.scss
+        scripts for customizable features togglable via Style Settings
+
+────────────────────────────────────      
 
 MIT License
 

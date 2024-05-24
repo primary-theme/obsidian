@@ -1039,6 +1039,9 @@ and CONTRIBUTION page ↴
                           0px 2px 4px -2px rgba(0, 0, 0, 0.39);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
+  --list-marker-color: var(--color-d-gray-50);
+  --list-marker-color-hover: var(--color-d-gray-30);
+  --list-marker-color-collapsed: var(--color-d-gray-40);
   --checklist-bg: var(--color-d-gray-110);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
   --toggle-thumb-color: var(--color-d-gray-10);
@@ -1708,6 +1711,9 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
                           0px 2px 4px -2px rgba(0, 0, 0, 0.06);
   --drag-ghost-background: var(--interactive-accent);
   --drag-ghost-text-color: var(--text-on-accent);
+  --list-marker-color: var(--color-l-gray-80);
+  --list-marker-color-hover: var(--color-l-gray-100);
+  --list-marker-color-collapsed: var(--color-l-gray-90);
   --checklist-bg: var(--color-l-gray-10);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
   --toggle-thumb-color: var(--color-l-gray-10);
@@ -3842,7 +3848,7 @@ video {
   --embed-background: var(--background-primary);
 }
 
-mjx-math {
+.markdown-preview-view .math-block {
   overflow: scroll;
   width: 100%;
 }

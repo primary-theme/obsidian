@@ -105,8 +105,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'theme.css': [
-                        'src/css/license.css',
-                        'src/css/table-of-contents.css',
+                        'src/css/readme.css',
                         'src/css/fonts/*.css',
                         'src/css/main.min.css',
                         'src/css/style-settings.css'
