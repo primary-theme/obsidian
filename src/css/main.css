@@ -851,6 +851,8 @@ and CONTRIBUTION page ↴
   --icon-opacity-active: 1;
   --icon-bg-active: var(--color-d-gray-80);
   --icon-bg-active-menu: transparent;
+  --text-selection-theme-text-color: var(--color-d-gray-10);
+  --text-selection-theme-bg: color-mix(in srgb, var(--color-d-gray-40) 30%, transparent);
   --button-radius: var(--size-4-2);
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
@@ -1519,6 +1521,8 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --icon-opacity-active: 1;
   --icon-bg-active: var(--color-l-gray-60);
   --icon-bg-active-menu: transparent;
+  --text-selection-theme-text-color: var(--color-l-gray-140);
+  --text-selection-theme-bg: color-mix(in srgb, var(--color-l-gray-80) 30%, transparent);
   --button-radius: var(--size-4-2);
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
@@ -3536,6 +3540,45 @@ input[type=number]:focus-visible {
   color: var(--notice-color);
   border-radius: var(--radius-m);
   box-shadow: var(--tooltip-shadow);
+}
+
+/*────────── Text Selection ──────────*/
+::selection {
+  color: var(--text-selection-theme-text-color);
+  background-color: var(--text-selection-theme-bg);
+}
+
+input[type=date]::-webkit-datetime-edit-month-field:active,
+input[type=datetime-local]::-webkit-datetime-edit-month-field:active,
+input[type=date]::-webkit-datetime-edit-month-field:focus,
+input[type=datetime-local]::-webkit-datetime-edit-month-field:focus,
+input[type=date]::-webkit-datetime-edit-day-field:active,
+input[type=datetime-local]::-webkit-datetime-edit-day-field:active,
+input[type=date]::-webkit-datetime-edit-day-field:focus,
+input[type=datetime-local]::-webkit-datetime-edit-day-field:focus,
+input[type=date]::-webkit-datetime-edit-year-field:active,
+input[type=datetime-local]::-webkit-datetime-edit-year-field:active,
+input[type=date]::-webkit-datetime-edit-year-field:focus,
+input[type=datetime-local]::-webkit-datetime-edit-year-field:focus {
+  color: var(--text-selection-theme-text-color);
+  background-color: var(--text-selection-theme-bg);
+}
+
+.markdown-source-view.mod-cm6 ::selection {
+  color: var(--text-selection-theme-text-color);
+  background-color: var(--text-selection-theme-bg);
+}
+
+.markdown-source-view.mod-cm6 .cm-line .cm-selection,
+.markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
+  color: var(--text-selection-theme-text-color);
+  background-color: var(--text-selection-theme-bg);
+}
+
+.markdown-source-view.mod-cm6 .cm-selectionBackground,
+.markdown-source-view.mod-cm6 .cm-editor > .cm-scroller > .cm-selectionLayer > .cm-selectionBackground {
+  color: var(--text-selection-theme-text-color);
+  background-color: var(--text-selection-theme-bg);
 }
 
 /*────────── Callout ──────────*/

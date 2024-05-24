@@ -1,0 +1,37 @@
+/*────────── Text Selection ──────────*/
+
+::selection {
+    color: var(--text-selection-theme-text-color);
+    background-color: var(--text-selection-theme-bg);
+}
+
+input[type='date']::-webkit-datetime-edit-month-field:active,
+input[type='datetime-local']::-webkit-datetime-edit-month-field:active,
+input[type='date']::-webkit-datetime-edit-month-field:focus,
+input[type='datetime-local']::-webkit-datetime-edit-month-field:focus,
+input[type='date']::-webkit-datetime-edit-day-field:active,
+input[type='datetime-local']::-webkit-datetime-edit-day-field:active,
+input[type='date']::-webkit-datetime-edit-day-field:focus,
+input[type='datetime-local']::-webkit-datetime-edit-day-field:focus,
+input[type='date']::-webkit-datetime-edit-year-field:active,
+input[type='datetime-local']::-webkit-datetime-edit-year-field:active,
+input[type='date']::-webkit-datetime-edit-year-field:focus,
+input[type='datetime-local']::-webkit-datetime-edit-year-field:focus {
+    color: var(--text-selection-theme-text-color);
+    background-color: var(--text-selection-theme-bg);
+}
+
+.markdown-source-view.mod-cm6 ::selection {
+    color: var(--text-selection-theme-text-color);
+    background-color: var(--text-selection-theme-bg);
+}
+.markdown-source-view.mod-cm6 .cm-line .cm-selection,
+.markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
+    color: var(--text-selection-theme-text-color);
+    background-color: var(--text-selection-theme-bg);
+}
+.markdown-source-view.mod-cm6 .cm-selectionBackground,
+.markdown-source-view.mod-cm6 .cm-editor > .cm-scroller > .cm-selectionLayer > .cm-selectionBackground {
+    color: var(--text-selection-theme-text-color);
+    background-color: var(--text-selection-theme-bg);
+}
