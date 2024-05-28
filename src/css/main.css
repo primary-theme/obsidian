@@ -1044,6 +1044,7 @@ and CONTRIBUTION page ↴
   --list-marker-color-collapsed: var(--color-d-gray-40);
   --checklist-bg: var(--color-d-gray-110);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+  --checklist-done-color: var(--color-d-gray-50);
   --toggle-thumb-color: var(--color-d-gray-10);
   --toggle-bg: color-mix(in srgb, var(--color-d-gray-70) 50%, var(--color-d-gray-60));
   --toggle-bg-enabled: var(--color-d-green-40);
@@ -1716,6 +1717,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
   --list-marker-color-collapsed: var(--color-l-gray-90);
   --checklist-bg: var(--color-l-gray-10);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
+  --checklist-done-color: var(--color-l-gray-80);
   --toggle-thumb-color: var(--color-l-gray-10);
   --toggle-bg: color-mix(in hsl, var(--color-l-gray-60) 80%, var(--color-l-gray-70));
   --toggle-bg-enabled: var(--color-l-green-30);
@@ -2063,6 +2065,7 @@ body {
   --link-unresolved-opacity: 1;
   --link-underline-offset: 2px;
   --link-decoration-thickness: 1.5px;
+  --checklist-done-decoration: line-through;
   --callout-shadow-offset: 4px;
   --callout-content-shadow-blur: 3px;
   --callout-title-padding: var(--size-4-3) var(--size-4-4);
@@ -2969,6 +2972,7 @@ input.prompt-input:focus-visible {
   border-bottom: var(--prompt-separator-border);
 }
 
+.suggestion-container,
 .suggestion-popover,
 .popover {
   animation: var(--anim-popup);

@@ -608,6 +608,7 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     // Checkbox
     --checklist-bg: var(--color-l-gray-10);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
+    --checklist-done-color: var(--color-l-gray-80);
 
     // Toggle
     --toggle-thumb-color: var(--color-l-gray-10);
@@ -778,7 +779,6 @@ USAGE, LICENSE, and CONTRIBUTION page ↴
     --gutter-color-active: var(--color-l-gray-90);
 
     // Callout
-    // --callout-color-opacity: 0.325;
     --callout-color-opacity: 32.5%;
     --callout-border-opacity: 0.2;
     --callout-icon-fold-filter: brightness(0.8);

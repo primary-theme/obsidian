@@ -94,11 +94,9 @@ module.exports = function(grunt) {
             unminified: {
                 files: {
                     'Primary.css': [
-                        'src/css/license.css',
-                        'src/css/table-of-contents.css',
+                        'src/css/readme.css',
                         'src/css/fonts/*.css',
-                        'src/css/main.min.css',
-                        'src/css/style-settings.css'
+                        'src/css/main.min.css'
                     ]
                 }
             },
@@ -108,7 +106,6 @@ module.exports = function(grunt) {
                         'src/css/readme.css',
                         'src/css/fonts/*.css',
                         'src/css/main.min.css',
-                        'src/css/style-settings.css'
                     ]
                 }
             }

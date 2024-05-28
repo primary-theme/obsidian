@@ -11,40 +11,38 @@ Variables for
 body {
     --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
     --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
-    --popup-bg-blur: 3px;
     --font-medium: 500;
     --font-bold: 500;
-    --indentation-guide-editing-indent: 0.975em;
     --bold-italic-weight: 500;
     --bold-modifier: 100;
     --cursor: pointer;
-    --radius-xs: 2px;
-    --icon-container-radius: 0px;
     --icon-xs: 13px;
     --icon-s: 15px;
     --icon-m: 16px;
     --icon-l: 18px;
     --icon-xl: 24px;
-    --button-inset-shadow-size: 2px;
-    --titlebar-text-weight: var(--font-normal);
-    --header-height: 46px;
-    --note-pane-margin: 10px;
-    --file-tab-gap: 0px;
-    --file-border-radius: var(--radius-l);
-    --close-button-radius: var(--radius-l);
-    --tab-status-radius: var(--radius-s);
-    --new-tab-btn-radius: 2em;
-    --hr-thickness: 1px;
-    --code-radius: var(--radius-m);
-    --inline-code-radius: var(--radius-s);
-    --copy-code-button-radius: var(--radius-s);
-    --modal-close-button-size: 20px;
+    --radius-xs: 2px;
+    --icon-container-radius: 0px;
+    --nav-item-white-space: nowrap;
+    --nav-item-radius: 6px;
+    --nav-item-padding: calc(var(--size-4-1) + 1px)
+                        var(--size-4-2)
+                        calc(var(--size-4-1) + 1px)
+                        var(--size-4-6);
+    --nav-file-padding-active: calc(var(--size-4-1))
+                        var(--size-4-2)
+                        calc(var(--size-4-1) + var(--button-inset-shadow-size))
+                        var(--size-4-6);
+    --divider-width-hover: 4px;
+    --divider-radius: var(--radius-m);
+    --popup-bg-blur: 3px;
     --disabled-component-opacity: 0.3;
     --dropdown-height:  calc(
                             var(--font-ui-small) + 
                             calc(var(--size-4-4) + var(--button-inset-shadow-size))
-                        );
-
+                            );
+    --modal-close-button-size: 20px;
+    --button-inset-shadow-size: 2px;
     --button-padding:   var(--size-4-2)
                         var(--size-4-3)
                         calc(var(--size-4-2) + var(--button-inset-shadow-size))
@@ -67,11 +65,17 @@ body {
                         var(--size-4-2)
                         var(--size-2-2)
                         var(--size-4-2);
+    --vault-name-font-size: var(--font-ui-small);
+    --vault-name-font-weight: var(--font-bold);
     --input-radius: var(--button-radius);
     --input-height: 32px;
     --search-icon-size: 14px;
-    --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
+    --slider-track-height: 5px;
     --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
+    --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
+    --search-icon-size: 14px;
+    --search-clear-button-size: 12px;
+    --menu-item-radius: calc(var(--radius-m) - 1px);
     --settings-nav-item-padding: calc(var(--size-2-3) + 1px)
                                  var(--size-4-3)
                                  calc(var(--size-2-3) + 1px)
@@ -85,29 +89,24 @@ body {
                                  calc(var(--size-2-3) + var(--button-inset-shadow-size))
                                  var(--size-4-5);
     --settings-nav-item-radius: calc(var(--radius-m) - 1px);
-    --slider-track-height: 5px;
-    
-    --nav-item-white-space: nowrap;
-    --nav-item-radius: 6px;
-    --nav-item-padding: calc(var(--size-4-1) + 1px)
-                        var(--size-4-2)
-                        calc(var(--size-4-1) + 1px)
-                        var(--size-4-6);
-    --nav-file-padding-active: calc(var(--size-4-1))
-                        var(--size-4-2)
-                        calc(var(--size-4-1) + var(--button-inset-shadow-size))
-                        var(--size-4-6);
+    --close-button-radius: var(--radius-l);
+    --copy-code-button-radius: var(--radius-s);
+    --titlebar-text-weight: var(--font-normal);
 
-    --vault-name-font-size: var(--font-ui-small);
-    --vault-name-font-weight: var(--font-bold);
 
-    --search-icon-size: 14px;
-    --search-clear-button-size: 12px;
+    --header-height: 46px;
+    --file-pane-margin: 10px;
+    --file-tab-gap: 0px;
+    --file-border-radius: var(--radius-l);
+    --tab-status-radius: var(--radius-s);
+    --new-tab-btn-radius: 2em;
 
-    --menu-item-radius: calc(var(--radius-m) - 1px);
+    --hr-thickness: 1px;
 
-    --divider-width-hover: 4px;
-    --divider-radius: var(--radius-m);
+    --code-radius: var(--radius-m);
+    --inline-code-radius: var(--radius-s);
+
+    --indentation-guide-editing-indent: 0.975em;
 
     // Metadata
     --metadata-border-width: 1px;
@@ -135,6 +134,9 @@ body {
     --link-underline-offset: 2px;
     --link-decoration-thickness: 1.5px;
 
+    // Checklist
+    --checklist-done-decoration: line-through;
+
     // Callout
     --callout-shadow-offset: 4px;
     --callout-content-shadow-blur: 3px;
@@ -147,7 +149,6 @@ body {
     --callout-blend-mode: unset;
 
     // Animation
-    --anim-popup: 0.3s slideUp forwards;
 
     // Mobile
     &.is-mobile {
@@ -155,14 +156,7 @@ body {
         --clickable-icon-radius: var(--radius-m);
         --button-radius: calc(var(--radius-l) - 2px);
         --input-font-weight: var(--font-normal);
-        // --input-height: 36px;
-        // --metadata-input-height: calc(var(--font-text-size) * 2);
     }
-    
-    // &.is-phone {
-    //     --input-height: 36px;
-    //     --metadata-input-height: calc(var(--font-text-size) * 2);
-    // }
 
     // Community Plugin
     // Calendar by Liam Cain

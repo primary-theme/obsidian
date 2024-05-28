@@ -90,7 +90,7 @@ body:not(.is-mobile) .workspace-split {
         padding: var(--size-2-2) var(--size-2-2);
         border: var(--vault-name-border);
         border-radius: var(--radius-m);
-        margin: 0px var(--size-4-2) var(--note-pane-margin);
+        margin: 0px var(--size-4-2) var(--file-pane-margin);
 
         // Remove chevron-up-down Switcher Icon
         .workspace-drawer-vault-switcher-icon {
@@ -178,7 +178,7 @@ body:not(.is-mobile) .workspace-split {
     .workspace-drawer:not(.is-pinned) {
         border: 1px solid var(--background-modifier-border);
         border-radius: calc(var(--file-border-radius) * 2);
-        margin: calc(var(--note-pane-margin) * 3) calc(var(--note-pane-margin) * 3);
+        margin: calc(var(--file-pane-margin) * 3) calc(var(--file-pane-margin) * 3);
         box-shadow: var(--mobile-sidebar-tablet-shadow);
     }
 }

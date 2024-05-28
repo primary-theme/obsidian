@@ -1,9 +1,8 @@
 @use '10_foundations/icons';
 @use '10_foundations/pmr-custom-icons';
-@use '10_foundations/pmr-dark-theme';
-@use '10_foundations/pmr-light-theme';
-@use '10_foundations/shape';
 @use '10_foundations/typography';
+
+@use '10_foundations/palettes/classic-original';
 
 @use '20_window/divider';
 @use '20_window/navbar';
@@ -50,3 +49,4 @@
 
 @use '60_community-plugins/calendar-liam-cain';
 @use '60_community-plugins/kanban-mgmeyers';
+@use '60_community-plugins/style-settings-mgmeyers';
