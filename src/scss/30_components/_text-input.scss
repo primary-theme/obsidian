@@ -70,7 +70,7 @@ input[type='number']:focus-visible {
 }
 
 .search-input-clear-button {
-    cursor: pointer;
+    cursor: var(--cursor);
 
     &:hover {
         color: var(--search-clear-button-color-hover);

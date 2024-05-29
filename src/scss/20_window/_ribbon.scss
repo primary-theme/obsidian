@@ -10,7 +10,7 @@
             
             &:hover {
                 background: var(--icon-bg-hover);
-                cursor: pointer;
+                cursor: var(--cursor);
             }
 
             &.is-active {

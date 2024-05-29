@@ -52,7 +52,7 @@
     &:not(.is-active) {
         &:hover {
             transform: translateY(calc(-1 * var(--button-axis-offset)));
-            cursor: pointer;
+            cursor: var(--cursor);
         }
 
         &:active {

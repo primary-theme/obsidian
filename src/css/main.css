@@ -16,15 +16,11 @@ body:is(.is-phone, .is-mobile) .workspace-drawer-tab-option-item-icon {
   color: var(--icon-color);
 }
 
-body {
-  --clickable-icon-radius: calc(var(--radius-s) + 1px);
-}
-
 .is-mobile .clickable-icon:hover,
 .clickable-icon:hover {
   color: var(--icon-color-hover);
   background: var(--icon-bg-hover);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .is-mobile .clickable-icon:active,
 .clickable-icon:active {
@@ -722,6 +718,7 @@ body {
   --icon-l: 18px;
   --icon-xl: 24px;
   --icon-container-radius: 0px;
+  --clickable-icon-radius: calc(var(--radius-s) + 1px);
   /* Radius */
   --radius-xs: 2px;
   /*────────── Window ──────────*/
@@ -746,7 +743,6 @@ body {
   --vault-name-font-weight: var(--font-bold);
   /*────────── Components ──────────*/
   --popup-bg-blur: 3px;
-  --disabled-component-opacity: 0.3;
   /* Button */
   --button-padding: var(--size-4-2)
                       var(--size-4-3)
@@ -1075,6 +1071,7 @@ body.is-mobile {
   --vault-name-background: var(--color-l-gray-30);
   --vault-name-border: 1px solid var(--background-modifier-border);
   /*────────── Components ──────────*/
+  --disabled-component-opacity: 0.3;
   /* Button */
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
@@ -1179,6 +1176,7 @@ body.is-mobile {
   --indentation-guide-color: var(--background-modifier-border);
   --indentation-guide-color-active: var(--background-modifier-border-focus);
   /* Notice */
+  --background-modifier-message: var(--color-l-gray-100);
   --notice-color: var(--text-on-accent);
   --notice-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
                           0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
@@ -1754,6 +1752,7 @@ body.is-mobile {
   --vault-name-background: var(--color-d-gray-110);
   --vault-name-border: 1px solid var(--background-modifier-border);
   /*────────── Components ──────────*/
+  --disabled-component-opacity: 0.3;
   /* Button */
   --button-shadow: var(--input-shadow);
   --button-shadow-hover: var(--input-shadow-hover);
@@ -1803,7 +1802,7 @@ body.is-mobile {
   --checkbox-border-color: var(--color-d-gray-70);
   --checkbox-border-color-hover: var(--color-d-gray-60);
   --checklist-bg: var(--color-d-gray-110);
-  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+  --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
   --checklist-done-color: var(--color-d-gray-50);
   /* Drag Ghost */
   --drag-ghost-background: var(--interactive-accent);
@@ -2334,7 +2333,7 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 }
 .workspace-ribbon .side-dock-actions .clickable-icon:hover, .workspace-ribbon .side-dock-settings .clickable-icon:hover {
   background: var(--icon-bg-hover);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .workspace-ribbon .side-dock-actions .clickable-icon.is-active, .workspace-ribbon .side-dock-settings .clickable-icon.is-active {
   background: var(--icon-bg-active);
@@ -2437,7 +2436,7 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 .mod-left-split .workspace-tab-header:not(.is-active):hover,
 .mod-right-split .workspace-tab-header:not(.is-active):hover {
   transform: translateY(calc(-1 * var(--button-axis-offset)));
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .mod-left-split .workspace-tab-header:not(.is-active):active,
 .mod-right-split .workspace-tab-header:not(.is-active):active {
@@ -2591,7 +2590,7 @@ button:not(button.clickable-icon) {
   border-radius: var(--button-radius);
   transition: var(--button-anim);
   transition: var(--background-anim);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .is-mobile button:not(button.clickable-icon):active,
 button:not(button.clickable-icon):active {
@@ -2783,7 +2782,7 @@ button[disabled=true] {
 .mod-community-modal .modal-sidebar button.clickable-icon:hover {
   color: var(--icon-color-hover);
   background: var(--icon-bg-hover);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .mod-community-modal .modal-sidebar button.clickable-icon:active {
   color: var(--icon-color-active);
@@ -2806,7 +2805,7 @@ button[disabled=true] {
 
 /*────────── Checkbox ──────────*/
 input[type=checkbox]:hover {
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .theme-light input[type=checkbox]:not(:checked), .theme-dark input[type=checkbox]:not(:checked) {
   background: var(--checklist-bg);
@@ -2830,7 +2829,7 @@ select,
 }
 select:hover,
 .dropdown:hover {
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 select:active,
 .dropdown:active {
@@ -3044,7 +3043,7 @@ span.setting-hotkey {
   border-radius: var(--nav-item-radius);
 }
 .tree-item-self.is-clickable {
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .tree-item-self.is-clickable.is-active:not(.nav-file-title) {
   box-shadow: var(--nav-item-shadow-active);
@@ -3320,7 +3319,7 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
   border-color: transparent;
   background: var(--tab-bg);
   transform: translateY(calc(-1 * var(--button-axis-offset)));
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
   background: transparent;
@@ -3447,7 +3446,7 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
 }
 .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover, .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active {
   color: var(--icon-color-hover);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .workspace-tabs.mod-stacked .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
   background: transparent;
@@ -3468,7 +3467,7 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
   padding: 0;
   border-radius: var(--close-button-radius);
   margin-bottom: var(--button-axis-offset);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .is-mobile .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-inner-close-button {
   --icon-size: var(--icon-s);
@@ -3478,7 +3477,7 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
   padding: var(--size-2-1) 0;
   margin-bottom: var(--button-axis-offset);
   border-radius: var(--tab-status-radius);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .is-mobile .workspace .mod-root .workspace-tabs .workspace-tab-header .workspace-tab-header-status-icon {
   --icon-size: var(--icon-s);
@@ -3633,7 +3632,7 @@ input[type=number]:focus-visible {
 }
 
 .search-input-clear-button {
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .search-input-clear-button:hover {
   color: var(--search-clear-button-color-hover);
@@ -3646,7 +3645,7 @@ input[type=number]:focus-visible {
 }
 .checkbox-container:hover {
   box-shadow: var(--toggle-shadow-hover);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .checkbox-container:active::after {
   width: calc(var(--toggle-thumb-width) + 4px);
@@ -4033,7 +4032,7 @@ video {
 .view-header-title-parent .view-header-breadcrumb:hover {
   color: var(--breadcrumb-color-hover);
   background: var(--breadcrumb-bg-hover);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .view-header-title-parent .view-header-breadcrumb-separator {
   color: var(--breadcrumb-separator-color);
@@ -4703,7 +4702,7 @@ a.tag:active {
 
 .search-result-file-match {
   transition: var(--anim-duration-fast) var(--anim-motion-smooth);
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 .search-result-file-match:hover {
   background: var(--search-result-background-hover);

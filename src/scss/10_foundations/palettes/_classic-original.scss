@@ -87,6 +87,7 @@ body {
     --icon-l: 18px;
     --icon-xl: 24px;
     --icon-container-radius: 0px;
+    --clickable-icon-radius: calc(var(--radius-s) + 1px);
 
     /* Radius */
     --radius-xs: 2px;
@@ -119,7 +120,6 @@ body {
     /*────────── Components ──────────*/
 
     --popup-bg-blur: 3px;
-    --disabled-component-opacity: 0.3;
 
     /* Button */
     --button-padding:   var(--size-4-2)
@@ -535,6 +535,8 @@ body {
     
     /*────────── Components ──────────*/
 
+    --disabled-component-opacity: 0.3;
+
     /* Button */
     --button-shadow: var(--input-shadow);
     --button-shadow-hover: var(--input-shadow-hover);
@@ -658,6 +660,7 @@ body {
     --indentation-guide-color-active: var(--background-modifier-border-focus);
 
     /* Notice */
+    --background-modifier-message: var(--color-l-gray-100);
     --notice-color: var(--text-on-accent);
     --notice-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
                             0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
@@ -1376,6 +1379,8 @@ body {
     
     /*────────── Components ──────────*/
 
+    --disabled-component-opacity: 0.3;
+
     /* Button */
     --button-shadow: var(--input-shadow);
     --button-shadow-hover: var(--input-shadow-hover);
@@ -1434,7 +1439,7 @@ body {
     --checkbox-border-color-hover: var(--color-d-gray-60);
 
     --checklist-bg: var(--color-d-gray-110);
-    --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+    --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
     --checklist-done-color: var(--color-d-gray-50);
 
     /* Drag Ghost */

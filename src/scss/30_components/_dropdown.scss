@@ -7,7 +7,7 @@ select,
     transition: var(--background-anim);
     
     &:hover {
-        cursor: pointer;
+        cursor: var(--cursor);
     }
 
     &:active {

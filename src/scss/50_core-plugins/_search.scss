@@ -81,7 +81,7 @@
 
 .search-result-file-match {
     transition: var(--anim-duration-fast) var(--anim-motion-smooth);
-    cursor: pointer;
+    cursor: var(--cursor);
 
     &:hover {
         background: var(--search-result-background-hover);
