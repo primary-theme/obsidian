@@ -166,7 +166,7 @@ body:not(.is-phone) .mod-root .workspace {
                 border-color: transparent;
                 background: var(--tab-bg);
                 transform: translateY(calc(-1 * var(--button-axis-offset)));
-                cursor: pointer;
+                cursor: var(--cursor);
 
                 .workspace-tab-header-inner {
                     background: transparent;
@@ -332,7 +332,7 @@ body:not(.is-phone) .mod-root .workspace {
             &:hover,
             &:active {
                 color: var(--icon-color-hover);
-                cursor: pointer;
+                cursor: var(--cursor);
 
                 .workspace-tab-header-inner {
                     background: transparent;
@@ -363,7 +363,7 @@ body:not(.is-phone) .mod-root .workspace {
         padding: 0;
         border-radius: var(--close-button-radius);
         margin-bottom: var(--button-axis-offset);
-        cursor: pointer;
+        cursor: var(--cursor);
 
         // Mobile
         .is-mobile & {
@@ -377,7 +377,7 @@ body:not(.is-phone) .mod-root .workspace {
         padding: var(--size-2-1) 0;
         margin-bottom: var(--button-axis-offset);
         border-radius: var(--tab-status-radius);
-        cursor: pointer;
+        cursor: var(--cursor);
 
         // Mobile
         .is-mobile & {

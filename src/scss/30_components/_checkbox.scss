@@ -1,7 +1,7 @@
 /*────────── Checkbox ──────────*/
 input[type=checkbox] {
     &:hover {
-        cursor: pointer;
+        cursor: var(--cursor);
     }
 
     .theme-light &,

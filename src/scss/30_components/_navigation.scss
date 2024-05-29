@@ -4,7 +4,7 @@
     border-radius: var(--nav-item-radius);
     
     &.is-clickable {
-        cursor: pointer;
+        cursor: var(--cursor);
 
         &.is-active:not(.nav-file-title) {
             box-shadow: var(--nav-item-shadow-active);

@@ -6,7 +6,7 @@
 
     &:hover {
         box-shadow:  var(--toggle-shadow-hover);
-        cursor: pointer;
+        cursor: var(--cursor);
     }
 
     &:active {

@@ -5,7 +5,7 @@ button:not(button.clickable-icon) {
     border-radius: var(--button-radius);
     transition: var(--button-anim);
     transition: var(--background-anim);
-    cursor: pointer;
+    cursor: var(--cursor);
 
     &:active {
         background: var(--interactive-normal);
@@ -217,7 +217,7 @@ button[disabled="true"] {
     &:hover {
         color: var(--icon-color-hover);
         background: var(--icon-bg-hover);
-        cursor: pointer;
+        cursor: var(--cursor);
     }
 
     &:active {
