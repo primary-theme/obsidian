@@ -13,22 +13,22 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 📚 Visit the [Full Guide](https://github.com/primary-theme/obsidian) for the complete documentation including theme features, font guides, customization guide and more.
+        description: 📚 Visit the [Full Guide](https://github.com/primary-theme/obsidian) for the complete documentation including theme features, font guides, customization guide and more
     -
         id: readme-content
         type: info-text
         markdown: true
-        description: 🎨 The [Presets Library](https://github.com/primary-theme/obsidian) give you a completely new look to Primary while keeping its [Core Design Principles](https://github.com/primary-theme/obsidian).
+        description: 🎨 The [Presets Library](https://github.com/primary-theme/obsidian) give you a completely new look to Primary while keeping its [Core Design Principles](https://github.com/primary-theme/obsidian)
     -
         id: readme-content
         type: info-text
         markdown: true
-        description: 🖼️ Here's a [Library of Curated Wallpapers](https://github.com/primary-theme/obsidian) to go with your theme.
+        description: 🖼️ Here's a [Library of Curated Wallpapers](https://github.com/primary-theme/obsidian) to go with your theme
     -
         id: readme-content
         type: info-text
         markdown: true
-        description: 🎯 Check out the [Roadmap](https://git.new/primary/project-tracker) to get a view of Primary's Development.
+        description: 🎯 Check out the [Roadmap](https://git.new/primary/project-tracker) to get a view of Primary's Development
 	-
 		id: interface
 		type: heading
@@ -47,6 +47,12 @@ settings:
 		level: 1
 		collapsed: true
 		title: Graph
+	-
+		id: canvas
+		type: heading
+		level: 1
+		collapsed: true
+		title: Canvas
 	-
 		id: advanced
 		type: heading
@@ -76,5 +82,5 @@ settings:
         type: info-text
         markdown: true
         title: 🐛 Submit an Issue or Feature Request!
-        description: Visit [Primary's Github Issue Page](https://git.new/primary/obsidian) to submit an issue or feature request. No Github account? Send me a message through [Twitter](https://dub.sh/twitter/mei) or directly via [Email](mailto:contact.ceciliamay@gmail.com).
+        description: Visit [Primary's Github Issue Page](https://git.new/primary/obsidian) to submit an issue or feature request. <br> No Github account? Send me a message through [Twitter](https://dub.sh/twitter/mei) or directly via [Email](mailto:contact.ceciliamay@gmail.com)
 */
