@@ -55,6 +55,25 @@ when needed.
     }
 }
 
+@keyframes styleSettingsSlideDown {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(-5%);
+        opacity: 0.2;
+    }
+    40% {
+        transform: translateY(2%);
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /*───────────────────────────────────
         Non-Color Variables
 ───────────────────────────────────*/
@@ -74,7 +93,7 @@ body {
     --cascadia-font-features:   "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
 
     --font-normal: 400;
-    --font-medium: 400;
+    --font-medium: 450;
     --font-semibold: 500;
     --font-bold: 550;
 
@@ -529,6 +548,11 @@ body {
     /* Divider */
     --divider-color: var(--background-modifier-border);
     --divider-color-hover: var(--background-modifier-border-hover);
+
+    /* Scrollbar */
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb-bg: var(--background-modifier-border);
+    --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
 
     /* Status Bar */
     --status-bar-item-color: var(--color-l-gray-80);
@@ -1139,6 +1163,9 @@ body {
     --kanban-new-item-shadow: none;
     --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
                                     0px 2px 4px 0px rgba(0, 0, 0, 0.04);
+
+    /* Style Settings by mgmeyers */
+    --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
 }
 
 /*───────────────────────────────────
@@ -1384,6 +1411,11 @@ body {
     /* Divider */
     --divider-color: var(--background-modifier-border);
     --divider-color-hover: var(--background-modifier-border-hover);
+
+    /* Scrollbar */
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb-bg: var(--background-modifier-border);
+    --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
 
     /* Status Bar */
     --status-bar-item-color: var(--color-d-gray-50);
@@ -2015,4 +2047,7 @@ body {
     --kanban-new-item-shadow: none;
     --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.22),
                                     0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+                            
+    /* Style Settings by mgmeyers */
+    --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
 }
