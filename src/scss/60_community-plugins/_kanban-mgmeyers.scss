@@ -30,7 +30,7 @@
 
     &__lane-title-count:is(div) {
         font-size: 0.8em;
-        font-weight: 500;
+        font-weight: var(--font-semibold);
         font-variant: tabular-nums;
         color: var(--kanban-title-count-color);
         background: var(--kanban-title-count-bg);

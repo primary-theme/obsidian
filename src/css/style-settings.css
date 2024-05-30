@@ -1,0 +1,48 @@
+/* @settings
+
+name: Primary Theme Settings
+id: primary-theme
+settings:
+	-
+		id: readme-title
+		type: heading
+		level: 1
+		collapsed: true
+		title: How To Use
+    -
+        id: readme-one
+        type: info-text
+        markdown: true
+        heading: Theme Features
+        description: The [Theme Features Guide](https://github.com/primary-theme/obsidian) includes how-to’s on using Alternative Checkboxes, cssclasses for your notes, supported Callout types, and more — all provided by the theme.
+    -
+        id: readme-two
+        type: info-text
+        markdown: true
+        heading: Supported Plugins
+        description: View the list of [Supported Plugins](https://github.com/primary-theme/obsidian). You may also contribute to support your favorite plugin.
+    -
+        id: readme-three
+        type: info-text
+        markdown: true
+        heading: Font Guide and Recommendations
+        description: View a list of [Recommended Fonts](https://github.com/primary-theme/obsidian) and [Guide](https://github.com/primary-theme/obsidian) on implementing fonts for multi-lingual support.
+    -
+        id: readme-four
+        type: info-text
+        markdown: true
+        heading: Primary Color Palette
+        description: You may choose colors from the [Primary Palette](https://github.com/primary-theme/obsidian) if you’d like to make some adjustments but stay within the color scheme. Don't see a color you like? Read the [Guide on Finding your Own Colors](https://github.com/primary-theme/obsidian) that fit with Primary's color scheme.
+    -
+        id: readme-five
+        type: info-text
+        markdown: true
+        heading: Primary Theme Presets
+        description: The [Primary Theme Presets Library](https://github.com/primary-theme/obsidian) give you a completely new look to Primary while keeping its [Core Design Principles](https://github.com/primary-theme/obsidian).
+    -
+        id: readme-six
+        type: info-text
+        markdown: true
+        heading: Other Resources
+        description: Here's a [Library of Curated Wallpapers](https://github.com/primary-theme/obsidian) to go with your theme. Primary’s Color Schemes are also available on other Apps.
+*/
