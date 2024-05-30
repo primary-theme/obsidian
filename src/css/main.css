@@ -706,9 +706,10 @@ body {
   --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
                           "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
-  --font-medium: 500;
+  --font-normal: 400;
+  --font-medium: 400;
   --font-semibold: 500;
-  --font-bold: 500;
+  --font-bold: 550;
   --bold-italic-weight: 500;
   --bold-modifier: 100;
   /* Icon */
@@ -797,6 +798,18 @@ body {
   --pill-tag-weight: var(--font-semibold);
   /* Slider */
   --slider-track-height: 5px;
+  /* Tab */
+  --tab-font-size: var(--font-ui-small);
+  --tab-font-weight: var(--font-normal);
+  --tab-outline-width: 1px;
+  --tab-curve: 6px;
+  --tab-radius: var(--radius-s);
+  --tab-radius-active: 6px 6px 0 0;
+  --tab-width: 200px;
+  --tab-max-width: 320px;
+  --tab-stacked-pane-width: 700px;
+  --tab-stacked-header-width: var(--header-height);
+  --tab-stacked-font-size: var(--font-ui-small);
   /* Text Input */
   --input-height: 32px;
   --input-radius: var(--button-radius);
@@ -1225,6 +1238,16 @@ body.is-mobile {
                                0px 1px 2px 0px rgba(0, 0, 0, 0.1),
                                0px 0px 0px 6px rgba(0, 0, 0, 0.05);
   /* Tab */
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-muted);
+  --tab-text-color-focused-highlighted: var(--text-accent);
+  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-container-background: var(--background-secondary);
+  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-outline-color: var(--color-l-gray-70);
   --tab-bg: transparent;
   --tab-active-bg: var(--background-primary);
   --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
@@ -1907,6 +1930,16 @@ body.is-mobile {
                                   0px 1px 2px 0px rgba(0, 0, 0, 0.5),
                                   0px 0px 0px 6px rgba(255, 255, 255, 0.08);
   /* Tab */
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-muted);
+  --tab-text-color-focused-highlighted: var(--text-accent);
+  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-container-background: var(--background-secondary);
+  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-outline-color: var(--color-d-gray-70);
   --tab-bg: transparent;
   --tab-active-bg: var(--background-primary);
   --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
@@ -3185,31 +3218,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb {
 }
 
 /*────────── Tabs ──────────*/
-body {
-  --tab-background-active: var(--background-primary);
-  --tab-text-color: var(--text-faint);
-  --tab-text-color-active: var(--text-muted);
-  --tab-text-color-focused: var(--text-muted);
-  --tab-text-color-focused-active: var(--text-muted);
-  --tab-text-color-focused-highlighted: var(--text-accent);
-  --tab-text-color-focused-active-current: var(--text-normal);
-  --tab-font-size: var(--font-ui-small);
-  --tab-font-weight: inherit;
-  --tab-container-background: var(--background-secondary);
-  --tab-divider-color: var(--background-modifier-border-hover);
-  --tab-outline-color: var(--color-l-gray-70);
-  --tab-outline-width: 1px;
-  --tab-curve: 6px;
-  --tab-radius: var(--radius-s);
-  --tab-radius-active: 6px 6px 0 0;
-  --tab-width: 200px;
-  --tab-max-width: 320px;
-  /* Stacked tabs */
-  --tab-stacked-pane-width: 700px;
-  --tab-stacked-header-width: var(--header-height);
-  --tab-stacked-font-size: var(--font-ui-small);
-}
-
 body:not(.is-phone) .mod-root .workspace-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
   border-radius: var(--file-border-radius);
 }
@@ -4244,6 +4252,13 @@ a:active {
   text-decoration-color: var(--link-external-decoration-color-hover);
 }
 
+.external-link {
+  background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(136, 136, 136)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'%3E%3C/line%3E%3Cpolyline points='7 7 17 7 17 17'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: calc(var(--font-text-size) + 0.2em), 1em;
+  background-position-x: right;
+  background-position-y: center;
+}
+
 /*────────── Emphasis ──────────*/
 body u {
   text-underline-offset: var(--link-underline-offset);
@@ -4756,11 +4771,11 @@ a.tag:active {
 }
 #calendar-container .title .month {
   color: var(--pmr-cal-month-color);
-  font-weight: var(--font-normal);
+  font-weight: var(--font-semibold);
 }
 #calendar-container .title .year {
   color: var(--pmr-cal-year-color);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-normal);
 }
 #calendar-container .right-nav {
   align-items: center;
@@ -4851,7 +4866,7 @@ a.tag:active {
 }
 .kanban-plugin__lane-title-count:is(div) {
   font-size: 0.8em;
-  font-weight: 500;
+  font-weight: var(--font-semibold);
   font-variant: tabular-nums;
   color: var(--kanban-title-count-color);
   background: var(--kanban-title-count-bg);
@@ -4955,22 +4970,5 @@ a.tag:active {
 .kanban-plugin__item-postfix-button[aria-label=Cancel]:active {
   opacity: 0.8;
 }
-
-/*───────────────────────────────────
-
-STYLE SETTINGS FOR OBSIDIAN
-
-Read more at
-https://git.new/primary/obsidian
-
-────────────────────────────────────
-
-@settings
-
-name: Primary Theme Settings
-id: primary-obsidian
-settings:
-
-───────────────────────────────────*/
 
 /*# sourceMappingURL=main.css.map */

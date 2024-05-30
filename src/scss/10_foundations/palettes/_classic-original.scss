@@ -73,9 +73,10 @@ body {
                             "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
     --cascadia-font-features:   "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
 
-    --font-medium: 500;
+    --font-normal: 400;
+    --font-medium: 400;
     --font-semibold: 500;
-    --font-bold: 500;
+    --font-bold: 550;
 
     --bold-italic-weight: 500;
     --bold-modifier: 100;
@@ -184,6 +185,21 @@ body {
 
     /* Slider */
     --slider-track-height: 5px;
+
+    /* Tab */
+    --tab-font-size: var(--font-ui-small);
+    --tab-font-weight: var(--font-normal);
+    --tab-outline-width: 1px;
+    --tab-curve: 6px;
+    --tab-radius: var(--radius-s);
+    --tab-radius-active: 6px 6px 0 0;
+    --tab-width: 200px;
+    --tab-max-width: 320px;
+
+    // Stacked Tabs
+    --tab-stacked-pane-width: 700px;
+    --tab-stacked-header-width: var(--header-height);
+    --tab-stacked-font-size: var(--font-ui-small);
 
     /* Text Input */
     --input-height: 32px;
@@ -719,6 +735,18 @@ body {
                                  0px 0px 0px 6px rgba(0, 0, 0, 0.05);
 
     /* Tab */
+    --tab-background-active: var(--background-primary);
+    --tab-text-color: var(--text-faint);
+    --tab-text-color-active: var(--text-muted);
+    --tab-text-color-focused: var(--text-muted);
+    --tab-text-color-focused-active: var(--text-muted);
+    --tab-text-color-focused-highlighted: var(--text-accent);
+    --tab-text-color-focused-active-current: var(--text-normal);
+
+    --tab-container-background: var(--background-secondary);
+    --tab-divider-color: var(--background-modifier-border-hover);
+    --tab-outline-color: var(--color-l-gray-70);
+
     --tab-bg: transparent;
     --tab-active-bg: var(--background-primary);
     --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
@@ -1563,6 +1591,18 @@ body {
                                     0px 0px 0px 6px rgba(255, 255, 255, 0.08);
 
     /* Tab */
+    --tab-background-active: var(--background-primary);
+    --tab-text-color: var(--text-faint);
+    --tab-text-color-active: var(--text-muted);
+    --tab-text-color-focused: var(--text-muted);
+    --tab-text-color-focused-active: var(--text-muted);
+    --tab-text-color-focused-highlighted: var(--text-accent);
+    --tab-text-color-focused-active-current: var(--text-normal);
+
+    --tab-container-background: var(--background-secondary);
+    --tab-divider-color: var(--background-modifier-border-hover);
+    --tab-outline-color: var(--color-d-gray-70);
+
     --tab-bg: transparent;
     --tab-active-bg: var(--background-primary);
     --tab-active-shadow:    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
