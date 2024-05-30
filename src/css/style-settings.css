@@ -4,45 +4,77 @@ name: Primary Theme Settings
 id: primary-theme
 settings:
 	-
-		id: readme-title
+		id: readme-guide
 		type: heading
 		level: 1
 		collapsed: true
 		title: How To Use
     -
-        id: readme-one
+        id: readme-content
         type: info-text
         markdown: true
-        heading: Theme Features
-        description: The [Theme Features Guide](https://github.com/primary-theme/obsidian) includes how-to’s on using Alternative Checkboxes, cssclasses for your notes, supported Callout types, and more — all provided by the theme.
+        description: 📚 Visit the [Full Guide](https://github.com/primary-theme/obsidian) for the complete documentation including theme features, font guides, customization guide and more.
     -
-        id: readme-two
+        id: readme-content
         type: info-text
         markdown: true
-        heading: Supported Plugins
-        description: View the list of [Supported Plugins](https://github.com/primary-theme/obsidian). You may also contribute to support your favorite plugin.
+        description: 🎨 The [Presets Library](https://github.com/primary-theme/obsidian) give you a completely new look to Primary while keeping its [Core Design Principles](https://github.com/primary-theme/obsidian).
     -
-        id: readme-three
+        id: readme-content
         type: info-text
         markdown: true
-        heading: Font Guide and Recommendations
-        description: View a list of [Recommended Fonts](https://github.com/primary-theme/obsidian) and [Guide](https://github.com/primary-theme/obsidian) on implementing fonts for multi-lingual support.
+        description: 🖼️ Here's a [Library of Curated Wallpapers](https://github.com/primary-theme/obsidian) to go with your theme.
     -
-        id: readme-four
+        id: readme-content
         type: info-text
         markdown: true
-        heading: Primary Color Palette
-        description: You may choose colors from the [Primary Palette](https://github.com/primary-theme/obsidian) if you’d like to make some adjustments but stay within the color scheme. Don't see a color you like? Read the [Guide on Finding your Own Colors](https://github.com/primary-theme/obsidian) that fit with Primary's color scheme.
+        description: 🎯 Check out the [Roadmap](https://git.new/primary/project-tracker) to get a view of Primary's Development.
+	-
+		id: interface
+		type: heading
+		level: 1
+		collapsed: true
+		title: Interface
+	-
+		id: notes-files
+		type: heading
+		level: 1
+		collapsed: true
+		title: Notes and Files
+	-
+		id: graph
+		type: heading
+		level: 1
+		collapsed: true
+		title: Graph
+	-
+		id: advanced
+		type: heading
+		level: 1
+		collapsed: true
+		title: Advanced
     -
-        id: readme-five
-        type: info-text
-        markdown: true
-        heading: Primary Theme Presets
-        description: The [Primary Theme Presets Library](https://github.com/primary-theme/obsidian) give you a completely new look to Primary while keeping its [Core Design Principles](https://github.com/primary-theme/obsidian).
+		id: readme-support
+		type: heading
+		level: 1
+		collapsed: true
+		title: Support Primary's Development
     -
-        id: readme-six
+        id: readme-content
         type: info-text
         markdown: true
-        heading: Other Resources
-        description: Here's a [Library of Curated Wallpapers](https://github.com/primary-theme/obsidian) to go with your theme. Primary’s Color Schemes are also available on other Apps.
+        title: 💗 Make a Donation on Ko-fi
+        description: Visit [Primary's Ko-fi Page](https://dub.sh/primary/ko-fi) to choose between becoming a monthly member (for member benefits) or making a one-time donation!
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        title: ⭐ Star the Theme on Github
+        description: Visit [Primary's Github Page](https://git.new/primary/obsidian) and consider starring the theme to show your appreciation!
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        title: 🐛 Submit an Issue or Feature Request!
+        description: Visit [Primary's Github Issue Page](https://git.new/primary/obsidian) to submit an issue or feature request. No Github account? Send me a message through [Twitter](https://dub.sh/twitter/mei) or directly via [Email](mailto:contact.ceciliamay@gmail.com).
 */
