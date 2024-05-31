@@ -1,5 +1,12 @@
 /*────────── Style Settings by mgmeyers ──────────*/
 
+// Style Settings on .mod-root
+.workspace-leaf-content[data-type="style-settings"] .view-content > div {
+    width: var(--file-line-width);
+    max-width: var(--file-max-line-width);
+    margin: 0 auto;
+}
+
 // Collapse Indicator
 .style-settings-collapse-indicator {
     top: unset;
@@ -79,7 +86,6 @@
 }
 
 // Setting Item Alternating Colors when Open
-
 .setting-item[data-level]:not(.is-collapsed):nth-child(3n+1) {
     border-color: color-mix(in srgb, var(--alternating-color-1) 20%, var(--background-primary));
 
@@ -157,9 +163,31 @@
 }
 
 // Style Settings Components
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+    flex-direction: row;
+    align-items: center;
+}
+
+.themed-color-wrapper > div + div {
+    margin-top: unset;
+    margin-left: var(--size-4-2);
+}
+
+.view-content .style-settings-container
+.setting-item:not(.setting-item-heading) .setting-item-control {
+    padding-top: unset;
+}
+
+// pickr Button
 .themed-color-wrapper > div {
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--radius-m);
+}
+
+.pickr .pcr-button,
+.pickr .pcr-button::before,
+.pickr .pcr-button::after {
+    border-radius: 1em;
 }
 
 .pickr-reset > button[aria-label="Restore default"] {
