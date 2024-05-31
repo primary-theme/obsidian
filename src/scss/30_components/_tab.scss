@@ -36,9 +36,10 @@ body:not(.is-phone) .mod-root .workspace {
 
         // Active Tabs
         &.is-active {
+            // Tab Curves
             &::before,
             &::after {
-                visibility: hidden;
+                display: none;
             }
     
             background: var(--tab-active-bg);
@@ -324,6 +325,16 @@ body:not(.is-phone) .mod-root .workspace {
             padding-bottom: var(--size-2-2);
             margin-inline-end: var(--size-4-3);
         }
+    }
+}
+
+// Sidebar Tabs
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header {
+    border-radius: var(--radius-m);
+    
+    &-container-inner {
+        padding-bottom: 6px;
     }
 }
 

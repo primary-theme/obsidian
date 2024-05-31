@@ -36,6 +36,31 @@ settings:
 		collapsed: true
 		title: Interface
 	-
+		id: interface_color-scheme
+		type: heading
+		level: 2
+		collapsed: true
+		title: Color Schemes
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Coming Soon!
+	-
+		id: interface_animations
+		type: heading
+		level: 2
+		collapsed: true
+		title: Animations
+	-
+		id: zero-tab-anim
+		type: class-toggle
+		title: Remove Jumpy Tab Animations
+	-
+		id: zero-popup-popdown
+		type: class-toggle
+		title: Remove Popup and Pop Down Animations
+	-
 		id: notes-files
 		type: heading
 		level: 1
@@ -47,6 +72,94 @@ settings:
 		level: 1
 		collapsed: true
 		title: Graph
+    -
+        id: graph-node
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Resolved Note Node Color
+        description: Color of existing notes
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: graph-node-unresolved
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Unresolved Note Node Color
+        description: Color of notes that don't exist (unresolved backlinks)
+        default-light: 'hsla(43, 83%, 57%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
+    - 
+        id: graph-node-unresolved-opacity
+        type: variable-number
+        title: Unresolved Note Node Opacity
+        description: Opacity of nodes that don't exist (unresolved backlinks). Use a number that is less than or equal to 1, but more than or equal to 0.
+        default: 1
+    -
+        id: graph-node-tag
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Tag Node Color
+        default-light: 'hsla(4, 72%, 55%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: graph-node-attachment
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Attachment Node Color
+        default-light: 'hsla(148, 30%, 65%, 1)'
+        default-dark: 'hsla(155, 78%, 29%, 1)'
+    -
+        id: graph-node-focused
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Active File Node Color
+        default-light: 'hsla(31, 45%, 24%, 1)'
+        default-dark: 'hsla(34, 39%, 74%, 1)'
+    -
+        id: graph-node-highlight-fill
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Hovered Node Color
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(34, 31%, 68%, 1)'
+    -
+        id: graph-node-highlight-line
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Hovered Node Line Color
+        default-light: 'hsla(34, 37%, 70%, 1)'
+        default-dark: 'hsla(33, 27%, 30%, 1)'
+    -
+        id: graph-text
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Text Color
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: graph-line
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Line Color
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(37, 38%, 83%, 1)'
+    -
+        id: graph-arrow
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Arrow Color
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
 	-
 		id: canvas
 		type: heading
@@ -59,6 +172,11 @@ settings:
 		level: 1
 		collapsed: true
 		title: Advanced
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Coming Soon!
     -
 		id: readme-support
 		type: heading
