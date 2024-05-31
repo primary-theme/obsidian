@@ -851,6 +851,8 @@ body {
   --code-radius: var(--radius-m);
   --inline-code-radius: var(--radius-s);
   /* File */
+  --file-line-width: 40rem;
+  --file-max-line-width: 88%;
   --header-height: 46px;
   --file-tab-gap: 0px;
   --tab-status-radius: var(--radius-s);
@@ -4936,6 +4938,12 @@ a.tag:active {
 }
 
 /*────────── Style Settings by mgmeyers ──────────*/
+.workspace-leaf-content[data-type=style-settings] .view-content > div {
+  width: var(--file-line-width);
+  max-width: var(--file-max-line-width);
+  margin: 0 auto;
+}
+
 .style-settings-collapse-indicator {
   top: unset;
 }
@@ -5075,9 +5083,29 @@ a.tag:active {
   margin-top: 0;
 }
 
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+  flex-direction: row;
+  align-items: center;
+}
+
+.themed-color-wrapper > div + div {
+  margin-top: unset;
+  margin-left: var(--size-4-2);
+}
+
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) .setting-item-control {
+  padding-top: unset;
+}
+
 .themed-color-wrapper > div {
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-m);
+}
+
+.pickr .pcr-button,
+.pickr .pcr-button::before,
+.pickr .pcr-button::after {
+  border-radius: 1em;
 }
 
 .pickr-reset > button[aria-label="Restore default"] {

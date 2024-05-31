@@ -248,6 +248,9 @@ body {
     --inline-code-radius: var(--radius-s);
 
     /* File */
+    --file-line-width: 40rem;
+    --file-max-line-width: 88%;
+
     --header-height: 46px;
     --file-tab-gap: 0px;
     --tab-status-radius: var(--radius-s);
