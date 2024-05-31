@@ -5,6 +5,10 @@
     top: unset;
 }
 
+.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+    margin-left: 0;
+}
+
 .style-settings-collapse-indicator > svg {
     height: 11px;
     width: 11px;
@@ -134,16 +138,21 @@
 }
 
 .style-settings-container {
-    animation: 0.4s styleSettingsSlideDown forwards;
+    animation: var(--anim-popdown);
 
     &:not(.style-settings-heading[data-level="0"] + .style-settings-container) {
         background: var(--style-settings-container-bg);
-        padding:var(--size-4-2)
-                var(--size-4-4)
-                0
-                calc(var(--size-4-4) * 1.2);
+        padding:var(--size-4-4) var(--size-4-4);
         border: 1px solid var(--background-modifier-border);
         border-radius: var(--radius-m);
+    }
+
+    .setting-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .setting-item:first-child.setting-item-heading {
+        margin-top: 0;
     }
 }
 
@@ -170,4 +179,20 @@
         padding: 0;
         box-shadow: none;
     }
+}
+
+/*────────── Style Settings: Interface ──────────*/
+
+body.zero-tab-anim {
+    .workspace-tab-header.workspace-tab-header:not(.is-active),
+    .workspace-tab-header.workspace-tab-header:not(.is-active):hover,
+    .workspace-tab-header.workspace-tab-header:not(.is-active):active {
+        transition: transform none;
+        transform: unset;
+    }
+}
+
+body.zero-popup-popdown {
+    --anim-popup: none;
+    --anim-popdown: none;
 }

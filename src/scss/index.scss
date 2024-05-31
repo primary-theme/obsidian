@@ -1,5 +1,5 @@
 @use '10_foundations/icon';
-@use '10_foundations/pmr-custom-icons';
+@use '10_foundations/custom-icons';
 @use '10_foundations/typography';
 
 @use '10_foundations/palettes/classic-original';
@@ -36,7 +36,7 @@
 @use '40_editor/embed';
 @use '40_editor/file';
 @use '40_editor/link';
-@use '40_editor/pmr-emphasis';
+@use '40_editor/emphasis';
 @use '40_editor/gutter';
 @use '40_editor/properties';
 @use '40_editor/tag';
