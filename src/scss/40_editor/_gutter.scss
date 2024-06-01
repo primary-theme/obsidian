@@ -1,7 +1,16 @@
 /*────────── Gutter ──────────*/
 
-// Activeline Gutter Highlight
-// (does not highlight activeline)
+// Gutter Placement
+.cm-contentContainer {
+    @container (width > 48rem) {
+        .cm-gutters {
+            position: absolute;
+            margin-inline-start: 0.75rem;
+        }
+    }
+}
+
+// Activeline Gutter Number Highlight
 .cm-gutterElement {
     font-size: calc(var(--font-ui-smaller) - 1px);
     color: var(--gutter-color);

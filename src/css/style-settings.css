@@ -29,6 +29,11 @@ settings:
         type: info-text
         markdown: true
         description: 🎯 Check out the [Roadmap](https://git.new/primary/project-tracker) to get a view of Primary's Development
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: ⚫ If you want to hide elements, best to use the Hider Plugin by kepano. Primary pairs well with it for an even more minimal look.
 	-
 		id: interface
 		type: heading
@@ -61,11 +66,55 @@ settings:
 		type: class-toggle
 		title: Remove Popup and Pop Down Animations
 	-
+		id: interface_ribbon
+		type: heading
+		level: 2
+		collapsed: true
+		title: Ribbon
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Coming Soon!
+	-
+		id: interface_editor
+		type: heading
+		level: 2
+		collapsed: true
+		title: Editor
+    -
+		id: file-header-hover
+		type: class-toggle
+		title: File Header — Only Show on Hover
+	-
+		id: interface_editor
+		type: heading
+		level: 2
+		collapsed: true
+		title: Status Bar
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Coming Soon!
+	-
 		id: notes-files
 		type: heading
 		level: 1
 		collapsed: true
 		title: Notes and Files
+	-
+		id: canvas
+		type: heading
+		level: 1
+		collapsed: true
+		title: Canvas
+	-
+		id: file-explorer
+		type: heading
+		level: 1
+		collapsed: true
+		title: File Explorer
 	-
 		id: graph
 		type: heading
@@ -160,12 +209,6 @@ settings:
         title: Arrow Color
         default-light: 'hsla(31, 23%, 50%, 1)'
         default-dark: 'hsla(34, 24%, 40%, 1)'
-	-
-		id: canvas
-		type: heading
-		level: 1
-		collapsed: true
-		title: Canvas
 	-
 		id: advanced
 		type: heading
