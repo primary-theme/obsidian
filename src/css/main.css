@@ -792,6 +792,7 @@ body {
   --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
   --close-button-radius: var(--radius-l);
   --copy-code-button-radius: var(--radius-s);
+  --button-opacity-active: 0.5;
   /* Dropdown */
   --dropdown-height: calc(
                           var(--font-ui-small) +
@@ -2793,7 +2794,7 @@ button[disabled=true] {
 }
 .document-search-close-button:active,
 .modal-close-button:active {
-  opacity: 0.8;
+  opacity: var(--button-opacity-active);
 }
 
 .document-search-close-button {
@@ -4213,7 +4214,7 @@ body.is-mobile .empty-state-action:hover {
   transform: unset;
 }
 body.is-mobile .empty-state-action:active {
-  opacity: 0.5;
+  opacity: var(--button-opacity-active);
   transform: unset;
 }
 
@@ -4613,7 +4614,7 @@ input[type=number],
   opacity: 1;
 }
 .multi-select-pill:hover .multi-select-pill-remove-button:active {
-  opacity: 0.5;
+  opacity: var(--button-opacity-active);
 }
 
 .metadata-property[data-property-key=tags] .multi-select-pill {
@@ -4638,7 +4639,7 @@ input[type=number],
   opacity: 1;
 }
 .metadata-property[data-property-key=tags] .multi-select-pill:nth-child(3n+1) .multi-select-pill-remove-button:active {
-  opacity: 0.5;
+  opacity: var(--button-opacity-active);
 }
 .metadata-property[data-property-key=tags] .multi-select-pill:nth-child(3n+2) {
   color: var(--pill-tag-color-2);
@@ -4654,7 +4655,7 @@ input[type=number],
   opacity: 1;
 }
 .metadata-property[data-property-key=tags] .multi-select-pill:nth-child(3n+2) .multi-select-pill-remove-button:active {
-  opacity: 0.5;
+  opacity: var(--button-opacity-active);
 }
 .metadata-property[data-property-key=tags] .multi-select-pill:nth-child(3n+3) {
   color: var(--pill-tag-color-3);
@@ -4670,7 +4671,7 @@ input[type=number],
   opacity: 1;
 }
 .metadata-property[data-property-key=tags] .multi-select-pill:nth-child(3n+3) .multi-select-pill-remove-button:active {
-  opacity: 0.5;
+  opacity: var(--button-opacity-active);
 }
 
 @container (width < 250px) {
@@ -5146,7 +5147,7 @@ a.tag:active {
   background: var(--background-modifier-error-hover);
 }
 .kanban-plugin__item-postfix-button[aria-label=Cancel]:active {
-  opacity: 0.8;
+  opacity: var(--button-opacity-active);
 }
 
 /*────────── Style Settings by mgmeyers ──────────*/

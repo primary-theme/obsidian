@@ -230,7 +230,7 @@ body.is-mobile {
             }
     
             &:active {
-                opacity: 0.5;
+                opacity: var(--button-opacity-active);
                 transform: unset;
             }
         }
