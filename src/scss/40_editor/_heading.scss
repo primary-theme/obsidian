@@ -1,0 +1,98 @@
+/*────────── Headings ──────────*/
+
+// Adds additional styling option for Headings
+h1,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h1 {
+    text-align: var(--h1-text-align);
+    letter-spacing: var(--h1-letter-spacing);
+    text-transform: var(--h1-text-transform);
+    background: var(--h1-bg-color);
+    border-width: var(--h1-border-width);
+    border-style: var(--h1-border-style);
+    border-top-color: var(--h1-border-top-color);
+    border-right-color: var(--h1-border-right-color);
+    border-bottom-color: var(--h1-border-bottom-color);
+    border-left-color: var(--h1-border-left-color);
+    border-radius: var(--h1-border-radius);
+}
+
+h2,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h2 {
+    text-align: var(--h2-text-align);
+    letter-spacing: var(--h2-letter-spacing);
+    text-transform: var(--h2-text-transform);
+    background: var(--h2-bg-color);
+    border-width: var(--h2-border-width);
+    border-style: var(--h2-border-style);
+    border-top-color: var(--h2-border-top-color);
+    border-right-color: var(--h2-border-right-color);
+    border-bottom-color: var(--h2-border-bottom-color);
+    border-left-color: var(--h2-border-left-color);
+    border-radius: var(--h2-border-radius);
+}
+
+h3,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h3 {
+    text-align: var(--h3-text-align);
+    letter-spacing: var(--h3-letter-spacing);
+    text-transform: var(--h3-text-transform);
+    background: var(--h3-bg-color);
+    border-width: var(--h3-border-width);
+    border-style: var(--h3-border-style);
+    border-top-color: var(--h3-border-top-color);
+    border-right-color: var(--h3-border-right-color);
+    border-bottom-color: var(--h3-border-bottom-color);
+    border-left-color: var(--h3-border-left-color);
+    border-radius: var(--h3-border-radius);
+}
+
+h4,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h4 {
+    text-align: var(--h4-text-align);
+    letter-spacing: var(--h4-letter-spacing);
+    text-transform: var(--h4-text-transform);
+    background: var(--h4-bg-color);
+    border-width: var(--h4-border-width);
+    border-style: var(--h4-border-style);
+    border-top-color: var(--h4-border-top-color);
+    border-right-color: var(--h4-border-right-color);
+    border-bottom-color: var(--h4-border-bottom-color);
+    border-left-color: var(--h4-border-left-color);
+    border-radius: var(--h4-border-radius);
+}
+
+h5,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h5 {
+    text-align: var(--h5-text-align);
+    letter-spacing: var(--h5-letter-spacing);
+    text-transform: var(--h5-text-transform);
+    background: var(--h5-bg-color);
+    border-width: var(--h5-border-width);
+    border-style: var(--h5-border-style);
+    border-top-color: var(--h5-border-top-color);
+    border-right-color: var(--h5-border-right-color);
+    border-bottom-color: var(--h5-border-bottom-color);
+    border-left-color: var(--h5-border-left-color);
+    border-radius: var(--h5-border-radius);
+}
+
+h6,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h6 {
+    text-align: var(--h6-text-align);
+    letter-spacing: var(--h6-letter-spacing);
+    text-transform: var(--h6-text-transform);
+    background: var(--h6-bg-color);
+    border-width: var(--h6-border-width);
+    border-style: var(--h6-border-style);
+    border-top-color: var(--h6-border-top-color);
+    border-right-color: var(--h6-border-right-color);
+    border-bottom-color: var(--h6-border-bottom-color);
+    border-left-color: var(--h6-border-left-color);
+    border-radius: var(--h6-border-radius);
+}
