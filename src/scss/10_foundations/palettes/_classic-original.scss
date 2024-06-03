@@ -177,6 +177,8 @@ body {
     --close-button-radius: var(--radius-l);
     --copy-code-button-radius: var(--radius-s);
 
+    --button-opacity-active: 0.5;
+
     /* Dropdown */
     --dropdown-height:  calc(
                             var(--font-ui-small) + 

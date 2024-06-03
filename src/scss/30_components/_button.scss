@@ -120,7 +120,7 @@ button[disabled="true"] {
     }
     
     &:active {
-        opacity: 0.8;
+        opacity: var(--button-opacity-active);
     }
 }
 
