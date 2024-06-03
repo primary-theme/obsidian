@@ -315,3 +315,72 @@ body.sb-word-count-only {
         display: none;
     }
 }
+
+/*────────── Style Settings: Notes and Files ──────────*/
+
+/* Headings */
+body.h1-vt-align-center {
+    .cm-s-obsidian .cm-line.HyperMD-header {
+        padding: unset;
+    }
+
+    .cm-s-obsidian .cm-line.HyperMD-header-1 {
+        padding-top: calc(var(--p-spacing) / 2);
+        padding-bottom: calc(var(--p-spacing) / 2);
+    }
+}
+
+body.h2-vt-align-center {
+    .cm-s-obsidian .cm-line.HyperMD-header {
+        padding: unset;
+    }
+    
+    .cm-s-obsidian .cm-line.HyperMD-header-2 {
+        padding-top: calc(var(--p-spacing) / 2);
+        padding-bottom: calc(var(--p-spacing) / 2);
+    }
+}
+
+body.h3-vt-align-center {
+    .cm-s-obsidian .cm-line.HyperMD-header {
+        padding: unset;
+    }
+    
+    .cm-s-obsidian .cm-line.HyperMD-header-3 {
+        padding-top: calc(var(--p-spacing) / 2);
+        padding-bottom: calc(var(--p-spacing) / 2);
+    }
+}
+
+body.h4-vt-align-center {
+    .cm-s-obsidian .cm-line.HyperMD-header {
+        padding: unset;
+    }
+    
+    .cm-s-obsidian .cm-line.HyperMD-header-4 {
+        padding-top: calc(var(--p-spacing) / 2);
+        padding-bottom: calc(var(--p-spacing) / 2);
+    }
+}
+
+body.h5-vt-align-center {
+    .cm-s-obsidian .cm-line.HyperMD-header {
+        padding: unset;
+    }
+    
+    .cm-s-obsidian .cm-line.HyperMD-header-5 {
+        padding-top: calc(var(--p-spacing) / 2);
+        padding-bottom: calc(var(--p-spacing) / 2);
+    }
+}
+
+body.h6-vt-align-center {
+    .cm-s-obsidian .cm-line.HyperMD-header {
+        padding: unset;
+    }
+    
+    .cm-s-obsidian .cm-line.HyperMD-header-6 {
+        padding-top: calc(var(--p-spacing) / 2);
+        padding-bottom: calc(var(--p-spacing) / 2);
+    }
+}

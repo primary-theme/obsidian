@@ -19,8 +19,7 @@ a {
     }
 
     &:active {
-        color: var(--link-ahref-color-active);
-        text-decoration-color: var(--link-ahref-decoration-color-active);
+        opacity: var(--link-opacity-active);
     }
 }
 
@@ -38,8 +37,7 @@ a {
     }
 
     &:active {
-        color: var(--link-color-active);
-        text-decoration-color: var(--link-decoration-color-active);
+        opacity: var(--link-opacity-active);
     }
 
     &.is-unresolved {
@@ -53,8 +51,7 @@ a {
         }
 
         &:active {
-            color: var(--link-unresolved-color-active);
-            text-decoration-color: var(--link-unresolved-decoration-color-active);
+            opacity: var(--link-opacity-active);
         }
     }
 }
@@ -72,9 +69,8 @@ a {
         }
 
         &:active {
-            color: var(--link-unresolved-color-active);
             text-underline-offset: var(--link-underline-offset);
-            text-decoration-color: var(--link-unresolved-decoration-color-active);
+            opacity: var(--link-opacity-active);
         }
     }
 
@@ -90,9 +86,8 @@ a {
         }
     
         &:active {
-            color: var(--link-color-active);
             text-underline-offset: var(--link-underline-offset);
-            text-decoration-color: var(--link-decoration-color-active);
+            opacity: var(--link-opacity-active);
         }
     }
 }
@@ -113,9 +108,8 @@ a {
     }
 
     &:active {
-        color: var(--link-external-color-active);
         text-underline-offset: var(--link-underline-offset);
-        text-decoration-color: var(--link-external-decoration-color-hover);
+        opacity: var(--link-opacity-active);
     }
 }
 

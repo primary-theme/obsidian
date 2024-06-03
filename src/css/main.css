@@ -856,6 +856,8 @@ body {
   /* Code */
   --code-radius: var(--radius-m);
   --inline-code-radius: var(--radius-s);
+  /* Embeds */
+  --embed-media-border-radius: var(--radius-m);
   /* File */
   --file-line-width: 40rem;
   --file-max-line-width: 88%;
@@ -865,12 +867,50 @@ body {
   --new-tab-btn-radius: 2em;
   --file-pane-margin: 10px;
   --file-border-radius: var(--radius-l);
+  /* Headings */
+  --h1-text-align: left;
+  --h1-letter-spacing: unset;
+  --h1-text-transform: normal;
+  --h1-border-width: 0px;
+  --h1-border-style: solid;
+  --h1-border-radius: 0px;
+  --h2-text-align: left;
+  --h2-letter-spacing: unset;
+  --h2-text-transform: normal;
+  --h2-border-width: 0px;
+  --h2-border-style: solid;
+  --h2-border-radius: 0px;
+  --h3-text-align: left;
+  --h3-letter-spacing: unset;
+  --h3-text-transform: normal;
+  --h3-border-width: 0px;
+  --h3-border-style: solid;
+  --h3-border-radius: 0px;
+  --h4-text-align: left;
+  --h4-letter-spacing: unset;
+  --h4-text-transform: normal;
+  --h4-border-width: 0px;
+  --h4-border-style: solid;
+  --h4-border-radius: 0px;
+  --h5-text-align: left;
+  --h5-letter-spacing: unset;
+  --h5-text-transform: normal;
+  --h5-border-width: 0px;
+  --h5-border-style: solid;
+  --h5-border-radius: 0px;
+  --h6-text-align: left;
+  --h6-letter-spacing: unset;
+  --h6-text-transform: normal;
+  --h6-border-width: 0px;
+  --h6-border-style: solid;
+  --h6-border-radius: 0px;
   /* Horizontal Rule */
   --hr-thickness: 1px;
   /* Link */
   --link-unresolved-opacity: 1;
   --link-underline-offset: 2px;
   --link-decoration-thickness: 1.5px;
+  --link-opacity-active: 0.5;
   /* Lists */
   --indentation-guide-editing-indent: 0.975em;
   /* Properties | Metadata */
@@ -1390,13 +1430,43 @@ body.is-mobile {
   /* Gutter */
   --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
   --gutter-color-active: var(--color-l-gray-90);
-  /* Heading */
+  /* Headings */
   --h1-color: var(--color-l-gray-140);
+  --h1-bg-color: transparent;
+  --h1-border-top-color: var(--background-modifier-border);
+  --h1-border-right-color: var(--background-modifier-border);
+  --h1-border-bottom-color: var(--background-modifier-border);
+  --h1-border-left-color: var(--background-modifier-border);
   --h2-color: var(--color-l-gray-140);
+  --h2-bg-color: transparent;
+  --h2-border-top-color: var(--background-modifier-border);
+  --h2-border-right-color: var(--background-modifier-border);
+  --h2-border-bottom-color: var(--background-modifier-border);
+  --h2-border-left-color: var(--background-modifier-border);
   --h3-color: var(--color-l-gray-140);
+  --h3-bg-color: transparent;
+  --h3-border-top-color: var(--background-modifier-border);
+  --h3-border-right-color: var(--background-modifier-border);
+  --h3-border-bottom-color: var(--background-modifier-border);
+  --h3-border-left-color: var(--background-modifier-border);
   --h4-color: var(--color-l-gray-140);
+  --h4-bg-color: transparent;
+  --h4-border-top-color: var(--background-modifier-border);
+  --h4-border-right-color: var(--background-modifier-border);
+  --h4-border-bottom-color: var(--background-modifier-border);
+  --h4-border-left-color: var(--background-modifier-border);
   --h5-color: var(--color-l-gray-140);
+  --h5-bg-color: transparent;
+  --h5-border-top-color: var(--background-modifier-border);
+  --h5-border-right-color: var(--background-modifier-border);
+  --h5-border-bottom-color: var(--background-modifier-border);
+  --h5-border-left-color: var(--background-modifier-border);
   --h6-color: var(--color-l-gray-140);
+  --h6-bg-color: transparent;
+  --h6-border-top-color: var(--background-modifier-border);
+  --h6-border-right-color: var(--background-modifier-border);
+  --h6-border-bottom-color: var(--background-modifier-border);
+  --h6-border-left-color: var(--background-modifier-border);
   /* Inline Code */
   --inline-code-color: var(--color-l-red-10);
   --inline-code-bg: var(--color-l-gray-10);
@@ -1428,26 +1498,18 @@ body.is-mobile {
   --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --link-ahref-color-hover: var(--color-l-red-10);
   --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
-  --link-ahref-color-active: var(--color-l-red-30);
-  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
   --link-unresolved-color: var(--color-l-gray-80);
   --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
   --link-unresolved-color-hover: var(--color-l-gray-70);
   --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
-  --link-unresolved-color-active: var(--color-l-gray-90);
-  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
   --link-color: var(--color-l-yellow-30);
   --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
   --link-color-hover: var(--color-l-yellow-20);
   --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
-  --link-color-active: var(--color-l-yellow-40);
-  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
   --link-external-color: var(--color-l-green-30);
   --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
   --link-external-color-hover: var(--color-l-green-20);
   --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
-  --link-external-color-active: var(--color-l-green-40);
-  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
   /* Properties | Metadata */
   --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
   --metadata-tab-background: var(--background-secondary);
@@ -2095,13 +2157,43 @@ body.is-mobile {
   /* Gutter */
   --gutter-color: color-mix(in srgb, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
   --gutter-color-active: var(--color-d-gray-50);
-  /* Heading */
+  /* Headings */
   --h1-color: var(--color-d-gray-10);
+  --h1-bg-color: transparent;
+  --h1-border-top-color: var(--background-modifier-border);
+  --h1-border-right-color: var(--background-modifier-border);
+  --h1-border-bottom-color: var(--background-modifier-border);
+  --h1-border-left-color: var(--background-modifier-border);
   --h2-color: var(--color-d-gray-10);
+  --h2-bg-color: transparent;
+  --h2-border-top-color: var(--background-modifier-border);
+  --h2-border-right-color: var(--background-modifier-border);
+  --h2-border-bottom-color: var(--background-modifier-border);
+  --h2-border-left-color: var(--background-modifier-border);
   --h3-color: var(--color-d-gray-10);
+  --h3-bg-color: transparent;
+  --h3-border-top-color: var(--background-modifier-border);
+  --h3-border-right-color: var(--background-modifier-border);
+  --h3-border-bottom-color: var(--background-modifier-border);
+  --h3-border-left-color: var(--background-modifier-border);
   --h4-color: var(--color-d-gray-10);
+  --h4-bg-color: transparent;
+  --h4-border-top-color: var(--background-modifier-border);
+  --h4-border-right-color: var(--background-modifier-border);
+  --h4-border-bottom-color: var(--background-modifier-border);
+  --h4-border-left-color: var(--background-modifier-border);
   --h5-color: var(--color-d-gray-10);
+  --h5-bg-color: transparent;
+  --h5-border-top-color: var(--background-modifier-border);
+  --h5-border-right-color: var(--background-modifier-border);
+  --h5-border-bottom-color: var(--background-modifier-border);
+  --h5-border-left-color: var(--background-modifier-border);
   --h6-color: var(--color-d-gray-10);
+  --h6-bg-color: transparent;
+  --h6-border-top-color: var(--background-modifier-border);
+  --h6-border-right-color: var(--background-modifier-border);
+  --h6-border-bottom-color: var(--background-modifier-border);
+  --h6-border-left-color: var(--background-modifier-border);
   /* Inline Code */
   --inline-code-color: var(--color-d-red-20);
   --inline-code-bg: var(--color-d-gray-130);
@@ -2133,26 +2225,18 @@ body.is-mobile {
   --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
   --link-ahref-color-hover: var(--color-d-red-10);
   --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
-  --link-ahref-color-active: var(--color-d-red-30);
-  --link-ahref-decoration-color-active: color-mix(in srgb, var(--link-ahref-color-active) 22%, transparent);
   --link-unresolved-color: var(--color-d-gray-50);
   --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
   --link-unresolved-color-hover: var(--color-d-gray-40);
   --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
-  --link-unresolved-color-active: var(--color-d-gray-60);
-  --link-unresolved-decoration-color-active: color-mix(in srgb, var(--link-unresolved-color-active) 22%, transparent);
   --link-color: var(--color-d-yellow-20);
   --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
   --link-color-hover: var(--color-d-yellow-10);
   --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
-  --link-color-active: var(--color-d-yellow-30);
-  --link-decoration-color-active: color-mix(in srgb, var(--link-color-active) 22%, transparent);
   --link-external-color: var(--color-d-green-20);
   --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
   --link-external-color-hover: var(--color-d-green-10);
   --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
-  --link-external-color-active: var(--color-d-green-30);
-  --link-external-decoration-color-active: color-mix(in srgb, var(--link-external-color-active) 22%, transparent);
   /* Properties | Metadata */
   --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
   --metadata-tab-background: var(--background-secondary);
@@ -3954,7 +4038,7 @@ body {
 img,
 audio,
 video {
-  border-radius: var(--radius-m);
+  border-radius: var(--embed-media-border-radius);
 }
 
 .popover.hover-popover .markdown-embed {
@@ -4133,6 +4217,103 @@ body.is-mobile .empty-state-action:active {
   transform: unset;
 }
 
+/*────────── Headings ──────────*/
+h1,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h1 {
+  text-align: var(--h1-text-align);
+  letter-spacing: var(--h1-letter-spacing);
+  text-transform: var(--h1-text-transform);
+  background: var(--h1-bg-color);
+  border-width: var(--h1-border-width);
+  border-style: var(--h1-border-style);
+  border-top-color: var(--h1-border-top-color);
+  border-right-color: var(--h1-border-right-color);
+  border-bottom-color: var(--h1-border-bottom-color);
+  border-left-color: var(--h1-border-left-color);
+  border-radius: var(--h1-border-radius);
+}
+
+h2,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h2 {
+  text-align: var(--h2-text-align);
+  letter-spacing: var(--h2-letter-spacing);
+  text-transform: var(--h2-text-transform);
+  background: var(--h2-bg-color);
+  border-width: var(--h2-border-width);
+  border-style: var(--h2-border-style);
+  border-top-color: var(--h2-border-top-color);
+  border-right-color: var(--h2-border-right-color);
+  border-bottom-color: var(--h2-border-bottom-color);
+  border-left-color: var(--h2-border-left-color);
+  border-radius: var(--h2-border-radius);
+}
+
+h3,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h3 {
+  text-align: var(--h3-text-align);
+  letter-spacing: var(--h3-letter-spacing);
+  text-transform: var(--h3-text-transform);
+  background: var(--h3-bg-color);
+  border-width: var(--h3-border-width);
+  border-style: var(--h3-border-style);
+  border-top-color: var(--h3-border-top-color);
+  border-right-color: var(--h3-border-right-color);
+  border-bottom-color: var(--h3-border-bottom-color);
+  border-left-color: var(--h3-border-left-color);
+  border-radius: var(--h3-border-radius);
+}
+
+h4,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h4 {
+  text-align: var(--h4-text-align);
+  letter-spacing: var(--h4-letter-spacing);
+  text-transform: var(--h4-text-transform);
+  background: var(--h4-bg-color);
+  border-width: var(--h4-border-width);
+  border-style: var(--h4-border-style);
+  border-top-color: var(--h4-border-top-color);
+  border-right-color: var(--h4-border-right-color);
+  border-bottom-color: var(--h4-border-bottom-color);
+  border-left-color: var(--h4-border-left-color);
+  border-radius: var(--h4-border-radius);
+}
+
+h5,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h5 {
+  text-align: var(--h5-text-align);
+  letter-spacing: var(--h5-letter-spacing);
+  text-transform: var(--h5-text-transform);
+  background: var(--h5-bg-color);
+  border-width: var(--h5-border-width);
+  border-style: var(--h5-border-style);
+  border-top-color: var(--h5-border-top-color);
+  border-right-color: var(--h5-border-right-color);
+  border-bottom-color: var(--h5-border-bottom-color);
+  border-left-color: var(--h5-border-left-color);
+  border-radius: var(--h5-border-radius);
+}
+
+h6,
+.HyperMD-header-1.cm-line,
+.markdown-rendered h6 {
+  text-align: var(--h6-text-align);
+  letter-spacing: var(--h6-letter-spacing);
+  text-transform: var(--h6-text-transform);
+  background: var(--h6-bg-color);
+  border-width: var(--h6-border-width);
+  border-style: var(--h6-border-style);
+  border-top-color: var(--h6-border-top-color);
+  border-right-color: var(--h6-border-right-color);
+  border-bottom-color: var(--h6-border-bottom-color);
+  border-left-color: var(--h6-border-left-color);
+  border-radius: var(--h6-border-radius);
+}
+
 /*────────── Link ──────────*/
 .cm-s-obsidian span.cm-hmd-internal-link:hover,
 .cm-s-obsidian span.cm-link:hover {
@@ -4150,8 +4331,7 @@ a:hover {
   text-decoration-color: var(--link-ahref-decoration-color-hover);
 }
 a:active {
-  color: var(--link-ahref-color-active);
-  text-decoration-color: var(--link-ahref-decoration-color-active);
+  opacity: var(--link-opacity-active);
 }
 
 .markdown-rendered .internal-link,
@@ -4170,8 +4350,7 @@ a:active {
 .markdown-rendered .internal-link:active,
 .metadata-container .internal-link:active,
 .internal-link:active {
-  color: var(--link-color-active);
-  text-decoration-color: var(--link-decoration-color-active);
+  opacity: var(--link-opacity-active);
 }
 .markdown-rendered .internal-link.is-unresolved,
 .metadata-container .internal-link.is-unresolved,
@@ -4189,8 +4368,7 @@ a:active {
 .markdown-rendered .internal-link.is-unresolved:active,
 .metadata-container .internal-link.is-unresolved:active,
 .internal-link.is-unresolved:active {
-  color: var(--link-unresolved-color-active);
-  text-decoration-color: var(--link-unresolved-decoration-color-active);
+  opacity: var(--link-opacity-active);
 }
 
 .cm-hmd-internal-link .is-unresolved .cm-underline {
@@ -4203,9 +4381,8 @@ a:active {
   text-decoration-color: var(--link-unresolved-decoration-color-hover);
 }
 .cm-hmd-internal-link .is-unresolved .cm-underline:active {
-  color: var(--link-unresolved-color-active);
   text-underline-offset: var(--link-underline-offset);
-  text-decoration-color: var(--link-unresolved-decoration-color-active);
+  opacity: var(--link-opacity-active);
 }
 .cm-hmd-internal-link .cm-underline {
   color: var(--link-color);
@@ -4218,9 +4395,8 @@ a:active {
   text-decoration-color: var(--link-decoration-color-hover);
 }
 .cm-hmd-internal-link .cm-underline:active {
-  color: var(--link-color-active);
   text-underline-offset: var(--link-underline-offset);
-  text-decoration-color: var(--link-decoration-color-active);
+  opacity: var(--link-opacity-active);
 }
 
 .external-link,
@@ -4243,9 +4419,8 @@ a:active {
 .cm-link .cm-underline:active,
 .cm-url:active,
 .cm-underline:active {
-  color: var(--link-external-color-active);
   text-underline-offset: var(--link-underline-offset);
-  text-decoration-color: var(--link-external-decoration-color-hover);
+  opacity: var(--link-opacity-active);
 }
 
 .external-link {
@@ -5242,6 +5417,56 @@ body.sb-sync-only .status-bar-item:not(.plugin-sync) {
 
 body.sb-word-count-only .status-bar-item:not(.plugin-word-count) {
   display: none;
+}
+
+/*────────── Style Settings: Notes and Files ──────────*/
+/* Headings */
+body.h1-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header {
+  padding: unset;
+}
+body.h1-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header-1 {
+  padding-top: calc(var(--p-spacing) / 2);
+  padding-bottom: calc(var(--p-spacing) / 2);
+}
+
+body.h2-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header {
+  padding: unset;
+}
+body.h2-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header-2 {
+  padding-top: calc(var(--p-spacing) / 2);
+  padding-bottom: calc(var(--p-spacing) / 2);
+}
+
+body.h3-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header {
+  padding: unset;
+}
+body.h3-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header-3 {
+  padding-top: calc(var(--p-spacing) / 2);
+  padding-bottom: calc(var(--p-spacing) / 2);
+}
+
+body.h4-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header {
+  padding: unset;
+}
+body.h4-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header-4 {
+  padding-top: calc(var(--p-spacing) / 2);
+  padding-bottom: calc(var(--p-spacing) / 2);
+}
+
+body.h5-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header {
+  padding: unset;
+}
+body.h5-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header-5 {
+  padding-top: calc(var(--p-spacing) / 2);
+  padding-bottom: calc(var(--p-spacing) / 2);
+}
+
+body.h6-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header {
+  padding: unset;
+}
+body.h6-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header-6 {
+  padding-top: calc(var(--p-spacing) / 2);
+  padding-bottom: calc(var(--p-spacing) / 2);
 }
 
 /*# sourceMappingURL=main.css.map */

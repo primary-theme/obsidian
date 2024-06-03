@@ -135,6 +135,850 @@ settings:
 		collapsed: true
 		title: Notes and Files
 	-
+		id: nf_header
+		type: heading
+		level: 2
+		collapsed: true
+		title: Heading
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🎨 Visit the [Header Presets](https://github.com/) section in the Full Guide to import the Settings.
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 📖 The settings are based on CSS styling capabilities. Visit [MDN]() to learn more.
+	-
+		id: nf_header-1
+		type: heading
+		level: 3
+		collapsed: true
+		title: Heading 1
+    -
+        id: h1-size
+        type: variable-text
+        title: Font Size
+        default: 1.802em
+    -
+        id: h1-font
+        type: variable-text
+        title: Font Family
+        default: Inter
+        quotes: true
+    -
+        id: h1-weight
+        type: variable-number
+        title: Font Weight
+        default: 500
+    -
+        id: h1-style
+        type: variable-text
+        title: Font Style
+        default: normal
+    -
+        id: h1-text-align
+        type: variable-text
+        title: Text Alignment
+        description: You may choose from left, center, or right.
+        default: left
+    -
+        id: h1-letter-spacing
+        type: variable-text
+        title: Letter Spacing
+        default: 0px
+    -
+        id: h1-text-transform
+        type: variable-select
+        title: Text Transform
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Capitalize 1st letter of Each Word
+                value: capitalize
+            -
+                label: All Lowercase
+                value: lowercase
+            -
+                label: All Uppercase
+                value: uppercase
+    -
+        id: h1-line-height
+        type: variable-number
+        title: Line Height
+        description: Sets the spacing between multiple lines of text of the heading. You can use units such as px, em, rem as well.
+        default: 1.2
+    -
+        id: h1-color
+        type: variable-themed-color
+        title: Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(33, 54%, 17%, 1)'
+        default-dark: 'hsla(32, 48%, 85%, 1)'
+    -
+        id: h1-bg-color
+        type: variable-themed-color
+        title: Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0)'
+        default-dark: 'hsla(0, 0%, 0%, 0)'
+    -
+        id: h1-vt-align-center
+        type: class-toggle
+        title: Vertically Align Header to Center
+        description: If you add a background color, Obsidian has some spacing at the top for each header. Turning this on will ensure the heading has equal spacing for both top and bottom, aligning it correctly.
+    -
+        id: h1-border-width
+        type: variable-text
+        title: Border Thickness
+        description: You may also have different thickness per side in the order of top, right, bottom, right (i.e. 5px 2px 3px 4px).
+        default: 0px
+    -
+        id: h1-border-style
+        type: variable-text
+        title: Border Style
+        description: You may choose from solid, dashed, dotted, and double. Same with thickness, you can have different styles per side.
+        default: solid
+    -
+        id: h1-border-top-color
+        type: variable-themed-color
+        title: Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h1-border-right-color
+        type: variable-themed-color
+        title: Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h1-border-bottom-color
+        type: variable-themed-color
+        title: Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h1-border-left-color
+        type: variable-themed-color
+        title: Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h1-border-radius
+        type: variable-text
+        title: Roundness
+        description: Add rounding to your headings. Best to use with a background color. If you'd like to have different roundness for each corner, you can set one in the order of top-left, top-right, bottom-right, bottom-left (i.e. 4px 2px 6px 3px).
+        default: 0px
+	-
+		id: nf_header-2
+		type: heading
+		level: 3
+		collapsed: true
+		title: Heading 2
+    -
+        id: h2-size
+        type: variable-text
+        title: Font Size
+        default: 1.602em
+    -
+        id: h2-font
+        type: variable-text
+        title: Font Family
+        default: Inter
+        quotes: true
+    -
+        id: h2-weight
+        type: variable-number
+        title: Font Weight
+        default: 500
+    -
+        id: h2-style
+        type: variable-text
+        title: Font Style
+        default: normal
+    -
+        id: h2-text-align
+        type: variable-text
+        title: Text Alignment
+        description: You may choose from left, center, or right.
+        default: left
+    -
+        id: h2-letter-spacing
+        type: variable-text
+        title: Letter Spacing
+        default: 0px
+    -
+        id: h2-text-transform
+        type: variable-select
+        title: Text Transform
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Capitalize 1st letter of Each Word
+                value: capitalize
+            -
+                label: All Lowercase
+                value: lowercase
+            -
+                label: All Uppercase
+                value: uppercase
+    -
+        id: h2-line-height
+        type: variable-number
+        title: Line Height
+        description: Sets the spacing between multiple lines of text of the heading. You can use units such as px, em, rem as well.
+        default: 1.2
+    -
+        id: h2-color
+        type: variable-themed-color
+        title: Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(33, 54%, 17%, 1)'
+        default-dark: 'hsla(32, 48%, 85%, 1)'
+    -
+        id: h2-bg-color
+        type: variable-themed-color
+        title: Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0)'
+        default-dark: 'hsla(0, 0%, 0%, 0)'
+    -
+        id: h2-vt-align-center
+        type: class-toggle
+        title: Vertically Align Header to Center
+        description: If you add a background color, Obsidian has some spacing at the top for each header. Turning this on will ensure the heading has equal spacing for both top and bottom, aligning it correctly.
+    -
+        id: h2-border-width
+        type: variable-text
+        title: Border Thickness
+        description: You may also have different thickness per side in the order of top, right, bottom, right (i.e. 5px 2px 3px 4px).
+        default: 0px
+    -
+        id: h2-border-style
+        type: variable-text
+        title: Border Style
+        description: You may choose from solid, dashed, dotted, and double. Same with thickness, you can have different styles per side.
+        default: solid
+    -
+        id: h2-border-top-color
+        type: variable-themed-color
+        title: Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h2-border-right-color
+        type: variable-themed-color
+        title: Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h2-border-bottom-color
+        type: variable-themed-color
+        title: Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h2-border-left-color
+        type: variable-themed-color
+        title: Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h2-border-radius
+        type: variable-text
+        title: Roundness
+        description: Add rounding to your headings. Best to use with a background color. If you'd like to have different roundness for each corner, you can set one in the order of top-left, top-right, bottom-right, bottom-left (i.e. 4px 2px 6px 3px).
+        default: 0px
+	-
+		id: nf_header-3
+		type: heading
+		level: 3
+		collapsed: true
+		title: Heading 3
+    -
+        id: h3-size
+        type: variable-text
+        title: Font Size
+        default: 1.424em
+    -
+        id: h3-font
+        type: variable-text
+        title: Font Family
+        default: Inter
+        quotes: true
+    -
+        id: h3-weight
+        type: variable-number
+        title: Font Weight
+        default: 500
+    -
+        id: h3-style
+        type: variable-text
+        title: Font Style
+        default: normal
+    -
+        id: h3-text-align
+        type: variable-text
+        title: Text Alignment
+        description: You may choose from left, center, or right.
+        default: left
+    -
+        id: h3-letter-spacing
+        type: variable-text
+        title: Letter Spacing
+        default: 0px
+    -
+        id: h3-text-transform
+        type: variable-select
+        title: Text Transform
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Capitalize 1st letter of Each Word
+                value: capitalize
+            -
+                label: All Lowercase
+                value: lowercase
+            -
+                label: All Uppercase
+                value: uppercase
+    -
+        id: h3-line-height
+        type: variable-number
+        title: Line Height
+        description: Sets the spacing between multiple lines of text of the heading. You can use units such as px, em, rem as well.
+        default: 1.3
+    -
+        id: h3-color
+        type: variable-themed-color
+        title: Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(33, 54%, 17%, 1)'
+        default-dark: 'hsla(32, 48%, 85%, 1)'
+    -
+        id: h3-bg-color
+        type: variable-themed-color
+        title: Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0)'
+        default-dark: 'hsla(0, 0%, 0%, 0)'
+    -
+        id: h3-vt-align-center
+        type: class-toggle
+        title: Vertically Align Header to Center
+        description: If you add a background color, Obsidian has some spacing at the top for each header. Turning this on will ensure the heading has equal spacing for both top and bottom, aligning it correctly.
+    -
+        id: h3-border-width
+        type: variable-text
+        title: Border Thickness
+        description: You may also have different thickness per side in the order of top, right, bottom, right (i.e. 5px 2px 3px 4px).
+        default: 0px
+    -
+        id: h3-border-style
+        type: variable-text
+        title: Border Style
+        description: You may choose from solid, dashed, dotted, and double. Same with thickness, you can have different styles per side.
+        default: solid
+    -
+        id: h3-border-top-color
+        type: variable-themed-color
+        title: Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h3-border-right-color
+        type: variable-themed-color
+        title: Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h3-border-bottom-color
+        type: variable-themed-color
+        title: Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h3-border-left-color
+        type: variable-themed-color
+        title: Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h3-border-radius
+        type: variable-text
+        title: Roundness
+        description: Add rounding to your headings. Best to use with a background color. If you'd like to have different roundness for each corner, you can set one in the order of top-left, top-right, bottom-right, bottom-left (i.e. 4px 2px 6px 3px).
+        default: 0px
+	-
+		id: nf_header-4
+		type: heading
+		level: 3
+		collapsed: true
+		title: Heading 4
+    -
+        id: h4-size
+        type: variable-text
+        title: Font Size
+        default: 1.266em
+    -
+        id: h4-font
+        type: variable-text
+        title: Font Family
+        default: Inter
+        quotes: true
+    -
+        id: h4-weight
+        type: variable-number
+        title: Font Weight
+        default: 500
+    -
+        id: h4-style
+        type: variable-text
+        title: Font Style
+        default: normal
+    -
+        id: h4-text-align
+        type: variable-text
+        title: Text Alignment
+        description: You may choose from left, center, or right.
+        default: left
+    -
+        id: h4-letter-spacing
+        type: variable-text
+        title: Letter Spacing
+        default: 0px
+    -
+        id: h4-text-transform
+        type: variable-select
+        title: Text Transform
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Capitalize 1st letter of Each Word
+                value: capitalize
+            -
+                label: All Lowercase
+                value: lowercase
+            -
+                label: All Uppercase
+                value: uppercase
+    -
+        id: h4-line-height
+        type: variable-number
+        title: Line Height
+        description: Sets the spacing between multiple lines of text of the heading. You can use units such as px, em, rem as well.
+        default: 1.4
+    -
+        id: h4-color
+        type: variable-themed-color
+        title: Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(33, 54%, 17%, 1)'
+        default-dark: 'hsla(32, 48%, 85%, 1)'
+    -
+        id: h4-bg-color
+        type: variable-themed-color
+        title: Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0)'
+        default-dark: 'hsla(0, 0%, 0%, 0)'
+    -
+        id: h4-vt-align-center
+        type: class-toggle
+        title: Vertically Align Header to Center
+        description: If you add a background color, Obsidian has some spacing at the top for each header. Turning this on will ensure the heading has equal spacing for both top and bottom, aligning it correctly.
+    -
+        id: h4-border-width
+        type: variable-text
+        title: Border Thickness
+        description: You may also have different thickness per side in the order of top, right, bottom, right (i.e. 5px 2px 3px 4px).
+        default: 0px
+    -
+        id: h4-border-style
+        type: variable-text
+        title: Border Style
+        description: You may choose from solid, dashed, dotted, and double. Same with thickness, you can have different styles per side.
+        default: solid
+    -
+        id: h4-border-top-color
+        type: variable-themed-color
+        title: Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h4-border-right-color
+        type: variable-themed-color
+        title: Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h4-border-bottom-color
+        type: variable-themed-color
+        title: Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h4-border-left-color
+        type: variable-themed-color
+        title: Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h4-border-radius
+        type: variable-text
+        title: Roundness
+        description: Add rounding to your headings. Best to use with a background color. If you'd like to have different roundness for each corner, you can set one in the order of top-left, top-right, bottom-right, bottom-left (i.e. 4px 2px 6px 3px).
+        default: 0px
+	-
+		id: nf_header-5
+		type: heading
+		level: 3
+		collapsed: true
+		title: Heading 5
+    -
+        id: h5-size
+        type: variable-text
+        title: Font Size
+        default: 1.125em
+    -
+        id: h5-font
+        type: variable-text
+        title: Font Family
+        default: Inter
+        quotes: true
+    -
+        id: h5-weight
+        type: variable-number
+        title: Font Weight
+        default: 500
+    -
+        id: h5-style
+        type: variable-text
+        title: Font Style
+        default: normal
+    -
+        id: h5-text-align
+        type: variable-text
+        title: Text Alignment
+        description: You may choose from left, center, or right.
+        default: left
+    -
+        id: h5-letter-spacing
+        type: variable-text
+        title: Letter Spacing
+        default: 0px
+    -
+        id: h5-text-transform
+        type: variable-select
+        title: Text Transform
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Capitalize 1st letter of Each Word
+                value: capitalize
+            -
+                label: All Lowercase
+                value: lowercase
+            -
+                label: All Uppercase
+                value: uppercase
+    -
+        id: h5-line-height
+        type: variable-number
+        title: Line Height
+        description: Sets the spacing between multiple lines of text of the heading. You can use units such as px, em, rem as well.
+        default: 1
+    -
+        id: h5-color
+        type: variable-themed-color
+        title: Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(33, 54%, 17%, 1)'
+        default-dark: 'hsla(32, 48%, 85%, 1)'
+    -
+        id: h5-bg-color
+        type: variable-themed-color
+        title: Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0)'
+        default-dark: 'hsla(0, 0%, 0%, 0)'
+    -
+        id: h5-vt-align-center
+        type: class-toggle
+        title: Vertically Align Header to Center
+        description: If you add a background color, Obsidian has some spacing at the top for each header. Turning this on will ensure the heading has equal spacing for both top and bottom, aligning it correctly.
+    -
+        id: h5-border-width
+        type: variable-text
+        title: Border Thickness
+        description: You may also have different thickness per side in the order of top, right, bottom, right (i.e. 5px 2px 3px 4px).
+        default: 0px
+    -
+        id: h5-border-style
+        type: variable-text
+        title: Border Style
+        description: You may choose from solid, dashed, dotted, and double. Same with thickness, you can have different styles per side.
+        default: solid
+    -
+        id: h5-border-top-color
+        type: variable-themed-color
+        title: Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h5-border-right-color
+        type: variable-themed-color
+        title: Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h5-border-bottom-color
+        type: variable-themed-color
+        title: Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h5-border-left-color
+        type: variable-themed-color
+        title: Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h5-border-radius
+        type: variable-text
+        title: Roundness
+        description: Add rounding to your headings. Best to use with a background color. If you'd like to have different roundness for each corner, you can set one in the order of top-left, top-right, bottom-right, bottom-left (i.e. 4px 2px 6px 3px).
+        default: 0px
+	-
+		id: nf_header-6
+		type: heading
+		level: 3
+		collapsed: true
+		title: Heading 6
+    -
+        id: h6-size
+        type: variable-text
+        title: Font Size
+        default: 1em
+    -
+        id: h6-font
+        type: variable-text
+        title: Font Family
+        default: Inter
+        quotes: true
+    -
+        id: h6-weight
+        type: variable-number
+        title: Font Weight
+        default: 500
+    -
+        id: h6-style
+        type: variable-text
+        title: Font Style
+        default: normal
+    -
+        id: h6-text-align
+        type: variable-text
+        title: Text Alignment
+        description: You may choose from left, center, or right.
+        default: left
+    -
+        id: h6-letter-spacing
+        type: variable-text
+        title: Letter Spacing
+        default: 0px
+    -
+        id: h6-text-transform
+        type: variable-select
+        title: Text Transform
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Capitalize 1st letter of Each Word
+                value: capitalize
+            -
+                label: All Lowercase
+                value: lowercase
+            -
+                label: All Uppercase
+                value: uppercase
+    -
+        id: h6-line-height
+        type: variable-number
+        title: Line Height
+        description: Sets the spacing between multiple lines of text of the heading. You can use units such as px, em, rem as well.
+        default: 1
+    -
+        id: h6-color
+        type: variable-themed-color
+        title: Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(33, 54%, 17%, 1)'
+        default-dark: 'hsla(32, 48%, 85%, 1)'
+    -
+        id: h6-bg-color
+        type: variable-themed-color
+        title: Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0)'
+        default-dark: 'hsla(0, 0%, 0%, 0)'
+    -
+        id: h6-vt-align-center
+        type: class-toggle
+        title: Vertically Align Header to Center
+        description: If you add a background color, Obsidian has some spacing at the top for each header. Turning this on will ensure the heading has equal spacing for both top and bottom, aligning it correctly.
+    -
+        id: h6-border-width
+        type: variable-text
+        title: Border Thickness
+        description: You may also have different thickness per side in the order of top, right, bottom, right (i.e. 5px 2px 3px 4px).
+        default: 0px
+    -
+        id: h6-border-style
+        type: variable-text
+        title: Border Style
+        description: You may choose from solid, dashed, dotted, and double. Same with thickness, you can have different styles per side.
+        default: solid
+    -
+        id: h6-border-top-color
+        type: variable-themed-color
+        title: Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h6-border-right-color
+        type: variable-themed-color
+        title: Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h6-border-bottom-color
+        type: variable-themed-color
+        title: Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h6-border-left-color
+        type: variable-themed-color
+        title: Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: h6-border-radius
+        type: variable-text
+        title: Roundness
+        description: Add rounding to your headings. Best to use with a background color. If you'd like to have different roundness for each corner, you can set one in the order of top-left, top-right, bottom-right, bottom-left (i.e. 4px 2px 6px 3px).
+        default: 0px
+	-
+		id: nf_paragraph
+		type: heading
+		level: 2
+		collapsed: true
+		title: Paragraph
+	-
+		id: nf_list
+		type: heading
+		level: 2
+		collapsed: true
+		title: List
+	-
+		id: nf_checkbox
+		type: heading
+		level: 2
+		collapsed: true
+		title: Checkbox
+	-
+		id: nf_media
+		type: heading
+		level: 2
+		collapsed: true
+		title: Media
+    -
+        id: embed-media-border-radius
+        type: variable-text
+        title: Media Border Radius
+        description: Set border radius size for media (images, audio, video)
+        default: 8px
+	-
 		id: canvas
 		type: heading
 		level: 1
