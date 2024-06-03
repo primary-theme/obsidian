@@ -17,7 +17,7 @@
 .embedded-backlinks .backlink-pane,
 .outgoing-link-pane {
     > .tree-item-self {
-        font-size: 11px;
+        font-size: var(--font-ui-smallest);
         font-feature-settings: "calt" off;
         letter-spacing: 0.1em;
         text-transform: uppercase;

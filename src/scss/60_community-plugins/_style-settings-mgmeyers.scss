@@ -174,7 +174,23 @@
     align-items: center;
 }
 
-.themed-color-wrapper > div + div {
+.style-settings-filter-result-count {
+    font-size: var(--font-ui-smallest);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    color: var(--inline-code-color);
+    background: var(--inline-code-bg);
+    padding: var(--size-2-1) var(--size-2-2);
+    border-radius: var(--radius-s);
+    box-shadow: var(--community-item-flair-shadow);
+
+    &:empty {
+        visibility: hidden;
+    }
+}
+
+.view-content .themed-color-wrapper > div + div {
     margin-top: unset;
     margin-left: var(--size-4-2);
 }
@@ -233,6 +249,23 @@ body.zero-popup-popdown {
 }
 
 /* Editor */
+body.editor-bgpattern-linegrid {
+    .workspace-split.mod-root .view-content {
+        background-size: var(--editor-bgpattern-size);
+        background-image:
+            linear-gradient(to left, color-mix(in srgb, var(--editor-bgpattern-color) 30%, transparent) 1px, transparent 1px),
+            linear-gradient(to top, color-mix(in srgb, var(--editor-bgpattern-color) 30%, transparent) 1px, transparent 1px);
+    }
+}
+
+body.editor-bgpattern-dotgrid {
+    .workspace-split.mod-root .view-content {
+        background-size: var(--editor-bgpattern-size);
+        background-image: 
+            radial-gradient(circle, var(--editor-bgpattern-color) 1px, rgba(0, 0, 0, 0) 1px);
+    }
+}
+
 body.file-header-hover {
     .view-header {
         height: 10px;
@@ -252,5 +285,33 @@ body.file-header-hover {
                 opacity: 1;
             }
         }
+    }
+}
+
+body.active-line-highlight {
+    .cm-active {
+        background: var(--active-line-bg);
+        box-shadow: -25vw 0 var(--active-line-bg), 25vw 0 var(--active-line-bg);
+    }
+}
+
+/* Status Bar */
+body.sb-style-full {
+    .status-bar {
+        --status-bar-position: relative;
+        --status-bar-border-width: 0 0 0 0;
+        margin-top: calc(var(--file-pane-margin) * -1);
+    }
+}
+
+body.sb-sync-only {
+    .status-bar-item:not(.plugin-sync) {
+        display: none;
+    }
+}
+
+body.sb-word-count-only {
+    .status-bar-item:not(.plugin-word-count) {
+        display: none;
     }
 }

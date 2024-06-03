@@ -18,39 +18,13 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 🎨 The [Presets Library](https://github.com/primary-theme/obsidian) give you a completely new look to Primary while keeping its [Core Design Principles](https://github.com/primary-theme/obsidian)
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: 🖼️ Here's a [Library of Curated Wallpapers](https://github.com/primary-theme/obsidian) to go with your theme
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
         description: 🎯 Check out the [Roadmap](https://git.new/primary/project-tracker) to get a view of Primary's Development
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: ⚫ If you want to hide elements, best to use the Hider Plugin by kepano. Primary pairs well with it for an even more minimal look.
 	-
 		id: interface
 		type: heading
 		level: 1
 		collapsed: true
 		title: Interface
-	-
-		id: interface_color-scheme
-		type: heading
-		level: 2
-		collapsed: true
-		title: Color Schemes
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: Coming Soon!
 	-
 		id: interface_animations
 		type: heading
@@ -66,37 +40,94 @@ settings:
 		type: class-toggle
 		title: Remove Popup and Pop Down Animations
 	-
-		id: interface_ribbon
-		type: heading
-		level: 2
-		collapsed: true
-		title: Ribbon
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: Coming Soon!
-	-
 		id: interface_editor
 		type: heading
 		level: 2
 		collapsed: true
 		title: Editor
     -
+        id: interface_editor-bg
+        type: class-select
+        title: Editor Background Type
+        allowEmpty: false
+        default: editor-bg-plain
+        options:
+            -
+                label: Plain Color
+                value: editor-bg-plain
+            -
+                label: Line Grid
+                value: editor-bgpattern-linegrid
+            -
+                label: Dot Grid
+                value: editor-bgpattern-dotgrid
+    -
+        id: editor-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Editor Background Color
+        description: Sets the size of the grid, dotted grid, or image
+        default-light: 'hsla(35, 36%, 96%, 1)'
+        default-dark: 'hsla(30, 19%, 14%, 1)'
+    -
+        id: editor-bgpattern-size
+        type: variable-text
+        title: Editor Background Size for Pattern Background
+        description: Sets the size of the line grid or dot grid
+        default: 50px 50px
+    -
+        id: editor-bgpattern-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Editor Background's Pattern Color
+        description: Only available for line grid or dot grid background types. Sets the color of the line grid, dot grid. For line grid, it will take the color input and reduce it to 30% opacity.
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(31, 27%, 24%, 1)'
+    -
 		id: file-header-hover
 		type: class-toggle
 		title: File Header — Only Show on Hover
+    -
+		id: active-line-highlight
+		type: class-toggle
+		title: Toggle Active Line Highlighting
 	-
-		id: interface_editor
+		id: interface_status-bar
 		type: heading
 		level: 2
 		collapsed: true
 		title: Status Bar
     -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: Coming Soon!
+        id: interface_status-bar-style
+        type: class-select
+        title: Status Bar Style
+        allowEmpty: false
+        default: sb-style
+        options:
+            -
+                label: On Top
+                value: sb-style
+            -
+                label: Full Length
+                value: sb-style-full
+    -
+        id: interface_status-bar-item-display
+        type: class-select
+        title: Status Bar Item Visibility
+        allowEmpty: false
+        default: sb-item
+        options:
+            -
+                label: Show Everything
+                value: sb-item
+            -
+                label: Sync Only
+                value: sb-sync-only
+            -
+                label: Word Count Only
+                value: sb-word-count-only
 	-
 		id: notes-files
 		type: heading
@@ -109,12 +140,89 @@ settings:
 		level: 1
 		collapsed: true
 		title: Canvas
+    -
+        id: canvas-dot-pattern
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Dot Pattern's Color
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-card-label-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Card Label's Color
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Color 1
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-color-1
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Color 2
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-color-2
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Color 3
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-color-3
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Color 4
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-color-4
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Color 5
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-color-5
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Color 6
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
+    -
+        id: canvas-color-6
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Canvas Color 7
+        default-light: 'hsla(202, 66%, 48%, 1)'
+        default-dark: 'hsla(197, 48%, 49%, 1)'
 	-
 		id: file-explorer
 		type: heading
 		level: 1
 		collapsed: true
 		title: File Explorer
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Coming Soon!
 	-
 		id: graph
 		type: heading
@@ -231,7 +339,7 @@ settings:
         type: info-text
         markdown: true
         title: 💗 Make a Donation on Ko-fi
-        description: Visit [Primary's Ko-fi Page](https://dub.sh/primary/ko-fi) to choose between becoming a monthly member (for member benefits) or making a one-time donation!
+        description: Visit [Primary's Ko-fi Page](https://dub.sh/primary/ko-fi) and choose between becoming a monthly member (for member benefits) or making a one-time donation!
     -
         id: readme-content
         type: info-text

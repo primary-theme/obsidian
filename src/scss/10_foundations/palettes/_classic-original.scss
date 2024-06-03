@@ -101,6 +101,8 @@ body {
     --bold-italic-weight: 500;
     --bold-modifier: 100;
 
+    --font-ui-smallest: 11px;
+
     /* Icon */
     --icon-xs: 13px;
     --icon-s: 15px;
@@ -152,6 +154,7 @@ body {
                                 var(--size-4-2)
                                 var(--size-4-3);
     --button-inset-shadow-size: 2px;
+    --button-axis-offset: 2px;
     --button-radius: var(--size-4-2);
 
 
@@ -228,6 +231,12 @@ body {
     --search-clear-button-size: 12px;
 
     /*────────── Editor ──────────*/
+
+    /* Background */
+    --editor-bgpattern-size: 50px 50px;
+
+    /* Blockquote */
+    --blockquote-border-thickness: 2px;
 
     /* Callout */
     --callout-shadow-offset: 4px;
@@ -618,8 +627,6 @@ body {
                                     0px 2px 6px -1px rgba(0, 0, 0, 0.24),
                                     0px 0px 0px 3px var(--color-l-alpha-gray);
 
-    --button-axis-offset: 2px;
-
     --empty-state-action-btn-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
 
     --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
@@ -839,8 +846,14 @@ body {
     
     /*────────── Editor ──────────*/
 
+    /* Active Line */
+    --active-line-bg: var(--color-base-00);
+
+    /* Background */
+    --editor-bg-color: var(--background-primary);
+    --editor-bgpattern-color: var(--color-l-gray-60);
+
     /* Blockquote */
-    --blockquote-border-thickness: 2px;
     --blockquote-border-color: var(--background-modifier-border);
     --blockquote-background-color: var(--color-l-gray-10);
 
@@ -1061,6 +1074,7 @@ body {
     /*────────── Core Plugins ──────────*/
 
     /* Canvas */
+    --canvas-background: var(--editor-bg-color);
     --canvas-color: var(--color-gray-rgb);
     --canvas-color-1: var(--color-red-rgb);
     --canvas-color-2: var(--color-orange-rgb);
@@ -1707,7 +1721,16 @@ body {
     
     /*────────── Editor ──────────*/
 
+    /* Active Line */
+    --active-line-bg: var(--color-base-20);
+
+    /* Background */
+    --editor-bg-color: var(--background-primary);
+    --editor-bgpattern-color: var(--color-d-gray-70);
+
     /* Blockquote */
+    --blockquote-border-color: var(--background-modifier-border);
+    --blockquote-background-color: var(--color-d-gray-120);
 
     /* Callout */
     --callout-color-opacity: 32.5%;
@@ -1754,6 +1777,8 @@ body {
     --bold-italic-strikethrough-color: var(--color-d-gray-40);
 
     /* File */
+    --file-header-border: 1px solid var(--background-modifier-border);
+
     --breadcrumb-color: var(--color-d-gray-50);
     --breadcrumb-color-hover: var(--color-d-gray-50);
     --breadcrumb-bg-hover: var(--color-d-gray-80);
@@ -1943,6 +1968,8 @@ body {
     /*────────── Core Plugins ──────────*/
 
     /* Canvas */
+    --canvas-background: var(--editor-bg-color);
+
     &.theme-dark {
         --canvas-color: var(--color-gray-rgb);
     }

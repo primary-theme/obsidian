@@ -731,6 +731,7 @@ body {
   --font-bold: 550;
   --bold-italic-weight: 500;
   --bold-modifier: 100;
+  --font-ui-smallest: 11px;
   /* Icon */
   --icon-xs: 13px;
   --icon-s: 15px;
@@ -773,6 +774,7 @@ body {
                               var(--size-4-2)
                               var(--size-4-3);
   --button-inset-shadow-size: 2px;
+  --button-axis-offset: 2px;
   --button-radius: var(--size-4-2);
   --button-metadata-padding: var(--size-2-3)
                               var(--size-4-2)
@@ -835,6 +837,10 @@ body {
   --search-icon-size: 14px;
   --search-clear-button-size: 12px;
   /*────────── Editor ──────────*/
+  /* Background */
+  --editor-bgpattern-size: 50px 50px;
+  /* Blockquote */
+  --blockquote-border-thickness: 2px;
   /* Callout */
   --callout-shadow-offset: 4px;
   --callout-content-shadow-blur: 3px;
@@ -1145,7 +1151,6 @@ body.is-mobile {
                                   0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
                                   0px 2px 6px -1px rgba(0, 0, 0, 0.24),
                                   0px 0px 0px 3px var(--color-l-alpha-gray);
-  --button-axis-offset: 2px;
   --empty-state-action-btn-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
   --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
   0px 2px 4px -2px rgba(0, 0, 0, 0.06);
@@ -1329,8 +1334,12 @@ body.is-mobile {
                       0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
                       0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
   /*────────── Editor ──────────*/
+  /* Active Line */
+  --active-line-bg: var(--color-base-00);
+  /* Background */
+  --editor-bg-color: var(--background-primary);
+  --editor-bgpattern-color: var(--color-l-gray-60);
   /* Blockquote */
-  --blockquote-border-thickness: 2px;
   --blockquote-border-color: var(--background-modifier-border);
   --blockquote-background-color: var(--color-l-gray-10);
   /* Callout */
@@ -1486,6 +1495,7 @@ body.is-mobile {
   /*────────── Mobile ──────────*/
   /*────────── Core Plugins ──────────*/
   /* Canvas */
+  --canvas-background: var(--editor-bg-color);
   --canvas-color: var(--color-gray-rgb);
   --canvas-color-1: var(--color-red-rgb);
   --canvas-color-2: var(--color-orange-rgb);
@@ -2029,7 +2039,14 @@ body.is-mobile {
                       0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
                       0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
   /*────────── Editor ──────────*/
+  /* Active Line */
+  --active-line-bg: var(--color-base-20);
+  /* Background */
+  --editor-bg-color: var(--background-primary);
+  --editor-bgpattern-color: var(--color-d-gray-70);
   /* Blockquote */
+  --blockquote-border-color: var(--background-modifier-border);
+  --blockquote-background-color: var(--color-d-gray-120);
   /* Callout */
   --callout-color-opacity: 32.5%;
   --callout-border-opacity: 0.1;
@@ -2069,6 +2086,7 @@ body.is-mobile {
   --bold-italic-color: var(--color-d-gray-10);
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
   /* File */
+  --file-header-border: 1px solid var(--background-modifier-border);
   --breadcrumb-color: var(--color-d-gray-50);
   --breadcrumb-color-hover: var(--color-d-gray-50);
   --breadcrumb-bg-hover: var(--color-d-gray-80);
@@ -2182,6 +2200,7 @@ body.is-mobile {
   /*────────── Mobile ──────────*/
   /*────────── Core Plugins ──────────*/
   /* Canvas */
+  --canvas-background: var(--editor-bg-color);
   --canvas-color-1: var(--color-red-rgb);
   --canvas-color-2: var(--color-orange-rgb);
   --canvas-color-3: var(--color-yellow-rgb);
@@ -2934,7 +2953,7 @@ span.setting-hotkey {
   padding-top: 0;
 }
 .modal .vertical-tab-header-group-title {
-  font-size: calc(var(--font-ui-smaller) - 1px);
+  font-size: var(--font-ui-smallest);
   color: var(--settings-nav-group-title-color);
   text-transform: uppercase;
   font-feature-settings: "calt" off;
@@ -3042,7 +3061,7 @@ span.setting-hotkey {
 .backlink-pane > .tree-item-self,
 .embedded-backlinks .backlink-pane > .tree-item-self,
 .outgoing-link-pane > .tree-item-self {
-  font-size: 11px;
+  font-size: var(--font-ui-smallest);
   font-feature-settings: "calt" off;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -3988,6 +4007,17 @@ video {
   fill: var(--alternating-color-3-hover-active);
 }
 
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header,
+.is-focused .workspace-leaf.mod-active .view-header,
+.view-header,
+.workspace-split.mod-root .view-content {
+  background: var(--editor-bg-color);
+}
+
+.mod-fade:not(.mod-at-end):after {
+  --background-primary: var(--editor-bg-color);
+}
+
 .mod-root .workspace-tabs.mod-stacked .view-header {
   border-bottom: none;
 }
@@ -4296,7 +4326,7 @@ body span.cm-quote.cm-strong.cm-em.cm-strikethrough {
 }
 
 .cm-gutterElement {
-  font-size: calc(var(--font-ui-smaller) - 1px);
+  font-size: var(--font-ui-smallest);
   color: var(--gutter-color);
 }
 .cm-gutterElement.cm-active {
@@ -4633,7 +4663,7 @@ a.tag:active {
 }
 
 .mod-search-suggestion .mod-group {
-  font-size: calc(var(--font-ui-smaller) - 1px);
+  font-size: var(--font-ui-smallest);
   color: var(--settings-nav-group-title-color);
   text-transform: uppercase;
   font-feature-settings: "calt" off;
@@ -5101,7 +5131,21 @@ a.tag:active {
   align-items: center;
 }
 
-.themed-color-wrapper > div + div {
+.style-settings-filter-result-count {
+  font-size: var(--font-ui-smallest);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--inline-code-color);
+  background: var(--inline-code-bg);
+  padding: var(--size-2-1) var(--size-2-2);
+  border-radius: var(--radius-s);
+  box-shadow: var(--community-item-flair-shadow);
+}
+.style-settings-filter-result-count:empty {
+  visibility: hidden;
+}
+
+.view-content .themed-color-wrapper > div + div {
   margin-top: unset;
   margin-left: var(--size-4-2);
 }
@@ -5153,6 +5197,16 @@ body.zero-popup-popdown {
 }
 
 /* Editor */
+body.editor-bgpattern-linegrid .workspace-split.mod-root .view-content {
+  background-size: var(--editor-bgpattern-size);
+  background-image: linear-gradient(to left, color-mix(in srgb, var(--editor-bgpattern-color) 30%, transparent) 1px, transparent 1px), linear-gradient(to top, color-mix(in srgb, var(--editor-bgpattern-color) 30%, transparent) 1px, transparent 1px);
+}
+
+body.editor-bgpattern-dotgrid .workspace-split.mod-root .view-content {
+  background-size: var(--editor-bgpattern-size);
+  background-image: radial-gradient(circle, var(--editor-bgpattern-color) 1px, rgba(0, 0, 0, 0) 1px);
+}
+
 body.file-header-hover .view-header {
   height: 10px;
   border-bottom-color: transparent;
@@ -5168,6 +5222,26 @@ body.file-header-hover .view-header:hover {
 }
 body.file-header-hover .view-header:hover > div {
   opacity: 1;
+}
+
+body.active-line-highlight .cm-active {
+  background: var(--active-line-bg);
+  box-shadow: -25vw 0 var(--active-line-bg), 25vw 0 var(--active-line-bg);
+}
+
+/* Status Bar */
+body.sb-style-full .status-bar {
+  --status-bar-position: relative;
+  --status-bar-border-width: 0 0 0 0;
+  margin-top: calc(var(--file-pane-margin) * -1);
+}
+
+body.sb-sync-only .status-bar-item:not(.plugin-sync) {
+  display: none;
+}
+
+body.sb-word-count-only .status-bar-item:not(.plugin-word-count) {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

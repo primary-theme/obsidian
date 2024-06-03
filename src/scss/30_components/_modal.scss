@@ -17,7 +17,7 @@
     
     // Tab Header
     .vertical-tab-header-group-title {
-        font-size: calc(var(--font-ui-smaller) - 1px);
+        font-size: var(--font-ui-smallest);
         color: var(--settings-nav-group-title-color);
         text-transform: uppercase;
         font-feature-settings: "calt" off;
