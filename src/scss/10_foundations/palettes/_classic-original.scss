@@ -91,7 +91,7 @@ body {
     /* Font */
     --inter-font-features:  "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
                             "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
-    --cascadia-font-features:   "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
+    --cascadia-font-features:   "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
 
     --font-normal: 400;
     --font-medium: 450;
@@ -1262,6 +1262,7 @@ body {
 
     /* Style Settings by mgmeyers */
     --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+    --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.2);
 }
 
 /*───────────────────────────────────
@@ -1279,7 +1280,7 @@ body {
     --color-d-gray-50: hsla(34, 24%, 40%, 1);
     --color-d-gray-60: hsla(33, 27%, 30%, 1);
     --color-d-gray-70: hsla(31, 27%, 24%, 1);
-    --color-d-gray-80: hsla(28, var(--link-decoration-opacity), 18%, 1);
+    --color-d-gray-80: hsla(28, 22%, 18%, 1);
     --color-d-gray-90: hsla(33, 20%, 16%, 1);
     --color-d-gray-100: hsla(30, 19%, 14%, 1);
     --color-d-gray-110: hsla(30, 17%, 13%, 1);
@@ -2183,4 +2184,5 @@ body {
                             
     /* Style Settings by mgmeyers */
     --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+    --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(255, 255, 255, 0.2);
 }

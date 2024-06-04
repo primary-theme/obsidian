@@ -14,8 +14,16 @@ body {
 input,
 textarea,
 select,
-button {
+button,
+span.code-block-flair {
     font-feature-settings: var(--inter-font-features);
+}
+
+.HyperMD-codeblock,
+.cm-inline-code,
+pre,
+code {
+    font-feature-settings: var(--cascadia-font-features);
 }
 
 .cm-html-embed.cm-embed-block pre code {

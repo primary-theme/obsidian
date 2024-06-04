@@ -30,6 +30,22 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+		title: Typography
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: To change fonts, go to Settings → Appearance → Font, and change your fonts within Obsidian Settings.
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Primary v1.0 user? Want to use the original Karla font? Read the [Karla Font Guide]() to learn how to get back into using it.
+	-
+		id: interface_animations
+		type: heading
+		level: 2
+		collapsed: true
 		title: Animations
 	-
 		id: zero-tab-anim
@@ -88,7 +104,7 @@ settings:
     -
 		id: file-header-hover
 		type: class-toggle
-		title: File Header — Only Show on Hover
+		title: File Header — Only Show when Hovered
     -
 		id: active-line-highlight
 		type: class-toggle
@@ -1155,7 +1171,7 @@ settings:
     -
         id: link-unresolved-color
         type: variable-themed-color
-        title: Non-markdown Links Color on Hover
+        title: Non-markdown Links Color when Hovered
         format: hsl
         opacity: true
         default-light: 'hsla(4, 72%, 55%, 1)'
@@ -1177,7 +1193,7 @@ settings:
     -
         id: link-unresolved-color
         type: variable-themed-color
-        title: Unresolved Links Color on Hover
+        title: Unresolved Links Color when Hovered
         format: hsl
         opacity: true
         default-light: 'hsla(34, 37%, 70%, 1)'
@@ -1205,7 +1221,7 @@ settings:
     -
         id: link-color
         type: variable-themed-color
-        title: Resolved Links Color on Hover
+        title: Resolved Links Color when Hovered
         format: hsl
         opacity: true
         default-light: 'hsla(43, 83%, 57%, 1)'
@@ -1227,7 +1243,7 @@ settings:
     -
         id: link-external-color
         type: variable-themed-color
-        title: External Links Color on Hover
+        title: External Links Color when Hovered
         format: hsl
         opacity: true
         default-light: 'hsla(148, 48%, 47%, 1)'
@@ -1265,6 +1281,51 @@ settings:
 		level: 2
 		collapsed: true
 		title: List
+    -
+        id: indentation-guide-reading-indent
+        type: variable-number
+        format: em
+        title: Reading Mode – Indentation Line Guide Indent
+        description: Might require some customization if you change fonts. Unit is in em.
+        default: -0.85
+    -
+        id: indentation-guide-editing-indent
+        type: variable-number
+        format: em
+        title: Live Preview Mode – Indentation Line Guide Indent
+        description: Might require some customization if you change fonts. Unit is in em.
+        default: 0.975
+    -
+        id: indentation-guide-source-indent
+        type: variable-number
+        format: em
+        title: Source Mode – Indentation Line Guide Indent
+        description: Might require some customization if you change fonts. Unit is in em.
+        default: 0.25
+    -
+        id: list-marker-color
+        type: variable-themed-color
+        title: List Marker Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: list-marker-color-hover
+        type: variable-themed-color
+        title: List Marker Color when Hovered
+        format: hsl
+        opacity: true
+        default-light: 'hsla(35, 28%, 40%, 1)'
+        default-dark: 'hsla(34, 31%, 68%, 1)'
+    -
+        id: list-marker-color
+        type: variable-themed-color
+        title: List Marker Color when Collapsed
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(35, 27%, 55%, 1)'
 	-
 		id: nf_media
 		type: heading
