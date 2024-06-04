@@ -1142,6 +1142,29 @@ settings:
 		type: heading
 		level: 3
 		collapsed: true
+		title: Non-markdown Links
+        description: Links that appear outside of notes
+    -
+        id: link-unresolved-color
+        type: variable-themed-color
+        title: Non-markdown Links Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(4, 59%, 64%, 1)'
+        default-dark: 'hsla(4, 91%, 67%, 1)'
+    -
+        id: link-unresolved-color
+        type: variable-themed-color
+        title: Non-markdown Links Color on Hover
+        format: hsl
+        opacity: true
+        default-light: 'hsla(4, 72%, 55%, 1)'
+        default-dark: 'hsla(5, 94%, 73%, 1)'
+	-
+		id: nf_link
+		type: heading
+		level: 3
+		collapsed: true
 		title: Unresolved Links
     -
         id: link-unresolved-color
