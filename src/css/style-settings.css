@@ -955,17 +955,263 @@ settings:
 		collapsed: true
 		title: Paragraph
 	-
+		id: nf_emphasis
+		type: heading
+		level: 3
+		collapsed: true
+		title: Emphasis
+    -
+        id: bold-color
+        type: variable-themed-color
+        title: Bold Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(4, 56%, 48%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: bold-weight
+        type: variable-number
+        title: Bold Text Weight
+        default: 500
+    -
+        id: italic-color
+        type: variable-themed-color
+        title: Italic Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(200, 64%, 37%, 1)'
+        default-dark: 'hsla(194, 59%, 56%, 1)'
+    -
+        id: strikethrough-color
+        type: variable-themed-color
+        title: Strikethrough Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: bold-italic-color
+        type: variable-themed-color
+        title: Bold + Italic Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(33, 54%, 17%, 1)'
+        default-dark: 'hsla(32, 48%, 85%, 1)'
+    -
+        id: bold-italic-weight
+        type: variable-number
+        title: Bold + Italic Text Weight
+        default: 500
+    -
+        id: bold-italic-strikethrough-color
+        type: variable-themed-color
+        title: Bold + Italic + Strikethrough Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(35, 27%, 55%, 1)'
+	-
+		id: nf_highlight
+		type: heading
+		level: 4
+		collapsed: true
+		title: Highlight
+    -
+        id: normal-highlight-color
+        type: variable-themed-color
+        title: Highlight Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 45%, 24%, 1)'
+        default-dark: 'hsla(34, 39%, 74%, 1)'
+    -
+        id: normal-highlight-bg
+        type: variable-themed-color
+        title: Highlight Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(44, 100%, 50%, 0.2)'
+        default-dark: 'hsla(44, 100%, 50%, 0.2)'
+    -
+        id: bold-highlight-color
+        type: variable-themed-color
+        title: Bold + Highlight Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 45%, 24%, 1)'
+        default-dark: 'hsla(34, 39%, 74%, 1)'
+    -
+        id: bold-highlight-bg
+        type: variable-themed-color
+        title: Bold + Highlight Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(350, 84%, 63%, 0.2)'
+        default-dark: 'hsla(350, 84%, 63%, 0.2)'
+    -
+        id: italic-highlight-color
+        type: variable-themed-color
+        title: Italic + Highlight Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 45%, 24%, 1)'
+        default-dark: 'hsla(34, 39%, 74%, 1)'
+    -
+        id: italic-highlight-bg
+        type: variable-themed-color
+        title: Italic + Highlight Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(186, 64%, 46%, 0.2)'
+        default-dark: 'hsla(186, 64%, 46%, 0.2)'
+    -
+        id: strikethrough-highlight-color
+        type: variable-themed-color
+        title: Strikethrough + Highlight Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: strikethrough-highlight-bg
+        type: variable-themed-color
+        title: Strikethrough + Highlight Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(44, 100%, 50%, 0.2)'
+        default-dark: 'hsla(44, 100%, 50%, 0.2)'
+    -
+        id: bold-italic-highlight-color
+        type: variable-themed-color
+        title: Bold + Italic + Highlight Text Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 45%, 24%, 1)'
+        default-dark: 'hsla(34, 39%, 74%, 1)'
+    -
+        id: bold-italic-highlight-bg
+        type: variable-themed-color
+        title: Bold + Italic + Highlight Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(74, 69%, 44%, 0.2)'
+        default-dark: 'hsla(74, 69%, 44%, 0.2)'
+	-
+		id: nf_link
+		type: heading
+		level: 3
+		collapsed: true
+		title: Link
+    -
+        id: link-underline-offset
+        type: variable-text
+        title: All Links Underline Offset
+        description: This changes how far the underline is from the base of the link's letters.
+        default: 2px
+    -
+        id: link-decoration-thickness
+        type: variable-text
+        title: All Links Underline Thickness
+        default: 1.5px
+    -
+        id: link-decoration-opacity
+        type: variable-text
+        title: Link Underline Opacity
+        description: Set from 0% (no underline visibility) to 100% (full underline color visibility). Underline color inherits the Link's color.
+        default: 22%
+    -
+        id: no-decor-link
+        type: class-toggle
+        title: Remove Link Underline
+    -
+        id: link-opacity-active
+        type: variable-number
+        title: Link Opacity when Pressed
+        default: 0.5
+	-
+		id: nf_link
+		type: heading
+		level: 4
+		collapsed: true
+		title: Unresolved Links
+    -
+        id: link-unresolved-color
+        type: variable-themed-color
+        title: Unresolved Links Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: link-unresolved-color
+        type: variable-themed-color
+        title: Unresolved Links Color on Hover
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 37%, 70%, 1)'
+        default-dark: 'hsla(35, 27%, 55%, 1)'
+    -
+        id: link-unresolved-opacity
+        type: variable-number
+        title: Unresolved Link Opacity
+        description: Choose a number between 0 to 1.
+        default: 1
+	-
+		id: nf_link
+		type: heading
+		level: 4
+		collapsed: true
+		title: Resolved Links
+    -
+        id: link-color
+        type: variable-themed-color
+        title: Resolved Links Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(40, 79%, 47%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
+    -
+        id: link-color
+        type: variable-themed-color
+        title: Resolved Links Color on Hover
+        format: hsl
+        opacity: true
+        default-light: 'hsla(43, 83%, 57%, 1)'
+        default-dark: 'hsla(43, 69%, 63%, 1)'
+	-
+		id: nf_link
+		type: heading
+		level: 4
+		collapsed: true
+		title: External Links
+    -
+        id: link-external-color
+        type: variable-themed-color
+        title: External Links Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(149, 50%, 39%, 1)'
+        default-dark: 'hsla(154, 57%, 42%, 1)'
+    -
+        id: link-external-color
+        type: variable-themed-color
+        title: External Links Color on Hover
+        format: hsl
+        opacity: true
+        default-light: 'hsla(148, 48%, 47%, 1)'
+        default-dark: 'hsla(152, 51%, 54%, 1)'
+	-
+		id: nf_blockquotes
+		type: heading
+		level: 3
+		collapsed: true
+		title: Blockquotes
+	-
 		id: nf_list
 		type: heading
 		level: 2
 		collapsed: true
 		title: List
-	-
-		id: nf_checkbox
-		type: heading
-		level: 2
-		collapsed: true
-		title: Checkbox
 	-
 		id: nf_media
 		type: heading
@@ -989,73 +1235,73 @@ settings:
         type: variable-themed-color
         format: hsl
         opacity: true
-        title: Canvas Dot Pattern's Color
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        title: Canvas Dot Pattern Color
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(31, 27%, 24%, 1)'
     -
         id: canvas-card-label-color
         type: variable-themed-color
         format: hsl
         opacity: true
-        title: Canvas Card Label's Color
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        title: Canvas Card Label Color
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
     -
         id: canvas-color
         type: variable-themed-color
-        format: hsl
-        opacity: true
+        format: rgb-values
+        opacity: false
         title: Canvas Color 1
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        default-light: 'rgb(182, 175, 166)'
+        default-dark: 'rgba(182, 175, 166)'
     -
         id: canvas-color-1
         type: variable-themed-color
-        format: hsl
-        opacity: true
+        format: rgb-values
+        opacity: false
         title: Canvas Color 2
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        default-light: 'rgba(223, 90, 90)'
+        default-dark: 'rgba(223, 90, 90)'
     -
         id: canvas-color-2
         type: variable-themed-color
-        format: hsl
-        opacity: true
+        format: rgb-values
+        opacity: false
         title: Canvas Color 3
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        default-light: 'rgba(231, 130, 63)'
+        default-dark: 'rgba(231, 130, 63)'
     -
         id: canvas-color-3
         type: variable-themed-color
-        format: hsl
-        opacity: true
+        format: rgb-values
+        opacity: false
         title: Canvas Color 4
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        default-light: 'rgba(248, 197, 46)'
+        default-dark: 'rgba(248, 197, 46)'
     -
         id: canvas-color-4
         type: variable-themed-color
-        format: hsl
-        opacity: true
+        format: rgb-values
+        opacity: false
         title: Canvas Color 5
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        default-light: 'rgba(87, 185, 132)'
+        default-dark: 'rgba(87, 185, 132)'
     -
         id: canvas-color-5
         type: variable-themed-color
-        format: hsl
-        opacity: true
+        format: rgb-values
+        opacity: false
         title: Canvas Color 6
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        default-light: 'rgba(99, 164, 198)'
+        default-dark: 'rgba(99, 164, 198)'
     -
         id: canvas-color-6
         type: variable-themed-color
-        format: hsl
-        opacity: true
+        format: rgb-values
+        opacity: false
         title: Canvas Color 7
-        default-light: 'hsla(202, 66%, 48%, 1)'
-        default-dark: 'hsla(197, 48%, 49%, 1)'
+        default-light: 'rgba(135, 106, 193)'
+        default-dark: 'rgba(135, 106, 193)'
 	-
 		id: file-explorer
 		type: heading
