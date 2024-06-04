@@ -200,10 +200,18 @@
     padding-top: unset;
 }
 
+.style-settings-heading .setting-item-description {
+    padding-inline-start: 19px; // Collapse Indicator width + margin-right
+}
+
 // pickr Button
 .themed-color-wrapper > div {
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--radius-m);
+}
+
+.pickr button.pcr-button::after  {
+    box-shadow: var(--pcr-btn-shadow);
 }
 
 .pickr .pcr-button,

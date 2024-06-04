@@ -629,8 +629,16 @@ body {
 input,
 textarea,
 select,
-button {
+button,
+span.code-block-flair {
   font-feature-settings: var(--inter-font-features);
+}
+
+.HyperMD-codeblock,
+.cm-inline-code,
+pre,
+code {
+  font-feature-settings: var(--cascadia-font-features);
 }
 
 .cm-html-embed.cm-embed-block pre code {
@@ -724,7 +732,7 @@ body {
   /* Font */
   --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
                           "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
-  --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1;
+  --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
   --font-normal: 400;
   --font-medium: 450;
   --font-semibold: 500;
@@ -1633,6 +1641,7 @@ body.is-mobile {
                                   0px 2px 4px 0px rgba(0, 0, 0, 0.04);
   /* Style Settings by mgmeyers */
   --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+  --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.2);
 }
 .theme-light.is-mobile {
   --mobile-sidebar-background: var(--background-secondary);
@@ -1689,7 +1698,7 @@ body.is-mobile {
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
   --color-d-gray-60: hsla(33, 27%, 30%, 1);
   --color-d-gray-70: hsla(31, 27%, 24%, 1);
-  --color-d-gray-80: hsla(28, var(--link-decoration-opacity), 18%, 1);
+  --color-d-gray-80: hsla(28, 22%, 18%, 1);
   --color-d-gray-90: hsla(33, 20%, 16%, 1);
   --color-d-gray-100: hsla(30, 19%, 14%, 1);
   --color-d-gray-110: hsla(30, 17%, 13%, 1);
@@ -2362,6 +2371,7 @@ body.is-mobile {
                                   0px 2px 4px 0px rgba(0, 0, 0, 0.14);
   /* Style Settings by mgmeyers */
   --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+  --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(255, 255, 255, 0.2);
 }
 .theme-dark.is-mobile {
   --color-base-00: var(--color-d-gray-140);
@@ -5342,9 +5352,17 @@ a.tag:active {
   padding-top: unset;
 }
 
+.style-settings-heading .setting-item-description {
+  padding-inline-start: 19px;
+}
+
 .themed-color-wrapper > div {
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-m);
+}
+
+.pickr button.pcr-button::after {
+  box-shadow: var(--pcr-btn-shadow);
 }
 
 .pickr .pcr-button,
