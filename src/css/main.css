@@ -859,6 +859,8 @@ body {
   --inline-code-radius: var(--radius-s);
   /* Embeds */
   --embed-media-border-radius: var(--radius-m);
+  /* Emphasis */
+  --underline-decoration-opacity: 22%;
   /* File */
   --file-line-width: 40rem;
   --file-max-line-width: 88%;
@@ -911,6 +913,7 @@ body {
   --link-unresolved-opacity: 1;
   --link-underline-offset: 2px;
   --link-decoration-thickness: 1.5px;
+  --link-decoration-opacity: 22%;
   --link-opacity-active: 0.5;
   /* Lists */
   --indentation-guide-editing-indent: 0.975em;
@@ -1418,7 +1421,7 @@ body.is-mobile {
   --bold-color: var(--color-l-red-30);
   --italic-color: var(--color-l-blue-30);
   --bold-italic-color: var(--color-l-gray-140);
-  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --underline-decoration-color: color-mix(in srgb, currentColor var(--underline-decoration-opacity), transparent);
   --strikethrough-color: var(--color-l-gray-80);
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
   /* File */
@@ -1468,6 +1471,17 @@ body.is-mobile {
   --h6-border-right-color: var(--background-modifier-border);
   --h6-border-bottom-color: var(--background-modifier-border);
   --h6-border-left-color: var(--background-modifier-border);
+  /* Highlight */
+  --normal-highlight-color: var(--text-normal);
+  --normal-highlight-bg: var(--color-l-alpha-yellow);
+  --bold-highlight-color: var(--text-normal);
+  --bold-highlight-bg: var(--color-l-alpha-red);
+  --italic-highlight-color: var(--text-normal);
+  --italic-highlight-bg: var(--color-l-alpha-blue);
+  --strikethrough-highlight-color: var(--strikethrough-color);
+  --strikethrough-highlight-bg: var(--color-l-alpha-yellow);
+  --bold-italic-highlight-color: var(--bold-italic-color);
+  --bold-italic-highlight-bg: var(--color-l-alpha-green);
   /* Inline Code */
   --inline-code-color: var(--color-l-red-10);
   --inline-code-bg: var(--color-l-gray-10);
@@ -1485,32 +1499,23 @@ body.is-mobile {
   --list-marker-color: var(--color-l-gray-80);
   --list-marker-color-hover: var(--color-l-gray-100);
   --list-marker-color-collapsed: var(--color-l-gray-90);
-  /* Multicolored Highlight */
-  --bold-highlight-color: var(--text-normal);
-  --bold-highlight-bg: var(--color-l-alpha-red);
-  --italic-highlight-color: var(--text-normal);
-  --italic-highlight-bg: var(--color-l-alpha-blue);
-  --strikethrough-highlight-color: var(--strikethrough-color);
-  --strikethrough-highlight-bg: var(--color-l-alpha-yellow);
-  --bold-italic-highlight-color: var(--bold-italic-color);
-  --bold-italic-highlight-bg: var(--color-l-alpha-green);
   /* Link */
   --link-ahref-color: var(--color-l-red-20);
-  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --link-ahref-decoration-color: color-mix(in srgb, currentColor var(--link-decoration-opacity), transparent);
   --link-ahref-color-hover: var(--color-l-red-10);
-  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
+  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) var(--link-decoration-opacity), transparent);
   --link-unresolved-color: var(--color-l-gray-80);
-  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) var(--link-decoration-opacity), transparent);
   --link-unresolved-color-hover: var(--color-l-gray-70);
-  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
+  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) var(--link-decoration-opacity), transparent);
   --link-color: var(--color-l-yellow-30);
-  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
+  --link-decoration-color: color-mix(in srgb, var(--link-color) var(--link-decoration-opacity), transparent);
   --link-color-hover: var(--color-l-yellow-20);
-  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
+  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) var(--link-decoration-opacity), transparent);
   --link-external-color: var(--color-l-green-30);
-  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
+  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) var(--link-decoration-opacity), transparent);
   --link-external-color-hover: var(--color-l-green-20);
-  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
+  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) var(--link-decoration-opacity), transparent);
   /* Properties | Metadata */
   --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
   --metadata-tab-background: var(--background-secondary);
@@ -1683,7 +1688,7 @@ body.is-mobile {
   --color-d-gray-50: hsla(34, 24%, 40%, 1);
   --color-d-gray-60: hsla(33, 27%, 30%, 1);
   --color-d-gray-70: hsla(31, 27%, 24%, 1);
-  --color-d-gray-80: hsla(28, 22%, 18%, 1);
+  --color-d-gray-80: hsla(28, var(--link-decoration-opacity), 18%, 1);
   --color-d-gray-90: hsla(33, 20%, 16%, 1);
   --color-d-gray-100: hsla(30, 19%, 14%, 1);
   --color-d-gray-110: hsla(30, 17%, 13%, 1);
@@ -2144,7 +2149,7 @@ body.is-mobile {
   /* Emphasis */
   --bold-color: var(--color-d-red-30);
   --italic-color: var(--color-d-blue-20);
-  --underline-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --underline-decoration-color: color-mix(in srgb, currentColor var(--link-decoration-opacity), transparent);
   --strikethrough-color: var(--color-d-gray-50);
   --bold-italic-color: var(--color-d-gray-10);
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
@@ -2195,6 +2200,17 @@ body.is-mobile {
   --h6-border-right-color: var(--background-modifier-border);
   --h6-border-bottom-color: var(--background-modifier-border);
   --h6-border-left-color: var(--background-modifier-border);
+  /* Highlight */
+  --normal-highlight-color: var(--text-normal);
+  --normal-highlight-bg: var(--color-d-alpha-yellow);
+  --bold-highlight-color: var(--text-normal);
+  --bold-highlight-bg: var(--color-d-alpha-red);
+  --italic-highlight-color: var(--text-normal);
+  --italic-highlight-bg: var(--color-d-alpha-blue);
+  --bold-italic-highlight-color: var(--bold-italic-color);
+  --bold-italic-highlight-bg: var(--color-d-alpha-green);
+  --strikethrough-highlight-color: var(--strikethrough-color);
+  --strikethrough-highlight-bg: var(--color-d-alpha-yellow);
   /* Inline Code */
   --inline-code-color: var(--color-d-red-20);
   --inline-code-bg: var(--color-d-gray-130);
@@ -2212,32 +2228,23 @@ body.is-mobile {
   --list-marker-color: var(--color-d-gray-50);
   --list-marker-color-hover: var(--color-d-gray-30);
   --list-marker-color-collapsed: var(--color-d-gray-40);
-  /* Multicolored Highlight */
-  --bold-highlight-color: var(--text-normal);
-  --bold-highlight-bg: var(--color-d-alpha-red);
-  --italic-highlight-color: var(--text-normal);
-  --italic-highlight-bg: var(--color-d-alpha-blue);
-  --bold-italic-highlight-color: var(--bold-italic-color);
-  --bold-italic-highlight-bg: var(--color-d-alpha-green);
-  --strikethrough-highlight-color: var(--strikethrough-color);
-  --strikethrough-highlight-bg: var(--color-d-alpha-yellow);
   /* Link */
   --link-ahref-color: var(--color-d-red-20);
-  --link-ahref-decoration-color: color-mix(in srgb, currentColor 22%, transparent);
+  --link-ahref-decoration-color: color-mix(in srgb, currentColor var(--link-decoration-opacity), transparent);
   --link-ahref-color-hover: var(--color-d-red-10);
-  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) 22%, transparent);
+  --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) var(--link-decoration-opacity), transparent);
   --link-unresolved-color: var(--color-d-gray-50);
-  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) 22%, transparent);
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) var(--link-decoration-opacity), transparent);
   --link-unresolved-color-hover: var(--color-d-gray-40);
-  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) 22%, transparent);
+  --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) var(--link-decoration-opacity), transparent);
   --link-color: var(--color-d-yellow-20);
-  --link-decoration-color: color-mix(in srgb, var(--link-color) 22%, transparent);
+  --link-decoration-color: color-mix(in srgb, var(--link-color) var(--link-decoration-opacity), transparent);
   --link-color-hover: var(--color-d-yellow-10);
-  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) 22%, transparent);
+  --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) var(--link-decoration-opacity), transparent);
   --link-external-color: var(--color-d-green-20);
-  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) 22%, transparent);
+  --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) var(--link-decoration-opacity), transparent);
   --link-external-color-hover: var(--color-d-green-10);
-  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) 22%, transparent);
+  --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) var(--link-decoration-opacity), transparent);
   /* Properties | Metadata */
   --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
   --metadata-tab-background: var(--background-secondary);
@@ -4453,8 +4460,10 @@ body em strong {
   color: var(--bold-italic-color);
   font-weight: var(--bold-italic-weight);
 }
+body .cm-highlight,
 body .markdown-rendered mark {
-  background-color: var(--text-highlight-bg);
+  color: var(--normal-highlight-color);
+  background-color: var(--normal-highlight-bg);
 }
 body .cm-highlight.cm-strong,
 body .markdown-rendered strong mark {
@@ -5468,6 +5477,15 @@ body.h6-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header {
 body.h6-vt-align-center .cm-s-obsidian .cm-line.HyperMD-header-6 {
   padding-top: calc(var(--p-spacing) / 2);
   padding-bottom: calc(var(--p-spacing) / 2);
+}
+
+/* Link */
+body.no-decor-link {
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: none;
+  --link-unresolved-decoration-style: none;
 }
 
 /*# sourceMappingURL=main.css.map */

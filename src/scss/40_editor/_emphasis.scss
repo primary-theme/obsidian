@@ -33,8 +33,10 @@ body {
 
     // Multi-colored Highlights
     // Normal Highlight
+    .cm-highlight,
     .markdown-rendered mark {
-        background-color: var(--text-highlight-bg);
+        color: var(--normal-highlight-color);
+        background-color: var(--normal-highlight-bg);
     }
 
     // Bold Highlight

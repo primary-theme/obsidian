@@ -384,3 +384,12 @@ body.h6-vt-align-center {
         padding-bottom: calc(var(--p-spacing) / 2);
     }
 }
+
+/* Link */
+body.no-decor-link {
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-external-decoration: none;
+    --link-external-decoration-hover: none;
+    --link-unresolved-decoration-style: none;
+}
