@@ -4,6 +4,7 @@
 body {   
     // Underline 
     u {
+        color: var(--underline-color);
         text-underline-offset: var(--link-underline-offset);
         text-decoration-color: var(--underline-decoration-color);
     }
