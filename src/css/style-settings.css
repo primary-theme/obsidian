@@ -949,15 +949,9 @@ settings:
         description: Add rounding to your headings. Best to use with a background color. If you'd like to have different roundness for each corner, you can set one in the order of top-left, top-right, bottom-right, bottom-left (i.e. 4px 2px 6px 3px).
         default: 0px
 	-
-		id: nf_paragraph
-		type: heading
-		level: 2
-		collapsed: true
-		title: Paragraph
-	-
 		id: nf_emphasis
 		type: heading
-		level: 3
+		level: 2
 		collapsed: true
 		title: Emphasis
     -
@@ -990,6 +984,21 @@ settings:
         default-light: 'hsla(34, 29%, 60%, 1)'
         default-dark: 'hsla(34, 24%, 40%, 1)'
     -
+        id: underline-color
+        type: variable-themed-color
+        title: Underlined Text Color
+        description: Not natively supported in markdown, but underline can be activated with HTML.
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 45%, 24%, 1)'
+        default-dark: 'hsla(34, 39%, 74%, 1)'
+    -
+        id: underline-decoration-opacity
+        type: variable-text
+        title: Underlined Text Line Opacity
+        description: Not natively supported in markdown, but underline can be activated with HTML. If used, you can set the underline's line opacity from 0% (no line visibility) to 100% (full color visibility). The color is taken from the underline's text color.
+        default: 22%
+    -
         id: bold-italic-color
         type: variable-themed-color
         title: Bold + Italic Text Color
@@ -1013,7 +1022,7 @@ settings:
 	-
 		id: nf_highlight
 		type: heading
-		level: 4
+		level: 2
 		collapsed: true
 		title: Highlight
     -
@@ -1099,7 +1108,7 @@ settings:
 	-
 		id: nf_link
 		type: heading
-		level: 3
+		level: 2
 		collapsed: true
 		title: Link
     -
@@ -1131,7 +1140,7 @@ settings:
 	-
 		id: nf_link
 		type: heading
-		level: 4
+		level: 3
 		collapsed: true
 		title: Unresolved Links
     -
@@ -1159,7 +1168,7 @@ settings:
 	-
 		id: nf_link
 		type: heading
-		level: 4
+		level: 3
 		collapsed: true
 		title: Resolved Links
     -
@@ -1181,7 +1190,7 @@ settings:
 	-
 		id: nf_link
 		type: heading
-		level: 4
+		level: 3
 		collapsed: true
 		title: External Links
     -
@@ -1203,9 +1212,30 @@ settings:
 	-
 		id: nf_blockquotes
 		type: heading
-		level: 3
+		level: 2
 		collapsed: true
 		title: Blockquotes
+    -
+        id: blockquote-border-thickness
+        type: variable-text
+        title: Blockquote Border Thickness
+        default: 2px
+    -
+        id: blockquote-border-color
+        type: variable-themed-color
+        title: Blockquote Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: blockquote-background-color
+        type: variable-themed-color
+        title: Blockquote Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(36, 38%, 98%, 1)'
+        default-dark: 'hsla(29, 16%, 12%, 1)'
 	-
 		id: nf_list
 		type: heading
@@ -1233,73 +1263,73 @@ settings:
     -
         id: canvas-dot-pattern
         type: variable-themed-color
+        title: Canvas Dot Pattern Color
         format: hsl
         opacity: true
-        title: Canvas Dot Pattern Color
         default-light: 'hsla(37, 38%, 83%, 1)'
         default-dark: 'hsla(31, 27%, 24%, 1)'
     -
         id: canvas-card-label-color
         type: variable-themed-color
+        title: Canvas Card Label Color
         format: hsl
         opacity: true
-        title: Canvas Card Label Color
         default-light: 'hsla(34, 29%, 60%, 1)'
         default-dark: 'hsla(34, 24%, 40%, 1)'
     -
         id: canvas-color
         type: variable-themed-color
+        title: Canvas Color 1
         format: rgb-values
         opacity: false
-        title: Canvas Color 1
         default-light: 'rgb(182, 175, 166)'
         default-dark: 'rgba(182, 175, 166)'
     -
         id: canvas-color-1
         type: variable-themed-color
+        title: Canvas Color 2
         format: rgb-values
         opacity: false
-        title: Canvas Color 2
         default-light: 'rgba(223, 90, 90)'
         default-dark: 'rgba(223, 90, 90)'
     -
         id: canvas-color-2
         type: variable-themed-color
+        title: Canvas Color 3
         format: rgb-values
         opacity: false
-        title: Canvas Color 3
         default-light: 'rgba(231, 130, 63)'
         default-dark: 'rgba(231, 130, 63)'
     -
         id: canvas-color-3
         type: variable-themed-color
+        title: Canvas Color 4
         format: rgb-values
         opacity: false
-        title: Canvas Color 4
         default-light: 'rgba(248, 197, 46)'
         default-dark: 'rgba(248, 197, 46)'
     -
         id: canvas-color-4
         type: variable-themed-color
+        title: Canvas Color 5
         format: rgb-values
         opacity: false
-        title: Canvas Color 5
         default-light: 'rgba(87, 185, 132)'
         default-dark: 'rgba(87, 185, 132)'
     -
         id: canvas-color-5
         type: variable-themed-color
+        title: Canvas Color 6
         format: rgb-values
         opacity: false
-        title: Canvas Color 6
         default-light: 'rgba(99, 164, 198)'
         default-dark: 'rgba(99, 164, 198)'
     -
         id: canvas-color-6
         type: variable-themed-color
+        title: Canvas Color 7
         format: rgb-values
         opacity: false
-        title: Canvas Color 7
         default-light: 'rgba(135, 106, 193)'
         default-dark: 'rgba(135, 106, 193)'
 	-

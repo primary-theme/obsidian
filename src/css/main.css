@@ -1421,6 +1421,7 @@ body.is-mobile {
   --bold-color: var(--color-l-red-30);
   --italic-color: var(--color-l-blue-30);
   --bold-italic-color: var(--color-l-gray-140);
+  --underline-color: var(--text-normal);
   --underline-decoration-color: color-mix(in srgb, currentColor var(--underline-decoration-opacity), transparent);
   --strikethrough-color: var(--color-l-gray-80);
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
@@ -2149,6 +2150,7 @@ body.is-mobile {
   /* Emphasis */
   --bold-color: var(--color-d-red-30);
   --italic-color: var(--color-d-blue-20);
+  --underline-color: var(--text-normal);
   --underline-decoration-color: color-mix(in srgb, currentColor var(--link-decoration-opacity), transparent);
   --strikethrough-color: var(--color-d-gray-50);
   --bold-italic-color: var(--color-d-gray-10);
@@ -4440,6 +4442,7 @@ a:active {
 
 /*────────── Emphasis ──────────*/
 body u {
+  color: var(--underline-color);
   text-underline-offset: var(--link-underline-offset);
   text-decoration-color: var(--underline-decoration-color);
 }
