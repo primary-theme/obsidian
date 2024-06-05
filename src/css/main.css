@@ -1123,8 +1123,8 @@ body.is-mobile {
   --text-highlight-bg: var(--color-l-alpha-yellow);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
-  --text-selection-theme-text-color: var(--color-l-gray-140);
-  --text-selection-theme-bg: color-mix(in srgb, var(--color-l-gray-80) 30%, transparent);
+  --text-selection-theme-text-color: color-mix(in srgb, currentColor 70%, black);
+  --text-selection-theme-bg: color-mix(in srgb, var(--color-l-gray-70) 30%, transparent);
   /* Icon Colors */
   --icon-color: var(--color-l-gray-80);
   --icon-opacity: 1;
@@ -1850,8 +1850,8 @@ body.is-mobile {
   --text-highlight-bg: var(--color-d-alpha-yellow);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
-  --text-selection-theme-text-color: var(--color-d-gray-10);
-  --text-selection-theme-bg: color-mix(in srgb, var(--color-d-gray-40) 30%, transparent);
+  --text-selection-theme-text-color: color-mix(in srgb, currentColor 70%, white);
+  --text-selection-theme-bg: color-mix(in srgb, var(--color-d-gray-50) 30%, transparent);
   /* Icon Colors */
   --icon-color: var(--color-d-gray-60);
   --icon-opacity: 1;
