@@ -35,12 +35,17 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: To change fonts, go to Settings → Appearance → Font, and change your fonts within Obsidian Settings.
+        description: ⚙️ To change fonts, go to Settings → Appearance → Font, and change your fonts within Obsidian Settings.
     -
         id: readme-content
         type: info-text
         markdown: true
-        description: Primary v1.0 user? Want to use the original Karla font? Read the [Karla Font Guide]() to learn how to get back into using it.
+        description: 🌿 Primary v1.0 user? Want to use the original Karla font? Read the [Karla Font Guide]() to learn how to get back into using it.
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🌸 Visit the [Font Recommendation Guide]() for more curated font options for Primary! The guide includes a setup tutorial.
 	-
 		id: interface_animations
 		type: heading
@@ -66,11 +71,11 @@ settings:
         type: class-select
         title: Editor Background Type
         allowEmpty: false
-        default: editor-bg-plain
+        default: editor-bg-default
         options:
             -
                 label: Plain Color
-                value: editor-bg-plain
+                value: editor-bg-default
             -
                 label: Line Grid
                 value: editor-bgpattern-linegrid
@@ -102,13 +107,76 @@ settings:
         default-light: 'hsla(37, 38%, 83%, 1)'
         default-dark: 'hsla(31, 27%, 24%, 1)'
     -
-		id: file-header-hover
-		type: class-toggle
-		title: File Header — Only Show when Hovered
+        id: editor-border-width
+        type: variable-text
+        title: Editor Border Width
+        default: 1px
+    -
+        id: editor-border-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Editor Border Color
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+		id: editor-file-header
+		type: class-select
+		title: File Header
+        default: file-header-default
+        options:
+            -
+                label: Always Show
+                value: file-header-default
+            -
+                label: Hide Full File Header (Shows when Hovered)
+                value: file-header-hover
+            -
+                label: Hide Title on File Header (Shows when Hovered)
+                value: file-header-title-hover
+    -
+        id: file-header-border-width
+        type: variable-text
+        title: File Header Border Width
+        default: 1px
+    -
+        id: file-header-border-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: File Header Border Color
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(28, 22%, 18%, 1)'
+    -
+        id: gutter-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Gutter Number Text Color
+        default-light: 'hsla(36, 37%, 75%, 1)'
+        default-dark: 'hsla(31, 27%, 27%, 1)'
+    -
+        id: gutter-color-active
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Active Line Gutter Number Text Color
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
     -
 		id: active-line-highlight
 		type: class-toggle
 		title: Toggle Active Line Highlighting
+        description: Adds background color to active line.
+    -
+        id: active-line-bg
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Active Line Background Color
+        description: Only works when Active Line Highlighting is turned on.
+        default-light: 'hsla(36, 38%, 98%, 1)'
+        default-dark: 'hsla(33, 20%, 16%, 1)'
 	-
 		id: interface_status-bar
 		type: heading
@@ -120,11 +188,11 @@ settings:
         type: class-select
         title: Status Bar Style
         allowEmpty: false
-        default: sb-style
+        default: sb-default
         options:
             -
                 label: On Top
-                value: sb-style
+                value: sb-default
             -
                 label: Full Length
                 value: sb-style-full
@@ -133,11 +201,11 @@ settings:
         type: class-select
         title: Status Bar Item Visibility
         allowEmpty: false
-        default: sb-item
+        default: sb-item-default
         options:
             -
                 label: Show Everything
-                value: sb-item
+                value: sb-item-default
             -
                 label: Sync Only
                 value: sb-sync-only
@@ -1367,55 +1435,55 @@ settings:
         format: rgb-values
         opacity: false
         default-light: 'rgb(182, 175, 166)'
-        default-dark: 'rgba(182, 175, 166)'
+        default-dark: 'rgb(182, 175, 166)'
     -
         id: canvas-color-1
         type: variable-themed-color
         title: Canvas Color 2
         format: rgb-values
         opacity: false
-        default-light: 'rgba(223, 90, 90)'
-        default-dark: 'rgba(223, 90, 90)'
+        default-light: 'rgb(223, 90, 90)'
+        default-dark: 'rgb(223, 90, 90)'
     -
         id: canvas-color-2
         type: variable-themed-color
         title: Canvas Color 3
         format: rgb-values
         opacity: false
-        default-light: 'rgba(231, 130, 63)'
-        default-dark: 'rgba(231, 130, 63)'
+        default-light: 'rgb(231, 130, 63)'
+        default-dark: 'rgb(231, 130, 63)'
     -
         id: canvas-color-3
         type: variable-themed-color
         title: Canvas Color 4
         format: rgb-values
         opacity: false
-        default-light: 'rgba(248, 197, 46)'
-        default-dark: 'rgba(248, 197, 46)'
+        default-light: 'rgb(248, 197, 46)'
+        default-dark: 'rgb(248, 197, 46)'
     -
         id: canvas-color-4
         type: variable-themed-color
         title: Canvas Color 5
         format: rgb-values
         opacity: false
-        default-light: 'rgba(87, 185, 132)'
-        default-dark: 'rgba(87, 185, 132)'
+        default-light: 'rgb(87, 185, 132)'
+        default-dark: 'rgb(87, 185, 132)'
     -
         id: canvas-color-5
         type: variable-themed-color
         title: Canvas Color 6
         format: rgb-values
         opacity: false
-        default-light: 'rgba(99, 164, 198)'
-        default-dark: 'rgba(99, 164, 198)'
+        default-light: 'rgb(99, 164, 198)'
+        default-dark: 'rgb(99, 164, 198)'
     -
         id: canvas-color-6
         type: variable-themed-color
         title: Canvas Color 7
         format: rgb-values
         opacity: false
-        default-light: 'rgba(135, 106, 193)'
-        default-dark: 'rgba(135, 106, 193)'
+        default-light: 'rgb(135, 106, 193)'
+        default-dark: 'rgb(135, 106, 193)'
 	-
 		id: file-explorer
 		type: heading

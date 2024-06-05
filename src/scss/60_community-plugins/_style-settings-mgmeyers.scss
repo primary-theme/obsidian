@@ -296,6 +296,17 @@ body.file-header-hover {
     }
 }
 
+body.file-header-title-hover {
+    .view-header-title-container {
+        opacity: 0;
+        transition: var(--anim-duration-moderate) var(--anim-motion-smooth);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
 body.active-line-highlight {
     .cm-active {
         background: var(--active-line-bg);
@@ -308,7 +319,7 @@ body.sb-style-full {
     .status-bar {
         --status-bar-position: relative;
         --status-bar-border-width: 0 0 0 0;
-        margin-top: calc(var(--file-pane-margin) * -1);
+        margin-top: calc(var(--editor-pane-margin) * -1);
     }
 }
 

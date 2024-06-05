@@ -265,6 +265,9 @@ body {
     --underline-decoration-opacity: 22%;
 
     /* File */
+    --editor-border-width: 1px;
+    --file-header-border-width: 1px;
+
     --file-line-width: 40rem;
     --file-max-line-width: 88%;
 
@@ -272,8 +275,8 @@ body {
     --file-tab-gap: 0px;
     --tab-status-radius: var(--radius-s);
     --new-tab-btn-radius: 2em;
-    --file-pane-margin: 10px;
-    --file-border-radius: var(--radius-l);
+    --editor-pane-margin: 10px;
+    --editor-border-radius: var(--radius-l);
 
     /* Headings */
     --h1-text-align: left;
@@ -956,7 +959,9 @@ body {
     --bold-italic-strikethrough-color: var(--color-l-gray-90);
 
     /* File */
-    --file-header-border: 1px solid var(--background-modifier-border);
+    --editor-border-color: var(--background-modifier-border);
+    --file-header-border: var(--file-header-border-width) solid var(--file-header-border-color);
+    --file-header-border-color: var(--background-modifier-border);
 
     --breadcrumb-color: var(--color-l-gray-90);
     --breadcrumb-color-hover: var(--color-l-gray-90);
@@ -1856,7 +1861,9 @@ body {
     --bold-italic-strikethrough-color: var(--color-d-gray-40);
 
     /* File */
-    --file-header-border: 1px solid var(--background-modifier-border);
+    --editor-border-color: var(--background-modifier-border);
+    --file-header-border: var(--file-header-border-width) solid var(--file-header-border-color);
+    --file-header-border-color: var(--background-modifier-border);
 
     --breadcrumb-color: var(--color-d-gray-50);
     --breadcrumb-color-hover: var(--color-d-gray-50);

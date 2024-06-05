@@ -4,12 +4,12 @@
 body:not(.is-phone) .mod-root .workspace {
     // File
     &-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
-        border-radius: var(--file-border-radius);
+        border-radius: var(--editor-border-radius);
     }
 
     &-leaf-content {
-        border: 1px solid var(--background-modifier-border);
-        border-radius: var(--file-border-radius);
+        border: var(--editor-border-width) solid var(--editor-border-color);
+        border-radius: var(--editor-border-radius);
     }
     
     // .mod-root Tabs
@@ -179,12 +179,12 @@ body:not(.is-phone) .mod-root .workspace {
     --tab-stacked-header-width: 40px;
 
     .workspace-tab-container {
-        border-radius: var(--file-border-radius);
-        border: 1px solid var(--background-modifier-border);
+        border-radius: var(--editor-border-radius);
+        border: var(--editor-border-width) solid var(--editor-border-color);
 
         .workspace-tab-header:first-child {
-            border-top-left-radius: var(--file-border-radius);
-            border-bottom-left-radius: var(--file-border-radius);
+            border-top-left-radius: var(--editor-border-radius);
+            border-bottom-left-radius: var(--editor-border-radius);
         }
     }
     
