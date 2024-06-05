@@ -59,9 +59,9 @@
         }
     
         border: 1px solid var(--divider-color);
-        border-top-right-radius: var(--file-border-radius);
-        border-bottom-right-radius: var(--file-border-radius);
-        margin-bottom: var(--file-pane-margin);
+        border-top-right-radius: var(--editor-border-radius);
+        border-bottom-right-radius: var(--editor-border-radius);
+        margin-bottom: var(--editor-pane-margin);
     }
 }
 

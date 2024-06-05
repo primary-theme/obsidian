@@ -870,14 +870,16 @@ body {
   /* Emphasis */
   --underline-decoration-opacity: 22%;
   /* File */
+  --editor-border-width: 1px;
+  --file-header-border-width: 1px;
   --file-line-width: 40rem;
   --file-max-line-width: 88%;
   --header-height: 46px;
   --file-tab-gap: 0px;
   --tab-status-radius: var(--radius-s);
   --new-tab-btn-radius: 2em;
-  --file-pane-margin: 10px;
-  --file-border-radius: var(--radius-l);
+  --editor-pane-margin: 10px;
+  --editor-border-radius: var(--radius-l);
   /* Headings */
   --h1-text-align: left;
   --h1-letter-spacing: unset;
@@ -1434,7 +1436,9 @@ body.is-mobile {
   --strikethrough-color: var(--color-l-gray-80);
   --bold-italic-strikethrough-color: var(--color-l-gray-90);
   /* File */
-  --file-header-border: 1px solid var(--background-modifier-border);
+  --editor-border-color: var(--background-modifier-border);
+  --file-header-border: var(--file-header-border-width) solid var(--file-header-border-color);
+  --file-header-border-color: var(--background-modifier-border);
   --breadcrumb-color: var(--color-l-gray-90);
   --breadcrumb-color-hover: var(--color-l-gray-90);
   --breadcrumb-bg-hover: var(--color-l-gray-40);
@@ -2165,7 +2169,9 @@ body.is-mobile {
   --bold-italic-color: var(--color-d-gray-10);
   --bold-italic-strikethrough-color: var(--color-d-gray-40);
   /* File */
-  --file-header-border: 1px solid var(--background-modifier-border);
+  --editor-border-color: var(--background-modifier-border);
+  --file-header-border: var(--file-header-border-width) solid var(--file-header-border-color);
+  --file-header-border-color: var(--background-modifier-border);
   --breadcrumb-color: var(--color-d-gray-50);
   --breadcrumb-color-hover: var(--color-d-gray-50);
   --breadcrumb-bg-hover: var(--color-d-gray-80);
@@ -2452,52 +2458,52 @@ body.is-mobile {
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   --divider-vertical-height: calc(
-                                  100% - calc(var(--header-height) + var(--file-pane-margin)) - calc(var(--file-border-radius) * 2)
+                                  100% - calc(var(--header-height) + var(--editor-pane-margin)) - calc(var(--editor-border-radius) * 2)
                               );
-  bottom: calc(var(--file-pane-margin) + var(--file-border-radius));
+  bottom: calc(var(--editor-pane-margin) + var(--editor-border-radius));
 }
 
 .workspace-split.mod-horizontal:not(.mod-left-split, .mod-right-split) > * > .workspace-leaf-resize-handle {
-  width: calc(100% - var(--file-border-radius) * 2);
-  left: var(--file-border-radius);
-  right: var(--file-border-radius);
+  width: calc(100% - var(--editor-border-radius) * 2);
+  left: var(--editor-border-radius);
+  right: var(--editor-border-radius);
 }
 
 body:not(.is-phone) .workspace .workspace-tabs .workspace-tab-container:not(.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container) {
-  margin-left: calc(var(--file-pane-margin) / 3);
-  margin-right: calc(var(--file-pane-margin) / 3);
+  margin-left: calc(var(--editor-pane-margin) / 3);
+  margin-right: calc(var(--editor-pane-margin) / 3);
 }
 body:not(.is-phone) .workspace:not(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
-  margin-left: calc(var(--file-pane-margin) / 2);
-  margin-right: calc(var(--file-pane-margin) / 2);
-  padding-bottom: var(--file-pane-margin);
+  margin-left: calc(var(--editor-pane-margin) / 2);
+  margin-right: calc(var(--editor-pane-margin) / 2);
+  padding-bottom: var(--editor-pane-margin);
 }
 body:not(.is-phone) .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-left-split {
-  margin-right: calc(-1 * var(--file-pane-margin) / 3);
+  margin-right: calc(-1 * var(--editor-pane-margin) / 3);
 }
 body:not(.is-phone) .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: 0;
   margin-right: 0;
-  padding-bottom: var(--file-pane-margin);
+  padding-bottom: var(--editor-pane-margin);
 }
 body:not(.is-phone) .workspace:is(.is-left-sidedock-open.is-right-sidedock-open) .workspace-split.mod-right-split {
-  margin-left: calc(-1 * var(--file-pane-margin) / 3);
+  margin-left: calc(-1 * var(--editor-pane-margin) / 3);
 }
 body:not(.is-phone) .workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .workspace-split.mod-left-split {
-  margin-right: calc(-1 * var(--file-pane-margin) / 3);
+  margin-right: calc(-1 * var(--editor-pane-margin) / 3);
 }
 body:not(.is-phone) .workspace:is(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root.workspace-split.mod-vertical {
   margin-left: 0;
-  margin-right: calc(var(--file-pane-margin) / 2);
-  padding-bottom: var(--file-pane-margin);
+  margin-right: calc(var(--editor-pane-margin) / 2);
+  padding-bottom: var(--editor-pane-margin);
 }
 body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .mod-root.workspace-split.mod-vertical {
-  margin-left: calc(var(--file-pane-margin) / 2);
+  margin-left: calc(var(--editor-pane-margin) / 2);
   margin-right: 0;
-  padding-bottom: var(--file-pane-margin);
+  padding-bottom: var(--editor-pane-margin);
 }
 body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock-open) .workspace-split.mod-right-split {
-  margin-left: calc(-1 * var(--file-pane-margin) / 3);
+  margin-left: calc(-1 * var(--editor-pane-margin) / 3);
 }
 
 /*────────── Navbar ──────────*/
@@ -2547,9 +2553,9 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 }
 .workspace-ribbon.mod-left {
   border: 1px solid var(--divider-color);
-  border-top-right-radius: var(--file-border-radius);
-  border-bottom-right-radius: var(--file-border-radius);
-  margin-bottom: var(--file-pane-margin);
+  border-top-right-radius: var(--editor-border-radius);
+  border-bottom-right-radius: var(--editor-border-radius);
+  margin-bottom: var(--editor-pane-margin);
 }
 .workspace-ribbon.mod-left:before {
   border-bottom: none;
@@ -2582,7 +2588,7 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
   padding: var(--size-2-2) var(--size-2-2);
   border: var(--vault-name-border);
   border-radius: var(--radius-m);
-  margin: 0px var(--size-4-2) var(--file-pane-margin);
+  margin: 0px var(--size-4-2) var(--editor-pane-margin);
 }
 body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspace-sidedock-vault-profile .workspace-drawer-vault-switcher-icon {
   display: none;
@@ -2647,8 +2653,8 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 
 .is-tablet .workspace-drawer:not(.is-pinned) {
   border: 1px solid var(--background-modifier-border);
-  border-radius: calc(var(--file-border-radius) * 2);
-  margin: calc(var(--file-pane-margin) * 3) calc(var(--file-pane-margin) * 3);
+  border-radius: calc(var(--editor-border-radius) * 2);
+  margin: calc(var(--editor-pane-margin) * 3) calc(var(--editor-pane-margin) * 3);
   box-shadow: var(--mobile-sidebar-tablet-shadow);
 }
 
@@ -3299,11 +3305,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb {
 
 /*────────── Tabs ──────────*/
 body:not(.is-phone) .mod-root .workspace-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
-  border-radius: var(--file-border-radius);
+  border-radius: var(--editor-border-radius);
 }
 body:not(.is-phone) .mod-root .workspace-leaf-content {
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--file-border-radius);
+  border: var(--editor-border-width) solid var(--editor-border-color);
+  border-radius: var(--editor-border-radius);
 }
 body:not(.is-phone) .mod-root .workspace-tab-header-container {
   padding-bottom: var(--size-4-1);
@@ -3436,12 +3442,12 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
   --tab-stacked-header-width: 40px;
 }
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
-  border-radius: var(--file-border-radius);
-  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--editor-border-radius);
+  border: var(--editor-border-width) solid var(--editor-border-color);
 }
 .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header:first-child {
-  border-top-left-radius: var(--file-border-radius);
-  border-bottom-left-radius: var(--file-border-radius);
+  border-top-left-radius: var(--editor-border-radius);
+  border-bottom-left-radius: var(--editor-border-radius);
 }
 .mod-root .workspace-tabs.mod-stacked .workspace-leaf-content {
   border: unset;
@@ -5430,6 +5436,14 @@ body.file-header-hover .view-header:hover > div {
   opacity: 1;
 }
 
+body.file-header-title-hover .view-header-title-container {
+  opacity: 0;
+  transition: var(--anim-duration-moderate) var(--anim-motion-smooth);
+}
+body.file-header-title-hover .view-header-title-container:hover {
+  opacity: 1;
+}
+
 body.active-line-highlight .cm-active {
   background: var(--active-line-bg);
   box-shadow: -25vw 0 var(--active-line-bg), 25vw 0 var(--active-line-bg);
@@ -5439,7 +5453,7 @@ body.active-line-highlight .cm-active {
 body.sb-style-full .status-bar {
   --status-bar-position: relative;
   --status-bar-border-width: 0 0 0 0;
-  margin-top: calc(var(--file-pane-margin) * -1);
+  margin-top: calc(var(--editor-pane-margin) * -1);
 }
 
 body.sb-sync-only .status-bar-item:not(.plugin-sync) {
