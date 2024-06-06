@@ -755,6 +755,8 @@ body {
   /* Divider */
   --divider-width-hover: 4px;
   --divider-radius: var(--radius-m);
+  /* Ribbon */
+  --ribbon-border-width: 1px;
   /* Sidebar */
   --nav-item-white-space: nowrap;
   --nav-item-radius: 6px;
@@ -771,6 +773,7 @@ body {
   /* Vault Switcher */
   --vault-name-font-size: var(--font-ui-small);
   --vault-name-font-weight: var(--font-bold);
+  --vault-name-border-width: 1px;
   /*────────── Components ──────────*/
   --popup-bg-blur: 3px;
   /* Button */
@@ -1202,7 +1205,7 @@ body.is-mobile {
   --vault-profile-color: var(--vault-name-color);
   --vault-name-color: var(--color-l-gray-100);
   --vault-name-background: var(--color-l-gray-30);
-  --vault-name-border: 1px solid var(--background-modifier-border);
+  --vault-name-border: var(--vault-name-border-width) solid var(--background-modifier-border);
   /*────────── Components ──────────*/
   --disabled-component-opacity: 0.3;
   /* Button */
@@ -2603,7 +2606,8 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
   color: var(--alternating-color-3-hover-active);
 }
 .workspace-ribbon.mod-left {
-  border: 1px solid var(--divider-color);
+  border: var(--ribbon-border-width) solid var(--divider-color);
+  border-left: none;
   border-top-right-radius: var(--editor-border-radius);
   border-bottom-right-radius: var(--editor-border-radius);
   margin-bottom: var(--editor-pane-margin);
