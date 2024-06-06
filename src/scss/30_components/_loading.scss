@@ -1,8 +1,9 @@
 /*────────── Loading ──────────*/
 
 .is-loading:before {
-    background-color: var(--background-modifier-success);
-    animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
+    height: 4px;
+    background-color: var(--loading-line-color);
+    box-shadow: var(--loading-line-shadow);
 }
 
 .progress-bar {
@@ -19,18 +20,19 @@
     &-indicator {
         width: 35%;
         height: var(--size-4-3);
-        border: 1px solid var(--background-modifier-border);
         border-radius: var(--size-4-3);
     }
 
     &-line {
         height: var(--size-4-3);
-        background: var(--background-secondary);
+        background: var(--loading-line-bg-color);
+        box-shadow: var(--loading-line-shadow);
     }
 
     &-subline {
         height: var(--size-4-3);
-        background: var(--background-modifier-warning);
+        background: var(--loading-line-color);
+        box-shadow: var(--loading-line-shadow);
         animation: var(--anim-duration-moderate) var(--anim-motion-smooth) infinite;
     }
 }
