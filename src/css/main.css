@@ -737,7 +737,7 @@ body {
   --font-normal: 400;
   --font-medium: 450;
   --font-semibold: 500;
-  --font-bold: 550;
+  --font-bold: 500;
   --bold-italic-weight: 500;
   --bold-modifier: 100;
   --font-ui-smallest: 11px;
@@ -867,6 +867,40 @@ body {
   --code-radius: var(--radius-m);
   --inline-code-radius: var(--radius-s);
   /* Embeds */
+  --embed-padding: var(--size-2-3) var(--embed-left-right-padding) 0px;
+  --embed-left-right-padding: var(--size-4-4);
+  --embed-border-radius: var(--radius-l);
+  --embed-border-top:
+      var(--embed-border-top-width)
+      var(--embed-border-top-style)
+      var(--embed-border-top-color);
+  --embed-border-top-width: 1px;
+  --embed-border-top-style: solid;
+  --embed-border-end:
+      var(--embed-border-end-width)
+      var(--embed-border-end-style)
+      var(--embed-border-end-color);
+  --embed-border-end-width: 1px;
+  --embed-border-end-style: solid;
+  --embed-border-bottom:
+      var(--embed-border-bottom-width)
+      var(--embed-border-bottom-style)
+      var(--embed-border-bottom-color);
+  --embed-border-bottom-width: 1px;
+  --embed-border-bottom-style: solid;
+  --embed-border-start:
+      var(--embed-border-start-width)
+      var(--embed-border-start-style)
+      var(--embed-border-start-color);
+  --embed-border-start-width: 1px;
+  --embed-border-start-style: solid;
+  --embed-title-border:
+      var(--embed-title-border-width)
+      var(--embed-title-border-style)
+      var(--embed-title-border-color);
+  --embed-title-border-width: 1px;
+  --embed-title-border-style: solid;
+  --embed-title-margin-bottom: var(--size-4-2);
   --embed-media-border-radius: var(--radius-m);
   /* Emphasis */
   --underline-decoration-opacity: 22%;
@@ -1414,12 +1448,18 @@ body.is-mobile {
   --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
                               inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
   /* Embed */
+  --embed-background: var(--embed-bg-color-mix);
   --embed-bg-color-mix: color-mix(
                                   in srgb,
                                   var(--background-primary-alt) 50%,
                                   var(--background-primary)
                                   );
+  --embed-border-top-color: var(--background-modifier-border);
+  --embed-border-end-color: var(--background-modifier-border);
+  --embed-border-bottom-color: var(--background-modifier-border);
+  --embed-border-start-color: var(--background-modifier-border);
   --embed-title-color: var(--color-l-gray-90);
+  --embed-title-border-color: var(--background-modifier-border);
   --embed-block-shadow-hover: none;
   --embed-edit-btn-bg: color-mix(in srgb, var(--color-l-gray-20) 70%, transparent);
   --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 100%, transparent);
@@ -2147,12 +2187,14 @@ body.is-mobile {
   --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
                               inset 0px calc(-1 * var(--callout-shadow-offset) - 1px) var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
   /* Embed */
+  --embed-background: var(--embed-bg-color-mix);
   --embed-bg-color-mix: color-mix(
-      in srgb,
-      var(--background-primary-alt) 50%,
-      var(--background-primary)
-      );
+                                  in srgb,
+                                  var(--background-primary-alt) 50%,
+                                  var(--background-primary)
+                                  );
   --embed-title-color: var(--color-d-gray-50);
+  --embed-title-border-color: var(--background-modifier-border);
   --embed-block-shadow-hover: none;
   --embed-edit-btn-bg: color-mix(in srgb, var(--color-d-gray-130) 70%, transparent);
   --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-d-gray-130) 100%, transparent);
@@ -4029,21 +4071,6 @@ body {
 }
 
 /*────────── Embed ──────────*/
-body {
-  --embed-background: var(--embed-bg-color-mix);
-  --embed-padding: var(--size-2-3) var(--embed-left-right-padding);
-  --embed-left-right-padding: var(--size-4-4);
-  --embed-border-top: 1px solid var(--background-modifier-border);
-  --embed-border-right: 1px solid var(--background-modifier-border);
-  --embed-border-end: 1px solid var(--background-modifier-border);
-  --embed-border-bottom: 1px solid var(--background-modifier-border);
-  --embed-border-left: 1px solid var(--background-modifier-border);
-  --embed-border-start: 1px solid var(--background-modifier-border);
-  --embed-border-radius: var(--radius-l);
-  --embed-title-margin-bottom: var(--size-4-2);
-  --embed-title-border: 1px solid var(--background-modifier-border);
-}
-
 .markdown-embed:not(.canvas-node-content) {
   border-radius: var(--embed-border-radius);
 }
