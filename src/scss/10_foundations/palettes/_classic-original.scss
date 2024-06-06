@@ -750,6 +750,11 @@ body {
     --drag-ghost-background: var(--interactive-accent);
     --drag-ghost-text-color: var(--text-on-accent);
 
+    /* Loading Bar */
+    --loading-line-bg-color: var(--background-secondary);
+    --loading-line-color: var(--color-l-blue-10);
+    --loading-line-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
     /* Menu */
     --menu-item-icon-color: var(--color-l-gray-80);
     --menu-item-bg-hover: rgba(255, 255, 255, 0.35);
@@ -1654,6 +1659,11 @@ body {
     /* Drag Ghost */
     --drag-ghost-background: var(--interactive-accent);
     --drag-ghost-text-color: var(--text-on-accent);
+
+    /* Loading Bar */
+    --loading-line-bg-color: var(--background-secondary);
+    --loading-line-color: var(--color-d-blue-10);
+    --loading-line-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
 
     /* Menu */
     --menu-item-icon-color: var(--color-d-gray-50);

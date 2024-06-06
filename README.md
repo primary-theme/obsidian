@@ -54,7 +54,7 @@ This option is exclusive to monthly subscribers of Primary.
 10. Reload the app again for best results.
 
 ## 🧭 Navigation
-- How to Get Primary for Obsidian
+- Install
 - Features
 - Customization
 - Supported Plugins
