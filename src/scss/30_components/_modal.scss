@@ -125,6 +125,7 @@
 
 .community-item .flair,
 .flair.mod-pop {
+    font-weight: var(--font-medium);
     color: var(--inline-code-color);
     background: var(--inline-code-bg);
     box-shadow: var(--community-item-flair-shadow);

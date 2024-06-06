@@ -622,6 +622,7 @@ body {
   --font-text-theme: "Inter";
   --font-monospace-theme: "Cascadia Code";
   font-feature-settings: var(--inter-font-features);
+  font-weight: var(--font-normal);
   --bold-weight: var(--font-medium);
   --h1-weight: var(--font-semibold);
 }
@@ -3145,6 +3146,7 @@ span.setting-hotkey {
 
 .community-item .flair,
 .flair.mod-pop {
+  font-weight: var(--font-medium);
   color: var(--inline-code-color);
   background: var(--inline-code-bg);
   box-shadow: var(--community-item-flair-shadow);
