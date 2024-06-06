@@ -985,7 +985,7 @@ body {
     --embed-bg-color-mix: color-mix(
                                     in srgb, 
                                     var(--background-primary-alt) 50%, 
-                                    var(--background-primary)
+                                    var(--editor-bg-color)
                                     );
     --embed-border-top-color: var(--background-modifier-border);
     --embed-border-end-color: var(--background-modifier-border);
@@ -1098,7 +1098,7 @@ body {
     --inline-title-color: var(--color-l-gray-140);
 
     /* Inline Query */
-    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 20%, var(--background-primary));
+    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 20%, var(--editor-bg-color));
     --inline-query-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
 
     /* KBD */
@@ -1135,7 +1135,7 @@ body {
     --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) var(--link-decoration-opacity), transparent);
 
     /* Properties | Metadata */
-    --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+    --metadata-background: color-mix(in srgb, var(--editor-bg-color) 50%, var(--background-primary-alt));
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
     --metadata-properties-title-color-hover: var(--color-l-gray-80);
@@ -1293,7 +1293,7 @@ body {
     }
 
     /* Kanban by mgmeyers */
-    --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-primary));
+    --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--editor-bg-color));
     --kanban-lane-border: 1px solid var(--color-l-gray-40);
     --kanban-lane-shadow:   none;
     
@@ -1756,7 +1756,7 @@ body {
     --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.14),
                                          0px 2px 6px 0px rgba(0, 0, 0, 0.12);
 
-    --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
+    --prompt-instructions-background: color-mix(in hsl, var(--editor-bg-color) 60%, var(--background-secondary));
 
     --prompt-separator-border: 1px solid var(--color-d-gray-90);
     --prompt-border-color: var(--background-modifier-border-focus);
@@ -1885,7 +1885,7 @@ body {
     --callout-content-background: color-mix(
                                     in srgb, 
                                     var(--background-primary-alt) 50%, 
-                                    var(--background-primary)
+                                    var(--editor-bg-color)
                                     );
 
     --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
@@ -1900,7 +1900,7 @@ body {
     --embed-bg-color-mix: color-mix(
                                     in srgb, 
                                     var(--background-primary-alt) 50%, 
-                                    var(--background-primary)
+                                    var(--editor-bg-color)
                                     );
     --embed-title-color: var(--color-d-gray-50);
     --embed-title-border-color: var(--background-modifier-border);
@@ -2043,7 +2043,7 @@ body {
     --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) var(--link-decoration-opacity), transparent);
 
     /* Properties | Metadata */
-    --metadata-background: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+    --metadata-background: color-mix(in srgb, var(--editor-bg-color) 50%, var(--background-primary-alt));
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
     --metadata-properties-title-color-hover: var(--color-d-gray-50);
@@ -2116,7 +2116,7 @@ body {
                                         0px 5px 14px -0.6px rgba(0, 0, 0, 0.19),
                                         0px 10px 20px -4.9px rgba(0, 0, 0, 0.12);
 
-        --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+        --mobile-toolbar-bg: color-mix(in srgb, var(--editor-bg-color) 50%, var(--background-primary-alt));
 
         --navbar-shadow:    0px 4px 20px 0px rgba(0, 0, 0, 0.4),
                             0px 1px 4px 0px rgba(0, 0, 0, 0.3);
