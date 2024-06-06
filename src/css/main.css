@@ -4976,6 +4976,11 @@ a.tag:active {
   background: var(--search-result-background-hover);
 }
 
+.search-empty-state {
+  text-align: center;
+  margin: var(--size-4-3) var(--size-4-3);
+}
+
 .search-result-file-match-destination-file,
 .search-result-file-match:hover .search-result-file-match-destination-file {
   color: var(--search-result-dest-file-color);
