@@ -5,11 +5,6 @@
     font-weight: var(--font-semibold);
 }
 
-// Search Options Menu
-// .popover.suggestion-popover.mod-search-suggestion .suggestion {
-//     padding: 0;
-// }
-
 .mod-search-suggestion {
     .mod-group {
         font-size: var(--font-ui-smallest);
@@ -86,6 +81,11 @@
     &:hover {
         background: var(--search-result-background-hover);
     }
+}
+
+.search-empty-state {
+    text-align: center;
+    margin: var(--size-4-3) var(--size-4-3);
 }
 
 // Search Result Destination File
