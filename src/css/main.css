@@ -3370,6 +3370,9 @@ body:not(.is-phone) .mod-root .workspace-tab-header-container-inner {
 .workspace .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   padding-bottom: 0px;
 }
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  margin-inline-start: -2px;
+}
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
   background: var(--tab-active-bg);
   box-shadow: var(--tab-active-shadow);
