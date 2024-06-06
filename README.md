@@ -26,10 +26,35 @@ Tablet and Phone Main View Light Mode
 
 Tablet and Phone Main View Dark Mode
 
-## 📖 Installation Guide
+## 📖 How to Get Primary for Obsidian
+
+### Install via the Obsidian Theme Store
+
+This option will give you access to public releases.
+
+1. Open up Obsidian and go to Settings.
+2. Inside Settings, head over to the Appearance tab.
+3. Under Themes, you should find a button called, `Manage`. Click on it. This will open up the Community Themes page.
+4. On the search bar, type `Primary`, and click the one that says, `By Cecilia May`. It should open up the theme.
+5. Click `Install and Use` to install the theme! Enjoy.
+
+### Install Beta Version
+
+This option is exclusive to monthly subscribers of Primary.
+
+1. Head on over to [Primary's Ko-fi](https://dub.sh/primary/ko-fi) page.Under Buy a Coffee, choose Membership and subscribe to get access to member exclusive posts.
+2. After subscribing, head over to the `Posts` tab. This is under the header, just below my name and ko-fi link.
+3. Once in the Posts tab, you should be able to find posts usually titled along the lines of `Primary x.x.x-beta (Monthly Subscriber Exclusive)`. Click on the latest post.
+4. The post includes the full Release Notes so you're fully informed what new features or fixes you get for that release! To get the a copy of that beta, scroll down a bit until you find the `Click here to download the CSS file.` link. This should take you to a GitHub gist page.
+5. On the GitHub gist page at the top right side, click **Download Zip**. This will give you a `.zip` file with 1 file inside, the `primary-x.x.x-beta.css` file (where x.x.x is the version number).
+6. Unzip the file and copy the CSS file.
+7. Paste it under your vault's `.obsidian/themes` folder. You can open this folder through Obsidian. To do so, open up *Settings*, and go to the *Appearance* tab. Under `Themes`, there's an icon beside the theme dropdown. Click it to open the themes folder. It should open up the folder `Vault Name/.obsidian/themes`. Paste the CSS file there.
+8. Go back to Obsidian and open up your Command Palette. Type `Reload app without saving` and press enter so that your Obsidian gets reloaded and ensures it identifies the CSS file.
+9. Once your Obsidian has reloaded, open up Settings -> Appearance tab. Under the `Themes` dropdown, select the `primary-x.x.x-beta` you downloaded. This should load the theme.
+10. Reload the app again for best results.
 
 ## 🧭 Navigation
-- Installation Guide
+- How to Get Primary for Obsidian
 - Features
 - Customization
 - Supported Plugins
@@ -153,8 +178,10 @@ If you've read all the way down here, well, what the heck. Thank you for listeni
 
 ## 🩵 Credits
 
-I owe a lot to jdanielmourao (Sanctum), kepano (Minimal), chetachiezikeuzor (Yin and Yang), and sainhe (Gruvbox Material and Everforest)! Their work inspired me design-wise and their themes helped me a lot in creating mine.
+I owe a lot to jdanielmourao ([Sanctum](https://github.com/jdanielmourao/obsidian-sanctum)), kepano ([Minimal](https://github.com/kepano/obsidian-minimal)), chetachiezikeuzor ([Yin and Yang](https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme)), and sainhe ([Gruvbox Material](https://github.com/sainnhe/gruvbox-material) and [Everforest](https://github.com/sainnhe/everforest))! Their work inspired me design-wise and their themes helped me a lot in creating mine.
 
-I would also like to thank the Obsidian Theme Community (hey #appearance-dev folks!), for continuously giving me inspiration.
+I would also like to thank the Community for continuously giving me inspiration! It's been that way since I joined the Obsidian Discord. I would never forget the welcoming and incredible response I received when I first posted Primary to the group. I'm forever grateful.
 
-Lastly, I would like to say that I am very blessed to have such active, loving, and supportive users. You guys are the best.
+Lastly, I would like to say that I am very blessed to have such active, loving, and supportive users. Despite being inactive for a couple of years, many have stood by the theme, continued to support and encourage me. I cannot fathom this support, but I deeply appreciate it.
+
+Thank you guys for everything.
