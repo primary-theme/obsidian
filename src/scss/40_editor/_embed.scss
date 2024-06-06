@@ -1,21 +1,6 @@
 /*────────── Embed ──────────*/
 
 // Markdown Embeds
-body {
-    --embed-background: var(--embed-bg-color-mix);
-    --embed-padding: var(--size-2-3) var(--embed-left-right-padding);
-    --embed-left-right-padding: var(--size-4-4);
-    --embed-border-top: 1px solid var(--background-modifier-border);
-    --embed-border-right: 1px solid var(--background-modifier-border);
-    --embed-border-end: 1px solid var(--background-modifier-border);
-    --embed-border-bottom: 1px solid var(--background-modifier-border);
-    --embed-border-left: 1px solid var(--background-modifier-border);
-    --embed-border-start: 1px solid var(--background-modifier-border);
-    --embed-border-radius: var(--radius-l);
-    --embed-title-margin-bottom: var(--size-4-2);
-    --embed-title-border: 1px solid var(--background-modifier-border);
-}
-
 .markdown-embed:not(.canvas-node-content) {
     border-radius: var(--embed-border-radius);
 }
