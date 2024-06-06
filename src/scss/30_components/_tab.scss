@@ -34,6 +34,11 @@ body:not(.is-phone) .mod-root .workspace {
             padding-bottom: 0px;
         }
 
+        // Removes visibility of tab separator beside Active tab for .mod-root
+        .workspace .mod-root & {
+            margin-inline-start: -2px;
+        }
+
         // Active Tabs
         &.is-active {
             // Tab Curves
