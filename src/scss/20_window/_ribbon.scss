@@ -58,7 +58,9 @@
             border-bottom: none;
         }
     
-        border: 1px solid var(--divider-color);
+        border: var(--ribbon-border-width) solid var(--divider-color);
+        border-left: none;
+
         border-top-right-radius: var(--editor-border-radius);
         border-bottom-right-radius: var(--editor-border-radius);
         margin-bottom: var(--editor-pane-margin);
