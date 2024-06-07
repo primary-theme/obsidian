@@ -108,6 +108,23 @@ body:not(.is-mobile) .workspace-split {
     }
 }
 
+.workspace-drawer-active-tab-header.tappable {
+    text-transform: capitalize;
+    padding:    var(--size-4-2)
+                var(--size-4-3)
+                calc(var(--size-4-2) + var(--button-inset-shadow-size));
+    box-shadow: var(--button-shadow);
+    margin-top: var(--size-2-2);
+
+    &:focus-within {
+        box-shadow: var(--button-shadow-focus);
+    }
+}
+
+.workspace-drawer-active-tab-chevron {
+    padding-right: 0px;
+}
+
 // Mobile [Tablet]
 .is-tablet {
     .workspace-drawer:not(.is-pinned) {

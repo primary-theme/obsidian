@@ -15,7 +15,7 @@ select,
     }
 
     &:focus {
-        background-color: var(--interactive-normal-hover);
+        background-color: var(--interactive-hover);
         box-shadow: var(--button-shadow-focus);
     }
 }
