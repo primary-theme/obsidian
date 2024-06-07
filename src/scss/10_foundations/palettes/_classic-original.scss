@@ -123,6 +123,9 @@ body {
 
     /* Ribbon */
     --ribbon-border-width: 1px;
+    --ribbon-top-right-radius: var(--editor-border-radius);
+    --ribbon-bottom-right-radius: var(--editor-border-radius);
+    --ribbon-margin-bottom: var(--editor-pane-margin);
 
     /* Sidebar */
     --nav-item-white-space: nowrap;

@@ -69,3 +69,11 @@ body:is(.is-phone, .is-mobile) {
         }
     }
 }
+
+// Mobile
+.workspace-drawer .nav-buttons-container {
+    --icon-color: unset;
+    --icon-color-hover: unset;
+    --icon-color-active: unset;
+    --icon-color-focus: unset;
+}
