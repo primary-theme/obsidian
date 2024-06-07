@@ -772,8 +772,8 @@ body {
   /* Titlebar */
   --titlebar-text-weight: var(--font-normal);
   /* Vault Switcher */
-  --vault-name-font-size: var(--font-ui-small);
-  --vault-name-font-weight: var(--font-bold);
+  --vault-profile-font-size: var(--font-ui-small);
+  --vault-profile-font-weight: var(--font-semibold);
   --vault-name-border-width: 1px;
   /*────────── Components ──────────*/
   --popup-bg-blur: 3px;
@@ -835,7 +835,6 @@ body {
   --slider-track-height: 5px;
   /* Tab */
   --tab-font-size: var(--font-ui-small);
-  --tab-font-weight: var(--font-normal);
   --tab-outline-width: 1px;
   --tab-curve: 6px;
   --tab-radius: var(--radius-s);
@@ -1205,6 +1204,7 @@ body.is-mobile {
   /* Vault Switcher */
   --vault-profile-color: var(--vault-name-color);
   --vault-name-color: var(--color-l-gray-100);
+  --vault-name-color-hover: var(--color-l-gray-120);
   --vault-name-background: var(--color-l-gray-30);
   --vault-name-border: var(--vault-name-border-width) solid var(--background-modifier-border);
   /*────────── Components ──────────*/
@@ -1335,8 +1335,8 @@ body.is-mobile {
   --prompt-input-background: var(--background-primary);
   --prompt-border-color: var(--background-modifier-border-focus);
   --prompt-results-background: var(--background-primary);
-  --prompt-suggestion-color: var(--color-l-gray-110);
-  --prompt-suggestion-highlight-color: var(--color-l-gray-120);
+  --prompt-suggestion-color: var(--color-l-gray-90);
+  --prompt-suggestion-highlight-color: color-mix(in srgb, var(--prompt-suggestion-color) 70%, black);
   --prompt-suggestion-color-selected: var(--color-l-gray-130);
   --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
   --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.35);
@@ -2076,7 +2076,7 @@ body.is-mobile {
   --prompt-input-background: var(--background-primary);
   --prompt-results-background: var(--background-primary);
   --prompt-suggestion-color: var(--color-d-gray-40);
-  --prompt-suggestion-highlight-color: var(--color-d-gray-30);
+  --prompt-suggestion-highlight-color: color-mix(in srgb, var(--prompt-suggestion-color) 70%, white);
   --prompt-suggestion-color-selected: var(--color-d-gray-20);
   --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
   --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
@@ -3217,7 +3217,7 @@ span.setting-hotkey {
 
 .community-item .flair,
 .flair.mod-pop {
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
   color: var(--inline-code-color);
   background: var(--inline-code-bg);
   box-shadow: var(--community-item-flair-shadow);
@@ -5068,7 +5068,7 @@ a.tag:active {
 }
 #calendar-container th {
   font-feature-settings: "calt" off;
-  font-weight: var(--font-normal);
+  font-weight: var(--font-medium);
 }
 #calendar-container td {
   width: 12.5%;
@@ -5109,7 +5109,8 @@ a.tag:active {
   opacity: var(--pmr-cal-day-dot-opacity-active);
 }
 #calendar-container .today {
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
+  box-shadow: var(--pmr-cal-day-shadow);
 }
 #calendar-container .active {
   color: var(--pmr-cal-active-day-color);

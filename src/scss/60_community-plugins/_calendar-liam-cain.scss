@@ -50,7 +50,7 @@
 
     th {
         font-feature-settings: "calt" off;
-        font-weight: var(--font-normal);
+        font-weight: var(--font-medium);
     }
 
     td {
@@ -102,7 +102,8 @@
     }
 
     .today {
-        font-weight: var(--font-medium);
+        font-weight: var(--font-semibold);
+        box-shadow: var(--pmr-cal-day-shadow);
     }
 
     .active {
