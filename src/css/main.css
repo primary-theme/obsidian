@@ -806,7 +806,7 @@ body {
                                       var(--size-4-2)
                                       var(--size-2-3)
                                       var(--size-2-3);
-  --button-s-radius: var(--size-2-3);
+  --button-s-radius: calc(var(--button-radius) * 0.8);
   --button-s-padding: var(--size-2-2)
                       var(--size-4-2)
                       var(--size-2-2)
@@ -1100,7 +1100,7 @@ body.is-mobile {
                       calc(var(--accent-l) * 1.19)
                       );
   --interactive-normal: var(--color-l-gray-30);
-  --interactive-hover: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-30));
+  --interactive-hover: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--interactive-normal));
   --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
@@ -1836,8 +1836,8 @@ body.is-mobile {
                       calc(var(--accent-s) * 1.16),
                       calc(var(--accent-l) * 1.34)
                       );
-  --interactive-normal: var(--color-d-gray-90);
-  --interactive-hover: var(--color-d-gray-80);
+  --interactive-normal: var(--color-d-gray-120);
+  --interactive-hover: color-mix(in hsl, var(--color-d-gray-100) 50%, var(--interactive-normal));
   --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
@@ -2473,8 +2473,8 @@ body.is-mobile {
 .theme-dark.is-tablet {
   --titlebar-background: var(--background-secondary);
   --titlebar-background-focused: var(--background-secondary);
-  --interactive-normal: var(--color-d-gray-90);
-  --interactive-hover: var(--color-d-gray-80);
+  --interactive-normal: var(--color-d-gray-120);
+  --interactive-hover: color-mix(in hsl, var(--color-d-gray-100) 50%, var(--interactive-normal));
   --modal-background: var(--background-primary);
 }
 .theme-dark.theme-dark {
