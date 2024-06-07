@@ -54,18 +54,12 @@ https://git.new/primary/obsidian
 
 ────────────────────────────────────
 
-STRUCTURE OF SOURCE FOLDER
-    * General (overrides, spacing, sizing, radius, shape, fonts, animation) ->
-    * Specific (usually colors, icons) ->
-    * Mobile Styling ->
-    * Light Theme (base then options via style settings) ->
-    * Dark Theme (base then options via style settings) ->
-
-    + setup follows Obsidian Developer Docs
-    + pmr-*.css / primary-*.scss
-        houses code for additional Primary features
-    + ss-*.css / ss-*.scss
-        scripts for customizable features togglable via Style Settings
+CODE STRUCTURE
+    1. General (overrides, spacing, sizing, radius, shape, fonts, animation)
+    2. Specific (usually colors, icons)
+    3. Mobile Styling
+    4. Light Theme
+    5. Dark Theme
 
 ────────────────────────────────────      
 
