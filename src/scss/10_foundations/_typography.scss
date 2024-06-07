@@ -6,10 +6,6 @@ body {
     --font-monospace-theme: 'Cascadia Code';
 
     font-feature-settings: var(--inter-font-features);
-
-    font-weight: var(--font-normal);
-    --bold-weight: var(--font-medium);
-    --h1-weight: var(--font-semibold);
 }
 
 input,

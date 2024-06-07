@@ -629,9 +629,6 @@ body {
   --font-text-theme: "Inter";
   --font-monospace-theme: "Cascadia Code";
   font-feature-settings: var(--inter-font-features);
-  font-weight: var(--font-normal);
-  --bold-weight: var(--font-medium);
-  --h1-weight: var(--font-semibold);
 }
 
 input,
@@ -741,12 +738,6 @@ body {
   --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
                           "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
-  --font-normal: 400;
-  --font-medium: 450;
-  --font-semibold: 500;
-  --font-bold: 500;
-  --bold-italic-weight: 500;
-  --bold-modifier: 100;
   --font-ui-smallest: 11px;
   /* Icon */
   --icon-xs: 13px;
