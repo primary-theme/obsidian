@@ -2,6 +2,7 @@
 
 .cm-hashtag,
 a.tag {
+    font-weight: var(--pill-tag-weight);
     box-shadow: var(--tag-shadow);
     transition: var(--anim-duration-superfast) var(--anim-motion-smooth);
 
