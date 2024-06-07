@@ -1275,12 +1275,12 @@ body {
 
         --color-text-weeknum: var(--color-l-gray-80);
 
-        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+        --pmr-cal-day-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                                    0px 0px 4px 0px rgba(0, 0, 0, 0.05);
         --pmr-cal-day-color-active: var(--color-l-gray-80);
         --pmr-cal-day-dot-opacity-active: 0.5;
         --pmr-cal-day-background-active:  var(--color-l-gray-60);
-        --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.2),
-                                    inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
 
         --pmr-cal-active-day-color: var(--color-l-gray-140);
         --pmr-cal-active-day-background: rgba(255, 255, 255, 0.25);
@@ -2206,12 +2206,12 @@ body {
 
         --color-text-weeknum: var(--color-d-gray-60);
 
-        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+        --pmr-cal-day-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+                                    0px 0px 4px 0px rgba(0, 0, 0, 0.2);
         --pmr-cal-day-color-active: var(--color-d-gray-50);
         --pmr-cal-day-dot-opacity-active: 0.5;
         --pmr-cal-day-background-active:  var(--color-d-gray-140);
-        --pmr-cal-day-shadow-active: 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
-                                    inset 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
 
         --pmr-cal-active-day-color: var(--color-d-gray-10);
         --pmr-cal-active-day-background: rgba(0, 0, 0, 0.15);
