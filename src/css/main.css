@@ -739,6 +739,8 @@ body {
                           "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
   --font-ui-smallest: 11px;
+  --bold-weight: 600;
+  --bold-italic-weight: 600;
   /* Icon */
   --icon-xs: 13px;
   --icon-s: 15px;
