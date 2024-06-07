@@ -3358,6 +3358,10 @@ input.prompt-input:focus-visible {
   backdrop-filter: blur(var(--popup-bg-blur));
 }
 
+.theme-dark.is-mobile .prompt input.prompt-input {
+  background: var(--background-primary);
+}
+
 /*────────── Pull Down Action ──────────*/
 .pull-down-action {
   border-radius: var(--radius-l);
