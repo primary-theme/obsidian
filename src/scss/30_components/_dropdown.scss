@@ -2,7 +2,7 @@
 
 select,
 .dropdown {
-    // height: var(--dropdown-height);
+    font-weight: var(--component-font-weight);    
     border-radius: var(--button-radius);
     transition: var(--background-anim);
     

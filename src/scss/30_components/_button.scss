@@ -1,6 +1,7 @@
 /*────────── Button ──────────*/
 .is-mobile button:not(button.clickable-icon),
 button:not(button.clickable-icon) {
+    font-weight: var(--component-font-weight);
     padding: var(--button-padding);
     border-radius: var(--button-radius);
     transition: var(--button-anim);
@@ -130,6 +131,7 @@ button[disabled="true"] {
 
 // Property Box Add Property Button
 .metadata-container .metadata-add-button {
+    font-weight: var(--component-font-weight);
     text-transform: capitalize;
     color: var(--text-on-accent);
     background: var(--interactive-accent);
@@ -191,6 +193,7 @@ button[disabled="true"] {
 .markdown-embed-link,
 .file-embed-link {
     display: flex;
+    font-weight: var(--component-font-weight);
     line-height: 1;
     padding: var(--size-2-3) var(--size-2-3);
     border-radius: var(--radius-m);
@@ -238,9 +241,11 @@ button[disabled="true"] {
 
 // Search Result File Match Replace Button
 .search-result-file-match button.search-result-file-match-replace-button {
-    padding: var(--size-4-1) var(--size-4-2) calc(var(--size-4-1) + var(--button-inset-shadow-size));
+    padding: var(--button-s-padding);
+    border-radius: var(--button-s-radius);
+    box-shadow: var(--button-shadow);
 
     &:active {
-        padding: calc(var(--size-4-1) + var(--button-inset-shadow-size)) var(--size-4-2) calc(var(--size-2-1) + var(--button-inset-shadow-size));
+        padding: var(--button-s-padding);
     }
 }

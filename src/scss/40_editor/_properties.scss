@@ -41,7 +41,6 @@ body .metadata-property-icon svg {
         font-weight: var(--font-semibold);
         font-size: calc(var(--font-smallest) - 0.1em);
         text-transform: uppercase;
-        font-feature-settings: "calt" off;
         letter-spacing: 0.1em;
         padding-left: var(--size-4-2);
         transition: color var(--anim-duration-superfast) var(--anim-motion-smooth);

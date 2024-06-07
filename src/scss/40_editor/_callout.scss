@@ -9,8 +9,7 @@
 }
 
 .callout {
-    // background-color: rgba(var(--callout-color), var(--callout-color-opacity));
-    background-color: color-mix(in srgb, rgba(var(--callout-color)) var(--callout-color-opacity), var(--background-primary));
+    background-color: var(--callout-title-background);
     padding: 0;
     box-shadow: var(--callout-container-shadow);
 
@@ -91,35 +90,6 @@ body {
     --callout-icon-example: scroll-text;
     --callout-icon-quote: message-square-note;
     --callout-icon-cite: book-marked;
-
-    // Native Callout Colors
-    --callout-rgb-general: 182, 196, 182;
-    --callout-rgb-note: 200, 175, 155;
-    --callout-rgb-summary: 234, 181, 52;
-    --callout-rgb-abstract: 34, 152, 225;
-    --callout-rgb-tldr: 240, 180, 225;
-    --callout-rgb-info: 71, 162, 187;
-    --callout-rgb-todo: 58, 173, 252;
-    --callout-rgb-tip: 70, 206, 185;
-    --callout-rgb-hint: 70, 206, 185;
-    --callout-rgb-important: 246, 113, 118;
-    --callout-rgb-success: 87, 200, 83;
-    --callout-rgb-check: 87, 200, 83;
-    --callout-rgb-done: 87, 200, 83;
-    --callout-rgb-question: 130, 190, 235;
-    --callout-rgb-help: 250, 128, 96;
-    --callout-rgb-faq: 130, 190, 235;
-    --callout-rgb-warning: 255, 161, 32;
-    --callout-rgb-caution: 255, 161, 32;
-    --callout-rgb-attention: 255, 161, 32;
-    --callout-rgb-fail: 226, 72, 86;
-    --callout-rgb-missing: 226, 72, 86;
-    --callout-rgb-danger: 226, 72, 86;
-    --callout-rgb-error: 226, 72, 86;
-    --callout-rgb-bug: 153, 93, 133;
-    --callout-rgb-example: 216, 141, 130;
-    --callout-rgb-quote: 173, 214, 171;
-    --callout-rgb-cite: 237, 217, 162;
 }
 
 .callout {
