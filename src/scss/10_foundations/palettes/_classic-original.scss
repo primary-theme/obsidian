@@ -135,8 +135,8 @@ body {
     --titlebar-text-weight: var(--font-normal);
 
     /* Vault Switcher */
-    --vault-name-font-size: var(--font-ui-small);
-    --vault-name-font-weight: var(--font-bold);
+    --vault-profile-font-size: var(--font-ui-small);
+    --vault-profile-font-weight: var(--font-semibold);
     --vault-name-border-width: 1px;
 
     /*────────── Components ──────────*/
@@ -212,7 +212,6 @@ body {
 
     /* Tab */
     --tab-font-size: var(--font-ui-small);
-    --tab-font-weight: var(--font-normal);
     --tab-outline-width: 1px;
     --tab-curve: 6px;
     --tab-radius: var(--radius-s);
@@ -677,6 +676,7 @@ body {
     /* Vault Switcher */
     --vault-profile-color: var(--vault-name-color);
     --vault-name-color: var(--color-l-gray-100);
+    --vault-name-color-hover: var(--color-l-gray-120);
     --vault-name-background: var(--color-l-gray-30);
     --vault-name-border: var(--vault-name-border-width) solid var(--background-modifier-border);
     
@@ -832,8 +832,8 @@ body {
     --prompt-border-color: var(--background-modifier-border-focus);
 
     --prompt-results-background: var(--background-primary);
-    --prompt-suggestion-color: var(--color-l-gray-110);
-    --prompt-suggestion-highlight-color: var(--color-l-gray-120);
+    --prompt-suggestion-color: var(--color-l-gray-90);
+    --prompt-suggestion-highlight-color: color-mix(in srgb, var(--prompt-suggestion-color) 70%, black);
     --prompt-suggestion-color-selected: var(--color-l-gray-130);
     --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
     --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.35);
@@ -1744,7 +1744,7 @@ body {
 
     --prompt-results-background: var(--background-primary);
     --prompt-suggestion-color: var(--color-d-gray-40);
-    --prompt-suggestion-highlight-color: var(--color-d-gray-30);
+    --prompt-suggestion-highlight-color: color-mix(in srgb, var(--prompt-suggestion-color) 70%, white);
     --prompt-suggestion-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
