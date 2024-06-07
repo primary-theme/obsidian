@@ -93,7 +93,6 @@
         &:active {
             color: var(--pmr-cal-day-color-active);
             background: var(--pmr-cal-day-background-active);
-            box-shadow: var(--pmr-cal-day-shadow-active);
 
             .dot-container {
                 opacity: var(--pmr-cal-day-dot-opacity-active);
