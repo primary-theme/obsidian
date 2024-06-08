@@ -1,12 +1,7 @@
 /*────────── Typography ──────────*/
 
 body {
-    --font-interface-theme: 'Inter';
-    --font-text-theme: 'Inter';
-    --font-monospace-theme: 'Cascadia Code';
-
     font-feature-settings: var(--inter-font-features);
-    font-weight: var(--font-weight);
 }
 
 input,

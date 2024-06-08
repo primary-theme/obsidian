@@ -89,13 +89,31 @@ body {
     --cursor: pointer;
 
     /* Font */
+    --font-interface-theme: 'Inter';
+    --font-text-theme: 'Inter';
+    --font-monospace-theme: 'Cascadia Code';
+
     --inter-font-features:  "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
                             "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
     --cascadia-font-features:   "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
 
     --font-ui-smallest: 11px;
-    --bold-weight: 600;
-    --bold-italic-weight: 600;
+
+    /* Font Thickness */
+    font-weight: var(--font-weight);
+    --font-thin: 125;
+    --font-extralight: 225;
+    --font-light: 325;
+    --font-normal: 425;
+    --font-medium: 525;
+    --font-semibold: 625;
+    --font-bold: 725;
+    --font-extrabold: 825;
+    --font-black: 900;
+
+    --bold-weight: var(--font-bold);
+    --bold-modifier: 300;
+    --bold-italic-weight: var(--font-bold);
 
     /* Icon */
     --icon-xs: 13px;

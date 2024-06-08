@@ -7,6 +7,7 @@
 
 .embed-title {
     text-wrap: wrap;
+    font-weight: var(--font-medium);
     color: var(--embed-title-color);
     padding: 0 var(--size-4-3) var(--size-2-2);
     margin-inline-start: calc(-1 * var(--embed-left-right-padding));
