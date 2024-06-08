@@ -751,7 +751,7 @@ body {
   --font-extrabold: 825;
   --font-black: 900;
   --bold-weight: var(--font-bold);
-  --bold-modifier: 300;
+  --bold-modifier: 225;
   --bold-italic-weight: var(--font-bold);
   /* Icon */
   --icon-xs: 13px;
