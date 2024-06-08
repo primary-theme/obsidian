@@ -26,27 +26,6 @@ settings:
 		collapsed: true
 		title: Interface
 	-
-		id: interface_typography
-		type: heading
-		level: 2
-		collapsed: true
-		title: Typography
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: ⚙️ To change fonts, go to Settings → Appearance → Font, and change your fonts within Obsidian Settings.
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: 🌿 Primary v1.0 user? Want to use the original Karla font? Read the [Karla Font Guide]() to learn how to get back into using it.
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: 🌸 Visit the [Font Recommendation Guide]() for more curated font options for Primary! The guide includes a setup tutorial.
-	-
 		id: interface_animations
 		type: heading
 		level: 2
@@ -212,6 +191,27 @@ settings:
             -
                 label: Word Count Only
                 value: sb-word-count-only
+	-
+		id: interface_typography
+		type: heading
+		level: 2
+		collapsed: true
+		title: Typography
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: ⚙️ To change fonts, go to Settings → Appearance → Font, and change your fonts within Obsidian Settings.
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🌿 Primary v1.0 user? Want to use the original Karla font? Read the [Karla Font Guide]() to learn how to get back into using it.
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🌸 Visit the [Font Recommendation Guide]() for more curated font options for Primary! The guide includes a setup tutorial.
 	-
 		id: notes-files
 		type: heading
@@ -388,7 +388,7 @@ settings:
         id: h2-weight
         type: variable-number
         title: Font Weight
-        default: 600
+        default: 625
     -
         id: h2-style
         type: variable-text
@@ -521,7 +521,7 @@ settings:
         id: h3-weight
         type: variable-number
         title: Font Weight
-        default: 600
+        default: 625
     -
         id: h3-style
         type: variable-text
@@ -654,7 +654,7 @@ settings:
         id: h4-weight
         type: variable-number
         title: Font Weight
-        default: 600
+        default: 625
     -
         id: h4-style
         type: variable-text
@@ -787,7 +787,7 @@ settings:
         id: h5-weight
         type: variable-number
         title: Font Weight
-        default: 600
+        default: 625
     -
         id: h5-style
         type: variable-text
@@ -920,7 +920,7 @@ settings:
         id: h6-weight
         type: variable-number
         title: Font Weight
-        default: 600
+        default: 625
     -
         id: h6-style
         type: variable-text
@@ -1050,7 +1050,7 @@ settings:
         id: bold-weight
         type: variable-number
         title: Bold Text Weight
-        default: 600
+        default: 625
     -
         id: italic-color
         type: variable-themed-color
@@ -1094,7 +1094,7 @@ settings:
         id: bold-italic-weight
         type: variable-number
         title: Bold + Italic Text Weight
-        default: 600
+        default: 625
     -
         id: bold-italic-strikethrough-color
         type: variable-themed-color
