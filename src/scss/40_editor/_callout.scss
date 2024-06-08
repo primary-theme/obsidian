@@ -41,6 +41,10 @@
                 width: var(--font-text-size);
             }
         }
+
+        &-inner {
+            font-weight: var(--font-semibold);
+        }
     }
 
     // Aligns the Fold Icon to the right

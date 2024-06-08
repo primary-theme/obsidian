@@ -3940,6 +3940,9 @@ input[type=datetime-local]::-webkit-datetime-edit-year-field:focus {
   height: var(--font-text-size);
   width: var(--font-text-size);
 }
+.callout-title-inner {
+  font-weight: var(--font-semibold);
+}
 .callout .callout-title {
   margin-right: auto;
 }
