@@ -14,6 +14,34 @@
     <strong>Obsidian October 2021 Judges</strong>
 </p>
 
+## 🍭 Design Approach
+
+Primary is an opinionated Obsidian theme that merges play with work.
+
+It is made for people who want an interface that doesn't feel like work. Fine-tuned to pixel and color perfection, Primary aims to take away the need to think about customization, so that you can focus on what matters – the concepts, that link, this great idea.
+
+Despite being opinionated, it has plenty of options and ways to make it yours. 
+
+Stay tuned, because Primary will come in more flavors soon.
+
+### 🌞 Principles
+
+#### Deliberate focus. For all the important things you're doing.
+
+By dimming the sidebars, it makes you focus on the currently opened file. This principle also applies to interface components such as prompts, search boxes, text boxes, etc., so that it pops up from the rest of the interface and is easily visible at the moment you need it.
+
+#### Not here to please.
+
+In the last decade or so, Minimalism has entrenched us and all of our dailies: clothing, lifestyle, design, architecture, etc. But it has, we believe, taken away personality from a lot of us in favor for just function and speed. While it has its purpose, I believe having Minimalism makes us way too industrialized or intensely commercial. The human spirit is missing. Culture is starting to fade.
+
+But this isn't to say that Minimalism is bad. More of, it's getting to the point where we're hitting a plateau. So Primary is here to draw the sword. Primary is here as proof-of-work to challenge the Design status quo that we can offer something even if it isn't for everybody. Because in the end we can't please everyone, so let's aim to be the best for the right ones.
+
+So at Primary, we're focused on showing us who we really are, but we're understanding enough to say that it doesn't fit for everyone. 
+
+#### Top quality. Know you're in good hands.
+
+Primary was built with every component's state in mind. Quality is considering the little things, that one may not know matters, but affects the overall experience. We're here to build slow and deliberate, considering every pixel, fine tuning down to the decimals, and reviewing again and again every second you're immersed in it.
+
 ## 🖼️ Previews
 
 Overall Demo
@@ -65,6 +93,8 @@ This option is exclusive to monthly subscribers of Primary.
     - License
 - Creating Primary
 - Credits
+
+## 🧸 Features
 
 ## 🔌 Supported Plugins
 
