@@ -740,7 +740,7 @@ body {
   --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
   --font-ui-smallest: 11px;
   /* Font Thickness */
-  font-weight: var(--font-weight);
+  font-weight: var(--font-normal);
   --font-thin: 150;
   --font-extralight: 250;
   --font-light: 350;
@@ -2226,6 +2226,10 @@ body.is-mobile {
                                   var(--background-primary-alt) 50%,
                                   var(--editor-bg-color)
                                   );
+  --embed-border-top-color: var(--background-modifier-border);
+  --embed-border-end-color: var(--background-modifier-border);
+  --embed-border-bottom-color: var(--background-modifier-border);
+  --embed-border-start-color: var(--background-modifier-border);
   --embed-title-color: var(--color-d-gray-50);
   --embed-title-border-color: var(--background-modifier-border);
   --embed-block-shadow-hover: none;
