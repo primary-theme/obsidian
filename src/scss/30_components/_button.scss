@@ -44,6 +44,7 @@ button:not(button.clickable-icon) {
         box-shadow: var(--button-accent-shadow);
 
         &:hover {
+            background-color: var(--background-modifier-error-hover);
             box-shadow: var(--button-accent-shadow-hover);
         }
 
