@@ -2845,6 +2845,7 @@ button:not(button.clickable-icon).mod-warning {
 }
 .is-mobile button:not(button.clickable-icon).mod-warning:hover,
 button:not(button.clickable-icon).mod-warning:hover {
+  background-color: var(--background-modifier-error-hover);
   box-shadow: var(--button-accent-shadow-hover);
 }
 .is-mobile button:not(button.clickable-icon).mod-warning:active,
