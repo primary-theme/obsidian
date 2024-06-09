@@ -201,7 +201,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: ⚙️ To change fonts, go to Settings → Appearance → Font, and change your fonts within Obsidian Settings.
+        description: ⚙️ To change fonts, go to Settings → Appearance → Font, and select the font you want to use (must be installed in your system).
     -
         id: readme-content
         type: info-text
@@ -212,6 +212,68 @@ settings:
         type: info-text
         markdown: true
         description: 🌸 Visit the [Font Recommendation Guide]() for more curated font options for Primary! The guide includes a setup tutorial.
+    -
+        id: typography_weight
+        type: heading
+        level: 3
+        collapsed: true
+        title: Font Weight
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: ☝️ By default with Inter, the font is a little bit thin. To increase readability, I increased the base font weight for each category by 50. If you decide to use your own font, the options below are good to use if you find the font you're using a bit too thick. You can bring them back down by 50 to use the original defaults weights.
+    -
+        id: font-thin
+        type: variable-number
+        title: Thin Font Weight
+        default: 150
+    -
+        id: font-extralight
+        type: variable-number
+        title: Extralight Font Weight
+        default: 250
+    -
+        id: font-light
+        type: variable-number
+        title: Light Font Weight
+        default: 350
+    -
+        id: font-normal
+        type: variable-number
+        title: Normal Font Weight
+        default: 450
+    -
+        id: font-medium
+        type: variable-number
+        title: Medium Font Weight
+        default: 550
+    -
+        id: font-semibold
+        type: variable-number
+        title: Semibold Font Weight
+        default: 650
+    -
+        id: font-bold
+        type: variable-number
+        title: Bold Font Weight
+        default: 750
+    -
+        id: font-extrabold
+        type: variable-number
+        title: Extrabold Font Weight
+        default: 850
+    -
+        id: font-black
+        type: variable-number
+        title: Black Font Weight
+        default: 900
+    -
+        id: bold-modifier
+        type: variable-number
+        title: Bold Modifier
+        description: This is an addend to Normal Font Weight for certain interface components that Obsidian wanted to turn into bold.
+        default: 225
 	-
 		id: notes-files
 		type: heading
@@ -233,7 +295,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 📖 The settings are based on CSS styling capabilities. Visit [MDN]() to learn more.
+        description: 📖 The settings are based on CSS styling capabilities.
 	-
 		id: nf_header-1
 		type: heading
