@@ -131,16 +131,19 @@ Many of you have requested Karla's presence back in Primary, so here's how to do
 11. Once installed, go back to the main page of Settings, and go to the **Style Settings** tab.
 12. On the search bar of Style Settings, type `Font Weight`. This should produce results of settings that allow you to change global font weight settings.
 13. Set the followings settings accordingly:
-    - Thin Font Weight: from 150 -> 100
-    - Extralight Font Weight: from 250 -> 200
-    - Light Font Weight: from 350 -> 300
-    - Normal Font Weight: from 450 -> 400
-    - Medium Font Weight: from 550 -> 500
-    - Semibold Font Weight: from 650 -> 600
-    - Bold Font Weight: from 750 -> 700
-    - Extrabold Font Weight: from 850 -> 800
-    - Black Font Weight: from 900 -> 900
-    - Bold Modifier: from 225 -> 200
+    - Thin Font Weight: from 150 → 100
+    - Extralight Font Weight: from 250 → 200
+    - Light Font Weight: from 350 → 300
+    - Normal Font Weight: from 450 → 400
+    - Medium Font Weight: from 550 → 500
+    - Semibold Font Weight: from 650 → 600
+    - Bold Font Weight: from 750 → 700
+    - Extrabold Font Weight: from 850 → 800
+    - Black Font Weight: from 900 → 900
+    - Bold Modifier: from 225 → 200
+14. Once you're done with the font weights, open up the **Command Palette**.
+15. Find `Reload app without saving` and press `Enter`.
+16. And you're done! You should be good to go.
 
 #### Font Recommendation
 
