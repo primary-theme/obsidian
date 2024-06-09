@@ -26,9 +26,13 @@ Stay tuned, because Primary will come in more flavors soon.
 
 ### 🌞 Principles
 
-#### Deliberate focus. For all the important things you're doing.
+#### Spatial Organization and Color Theory for Focus
 
-By dimming the sidebars, it makes you focus on the currently opened file. This principle also applies to interface components such as prompts, search boxes, text boxes, etc., so that it pops up from the rest of the interface and is easily visible at the moment you need it.
+By dimming the sidebars, it makes you focus on the currently opened file.
+
+This principle also applies to interface components such as prompts, search boxes, text boxes, etc., so that it pops up from the rest of the interface but is easily visible at the moment you need it.
+
+This is done by using spatial organization and color theory. Lower contrast for things you don't need right now, and higher contrast for focus.
 
 #### Not here to please.
 
@@ -36,7 +40,7 @@ In the last decade or so, Minimalism has entrenched us and all of our dailies: c
 
 But this isn't to say that Minimalism is bad. More of, it's getting to the point where we're hitting a plateau. So Primary is here to draw the sword. Primary is here as proof-of-work to challenge the Design status quo that we can offer something even if it isn't for everybody. Because in the end we can't please everyone, so let's aim to be the best for the right ones.
 
-So at Primary, we're focused on showing us who we really are, but we're understanding enough to say that it doesn't fit for everyone. 
+So at Primary, we're focused on showing us who we really are, and we're understanding enough to say that it doesn't fit for everyone. 
 
 #### Top quality. Know you're in good hands.
 
@@ -85,6 +89,10 @@ This option is exclusive to monthly subscribers of Primary.
 - Install
 - Features
 - Customization
+  - Fonts and Typography
+    - Font Features
+    - Karla Font Guide (for Primary v1.0 Users)
+    - Font Recommendation
 - Supported Plugins
 - Disclaimer
 - Contributing
@@ -95,6 +103,46 @@ This option is exclusive to monthly subscribers of Primary.
 - Credits
 
 ## 🧸 Features
+
+## 🎨 Customization
+
+### Fonts and Typography
+
+#### Font Features
+
+#### Karla Font Guide
+
+This is a guide especially made for Primary v1.0 users that want to go back to using the old default font of Primary — Karla!
+
+Many of you have requested Karla's presence back in Primary, so here's how to do it.
+
+1. Start by downloading [Karla](https://fonts.google.com/specimen/Karla) via Google Fonts. Karla is a free font so no purchases needed. On the link, press `Get Font`, and a new page will show with Karla and 2 buttons. Press `Download All`. This will download a `.zip` file.
+2. Once downloaded, extract the contents of the `.zip` file. You should have extracted a folder called `Karla`.
+3. Go inside the `Karla` folder, and in it you should see something along the lines of `Karla-Italic-Variable...-wght.ttf` and `Karla-Variable...-wght.ttf `. These are font files. Install them.
+   - If you're on Windows, select the two `.ttf` files, right click, and press `Install all`
+   - If you're on macOS, open a `.ttf` file, and press the `Install` button. Do this for both `.ttf` files.
+4. Once installed, go to your Obsidian Vault and open up **Settings**.
+5. Go to **Appearance** tab and scroll down to the Font section. You should see *Interface Font*, *Text Font*, and *Monospace Font*. We're going to apply Karla as our Interface Font and our Text Font.
+6. Under **Interface Font**, click `Manage`.
+7. Under Font Name, find Karla. Once found, press `Add`, and click `Save`.
+8. Do the same for **Text Font**. Under **Text Font**, click `Manage`. Find Karla, press `Add`, and click `Save`.
+9. We're not finished yet though! You might notice that Karla is a bit thicker than usual. If you like it, you can stop here, but if not, keep reading to fix this.
+10. Install [Style Settings](obsidian://show-plugin?id=obsidian-style-settings) via the Community Plugins.
+11. Once installed, go back to the main page of Settings, and go to the **Style Settings** tab.
+12. On the search bar of Style Settings, type `Font Weight`. This should produce results of settings that allow you to change global font weight settings.
+13. Set the followings settings accordingly:
+    - Thin Font Weight: from 150 -> 100
+    - Extralight Font Weight: from 250 -> 200
+    - Light Font Weight: from 350 -> 300
+    - Normal Font Weight: from 450 -> 400
+    - Medium Font Weight: from 550 -> 500
+    - Semibold Font Weight: from 650 -> 600
+    - Bold Font Weight: from 750 -> 700
+    - Extrabold Font Weight: from 850 -> 800
+    - Black Font Weight: from 900 -> 900
+    - Bold Modifier: from 225 -> 200
+
+#### Font Recommendation
 
 ## 🔌 Supported Plugins
 
