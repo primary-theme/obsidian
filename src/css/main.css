@@ -4359,7 +4359,7 @@ h1,
 }
 
 h2,
-.HyperMD-header-1.cm-line,
+.HyperMD-header-2.cm-line,
 .markdown-rendered h2 {
   text-align: var(--h2-text-align);
   letter-spacing: var(--h2-letter-spacing);
@@ -4375,7 +4375,7 @@ h2,
 }
 
 h3,
-.HyperMD-header-1.cm-line,
+.HyperMD-header-3.cm-line,
 .markdown-rendered h3 {
   text-align: var(--h3-text-align);
   letter-spacing: var(--h3-letter-spacing);
@@ -4391,7 +4391,7 @@ h3,
 }
 
 h4,
-.HyperMD-header-1.cm-line,
+.HyperMD-header-4.cm-line,
 .markdown-rendered h4 {
   text-align: var(--h4-text-align);
   letter-spacing: var(--h4-letter-spacing);
@@ -4407,7 +4407,7 @@ h4,
 }
 
 h5,
-.HyperMD-header-1.cm-line,
+.HyperMD-header-5.cm-line,
 .markdown-rendered h5 {
   text-align: var(--h5-text-align);
   letter-spacing: var(--h5-letter-spacing);
@@ -4423,7 +4423,7 @@ h5,
 }
 
 h6,
-.HyperMD-header-1.cm-line,
+.HyperMD-header-6.cm-line,
 .markdown-rendered h6 {
   text-align: var(--h6-text-align);
   letter-spacing: var(--h6-letter-spacing);
