@@ -255,7 +255,7 @@ I'm planning to update it as best as I can and create more themes hopefully with
 
 If you've read all the way down here, well, what the heck. Thank you for listening to my TED talk. Please go back to writing your notes or whatever was more important than my rambles. Hahaha!
 
-> written 2021-11-01
+<small style="font-style: italic;">written 2021-11-01</small>
 
 ## 🩵 Credits
 

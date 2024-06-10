@@ -2414,7 +2414,7 @@ body.is-mobile {
   --graph-node-focused: var(--color-d-gray-20);
   --graph-node-highlight-fill: var(--color-d-gray-30);
   --graph-node-highlight-line: var(--color-d-gray-60);
-  --graph-text: var(--color-d-gray-80);
+  --graph-text: var(--color-d-gray-50);
   --graph-line: var(--background-modifier-border);
   --graph-arrow: var(--color-d-gray-50);
   /* Search */
