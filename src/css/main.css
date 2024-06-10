@@ -844,6 +844,9 @@ body {
                                       calc(var(--size-2-3) + var(--button-inset-shadow-size))
                                       var(--size-4-5);
   --settings-nav-item-radius: calc(var(--radius-m) - 1px);
+  /* Navigation */
+  --flair-count-padding: 2px 4px;
+  --flair-count-radius: calc(var(--radius-s) + 1px);
   /* Pill */
   --pill-tag-weight: var(--component-font-weight);
   /* Slider */
@@ -1333,6 +1336,8 @@ body.is-mobile {
   --nav-file-tag-bg: transparent;
   --collapse-icon-color: var(--color-l-gray-70);
   --collapse-icon-color-collapsed: var(--color-l-gray-70);
+  --flair-count-color: var(--color-l-gray-80);
+  --flair-count-bg-color: var(--color-l-gray-40);
   /* Nested Items */
   --indentation-guide-color: var(--background-modifier-border);
   --indentation-guide-color-active: var(--background-modifier-border-focus);
@@ -2056,8 +2061,8 @@ body.is-mobile {
   --nav-item-color-active: var(--color-d-gray-40);
   --nav-item-color-selected: var(--color-d-gray-20);
   --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: rgba(0, 0, 0, 0.15);
-  --nav-item-background-active: rgba(0, 0, 0, 0.15);
+  --nav-item-background-hover: rgba(0, 0, 0, 0.125);
+  --nav-item-background-active: rgba(0, 0, 0, 0.125);
   --nav-item-background-selected: var(--color-d-alpha-green);
   --nav-indentation-guide-color: var(--indentation-guide-color);
   --nav-collapse-icon-color: var(--collapse-icon-color);
@@ -2074,6 +2079,8 @@ body.is-mobile {
   --nav-file-tag-bg: transparent;
   --collapse-icon-color: var(--color-d-gray-60);
   --collapse-icon-color-collapsed: var(--color-d-gray-60);
+  --flair-count-color: var(--color-d-gray-60);
+  --flair-count-bg-color: var(--color-d-gray-120);
   /* Nested Items */
   --indentation-guide-color: var(--background-modifier-border);
   --indentation-guide-color-active: var(--background-modifier-border-focus);
@@ -3269,6 +3276,21 @@ span.setting-hotkey {
 }
 .tree-item-self.is-clickable.is-active:not(.nav-file-title) {
   box-shadow: var(--nav-item-shadow-active);
+}
+
+.embedded-backlinks .backlink-pane .tree-item-flair,
+.tree-item-flair {
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-ui-smallest);
+  color: var(--flair-count-color);
+  background: var(--flair-count-bg-color);
+  padding: var(--flair-count-padding);
+  border-radius: var(--flair-count-radius);
+}
+
+body:not(.is-grabbing) .tree-item-self.is-clickable:hover .tree-item-flair {
+  color: var(--nav-item-color-hover);
+  background: var(--flair-count-bg-color);
 }
 
 .backlink-pane > .tree-item-self,

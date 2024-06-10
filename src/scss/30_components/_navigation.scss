@@ -12,6 +12,21 @@
     }
 }
 
+.embedded-backlinks .backlink-pane .tree-item-flair,
+.tree-item-flair {
+    font-variant-numeric: tabular-nums;
+    font-size: var(--font-ui-smallest);
+    color: var(--flair-count-color);
+    background: var(--flair-count-bg-color);
+    padding: var(--flair-count-padding);
+    border-radius: var(--flair-count-radius);
+}
+
+body:not(.is-grabbing) .tree-item-self.is-clickable:hover .tree-item-flair {
+    color: var(--nav-item-color-hover);
+    background: var(--flair-count-bg-color);
+}
+
 // Backlink Pane | Outgoing Link Pane
 .backlink-pane,
 .embedded-backlinks .backlink-pane,
