@@ -14,37 +14,37 @@
     <strong>Obsidian October 2021 Judges</strong>
 </p>
 
-## 🍭 Design Approach
-
-Primary is an opinionated Obsidian theme that merges play with work.
-
-It is made for people who want an interface that doesn't feel like work. Fine-tuned to pixel and color perfection, Primary aims to take away the need to think about customization, so that you can focus on what matters – the concepts, that link, this great idea.
-
-Despite being opinionated, it has plenty of options and ways to make it yours. 
-
-Stay tuned, because Primary will come in more flavors soon.
-
-### 🌞 Principles
-
-#### Spatial Organization and Color Theory for Focus
-
-By dimming the sidebars, it makes you focus on the currently opened file.
-
-This principle also applies to interface components such as prompts, search boxes, text boxes, etc., so that it pops up from the rest of the interface but is easily visible at the moment you need it.
-
-This is done by using spatial organization and color theory. Lower contrast for things you don't need right now, and higher contrast for focus.
-
-#### Not here to please.
-
-In the last decade or so, Minimalism has entrenched us and all of our dailies: clothing, lifestyle, design, architecture, etc. But it has, we believe, taken away personality from a lot of us in favor for just function and speed. While it has its purpose, I believe having Minimalism makes us way too industrialized or intensely commercial. The human spirit is missing. Culture is starting to fade.
-
-But this isn't to say that Minimalism is bad. More of, it's getting to the point where we're hitting a plateau. So Primary is here to draw the sword. Primary is here as proof-of-work to challenge the Design status quo that we can offer something even if it isn't for everybody. Because in the end we can't please everyone, so let's aim to be the best for the right ones.
-
-So at Primary, we're focused on showing us who we really are, and we're understanding enough to say that it doesn't fit for everyone. 
-
-#### Top quality. Know you're in good hands.
-
-Primary was built with every component's state in mind. Quality is considering the little things, that one may not know matters, but affects the overall experience. We're here to build slow and deliberate, considering every pixel, fine tuning down to the decimals, and reviewing again and again every second you're immersed in it.
+## 🧭 Navigation
+- [Design Approach](#🍭-design-approach)
+  - Principles
+- Previews
+- Install
+  - Official Release
+  - Beta Version
+- Features
+  - Multicolored Highlights
+  - Alternative Callouts
+  - Alternative Checkboxes
+  - Image Filters
+  - Cards
+  - Image Grid
+  - Tables
+  - Embeds
+- Customization
+  - Fonts and Typography
+    - Font Features
+    - Karla Font Guide (for Primary v1.0 Users)
+    - Font Recommendation
+  - Interface
+  - Notes and Files
+- Supported Plugins
+- Disclaimer
+- Contributing
+    - Non-developers
+    - Developers
+    - License
+- Creating Primary
+- Credits
 
 ## 🖼️ Previews
 
@@ -57,6 +57,57 @@ Desktop Main View Dark Mode
 Tablet and Phone Main View Light Mode 
 
 Tablet and Phone Main View Dark Mode
+
+## 🍭 Design Approach
+
+Primary is an opinionated Obsidian theme that merges play with work.
+
+It is made for people who want an interface that doesn't feel like work. Fine-tuned to pixel and color perfection, Primary aims to take away the need to think about customization, so that you can focus on what matters – the concepts, that link, this great idea.
+
+Despite being opinionated, it has plenty of options and ways to make it yours. 
+
+Stay tuned, because Primary will come in more flavors soon.
+
+### 🌞 Principles
+
+#### Opinionated but Open
+
+From high-level concept down to pixel-level perfection, we bring not only a theme, but an artistic experience.
+
+Work doesn’t have to be boring, so we’re bringing play through Primary by putting you in interesting color environments.
+
+A beautiful palette is to each their own, but we’re dedicated to allowing you to taste different versions of what we think is beautiful.
+
+We made Primary to allow you to easily customize things on your own through snippets. Most of the code isn't hard coded, and the whole palette will be accessible through Style Settings.
+
+#### Functional Design
+
+- Primary forces you to focus on the files/note panes by lifting it up visually through dimming the sidebars
+- Lower contrast/chroma for not so important things, and higher contrast/chroma to bring a sense of urgency.
+- Layers (through visual cues of shadows, blur, and color) help establish different levels of the space
+- Borders can easily garner attention due to the space they take (size, shape and color wise), but we added them with purpose: to either separate or lift
+
+#### Balance of Aesthetic and Optimization
+
+Primary is dedicated to serve bigger vaults. By following a design structure, it allows us to keep Primary’s code lean, lessening potential performance overhead.
+
+This means sacrificing preset customizability. Most Primary users seem to use it out of the box, so we're putting out options in Style Settings for most customization use cases or special cases only.
+
+Instead, we're adding an option to expose the variables and styling capabilities (over embedded presets), so that you're free to edit them to your liking, or import presets from our Preset Library.
+
+#### Top quality. Know you're in good hands.
+
+Primary was built with every component's state in mind. Quality is considering the little things, that one may not know matters, but affects the overall experience.
+
+We're here to build slow and deliberate, considering every pixel, fine tuning down to the decimals. Questions like: how does this thickness make me feel? What do these mix of colors trigger within me? We review the theme again and again every second you're immersed in it.
+
+By giving you the best quality, we offload the stress of having to tinker to make Obsidian better by offering you a beautiful piece of product that just works.
+
+#### A Collection of Fashion Houses
+
+Primary isn’t here to give every single UI possibility. We’re here to give you just the Primary experience, but allow you to experience different fashion houses.
+
+Additional color palettes and theme presets options will be available for those who want Primary’s design principles to better suit their personality.
 
 ## 📖 How to Get Primary for Obsidian
 
@@ -84,23 +135,6 @@ This option is exclusive to monthly subscribers of Primary.
 8. Go back to Obsidian and open up your Command Palette. Type `Reload app without saving` and press enter so that your Obsidian gets reloaded and ensures it identifies the CSS file.
 9. Once your Obsidian has reloaded, open up Settings -> Appearance tab. Under the `Themes` dropdown, select the `primary-x.x.x-beta` you downloaded. This should load the theme.
 10. Reload the app again for best results.
-
-## 🧭 Navigation
-- Install
-- Features
-- Customization
-  - Fonts and Typography
-    - Font Features
-    - Karla Font Guide (for Primary v1.0 Users)
-    - Font Recommendation
-- Supported Plugins
-- Disclaimer
-- Contributing
-    - Non-developers
-    - Developers
-    - License
-- Creating Primary
-- Credits
 
 ## 🧸 Features
 
@@ -140,7 +174,7 @@ Many of you have requested Karla's presence back in Primary, so here's how to do
     - Bold Font Weight: from 750 → 700
     - Extrabold Font Weight: from 850 → 800
     - Black Font Weight: from 900 → 900
-    - Bold Modifier: from 225 → 200
+    - Bold Modifier: keep at 200
 14. Once you're done with the font weights, open up the **Command Palette**.
 15. Find `Reload app without saving` and press `Enter`.
 16. And you're done! You should be good to go.
