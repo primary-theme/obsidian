@@ -17,3 +17,7 @@
         color: var(--graph-node-highlight-line);
     }
 }
+
+.mod-root .workspace-leaf .graph-controls.is-close {
+    background: var(--editor-bg-color);
+}
