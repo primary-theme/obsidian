@@ -15,36 +15,29 @@
 </p>
 
 ## 🧭 Navigation
-- [Design Approach](#🍭-design-approach)
-  - Principles
-- Previews
-- Install
-  - Official Release
-  - Beta Version
-- Features
-  - Multicolored Highlights
-  - Alternative Callouts
-  - Alternative Checkboxes
-  - Image Filters
-  - Cards
-  - Image Grid
-  - Tables
-  - Embeds
-- Customization
-  - Fonts and Typography
-    - Font Features
-    - Karla Font Guide (for Primary v1.0 Users)
-    - Font Recommendation
-  - Interface
-  - Notes and Files
-- Supported Plugins
-- Disclaimer
-- Contributing
-    - Non-developers
-    - Developers
-    - License
-- Creating Primary
-- Credits
+- [🧭 Navigation](#-navigation)
+- [🖼️ Previews](#️-previews)
+- [🍭 Design Approach](#-design-approach)
+  - [🌞 Principles](#-principles)
+    - [Opinionated but Open](#opinionated-but-open)
+    - [Functional Design](#functional-design)
+    - [Balance of Aesthetic and Optimization](#balance-of-aesthetic-and-optimization)
+    - [Top quality. Know you're in good hands.](#top-quality-know-youre-in-good-hands)
+    - [A Collection of Fashion Houses](#a-collection-of-fashion-houses)
+- [📖 How to Get Primary for Obsidian](#-how-to-get-primary-for-obsidian)
+  - [Install Official Release](#install-official-release)
+  - [Install Beta Version](#install-beta-version)
+- [🧸 Features, Customization, and Plugins](#-features-customization-and-plugins)
+- [🚧 Disclaimer](#-disclaimer)
+- [🌺 Contributing](#-contributing)
+  - [Non-developers](#non-developers)
+  - [Developers](#developers)
+    - [Build Instructions](#build-instructions)
+    - [Setting up your Theme Dev Environment](#setting-up-your-theme-dev-environment)
+    - [Code, Build and Test](#code-build-and-test)
+  - [License](#license)
+- [🧠 Creating Primary](#-creating-primary)
+- [🩵 Credits](#-credits)
 
 ## 🖼️ Previews
 
@@ -62,7 +55,7 @@ Tablet and Phone Main View Dark Mode
 
 Primary is an opinionated Obsidian theme that merges play with work.
 
-It is made for people who want an interface that doesn't feel like work. Fine-tuned to pixel and color perfection, Primary aims to take away the need to think about customization, so that you can focus on what matters – the concepts, that link, this great idea.
+Fine-tuned to pixel and color perfection, Primary aims to take away the need to think about customization, so that you can focus on what matters – the concepts, that link, this great idea.
 
 Despite being opinionated, it has plenty of options and ways to make it yours. 
 
@@ -89,11 +82,13 @@ We made Primary to allow you to easily customize things on your own through snip
 
 #### Balance of Aesthetic and Optimization
 
-Primary is dedicated to serve bigger vaults. By following a design structure, it allows us to keep Primary’s code lean, lessening potential performance overhead.
+Primary is dedicated to serve bigger vaults. By following a design structure, it allows us to keep Primary’s code lean, lessening potential performance overhead while keeping its visual language.
 
 This means sacrificing preset customizability. Most Primary users seem to use it out of the box, so we're putting out options in Style Settings for most customization use cases or special cases only.
 
-Instead, we're adding an option to expose the variables and styling capabilities (over embedded presets), so that you're free to edit them to your liking, or import presets from our Preset Library.
+Instead of presets, we exposed the variables, so that you're free to edit them to your liking. The caveat is that you do have to have some CSS knowledge, but rest assured we're here to explain as much as we can.
+
+You will also be able to import Presets or create snippets, all using the exposed variables!
 
 #### Top quality. Know you're in good hands.
 
@@ -111,7 +106,7 @@ Additional color palettes and theme presets options will be available for those 
 
 ## 📖 How to Get Primary for Obsidian
 
-### Install via the Obsidian Theme Store
+### Install Official Release
 
 This option will give you access to public releases.
 
@@ -136,71 +131,9 @@ This option is exclusive to monthly subscribers of Primary.
 9. Once your Obsidian has reloaded, open up Settings -> Appearance tab. Under the `Themes` dropdown, select the `primary-x.x.x-beta` you downloaded. This should load the theme.
 10. Reload the app again for best results.
 
-## 🧸 Features
+## 🧸 Features, Customization, and Plugins
 
-## 🎨 Customization
-
-### Fonts and Typography
-
-#### Font Features
-
-#### Karla Font Guide
-
-This is a guide especially made for Primary v1.0 users that want to go back to using the old default font of Primary — Karla!
-
-Many of you have requested Karla's presence back in Primary, so here's how to do it.
-
-1. Start by downloading [Karla](https://fonts.google.com/specimen/Karla) via Google Fonts. Karla is a free font so no purchases needed. On the link, press `Get Font`, and a new page will show with Karla and 2 buttons. Press `Download All`. This will download a `.zip` file.
-2. Once downloaded, extract the contents of the `.zip` file. You should have extracted a folder called `Karla`.
-3. Go inside the `Karla` folder, and in it you should see something along the lines of `Karla-Italic-Variable...-wght.ttf` and `Karla-Variable...-wght.ttf `. These are font files. Install them.
-   - If you're on Windows, select the two `.ttf` files, right click, and press `Install all`
-   - If you're on macOS, open a `.ttf` file, and press the `Install` button. Do this for both `.ttf` files.
-4. Once installed, go to your Obsidian Vault and open up **Settings**.
-5. Go to **Appearance** tab and scroll down to the Font section. You should see *Interface Font*, *Text Font*, and *Monospace Font*. We're going to apply Karla as our Interface Font and our Text Font.
-6. Under **Interface Font**, click `Manage`.
-7. Under Font Name, find Karla. Once found, press `Add`, and click `Save`.
-8. Do the same for **Text Font**. Under **Text Font**, click `Manage`. Find Karla, press `Add`, and click `Save`.
-9. We're not finished yet though! You might notice that Karla is a bit thicker than usual. If you like it, you can stop here, but if not, keep reading to fix this.
-10. Install [Style Settings](obsidian://show-plugin?id=obsidian-style-settings) via the Community Plugins.
-11. Once installed, go back to the main page of Settings, and go to the **Style Settings** tab.
-12. On the search bar of Style Settings, type `Font Weight`. This should produce results of settings that allow you to change global font weight settings.
-13. Set the followings settings accordingly:
-    - Thin Font Weight: from 150 → 100
-    - Extralight Font Weight: from 250 → 200
-    - Light Font Weight: from 350 → 300
-    - Normal Font Weight: from 450 → 400
-    - Medium Font Weight: from 550 → 500
-    - Semibold Font Weight: from 650 → 600
-    - Bold Font Weight: from 750 → 700
-    - Extrabold Font Weight: from 850 → 800
-    - Black Font Weight: from 900 → 900
-    - Bold Modifier: keep at 200
-14. Once you're done with the font weights, open up the **Command Palette**.
-15. Find `Reload app without saving` and press `Enter`.
-16. And you're done! You should be good to go.
-
-#### Font Recommendation
-
-## 🔌 Supported Plugins
-
-### Core Plugins
-
-Primary currently supports all plugins provided by Obsidian with the exception of Publish.
-
-Publish will be supported soon.
-
-### Community Plugins
-
-Primary should generally support Community Plugins out of the box, since Primary has properly styled all Obsidian components. Some Community Plugins are given extra support though, to better fit the theme. 
-
-Here's a list of plugins tried and tested to fit with Primary:
-
-- [Advanced Canvas](obsidian://show-plugin?id=advanced-canvas)
-- [Calendar](obsidian://show-plugin?id=calendar)
-- [Hider](obsidian://show-plugin?id=obsidian-hider)
-- [Iconize](obsidian://show-plugin?id=obsidian-icon-folder)
-- [Kanban](obsidian://show-plugin?id=obsidian-kanban)
-- [Style Settings](obsidian://show-plugin?id=obsidian-style-settings)
+For a complete and up to date list of features, customization options, customization guide, and supported plugins, head on over to [Primary for Obsidian Full Guide]().
 
 ## 🚧 Disclaimer
 
@@ -263,7 +196,7 @@ npx grunt
 
 ### License
 
-
+// TODO: Write Licensing terms.
 
 ## 🧠 Creating Primary
 
