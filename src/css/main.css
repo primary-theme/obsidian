@@ -4981,6 +4981,10 @@ a.tag:active {
   color: var(--graph-node-highlight-line);
 }
 
+.mod-root .workspace-leaf .graph-controls.is-close {
+  background: var(--editor-bg-color);
+}
+
 /*────────── Core Plugin: Search ──────────*/
 .suggestion-highlight {
   font-weight: var(--font-semibold);
