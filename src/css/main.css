@@ -2173,7 +2173,7 @@ body.is-mobile {
                           inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.15),
                           inset 0px 2px 8px 0px rgba(0, 0, 0, 0.57),
                           0px 0px 0px 1px rgba(255, 255, 255, 0.02);
-  --text-input-color: var(--color-d-gray-50);
+  --text-input-color: var(--color-d-gray-20);
   --text-input-color-focused: var(--color-d-gray-20);
   --text-input-bg-active: var(--color-d-gray-140);
   --text-input-border-color: var(--color-d-gray-140);
