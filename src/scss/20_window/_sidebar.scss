@@ -115,6 +115,7 @@ body:not(.is-mobile) .workspace-split {
                 calc(var(--size-4-2) + var(--button-inset-shadow-size));
     box-shadow: var(--button-shadow);
     margin-top: var(--size-2-2);
+    border-radius: calc(var(--radius-m) + 2px);
 
     &:focus-within {
         box-shadow: var(--button-shadow-focus);
