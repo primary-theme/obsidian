@@ -2702,7 +2702,7 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 .workspace-drawer-inner {
   background-color: var(--mobile-sidebar-background);
 }
-.workspace-drawer-header {
+.workspace-drawer.is-pinned .workspace-drawer-header, .workspace-drawer-header {
   padding: var(--size-4-4) var(--size-4-5) 0 var(--size-4-5);
 }
 .workspace-drawer-header-switcher {
