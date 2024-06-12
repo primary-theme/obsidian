@@ -3400,6 +3400,9 @@ input.prompt-input:focus-visible {
 .is-phone .suggestion-bg {
   backdrop-filter: blur(var(--popup-bg-blur));
 }
+.is-phone .prompt {
+  border-bottom: none;
+}
 
 .theme-dark.is-mobile .prompt input.prompt-input {
   background: var(--background-primary);

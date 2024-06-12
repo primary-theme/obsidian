@@ -96,6 +96,10 @@ input.prompt-input:focus-visible {
     .suggestion-bg {
         backdrop-filter: blur(var(--popup-bg-blur));
     }
+
+    .prompt {
+        border-bottom: none;
+    }
 }
 
 .theme-dark.is-mobile .prompt input.prompt-input {
