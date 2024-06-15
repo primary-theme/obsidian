@@ -24,7 +24,7 @@
     - [Balance of Aesthetic and Optimization](#balance-of-aesthetic-and-optimization)
     - [Top quality. Know you're in good hands.](#top-quality-know-youre-in-good-hands)
     - [A Collection of Fashion Houses](#a-collection-of-fashion-houses)
-- [📖 How to Get Primary for Obsidian](#-how-to-get-primary-for-obsidian)
+- [📖 Installation](#-installation)
   - [Install Official Release](#install-official-release)
   - [Install Beta Version](#install-beta-version)
 - [🧸 Features, Customization, and Plugins](#-features-customization-and-plugins)
@@ -104,7 +104,7 @@ Primary isn’t here to give every single UI possibility. We’re here to give y
 
 Additional color palettes and theme presets options will be available for those who want Primary’s design principles to better suit their personality.
 
-## 📖 How to Get Primary for Obsidian
+## 📖 Installation
 
 ### Install Official Release
 
