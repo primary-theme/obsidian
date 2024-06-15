@@ -1,7 +1,19 @@
 /*────────── Typography ──────────*/
 
-body {
-    font-feature-settings: var(--inter-font-features);
+.cm-html-embed.cm-embed-block pre code {
+    font-family: var(--font-monospace-theme);
+}
+
+// Interface Font Feature
+body,
+.multi-select-input,
+.suggestion-item.mod-complex .suggestion-hotkey,
+.suggestion-item.mod-complex .suggestion-action,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+.markdown-rendered button.copy-code-button,
+.markdown-source-view.mod-cm6 .code-block-flair {
+    font-feature-settings: var(--interface-font-feature);
 }
 
 input,
@@ -9,16 +21,22 @@ textarea,
 select,
 button,
 span.code-block-flair {
-    font-feature-settings: var(--inter-font-features);
+    font-feature-settings: var(--interface-font-feature);
 }
 
+// Text Font Feature
+.markdown-source-view,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-preview-view,
+.community-modal-readme,
+.sync-history-preview {
+    font-feature-settings: var(--text-font-feature);
+}
+
+// Monospace Font Feature
 .HyperMD-codeblock,
 .cm-inline-code,
 pre,
 code {
-    font-feature-settings: var(--cascadia-font-features);
-}
-
-.cm-html-embed.cm-embed-block pre code {
-    font-family: var(--font-monospace-theme);
+    font-feature-settings: var(--monospace-font-feature);
 }

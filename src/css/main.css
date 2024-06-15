@@ -1928,10 +1928,10 @@ body.is-mobile {
   --text-selection-theme-text-color: color-mix(in srgb, currentColor 70%, white);
   --text-selection-theme-bg: color-mix(in srgb, var(--color-d-gray-50) 30%, transparent);
   /* Icon Colors */
-  --icon-color: var(--color-d-gray-60);
+  --icon-color: color-mix(in srgb, var(--color-d-gray-60) 30%, var(--color-d-gray-50));
   --icon-opacity: 1;
   --icon-bg: transparent;
-  --icon-color-hover: var(--color-d-gray-50);
+  --icon-color-hover: color-mix(in srgb, var(--color-d-gray-50) 70%, var(--color-d-gray-40));
   --icon-opacity-hover: 1;
   --icon-bg-hover: transparent;
   --icon-color-focused: var(--color-d-gray-50);
