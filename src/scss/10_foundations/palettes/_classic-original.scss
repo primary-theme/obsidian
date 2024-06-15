@@ -93,9 +93,9 @@ body {
     --font-text-theme: 'Inter';
     --font-monospace-theme: 'Cascadia Code';
 
-    --inter-font-features:  "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
-                            "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
-    --cascadia-font-features:   "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
+    --interface-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+    --text-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+    --monospace-font-feature:  "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
 
     --font-ui-smallest: 11px;
 
@@ -1570,10 +1570,10 @@ body {
     --text-selection-theme-bg: color-mix(in srgb, var(--color-d-gray-50) 30%, transparent);
 
     /* Icon Colors */
-    --icon-color: var(--color-d-gray-60);
+    --icon-color: color-mix(in srgb, var(--color-d-gray-60) 30%, var(--color-d-gray-50));
     --icon-opacity: 1;
     --icon-bg: transparent;
-    --icon-color-hover: var(--color-d-gray-50);
+    --icon-color-hover: color-mix(in srgb, var(--color-d-gray-50) 70%, var(--color-d-gray-40));
     --icon-opacity-hover: 1;
     --icon-bg-hover: transparent;
     --icon-color-focused: var(--color-d-gray-50);
