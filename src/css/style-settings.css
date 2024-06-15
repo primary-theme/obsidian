@@ -53,20 +53,30 @@ settings:
         collapsed: true
         title: Font Features
     -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Some fonts offer stylistic alternates to glyphs of their fonts. This can be activated via a CSS property called font feature settings. `1` means "feature is turned on", and `0` means "feature is turned off".
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: This setting is quite technical so if you aren't sure how to use it please refer to the [MDN guide on font-feature-settings](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings). <br><br> Not all fonts offer the same stylistic alternates so it's best to check out your font's respective manuals or specifications.
+    -
         id: interface-font-feature
         type: variable-text
-        title: Interface Font's Font Feature
-        default: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0
+        title: Interface Font's Feature Settings
+        default: '"calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0'
     -
         id: text-font-feature
         type: variable-text
-        title: Text Font's Font Feature
-        default: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0
+        title: Text Font's Feature Settings
+        default: '"calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0'
     -
         id: monospace-font-feature
         type: variable-text
-        title: Monospace Font's Font Feature
-        default: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1
+        title: Monospace Font's Feature Settings
+        default: '"calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1'
     -
         id: typography_weight
         type: heading
