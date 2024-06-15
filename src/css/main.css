@@ -624,8 +624,19 @@ svg.vault {
 }
 
 /*────────── Typography ──────────*/
-body {
-  font-feature-settings: var(--inter-font-features);
+.cm-html-embed.cm-embed-block pre code {
+  font-family: var(--font-monospace-theme);
+}
+
+body,
+.multi-select-input,
+.suggestion-item.mod-complex .suggestion-hotkey,
+.suggestion-item.mod-complex .suggestion-action,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+.markdown-rendered button.copy-code-button,
+.markdown-source-view.mod-cm6 .code-block-flair {
+  font-feature-settings: var(--interface-font-feature);
 }
 
 input,
@@ -633,18 +644,22 @@ textarea,
 select,
 button,
 span.code-block-flair {
-  font-feature-settings: var(--inter-font-features);
+  font-feature-settings: var(--interface-font-feature);
+}
+
+.markdown-source-view,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-preview-view,
+.community-modal-readme,
+.sync-history-preview {
+  font-feature-settings: var(--text-font-feature);
 }
 
 .HyperMD-codeblock,
 .cm-inline-code,
 pre,
 code {
-  font-feature-settings: var(--cascadia-font-features);
-}
-
-.cm-html-embed.cm-embed-block pre code {
-  font-family: var(--font-monospace-theme);
+  font-feature-settings: var(--monospace-font-feature);
 }
 
 /*───────────────────────────────────
@@ -735,9 +750,9 @@ body {
   --font-interface-theme: "Inter";
   --font-text-theme: "Inter";
   --font-monospace-theme: "Cascadia Code";
-  --inter-font-features: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
-                          "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
-  --cascadia-font-features: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
+  --interface-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+  --text-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+  --monospace-font-feature: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
   --font-ui-smallest: 11px;
   /* Font Thickness */
   font-weight: var(--font-normal);
