@@ -409,12 +409,6 @@ body {
     --metadata-property-radius: calc(var(--radius-m) - 1px);
     --metadata-container-padding: var(--size-4-3) var(--size-4-3);
 
-    /* Table */
-    --table-header-border-width: 0;
-    --table-column-first-border-width: 0;
-    --table-column-last-border-width: 0;
-    --table-row-last-border-width: 0;
-
     /* Tag */
     --tag-padding-x: 0.6em;
     --tag-padding-y: 0.15em;
@@ -1190,6 +1184,12 @@ body {
     --yaml-keyword-color: var(--color-l-yellow-30);
     --yaml-number-color: var(--color-l-red-10);
     --yaml-string-color: var(--color-l-yellow-30);
+
+    /* Table */
+    --table-background: var(--color-l-gray-10);
+    --table-header-background: var(--color-l-gray-30);
+    --table-header-background-hover: var(--table-header-background);
+    --table-column-alt-background: var(--color-l-gray-30);
 
     /* Tag */
     --tag-color: var(--color-l-blue-30);
@@ -2114,6 +2114,12 @@ body {
     --yaml-keyword-color: var(--color-d-yellow-30);
     --yaml-number-color: var(--color-d-red-20);
     --yaml-string-color: var(--color-d-yellow-30);
+
+    /* Table */
+    --table-background: var(--color-d-gray-120);
+    --table-header-background: var(--color-d-gray-130);
+    --table-header-background-hover: var(--table-header-background);
+    --table-column-alt-background: var(--color-d-gray-130);
 
     /* Tag */
     --tag-color: var(--color-d-blue-30);
