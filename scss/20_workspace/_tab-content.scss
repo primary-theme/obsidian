@@ -1,0 +1,327 @@
+/*────────────────────────────────────
+            Tab Content
+────────────────────────────────────*/
+.workspace-tabs .workspace-leaf.mod-active,
+.workspace-tabs .workspace-leaf.mod-active:active {
+    border-color: transparent;
+}
+
+.workspace-split.mod-right-split
+.workspace-tabs:last-child {
+    padding-bottom: calc(-4px + var(--size-4-6));
+}
+
+/*─────────View Content──────────*/
+.workspace-leaf-content .view-content {
+    padding: var(--size-4-4) var(--size-4-4);
+}
+
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+    & .view-content {
+        height: 100%;
+        overflow: auto;
+        padding:    var(--size-2-3)
+                    var(--size-4-2)
+                    var(--size-4-2)
+                    var(--size-4-2);
+    }
+}
+
+.workspace-leaf-content {
+    &[data-type="backlink"],
+    &[data-type="outgoing-link"] {
+        & .view-content {
+            padding:    var(--size-2-3)
+                        var(--size-0-0)
+                        var(--size-4-2)
+                        var(--size-0-0);
+        }
+    }
+
+    &[data-type="starred"] {
+        padding:    var(--size-0-0)
+                    var(--size-4-2)
+                    var(--size-0-0)
+                    var(--size-4-2);
+    }
+}
+
+.pane-empty {
+    color: var(--text-faint);
+    font-style: italic;
+    margin: auto auto;
+    width: 17ch;
+}
+
+/*─────────Node Insert Event──────────*/
+// Container for Outgoing Links and Backlinks Tab and more
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+    & .node-insert-event {
+        padding:    var(--size-0-0)
+                    var(--size-4-2)
+                    var(--size-4-2)
+                    var(--size-4-2);
+    }
+
+    & .nav-files-container {
+        padding:    var(--size-0-0)
+                    var(--size-4-2)
+                    var(--size-4-2)
+                    var(--size-4-2);
+    }
+}
+
+/*─────────Tags Tab──────────*/
+.tag-container {
+    font-size: var(--font-scale-0-5);
+    padding:    var(--size-4-2)
+                var(--size-4-2)
+                var(--size-4-2)
+                var(--size-4-2);
+    overflow: auto;
+}
+
+/*─────────Search Results──────────*/
+.search-result {
+    &-container:not(.mod-global-search) {
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0);
+        // Indentation Line
+        border-left: 1px solid var(--background-modifier-border);
+        margin: var(--size-0-0)
+                var(--size-0-0)
+                var(--size-0-0)
+                var(--size-4-4);
+    }
+
+    &.search-result {
+        margin-bottom: 0;
+    }
+
+    &s-children {
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0);
+    }
+
+    [data-type="search"] & &-file-matches { // Global Search Container for Matches
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0);
+        border-left: 1px solid var(--background-modifier-border);
+        margin: var(--size-0-0)
+                var(--size-2-2)
+                var(--size-0-0)
+                var(--size-4-4);
+    }
+
+    &-file-match {
+        width: 100%;
+        padding:    var(--size-2-2)
+                    var(--size-2-10)
+                    var(--size-2-2)
+                    var(--size-4-2);
+        border-radius: var(--size-2-2);
+        margin: var(--size-0-0)
+                var(--size-0-0)
+                var(--size-0-0)
+                var(--size-0-0);
+
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+
+        &:last-child {
+            margin-bottom: var(--size-2-2);
+        }
+
+        .theme-light & { // File Match in Light Mode
+            &:hover {
+                color: var(--color-l-gray-80);
+                background: var(--color-l-gray-10);
+            }
+
+            &:active {
+                color: var(--text-faint);
+                background: var(--color-l-gray-40);
+            }
+        }
+        .theme-dark & { // File Match in Dark Mode
+            &:hover {
+                color: var(--color-d-gray-20);
+                background: var(--color-d-gray-60);
+            }
+
+            &:active {
+                color: var(--color-d-gray-40);
+                background: var(--color-d-gray-60);
+            }
+        }
+    }
+
+    &-file-matched-text {
+        padding-left: 1px;
+        padding-right: 1px;
+        border-radius: calc(1px + var(--size-2-1));
+
+        .theme-light & ,
+        .theme-dark & {
+            color: var(--ui-color-highlight-text);
+            font-weight: var(--font-bold);
+            background: var(--ui-color-highlight-bg);
+        }
+    }
+
+    .backlink-pane & &-file-title {
+        margin: var(--size-0-0)
+                var(--size-0-0)
+                var(--size-0-0)
+                var(--size-2-2);
+    }
+}
+
+.search-input-container .search-input-clear-button {
+    top: 9px;
+}
+
+/*─────────Tree Items for Tabs──────────*/
+.tree-item-self {
+    line-height: var(--line-height-0-5);
+    padding:    calc(1px + var(--size-2-2))
+                var(--size-2-2)
+                calc(1px + var(--size-2-2))
+                var(--size-4-3);
+    border-radius: var(--size-2-2);
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+
+    &.is-clickable {
+        .tree-item-flair {
+            font-family: var(--font-monospace-theme);
+            font-size: var(--font-scale-0);
+        }
+    }
+
+    & .tree-item-icon {
+        align-self: initial;
+        padding-left: var(--size-0-0);
+        margin-left: calc(-1* var(--size-2-2));
+    }
+}
+
+.tree-item-children:not(.graph-control-section .tree-item-children) { // Indentation Line
+    margin-left: var(--size-4-4);
+    border-left: 1px solid var(--background-modifier-border);
+
+    & .tree-item {
+        margin-left: var(--size-2-2);
+    }
+}
+
+/*~ Tree Items for Tabs for Light Mode ~*/
+.theme-light .tree-item-self {
+    color: var(--color-l-gray-80);
+    background: transparent;
+
+    &.is-clickable {
+        &:hover {
+            color: var(--color-l-gray-80);
+            background: var(--color-l-gray-10);
+
+            & .tree-item-flair {
+                color: var(--color-gray-50);
+                background: var(--color-l-whiter);
+            }
+        }
+
+        & .tree-item-flair {
+            color: var(--color-l-gray-80);
+            background: var(--color-l-gray-40);
+        }
+
+        &:active {
+            color: var(--color-l-gray-50);
+            background: var(--color-l-gray-40);
+
+            & .tree-item-flair {
+                color: var(--color-l-gray-60);
+                background: var(--color-l-gray-30);
+            }
+        }
+    }
+}
+
+/*~ Tree Items for Tabs for Dark Mode ~*/
+.theme-dark .tree-item-self {
+    color: var(--color-d-gray-20);
+    background: transparent;
+
+    &.is-clickable {
+        &:hover {
+            color: var(--color-d-gray-20);
+            background: var(--color-d-gray-60);
+
+            & .tree-item-flair {
+                color: var(--color-d-white);
+                background: var(--color-d-gray-40);
+            }
+        }
+
+        & .tree-item-flair {
+            color: var(--color-d-gray-20);
+            background: var(--color-d-gray-60);
+        }
+
+        &:active {
+            color: var(--color-d-gray-40);
+            background: var(--color-d-blacker);
+
+            & .tree-item-flair {
+                color: var(--color-d-gray-40);
+                background: var(--color-d-gray-80);
+            }
+        }
+    }
+}
+
+/* Tree Item Self Light and Dark Mode for Backlink and Outgoing Pane */
+body.theme-light .backlink-pane .tree-item-self,
+body.theme-light .outgoing-link-pane .tree-item-self,
+body.theme-dark .backlink-pane .tree-item-self,
+body.theme-dark .outgoing-link-pane .tree-item-self {
+    color: var(--md-color-text-muted);
+    background: transparent;
+
+    &.is-clickable {
+        &:hover {
+            color: var(--md-color-text-normal);
+            background: transparent;
+
+            & .tree-item-flair {
+                color: var(--md-color-text-normal);
+                background: transparent;
+            }
+        }
+
+        & .tree-item-flair {
+            color: var(--md-color-text-muted);
+                background: transparent;
+        }
+
+        &:active {
+            color: var(--md-color-text-faint);
+            background: transparent;
+
+            & .tree-item-flair {
+                color: var(--md-color-text-faint);
+                background: transparent;
+            }
+        }
+    }
+}

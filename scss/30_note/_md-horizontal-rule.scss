@@ -1,0 +1,14 @@
+/*──────────Horizontal Rule──────────*/
+.theme-light,
+.theme-dark {
+    & span.cm-hr {
+        font-family: var(--font-monospace-theme);
+        color: var(--md-color-comment);
+    }
+}
+
+.markdown-preview-view hr {
+    font-family: var(--font-monospace-theme);
+    color: var(--md-color-border);
+    border-width: 1px;
+}

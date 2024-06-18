@@ -1,0 +1,236 @@
+/*──────────Internal & External Links──────────*/
+/* Opacity of Unresolved Links Fix */
+.markdown-source-view.mod-cm6 .is-unresolved,
+.markdown-preview-view .internal-link.is-unresolved {
+    opacity: 1;
+}
+
+/* Source View Resolved Links */
+.markdown-source-view.mod-cm6 span:where(.cm-url.cm-url, .cm-blockid, .cm-inline-code.cm-link, .cm-hmd-internal-link, .cm-header.cm-hmd-internal-link, .cm-hmd-internal-link .cm-underline) {
+    color: var(--md-color-reslink);
+    text-decoration: underline solid 1px;
+    text-underline-position: under;
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+
+    &:hover {
+        color: var(--md-color-reslink-hover);
+        text-decoration: underline solid 1px;
+
+    }
+
+    &:active {
+        color: var(--md-color-reslink-active);
+        text-decoration: underline solid 1px;
+
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+/* Source View Unresolved Links */
+.markdown-source-view.mod-cm6 span.is-unresolved {
+    & span:where(.cm-url, .cm-blockid, .cm-link, .cm-underline) {
+        color: var(--md-color-unreslink);
+        text-decoration: underline solid 1px;
+        text-underline-position: under;
+
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+
+        &:hover {
+            color: var(--md-color-unreslink-hover);
+        }
+
+        &:active {
+            color: var(--md-color-unreslink-active);
+        }
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+.markdown-source-view.mod-cm6 span.is-unresolved .cm-hmd-internal-link {
+    color: var(--md-color-unreslink);
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.no-link-underline .cm-s-obsidian span.cm-hmd-internal-link:hover {
+    text-decoration: none;
+}
+
+/* Legacy Editor Fix */
+.markdown-source-view:not(.mod-cm6) .cm-hmd-internal-link {
+    color: var(--md-color-unreslink);
+    transition: var(--duration-superfast)
+                    var(--motion-smooth);
+
+    &:hover {
+        color: var(--md-color-reslink-hover);
+        cursor: pointer;
+    }
+    
+    &:active {
+        color: var(--md-color-reslink-active);
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+/* Source View External Links */
+.markdown-source-view.mod-cm6 span:where(.cm-link, .cm-link .cm-underline, .cm-url) {
+    color: var(--md-color-extlink);
+    text-decoration: underline solid 1px;
+    text-underline-position: under;
+
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+
+    &:hover {
+        color: var(--md-color-extlink-hover);
+    }
+
+    &:active {
+        color: var(--md-color-extlink-active);
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+/* Preview Resolved Links */
+a,
+a code {
+    .modal &,
+    .view-content & {
+        color: var(--md-color-reslink);
+        text-decoration: underline solid 1px;
+        text-underline-position: under;
+        
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+        
+        &:hover {
+            color: var(--md-color-reslink-hover);
+            cursor: pointer;
+        }
+        
+        &:active {
+            color: var(--md-color-reslink-active);
+        }
+
+        .no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+            text-decoration: none;
+        }
+    }
+
+    .no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+a:where(a.tag, button.mod-cta a, a.is-unresolved) {
+    color: var(--md-color-reslink);
+    text-decoration: underline solid 1px;
+    text-underline-position: under;
+    
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+    
+    &:hover {
+        color: var(--md-color-reslink-hover);
+        cursor: pointer;
+    }
+    
+    &:active {
+        color: var(--md-color-reslink-active);
+    }
+}
+
+.cm-s-obsidian .internal-link,
+.markdown-rendered.cm-embed-block .internal-link,
+.markdown-preview-view .internal-link,
+div.node-insert-event .internal-link,
+.reveal a.internal-link {
+    color: var(--md-color-reslink);
+    text-decoration: underline solid 1px;
+    text-underline-position: under;
+    
+    transition: var(--duration-superfast)
+    var(--motion-smooth);
+    
+    &:hover {
+        color: var(--md-color-reslink-hover);
+        cursor: pointer;
+    }
+    
+    &:active {
+        color: var(--md-color-reslink-active);
+    }
+
+    &:where(.is-unresolved) {
+        color: var(--md-color-unreslink);
+        text-decoration: underline solid 1px;
+        text-underline-position: under;
+
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+
+        &:hover {
+            color: var(--md-color-unreslink-hover);
+            cursor: pointer;
+        }
+
+        &:active {
+            color: var(--md-color-unreslink-active);
+        }
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+/* Preview External Links */
+.markdown-rendered.cm-embed-block .external-link,
+.markdown-preview-view .external-link,
+div.node-insert-event .external-link,
+.reveal .external-link {
+    color: var(--md-color-extlink);
+    text-decoration: underline solid 1px;
+    text-underline-position: under;
+    
+    transition: var(--duration-superfast)
+    var(--motion-smooth);
+    
+    &:hover {
+        color: var(--md-color-extlink-hover);
+        cursor: pointer;
+    }
+    
+    &:active {
+        color: var(--md-color-extlink-active);
+    }
+
+    .no-link-underline.no-link-underline & { // Style Setting — No Link Underline in Legacy Editor
+        text-decoration: none;
+    }
+}
+
+/* External Link Icon Position Fix */
+.external-link {
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(136, 136, 136)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'%3E%3C/line%3E%3Cpolyline points='7 7 17 7 17 17'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 16px;
+    background-position-y: initial;
+}

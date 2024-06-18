@@ -1,0 +1,170 @@
+/*────────────────────────────────────
+            File Explorer
+────────────────────────────────────*/
+
+/*─────────Vault Title──────────*/
+.nav-folder.mod-root > .nav-folder-title[data-path="/"] {
+    color: var(--text-muted);
+    font-size: var(--font-scale-0-5);
+    background: var(--background-secondary);
+    top: 0;
+    width: 100%;
+    position: sticky;
+    justify-content: center;
+    border: 1px solid var(--background-modifier-border);
+    margin-bottom: var(--size-2-2);
+    z-index: 2;
+
+    &:hover {
+        color: var(--text-muted);
+        background: var(--background-secondary);
+    }
+}
+
+.nav {
+    &-folder-title,
+    &-file-title {
+        font-size: var(--font-scale-0-5);
+        line-height: var(--line-height-0-5);
+        width: 100%;
+        padding:    calc(1px + var(--size-2-1))
+                    var(--size-2-2)
+                    calc(1px + var(--size-2-1))
+                    var(--size-4-2);
+        border-radius: var(--size-2-2);
+
+        transition: var(--duration-superfast)
+                    var(--motion-smooth);
+    }
+
+    &-folder-title-content {
+        display: flex;
+        align-items: center;
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-2-2);
+    }
+
+    &-file-title-content {
+        padding:    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-0-0)
+                    var(--size-2-2);
+    }
+
+    &-folder-title,
+    &-file-title-content {
+        text-overflow: unset;
+        white-space: normal;
+    }
+
+    &-folder-collapse-indicator {
+        align-items: flex-start;
+    }
+
+    &-folder-collapse-indicator.collapse-icon {
+        margin-top: var(--size-2-1);
+        margin-left: var(--size-0-0);
+    }
+
+    &-file-tag {
+        align-self: start;
+        line-height: 2;
+    }
+}
+
+// removes opened note border
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+.workspace-leaf.mod-active .nav-file.has-focus {
+    border-color: transparent;
+    background-color: none;
+}
+
+// resets color of arrow triangle when hovering folder title
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
+    color: unset;
+}
+
+/* File Explorer for Light Mode */
+.theme-light {
+    & .nav {
+        &-folder-title:not([data-path="/"]),
+        &-file-title {
+            color: var(--color-l-gray-80);
+            background: transparent;
+
+            &:hover {
+                color: var(--color-l-gray-80) !important;
+                background: var(--color-l-gray-10) !important;
+            }
+
+            &:active {
+                color: var(--color-l-gray-50) !important;
+                background: var(--color-l-gray-40) !important;
+            }
+        }
+
+        &-file {
+            &-title.is-active {
+                background: var(--color-l-gray-10);
+                border: 1px solid rgba(100, 100, 100, 0.3);
+                box-shadow: 0px -2px 0px 0px
+                            rgba(100, 100, 100, 0.1) inset,
+                            0px 2px 4px 0px rgba(100, 100, 100, 0.1);
+            }
+
+            &-tag {
+                background: var(--color-l-gray-10);
+            }
+        }
+
+        &-folder-children .nav-folder-children {
+            padding-left: var(--size-2-2);
+            margin-left: var(--size-4-4);
+            // Indention Line
+            border-left: 1px solid var(--background-modifier-border);
+        }
+    }
+}
+
+/* File Explorer for Dark Mode */
+.theme-dark {
+    & .nav {
+        &-folder-title:not([data-path="/"]),
+        &-file-title {
+            color: var(--color-d-gray-20);
+            background: transparent;
+
+            &:hover {
+                color: var(--color-d-gray-20) !important;
+                background: var(--color-d-gray-60) !important;
+            }
+
+            &:active {
+                color: var(--color-d-gray-40) !important;
+                background: var(--color-d-blacker) !important;
+            }
+        }
+
+        &-file {
+            &-title.is-active {
+                background: var(--color-d-gray-70);
+                border: 1px solid rgba(0, 0, 0, 0.45);
+                box-shadow: 0px -2px 0px 0px
+                            rgba(0, 0, 0, 0.2) inset,
+                            0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            &-tag {
+                background: var(--color-d-gray-50);
+            }
+        }
+
+        &-folder-children .nav-folder-children {
+            padding-left: var(--size-2-2);
+            border-left: 1px solid var(--background-modifier-border);
+            margin-left: var(--size-4-4);
+        }
+    }
+}

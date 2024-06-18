@@ -1,0 +1,107 @@
+/*──────────Tags──────────*/
+.popover span.cm-hashtag,
+.popover .tag,
+.cm-s-obsidian span.cm-hashtag,
+.tag:not(.token) {
+    color: var(--md-color-tag);
+    background: transparent;
+    font-weight: var(--font-bold);
+    line-height: var(--line-height-1);
+    vertical-align: baseline;
+    text-decoration: none;
+    display: inline;
+    transition: var(--duration-superfast)
+                var(--motion-smooth);
+
+    .theme-light & {
+        border-top: 1px solid rgba(100, 100, 100, 0.3);
+        border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+        box-shadow: 0px -1px 0px 0px
+                    rgba(100, 100, 100, 0.1) inset,
+                    0px 1px 1px 0px rgba(100, 100, 100, 0.1);
+    }
+
+    .theme-dark & {
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        box-shadow: 0px -1px 0px 0px
+                    rgba(0, 0, 0, 0.15) inset,
+                    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    &:hover {
+        color: var(--md-color-tag-hover);
+        background: transparent;
+    }
+    
+    &:active {
+        color: var(--md-color-tag-active);
+    }
+}
+
+/* Font Sizing for Tags */
+.cm-s-obsidian span.cm-hashtag:not(.cm-header),
+.tag:not(.token, h1, h2, h3, h4, h5, h6) {
+    font-size: var(--font-scale-0-5);
+}
+
+/* Font Family for Tags */
+.cm-s-obsidian span.cm-hashtag {
+    font-family: var(--font-editor);
+}
+
+.tag:not(.token) {
+    font-family: var(--font-preview);
+}
+
+// Source View Tag Pill Shape Fix
+.workspace .cm-s-obsidian span.cm-hashtag {
+    &-begin {
+        border-top-left-radius: var(--size-4-8);
+        border-bottom-left-radius: var(--size-4-8);
+        padding-left: 0.55em;
+        padding-right: 0;
+        border-right:none;
+
+        .theme-light & {
+            border-left: 1px solid rgba(100, 100, 100, 0.3);
+        }
+
+        .theme-dark & {
+            border-left: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &-end {
+        border-top-right-radius: var(--size-4-8);
+        border-bottom-right-radius: var(--size-4-8);
+        padding-left: 0;
+        padding-right: 0.55em;
+        border-left:none;
+
+        .theme-light & {
+            border-right: 1px solid rgba(100, 100, 100, 0.3);
+        }
+
+        .theme-dark & {
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+// Preview Tag Pill Shape Fix
+.tag:not(.token) {
+    padding:    0
+                0.55em
+                0
+                0.55em;
+    border-radius: var(--size-4-8);
+
+    .theme-light & {
+        border: 1px solid rgba(100, 100, 100, 0.3);
+    }
+
+    .theme-dark & {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+}
