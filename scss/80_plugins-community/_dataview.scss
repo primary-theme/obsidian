@@ -1,0 +1,140 @@
+///*────────────────────────────────────
+//                Dataview
+//────────────────────────────────────*/
+///* Dataview Tables */
+//table.dataview {
+//    word-break: normal;
+//    overflow-wrap: normal;
+//}
+//
+///* padding fix for LP */
+//.block-language-dataview.node-insert-event > div.markdown-rendered.cm-embed-block {
+//    padding: 0;
+//}
+//
+//.dataview {
+//    .markdown-source-view.mod-cm6 & {
+//    /* Source View */
+//        &.table-view-table {
+//            margin-bottom: 0;
+//            border: 1px solid var(--background-modifier-border);
+//
+//            & > thead > tr > th {
+//                font-size: var(--font-scale-1);
+//                border-width: 0px;
+//                border-bottom: 1px solid var(--background-modifier-border);
+//                border-right: 1px solid var(--background-modifier-border);
+//            }
+//
+//            & thead,
+//            & tr,
+//            & td,
+//            & th {
+//                padding: 4px 10px;
+//            }
+//
+//            & thead  {
+//                border: none;
+//                margin: 0;
+//            }
+//
+//            & thead.table-view-thead tr th { // Table Head
+//                font-size: var(--font-scale-1);
+//
+//                color: var(--md-color-code-red-1);
+//                background: var(--background-secondary);
+//            }
+//
+//            & .table-view-t{
+//                & tr {
+//                border-bottom: 1px solid var(--background-modifier-border);
+//                }
+//
+//                & td {
+//                    padding: 4px 10px;
+//                    border-right: 1px solid var(--background-modifier-border);
+//                }
+//            }
+//
+//            & .table-view-t{ // Table Body
+//                & tr {
+//                    .theme-light & {
+//                        background: var(--color-l-whiter);
+//                    }
+//                    .theme-dark & {
+//                        background: var(--color-d-blacker);
+//                    }
+//                }
+//
+//                & td {
+//                    &:not(td:last-of-type) {
+//                        padding: 4px 10px;
+//                    }
+//                }
+//            }
+//
+//            & ul.dataview-ul {
+//                list-style: none;
+//            }
+//        }
+//    }
+//
+//
+//    .markdown-preview-view & {
+//    /* Preview View */
+//        &.table-view-table  {
+//            border: 1px solid var(--background-modifier-border);
+//
+//            & > thead > tr > th {
+//                font-size: var(--font-scale-1);
+//                border-width: 0px;
+//                border-bottom: 1px solid var(--background-modifier-border);
+//                border-right: 1px solid var(--background-modifier-border);
+//            }
+//
+//            & .table-view-t{
+//                & tr {
+//                border-bottom: 1px solid var(--background-modifier-border);
+//                }
+//
+//                & td {
+//                    padding: 4px 10px;
+//                    border-right: 1px solid var(--background-modifier-border);
+//                }
+//            }
+//
+//            & ul.dataview-ul {
+//                list-style: none;
+//            }
+//        }
+//    }
+//}
+//
+///* Dataview Task List */
+//.block-language-dataview {
+//    .markdown-source-view.mod-cm6 .cm-embed-block & {
+//        & h4 {
+//            margin: 15px 0;
+//
+//            &:first-of-type {
+//                margin-top: 0;
+//            }
+//        }
+//
+//        & .dataview.result-group {
+//            & input.task-list-item-checkbox {
+//                margin-right: var(--size-2-3);
+//            }
+//        }
+//    }
+//}
+//
+///* Dataview List */
+//.block-language-dataview {
+//    .markdown-source-view.mod-cm6 .cm-embed-block & {
+//        & ul.dataview.list-view-ul {
+//            margin-top: 0;
+//            margin-bottom: 0;
+//        }
+//    }
+//}
