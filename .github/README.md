@@ -1,6 +1,8 @@
+<h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>
 <p align="center">
-    <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>
-    Stars | Issues | Contributors
+    <a href="https://github.com/primary-theme/obsidian/stargazers"><img alt="Repo stars" src="https://img.shields.io/github/stars/primary-theme/obsidian?style=for-the-badge&logoColor=EEE7DD&labelColor=593E21&color=D6971B"></a>
+    <a href="./LICENSE"><img alt="Repo License" src="https://img.shields.io/github/license/primary-theme/obsidian?style=for-the-badge&logoColor=EEE7DD&labelColor=593E21&color=BF3F35"></a>
+    <a href=""><img alt="Repository Contributors" src="https://img.shields.io/github/contributors/primary-theme/obsidian?style=for-the-badge&logoColor=EEE7DD&labelColor=593E21&color=23739B"></a>
 </p>
 
 <p align="center" style="font-style: italic;">
