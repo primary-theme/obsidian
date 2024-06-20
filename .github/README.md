@@ -19,6 +19,8 @@
 ## 🧭 Navigation
 - [🧭 Navigation](#-navigation)
 - [🖼️ Previews](#️-previews)
+  - [Light Mode](#light-mode)
+  - [Dark Mode](#dark-mode)
 - [🍭 Design Approach](#-design-approach)
   - [🌞 Principles](#-principles)
     - [Opinionated but Open](#opinionated-but-open)
@@ -43,15 +45,29 @@
 
 ## 🖼️ Previews
 
-Overall Demo
+### Light Mode
 
-Desktop Main View Light Mode
+![Primary for Obsidian on Desktop - Light Mode](https://github.com/primary-theme/obsidian/assets/desktop-1_light-mode.png)
 
-Desktop Main View Dark Mode
+![Primary for Obsidian on Desktop - Light Mode](https://github.com/primary-theme/obsidian/assets/desktop-2_light-mode.png)
 
-Tablet and Phone Main View Light Mode 
+![Primary for Obsidian on Desktop - Light Mode](https://github.com/primary-theme/obsidian/assets/desktop-3_light-mode.png)
 
-Tablet and Phone Main View Dark Mode
+![Primary for Obsidian on Tablet - Light Mode](https://github.com/primary-theme/obsidian/assets/tablet-1_light-mode.png)
+
+![Primary for Obsidian on Mobile - Light Mode](https://github.com/primary-theme/obsidian/assets/mobile-1_light-mode.png)
+
+### Dark Mode
+
+![Primary for Obsidian on Desktop - Light Mode](https://github.com/primary-theme/obsidian/assets/desktop-1_dark-mode.png)
+
+![Primary for Obsidian on Desktop - Light Mode](https://github.com/primary-theme/obsidian/assets/desktop-2_dark-mode.png)
+
+![Primary for Obsidian on Desktop - Light Mode](https://github.com/primary-theme/obsidian/assets/desktop-3_dark-mode.png)
+
+![Primary for Obsidian on Tablet - Light Mode](https://github.com/primary-theme/obsidian/assets/tablet-1_dark-mode.png)
+
+![Primary for Obsidian on Mobile - Light Mode](https://github.com/primary-theme/obsidian/assets/mobile-1_dark-mode.png)
 
 ## 🍭 Design Approach
 
