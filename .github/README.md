@@ -63,11 +63,11 @@
 
 #### Tablet
 
-<img alt="Primary for Obsidian on Tablet - Light Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_light-mode.png" width="768px" style="border-radius: 12px">
+<img alt="Primary for Obsidian on Tablet - Light Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_light-mode.png" width="768px">
 
 #### Mobile
 
-<img alt="Primary for Obsidian on Tablet - Light Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_light-mode.png" width="320px" style="border-radius: 12px">
+<img alt="Primary for Obsidian on Tablet - Light Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_light-mode.png" width="320px">
 
 ### Dark Mode
 
@@ -81,11 +81,11 @@
 
 #### Tablet
 
-<img alt="Primary for Obsidian on Tablet - Dark Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_dark-mode.png" width="768px" style="border-radius: 12px">
+<img alt="Primary for Obsidian on Tablet - Dark Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_dark-mode.png" width="768px">
 
 #### Mobile
 
-<img alt="Primary for Obsidian on Tablet - Dark Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_dark-mode.png" width="320px" style="border-radius: 12px">
+<img alt="Primary for Obsidian on Tablet - Dark Mode" src="https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_dark-mode.png" width="320px">
 
 ## 🍭 Design Approach
 
