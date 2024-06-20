@@ -63,11 +63,11 @@
 
 #### Tablet
 
-![Primary for Obsidian on Tablet - Light Mode|768](https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_light-mode.png)
+![Primary for Obsidian on Tablet - Light Mode](https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_light-mode.png|width=768)
 
 #### Mobile
 
-![Primary for Obsidian on Mobile - Light Mode|320](https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_light-mode.png)
+![Primary for Obsidian on Mobile - Light Mode](https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_light-mode.png|width=320)
 
 ### Dark Mode
 
@@ -81,11 +81,11 @@
 
 #### Tablet
 
-![Primary for Obsidian on Tablet - Dark Mode|768](https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_dark-mode.png)
+![Primary for Obsidian on Tablet - Dark Mode](https://github.com/primary-theme/obsidian/blob/main/assets/tablet-1_dark-mode.png|width=768)
 
 #### Mobile
 
-![Primary for Obsidian on Mobile - Dark Mode|320](https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_dark-mode.png)
+![Primary for Obsidian on Mobile - Dark Mode](https://github.com/primary-theme/obsidian/blob/main/assets/mobile-1_dark-mode.png|width=320)
 
 ## 🍭 Design Approach
 
