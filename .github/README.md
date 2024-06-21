@@ -178,7 +178,7 @@ This option is exclusive to monthly subscribers of Primary.
 
 ## 🧸 Features, Customization, and Plugins
 
-For a complete and up to date list of features, customization options, customization guide, and supported plugins, head on over to [Primary for Obsidian Full Guide]().
+For a complete and up to date list of features, customization options, customization guide, and supported plugins, head on over to [Primary for Obsidian Full Guide](https://primary-theme.github.io/).
 
 ## 🚧 Disclaimer
 
@@ -192,9 +192,9 @@ Consider contributing to this open project if you'd like to support a necessary 
 
 ### Non-developers
 
-If you are not a developer, a great way to contribute to the theme is by reporting issues and feature requests! You can do so through the [Issues Page]().
+If you are not a developer, a great way to contribute to the theme is by reporting issues and feature requests! You can do so through the [Issues Page](https://github.com/primary-theme/obsidian/issues).
 
-Don't have a GitHub account? Consider sending a message through [Twitter]() or send me a report directly via [Email](mailto:contact.ceciliamay@gmail.com).
+Don't have a GitHub account? Consider sending a message through [Twitter](https://x.com/ceciliamay_) or send me a report directly via [Email](mailto:contact.ceciliamay@gmail.com).
 
 Another great way to contribute is by sharing screenshots of how you use Primary! You can share them on Twitter and tagging @primarytheme or me @ceciliamay_ . You can also send them through the Discussions Page.
 
