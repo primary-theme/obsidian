@@ -311,7 +311,7 @@ settings:
         type: variable-number
         title: Bold Modifier
         description: This is an addend to Normal Font Weight for certain interface components that Obsidian wanted to turn into bold.
-        default: 300
+        default: 200
 	-
 		id: interface_animations
 		type: heading
