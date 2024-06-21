@@ -1,3 +1,4 @@
+![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>
 <p align="center">
     <a href="https://github.com/primary-theme/obsidian/stargazers"><img alt="Repo stars" src="https://img.shields.io/github/stars/primary-theme/obsidian?style=for-the-badge&logoColor=EEE7DD&labelColor=593E21&color=D6971B"></a>
