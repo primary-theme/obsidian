@@ -19,6 +19,11 @@ settings:
         type: info-text
         markdown: true
         description: 🎯 Check out the [Roadmap](https://git.new/primary/project-tracker) to get a view of Primary's Development
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 📮 Subscribe to [Primary Theme Updates](https://dub.sh/primary/inbox) to get notified of Primary updates, new features, and goodies right in your inbox!
 	-
 		id: interface
 		type: heading
