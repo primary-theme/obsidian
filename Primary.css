@@ -213,12 +213,12 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 🌿 Primary v1.0 user? Want to use the original Karla font? Read the [Karla Font Guide]() to learn how to get back into using it.
+        description: 🌿 Primary v1.0 user? Want to use the original Karla font? Read the [Karla Font Guide](https://primary-theme.github.io/guides/font-recommendations/karla/) to learn how to get back into using it.
     -
         id: readme-content
         type: info-text
         markdown: true
-        description: 🌸 Visit the [Font Recommendation Guide]() for more curated font options for Primary! The guide includes a setup tutorial.
+        description: 🌸 Visit the [Font Recommendation Guide](https://primary-theme.github.io/guides/font-recommendations/overview/) for more curated font options for Primary! The guide includes a setup tutorial.
     -
         id: typography_features
         type: heading
@@ -494,7 +494,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 🎨 Visit the [Header Presets](https://github.com/) section in the Full Guide to import the Settings.
+        description: 🎨 Visit the [Header Presets](https://primary-theme.github.io/presets/) section in the Full Guide to import the Settings.
     -
         id: readme-content
         type: info-text
@@ -1877,7 +1877,7 @@ settings:
         type: info-text
         markdown: true
         title: 💗 Make a Donation on Ko-fi
-        description: Visit [Primary's Ko-fi Page](https://dub.sh/primary/ko-fi) and choose between becoming a monthly member (for member benefits) or making a one-time donation!
+        description: Support development by subscribing monthly or making a one-time donation at [Primary's Ko-fi Page](https://dub.sh/primary/ko-fi).
     -
         id: readme-content
         type: info-text
