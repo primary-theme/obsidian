@@ -1,0 +1,31 @@
+name: Enhancement Suggestion
+description: I want to suggest improvements to Primary
+title: ""
+labels: ["🧞‍♂️ enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest improvements to Primary! Before proceeding, please check the [Issues](https://github.com/primary-theme/obsidian/issues) page and check if your suggestion is already posted to avoid duplication.
+  - type: input
+    id: primary-version
+    attributes:
+      label: Primary Theme Version
+      description: What version of Primary are you using? To check, open up `Settings` in Obsidian. Then go to the `Appearance` tab and under `Themes`, press `Manage`. Look for Primary and click it. It should open up the info page for Primary and at top, you will find `Version`. Any version below v2.0.0 will not be entertained as these versions are no longer supported.
+      placeholder: v2.7.0
+    validations:
+      required: true
+  - type: textarea
+    id: debug-info
+    attributes:
+      label: Debug Info
+      description: Please paste the debug info below. To get the Debug Info, open up the Command Palette using `Cmd/Ctrl + P` and typing in `Show debug info`. A popup will open. Press `Copy to clipboard` and paste below.
+    validations:
+      required: true
+  - type: textarea
+    id: enhancement-suggestion
+    attributes:
+      label: Describe the enhancement
+      description: Feel free to post in screenshots, links, etc. If it exists in other themes or apps, please provide links to those!
+    validations:
+      required: true

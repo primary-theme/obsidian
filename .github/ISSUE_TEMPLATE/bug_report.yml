@@ -1,0 +1,55 @@
+name: Bug Report
+description: I want to report something that isn't working properly in Primary
+title: ""
+labels: ["🐛 bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Before proceeding, please check the [Issues](https://github.com/primary-theme/obsidian/issues) page and check if your bug is already posted to avoid duplication.
+  - type: dropdown
+    id: default-theme
+    attributes:
+      label: Is the bug present in the Default Theme?
+      description: Try using the default theme to see if the bug is still present.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: snippets-plugin-off
+    attributes:
+      label: Is the bug present in when all Snippets and Community Plugins are turned off?
+      description: Try turning off all snippets and community plugins to check if the bug still persists in the theme.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: primary-version
+    attributes:
+      label: Primary Theme Version
+      description: What version of Primary are you using? To check, open up `Settings` in Obsidian. Then go to the `Appearance` tab and under `Themes`, press `Manage`. Look for Primary and click it. It should open up the info page for Primary and at top, you will find `Version`. Any version below v2.0.0 will not be entertained as these versions are no longer supported.
+      placeholder: v2.7.0
+    validations:
+      required: true
+  - type: textarea
+    id: debug-info
+    attributes:
+      label: Debug Info
+      description: Please paste the debug info below. To get the Debug Info, open up the Command Palette using `Cmd/Ctrl + P` and typing in `Show debug info`. A popup will open. Press `Copy to clipboard` and paste below.
+    validations:
+      required: true
+  - type: textarea
+    id: bug-info
+    attributes:
+      label: Share the Steps to Reproduce the Bug
+      description: Please share how and when the bug appears. Share screenshots as much as you can.
+    validations:
+      required: true
+  - type: textarea
+    id: bug-info-additional
+    attributes:
+      label: Additional Info
