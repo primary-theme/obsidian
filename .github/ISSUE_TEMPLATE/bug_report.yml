@@ -1,6 +1,5 @@
 name: Bug Report
 description: I want to report something that isn't working properly in Primary
-title: ""
 labels: ["🐛 bug"]
 body:
   - type: markdown

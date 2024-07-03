@@ -1,6 +1,5 @@
 name: Plugin Support
 description: I want to suggest a plugin to be properly supported in Primary
-title: ""
 labels: ["🔌 plugin support"]
 body:
   - type: markdown

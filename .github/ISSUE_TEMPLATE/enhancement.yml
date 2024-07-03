@@ -1,6 +1,5 @@
 name: Enhancement Suggestion
 description: I want to suggest improvements to Primary
-title: ""
 labels: ["🧞‍♂️ enhancement"]
 body:
   - type: markdown
