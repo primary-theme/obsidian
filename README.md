@@ -17,6 +17,13 @@
     <strong>Obsidian October 2021 Judges</strong>
 </p>
 
+<p align="center">
+  <small>
+  If you like the theme, consider supporting its development by making a one-time donation or subscribe monthly (with perks!) through <a href="https://dub.sh/primary/ko-fi">Ko-fi</a>. Thank you so much for your patronage.
+  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#41747d', 'E1E76SQX8');kofiwidget2.draw();</script> 
+  </small>
+</p>
+
 ## 🧭 Navigation
 - [🧭 Navigation](#-navigation)
 - [🖼️ Previews](#️-previews)
