@@ -20,11 +20,8 @@
 <p align="center">
   <small>
   This refresh wouldn't be possible without my <a href="https://github.com/primary-theme/obsidian/releases/tag/v.2.7.0">supporters</a>!
-  
   If you like the theme, consider supporting its development by making a one-time donation or subscribe monthly (with perks!) through <a href="https://dub.sh/primary/ko-fi">Ko-fi</a>.
-  
   Thank you so much for your patronage!
-
   <a href='https://ko-fi.com/E1E76SQX8' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
   </small>
 </p>
