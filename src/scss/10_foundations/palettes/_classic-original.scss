@@ -400,7 +400,11 @@ body {
     --link-opacity-active: 0.5;
 
     /* Lists */
-    --indentation-guide-editing-indent: 0.975em;
+    // --indentation-guide-editing-indent: 0.975em;
+    // --list-indent: 2em;
+    --list-indent-editing: 0.6em;
+    --list-bullet-indent-reading: -1em;
+    --indentation-guide-reading-indent: -1em;
 
     /* Properties | Metadata */
     --metadata-border-width: 1px;

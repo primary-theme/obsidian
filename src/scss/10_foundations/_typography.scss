@@ -25,6 +25,7 @@ span.code-block-flair {
 }
 
 // Text Font Feature
+div:not(.list-bullet::after),
 .markdown-source-view,
 .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-preview-view,
@@ -34,6 +35,7 @@ span.code-block-flair {
 }
 
 // Monospace Font Feature
+div:not(.list-bullet::after),
 .HyperMD-codeblock,
 .cm-inline-code,
 pre,
