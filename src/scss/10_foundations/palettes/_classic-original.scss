@@ -569,6 +569,7 @@ body {
 
     /* Special Colors */
     --color-gray-rgb: 182, 175, 166;
+    --color-gray: hsla(34, 9.9%, 68.2%, 1);
 
     --color-red-rgb: 223, 90, 90;
     --color-red: hsla(0, 58%, 53%, 1);
@@ -763,12 +764,47 @@ body {
     --checkbox-color: var(--color-l-green-30);
     --checkbox-color-hover: var(--color-l-green-20);
 
+    --checked-border-color: rgba(0, 0, 0, 0.15);
+    --checked-border-color-hover: rgba(0, 0, 0, 0.1);
+
     --checkbox-border-color: var(--color-l-gray-60);
     --checkbox-border-color-hover: var(--color-l-gray-70);
 
     --checklist-bg: var(--color-l-gray-10);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
     --checklist-done-color: var(--color-l-gray-80);
+
+    /* Alt Checkboxes */
+    --inprogress-chbx-color: var(--color-accent);
+    --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 85%, var(--color-base-60));
+    --resched-chbx-color: var(--color-gray);
+    --sched-chbx-color: var(--color-l-blue-10);
+    --important-chbx-color: var(--color-orange);
+    --important-chbx-radius: 100%;
+    --cancelled-chbx-color: var(--color-gray);
+    --cancelled-chbx-text-color: var(--text-faint);
+    --cancelled-chbx-text-decoration: line-through;
+    --question-chbx-color: var(--color-l-violet-30);
+    --star-chbx-color: var(--color-l-yellow-20);
+    --note-chbx-color: var(--color-red);
+    --location-chbox-color: var(--color-l-red-30);
+    --info-chbx-color: var(--color-cyan);
+    --amount-chbx-color: var(--color-l-green-40);
+    --amount-chbx-radius: 100%;
+    --quote-chbx-color: var(--color-blue);
+    --idea-chbx-color: var(--color-orange);
+    --pro-chbx-color: var(--color-l-green-30);
+    --con-chbx-color: var(--color-l-red-40);
+    --bookmark-chbx-color: var(--color-l-orange-20);
+    --fire-chbx-color: var(--color-l-red-20);
+    --win-chbx-color: var(--color-purple);
+    --key-chbx-color: var(--color-yellow);
+    --up-chbx-color: var(--color-green);
+    --down-chbx-color: var(--color-l-red-30);
+    --law-chbx-color: var(--color-l-gray-80);
+    --language-chbx-color: var(--color-l-red-10);
+    --clock-chbx-color: var(--color-l-blue-30);
+    --telephone-chbx-color: var(--color-l-green-20);
 
     /* Drag Ghost */
     --drag-ghost-background: var(--interactive-accent);
@@ -1475,7 +1511,8 @@ body {
     --interactive-accent-hover: var(--color-accent-2);
 
     /* Alternating Colors */
-    --color-gray-rgb: 187, 186, 167;
+    --color-gray-rgb: 203, 180, 167;
+    --color-gray: rgb(196, 172, 159);
 
     --color-red-rgb: 228, 87, 78;
     --color-red: rgb(192, 78, 78);
@@ -1682,12 +1719,45 @@ body {
     --checkbox-color: var(--color-d-green-40);
     --checkbox-color-hover: var(--color-d-green-30);
 
+    --checked-border-color: rgba(255, 255, 255, 0.15);
+    --checked-border-color-hover: rgba(255, 255, 255, 0.1);
+
     --checkbox-border-color: var(--color-d-gray-70);
     --checkbox-border-color-hover: var(--color-d-gray-60);
 
     --checklist-bg: var(--color-d-gray-110);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
     --checklist-done-color: var(--color-d-gray-50);
+
+    /* Alt Checkboxes */
+    --inprogress-chbx-color: var(--color-accent);
+    --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 85%, var(--color-base-60));
+    --resched-chbx-color: var(--color-gray);
+    --sched-chbx-color: var(--color-d-blue-10);
+    --important-chbx-color: var(--color-orange);
+    --important-chbx-radius: 100%;
+    --cancelled-chbx-color: var(--color-gray);
+    --question-chbx-color: var(--color-d-violet-30);
+    --star-chbx-color: var(--color-d-yellow-20);
+    --note-chbx-color: var(--color-red);
+    --location-chbox-color: var(--color-d-red-30);
+    --info-chbx-color: var(--color-cyan);
+    --amount-chbx-color: var(--color-d-green-40);
+    --amount-chbx-radius: 100%;
+    --quote-chbx-color: var(--color-blue);
+    --idea-chbx-color: var(--color-orange);
+    --pro-chbx-color: var(--color-d-green-20);
+    --con-chbx-color: var(--color-d-red-40);
+    --bookmark-chbx-color: var(--color-d-orange-20);
+    --fire-chbx-color: var(--color-d-red-40);
+    --win-chbx-color: var(--color-purple);
+    --key-chbx-color: var(--color-yellow);
+    --up-chbx-color: var(--color-green);
+    --down-chbx-color: var(--color-d-red-40);
+    --law-chbx-color: var(--color-d-gray-40);
+    --language-chbx-color: var(--color-d-red-40);
+    --clock-chbx-color: var(--color-d-blue-30);
+    --telephone-chbx-color: var(--color-d-green-20);
 
     /* Drag Ghost */
     --drag-ghost-background: var(--interactive-accent);
