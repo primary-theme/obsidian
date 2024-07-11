@@ -1493,6 +1493,64 @@ settings:
         default-light: 'hsla(31, 23%, 50%, 1)'
         default-dark: 'hsla(35, 27%, 55%, 1)'
 	-
+		id: nf-checkbox
+		type: heading
+		level: 2
+		collapsed: true
+		title: Checkbox
+    -
+        id: checkbox-bg
+        type: variable-themed-color
+        title: Unchecked Background Color
+        format: hsl
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: checkbox-color
+        type: variable-themed-color
+        title: Checked Background Color
+        format: hsl
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: checkbox-color
+        type: variable-themed-color
+        title: Checked Background Color when Hovered
+        format: hsl
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: checkbox-marker-color
+        type: variable-themed-color
+        title: Checked Item's Check Icon Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 100%, 1)'
+        default-dark: 'hsla(0, 0%, 100%, 1)'
+    -
+        id: checklist-done-color
+        type: variable-themed-color
+        title: Checked Text Color
+        format: hsl
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: checklist-done-decoration
+        type: variable-text
+        title: Checked Text Decoration (causes Strikethrough)
+        description: Text decoration for checked items default at "line-through". If you would like to remove the strikethrough for checked items, put "none".
+        default: 'line-through'
+	-
+		id: nf-checkbox-icons
+		type: heading
+		level: 2
+		collapsed: true
+		title: Checkbox Icons
+	-
 		id: nf_media
 		type: heading
 		level: 2
