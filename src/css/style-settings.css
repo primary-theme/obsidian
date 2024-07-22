@@ -1550,6 +1550,264 @@ settings:
 		level: 2
 		collapsed: true
 		title: Checkbox Icons
+    -
+        id: inprogress-chbx-color
+        type: variable-themed-color
+        title: In Progress [/] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 82%, 57%, 1)'
+        default-dark: 'hsla(31, 85%, 59%, 1)'
+    -
+        id: inprogress-chbx-color-hover
+        type: variable-themed-color
+        title: In Progress [/] Color when Hovered
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 82%, 64%, 1)'
+        default-dark: 'hsla(32, 95%, 65%, 1)'
+    -
+        id: resched-chbx-color
+        type: variable-themed-color
+        title: Reschedule [>] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(178, 29%, 45%, 1)'
+        default-dark: 'hsla(178, 29%, 51%, 1)'
+    -
+        id: resched-chbx-color
+        type: variable-themed-color
+        title: Schedule or Date [<] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(32, 10%, 68%, 1)'
+        default-dark: 'hsla(32, 10%, 58%, 1)'
+    -
+        id: important-chbx-color
+        type: variable-themed-color
+        title: Important [!] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(17, 83%, 52%, 1)'
+        default-dark: 'hsla(17, 83%, 47%)'
+    -
+        id: important-chbx-icon-color
+        type: variable-themed-color
+        title: Important [!] Inner Icon Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(180, 0%, 100%, 1)'
+        default-dark: 'hsla(180, 0%, 100%, 1)'
+    -
+        id: important-chbx-radius
+        type: variable-text
+        title: Important [!] Border Radius
+        description: 
+        default: '100%'
+    -
+        id: cancelled-chbx-color
+        type: variable-themed-color
+        title: Cancelled [-] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(32, 10%, 68%, 1)'
+        default-dark: 'hsla(32, 10%, 58%, 1)'
+    -
+        id: cancelled-chbx-text-color
+        type: variable-themed-color
+        title: Cancelled [-] Text Color
+        format: hsl
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: cancelled-chbx-text-decoration
+        type: variable-text
+        title: Cancelled [-] Text Decoration (causes Strikethrough)
+        description: Text decoration for items marked [-] default at "line-through". If you would like to remove the strikethrough, put "none".
+        default: 'line-through'
+    -
+        id: question-chbx-color
+        type: variable-themed-color
+        title: Question [?] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(281, 33%, 54%, 1)'
+        default-dark: 'hsla(281, 37%, 54%, 1)'
+    -
+        id: question-chbx-icon-color
+        type: variable-themed-color
+        title: Question [?] Inner Icon Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(180, 0%, 100%, 1)'
+        default-dark: 'hsla(180, 0%, 100%, 1)'
+    -
+        id: star-chbx-color
+        type: variable-themed-color
+        title: Star [*] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(40, 93%, 51%, 1)'
+        default-dark: 'hsla(40, 95%, 46%, 1)'
+    -
+        id: star-chbx-icon-color
+        type: variable-themed-color
+        title: Star [*] Inner Icon Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(180, 0%, 100%, 1)'
+        default-dark: 'hsla(180, 0%, 100%, 1)'
+    -
+        id: note-chbx-color
+        type: variable-themed-color
+        title: Note [n] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(8, 51%, 53%, 1)'
+        default-dark: 'hsla(8, 51%, 53%, 1)'
+    -
+        id: location-chbx-color
+        type: variable-themed-color
+        title: Location [l] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 56%, 48%, 1)'
+        default-dark: 'hsla(0, 56%, 48%, 1)'
+    -
+        id: info-chbx-color
+        type: variable-themed-color
+        title: Info [i] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(178, 29%, 45%, 1)'
+        default-dark: 'hsla(178, 31%, 41%, 1)'
+    -
+        id: info-chbx-icon-color
+        type: variable-themed-color
+        title: Info [i] Inner Icon Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(180, 0%, 100%, 1)'
+        default-dark: 'hsla(180, 0%, 100%, 1)'
+    -
+        id: amount-chbx-color
+        type: variable-themed-color
+        title: Amount [S] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(152, 42%, 41%, 1)'
+        default-dark: 'hsla(152, 46%, 38%, 1)'
+    -
+        id: amount-chbx-icon-color
+        type: variable-themed-color
+        title: Amount [S] Inner Icon Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(180, 0%, 100%, 1)'
+        default-dark: 'hsla(180, 0%, 100%, 1)'
+    -
+        id: amount-chbx-radius
+        type: variable-text
+        title: Amount [S] Border Radius
+        description: 
+        default: '100%'
+    -
+        id: quote-chbx-color
+        type: variable-themed-color
+        title: Quote ["] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(206, 47%, 48%, 1)'
+        default-dark: 'hsla(206, 47%, 48%, 1)'
+    -
+        id: quote-chbx-icon-color
+        type: variable-themed-color
+        title: Quote ["] Inner Icon Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(180, 0%, 100%, 1)'
+        default-dark: 'hsla(180, 0%, 100%, 1)'
+    -
+        id: idea-chbx-color
+        type: variable-themed-color
+        title: Idea [I] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(30, 72%, 62%, 1)'
+        default-dark: 'hsla(30, 72%, 62%, 1)'
+    -
+        id: pro-chbx-color
+        type: variable-themed-color
+        title: Pro [p] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(149, 34%, 44%, 1)'
+        default-dark: 'hsla(149, 36%, 47%, 1)'
+    -
+        id: con-chbx-color
+        type: variable-themed-color
+        title: Con [c] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(12, 62%, 45%, 1)'
+        default-dark: 'hsla(12, 64%, 47%, 1)'
+    -
+        id: bookmark-chbx-color
+        type: variable-themed-color
+        title: Bookmark [b] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(21, 81%, 59%, 1)'
+        default-dark: 'hsla(21, 81%, 54%, 1)'
+    -
+        id: up-chbx-color
+        type: variable-themed-color
+        title: Up Trend Line [u] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(146, 37%, 49%, 1)'
+        default-dark: 'hsla(146, 38%, 51%, 1)'
+    -
+        id: down-chbx-color
+        type: variable-themed-color
+        title: Down Trend Line [d] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(4, 56%, 48%, 1)'
+        default-dark: 'hsla(4, 56%, 54%, 1)'
+    -
+        id: law-chbx-color
+        type: variable-themed-color
+        title: Rule or Law [r] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 34%, 52%, 1)'
+        default-dark: 'hsla(34, 34%, 52%, 1)'
+    -
+        id: language-chbx-color
+        type: variable-themed-color
+        title: Language or Translate [L] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(7, 59%, 64%, 1)'
+        default-dark: 'hsla(7, 63%, 62%, 1)'
+    -
+        id: clock-chbx-color
+        type: variable-themed-color
+        title: Time or Clock [t] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(210, 39%, 49%, 1)'
+        default-dark: 'hsla(210, 39%, 52%, 1)'
+    -
+        id: telephone-chbx-color
+        type: variable-themed-color
+        title: Telephone [T] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(148, 47%, 47%, 1)'
+        default-dark: 'hsla(148, 48%, 42%, 1)'
 	-
 		id: nf_media
 		type: heading
