@@ -97,9 +97,6 @@ button[disabled="true"] {
 // Modal Close Button
 .document-search-close-button,
 .modal-close-button {
-    width: var(--modal-close-button-size);
-    height: fit-content;
-
     font-size: calc(var(--modal-close-button-size));
     line-height: var(--modal-close-button-size);
 
@@ -108,6 +105,7 @@ button[disabled="true"] {
     border-radius: var(--close-button-radius);
 
     display: flex;
+    align-items: center;
     justify-content: center;
     cursor: var(--cursor);
 
@@ -127,7 +125,18 @@ button[disabled="true"] {
 }
 
 .document-search-close-button {
-    top: unset;
+    padding: 0.2rem 0.2rem;
+
+    &:active {
+        color: var(--text-on-accent);
+        background: var(--background-modifier-error-hover);
+        opacity: var(--button-opacity-active);
+    }
+}
+
+.modal-close-button {
+    width: var(--modal-close-button-size);
+    height: fit-content;
 }
 
 // Property Box Add Property Button

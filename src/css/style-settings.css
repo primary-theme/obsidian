@@ -1504,24 +1504,24 @@ settings:
         title: Unchecked Background Color
         format: hsl
         opacity: true
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(36, 38%, 98%, 1)'
+        default-dark: 'hsla(30, 17%, 13%, 1)'
     -
         id: checkbox-color
         type: variable-themed-color
         title: Checked Background Color
         format: hsl
         opacity: true
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(149, 50%, 39%, 1)'
+        default-dark: 'hsla(154, 75%, 26%, 1)'
     -
         id: checkbox-color
         type: variable-themed-color
         title: Checked Background Color when Hovered
         format: hsl
         opacity: true
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(148, 48%, 47%, 1)'
+        default-dark: 'hsla(155, 78%, 29%, 1)'
     -
         id: checkbox-marker-color
         type: variable-themed-color
@@ -1536,8 +1536,8 @@ settings:
         title: Checked Text Color
         format: hsl
         opacity: true
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
     -
         id: checklist-done-decoration
         type: variable-text
@@ -1618,8 +1618,8 @@ settings:
         title: Cancelled [-] Text Color
         format: hsl
         opacity: true
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(34, 29%, 60%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
     -
         id: cancelled-chbx-text-decoration
         type: variable-text
