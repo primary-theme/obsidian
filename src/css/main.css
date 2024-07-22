@@ -1304,7 +1304,7 @@ body.is-mobile {
   --inprogress-chbx-color: hsla(34, 82%, 57%, 1);
   --inprogress-chbx-color-hover: hsla(34, 82%, 64%, 1);
   --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 65%, var(--color-base-60));
-  --resched-chbx-color: hsla(178, 29%, 45%, 1);
+  --resched-chbx-color: hsla(178, 18%, 59%, 1);
   --sched-chbx-color: hsla(32, 10%, 68%, 1);
   --important-chbx-color: hsla(17, 83%, 52%, 1);
   --important-chbx-icon-color: white;
@@ -2088,7 +2088,7 @@ body.is-mobile {
   --inprogress-chbx-color: hsla(31, 85%, 59%, 1);
   --inprogress-chbx-color-hover: hsla(32, 95%, 65%, 1);
   --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 15%, var(--color-base-60));
-  --resched-chbx-color: hsla(178, 29%, 51%, 1);
+  --resched-chbx-color: hsla(178, 19%, 55%, 1);
   --sched-chbx-color: hsla(32, 10%, 58%, 1);
   --important-chbx-color: hsla(17, 83%, 47%);
   --important-chbx-icon-color: white;

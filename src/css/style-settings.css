@@ -1499,7 +1499,7 @@ settings:
 		collapsed: true
 		title: Checkbox
     -
-        id: checkbox-bg
+        id: checklist-bg
         type: variable-themed-color
         title: Unchecked Background Color
         format: hsl
@@ -1515,7 +1515,7 @@ settings:
         default-light: 'hsla(149, 50%, 39%, 1)'
         default-dark: 'hsla(154, 75%, 26%, 1)'
     -
-        id: checkbox-color
+        id: checkbox-color-hover
         type: variable-themed-color
         title: Checked Background Color when Hovered
         format: hsl
@@ -1572,10 +1572,10 @@ settings:
         title: Reschedule [>] Color
         format: hsl
         opacity: true
-        default-light: 'hsla(178, 29%, 45%, 1)'
-        default-dark: 'hsla(178, 29%, 51%, 1)'
+        default-light: 'hsla(178, 18%, 59%, 1)'
+        default-dark: 'hsla(178, 19%, 55%, 1)'
     -
-        id: resched-chbx-color
+        id: sched-chbx-color
         type: variable-themed-color
         title: Schedule or Date [<] Color
         format: hsl
