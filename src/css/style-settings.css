@@ -159,49 +159,6 @@ settings:
 		type: class-toggle
 		title: Remove Popup and Pop Down Animations
 	-
-		id: interface_nav-items
-		type: heading
-		level: 2
-		collapsed: true
-		title: Sidebar Items
-    -
-        id: readme-content
-        type: info-text
-        markdown: true
-        description: Sidebar items are items inside File Explorer, Bookmark, and other plugins on the sidebar that use `nav-item-*` variables.
-	-
-		id: interface_nav-items
-		type: heading
-		level: 3
-		collapsed: true
-		title: Sidebar Items
-	-
-		id: interface_nav-items
-		type: heading
-		level: 3
-		collapsed: true
-		title: Sidebar Items when Hovered
-	-
-		id: interface_nav-items
-		type: heading
-		level: 3
-		collapsed: true
-		title: Sidebar Items when Selected
-	-
-		id: interface_nav-items
-		type: heading
-		level: 3
-		collapsed: true
-		title: Sidebar Items when Active
-    -
-        id: gutter-color-active
-        type: variable-themed-color
-        format: hsl
-        opacity: true
-        title: Active Line Gutter Number Text Color
-        default-light: 'hsla(31, 23%, 50%, 1)'
-        default-dark: 'hsla(34, 24%, 40%, 1)' 
-	-
 		id: interface_editor
 		type: heading
 		level: 2
