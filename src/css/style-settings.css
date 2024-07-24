@@ -168,13 +168,31 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: Sidebar items are items inside File Explorer, Bookmark, and other plugins the `nav-item-*` variables.
+        description: Sidebar items are items inside File Explorer, Bookmark, and other plugins on the sidebar that use `nav-item-*` variables.
 	-
 		id: interface_nav-items
 		type: heading
-		level: 2
+		level: 3
 		collapsed: true
 		title: Sidebar Items
+	-
+		id: interface_nav-items
+		type: heading
+		level: 3
+		collapsed: true
+		title: Sidebar Items when Hovered
+	-
+		id: interface_nav-items
+		type: heading
+		level: 3
+		collapsed: true
+		title: Sidebar Items when Selected
+	-
+		id: interface_nav-items
+		type: heading
+		level: 3
+		collapsed: true
+		title: Sidebar Items when Active
     -
         id: gutter-color-active
         type: variable-themed-color
@@ -2002,6 +2020,14 @@ settings:
         title: Folder 1 Background Color when Hovered
         default-light: '#'
         default-dark: '#'
+    -
+        id: nav-folder-1-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Indentation Guide Color
+        default-light: '#'
+        default-dark: '#'
 	-
 		id: file-explorer_1st
 		type: heading
@@ -2038,6 +2064,14 @@ settings:
         format: hsl
         opacity: true
         title: Folder 2 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-2-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Indentation Guide Color
         default-light: '#'
         default-dark: '#'
 	-
@@ -2078,6 +2112,14 @@ settings:
         title: Folder 3 Background Color when Hovered
         default-light: '#'
         default-dark: '#'
+    -
+        id: nav-folder-3-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Indentation Guide Color
+        default-light: '#'
+        default-dark: '#'
 	-
 		id: file-explorer_1st
 		type: heading
@@ -2114,6 +2156,14 @@ settings:
         format: hsl
         opacity: true
         title: Folder 4 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-4-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Indentation Guide Color
         default-light: '#'
         default-dark: '#'
 	-
@@ -2154,6 +2204,14 @@ settings:
         title: Folder 5 Background Color when Hovered
         default-light: '#'
         default-dark: '#'
+    -
+        id: nav-folder-5-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Indentation Guide Color
+        default-light: '#'
+        default-dark: '#'
 	-
 		id: file-explorer_1st
 		type: heading
@@ -2190,6 +2248,14 @@ settings:
         format: hsl
         opacity: true
         title: Folder 6 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-6-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Indentation Guide Color
         default-light: '#'
         default-dark: '#'
 	-

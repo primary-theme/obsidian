@@ -79,8 +79,8 @@
     --nav-folder-5-collapse-color: color-mix(in srgb, var(--nav-folder-5-color) 40%, transparent);
     --nav-folder-5-indent-color: color-mix(in srgb, var(--nav-folder-5-color) 20%, transparent);
 
-    --nav-folder-6-color: var(--color-l-violet-30);
-    --nav-folder-6-bg-color: color-mix(in srgb, var(--color-l-alpha-violet) 60%, transparent);
+    --nav-folder-6-color: var(--color-l-purple-30);
+    --nav-folder-6-bg-color: color-mix(in srgb, var(--color-l-alpha-purple) 60%, transparent);
     --nav-folder-6-bg-color-hover: color-mix(in srgb, var(--nav-folder-6-bg-color) 70%, var(--color-base-10));
     --nav-folder-6-collapse-color: color-mix(in srgb, var(--nav-folder-6-color) 40%, transparent);
     --nav-folder-6-indent-color: color-mix(in srgb, var(--nav-folder-6-color) 20%, transparent);
@@ -115,8 +115,8 @@
     --nav-folder-11-collapse-color: color-mix(in srgb, var(--nav-folder-11-color) 40%, transparent);
     --nav-folder-11-indent-color: color-mix(in srgb, var(--nav-folder-11-color) 20%, transparent);
 
-    --nav-folder-12-color: var(--color-l-violet-30);
-    --nav-folder-12-bg-color: color-mix(in srgb, var(--color-l-alpha-violet) 60%, transparent);
+    --nav-folder-12-color: var(--color-l-purple-30);
+    --nav-folder-12-bg-color: color-mix(in srgb, var(--color-l-alpha-purple) 60%, transparent);
     --nav-folder-12-bg-color-hover: color-mix(in srgb, var(--nav-folder-12-bg-color) 70%, var(--color-base-10));
     --nav-folder-12-collapse-color: color-mix(in srgb, var(--nav-folder-12-color) 40%, transparent);
     --nav-folder-12-indent-color: color-mix(in srgb, var(--nav-folder-12-color) 20%, transparent);
@@ -153,8 +153,8 @@
     --nav-folder-5-collapse-color: color-mix(in srgb, var(--nav-folder-5-color) 40%, transparent);
     --nav-folder-5-indent-color: color-mix(in srgb, var(--nav-folder-5-color) 20%, transparent);
 
-    --nav-folder-6-color: var(--color-d-violet-10);
-    --nav-folder-6-bg-color: color-mix(in srgb, var(--color-d-alpha-violet) 60%, transparent);
+    --nav-folder-6-color: var(--color-d-purple-10);
+    --nav-folder-6-bg-color: color-mix(in srgb, var(--color-d-alpha-purple) 60%, transparent);
     --nav-folder-6-bg-color-hover: color-mix(in srgb, var(--nav-folder-6-bg-color) 70%, var(--color-base-10));
     --nav-folder-6-collapse-color: color-mix(in srgb, var(--nav-folder-6-color) 40%, transparent);
     --nav-folder-6-indent-color: color-mix(in srgb, var(--nav-folder-6-color) 20%, transparent);
@@ -189,8 +189,8 @@
     --nav-folder-11-collapse-color: color-mix(in srgb, var(--nav-folder-11-color) 40%, transparent);
     --nav-folder-11-indent-color: color-mix(in srgb, var(--nav-folder-11-color) 20%, transparent);
 
-    --nav-folder-12-color: var(--color-d-violet-10);
-    --nav-folder-12-bg-color: color-mix(in srgb, var(--color-d-alpha-violet) 60%, transparent);
+    --nav-folder-12-color: var(--color-d-purple-10);
+    --nav-folder-12-bg-color: color-mix(in srgb, var(--color-d-alpha-purple) 60%, transparent);
     --nav-folder-12-bg-color-hover: color-mix(in srgb, var(--nav-folder-12-bg-color) 70%, var(--color-base-10));
     --nav-folder-12-collapse-color: color-mix(in srgb, var(--nav-folder-12-color) 40%, transparent);
     --nav-folder-12-indent-color: color-mix(in srgb, var(--nav-folder-12-color) 20%, transparent);
@@ -439,6 +439,7 @@ body.colored-folders_inherit-color {
         --nav-folder-bg-color: inherit;
         --nav-folder-bg-color-hover: inherit;
         --nav-folder-collapse-color: inherit;
+        --nav-indentation-guide-color: inherit;
     }
 }
 
