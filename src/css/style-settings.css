@@ -1905,10 +1905,258 @@ settings:
 		collapsed: true
 		title: File Explorer
     -
+        id: colored-folders_text
+        type: class-toggle
+        title: Toggle Colored Folder Text
+        description: Adds colors to the name text of the folder. When hovered, folder background is colored.
+    -
+        id: colored-folders_collapse-indicator
+        type: class-toggle
+        title: Toggle Colored Folder Collapse Indicators
+        description: Adds color to the collapse indicators of the folders.
+    -
+        id: colored-folders_background
+        type: class-toggle
+        title: Toggle Colored Folder Backgrounds
+        description: Adds background color to folders.
+    -
+        id: colored-folders_inherit-color
+        type: class-toggle
+        title: Toggle to Inherit Parent Folder Colors
+        description: The color cycles through up to 12 colors for both top level folders and subfolders by default. If you would like subfolders to be colored based on their top level folder colors, toggle this on.
+    -
         id: readme-content
         type: info-text
         markdown: true
-        description: Coming Soon!
+        description: Folder Colors are setup to cycle through up to 12 colors. At default, it cycles through only 6 colors that I've set up to repeat. 
+	-
+		id: file-explorer_1st
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 1
+    -
+        id: nav-folder-1-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Text Color
+        default-light: 'hsla(4, 56%, 48%, 1)'
+        default-dark: 'hsla(4, 91%, 67%, 1)'
+    -
+        id: nav-folder-1-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Collapse Indicator Color
+        default-light: 'hsla(10, 50%, 74%, 1)'
+        default-dark: 'hsla(7, 39%, 34%, 1)'
+    -
+        id: nav-folder-1-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Background Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-1-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+	-
+		id: file-explorer_1st
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 2
+    -
+        id: nav-folder-2-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Text Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-2-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Collapse Indicator Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-2-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Background Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-2-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+	-
+		id: file-explorer_1st
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 3
+    -
+        id: nav-folder-3-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Text Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-3-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Collapse Indicator Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-3-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Background Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-3-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+	-
+		id: file-explorer_1st
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 4
+    -
+        id: nav-folder-4-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Text Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-4-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Collapse Indicator Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-4-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Background Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-4-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+	-
+		id: file-explorer_1st
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 5
+    -
+        id: nav-folder-5-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Text Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-5-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Collapse Indicator Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-5-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Background Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-5-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
+	-
+		id: file-explorer_1st
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 6
+    -
+        id: nav-folder-6-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Text Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-6-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Collapse Indicator Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-6-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Background Color
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: nav-folder-6-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Background Color when Hovered
+        default-light: '#'
+        default-dark: '#'
 	-
 		id: graph
 		type: heading
