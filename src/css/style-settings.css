@@ -1905,6 +1905,11 @@ settings:
 		collapsed: true
 		title: File Explorer
     -
+        id: alt-folder-icons
+        type: class-toggle
+        title: Toggle using Folders as Collapse Indicators
+        description: Use folders as collapse indicators instead of chevrons.
+    -
         id: colored-folders_text
         type: class-toggle
         title: Toggle Colored Folder Text
