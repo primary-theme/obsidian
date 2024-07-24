@@ -1367,11 +1367,12 @@ body.is-mobile {
   --nav-item-color: var(--color-l-gray-110);
   --nav-item-color-hover: var(--color-l-gray-110);
   --nav-item-color-active: var(--color-l-gray-110);
-  --nav-item-color-selected: var(--color-l-gray-130);
+  --nav-item-color-selected: var(--color-l-gray-20);
   --nav-item-color-highlighted: var(--text-accent-hover);
   --nav-item-background-hover: rgba(255, 255, 255, 0.25);
   --nav-item-background-active: rgba(255, 255, 255, 0.25);
-  --nav-item-background-selected: var(--color-l-alpha-green);
+  --nav-item-background-selected: hsla(197, 78%, 27%, 0.5);
+  --nav-item-background-selected-hover: hsla(197, 78%, 27%, 0.4);
   --nav-indentation-guide-color: var(--indentation-guide-color);
   --nav-collapse-icon-color: var(--collapse-icon-color);
   --nav-collapse-icon-color-collapsed: var(--text-faint);
@@ -2157,7 +2158,8 @@ body.is-mobile {
   --nav-item-color-highlighted: var(--text-accent-hover);
   --nav-item-background-hover: rgba(0, 0, 0, 0.125);
   --nav-item-background-active: rgba(0, 0, 0, 0.125);
-  --nav-item-background-selected: var(--color-d-alpha-green);
+  --nav-item-background-selected: hsla(197, 45%, 29%, 0.5);
+  --nav-item-background-selected-hover: hsla(197, 45%, 29%, 0.4);
   --nav-indentation-guide-color: var(--indentation-guide-color);
   --nav-collapse-icon-color: var(--collapse-icon-color);
   --nav-collapse-icon-color-collapsed: var(--text-faint);
@@ -3409,6 +3411,27 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover .tree-item-flair {
 
 .embedded-backlinks .backlink-pane > .tree-item-self {
   margin-top: 5px;
+}
+
+.nav-folder-children > .nav-folder .nav-folder-title.is-selected,
+.nav-files-container > div > .nav-folder .nav-folder-title.is-selected,
+.nav-files-container .tree-item-self.nav-file-title.is-selected,
+.tree-item .tree-item-self.is-selected {
+  --icon-color: var(--nav-item-color-selected);
+  color: var(--nav-item-color-selected);
+  background: var(--nav-item-background-selected);
+}
+.nav-folder-children > .nav-folder .nav-folder-title.is-selected:hover,
+.nav-files-container > div > .nav-folder .nav-folder-title.is-selected:hover,
+.nav-files-container .tree-item-self.nav-file-title.is-selected:hover,
+.tree-item .tree-item-self.is-selected:hover {
+  --icon-color: var(--nav-item-color-selected);
+  color: var(--nav-item-color-selected);
+  background: var(--nav-item-background-selected-hover);
+}
+
+.nav-folder-title.is-selected .nav-folder-collapse-indicator svg.svg-icon {
+  color: var(--nav-item-color-selected);
 }
 
 /*────────── Notice ──────────*/
@@ -5515,50 +5538,62 @@ a.tag:active {
   --nav-folder-1-bg-color: color-mix(in srgb, var(--color-l-alpha-red) 60%, transparent);
   --nav-folder-1-bg-color-hover: color-mix(in srgb, var(--nav-folder-1-bg-color) 70%, var(--color-base-10));
   --nav-folder-1-collapse-color: color-mix(in srgb, var(--nav-folder-1-color) 40%, transparent);
+  --nav-folder-1-indent-color: color-mix(in srgb, var(--nav-folder-1-color) 20%, transparent);
   --nav-folder-2-color: var(--color-l-orange-30);
   --nav-folder-2-bg-color: color-mix(in srgb, var(--color-l-alpha-orange) 60%, transparent);
   --nav-folder-2-bg-color-hover: color-mix(in srgb, var(--nav-folder-2-bg-color) 70%, var(--color-base-10));
   --nav-folder-2-collapse-color: color-mix(in srgb, var(--nav-folder-2-color) 40%, transparent);
+  --nav-folder-2-indent-color: color-mix(in srgb, var(--nav-folder-2-color) 20%, transparent);
   --nav-folder-3-color: var(--color-l-yellow-40);
   --nav-folder-3-bg-color: color-mix(in srgb, var(--color-l-alpha-yellow) 60%, transparent);
   --nav-folder-3-bg-color-hover: color-mix(in srgb, var(--nav-folder-3-bg-color) 70%, var(--color-base-10));
   --nav-folder-3-collapse-color: color-mix(in srgb, var(--nav-folder-3-color) 40%, transparent);
+  --nav-folder-3-indent-color: color-mix(in srgb, var(--nav-folder-3-color) 20%, transparent);
   --nav-folder-4-color: var(--color-l-green-40);
   --nav-folder-4-bg-color: color-mix(in srgb, var(--color-l-alpha-green) 60%, transparent);
   --nav-folder-4-bg-color-hover: color-mix(in srgb, var(--nav-folder-4-bg-color) 70%, var(--color-base-10));
   --nav-folder-4-collapse-color: color-mix(in srgb, var(--nav-folder-4-color) 40%, transparent);
+  --nav-folder-4-indent-color: color-mix(in srgb, var(--nav-folder-4-color) 20%, transparent);
   --nav-folder-5-color: var(--color-l-blue-30);
   --nav-folder-5-bg-color: color-mix(in srgb, var(--color-l-alpha-blue) 60%, transparent);
   --nav-folder-5-bg-color-hover: color-mix(in srgb, var(--nav-folder-5-bg-color) 70%, var(--color-base-10));
   --nav-folder-5-collapse-color: color-mix(in srgb, var(--nav-folder-5-color) 40%, transparent);
+  --nav-folder-5-indent-color: color-mix(in srgb, var(--nav-folder-5-color) 20%, transparent);
   --nav-folder-6-color: var(--color-l-violet-30);
   --nav-folder-6-bg-color: color-mix(in srgb, var(--color-l-alpha-violet) 60%, transparent);
   --nav-folder-6-bg-color-hover: color-mix(in srgb, var(--nav-folder-6-bg-color) 70%, var(--color-base-10));
   --nav-folder-6-collapse-color: color-mix(in srgb, var(--nav-folder-6-color) 40%, transparent);
+  --nav-folder-6-indent-color: color-mix(in srgb, var(--nav-folder-6-color) 20%, transparent);
   --nav-folder-7-color: var(--color-l-red-30);
   --nav-folder-7-bg-color: color-mix(in srgb, var(--color-l-alpha-red) 60%, transparent);
   --nav-folder-7-bg-color-hover: color-mix(in srgb, var(--nav-folder-7-bg-color) 70%, var(--color-base-10));
   --nav-folder-7-collapse-color: color-mix(in srgb, var(--nav-folder-7-color) 40%, transparent);
+  --nav-folder-7-indent-color: color-mix(in srgb, var(--nav-folder-7-color) 20%, transparent);
   --nav-folder-8-color: var(--color-l-orange-30);
   --nav-folder-8-bg-color: color-mix(in srgb, var(--color-l-alpha-orange) 60%, transparent);
   --nav-folder-8-bg-color-hover: color-mix(in srgb, var(--nav-folder-8-bg-color) 70%, var(--color-base-10));
   --nav-folder-8-collapse-color: color-mix(in srgb, var(--nav-folder-8-color) 40%, transparent);
+  --nav-folder-8-indent-color: color-mix(in srgb, var(--nav-folder-8-color) 20%, transparent);
   --nav-folder-9-color: var(--color-l-yellow-40);
   --nav-folder-9-bg-color: color-mix(in srgb, var(--color-l-alpha-yellow) 60%, transparent);
   --nav-folder-9-bg-color-hover: color-mix(in srgb, var(--nav-folder-9-bg-color) 70%, var(--color-base-10));
   --nav-folder-9-collapse-color: color-mix(in srgb, var(--nav-folder-9-color) 40%, transparent);
+  --nav-folder-9-indent-color: color-mix(in srgb, var(--nav-folder-9-color) 20%, transparent);
   --nav-folder-10-color: var(--color-l-green-40);
   --nav-folder-10-bg-color: color-mix(in srgb, var(--color-l-alpha-green) 60%, transparent);
   --nav-folder-10-bg-color-hover: color-mix(in srgb, var(--nav-folder-10-bg-color) 70%, var(--color-base-10));
   --nav-folder-10-collapse-color: color-mix(in srgb, var(--nav-folder-10-color) 40%, transparent);
+  --nav-folder-10-indent-color: color-mix(in srgb, var(--nav-folder-10-color) 20%, transparent);
   --nav-folder-11-color: var(--color-l-blue-30);
   --nav-folder-11-bg-color: color-mix(in srgb, var(--color-l-alpha-blue) 60%, transparent);
   --nav-folder-11-bg-color-hover: color-mix(in srgb, var(--nav-folder-11-bg-color) 70%, var(--color-base-10));
   --nav-folder-11-collapse-color: color-mix(in srgb, var(--nav-folder-11-color) 40%, transparent);
+  --nav-folder-11-indent-color: color-mix(in srgb, var(--nav-folder-11-color) 20%, transparent);
   --nav-folder-12-color: var(--color-l-violet-30);
   --nav-folder-12-bg-color: color-mix(in srgb, var(--color-l-alpha-violet) 60%, transparent);
   --nav-folder-12-bg-color-hover: color-mix(in srgb, var(--nav-folder-12-bg-color) 70%, var(--color-base-10));
   --nav-folder-12-collapse-color: color-mix(in srgb, var(--nav-folder-12-color) 40%, transparent);
+  --nav-folder-12-indent-color: color-mix(in srgb, var(--nav-folder-12-color) 20%, transparent);
 }
 
 .theme-dark {
@@ -5566,50 +5601,62 @@ a.tag:active {
   --nav-folder-1-bg-color: color-mix(in srgb, var(--color-d-alpha-red) 60%, transparent);
   --nav-folder-1-bg-color-hover: color-mix(in srgb, var(--nav-folder-1-bg-color) 70%, var(--color-base-10));
   --nav-folder-1-collapse-color: color-mix(in srgb, var(--nav-folder-1-color) 40%, transparent);
+  --nav-folder-1-indent-color: color-mix(in srgb, var(--nav-folder-1-color) 20%, transparent);
   --nav-folder-2-color: var(--color-d-orange-20);
   --nav-folder-2-bg-color: color-mix(in srgb, var(--color-d-alpha-orange) 60%, transparent);
   --nav-folder-2-bg-color-hover: color-mix(in srgb, var(--nav-folder-2-bg-color) 70%, var(--color-base-10));
   --nav-folder-2-collapse-color: color-mix(in srgb, var(--nav-folder-2-color) 40%, transparent);
+  --nav-folder-2-indent-color: color-mix(in srgb, var(--nav-folder-2-color) 20%, transparent);
   --nav-folder-3-color: var(--color-d-yellow-20);
   --nav-folder-3-bg-color: color-mix(in srgb, var(--color-d-alpha-yellow) 60%, transparent);
   --nav-folder-3-bg-color-hover: color-mix(in srgb, var(--nav-folder-3-bg-color) 70%, var(--color-base-10));
   --nav-folder-3-collapse-color: color-mix(in srgb, var(--nav-folder-3-color) 40%, transparent);
+  --nav-folder-3-indent-color: color-mix(in srgb, var(--nav-folder-3-color) 20%, transparent);
   --nav-folder-4-color: var(--color-d-green-20);
   --nav-folder-4-bg-color: color-mix(in srgb, var(--color-d-alpha-green) 60%, transparent);
   --nav-folder-4-bg-color-hover: color-mix(in srgb, var(--nav-folder-4-bg-color) 70%, var(--color-base-10));
   --nav-folder-4-collapse-color: color-mix(in srgb, var(--nav-folder-4-color) 40%, transparent);
+  --nav-folder-4-indent-color: color-mix(in srgb, var(--nav-folder-4-color) 20%, transparent);
   --nav-folder-5-color: var(--color-d-blue-20);
   --nav-folder-5-bg-color: color-mix(in srgb, var(--color-d-alpha-blue) 60%, transparent);
   --nav-folder-5-bg-color-hover: color-mix(in srgb, var(--nav-folder-5-bg-color) 70%, var(--color-base-10));
   --nav-folder-5-collapse-color: color-mix(in srgb, var(--nav-folder-5-color) 40%, transparent);
+  --nav-folder-5-indent-color: color-mix(in srgb, var(--nav-folder-5-color) 20%, transparent);
   --nav-folder-6-color: var(--color-d-violet-10);
   --nav-folder-6-bg-color: color-mix(in srgb, var(--color-d-alpha-violet) 60%, transparent);
   --nav-folder-6-bg-color-hover: color-mix(in srgb, var(--nav-folder-6-bg-color) 70%, var(--color-base-10));
   --nav-folder-6-collapse-color: color-mix(in srgb, var(--nav-folder-6-color) 40%, transparent);
+  --nav-folder-6-indent-color: color-mix(in srgb, var(--nav-folder-6-color) 20%, transparent);
   --nav-folder-7-color: var(--color-d-red-20);
   --nav-folder-7-bg-color: color-mix(in srgb, var(--color-d-alpha-red) 60%, transparent);
   --nav-folder-7-bg-color-hover: color-mix(in srgb, var(--nav-folder-7-bg-color) 70%, var(--color-base-10));
   --nav-folder-7-collapse-color: color-mix(in srgb, var(--nav-folder-7-color) 40%, transparent);
+  --nav-folder-7-indent-color: color-mix(in srgb, var(--nav-folder-7-color) 20%, transparent);
   --nav-folder-8-color: var(--color-d-orange-20);
   --nav-folder-8-bg-color: color-mix(in srgb, var(--color-d-alpha-orange) 60%, transparent);
   --nav-folder-8-bg-color-hover: color-mix(in srgb, var(--nav-folder-8-bg-color) 70%, var(--color-base-10));
   --nav-folder-8-collapse-color: color-mix(in srgb, var(--nav-folder-8-color) 40%, transparent);
+  --nav-folder-8-indent-color: color-mix(in srgb, var(--nav-folder-8-color) 20%, transparent);
   --nav-folder-9-color: var(--color-d-yellow-20);
   --nav-folder-9-bg-color: color-mix(in srgb, var(--color-d-alpha-yellow) 60%, transparent);
   --nav-folder-9-bg-color-hover: color-mix(in srgb, var(--nav-folder-9-bg-color) 70%, var(--color-base-10));
   --nav-folder-9-collapse-color: color-mix(in srgb, var(--nav-folder-9-color) 40%, transparent);
+  --nav-folder-9-indent-color: color-mix(in srgb, var(--nav-folder-9-color) 20%, transparent);
   --nav-folder-10-color: var(--color-d-green-20);
   --nav-folder-10-bg-color: color-mix(in srgb, var(--color-d-alpha-green) 60%, transparent);
   --nav-folder-10-bg-color-hover: color-mix(in srgb, var(--nav-folder-10-bg-color) 70%, var(--color-base-10));
   --nav-folder-10-collapse-color: color-mix(in srgb, var(--nav-folder-10-color) 40%, transparent);
+  --nav-folder-10-indent-color: color-mix(in srgb, var(--nav-folder-10-color) 20%, transparent);
   --nav-folder-11-color: var(--color-d-blue-20);
   --nav-folder-11-bg-color: color-mix(in srgb, var(--color-d-alpha-blue) 60%, transparent);
   --nav-folder-11-bg-color-hover: color-mix(in srgb, var(--nav-folder-11-bg-color) 70%, var(--color-base-10));
   --nav-folder-11-collapse-color: color-mix(in srgb, var(--nav-folder-11-color) 40%, transparent);
+  --nav-folder-11-indent-color: color-mix(in srgb, var(--nav-folder-11-color) 20%, transparent);
   --nav-folder-12-color: var(--color-d-violet-10);
   --nav-folder-12-bg-color: color-mix(in srgb, var(--color-d-alpha-violet) 60%, transparent);
   --nav-folder-12-bg-color-hover: color-mix(in srgb, var(--nav-folder-12-bg-color) 70%, var(--color-base-10));
   --nav-folder-12-collapse-color: color-mix(in srgb, var(--nav-folder-12-color) 40%, transparent);
+  --nav-folder-12-indent-color: color-mix(in srgb, var(--nav-folder-12-color) 20%, transparent);
 }
 
 body {
@@ -5776,6 +5823,55 @@ body.colored-folders_text .nav-folder-children > .nav-folder:nth-child(12n+13),
 body.colored-folders_text .nav-files-container > div > .nav-folder:nth-child(12n+13) {
   --nav-folder-color: var(--nav-folder-12-color);
   --nav-folder-bg-color-hover: var(--nav-folder-6-bg-color-hover);
+}
+
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+2),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+2) {
+  --nav-indentation-guide-color: var(--nav-folder-1-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+3),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+3) {
+  --nav-indentation-guide-color: var(--nav-folder-2-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+4),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+4) {
+  --nav-indentation-guide-color: var(--nav-folder-3-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+5),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+5) {
+  --nav-indentation-guide-color: var(--nav-folder-4-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+6),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+6) {
+  --nav-indentation-guide-color: var(--nav-folder-5-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+7),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+7) {
+  --nav-indentation-guide-color: var(--nav-folder-6-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+8),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+8) {
+  --nav-indentation-guide-color: var(--nav-folder-7-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+9),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+9) {
+  --nav-indentation-guide-color: var(--nav-folder-8-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+10),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+10) {
+  --nav-indentation-guide-color: var(--nav-folder-9-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+11),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+11) {
+  --nav-indentation-guide-color: var(--nav-folder-10-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+12),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+12) {
+  --nav-indentation-guide-color: var(--nav-folder-11-indent-color);
+}
+body.colored-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+13),
+body.colored-folders_indentation-guide .nav-files-container > div > .nav-folder:nth-child(12n+13) {
+  --nav-indentation-guide-color: var(--nav-folder-12-indent-color);
 }
 
 body.colored-folders_inherit-color .nav-files-container .nav-folder.nav-folder .nav-folder {

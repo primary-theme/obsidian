@@ -39,3 +39,23 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover .tree-item-flair {
 .embedded-backlinks .backlink-pane > .tree-item-self {
     margin-top: 5px;
 }
+
+// Selected Items
+.nav-folder-children > .nav-folder .nav-folder-title.is-selected,
+.nav-files-container > div > .nav-folder .nav-folder-title.is-selected,
+.nav-files-container .tree-item-self.nav-file-title.is-selected,
+.tree-item .tree-item-self.is-selected {
+    --icon-color: var(--nav-item-color-selected);
+    color: var(--nav-item-color-selected);
+    background: var(--nav-item-background-selected);
+
+    &:hover {
+        --icon-color: var(--nav-item-color-selected);
+        color: var(--nav-item-color-selected);    
+        background: var(--nav-item-background-selected-hover);
+    }
+}
+
+.nav-folder-title.is-selected .nav-folder-collapse-indicator svg.svg-icon {
+    color: var(--nav-item-color-selected);
+}

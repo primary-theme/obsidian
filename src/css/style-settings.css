@@ -159,6 +159,31 @@ settings:
 		type: class-toggle
 		title: Remove Popup and Pop Down Animations
 	-
+		id: interface_nav-items
+		type: heading
+		level: 2
+		collapsed: true
+		title: Sidebar Items
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: Sidebar items are items inside File Explorer, Bookmark, and other plugins the `nav-item-*` variables.
+	-
+		id: interface_nav-items
+		type: heading
+		level: 2
+		collapsed: true
+		title: Sidebar Items
+    -
+        id: gutter-color-active
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Active Line Gutter Number Text Color
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)' 
+	-
 		id: interface_editor
 		type: heading
 		level: 2
@@ -1924,6 +1949,11 @@ settings:
         type: class-toggle
         title: Toggle Colored Folder Backgrounds
         description: Adds background color to folders.
+    -
+        id: colored-folders_indentation-guide
+        type: class-toggle
+        title: Toggle Colored Folder Colored Indentation Guide
+        description: Colors folder's indentation guide based on parent folder's color.
     -
         id: colored-folders_inherit-color
         type: class-toggle

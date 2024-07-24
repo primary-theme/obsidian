@@ -850,11 +850,12 @@ body {
     --nav-item-color: var(--color-l-gray-110);
     --nav-item-color-hover: var(--color-l-gray-110);
     --nav-item-color-active: var(--color-l-gray-110);
-    --nav-item-color-selected: var(--color-l-gray-130);
+    --nav-item-color-selected: var(--color-l-gray-20);
     --nav-item-color-highlighted: var(--text-accent-hover);
     --nav-item-background-hover: rgba(255, 255, 255, 0.25);
     --nav-item-background-active: rgba(255, 255, 255, 0.25);
-    --nav-item-background-selected: var(--color-l-alpha-green);
+    --nav-item-background-selected: hsla(197, 78%, 27%, 0.5);
+    --nav-item-background-selected-hover: hsla(197, 78%, 27%, 0.4);
     --nav-indentation-guide-color: var(--indentation-guide-color);
     --nav-collapse-icon-color: var(--collapse-icon-color);
     --nav-collapse-icon-color-collapsed: var(--text-faint);
@@ -1815,7 +1816,8 @@ body {
     --nav-item-color-highlighted: var(--text-accent-hover);
     --nav-item-background-hover: rgba(0, 0, 0, 0.125);
     --nav-item-background-active: rgba(0, 0, 0, 0.125);
-    --nav-item-background-selected: var(--color-d-alpha-green);
+    --nav-item-background-selected: hsla(197, 45%, 29%, 0.5);
+    --nav-item-background-selected-hover: hsla(197, 45%, 29%, 0.4);
     --nav-indentation-guide-color: var(--indentation-guide-color);
     --nav-collapse-icon-color: var(--collapse-icon-color);
     --nav-collapse-icon-color-collapsed: var(--text-faint);
