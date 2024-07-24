@@ -900,6 +900,7 @@ body {
   --callout-blend-mode: unset;
   /* Checklist */
   --checklist-done-decoration: line-through;
+  --checkbox-radius: var(--radius-s);
   /* Code */
   --code-radius: var(--radius-m);
   --inline-code-radius: var(--radius-s);

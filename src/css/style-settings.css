@@ -1587,6 +1587,12 @@ settings:
         title: Checked Text Decoration (causes Strikethrough)
         description: Text decoration for checked items default at "line-through". If you would like to remove the strikethrough for checked items, put "none".
         default: 'line-through'
+    -
+        id: checkbox-radius
+        type: variable-text
+        title: Checkbox Border Radius
+        description: Changes the roundness of the checkbox. You may use other units such as %, em, or rem. If you want circular checkboxes, put "100%". If you want squircle checkboxes, put "5px" or "6px". If you want square checkboxes, put "2px" or "0".
+        default: '4px'
 	-
 		id: nf-checkbox-icons
 		type: heading
@@ -1645,7 +1651,7 @@ settings:
         id: important-chbx-radius
         type: variable-text
         title: Important [!] Border Radius
-        description: 
+        description: Changes the roundness of the checkbox. You may use other units such as px, em, or rem.
         default: '100%'
     -
         id: cancelled-chbx-color
@@ -1753,7 +1759,7 @@ settings:
         id: amount-chbx-radius
         type: variable-text
         title: Amount [S] Border Radius
-        description: 
+        description: Changes the roundness of the checkbox. You may use other units such as px, em, or rem.
         default: '100%'
     -
         id: quote-chbx-color
