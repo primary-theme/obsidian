@@ -1981,9 +1981,14 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: Folder Colors are setup to cycle through up to 12 colors. At default, it cycles through only 6 colors that I've set up to repeat. 
+        description: 🔄 Folder Colors are setup to cycle through up to 12 colors. At default, it cycles through only 6 colors that I've set up to repeat. 
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🎨 The collapse indicator and indentation guide colors take in the color of the text color. If you don't want the hassle of changing these two other nuances, you can just change the text color. <br><br> Same goes for background color when hovered, you can focus on just changing the background color and leave the hovered color and it will adjust accordingly.
 	-
-		id: file-explorer_1st
+		id: file-explorer_folder
 		type: heading
 		level: 2
 		collapsed: true
@@ -1995,41 +2000,41 @@ settings:
         opacity: true
         title: Folder 1 Text Color
         default-light: 'hsla(4, 56%, 48%, 1)'
-        default-dark: 'hsla(4, 91%, 67%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
     -
         id: nav-folder-1-collapse-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 1 Collapse Indicator Color
-        default-light: 'hsla(10, 50%, 74%, 1)'
-        default-dark: 'hsla(7, 39%, 34%, 1)'
+        default-light: 'hsla(4, 56%, 48%, 0.5)'
+        default-dark: 'hsla(4, 88%, 61%, 0.5)'
     -
         id: nav-folder-1-bg-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 1 Background Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(350, 84%, 63%, 0.12)'
+        default-dark: 'hsla(350, 84%, 63%, 0.12)'
     -
         id: nav-folder-1-bg-color-hover
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 1 Background Color when Hovered
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(350, 84%, 63%, 0.084)'
+        default-dark: 'hsla(350, 84%, 63%, 0.084)'
     -
         id: nav-folder-1-indent-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 1 Indentation Guide Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(4, 56%, 48%, 0.25)'
+        default-dark: 'hsla(4, 88%, 61%, 0.25)'
 	-
-		id: file-explorer_1st
+		id: file-explorer_folder
 		type: heading
 		level: 2
 		collapsed: true
@@ -2040,42 +2045,42 @@ settings:
         format: hsl
         opacity: true
         title: Folder 2 Text Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(18, 69%, 50%, 1)'
+        default-dark: 'hsla(24, 84%, 50%, 1)'
     -
         id: nav-folder-2-collapse-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 2 Collapse Indicator Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(18, 69%, 50%, 0.5)'
+        default-dark: 'hsla(24, 84%, 50%, 0.5)'
     -
         id: nav-folder-2-bg-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 2 Background Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(27, 100%, 50%, 0.12)'
+        default-dark: 'hsla(27, 100%, 50%, 0.12)'
     -
         id: nav-folder-2-bg-color-hover
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 2 Background Color when Hovered
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(27, 100%, 50%, 0.084)'
+        default-dark: 'hsla(27, 100%, 50%, 0.084)'
     -
         id: nav-folder-2-indent-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 2 Indentation Guide Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(18, 69%, 50%, 0.25)'
+        default-dark: 'hsla(24, 84%, 50%, 0.25)'
 	-
-		id: file-explorer_1st
+		id: file-explorer_folder
 		type: heading
 		level: 2
 		collapsed: true
@@ -2086,42 +2091,42 @@ settings:
         format: hsl
         opacity: true
         title: Folder 3 Text Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(40, 98%, 36%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
     -
         id: nav-folder-3-collapse-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 3 Collapse Indicator Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(40, 98%, 36%, 0.5)'
+        default-dark: 'hsla(42, 79%, 51%, 0.5)'
     -
         id: nav-folder-3-bg-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 3 Background Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(44, 100%, 50%, 0.12)'
+        default-dark: 'hsla(44, 100%, 50%, 0.12)'
     -
         id: nav-folder-3-bg-color-hover
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 3 Background Color when Hovered
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(44, 100%, 50%, 0.084)'
+        default-dark: 'hsla(44, 100%, 50%, 0.084)'
     -
         id: nav-folder-3-indent-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 3 Indentation Guide Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(40, 98%, 36%, 0.25)'
+        default-dark: 'hsla(42, 79%, 51%, 0.25)'
 	-
-		id: file-explorer_1st
+		id: file-explorer_folder
 		type: heading
 		level: 2
 		collapsed: true
@@ -2132,42 +2137,42 @@ settings:
         format: hsl
         opacity: true
         title: Folder 4 Text Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(153, 65%, 29%, 1)'
+        default-dark: 'hsla(154, 57%, 42%, 1)'
     -
         id: nav-folder-4-collapse-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 4 Collapse Indicator Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(153, 65%, 29%, 0.5)'
+        default-dark: 'hsla(154, 57%, 42%, 0.5)'
     -
         id: nav-folder-4-bg-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 4 Background Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(74, 69%, 44%, 0.12)'
+        default-dark: 'hsla(74, 69%, 44%, 0.12)'
     -
         id: nav-folder-4-bg-color-hover
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 4 Background Color when Hovered
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(74, 69%, 44%, 0.084)'
+        default-dark: 'hsla(74, 69%, 44%, 0.084)'
     -
         id: nav-folder-4-indent-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 4 Indentation Guide Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(153, 65%, 29%, 0.25)'
+        default-dark: 'hsla(154, 57%, 42%, 0.25)'
 	-
-		id: file-explorer_1st
+		id: file-explorer_folder
 		type: heading
 		level: 2
 		collapsed: true
@@ -2178,42 +2183,42 @@ settings:
         format: hsl
         opacity: true
         title: Folder 5 Text Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(200, 64%, 37%, 1)'
+        default-dark: 'hsla(194, 59%, 56%, 1)'
     -
         id: nav-folder-5-collapse-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 5 Collapse Indicator Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(200, 64%, 37%, 0.5)'
+        default-dark: 'hsla(194, 59%, 56%, 0.5)'
     -
         id: nav-folder-5-bg-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 5 Background Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(186, 64%, 46%, 0.12)'
+        default-dark: 'hsla(186, 64%, 46%, 0.12)'
     -
         id: nav-folder-5-bg-color-hover
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 5 Background Color when Hovered
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(186, 64%, 46%, 0.084)'
+        default-dark: 'hsla(186, 64%, 46%, 0.084)'
     -
         id: nav-folder-5-indent-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 5 Indentation Guide Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(200, 64%, 37%, 0.25)'
+        default-dark: 'hsla(194, 59%, 56%, 0.25)'
 	-
-		id: file-explorer_1st
+		id: file-explorer_folder
 		type: heading
 		level: 2
 		collapsed: true
@@ -2224,40 +2229,316 @@ settings:
         format: hsl
         opacity: true
         title: Folder 6 Text Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(275, 37%, 43%, 1)'
+        default-dark: 'hsla(242, 52%, 69%, 1)'
     -
         id: nav-folder-6-collapse-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 6 Collapse Indicator Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(275, 37%, 43%, 0.5)'
+        default-dark: 'hsla(242, 52%, 69%, 0.5)'
     -
         id: nav-folder-6-bg-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 6 Background Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(236, 100%, 72%, 0.12)'
+        default-dark: 'hsla(236, 100%, 72%, 0.12)'
     -
         id: nav-folder-6-bg-color-hover
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 6 Background Color when Hovered
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(236, 100%, 72%, 0.084)'
+        default-dark: 'hsla(236, 100%, 72%, 0.084)'
     -
         id: nav-folder-6-indent-color
         type: variable-themed-color
         format: hsl
         opacity: true
         title: Folder 6 Indentation Guide Color
-        default-light: '#'
-        default-dark: '#'
+        default-light: 'hsla(275, 37%, 43%, 0.25)'
+        default-dark: 'hsla(242, 52%, 69%, 0.25)'
+	-
+		id: file-explorer_folder
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 7
+    -
+        id: nav-folder-7-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Text Color
+        default-light: 'hsla(4, 56%, 48%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: nav-folder-7-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Collapse Indicator Color
+        default-light: 'hsla(4, 56%, 48%, 0.5)'
+        default-dark: 'hsla(4, 88%, 61%, 0.5)'
+    -
+        id: nav-folder-7-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Background Color
+        default-light: 'hsla(350, 84%, 63%, 0.12)'
+        default-dark: 'hsla(350, 84%, 63%, 0.12)'
+    -
+        id: nav-folder-7-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Background Color when Hovered
+        default-light: 'hsla(350, 84%, 63%, 0.084)'
+        default-dark: 'hsla(350, 84%, 63%, 0.084)'
+    -
+        id: nav-folder-7-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Indentation Guide Color
+        default-light: 'hsla(4, 56%, 48%, 0.25)'
+        default-dark: 'hsla(4, 88%, 61%, 0.25)'
+	-
+		id: file-explorer_folder
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 8
+    -
+        id: nav-folder-8-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Text Color
+        default-light: 'hsla(18, 69%, 50%, 1)'
+        default-dark: 'hsla(24, 84%, 50%, 1)'
+    -
+        id: nav-folder-8-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Collapse Indicator Color
+        default-light: 'hsla(18, 69%, 50%, 0.5)'
+        default-dark: 'hsla(24, 84%, 50%, 0.5)'
+    -
+        id: nav-folder-8-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Background Color
+        default-light: 'hsla(27, 100%, 50%, 0.12)'
+        default-dark: 'hsla(27, 100%, 50%, 0.12)'
+    -
+        id: nav-folder-8-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Background Color when Hovered
+        default-light: 'hsla(27, 100%, 50%, 0.084)'
+        default-dark: 'hsla(27, 100%, 50%, 0.084)'
+    -
+        id: nav-folder-8-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Indentation Guide Color
+        default-light: 'hsla(18, 69%, 50%, 0.25)'
+        default-dark: 'hsla(24, 84%, 50%, 0.25)'
+	-
+		id: file-explorer_folder
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 9
+    -
+        id: nav-folder-9-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Text Color
+        default-light: 'hsla(40, 98%, 36%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
+    -
+        id: nav-folder-9-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Collapse Indicator Color
+        default-light: 'hsla(40, 98%, 36%, 0.5)'
+        default-dark: 'hsla(42, 79%, 51%, 0.5)'
+    -
+        id: nav-folder-9-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Background Color
+        default-light: 'hsla(44, 100%, 50%, 0.12)'
+        default-dark: 'hsla(44, 100%, 50%, 0.12)'
+    -
+        id: nav-folder-9-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Background Color when Hovered
+        default-light: 'hsla(44, 100%, 50%, 0.084)'
+        default-dark: 'hsla(44, 100%, 50%, 0.084)'
+    -
+        id: nav-folder-9-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Indentation Guide Color
+        default-light: 'hsla(40, 98%, 36%, 0.25)'
+        default-dark: 'hsla(42, 79%, 51%, 0.25)'
+	-
+		id: file-explorer_folder
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 10
+    -
+        id: nav-folder-10-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Text Color
+        default-light: 'hsla(153, 65%, 29%, 1)'
+        default-dark: 'hsla(154, 57%, 42%, 1)'
+    -
+        id: nav-folder-10-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Collapse Indicator Color
+        default-light: 'hsla(153, 65%, 29%, 0.5)'
+        default-dark: 'hsla(154, 57%, 42%, 0.5)'
+    -
+        id: nav-folder-10-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Background Color
+        default-light: 'hsla(74, 69%, 44%, 0.12)'
+        default-dark: 'hsla(74, 69%, 44%, 0.12)'
+    -
+        id: nav-folder-10-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Background Color when Hovered
+        default-light: 'hsla(74, 69%, 44%, 0.084)'
+        default-dark: 'hsla(74, 69%, 44%, 0.084)'
+    -
+        id: nav-folder-10-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Indentation Guide Color
+        default-light: 'hsla(153, 65%, 29%, 0.25)'
+        default-dark: 'hsla(154, 57%, 42%, 0.25)'
+	-
+		id: file-explorer_folder
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 11
+    -
+        id: nav-folder-11-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Text Color
+        default-light: 'hsla(200, 64%, 37%, 1)'
+        default-dark: 'hsla(194, 59%, 56%, 1)'
+    -
+        id: nav-folder-11-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Collapse Indicator Color
+        default-light: 'hsla(200, 64%, 37%, 0.5)'
+        default-dark: 'hsla(194, 59%, 56%, 0.5)'
+    -
+        id: nav-folder-11-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Background Color
+        default-light: 'hsla(186, 64%, 46%, 0.12)'
+        default-dark: 'hsla(186, 64%, 46%, 0.12)'
+    -
+        id: nav-folder-11-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Background Color when Hovered
+        default-light: 'hsla(186, 64%, 46%, 0.084)'
+        default-dark: 'hsla(186, 64%, 46%, 0.084)'
+    -
+        id: nav-folder-11-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Indentation Guide Color
+        default-light: 'hsla(200, 64%, 37%, 0.25)'
+        default-dark: 'hsla(194, 59%, 56%, 0.25)'
+	-
+		id: file-explorer_folder
+		type: heading
+		level: 2
+		collapsed: true
+		title: Folder 12
+    -
+        id: nav-folder-12-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Text Color
+        default-light: 'hsla(275, 37%, 43%, 1)'
+        default-dark: 'hsla(242, 52%, 69%, 1)'
+    -
+        id: nav-folder-12-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Collapse Indicator Color
+        default-light: 'hsla(275, 37%, 43%, 0.5)'
+        default-dark: 'hsla(242, 52%, 69%, 0.5)'
+    -
+        id: nav-folder-12-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Background Color
+        default-light: 'hsla(236, 100%, 72%, 0.12)'
+        default-dark: 'hsla(236, 100%, 72%, 0.12)'
+    -
+        id: nav-folder-12-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Background Color when Hovered
+        default-light: 'hsla(236, 100%, 72%, 0.084)'
+        default-dark: 'hsla(236, 100%, 72%, 0.084)'
+    -
+        id: nav-folder-12-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Indentation Guide Color
+        default-light: 'hsla(275, 37%, 43%, 0.25)'
+        default-dark: 'hsla(242, 52%, 69%, 0.25)'
 	-
 		id: graph
 		type: heading
