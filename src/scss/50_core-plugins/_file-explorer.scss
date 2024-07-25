@@ -72,7 +72,7 @@ body {
 }
 
 // Toggle to Color Collapse Icons
-body.colored-folders_collapse-indicator {
+body.colorful-folders_collapse-indicator {
     .nav-folder-children > .nav-folder,
     .nav-files-container > div > .nav-folder {
         &:nth-child(9n+2) {
@@ -114,7 +114,7 @@ body.colored-folders_collapse-indicator {
 }
 
 // Toggle to Color Background
-body.colored-folders_background {
+body.colorful-folders_background {
     .nav-folder-children > .nav-folder,
     .nav-files-container > div > .nav-folder  {
         &:nth-child(9n+2) {
@@ -165,7 +165,7 @@ body.colored-folders_background {
 }
 
 // Toggle for Colored Folder Text
-body.colored-folders_text {
+body.colorful-folders_text {
     .nav-folder-children > .nav-folder,
     .nav-files-container > div > .nav-folder  {
         &:nth-child(12n+2) {
@@ -231,7 +231,7 @@ body.colored-folders_text {
 }
 
 // Toggle for Colored Folder Text
-body.colored-folders_indentation-guide {
+body.colorful-folders_indentation-guide {
     .nav-folder-children > .nav-folder,
     .nav-files-container > div > .nav-folder  {
         &:nth-child(12n+2) {
@@ -285,7 +285,7 @@ body.colored-folders_indentation-guide {
 }
 
 // Toggle to inheriting Parent Folder Color
-body.colored-folders_inherit-color {
+body.colorful-folders_inherit-color {
     .nav-files-container .nav-folder.nav-folder .nav-folder {
         --nav-folder-color: inherit;
         --nav-folder-bg-color: inherit;
