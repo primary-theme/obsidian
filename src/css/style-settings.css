@@ -1827,6 +1827,209 @@ settings:
         description: Set border radius size for media (images, audio, video)
         default: 8px
 	-
+		id: nf_note-embed
+		type: heading
+		level: 2
+		collapsed: true
+		title: Note Embed
+    -
+        id: embed-max-height
+        type: variable-text
+        title: Note Embed Max Height
+        description: If you embed very long notes, you can change the max height so that each embed is scrollable. You can also set this by line-height using the unit rlh, or other CSS supported units. Recommended values are 20rlh and 40rlh.
+        default: 4000px
+    -
+        id: embed-background
+        type: variable-themed-color
+        title: Note Embed Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(39, 39%, 94%, 1)'
+        default-dark: 'hsla(31, 19%, 14%, 1)'
+	-
+		id: nf_note-embed-title
+		type: heading
+		level: 3
+		collapsed: true
+		title: Note Embed Title
+    -
+        id: embed-hide-title
+        type: class-toggle
+        title: Hide Note Embed Title
+        description: Hide the note's title when embedding notes.
+    -
+        id: embed-title-font-size
+        type: variable-text
+        title: Note Embed Title Font Size
+        description: You can use any CSS supported units. By default takes in the editor's font size based in the Obsidian Settings.
+        default: 12px
+    -
+        id: embed-title-font-weight
+        type: variable-number
+        title: Note Embed Title Font Weight
+        default: 500
+    -
+        id: embed-title-text-transform
+        type: variable-text
+        title: Note Embed Title Text Transform
+        description: Based on CSS. If you want the note embed title to be in all uppercase, put uppercase. Other options include capitalize and lowercase.
+        default: none
+    -
+        id: embed-title-letter-spacing
+        type: variable-text
+        title: Note Embed Title Letter Spacing
+        description: You can use numbers and CSS units.
+        default: normal
+    -
+        id: embed-title-color
+        type: variable-themed-color
+        title: Note Embed Title Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: embed-title-border-width
+        type: variable-text
+        title: Note Embed Title Bottom Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-title-border-style
+        type: variable-text
+        title: Note Embed Title Bottom Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-title-border-color
+        type: variable-themed-color
+        title: Note Embed Title Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: embed-title-margin-bottom
+        type: variable-text
+        title: Note Embed Title Bottom Margin Size
+        default: 8px
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 3
+		collapsed: true
+		title: Note Embed Border
+    -
+        id: embed-border-radius
+        type: variable-text
+        title: Note Embed Border Radius
+        description: You can also have different radiuses per side. Just write them in the CSS format of top, right, bottom, left. i.e. 2px, 8px, 12px, 0px.
+        default: 12px
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Top Border
+    -
+        id: embed-border-top-width
+        type: variable-text
+        title: Note Embed Top Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-top-style
+        type: variable-text
+        title: Note Embed Top Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-top-color
+        type: variable-themed-color
+        title: Note Embed Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Right Border
+    -
+        id: embed-border-end-width
+        type: variable-text
+        title: Note Embed Right Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-end-style
+        type: variable-text
+        title: Note Embed Right Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-end-color
+        type: variable-themed-color
+        title: Note Embed Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Bottom Border
+    -
+        id: embed-border-bottom-width
+        type: variable-text
+        title: Note Embed Bottom Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-bottom-style
+        type: variable-text
+        title: Note Embed Bottom Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-bottom-color
+        type: variable-themed-color
+        title: Note Embed Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Left Border
+    -
+        id: embed-border-start-width
+        type: variable-text
+        title: Note Embed Left Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-start-style
+        type: variable-text
+        title: Note Embed Left Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-start-color
+        type: variable-themed-color
+        title: Note Embed Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+	-
 		id: canvas
 		type: heading
 		level: 1

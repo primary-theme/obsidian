@@ -939,6 +939,10 @@ body {
   --embed-title-border-width: 1px;
   --embed-title-border-style: solid;
   --embed-title-margin-bottom: var(--size-4-2);
+  --embed-title-font-size: var(--font-text-size);
+  --embed-title-font-weight: var(--font-medium);
+  --embed-title-letter-spacing: normal;
+  --embed-title-text-transform: none;
   --embed-media-border-radius: var(--radius-m);
   /* Emphasis */
   --underline-decoration-opacity: 22%;
@@ -4839,7 +4843,10 @@ body {
 
 .embed-title {
   text-wrap: wrap;
-  font-weight: var(--font-medium);
+  font-size: var(--embed-title-font-size);
+  font-weight: var(--embed-title-font-weight);
+  letter-spacing: var(--embed-title-letter-spacing);
+  text-transform: var(--embed-title-text-transform);
   color: var(--embed-title-color);
   padding: 0 var(--size-4-3) var(--size-2-2);
   margin-inline-start: calc(-1 * var(--embed-left-right-padding));
@@ -4866,6 +4873,11 @@ video {
 .markdown-preview-view .math-block {
   overflow: scroll;
   width: 100%;
+}
+
+/*────────── SS: Embed Styles ──────────*/
+body.embed-hide-title .embed-title {
+  display: none;
 }
 
 /*────────── File ──────────*/
