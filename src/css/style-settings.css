@@ -311,6 +311,117 @@ settings:
                 label: Word Count Only
                 value: sb-word-count-only
 	-
+		id: components
+		type: heading
+		level: 1
+		collapsed: true
+		title: Components
+    -
+        id: comp_progress
+        type: heading
+        level: 2
+        collapsed: true
+        title: Progress
+    -
+        id: progress-bar-width
+        type: variable-text
+        title: Progress Bar Width
+        default: 220px
+    -
+        id: progress-bar-height
+        type: variable-text
+        title: Progress Bar Height
+        default: 8px
+    -
+        id: progress-background
+        type: variable-themed-color
+        title: Progress Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 34%, 90%, 1)'
+        default-dark: 'hsla(31, 17%, 12%, 1)'
+    -
+        id: progress-border-width
+        type: variable-text
+        title: Progress Border Width
+        default: 1px
+    -
+        id: progress-color-outline
+        type: variable-themed-color
+        title: Progress Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(30, 22%, 18%, 1)'
+    -
+        id: progress-color-1
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 0% to 39%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(4, 72%, 55%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: progress-color-2
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 40% to 59%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(21, 81%, 59%, 1)'
+        default-dark: 'hsla(22, 82%, 47%, 1)'
+    -
+        id: progress-color-3
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 60% to 79%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(43, 83%, 57%, 1)'
+        default-dark: 'hsla(40, 78%, 48%, 1)'
+    -
+        id: progress-color-4
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 80% to 99%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(149, 49%, 39%, 1)'
+        default-dark: 'hsla(154, 74%, 26%, 1)'
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: If you want the color for progress bars valued at 100% to be a solid color, set the same color for each of the three below.
+    -
+        id: progress-gradient-1
+        type: variable-themed-color
+        title: Progress 100% Leftmost Color
+        description: Leftmost color in the gradient for value 100%.
+        format: hsl
+        opacity: true
+        default-light: 'hsla(3, 59%, 64%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: progress-gradient-2
+        type: variable-themed-color
+        title: Progress 100% Middle Color
+        description: Middle color in the gradient for value 100%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(43, 71%, 67%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
+    -
+        id: progress-gradient-3
+        type: variable-themed-color
+        title: Progress 100% Rightmost Color
+        description: Rightmost color in the gradient for value 100%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(197, 39%, 56%, 1)'
+        default-dark: 'hsla(194, 59%, 56%, 1)'
+	-
 		id: notes-files
 		type: heading
 		level: 1

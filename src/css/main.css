@@ -865,6 +865,10 @@ body {
   --flair-count-radius: calc(var(--radius-s) + 1px);
   /* Pill */
   --pill-tag-weight: var(--component-font-weight);
+  /* Progress */
+  --progress-width: 220px;
+  --progress-height: 8px;
+  --progress-border-width: 1px;
   /* Slider */
   --slider-track-height: 5px;
   /* Tab */
@@ -1415,6 +1419,17 @@ body.is-mobile {
   --pill-background-hover: var(--pill-background);
   --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
   --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+  /* Progress */
+  --progress-background: var(--color-l-gray-40);
+  --progress-color-outline: var(--background-modifier-border);
+  --progress-color-1: var(--color-l-red-20);
+  --progress-color-2: var(--color-l-orange-20);
+  --progress-color-3: var(--color-l-yellow-20);
+  --progress-color-4: var(--color-l-green-30);
+  --progress-color-5: linear-gradient(45deg, var(--progress-gradient-1), var(--progress-gradient-2), var(--progress-gradient-3));
+  --progress-gradient-1: var(--color-l-red-10);
+  --progress-gradient-2: var(--color-l-yellow-10);
+  --progress-gradient-3: var(--color-l-blue-10);
   /* Prompt */
   --prompt-input-background: var(--background-primary);
   --prompt-border-color: var(--background-modifier-border-focus);
@@ -2263,6 +2278,17 @@ body.is-mobile {
   --pill-background-hover: var(--pill-background);
   --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
   --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+  /* Progress */
+  --progress-background: var(--color-d-gray-120);
+  --progress-color-outline: var(--background-modifier-border);
+  --progress-color-1: var(--color-d-red-30);
+  --progress-color-2: var(--color-d-orange-30);
+  --progress-color-3: var(--color-d-yellow-30);
+  --progress-color-4: var(--color-d-green-40);
+  --progress-color-5: linear-gradient(45deg, var(--progress-gradient-1), var(--progress-gradient-2), var(--progress-gradient-3));
+  --progress-gradient-1: var(--color-d-red-30);
+  --progress-gradient-2: var(--color-d-yellow-20);
+  --progress-gradient-3: var(--color-d-blue-20);
   /* Prompt */
   --prompt-input-background: var(--background-primary);
   --prompt-results-background: var(--background-primary);
@@ -3572,6 +3598,78 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover .tree-item-flair {
   color: var(--notice-color);
   border-radius: var(--radius-l);
   box-shadow: var(--notice-shadow);
+}
+
+/*────────── Progress Bars ──────────*/
+.markdown-rendered progress,
+.markdown-source-view.is-live-preview progress,
+.markdown-preview-view progress {
+  width: var(--progress-width);
+  height: var(--progress-height);
+}
+.markdown-rendered progress[value]::-webkit-progress-bar,
+.markdown-source-view.is-live-preview progress[value]::-webkit-progress-bar,
+.markdown-preview-view progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-background);
+  box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-color-outline);
+}
+.markdown-rendered progress[value^="1"]::-webkit-progress-value, .markdown-rendered progress[value^="2"]::-webkit-progress-value, .markdown-rendered progress[value^="3"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="1"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="2"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="3"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="1"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="2"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="3"]::-webkit-progress-value {
+  background-color: var(--progress-color-1);
+}
+.markdown-rendered progress[value^="4"]::-webkit-progress-value, .markdown-rendered progress[value^="5"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="4"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="5"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="4"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="5"]::-webkit-progress-value {
+  background-color: var(--progress-color-2);
+}
+.markdown-rendered progress[value^="6"]::-webkit-progress-value, .markdown-rendered progress[value^="7"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="6"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="7"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="6"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="7"]::-webkit-progress-value {
+  background-color: var(--progress-color-3);
+}
+.markdown-rendered progress[value^="8"]::-webkit-progress-value, .markdown-rendered progress[value^="9"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="8"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="9"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="8"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="9"]::-webkit-progress-value {
+  background-color: var(--progress-color-4);
+}
+.markdown-rendered progress[value="1"]::-webkit-progress-value, .markdown-rendered progress[value="100"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="1"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="100"]::-webkit-progress-value,
+.markdown-preview-view progress[value="1"]::-webkit-progress-value,
+.markdown-preview-view progress[value="100"]::-webkit-progress-value {
+  background: var(--progress-color-5);
+}
+.markdown-rendered progress[value="0"]::-webkit-progress-value, .markdown-rendered progress[value="2"]::-webkit-progress-value, .markdown-rendered progress[value="3"]::-webkit-progress-value, .markdown-rendered progress[value="4"]::-webkit-progress-value, .markdown-rendered progress[value="5"]::-webkit-progress-value, .markdown-rendered progress[value="6"]::-webkit-progress-value, .markdown-rendered progress[value="7"]::-webkit-progress-value, .markdown-rendered progress[value="8"]::-webkit-progress-value, .markdown-rendered progress[value="9"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="0"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="2"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="3"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="4"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="5"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="6"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="7"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="8"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="9"]::-webkit-progress-value,
+.markdown-preview-view progress[value="0"]::-webkit-progress-value,
+.markdown-preview-view progress[value="2"]::-webkit-progress-value,
+.markdown-preview-view progress[value="3"]::-webkit-progress-value,
+.markdown-preview-view progress[value="4"]::-webkit-progress-value,
+.markdown-preview-view progress[value="5"]::-webkit-progress-value,
+.markdown-preview-view progress[value="6"]::-webkit-progress-value,
+.markdown-preview-view progress[value="7"]::-webkit-progress-value,
+.markdown-preview-view progress[value="8"]::-webkit-progress-value,
+.markdown-preview-view progress[value="9"]::-webkit-progress-value {
+  background-color: var(--progress-color-1);
 }
 
 /*────────── Prompt ──────────*/
