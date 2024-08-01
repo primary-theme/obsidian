@@ -297,6 +297,11 @@ body.colorful-folders_inherit-color {
 
 // File Explorer Folder Closed
 body.alt-folder-icons {
+    .is-mobile .nav-folder-collapse-indicator svg.right-triangle {
+        width: var(--mobile-folder-icon-size);
+        height: var(--mobile-folder-icon-size);
+    }
+
     .nav-folder-collapse-indicator svg.right-triangle {
         width: var(--icon-size);
         height: var(--icon-size);
