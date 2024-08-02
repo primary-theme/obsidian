@@ -1,6 +1,7 @@
 name: Plugin Support
 description: I want to suggest a plugin to be properly supported in Primary
 labels: ["🔌 plugin support"]
+projects: ["primary-theme/1"]
 body:
   - type: markdown
     attributes:
