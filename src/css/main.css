@@ -1998,8 +1998,8 @@ body.is-mobile {
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
   /* Alternating Colors */
-  --color-gray-rgb: 203, 180, 167;
-  --color-gray: rgb(196, 172, 159);
+  --color-gray-rgb: 166, 150, 142;
+  --color-gray: rgb(166, 150, 141);
   --color-red-rgb: 228, 87, 78;
   --color-red: rgb(192, 78, 78);
   --color-orange-rgb: 238, 163, 89;
