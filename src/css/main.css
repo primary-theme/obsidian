@@ -869,6 +869,7 @@ body {
   --progress-width: 220px;
   --progress-height: 8px;
   --progress-border-width: 1px;
+  --progress-value-radius: var(--progress-height);
   /* Slider */
   --slider-track-height: 5px;
   /* Tab */
@@ -1421,7 +1422,8 @@ body.is-mobile {
   --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
   /* Progress */
   --progress-background: var(--color-l-gray-40);
-  --progress-color-outline: var(--background-modifier-border);
+  --progress-bar-outline: rgba(0, 0, 0, 0.1);
+  --progress-value-outline: rgba(0, 0, 0, 0.18);
   --progress-color-1: var(--color-l-red-20);
   --progress-color-2: var(--color-l-orange-20);
   --progress-color-3: var(--color-l-yellow-20);
@@ -2280,7 +2282,8 @@ body.is-mobile {
   --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
   /* Progress */
   --progress-background: var(--color-d-gray-120);
-  --progress-color-outline: var(--background-modifier-border);
+  --progress-bar-outline: rgba(255, 255, 255, 0.1);
+  --progress-value-outline: rgba(255, 255, 255, 0.21);
   --progress-color-1: var(--color-d-red-30);
   --progress-color-2: var(--color-d-orange-30);
   --progress-color-3: var(--color-d-yellow-30);
@@ -3611,7 +3614,14 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover .tree-item-flair {
 .markdown-source-view.is-live-preview progress[value]::-webkit-progress-bar,
 .markdown-preview-view progress[value]::-webkit-progress-bar {
   background-color: var(--progress-background);
-  box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-color-outline);
+  box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-bar-outline);
+}
+.markdown-rendered progress[value]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value]::-webkit-progress-value,
+.markdown-preview-view progress[value]::-webkit-progress-value {
+  border-top-right-radius: var(--progress-value-radius);
+  border-bottom-right-radius: var(--progress-value-radius);
+  box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-value-outline);
 }
 .markdown-rendered progress[value^="1"]::-webkit-progress-value, .markdown-rendered progress[value^="2"]::-webkit-progress-value, .markdown-rendered progress[value^="3"]::-webkit-progress-value,
 .markdown-source-view.is-live-preview progress[value^="1"]::-webkit-progress-value,

@@ -236,6 +236,7 @@ body {
     --progress-width: 220px;
     --progress-height: 8px;
     --progress-border-width: 1px;
+    --progress-value-radius: var(--progress-height);
 
     /* Slider */
     --slider-track-height: 5px;
@@ -911,7 +912,8 @@ body {
 
     /* Progress */
     --progress-background: var(--color-l-gray-40);
-    --progress-color-outline: var(--background-modifier-border);
+    --progress-bar-outline: rgba(0, 0, 0, 0.1);
+    --progress-value-outline: rgba(0, 0, 0, 0.18);
     --progress-color-1: var(--color-l-red-20);
     --progress-color-2: var(--color-l-orange-20);
     --progress-color-3: var(--color-l-yellow-20);
@@ -1959,7 +1961,8 @@ body {
 
     /* Progress */
     --progress-background: var(--color-d-gray-120);
-    --progress-color-outline: var(--background-modifier-border);
+    --progress-bar-outline: rgba(255, 255, 255, 0.1);
+    --progress-value-outline: rgba(255, 255, 255, 0.21);
     --progress-color-1: var(--color-d-red-30);
     --progress-color-2: var(--color-d-orange-30);
     --progress-color-3: var(--color-d-yellow-30);

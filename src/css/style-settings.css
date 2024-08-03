@@ -343,16 +343,31 @@ settings:
     -
         id: progress-border-width
         type: variable-text
-        title: Progress Border Width
+        title: Progress Border Widths
+        description: Applied to the background bar and the value bar.
         default: 1px
     -
-        id: progress-color-outline
+        id: progress-bar-outline
         type: variable-themed-color
-        title: Progress Border Color
+        title: Progress Bar Border Color
         format: hsl
         opacity: true
-        default-light: 'hsla(37, 38%, 83%, 1)'
-        default-dark: 'hsla(30, 22%, 18%, 1)'
+        default-light: 'rgba(0, 0, 0, 0.1)'
+        default-dark: 'rgba(255, 255, 255, 0.1)'
+    -
+        id: progress-value-radius
+        type: variable-text
+        title: Progress Inner Value Roundness
+        description: Takes in the progress bar's height by default, creating rounded corners. If you want straight corners put 0px.
+        default: 8px
+    -
+        id: progress-value-outline
+        type: variable-themed-color
+        title: Progress Inner Value Border Color
+        format: hsl
+        opacity: true
+        default-light: 'rgba(0, 0, 0, 0.18)'
+        default-dark: 'rgba(255, 255, 255, 0.21)'
     -
         id: progress-color-1
         type: variable-themed-color

@@ -8,7 +8,13 @@
 
 	&[value]::-webkit-progress-bar {
         background-color: var(--progress-background);
-		box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-color-outline);
+		box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-bar-outline);
+	}
+
+	&[value]::-webkit-progress-value {
+		border-top-right-radius: var(--progress-value-radius);
+		border-bottom-right-radius: var(--progress-value-radius);
+		box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-value-outline);
 	}
 
 	&[value^='1']::-webkit-progress-value,
