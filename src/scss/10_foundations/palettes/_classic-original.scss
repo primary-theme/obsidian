@@ -151,6 +151,11 @@ body {
                                 calc(var(--size-4-1) + var(--button-inset-shadow-size))
                                 var(--size-4-6);
 
+    /* Status Bar */
+    --status-bar-floating-opacity: 0.5;
+    --status-bar-floating-opacity-hover: 1;
+    --status-bar-floating-offset: var(--size-2-2);
+
     /* Titlebar */
     --titlebar-text-weight: var(--font-normal);
 
@@ -695,12 +700,20 @@ body {
     --divider-color: var(--background-modifier-border);
     --divider-color-hover: var(--background-modifier-border-hover);
 
+    /* Ribbon */
+    --ribbon-slideout-background: var(--color-l-gray-30);
+    --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
+                            0px 5px 5px -5px rgba(0, 0, 0, 0.15);
+
     /* Scrollbar */
     --scrollbar-bg: transparent;
     --scrollbar-thumb-bg: var(--background-modifier-border);
     --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
 
     /* Status Bar */
+    --status-bar-floating-bg: var(--color-l-gray-30);
+    --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
+                                    0px 5px 5px -5px rgba(0, 0, 0, 0.15);
     --status-bar-item-color: var(--color-l-gray-80);
     --status-bar-item-color-hover: var(--color-l-gray-100);
     --status-bar-item-bg-hover: transparent;
@@ -1742,12 +1755,20 @@ body {
     --divider-color: var(--background-modifier-border);
     --divider-color-hover: var(--background-modifier-border-hover);
 
+    /* Ribbon */
+    --ribbon-slideout-background: var(--color-d-gray-110);
+    --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
+                                0px 5px 5px -5px rgba(0, 0, 0, 0.38);
+
     /* Scrollbar */
     --scrollbar-bg: transparent;
     --scrollbar-thumb-bg: var(--background-modifier-border);
     --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
 
     /* Status Bar */
+    --status-bar-floating-bg: var(--color-d-gray-110);
+    --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
+                                    0px 5px 5px -5px rgba(0, 0, 0, 0.38);
     --status-bar-item-color: var(--color-d-gray-50);
     --status-bar-item-color-hover: var(--color-d-gray-30);
     --status-bar-item-bg-hover: transparent;

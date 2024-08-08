@@ -45,3 +45,91 @@
         }
     }
 }
+
+/*────────── SS: Status Bar Customization ──────────*/
+body.sb-style-full {
+    .status-bar {
+        --status-bar-position: relative;
+        --status-bar-border-width: 0 0 0 0;
+        margin-top: calc(var(--editor-pane-margin) * -1);
+    }
+}
+
+body.sb-style-slideupfull {
+    .status-bar {
+        --status-bar-position: relative;
+        --status-bar-border-width: 0 0 0 0;
+        transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+        margin-top: calc(-1 * var(--editor-pane-margin));
+        margin-bottom: calc(-1 * (var(--editor-pane-margin) * 1.6));
+
+        &-item { 
+            opacity: 0;
+            transition: opacity var(--anim-motion-smooth) var(--anim-duration-moderate);
+        }
+    
+        &:hover {
+            margin-bottom: 0px;
+            transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+    
+            .status-bar-item {
+                opacity: 1;
+                transition: opacity var(--anim-motion-smooth) var(--anim-duration-moderate);
+            }
+        }
+    }
+}
+
+body.sb-style-slideout {
+    .status-bar {
+        --status-bar-position: absolute;
+        --status-bar-background: var(--status-bar-floating-bg);
+        right: -40px;
+        bottom: var(--size-2-3);
+        --status-bar-border-width: 1px;
+        --status-bar-radius: var(--radius-m) 0 0 var(--radius-m);
+        box-shadow: var(--status-bar-floating-shadow);
+        opacity: 0;
+        transition: var(--anim-motion-jumpy) var(--anim-duration-slow);
+    
+        &:hover {
+            right: 0;
+            bottom: var(--size-2-3);
+            opacity: 1;
+            transition: var(--anim-motion-jumpy) var(--anim-duration-slow);
+        }
+    }
+}
+
+body.sb-style-floating {
+    .status-bar {
+        --status-bar-position: absolute;
+        --status-bar-background: var(--status-bar-floating-bg);
+        right: var(--status-bar-floating-offset);
+        bottom: var(--status-bar-floating-offset);
+        --status-bar-border-width: 1px;
+        --status-bar-radius: calc(var(--radius-m) - 2px);
+        opacity: var(--status-bar-floating-opacity);
+        transition: var(--anim-motion-smooth) var(--anim-duration-fast);
+        box-shadow: var(--status-bar-floating-shadow);
+    
+        &:hover {
+            right: var(--size-2-2);
+            bottom: var(--size-2-2);
+            opacity: var(--status-bar-floating-opacity-hover);
+            transition: var(--anim-motion-smooth) var(--anim-duration-fast);
+        }
+    }
+}
+
+body.sb-sync-only {
+    .status-bar-item:not(.plugin-sync) {
+        display: none;
+    }
+}
+
+body.sb-word-count-only {
+    .status-bar-item:not(.plugin-word-count) {
+        display: none;
+    }
+}

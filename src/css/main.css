@@ -799,6 +799,10 @@ body {
                               var(--size-4-2)
                               calc(var(--size-4-1) + var(--button-inset-shadow-size))
                               var(--size-4-6);
+  /* Status Bar */
+  --status-bar-floating-opacity: 0.5;
+  --status-bar-floating-opacity-hover: 1;
+  --status-bar-floating-offset: var(--size-2-2);
   /* Titlebar */
   --titlebar-text-weight: var(--font-normal);
   /* Vault Switcher */
@@ -1235,11 +1239,18 @@ body.is-mobile {
   /* Divider */
   --divider-color: var(--background-modifier-border);
   --divider-color-hover: var(--background-modifier-border-hover);
+  /* Ribbon */
+  --ribbon-slideout-background: var(--color-l-gray-30);
+  --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
+                          0px 5px 5px -5px rgba(0, 0, 0, 0.15);
   /* Scrollbar */
   --scrollbar-bg: transparent;
   --scrollbar-thumb-bg: var(--background-modifier-border);
   --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
   /* Status Bar */
+  --status-bar-floating-bg: var(--color-l-gray-30);
+  --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
+                                  0px 5px 5px -5px rgba(0, 0, 0, 0.15);
   --status-bar-item-color: var(--color-l-gray-80);
   --status-bar-item-color-hover: var(--color-l-gray-100);
   --status-bar-item-bg-hover: transparent;
@@ -2093,11 +2104,18 @@ body.is-mobile {
   /* Divider */
   --divider-color: var(--background-modifier-border);
   --divider-color-hover: var(--background-modifier-border-hover);
+  /* Ribbon */
+  --ribbon-slideout-background: var(--color-d-gray-110);
+  --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
+                              0px 5px 5px -5px rgba(0, 0, 0, 0.38);
   /* Scrollbar */
   --scrollbar-bg: transparent;
   --scrollbar-thumb-bg: var(--background-modifier-border);
   --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
   /* Status Bar */
+  --status-bar-floating-bg: var(--color-d-gray-110);
+  --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
+                                  0px 5px 5px -5px rgba(0, 0, 0, 0.38);
   --status-bar-item-color: var(--color-d-gray-50);
   --status-bar-item-color-hover: var(--color-d-gray-30);
   --status-bar-item-bg-hover: transparent;
@@ -2911,6 +2929,33 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
   border-right: 1px solid var(--background-modifier-border);
 }
 
+/*────────── SS: Ribbon Styles ──────────*/
+body.ribbon-slideout:not(.is-mobile) .workspace-ribbon.workspace-ribbon {
+  --ribbon-background: var(--ribbon-slideout-background);
+  --titlebar-background-focused: var(--ribbon-background);
+  --ribbon-background-collapsed: var(--ribbon-background);
+  position: absolute;
+  left: calc(-1 * var(--ribbon-width) / 4);
+  opacity: 0;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+  box-shadow: var(--ribbon-slideout-shadow);
+}
+body.ribbon-slideout:not(.is-mobile) .workspace-ribbon.workspace-ribbon:hover {
+  left: 0px;
+  opacity: 1;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+}
+body.ribbon-slideout:not(.is-mobile) .sidebar-toggle-button.mod-left {
+  background: var(--ribbon-background);
+  --tab-container-background: var(--ribbon-background);
+}
+body.ribbon-slideout:not(.is-mobile).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: calc(var(--size-4-2) + var(--frame-left-space) + var(--ribbon-width));
+}
+body.ribbon-slideout:not(.is-mobile):not(.is-hidden-frameless.is-frameless) .side-dock-actions {
+  margin-top: var(--header-height);
+}
+
 /*────────── Sidebar ──────────*/
 .nav-header {
   padding: 0px var(--size-4-2) 0px var(--size-4-2);
@@ -3051,6 +3096,77 @@ body:not(.is-mobile) .workspace-split .workspace-sidedock-vault-profile.workspac
 }
 .status-bar-item.plugin-sync .mod-working:active {
   color: var(--sync-icon-working-active);
+}
+
+/*────────── SS: Status Bar Customization ──────────*/
+body.sb-style-full .status-bar {
+  --status-bar-position: relative;
+  --status-bar-border-width: 0 0 0 0;
+  margin-top: calc(var(--editor-pane-margin) * -1);
+}
+
+body.sb-style-slideupfull .status-bar {
+  --status-bar-position: relative;
+  --status-bar-border-width: 0 0 0 0;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+  margin-top: calc(-1 * var(--editor-pane-margin));
+  margin-bottom: calc(-1 * var(--editor-pane-margin) * 1.6);
+}
+body.sb-style-slideupfull .status-bar-item {
+  opacity: 0;
+  transition: opacity var(--anim-motion-smooth) var(--anim-duration-moderate);
+}
+body.sb-style-slideupfull .status-bar:hover {
+  margin-bottom: 0px;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+}
+body.sb-style-slideupfull .status-bar:hover .status-bar-item {
+  opacity: 1;
+  transition: opacity var(--anim-motion-smooth) var(--anim-duration-moderate);
+}
+
+body.sb-style-slideout .status-bar {
+  --status-bar-position: absolute;
+  --status-bar-background: var(--status-bar-floating-bg);
+  right: -40px;
+  bottom: var(--size-2-3);
+  --status-bar-border-width: 1px;
+  --status-bar-radius: var(--radius-m) 0 0 var(--radius-m);
+  box-shadow: var(--status-bar-floating-shadow);
+  opacity: 0;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-slow);
+}
+body.sb-style-slideout .status-bar:hover {
+  right: 0;
+  bottom: var(--size-2-3);
+  opacity: 1;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-slow);
+}
+
+body.sb-style-floating .status-bar {
+  --status-bar-position: absolute;
+  --status-bar-background: var(--status-bar-floating-bg);
+  right: var(--status-bar-floating-offset);
+  bottom: var(--status-bar-floating-offset);
+  --status-bar-border-width: 1px;
+  --status-bar-radius: calc(var(--radius-m) - 2px);
+  opacity: var(--status-bar-floating-opacity);
+  transition: var(--anim-motion-smooth) var(--anim-duration-fast);
+  box-shadow: var(--status-bar-floating-shadow);
+}
+body.sb-style-floating .status-bar:hover {
+  right: var(--size-2-2);
+  bottom: var(--size-2-2);
+  opacity: var(--status-bar-floating-opacity-hover);
+  transition: var(--anim-motion-smooth) var(--anim-duration-fast);
+}
+
+body.sb-sync-only .status-bar-item:not(.plugin-sync) {
+  display: none;
+}
+
+body.sb-word-count-only .status-bar-item:not(.plugin-word-count) {
+  display: none;
 }
 
 /*────────── Window Frame ──────────*/
@@ -6628,21 +6744,6 @@ body.file-header-title-hover .view-header-title-container:hover {
 body.active-line-highlight .cm-active {
   background: var(--active-line-bg);
   box-shadow: -25vw 0 var(--active-line-bg), 25vw 0 var(--active-line-bg);
-}
-
-/* Status Bar */
-body.sb-style-full .status-bar {
-  --status-bar-position: relative;
-  --status-bar-border-width: 0 0 0 0;
-  margin-top: calc(var(--editor-pane-margin) * -1);
-}
-
-body.sb-sync-only .status-bar-item:not(.plugin-sync) {
-  display: none;
-}
-
-body.sb-word-count-only .status-bar-item:not(.plugin-word-count) {
-  display: none;
 }
 
 /*────────── Style Settings: Notes and Files ──────────*/

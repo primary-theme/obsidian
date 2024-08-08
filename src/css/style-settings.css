@@ -159,6 +159,65 @@ settings:
 		type: class-toggle
 		title: Remove Popup and Pop Down Animations
 	-
+		id: interface_ribbon
+		type: heading
+		level: 2
+		collapsed: true
+		title: Ribbon
+    -
+        id: ribbon_styles
+        type: class-select
+        title: Ribbon Style
+        allowEmpty: false
+        default: ribbon-default
+        options:
+            - 
+                label: Default
+                value: ribbon-default
+            -
+                label: Slide Out on Hover
+                value: ribbon-slideout
+    -
+        id: ribbon-background
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Ribbon Background Color (Not Slide Out Ribbon)
+        default-light: 'hsla(34, 34%, 90%, 1)'
+        default-dark: 'hsla(31, 17%, 12%, 1)'
+    -
+        id: ribbon-slideout-background
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Slide Out Ribbon Background Color
+        default-light: 'hsla(25, 37%, 92%, 1)'
+        default-dark: 'hsla(28, 18%, 13%, 1)'
+    -
+        id: ribbon-border-width
+        type: variable-text
+        title: Ribbon Border Width
+        description: If you want to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: ribbon-border-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Ribbon Border Color
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(30, 22%, 18%, 1)'
+    -
+        id: ribbon-top-right-radius
+        type: variable-text
+        title: Ribbon Top Right Border Roundness
+        default: 12px
+    -
+        id: ribbon-bottom-right-radius
+        type: variable-text
+        title: Ribbon Bottom Right Border Roundness
+        default: 12px
+	-
 		id: interface_editor
 		type: heading
 		level: 2
@@ -292,8 +351,17 @@ settings:
                 label: On Top
                 value: sb-default
             -
-                label: Full Length
+                label: Visible Full Length
                 value: sb-style-full
+            -
+                label: Slide Up Full Length
+                value: sb-style-slideupfull
+            -
+                label: Slide Out
+                value: sb-style-slideout
+            -
+                label: Floating
+                value: sb-style-floating
     -
         id: interface_status-bar-item-display
         type: class-select

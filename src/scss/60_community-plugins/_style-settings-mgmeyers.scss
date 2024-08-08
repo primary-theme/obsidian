@@ -316,27 +316,6 @@ body.active-line-highlight {
     }
 }
 
-/* Status Bar */
-body.sb-style-full {
-    .status-bar {
-        --status-bar-position: relative;
-        --status-bar-border-width: 0 0 0 0;
-        margin-top: calc(var(--editor-pane-margin) * -1);
-    }
-}
-
-body.sb-sync-only {
-    .status-bar-item:not(.plugin-sync) {
-        display: none;
-    }
-}
-
-body.sb-word-count-only {
-    .status-bar-item:not(.plugin-word-count) {
-        display: none;
-    }
-}
-
 /*────────── Style Settings: Notes and Files ──────────*/
 
 /* Headings */
