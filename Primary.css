@@ -537,6 +537,26 @@ settings:
                 label: Word Count Only
                 value: sb-word-count-only
     -
+        id: status-bar-background
+        type: variable-themed-color
+        title: Status Bar Background
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 34%, 90%, 1)'
+        default-dark: 'hsla(31, 17%, 12%, 1)'
+    -
+        id: status-bar-border-width
+        type: variable-text
+        title: Status Bar Border Width
+        description: Set this to 0px if you wish to remove the status bar's border. The border width value's order goes top, right, bottom, left. The default value corresponds the roundness for the On Top style. Applying 1 value means that value is applied to all sides.
+        default: 1px
+    -
+        id: status-bar-radius
+        type: variable-text
+        title: Status Bar Border Roundness
+        description: The roundness value's order goes top left, top right, bottom right, bottom left. The default value corresponds the roundness for the On Top style. Applying 1 value means that value is applied to all corners.
+        default: 12px 0px 0px 12px
+    -
         id: status-bar-floating-opacity
         type: variable-number-slider
         title: Floating Style - Status Bar Opacity at Rest
@@ -554,12 +574,6 @@ settings:
         max: 1
         step: 0.1
         default: 1
-    -
-        id: status-bar-border-width
-        type: variable-text
-        title: Status Bar Border Width
-        description: Set this to 0px if you wish to remove the status bar's border.
-        default: 1px
 	-
 		id: components
 		type: heading
