@@ -6722,6 +6722,10 @@ body.zero-popup-popdown {
   --anim-popdown: none;
 }
 
+body.zero-popup-blur {
+  --popup-bg-blur: 0px;
+}
+
 /* Editor */
 body.editor-bgpattern-linegrid .workspace-split.mod-root .view-content {
   background-size: var(--editor-bgpattern-size);

@@ -149,7 +149,7 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
-		title: Animations
+		title: Animations and Effects
 	-
 		id: zero-tab-anim
 		type: class-toggle
@@ -158,6 +158,11 @@ settings:
 		id: zero-popup-popdown
 		type: class-toggle
 		title: Remove Popup and Pop Down Animations
+	-
+		id: zero-popup-blur
+		type: class-toggle
+		title: Remove Popup Background Blur
+        description: This removes the background blur when opening the Settings, Command Palette, Quick Switcher, and other pop up boxes.This is a good option to toggle on if you are experiencing unreconcilable buggy-ness and visual issues with Primary. You may also toggle this on if you don't prefer the background blur, or just need some performance boost (especially for bigger vaults).
 	-
 		id: interface_ribbon
 		type: heading
