@@ -172,7 +172,7 @@ settings:
         default: ribbon-default
         options:
             - 
-                label: Default
+                label: Docked
                 value: ribbon-default
             -
                 label: Slide Out on Hover
@@ -182,17 +182,9 @@ settings:
         type: variable-themed-color
         format: hsl
         opacity: true
-        title: Ribbon Background Color (Not Slide Out Ribbon)
+        title: Ribbon Background Color
         default-light: 'hsla(34, 34%, 90%, 1)'
         default-dark: 'hsla(31, 17%, 12%, 1)'
-    -
-        id: ribbon-slideout-background
-        type: variable-themed-color
-        format: hsl
-        opacity: true
-        title: Slide Out Ribbon Background Color
-        default-light: 'hsla(25, 37%, 92%, 1)'
-        default-dark: 'hsla(28, 18%, 13%, 1)'
     -
         id: ribbon-border-width
         type: variable-text
@@ -208,15 +200,11 @@ settings:
         default-light: 'hsla(37, 38%, 83%, 1)'
         default-dark: 'hsla(30, 22%, 18%, 1)'
     -
-        id: ribbon-top-right-radius
+        id: ribbon-radius
         type: variable-text
         title: Ribbon Top Right Border Roundness
-        default: 12px
-    -
-        id: ribbon-bottom-right-radius
-        type: variable-text
-        title: Ribbon Bottom Right Border Roundness
-        default: 12px
+        description: The roundness value's order goes top left, top right, bottom right, bottom left.
+        default: 0px 12px 12px 0px
 	-
 		id: interface_editor
 		type: heading
@@ -378,6 +366,30 @@ settings:
             -
                 label: Word Count Only
                 value: sb-word-count-only
+    -
+        id: status-bar-floating-opacity
+        type: variable-number-slider
+        title: Floating Style - Status Bar Opacity at Rest
+        description: Sets the opacity of the status bar at rest if Floating Status Bar style is chosen. Range goes from 0 being transparent, until 1 being completely visible.
+        min: 0
+        max: 1
+        step: 0.1
+        default: 0.5
+    -
+        id: status-bar-floating-opacity-hover
+        type: variable-number-slider
+        title: Floating Style - Status Bar Opacity on Hover
+        description: Sets the opacity of the status bar when hovering it if Floating Status Bar style is chosen. Range goes from 0 being transparent, until 1 being completely visible.
+        min: 0
+        max: 1
+        step: 0.1
+        default: 1
+    -
+        id: status-bar-border-width
+        type: variable-text
+        title: Status Bar Border Width
+        description: Set this to 0px if you wish to remove the status bar's border.
+        default: 1px
 	-
 		id: components
 		type: heading

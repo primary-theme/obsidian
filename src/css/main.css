@@ -785,8 +785,8 @@ body {
   --divider-radius: var(--radius-m);
   /* Ribbon */
   --ribbon-border-width: 1px;
-  --ribbon-top-right-radius: var(--editor-border-radius);
-  --ribbon-bottom-right-radius: var(--editor-border-radius);
+  --ribbon-radius: var(--editor-border-radius);
+  --ribbon-radius: var(--editor-border-radius);
   --ribbon-margin-bottom: var(--editor-pane-margin);
   /* Sidebar */
   --nav-item-white-space: nowrap;
@@ -2917,8 +2917,7 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 .workspace-ribbon.mod-left {
   border: var(--ribbon-border-width) solid var(--divider-color);
   border-left: none;
-  border-top-right-radius: var(--ribbon-top-right-radius);
-  border-bottom-right-radius: var(--ribbon-bottom-right-radius);
+  border-radius: 0px var(--ribbon-radius) var(--ribbon-radius) 0px;
   margin-bottom: var(--ribbon-margin-bottom);
 }
 .workspace-ribbon.mod-left:before {
@@ -2930,6 +2929,9 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 }
 
 /*────────── SS: Ribbon Styles ──────────*/
+body.ribbon-slideout:not(.is-mobile) .workspace-ribbon.mod-left:before {
+  visibility: hidden;
+}
 body.ribbon-slideout:not(.is-mobile) .workspace-ribbon.workspace-ribbon {
   --ribbon-background: var(--ribbon-slideout-background);
   --titlebar-background-focused: var(--ribbon-background);
@@ -3142,6 +3144,23 @@ body.sb-style-slideout .status-bar:hover {
   opacity: 1;
   transition: var(--anim-motion-jumpy) var(--anim-duration-slow);
 }
+body.sb-style-slideout.sb-sync-only .status-bar {
+  --status-bar-position: absolute;
+  --status-bar-background: var(--status-bar-floating-bg);
+  right: -12px;
+  bottom: var(--size-2-3);
+  --status-bar-border-width: 1px;
+  --status-bar-radius: var(--radius-m) 0 0 var(--radius-m);
+  box-shadow: var(--status-bar-floating-shadow);
+  opacity: 0;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-slow);
+}
+body.sb-style-slideout.sb-sync-only .status-bar:hover {
+  right: 0;
+  bottom: var(--size-2-3);
+  opacity: 1;
+  transition: var(--anim-motion-jumpy) var(--anim-duration-slow);
+}
 
 body.sb-style-floating .status-bar {
   --status-bar-position: absolute;
@@ -3155,8 +3174,6 @@ body.sb-style-floating .status-bar {
   box-shadow: var(--status-bar-floating-shadow);
 }
 body.sb-style-floating .status-bar:hover {
-  right: var(--size-2-2);
-  bottom: var(--size-2-2);
   opacity: var(--status-bar-floating-opacity-hover);
   transition: var(--anim-motion-smooth) var(--anim-duration-fast);
 }

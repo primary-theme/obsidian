@@ -61,8 +61,7 @@
         border: var(--ribbon-border-width) solid var(--divider-color);
         border-left: none;
 
-        border-top-right-radius: var(--ribbon-top-right-radius);
-        border-bottom-right-radius: var(--ribbon-bottom-right-radius);
+        border-radius: 0px var(--ribbon-radius) var(--ribbon-radius) 0px;
         margin-bottom: var(--ribbon-margin-bottom);
     }
 }
@@ -75,6 +74,10 @@
 /*────────── SS: Ribbon Styles ──────────*/
 
 body.ribbon-slideout:not(.is-mobile) {
+    .workspace-ribbon.mod-left:before {
+        visibility: hidden;
+    }
+    
     .workspace-ribbon.workspace-ribbon {
         --ribbon-background: var(--ribbon-slideout-background);
         --titlebar-background-focused: var(--ribbon-background);
