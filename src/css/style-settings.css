@@ -23,7 +23,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 📮 Subscribe to [Primary Theme Updates](https://dub.sh/primary/inbox) to get notified of Primary updates, new features, and goodies right in your inbox!
+        description: 📮 Subscribe to [Primary Theme Updates](https://primarytheme.substack.com/subscribe) to get notified of Primary updates, new features, and goodies right in your inbox!
 	-
 		id: interface
 		type: heading
@@ -2526,7 +2526,7 @@ settings:
         description: Color of notes that don't exist (unresolved backlinks)
         default-light: 'hsla(43, 83%, 57%, 1)'
         default-dark: 'hsla(42, 79%, 51%, 1)'
-    - 
+    -
         id: graph-node-unresolved-opacity
         type: variable-number
         title: Unresolved Note Node Opacity
@@ -2618,7 +2618,7 @@ settings:
         type: info-text
         markdown: true
         title: 💗 Make a Donation on Ko-fi
-        description: Support development by subscribing monthly or making a one-time donation at [Primary's Ko-fi Page](https://dub.sh/primary/ko-fi).
+        description: Support development by subscribing monthly or making a one-time donation at [Primary's Ko-fi Page](https://ko-fi.com/ceciliamay).
     -
         id: readme-content
         type: info-text
@@ -2630,5 +2630,5 @@ settings:
         type: info-text
         markdown: true
         title: 🐛 Submit an Issue or Feature Request!
-        description: Visit [Primary's Github Issue Page](https://git.new/primary/obsidian) to submit an issue or feature request. <br> No Github account? Send me a message through [Twitter](https://dub.sh/twitter/mei) or directly via [Email](mailto:contact.ceciliamay@gmail.com)
+        description: Visit [Primary's Github Issue Page](https://git.new/primary/obsidian) to submit an issue or feature request. <br> No Github account? Send me a message through [Twitter](https://x.com/ceciliamay_) or directly via [Email](mailto:contact.ceciliamay@gmail.com)
 */
