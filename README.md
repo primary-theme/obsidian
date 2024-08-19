@@ -20,12 +20,12 @@
 <small>
     This refresh wouldn't be possible without my <a href="https://github.com/primary-theme/obsidian/releases/tag/v.2.7.0">supporters</a>!
     <br><br>
-    If you like the theme, consider supporting its development by making a one-time donation or subscribe monthly (with perks!) through <a href="https://dub.sh/primary/ko-fi">Ko-fi</a>.
+    If you like the theme, consider supporting its development by making a one-time donation or subscribe monthly (with perks!) through <a href="https://ko-fi.com/ceciliamay">Ko-fi</a>.
     <br><br>
     Thank you so much for your patronage!
     <br><br>
 </small>
-  
+
 <p align="center">
     <a href='https://ko-fi.com/E1E76SQX8' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </p>
@@ -115,7 +115,7 @@ Primary is an opinionated Obsidian theme that merges play with work.
 
 Fine-tuned to pixel and color perfection, Primary aims to take away the need to think about customization, so that you can focus on what matters – the concepts, that link, this great idea.
 
-Despite being opinionated, it has plenty of options and ways to make it yours. 
+Despite being opinionated, it has plenty of options and ways to make it yours.
 
 Stay tuned, because Primary will come in more flavors soon.
 
@@ -178,7 +178,7 @@ This option will give you access to public releases.
 
 This option is exclusive to monthly subscribers of Primary.
 
-1. Head on over to [Primary's Ko-fi](https://dub.sh/primary/ko-fi) page.Under Buy a Coffee, choose Membership and subscribe to get access to member exclusive posts.
+1. Head on over to [Primary's Ko-fi](https://ko-fi.com/ceciliamay) page.Under Buy a Coffee, choose Membership and subscribe to get access to member exclusive posts.
 2. After subscribing, head over to the `Posts` tab. This is under the header, just below my name and ko-fi link.
 3. Once in the Posts tab, you should be able to find posts usually titled along the lines of `Primary x.x.x-beta (Monthly Subscriber Exclusive)`. Click on the latest post.
 4. The post includes the full Release Notes so you're fully informed what new features or fixes you get for that release! To get the a copy of that beta, scroll down a bit until you find the `Click here to download the CSS file.` link. This should take you to a GitHub gist page.
@@ -217,7 +217,7 @@ Another great way to contribute is by sharing screenshots of how you use Primary
 
 Let's start by installing the essentials.
 
-Primary is written with a mix of CSS and [Sass](https://sass-lang.com/guide/). If you haven't, do install Sass. 
+Primary is written with a mix of CSS and [Sass](https://sass-lang.com/guide/). If you haven't, do install Sass.
 
 ```
 sudo gem install sass

@@ -6,13 +6,13 @@ _Winner of [Obsidian October](http://obsidian.md/october2021) 2021's Best Theme 
 
 > Primary is soft, chewy, comforting — like a chocolate chip cookie, or a warm brownie. Primary instantly puts you in a relaxed state that opens the door to creativity and exploration. Wonderfully executed down to the smallest details, Primary ran away with first place. — **O_O 2021 Judges**
 
-# 🚧 Primary is currently undergoing a 2.0 Rebuild 
+# 🚧 Primary is currently undergoing a 2.0 Rebuild
 
-This README is underconstruction. Everything below is outdated, and does not reflect it's current status. Please be advised. 
+This README is underconstruction. Everything below is outdated, and does not reflect it's current status. Please be advised.
 
-Though, I am currently rebuilding it to support Obsidian 1.0+. To support Primary's 2.0 Rebuild (available April 2024 onwards), the beta is currently available to [Monthly Subscribers](https://dub.sh/primary/ko-fi)! New beta versions are released weekly.
+Though, I am currently rebuilding it to support Obsidian 1.0+. To support Primary's 2.0 Rebuild (available April 2024 onwards), the beta is currently available to [Monthly Subscribers](https://ko-fi.com/ceciliamay)! New beta versions are released weekly.
 
-All new updates can be seen through [Twitter](https://dub.sh/twitter/mei).
+All new updates can be seen through [Twitter](https://x.com/ceciliamay_).
 
 ---
 
@@ -104,7 +104,7 @@ By downloading the Style Settings plugin, Primary offers you tons of customizati
     - Custom Bold and Italics color
     - Custom Strikethrough color
     - Custom "Hidden Comments" `%% text %%` color
-    - Custom Resolved and Unresolved Links color 
+    - Custom Resolved and Unresolved Links color
     - Custom Blockquotes color (change text color, syntax color, border color, background color)
     - Custom Highlight colors
 - 3 Markdown Embed Style options (Original, Minimal, or Clean)
