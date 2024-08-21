@@ -5574,7 +5574,7 @@ body span.cm-quote.cm-strong.cm-em.cm-strikethrough {
 
 /*────────── Gutter ──────────*/
 @container (width > 48rem) {
-  .cm-contentContainer .cm-gutters {
+  .is-readable-line-width .cm-contentContainer .cm-gutters {
     position: absolute;
     margin-inline-start: 0.75rem;
   }
