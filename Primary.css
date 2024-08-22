@@ -468,6 +468,12 @@ settings:
         default-light: 'hsla(37, 38%, 83%, 1)'
         default-dark: 'hsla(28, 22%, 18%, 1)'
     -
+        id: file-line-width
+        type: variable-text
+        title: File Readable Line Width
+        description: You may use any CSS units like em, rem, ch, px.
+        default: 700px
+    -
         id: gutter-color
         type: variable-themed-color
         format: hsl
