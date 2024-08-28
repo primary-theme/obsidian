@@ -727,7 +727,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 🎨 Visit the [Header Presets](https://primary-theme.github.io/presets/) section in the Full Guide to import the Settings.
+        description: 🎨 Visit the [Header Presets](https://primary-theme.github.io/guides/overview/) section in the Full Guide to import the Settings.
     -
         id: readme-content
         type: info-text
@@ -2234,6 +2234,11 @@ settings:
 		collapsed: true
 		title: Note Embed
     -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🎨 Visit the [Note Embed Presets](https://primary-theme.github.io/presets/note-embed) in the Full Guide and check if you have any preferred ready-to-go style presets there, or if you want some inspiration on styling your embeds.
+    -
         id: embed-max-height
         type: variable-text
         title: Note Embed Max Height
@@ -2324,7 +2329,7 @@ settings:
         id: embed-border-radius
         type: variable-text
         title: Note Embed Border Radius
-        description: You can also have different radiuses per side. Just write them in the CSS format of top, right, bottom, left. i.e. 2px, 8px, 12px, 0px.
+        description: You can also have different radiuses per side. Just write them in the CSS format of top left, top right, bottom right, bottom left. i.e. 2px, 8px, 12px, 0px.
         default: 12px
 	-
 		id: nf_note-embed-border
