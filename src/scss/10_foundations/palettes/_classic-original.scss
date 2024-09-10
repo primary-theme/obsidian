@@ -55,6 +55,25 @@ when needed.
     }
 }
 
+@keyframes slideUpAlt {
+    0% {
+        margin-top: 4%;
+        opacity: 0;
+    }
+    10% {
+        margin-top: 2.2%;
+        opacity: 0.2;
+    }
+    40% {
+        margin-top: -0.16%;
+        opacity: 0.75;
+    }
+    100% {
+        margin-top: 4px;
+        opacity: 1;
+    }
+}
+
 @keyframes slideDown {
     0% {
         transform: translateY(-10%);
@@ -82,6 +101,7 @@ body {
 
     /* Global Animation */
     --anim-popup: 0.3s slideUp forwards;
+    --anim-popup-alt: 0.3s slideUpAlt forwards;
     --anim-popdown: 0.4s slideDown forwards;
     --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
 

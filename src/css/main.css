@@ -718,6 +718,24 @@ when needed.
     opacity: 1;
   }
 }
+@keyframes slideUpAlt {
+  0% {
+    margin-top: 4%;
+    opacity: 0;
+  }
+  10% {
+    margin-top: 2.2%;
+    opacity: 0.2;
+  }
+  40% {
+    margin-top: -0.16%;
+    opacity: 0.75;
+  }
+  100% {
+    margin-top: 4px;
+    opacity: 1;
+  }
+}
 @keyframes slideDown {
   0% {
     transform: translateY(-10%);
@@ -743,6 +761,7 @@ body {
   /*────────── Foundations ──────────*/
   /* Global Animation */
   --anim-popup: 0.3s slideUp forwards;
+  --anim-popup-alt: 0.3s slideUpAlt forwards;
   --anim-popdown: 0.4s slideDown forwards;
   --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
   /* Cursor */
@@ -3829,7 +3848,7 @@ input.prompt-input:focus-visible {
   border-bottom: var(--prompt-separator-border);
 }
 
-.suggestion-container,
+.suggestion-container:not([data-popper-placement]),
 .suggestion-popover,
 .popover {
   animation: var(--anim-popup);
@@ -3852,6 +3871,10 @@ input.prompt-input:focus-visible {
 }
 .suggestion-item:not(.mod-search-suggestion .suggestion-item).mod-complex.is-selected .suggestion-highlight {
   color: var(--prompt-suggestion-highlight-color-selected);
+}
+
+.suggestion-container[data-popper-placement] {
+  animation: var(--anim-popup-alt);
 }
 
 .prompt-instructions {
@@ -6864,6 +6887,7 @@ body.zero-tab-anim .workspace-tab-header.workspace-tab-header:not(.is-active):ac
 
 body.zero-popup-popdown {
   --anim-popup: none;
+  --anim-popup-alt: none;
   --anim-popdown: none;
 }
 

@@ -14,7 +14,7 @@ input.prompt-input:focus-visible {
 }
 
 // prompt for adding Tags, linking Files
-.suggestion-container,
+.suggestion-container:not([data-popper-placement]),
 .suggestion-popover,
 .popover {
     animation: var(--anim-popup);
@@ -40,6 +40,11 @@ input.prompt-input:focus-visible {
     &.mod-complex.is-selected .suggestion-highlight {
         color: var(--prompt-suggestion-highlight-color-selected);
     }
+}
+
+// prompt fix for prompts with Searchers (usually used by Community Plugins)
+.suggestion-container[data-popper-placement] {
+    animation: var(--anim-popup-alt);
 }
 
 // Prompt Instructions for all Prompts
