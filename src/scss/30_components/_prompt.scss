@@ -20,6 +20,10 @@ input.prompt-input:focus-visible {
     animation: var(--anim-popup);
 }
 
+.suggestion-container[data-popper-placement] {
+    animation: var(--anim-popup-alt) !important; // !important is used to override inline styling from searchers
+}
+
 .suggestion-item:not(.mod-search-suggestion .suggestion-item) {
     font-size: calc(var(--font-ui-medium) - 1px);
     color: var(--prompt-suggestion-color);
@@ -42,9 +46,8 @@ input.prompt-input:focus-visible {
     }
 }
 
-// prompt fix for prompts with Searchers (usually used by Community Plugins)
-.suggestion-container[data-popper-placement] {
-    animation: var(--anim-popup-alt);
+.suggestion-item:empty {
+    display: none;
 }
 
 // Prompt Instructions for all Prompts

@@ -702,14 +702,18 @@ when needed.
 /* Keyframe Animations */
 @keyframes slideUp {
   0% {
-    transform: translateY(20%);
+    transform: translateY(0%);
     opacity: 0;
   }
   10% {
-    transform: translateY(10%);
+    transform: translateY(8%);
     opacity: 0.2;
   }
-  40% {
+  20% {
+    transform: translateY(5%);
+    opacity: 0.4;
+  }
+  50% {
     transform: translateY(-2%);
     opacity: 0.85;
   }
@@ -720,19 +724,20 @@ when needed.
 }
 @keyframes slideUpAlt {
   0% {
-    margin-top: 4%;
+    margin-top: 3%;
     opacity: 0;
   }
   10% {
-    margin-top: 2.2%;
+    margin-top: 1.5%;
     opacity: 0.2;
   }
   40% {
     margin-top: -0.16%;
-    opacity: 0.75;
+    opacity: 0.85;
   }
   100% {
     margin-top: 4px;
+    margin-bottom: 4px;
     opacity: 1;
   }
 }
@@ -741,11 +746,7 @@ when needed.
     transform: translateY(-10%);
     opacity: 0;
   }
-  10% {
-    transform: translateY(-5%);
-    opacity: 0.2;
-  }
-  40% {
+  60% {
     transform: translateY(2%);
     opacity: 0.85;
   }
@@ -761,7 +762,7 @@ body {
   /*────────── Foundations ──────────*/
   /* Global Animation */
   --anim-popup: 0.3s slideUp forwards;
-  --anim-popup-alt: 0.3s slideUpAlt forwards;
+  --anim-popup-alt: 0.335s slideUpAlt forwards;
   --anim-popdown: 0.4s slideDown forwards;
   --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
   /* Cursor */
@@ -3854,6 +3855,10 @@ input.prompt-input:focus-visible {
   animation: var(--anim-popup);
 }
 
+.suggestion-container[data-popper-placement] {
+  animation: var(--anim-popup-alt) !important;
+}
+
 .suggestion-item:not(.mod-search-suggestion .suggestion-item) {
   font-size: calc(var(--font-ui-medium) - 1px);
   color: var(--prompt-suggestion-color);
@@ -3873,8 +3878,8 @@ input.prompt-input:focus-visible {
   color: var(--prompt-suggestion-highlight-color-selected);
 }
 
-.suggestion-container[data-popper-placement] {
-  animation: var(--anim-popup-alt);
+.suggestion-item:empty {
+  display: none;
 }
 
 .prompt-instructions {
@@ -6887,7 +6892,6 @@ body.zero-tab-anim .workspace-tab-header.workspace-tab-header:not(.is-active):ac
 
 body.zero-popup-popdown {
   --anim-popup: none;
-  --anim-popup-alt: none;
   --anim-popdown: none;
 }
 
