@@ -117,49 +117,64 @@ body.colorful-folders_collapse-indicator {
 body.colorful-folders_background {
     .nav-folder-children > .nav-folder,
     .nav-files-container > div > .nav-folder  {
-        &:nth-child(9n+2) {
+        &:nth-child(12n+2) {
             --nav-folder-bg-color: var(--nav-folder-1-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-1-bg-color-hover);
         }
     
-        &:nth-child(9n+3) {
+        &:nth-child(12n+3) {
             --nav-folder-bg-color: var(--nav-folder-2-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-2-bg-color-hover);
         }
     
-        &:nth-child(9n+4) {
+        &:nth-child(12n+4) {
             --nav-folder-bg-color: var(--nav-folder-3-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-3-bg-color-hover);
         }
     
-        &:nth-child(9n+5) {
+        &:nth-child(12n+5) {
             --nav-folder-bg-color: var(--nav-folder-4-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-4-bg-color-hover);
         }
     
-        &:nth-child(9n+6) {
+        &:nth-child(12n+6) {
             --nav-folder-bg-color: var(--nav-folder-5-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-5-bg-color-hover);
         }
     
-        &:nth-child(9n+7) {
+        &:nth-child(12n+7) {
             --nav-folder-bg-color: var(--nav-folder-6-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-6-bg-color-hover);
         }
     
-        &:nth-child(9n+8) {
+        &:nth-child(12n+8) {
             --nav-folder-bg-color: var(--nav-folder-7-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-7-bg-color-hover);
         }
     
-        &:nth-child(9n+9) {
+        &:nth-child(12n+9) {
             --nav-folder-bg-color: var(--nav-folder-8-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-8-bg-color-hover);
         }
     
-        &:nth-child(9n+10) {
+        &:nth-child(12n+10) {
             --nav-folder-bg-color: var(--nav-folder-9-bg-color);
             --nav-folder-bg-color-hover: var(--nav-folder-9-bg-color-hover);
+        }
+
+        &:nth-child(12n+11) {
+            --nav-folder-bg-color: var(--nav-folder-10-bg-color);
+            --nav-folder-bg-color-hover: var(--nav-folder-10-bg-color-hover);
+        }
+    
+        &:nth-child(12n+12) {
+            --nav-folder-bg-color: var(--nav-folder-11-bg-color);
+            --nav-folder-bg-color-hover: var(--nav-folder-11-bg-color-hover);
+        }
+    
+        &:nth-child(12n+13) {
+            --nav-folder-bg-color: var(--nav-folder-12-bg-color);
+            --nav-folder-bg-color-hover: var(--nav-folder-12-bg-color-hover);
         }
     }
 }
