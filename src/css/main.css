@@ -5997,6 +5997,66 @@ a.tag:active {
   box-shadow: var(--tag-shadow-active);
 }
 
+/*────────── Core Plugin: Bookmark ──────────*/
+/*────────── SS: Colored Book Folders ──────────*/
+[data-type=bookmarks] .tree-item .tree-item-self.mod-collapsible {
+  color: var(--nav-folder-color);
+  background: var(--nav-folder-bg-color);
+}
+[data-type=bookmarks] .tree-item .tree-item-self.mod-collapsible:hover {
+  color: var(--nav-folder-color);
+  background: var(--nav-folder-bg-color-hover);
+}
+
+[data-type=bookmarks] .tree-item:nth-child(12n+2) {
+  --nav-folder-bg-color: var(--nav-folder-1-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-1-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+3):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-2-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-2-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+4):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-3-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-3-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+5):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-4-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-4-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+6):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-5-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-5-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+7):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-6-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-6-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+8):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-7-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-7-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+9):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-8-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-8-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+10):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-9-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-9-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+11):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-10-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-10-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+12):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-11-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-11-bg-color-hover);
+}
+[data-type=bookmarks] .tree-item:nth-child(12n+13):has(.mod-collapsible) {
+  --nav-folder-bg-color: var(--nav-folder-12-bg-color);
+  --nav-folder-bg-color-hover: var(--nav-folder-12-bg-color-hover);
+}
+
 /*────────── Core Plugin: Canvas ──────────*/
 .canvas-menu {
   border-radius: var(--radius-m);

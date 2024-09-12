@@ -46,6 +46,7 @@
 @use '40_editor/table';
 @use '40_editor/tag';
 
+@use '50_core-plugins/bookmark';
 @use '50_core-plugins/canvas';
 @use '50_core-plugins/file-explorer';
 @use '50_core-plugins/graph';
