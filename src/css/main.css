@@ -6105,41 +6105,53 @@ body {
   color: var(--nav-folder-collapse-color);
 }
 
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+2),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+2) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+2),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+2) {
   --nav-folder-collapse-color: var(--nav-folder-1-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+3),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+3) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+3),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+3) {
   --nav-folder-collapse-color: var(--nav-folder-2-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+4),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+4) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+4),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+4) {
   --nav-folder-collapse-color: var(--nav-folder-3-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+5),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+5) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+5),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+5) {
   --nav-folder-collapse-color: var(--nav-folder-4-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+6),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+6) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+6),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+6) {
   --nav-folder-collapse-color: var(--nav-folder-5-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+7),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+7) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+7),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+7) {
   --nav-folder-collapse-color: var(--nav-folder-6-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+8),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+8) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+8),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+8) {
   --nav-folder-collapse-color: var(--nav-folder-7-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+9),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+9) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+9),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+9) {
   --nav-folder-collapse-color: var(--nav-folder-8-collapse-color);
 }
-body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(9n+10),
-body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(9n+10) {
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+10),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+10) {
   --nav-folder-collapse-color: var(--nav-folder-9-collapse-color);
+}
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+11),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+11) {
+  --nav-folder-collapse-color: var(--nav-folder-10-collapse-color);
+}
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+12),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+12) {
+  --nav-folder-collapse-color: var(--nav-folder-11-collapse-color);
+}
+body.colorful-folders_collapse-indicator .nav-folder-children > .nav-folder:nth-child(12n+13),
+body.colorful-folders_collapse-indicator .nav-files-container > div > .nav-folder:nth-child(12n+13) {
+  --nav-folder-collapse-color: var(--nav-folder-12-collapse-color);
 }
 
 body.colorful-folders_background .nav-folder-children > .nav-folder:nth-child(12n+2),
@@ -6236,32 +6248,32 @@ body.colorful-folders_text .nav-files-container > div > .nav-folder:nth-child(12
 body.colorful-folders_text .nav-folder-children > .nav-folder:nth-child(12n+8),
 body.colorful-folders_text .nav-files-container > div > .nav-folder:nth-child(12n+8) {
   --nav-folder-color: var(--nav-folder-7-color);
-  --nav-folder-bg-color-hover: var(--nav-folder-1-bg-color-hover);
+  --nav-folder-bg-color-hover: var(--nav-folder-7-bg-color-hover);
 }
 body.colorful-folders_text .nav-folder-children > .nav-folder:nth-child(12n+9),
 body.colorful-folders_text .nav-files-container > div > .nav-folder:nth-child(12n+9) {
   --nav-folder-color: var(--nav-folder-8-color);
-  --nav-folder-bg-color-hover: var(--nav-folder-2-bg-color-hover);
+  --nav-folder-bg-color-hover: var(--nav-folder-8-bg-color-hover);
 }
 body.colorful-folders_text .nav-folder-children > .nav-folder:nth-child(12n+10),
 body.colorful-folders_text .nav-files-container > div > .nav-folder:nth-child(12n+10) {
   --nav-folder-color: var(--nav-folder-9-color);
-  --nav-folder-bg-color-hover: var(--nav-folder-3-bg-color-hover);
+  --nav-folder-bg-color-hover: var(--nav-folder-9-bg-color-hover);
 }
 body.colorful-folders_text .nav-folder-children > .nav-folder:nth-child(12n+11),
 body.colorful-folders_text .nav-files-container > div > .nav-folder:nth-child(12n+11) {
   --nav-folder-color: var(--nav-folder-10-color);
-  --nav-folder-bg-color-hover: var(--nav-folder-4-bg-color-hover);
+  --nav-folder-bg-color-hover: var(--nav-folder-10-bg-color-hover);
 }
 body.colorful-folders_text .nav-folder-children > .nav-folder:nth-child(12n+12),
 body.colorful-folders_text .nav-files-container > div > .nav-folder:nth-child(12n+12) {
   --nav-folder-color: var(--nav-folder-11-color);
-  --nav-folder-bg-color-hover: var(--nav-folder-5-bg-color-hover);
+  --nav-folder-bg-color-hover: var(--nav-folder-11-bg-color-hover);
 }
 body.colorful-folders_text .nav-folder-children > .nav-folder:nth-child(12n+13),
 body.colorful-folders_text .nav-files-container > div > .nav-folder:nth-child(12n+13) {
   --nav-folder-color: var(--nav-folder-12-color);
-  --nav-folder-bg-color-hover: var(--nav-folder-6-bg-color-hover);
+  --nav-folder-bg-color-hover: var(--nav-folder-12-bg-color-hover);
 }
 
 body.colorful-folders_indentation-guide .nav-folder-children > .nav-folder:nth-child(12n+2),
