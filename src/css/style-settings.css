@@ -2348,7 +2348,12 @@ settings:
 		type: heading
 		level: 1
 		collapsed: true
-		title: File Explorer
+		title: File Explorer & Bookmarks
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🎨 Out of the box, the toggles below affect both file explorer and bookmark folders. If you'd like them to be different colors, head down over to the **Bookmarks** section, turn on `Custom Bookmarks Folders` and set your desired colors.
     -
         id: alt-folder-icons
         type: class-toggle
@@ -2935,6 +2940,569 @@ settings:
         default-dark: 'hsla(236, 100%, 72%, 0.084)'
     -
         id: nav-folder-12-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Indentation Guide Color
+        default-light: 'hsla(275, 37%, 43%, 0.25)'
+        default-dark: 'hsla(242, 52%, 69%, 0.25)'
+    -
+        id: bookmarks
+        type: heading
+        level: 2
+        collapsed: true
+        title: Bookmarks Folders
+    -
+        id: colorful-folders_different-bookmark-colors
+        type: class-toggle
+        title: Custom Bookmarks Folders
+        description: By default, File Explorer and Bookmarks share the same colors when the colorful folders toggles are turned on. If you'd like a different color for the Bookmarks folders, toggle this on and set your preferred colors below. Just like File Explorer, customization goes up to 12 folders and cycles through them.
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 1
+    -
+        id: bookmark-folder-1-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Text Color
+        default-light: 'hsla(4, 56%, 48%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: bookmark-folder-1-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Collapse Indicator Color
+        default-light: 'hsla(4, 56%, 48%, 0.5)'
+        default-dark: 'hsla(4, 88%, 61%, 0.5)'
+    -
+        id: bookmark-folder-1-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Background Color
+        default-light: 'hsla(350, 84%, 63%, 0.12)'
+        default-dark: 'hsla(350, 84%, 63%, 0.12)'
+    -
+        id: bookmark-folder-1-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Background Color when Hovered
+        default-light: 'hsla(350, 84%, 63%, 0.084)'
+        default-dark: 'hsla(350, 84%, 63%, 0.084)'
+    -
+        id: bookmark-folder-1-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 1 Indentation Guide Color
+        default-light: 'hsla(4, 56%, 48%, 0.25)'
+        default-dark: 'hsla(4, 88%, 61%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 2
+    -
+        id: bookmark-folder-2-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Text Color
+        default-light: 'hsla(18, 69%, 50%, 1)'
+        default-dark: 'hsla(24, 84%, 50%, 1)'
+    -
+        id: bookmark-folder-2-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Collapse Indicator Color
+        default-light: 'hsla(18, 69%, 50%, 0.5)'
+        default-dark: 'hsla(24, 84%, 50%, 0.5)'
+    -
+        id: bookmark-folder-2-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Background Color
+        default-light: 'hsla(27, 100%, 50%, 0.12)'
+        default-dark: 'hsla(27, 100%, 50%, 0.12)'
+    -
+        id: bookmark-folder-2-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Background Color when Hovered
+        default-light: 'hsla(27, 100%, 50%, 0.084)'
+        default-dark: 'hsla(27, 100%, 50%, 0.084)'
+    -
+        id: bookmark-folder-2-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 2 Indentation Guide Color
+        default-light: 'hsla(18, 69%, 50%, 0.25)'
+        default-dark: 'hsla(24, 84%, 50%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 3
+    -
+        id: bookmark-folder-3-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Text Color
+        default-light: 'hsla(40, 98%, 36%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
+    -
+        id: bookmark-folder-3-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Collapse Indicator Color
+        default-light: 'hsla(40, 98%, 36%, 0.5)'
+        default-dark: 'hsla(42, 79%, 51%, 0.5)'
+    -
+        id: bookmark-folder-3-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Background Color
+        default-light: 'hsla(44, 100%, 50%, 0.12)'
+        default-dark: 'hsla(44, 100%, 50%, 0.12)'
+    -
+        id: bookmark-folder-3-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Background Color when Hovered
+        default-light: 'hsla(44, 100%, 50%, 0.084)'
+        default-dark: 'hsla(44, 100%, 50%, 0.084)'
+    -
+        id: bookmark-folder-3-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 3 Indentation Guide Color
+        default-light: 'hsla(40, 98%, 36%, 0.25)'
+        default-dark: 'hsla(42, 79%, 51%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 4
+    -
+        id: bookmark-folder-4-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Text Color
+        default-light: 'hsla(153, 65%, 29%, 1)'
+        default-dark: 'hsla(154, 57%, 42%, 1)'
+    -
+        id: bookmark-folder-4-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Collapse Indicator Color
+        default-light: 'hsla(153, 65%, 29%, 0.5)'
+        default-dark: 'hsla(154, 57%, 42%, 0.5)'
+    -
+        id: bookmark-folder-4-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Background Color
+        default-light: 'hsla(74, 69%, 44%, 0.12)'
+        default-dark: 'hsla(74, 69%, 44%, 0.12)'
+    -
+        id: bookmark-folder-4-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Background Color when Hovered
+        default-light: 'hsla(74, 69%, 44%, 0.084)'
+        default-dark: 'hsla(74, 69%, 44%, 0.084)'
+    -
+        id: bookmark-folder-4-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 4 Indentation Guide Color
+        default-light: 'hsla(153, 65%, 29%, 0.25)'
+        default-dark: 'hsla(154, 57%, 42%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 5
+    -
+        id: bookmark-folder-5-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Text Color
+        default-light: 'hsla(200, 64%, 37%, 1)'
+        default-dark: 'hsla(194, 59%, 56%, 1)'
+    -
+        id: bookmark-folder-5-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Collapse Indicator Color
+        default-light: 'hsla(200, 64%, 37%, 0.5)'
+        default-dark: 'hsla(194, 59%, 56%, 0.5)'
+    -
+        id: bookmark-folder-5-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Background Color
+        default-light: 'hsla(186, 64%, 46%, 0.12)'
+        default-dark: 'hsla(186, 64%, 46%, 0.12)'
+    -
+        id: bookmark-folder-5-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Background Color when Hovered
+        default-light: 'hsla(186, 64%, 46%, 0.084)'
+        default-dark: 'hsla(186, 64%, 46%, 0.084)'
+    -
+        id: bookmark-folder-5-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 5 Indentation Guide Color
+        default-light: 'hsla(200, 64%, 37%, 0.25)'
+        default-dark: 'hsla(194, 59%, 56%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 6
+    -
+        id: bookmark-folder-6-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Text Color
+        default-light: 'hsla(275, 37%, 43%, 1)'
+        default-dark: 'hsla(242, 52%, 69%, 1)'
+    -
+        id: bookmark-folder-6-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Collapse Indicator Color
+        default-light: 'hsla(275, 37%, 43%, 0.5)'
+        default-dark: 'hsla(242, 52%, 69%, 0.5)'
+    -
+        id: bookmark-folder-6-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Background Color
+        default-light: 'hsla(236, 100%, 72%, 0.12)'
+        default-dark: 'hsla(236, 100%, 72%, 0.12)'
+    -
+        id: bookmark-folder-6-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Background Color when Hovered
+        default-light: 'hsla(236, 100%, 72%, 0.084)'
+        default-dark: 'hsla(236, 100%, 72%, 0.084)'
+    -
+        id: bookmark-folder-6-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 6 Indentation Guide Color
+        default-light: 'hsla(275, 37%, 43%, 0.25)'
+        default-dark: 'hsla(242, 52%, 69%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 7
+    -
+        id: bookmark-folder-7-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Text Color
+        default-light: 'hsla(4, 56%, 48%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: bookmark-folder-7-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Collapse Indicator Color
+        default-light: 'hsla(4, 56%, 48%, 0.5)'
+        default-dark: 'hsla(4, 88%, 61%, 0.5)'
+    -
+        id: bookmark-folder-7-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Background Color
+        default-light: 'hsla(350, 84%, 63%, 0.12)'
+        default-dark: 'hsla(350, 84%, 63%, 0.12)'
+    -
+        id: bookmark-folder-7-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Background Color when Hovered
+        default-light: 'hsla(350, 84%, 63%, 0.084)'
+        default-dark: 'hsla(350, 84%, 63%, 0.084)'
+    -
+        id: bookmark-folder-7-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 7 Indentation Guide Color
+        default-light: 'hsla(4, 56%, 48%, 0.25)'
+        default-dark: 'hsla(4, 88%, 61%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 8
+    -
+        id: bookmark-folder-8-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Text Color
+        default-light: 'hsla(18, 69%, 50%, 1)'
+        default-dark: 'hsla(24, 84%, 50%, 1)'
+    -
+        id: bookmark-folder-8-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Collapse Indicator Color
+        default-light: 'hsla(18, 69%, 50%, 0.5)'
+        default-dark: 'hsla(24, 84%, 50%, 0.5)'
+    -
+        id: bookmark-folder-8-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Background Color
+        default-light: 'hsla(27, 100%, 50%, 0.12)'
+        default-dark: 'hsla(27, 100%, 50%, 0.12)'
+    -
+        id: bookmark-folder-8-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Background Color when Hovered
+        default-light: 'hsla(27, 100%, 50%, 0.084)'
+        default-dark: 'hsla(27, 100%, 50%, 0.084)'
+    -
+        id: bookmark-folder-8-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 8 Indentation Guide Color
+        default-light: 'hsla(18, 69%, 50%, 0.25)'
+        default-dark: 'hsla(24, 84%, 50%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 9
+    -
+        id: bookmark-folder-9-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Text Color
+        default-light: 'hsla(40, 98%, 36%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
+    -
+        id: bookmark-folder-9-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Collapse Indicator Color
+        default-light: 'hsla(40, 98%, 36%, 0.5)'
+        default-dark: 'hsla(42, 79%, 51%, 0.5)'
+    -
+        id: bookmark-folder-9-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Background Color
+        default-light: 'hsla(44, 100%, 50%, 0.12)'
+        default-dark: 'hsla(44, 100%, 50%, 0.12)'
+    -
+        id: bookmark-folder-9-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Background Color when Hovered
+        default-light: 'hsla(44, 100%, 50%, 0.084)'
+        default-dark: 'hsla(44, 100%, 50%, 0.084)'
+    -
+        id: bookmark-folder-9-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 9 Indentation Guide Color
+        default-light: 'hsla(40, 98%, 36%, 0.25)'
+        default-dark: 'hsla(42, 79%, 51%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 10
+    -
+        id: bookmark-folder-10-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Text Color
+        default-light: 'hsla(153, 65%, 29%, 1)'
+        default-dark: 'hsla(154, 57%, 42%, 1)'
+    -
+        id: bookmark-folder-10-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Collapse Indicator Color
+        default-light: 'hsla(153, 65%, 29%, 0.5)'
+        default-dark: 'hsla(154, 57%, 42%, 0.5)'
+    -
+        id: bookmark-folder-10-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Background Color
+        default-light: 'hsla(74, 69%, 44%, 0.12)'
+        default-dark: 'hsla(74, 69%, 44%, 0.12)'
+    -
+        id: bookmark-folder-10-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Background Color when Hovered
+        default-light: 'hsla(74, 69%, 44%, 0.084)'
+        default-dark: 'hsla(74, 69%, 44%, 0.084)'
+    -
+        id: bookmark-folder-10-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 10 Indentation Guide Color
+        default-light: 'hsla(153, 65%, 29%, 0.25)'
+        default-dark: 'hsla(154, 57%, 42%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 11
+    -
+        id: bookmark-folder-11-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Text Color
+        default-light: 'hsla(200, 64%, 37%, 1)'
+        default-dark: 'hsla(194, 59%, 56%, 1)'
+    -
+        id: bookmark-folder-11-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Collapse Indicator Color
+        default-light: 'hsla(200, 64%, 37%, 0.5)'
+        default-dark: 'hsla(194, 59%, 56%, 0.5)'
+    -
+        id: bookmark-folder-11-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Background Color
+        default-light: 'hsla(186, 64%, 46%, 0.12)'
+        default-dark: 'hsla(186, 64%, 46%, 0.12)'
+    -
+        id: bookmark-folder-11-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Background Color when Hovered
+        default-light: 'hsla(186, 64%, 46%, 0.084)'
+        default-dark: 'hsla(186, 64%, 46%, 0.084)'
+    -
+        id: bookmark-folder-11-indent-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 11 Indentation Guide Color
+        default-light: 'hsla(200, 64%, 37%, 0.25)'
+        default-dark: 'hsla(194, 59%, 56%, 0.25)'
+	-
+		id: bookmark_folder
+		type: heading
+		level: 3
+		collapsed: true
+		title: Folder 12
+    -
+        id: bookmark-folder-12-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Text Color
+        default-light: 'hsla(275, 37%, 43%, 1)'
+        default-dark: 'hsla(242, 52%, 69%, 1)'
+    -
+        id: bookmark-folder-12-collapse-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Collapse Indicator Color
+        default-light: 'hsla(275, 37%, 43%, 0.5)'
+        default-dark: 'hsla(242, 52%, 69%, 0.5)'
+    -
+        id: bookmark-folder-12-bg-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Background Color
+        default-light: 'hsla(236, 100%, 72%, 0.12)'
+        default-dark: 'hsla(236, 100%, 72%, 0.12)'
+    -
+        id: bookmark-folder-12-bg-color-hover
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Folder 12 Background Color when Hovered
+        default-light: 'hsla(236, 100%, 72%, 0.084)'
+        default-dark: 'hsla(236, 100%, 72%, 0.084)'
+    -
+        id: bookmark-folder-12-indent-color
         type: variable-themed-color
         format: hsl
         opacity: true

@@ -1227,6 +1227,79 @@ body {
     --nav-folder-12-collapse-color: color-mix(in srgb, var(--nav-folder-12-color) 50%, transparent);
     --nav-folder-12-indent-color: color-mix(in srgb, var(--nav-folder-12-color) 25%, transparent);
 
+    /* Bookmarks - Folders */
+    --bookmark-folder-1-color: var(--nav-folder-1-color);
+    --bookmark-folder-1-bg-color: var(--nav-folder-1-bg-color);
+    --bookmark-folder-1-bg-color-hover: var(--nav-folder-1-bg-color-hover);
+    --bookmark-folder-1-collapse-color: var(--nav-folder-1-collapse-color);
+    --bookmark-folder-1-indent-color: var(--nav-folder-1-indent-color);
+
+    --bookmark-folder-2-color: var(--nav-folder-2-color);
+    --bookmark-folder-2-bg-color: var(--nav-folder-2-bg-color);
+    --bookmark-folder-2-bg-color-hover: var(--nav-folder-2-bg-color-hover);
+    --bookmark-folder-2-collapse-color: var(--nav-folder-2-collapse-color);
+    --bookmark-folder-2-indent-color: var(--nav-folder-2-indent-color);
+
+    --bookmark-folder-3-color: var(--nav-folder-3-color);
+    --bookmark-folder-3-bg-color: var(--nav-folder-3-bg-color);
+    --bookmark-folder-3-bg-color-hover: var(--nav-folder-3-bg-color-hover);
+    --bookmark-folder-3-collapse-color: var(--nav-folder-3-collapse-color);
+    --bookmark-folder-3-indent-color: var(--nav-folder-3-indent-color);
+
+    --bookmark-folder-4-color: var(--nav-folder-4-color);
+    --bookmark-folder-4-bg-color: var(--nav-folder-4-bg-color);
+    --bookmark-folder-4-bg-color-hover: var(--nav-folder-4-bg-color-hover);
+    --bookmark-folder-4-collapse-color: var(--nav-folder-4-collapse-color);
+    --bookmark-folder-4-indent-color: var(--nav-folder-4-indent-color);
+
+    --bookmark-folder-5-color: var(--nav-folder-5-color);
+    --bookmark-folder-5-bg-color: var(--nav-folder-5-bg-color);
+    --bookmark-folder-5-bg-color-hover: var(--nav-folder-5-bg-color-hover);
+    --bookmark-folder-5-collapse-color: var(--nav-folder-5-collapse-color);
+    --bookmark-folder-5-indent-color: var(--nav-folder-5-indent-color);
+
+    --bookmark-folder-6-color: var(--nav-folder-6-color);
+    --bookmark-folder-6-bg-color: var(--nav-folder-6-bg-color);
+    --bookmark-folder-6-bg-color-hover: var(--nav-folder-6-bg-color-hover);
+    --bookmark-folder-6-collapse-color: var(--nav-folder-6-collapse-color);
+    --bookmark-folder-6-indent-color: var(--nav-folder-6-indent-color);
+
+    --bookmark-folder-7-color: var(--nav-folder-7-color);
+    --bookmark-folder-7-bg-color: var(--nav-folder-7-bg-color);
+    --bookmark-folder-7-bg-color-hover: var(--nav-folder-7-bg-color-hover);
+    --bookmark-folder-7-collapse-color: var(--nav-folder-7-collapse-color);
+    --bookmark-folder-7-indent-color: var(--nav-folder-7-indent-color);
+
+    --bookmark-folder-8-color: var(--nav-folder-8-color);
+    --bookmark-folder-8-bg-color: var(--nav-folder-8-bg-color);
+    --bookmark-folder-8-bg-color-hover: var(--nav-folder-8-bg-color-hover);
+    --bookmark-folder-8-collapse-color: var(--nav-folder-8-collapse-color);
+    --bookmark-folder-8-indent-color: var(--nav-folder-8-indent-color);
+
+    --bookmark-folder-9-color: var(--nav-folder-9-color);
+    --bookmark-folder-9-bg-color: var(--nav-folder-9-bg-color);
+    --bookmark-folder-9-bg-color-hover: var(--nav-folder-9-bg-color-hover);
+    --bookmark-folder-9-collapse-color: var(--nav-folder-9-collapse-color);
+    --bookmark-folder-9-indent-color: var(--nav-folder-9-indent-color);
+
+    --bookmark-folder-10-color: var(--nav-folder-10-color);
+    --bookmark-folder-10-bg-color: var(--nav-folder-10-bg-color);
+    --bookmark-folder-10-bg-color-hover: var(--nav-folder-10-bg-color-hover);
+    --bookmark-folder-10-collapse-color: var(--nav-folder-10-collapse-color);
+    --bookmark-folder-10-indent-color: var(--nav-folder-10-indent-color);
+
+    --bookmark-folder-11-color: var(--nav-folder-11-color);
+    --bookmark-folder-11-bg-color: var(--nav-folder-11-bg-color);
+    --bookmark-folder-11-bg-color-hover: var(--nav-folder-11-bg-color-hover);
+    --bookmark-folder-11-collapse-color: var(--nav-folder-11-collapse-color);
+    --bookmark-folder-11-indent-color: var(--nav-folder-11-indent-color);
+
+    --bookmark-folder-12-color: var(--nav-folder-12-color);
+    --bookmark-folder-12-bg-color: var(--nav-folder-12-bg-color);
+    --bookmark-folder-12-bg-color-hover: var(--nav-folder-12-bg-color-hover);
+    --bookmark-folder-12-collapse-color: var(--nav-folder-12-collapse-color);
+    --bookmark-folder-12-indent-color: var(--nav-folder-12-indent-color);
+
     /* Gutter */
     --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
     --gutter-color-active: var(--color-l-gray-90);
