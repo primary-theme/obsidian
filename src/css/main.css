@@ -2008,14 +2008,14 @@ body.is-mobile {
   --color-d-gray-30: hsla(34, 31%, 68%, 1);
   --color-d-gray-40: hsla(35, 27%, 55%, 1);
   --color-d-gray-50: hsla(34, 24%, 46%, 1);
-  --color-d-gray-60: hsla(33, 27%, 32%, 1);
+  --color-d-gray-60: hsla(33, 27%, 33%, 1);
   --color-d-gray-70: hsla(31, 27%, 25%, 1);
-  --color-d-gray-80: hsla(28, 22%, 20%, 1);
-  --color-d-gray-90: hsla(33, 20%, 18%, 1);
-  --color-d-gray-100: hsla(30, 19%, 16%, 1);
-  --color-d-gray-110: hsla(30, 17%, 15%, 1);
+  --color-d-gray-80: hsla(28, 22%, 19%, 1);
+  --color-d-gray-90: hsla(33, 20%, 17%, 1);
+  --color-d-gray-100: hsla(30, 19%, 15%, 1);
+  --color-d-gray-110: hsla(30, 17%, 14%, 1);
   --color-d-gray-120: hsla(29, 16%, 13%, 1);
-  --color-d-gray-130: hsla(24, 18%, 12%, 1);
+  --color-d-gray-130: hsla(24, 18%, 11%, 1);
   --color-d-gray-140: hsla(32, 21%, 9%, 1);
   --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
   /* Red */
