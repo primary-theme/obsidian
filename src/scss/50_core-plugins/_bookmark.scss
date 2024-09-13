@@ -1,7 +1,5 @@
 /*────────── Core Plugin: Bookmark ──────────*/
 
-/*────────── SS: Colored Book Folders ──────────*/
-
 [data-type=bookmarks] .tree-item .tree-item-self.mod-collapsible {
     color: var(--nav-folder-color);
     background: var(--nav-folder-bg-color);
@@ -12,7 +10,62 @@
     }
 }
 
+[data-type=bookmarks] .mod-collapsible .tree-item-icon svg.svg-icon {
+    color: var(--nav-folder-collapse-color);
+}
+
+/*────────── SS: Colored Book Folders ──────────*/
+
 // Toggle to Color Collapse Icons
+[data-type=bookmarks] .tree-item {
+    &:nth-child(12n+2) {
+        --nav-folder-collapse-color: var(--nav-folder-1-collapse-color);
+    }
+
+    &:nth-child(12n+3) {
+        --nav-folder-collapse-color: var(--nav-folder-2-collapse-color);
+    }
+
+    &:nth-child(12n+4) {
+        --nav-folder-collapse-color: var(--nav-folder-3-collapse-color);
+    }
+
+    &:nth-child(12n+5) {
+        --nav-folder-collapse-color: var(--nav-folder-4-collapse-color);
+    }
+
+    &:nth-child(12n+6) {
+        --nav-folder-collapse-color: var(--nav-folder-5-collapse-color);
+    }
+
+    &:nth-child(12n+7) {
+        --nav-folder-collapse-color: var(--nav-folder-6-collapse-color);
+    }
+
+    &:nth-child(12n+8) {
+        --nav-folder-collapse-color: var(--nav-folder-7-collapse-color);
+    }
+
+    &:nth-child(12n+9) {
+        --nav-folder-collapse-color: var(--nav-folder-8-collapse-color);
+    }
+
+    &:nth-child(12n+10) {
+        --nav-folder-collapse-color: var(--nav-folder-9-collapse-color);
+    }
+        
+    &:nth-child(12n+11) {
+        --nav-folder-collapse-color: var(--nav-folder-10-collapse-color);
+    }
+
+    &:nth-child(12n+12) {
+        --nav-folder-collapse-color: var(--nav-folder-11-collapse-color);
+    }
+
+    &:nth-child(12n+13) {
+        --nav-folder-collapse-color: var(--nav-folder-12-collapse-color);
+    }
+}
 
 // Toggle to Color Background
 [data-type=bookmarks] .tree-item {
@@ -78,9 +131,148 @@
 }
 
 // Toggle for Colored Folder Text
+[data-type=bookmarks] .tree-item {
+    &:nth-child(12n+2) {
+        --nav-folder-color: var(--nav-folder-1-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-1-bg-color-hover);
+    }
 
+    &:nth-child(12n+3) {
+        --nav-folder-color: var(--nav-folder-2-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-2-bg-color-hover);
+    }
+
+    &:nth-child(12n+4) {
+        --nav-folder-color: var(--nav-folder-3-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-3-bg-color-hover);
+    }
+
+    &:nth-child(12n+5) {
+        --nav-folder-color: var(--nav-folder-4-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-4-bg-color-hover);
+    }
+
+    &:nth-child(12n+6) {
+        --nav-folder-color: var(--nav-folder-5-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-5-bg-color-hover);
+    }
+
+    &:nth-child(12n+7) {
+        --nav-folder-color: var(--nav-folder-6-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-6-bg-color-hover);
+    }
+
+    &:nth-child(12n+8) {
+        --nav-folder-color: var(--nav-folder-7-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-7-bg-color-hover);
+    }
+
+    &:nth-child(12n+9) {
+        --nav-folder-color: var(--nav-folder-8-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-8-bg-color-hover);
+    }
+
+    &:nth-child(12n+10) {
+        --nav-folder-color: var(--nav-folder-9-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-9-bg-color-hover);
+    }
+
+    &:nth-child(12n+11) {
+        --nav-folder-color: var(--nav-folder-10-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-10-bg-color-hover);
+    }
+
+    &:nth-child(12n+12) {
+        --nav-folder-color: var(--nav-folder-11-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-11-bg-color-hover);
+    }
+
+    &:nth-child(12n+13) {
+        --nav-folder-color: var(--nav-folder-12-color);
+        --nav-folder-bg-color-hover: var(--nav-folder-12-bg-color-hover);
+    }
+}
+
+// Toggle for Colored Indentation Guide
+[data-type=bookmarks] .tree-item {
+    &:nth-child(12n+2) {
+        --nav-indentation-guide-color: var(--nav-folder-1-indent-color);
+    }
+
+    &:nth-child(12n+3) {
+        --nav-indentation-guide-color: var(--nav-folder-2-indent-color);
+    }
+
+    &:nth-child(12n+4) {
+        --nav-indentation-guide-color: var(--nav-folder-3-indent-color);
+    }
+
+    &:nth-child(12n+5) {
+        --nav-indentation-guide-color: var(--nav-folder-4-indent-color);
+    }
+
+    &:nth-child(12n+6) {
+        --nav-indentation-guide-color: var(--nav-folder-5-indent-color);
+    }
+
+    &:nth-child(12n+7) {
+        --nav-indentation-guide-color: var(--nav-folder-6-indent-color);
+    }
+
+    &:nth-child(12n+8) {
+        --nav-indentation-guide-color: var(--nav-folder-7-indent-color);
+    }
+
+    &:nth-child(12n+9) {
+        --nav-indentation-guide-color: var(--nav-folder-8-indent-color);
+    }
+
+    &:nth-child(12n+10) {
+        --nav-indentation-guide-color: var(--nav-folder-9-indent-color);
+    }
+
+    &:nth-child(12n+11) {
+        --nav-indentation-guide-color: var(--nav-folder-10-indent-color);
+    }
+
+    &:nth-child(12n+12) {
+        --nav-indentation-guide-color: var(--nav-folder-11-indent-color);
+    }
+
+    &:nth-child(12n+13) {
+        --nav-indentation-guide-color: var(--nav-folder-12-indent-color);
+    }
+}
 
 // Toggle to inheriting Parent Folder Color
-
+// [data-type=bookmarks] .tree-item {
+//     --nav-folder-color: inherit;
+//     --nav-folder-bg-color: inherit;
+//     --nav-folder-bg-color-hover: inherit;
+//     --nav-folder-collapse-color: inherit;
+//     --nav-indentation-guide-color: inherit;
+// }
 
 // Alternative Folder Icons
+.is-mobile [data-type=bookmarks] .tree-item-icon svg.right-triangle {
+    width: var(--mobile-folder-icon-size);
+    height: var(--mobile-folder-icon-size);
+}
+
+[data-type=bookmarks] .tree-item-icon svg.right-triangle {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    stroke-width: var(--icon-stroke);
+    background: currentColor;
+}
+
+[data-type=bookmarks] .tree-item-icon.is-collapsed svg.right-triangle {
+    transform: unset;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+}
+
+// File Explorer Folder Opened
+[data-type=bookmarks] .tree-item-icon:not(.is-collapsed) svg.right-triangle {
+    transform: unset;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder-open'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+}
