@@ -83,6 +83,52 @@ settings:
         title: Monospace Font's Feature Settings
         default: '"calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1'
     -
+        id: typography_sizes
+        type: heading
+        level: 3
+        collapsed: true
+        title: Interface Font Sizes
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: This section targets interface font sizes, meaning text that is not in the markdown editor. To change the size of the editor text, please use Obsidian's built-in setting. You can find this under Settings → Appearance → Font Size.
+    -
+        id: font-ui-smallest
+        type: variable-number
+        title: Smallest UI Font Size
+        description: Acceptable font size unit is only in px.
+        default: 11
+        format: px
+    -
+        id: font-ui-smaller
+        type: variable-number
+        title: Smaller UI Font Size
+        description: Acceptable font size unit is only in px.
+        default: 12
+        format: px
+    -
+        id: font-ui-small
+        type: variable-number
+        title: Small UI Font Size
+        description: Acceptable font size unit is only in px.
+        default: 13
+        format: px
+    -
+        id: font-ui-medium
+        type: variable-number
+        title: Medium UI Font Size
+        description: Acceptable font size unit is only in px.
+        default: 15
+        format: px
+    -
+        id: font-ui-large
+        type: variable-number
+        title: Large UI Font Size
+        description: Acceptable font size unit is only in px.
+        default: 20
+        format: px
+    -
         id: typography_weight
         type: heading
         level: 3
@@ -3613,7 +3659,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: Coming Soon!
+        description: 🚧 Coming soon!
     -
 		id: readme-support
 		type: heading

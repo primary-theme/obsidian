@@ -774,7 +774,15 @@ body {
   --interface-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --text-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
   --monospace-font-feature: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
+  /* Font Sizes */
   --font-ui-smallest: 11px;
+  --font-ui-smaller: 12px;
+  --font-ui-small: 13px;
+  --font-ui-medium: 15px;
+  --font-ui-large: 20px;
+  --font-smallest: 0.8em;
+  --font-smaller: 0.875em;
+  --font-small: 0.933em;
   /* Font Thickness */
   font-weight: var(--font-normal);
   --font-thin: 150;
@@ -797,6 +805,10 @@ body {
   --icon-xl: 24px;
   --icon-container-radius: 0px;
   --clickable-icon-radius: calc(var(--radius-s) + 1px);
+  --ribbon-icon: var(--icon-s);
+  --sidebar-tab-icon: var(--icon-s);
+  --sidebar-nav-icon: var(--icon-s);
+  --editor-tab-icon: var(--icon-s);
   /* Radius */
   --radius-xs: 2px;
   /*────────── Window ──────────*/
