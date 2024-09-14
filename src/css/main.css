@@ -1,10 +1,12 @@
 @charset "UTF-8";
 /*────────── Icons ──────────*/
-body:not(.is-phone, .is-mobile) .clickable-icon.side-dock-ribbon-action .svg-icon,
 body:not(.is-phone, .is-mobile) .mod-left-split .workspace-tab-header-inner-icon .svg-icon,
 body:not(.is-phone, .is-mobile) .mod-right-split .workspace-tab-header-inner-icon .svg-icon,
 body:not(.is-phone, .is-mobile) .clickable-icon {
   --icon-size: var(--icon-s);
+}
+body:not(.is-phone, .is-mobile) .clickable-icon.side-dock-ribbon-action .svg-icon {
+  --icon-size: var(--ribbon-icon);
 }
 
 body:is(.is-phone, .is-mobile) .clickable-icon svg {
@@ -783,6 +785,18 @@ body {
   --font-smallest: 0.8em;
   --font-smaller: 0.875em;
   --font-small: 0.933em;
+  --font-nav-item-size: ;
+  --font-tree-item-size: ;
+  --font-blockquote-size: ;
+  --font-callout-title-size: ;
+  --font-callout-size: ;
+  --font-inlinecode-size: ;
+  --font-codeblock-size: ;
+  --font-codeblock-btn-size: ;
+  --font-footnotes-title-size: ;
+  --font-footnotes-flag-size: ;
+  --font-footnotes-size: ;
+  --font-blockid-size: ;
   /* Font Thickness */
   font-weight: var(--font-normal);
   --font-thin: 150;
@@ -809,6 +823,7 @@ body {
   --sidebar-tab-icon: var(--icon-s);
   --sidebar-nav-icon: var(--icon-s);
   --editor-tab-icon: var(--icon-s);
+  --editor-header-icon: var(--icon-s);
   /* Radius */
   --radius-xs: 2px;
   /*────────── Window ──────────*/
@@ -820,6 +835,7 @@ body {
   --ribbon-radius: var(--editor-border-radius);
   --ribbon-radius: var(--editor-border-radius);
   --ribbon-margin-bottom: var(--editor-pane-margin);
+  --ribbon-icon-spacing: var(--size-2-2);
   /* Sidebar */
   --nav-item-white-space: nowrap;
   --nav-item-radius: 6px;
@@ -2981,6 +2997,7 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
 .workspace-ribbon .side-dock-actions .clickable-icon, .workspace-ribbon .side-dock-settings .clickable-icon {
   color: var(--non-alternating-color);
   background: var(--icon-bg);
+  padding: var(--ribbon-icon-spacing) var(--size-2-3);
 }
 .workspace-ribbon .side-dock-actions .clickable-icon:hover, .workspace-ribbon .side-dock-settings .clickable-icon:hover {
   background: var(--icon-bg-hover);

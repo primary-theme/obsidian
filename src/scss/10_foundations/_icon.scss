@@ -1,11 +1,14 @@
 /*────────── Icons ──────────*/
 // Workspace Icon Size (selectors from app.css)
 body:not(.is-phone, .is-mobile) {
-    .clickable-icon.side-dock-ribbon-action .svg-icon,
     .mod-left-split .workspace-tab-header-inner-icon .svg-icon,
     .mod-right-split .workspace-tab-header-inner-icon .svg-icon,
     .clickable-icon {
         --icon-size: var(--icon-s);
+    }
+
+    .clickable-icon.side-dock-ribbon-action .svg-icon {
+        --icon-size: var(--ribbon-icon);
     }
 } 
 

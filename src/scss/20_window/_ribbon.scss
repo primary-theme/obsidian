@@ -7,6 +7,7 @@
         .clickable-icon {
             color: var(--non-alternating-color);
             background: var(--icon-bg);
+            padding: var(--ribbon-icon-spacing) var(--size-2-3);
             
             &:hover {
                 background: var(--icon-bg-hover);

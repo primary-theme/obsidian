@@ -256,6 +256,27 @@ settings:
         title: Ribbon Top Right Border Roundness
         description: The roundness value's order goes top left, top right, bottom right, bottom left.
         default: 0px 12px 12px 0px
+    -
+        id: ribbon-width
+        type: variable-number
+        title: Ribbon Width
+        description: Adjust your ribbon's width. Unit is in px only.
+        default: 44
+        format: px
+    -
+        id: ribbon-icon
+        type: variable-number
+        title: Ribbon Icon Size
+        description: Adjust your ribbon's icon size. Unit is in px only.
+        default: 15
+        format: px
+    -
+        id: ribbon-icon-spacing
+        type: variable-number
+        title: Ribbon Icons Spacing
+        description: Adjust the top and bottom space between your ribbon's icons.
+        default: 4
+        format: px
 	-
 		id: interface_editor
 		type: heading
