@@ -1,0 +1,60 @@
+/*────────── Progress Bars ──────────*/
+
+.markdown-rendered progress,
+.markdown-source-view.is-live-preview progress,
+.markdown-preview-view progress {
+	width: var(--progress-width);
+    height: var(--progress-height);
+
+	&[value]::-webkit-progress-bar {
+        background-color: var(--progress-background);
+		box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-bar-outline);
+	}
+
+	&[value]::-webkit-progress-value {
+		border-top-right-radius: var(--progress-value-radius);
+		border-bottom-right-radius: var(--progress-value-radius);
+		box-shadow: inset 0px 0px 0px var(--progress-border-width) var(--progress-value-outline);
+	}
+
+	&[value^='1']::-webkit-progress-value,
+	&[value^='2']::-webkit-progress-value,
+	&[value^='3']::-webkit-progress-value {
+		background-color: var(--progress-color-1);
+	}
+
+	&[value^='4']::-webkit-progress-value,
+	&[value^='5']::-webkit-progress-value {
+		background-color: var(--progress-color-2);
+
+	}
+
+	&[value^='6']::-webkit-progress-value,
+	&[value^='7']::-webkit-progress-value {
+		background-color: var(--progress-color-3);
+	}
+
+	&[value^='8']::-webkit-progress-value,
+	&[value^='9']::-webkit-progress-value {
+		background-color: var(--progress-color-4);
+
+	}
+
+	&[value='1']::-webkit-progress-value,
+	&[value='100']::-webkit-progress-value {
+		background: var(--progress-color-5);
+	}
+
+	&[value='0']::-webkit-progress-value,
+	&[value='2']::-webkit-progress-value,
+	&[value='3']::-webkit-progress-value,
+	&[value='4']::-webkit-progress-value,
+	&[value='5']::-webkit-progress-value,
+	&[value='6']::-webkit-progress-value,
+	&[value='7']::-webkit-progress-value,
+	&[value='8']::-webkit-progress-value,
+	&[value='9']::-webkit-progress-value {
+        background-color: var(--progress-color-1);
+
+	}
+}

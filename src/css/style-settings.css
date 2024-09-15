@@ -149,7 +149,7 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
-		title: Animations
+		title: Animations and Effects
 	-
 		id: zero-tab-anim
 		type: class-toggle
@@ -158,6 +158,58 @@ settings:
 		id: zero-popup-popdown
 		type: class-toggle
 		title: Remove Popup and Pop Down Animations
+	-
+		id: zero-popup-blur
+		type: class-toggle
+		title: Remove Popup Background Blur
+        description: This removes the background blur when opening the Settings, Command Palette, Quick Switcher, and other pop up boxes.This is a good option to toggle on if you are experiencing unreconcilable buggy-ness and visual issues with Primary. You may also toggle this on if you don't prefer the background blur, or just need some performance boost (especially for bigger vaults).
+	-
+		id: interface_ribbon
+		type: heading
+		level: 2
+		collapsed: true
+		title: Ribbon
+    -
+        id: ribbon_styles
+        type: class-select
+        title: Ribbon Style
+        allowEmpty: false
+        default: ribbon-default
+        options:
+            - 
+                label: Docked
+                value: ribbon-default
+            -
+                label: Slide Out on Hover
+                value: ribbon-slideout
+    -
+        id: ribbon-background
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Ribbon Background Color
+        default-light: 'hsla(34, 34%, 90%, 1)'
+        default-dark: 'hsla(31, 17%, 12%, 1)'
+    -
+        id: ribbon-border-width
+        type: variable-text
+        title: Ribbon Border Width
+        description: If you want to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: ribbon-border-color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        title: Ribbon Border Color
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(30, 22%, 18%, 1)'
+    -
+        id: ribbon-radius
+        type: variable-text
+        title: Ribbon Top Right Border Roundness
+        description: The roundness value's order goes top left, top right, bottom right, bottom left.
+        default: 0px 12px 12px 0px
 	-
 		id: interface_editor
 		type: heading
@@ -246,6 +298,12 @@ settings:
         default-light: 'hsla(37, 38%, 83%, 1)'
         default-dark: 'hsla(28, 22%, 18%, 1)'
     -
+        id: file-line-width
+        type: variable-text
+        title: File Readable Line Width
+        description: You may use any CSS units like em, rem, ch, px.
+        default: 700px
+    -
         id: gutter-color
         type: variable-themed-color
         format: hsl
@@ -292,8 +350,17 @@ settings:
                 label: On Top
                 value: sb-default
             -
-                label: Full Length
+                label: Visible Full Length
                 value: sb-style-full
+            -
+                label: Slide Up Full Length
+                value: sb-style-slideupfull
+            -
+                label: Slide Out
+                value: sb-style-slideout
+            -
+                label: Floating
+                value: sb-style-floating
     -
         id: interface_status-bar-item-display
         type: class-select
@@ -310,6 +377,170 @@ settings:
             -
                 label: Word Count Only
                 value: sb-word-count-only
+    -
+        id: status-bar-background
+        type: variable-themed-color
+        title: Status Bar Background
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 34%, 90%, 1)'
+        default-dark: 'hsla(31, 17%, 12%, 1)'
+    -
+        id: status-bar-border-width
+        type: variable-text
+        title: Status Bar Border Width
+        description: Set this to 0px if you wish to remove the status bar's border. The border width value's order goes top, right, bottom, left. The default value corresponds the roundness for the On Top style. Applying 1 value means that value is applied to all sides.
+        default: 1px
+    -
+        id: status-bar-radius
+        type: variable-text
+        title: Status Bar Border Roundness
+        description: The roundness value's order goes top left, top right, bottom right, bottom left. The default value corresponds the roundness for the On Top style. Applying 1 value means that value is applied to all corners.
+        default: 12px 0px 0px 12px
+    -
+        id: status-bar-floating-opacity
+        type: variable-number-slider
+        title: Floating Style - Status Bar Opacity at Rest
+        description: Sets the opacity of the status bar at rest if Floating Status Bar style is chosen. Range goes from 0 being transparent, until 1 being completely visible.
+        min: 0
+        max: 1
+        step: 0.1
+        default: 0.5
+    -
+        id: status-bar-floating-opacity-hover
+        type: variable-number-slider
+        title: Floating Style - Status Bar Opacity on Hover
+        description: Sets the opacity of the status bar when hovering it if Floating Status Bar style is chosen. Range goes from 0 being transparent, until 1 being completely visible.
+        min: 0
+        max: 1
+        step: 0.1
+        default: 1
+	-
+		id: components
+		type: heading
+		level: 1
+		collapsed: true
+		title: Components
+    -
+        id: comp_progress
+        type: heading
+        level: 2
+        collapsed: true
+        title: Progress
+    -
+        id: progress-bar-width
+        type: variable-text
+        title: Progress Bar Width
+        default: 220px
+    -
+        id: progress-bar-height
+        type: variable-text
+        title: Progress Bar Height
+        default: 8px
+    -
+        id: progress-background
+        type: variable-themed-color
+        title: Progress Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(34, 34%, 90%, 1)'
+        default-dark: 'hsla(31, 17%, 12%, 1)'
+    -
+        id: progress-border-width
+        type: variable-text
+        title: Progress Border Widths
+        description: Applied to the background bar and the value bar.
+        default: 1px
+    -
+        id: progress-bar-outline
+        type: variable-themed-color
+        title: Progress Bar Border Color
+        format: hsl
+        opacity: true
+        default-light: 'rgba(0, 0, 0, 0.1)'
+        default-dark: 'rgba(255, 255, 255, 0.1)'
+    -
+        id: progress-value-radius
+        type: variable-text
+        title: Progress Inner Value Roundness
+        description: Takes in the progress bar's height by default, creating rounded corners. If you want straight corners put 0px.
+        default: 8px
+    -
+        id: progress-value-outline
+        type: variable-themed-color
+        title: Progress Inner Value Border Color
+        format: hsl
+        opacity: true
+        default-light: 'rgba(0, 0, 0, 0.18)'
+        default-dark: 'rgba(255, 255, 255, 0.21)'
+    -
+        id: progress-color-1
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 0% to 39%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(4, 72%, 55%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: progress-color-2
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 40% to 59%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(21, 81%, 59%, 1)'
+        default-dark: 'hsla(22, 82%, 47%, 1)'
+    -
+        id: progress-color-3
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 60% to 79%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(43, 83%, 57%, 1)'
+        default-dark: 'hsla(40, 78%, 48%, 1)'
+    -
+        id: progress-color-4
+        type: variable-themed-color
+        title: Progress Color 1
+        description: Color for values 80% to 99%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(149, 49%, 39%, 1)'
+        default-dark: 'hsla(154, 74%, 26%, 1)'
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: If you want the color for progress bars valued at 100% to be a solid color, set the same color for each of the three below.
+    -
+        id: progress-gradient-1
+        type: variable-themed-color
+        title: Progress 100% Leftmost Color
+        description: Leftmost color in the gradient for value 100%.
+        format: hsl
+        opacity: true
+        default-light: 'hsla(3, 59%, 64%, 1)'
+        default-dark: 'hsla(4, 88%, 61%, 1)'
+    -
+        id: progress-gradient-2
+        type: variable-themed-color
+        title: Progress 100% Middle Color
+        description: Middle color in the gradient for value 100%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(43, 71%, 67%, 1)'
+        default-dark: 'hsla(42, 79%, 51%, 1)'
+    -
+        id: progress-gradient-3
+        type: variable-themed-color
+        title: Progress 100% Rightmost Color
+        description: Rightmost color in the gradient for value 100%
+        format: hsl
+        opacity: true
+        default-light: 'hsla(197, 39%, 56%, 1)'
+        default-dark: 'hsla(194, 59%, 56%, 1)'
 	-
 		id: notes-files
 		type: heading
@@ -326,7 +557,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 🎨 Visit the [Header Presets](https://primary-theme.github.io/presets/) section in the Full Guide to import the Settings.
+        description: 🎨 Visit the [Header Presets](https://primary-theme.github.io/guides/overview/) section in the Full Guide to import the Settings.
     -
         id: readme-content
         type: info-text
@@ -1826,6 +2057,214 @@ settings:
         title: Media Border Radius
         description: Set border radius size for media (images, audio, video)
         default: 8px
+	-
+		id: nf_note-embed
+		type: heading
+		level: 2
+		collapsed: true
+		title: Note Embed
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🎨 Visit the [Note Embed Presets](https://primary-theme.github.io/presets/note-embed) in the Full Guide and check if you have any preferred ready-to-go style presets there, or if you want some inspiration on styling your embeds.
+    -
+        id: embed-max-height
+        type: variable-text
+        title: Note Embed Max Height
+        description: If you embed very long notes, you can change the max height so that each embed is scrollable. You can also set this by line-height using the unit rlh, or other CSS supported units. Recommended values are 20rlh and 40rlh.
+        default: 4000px
+    -
+        id: embed-background
+        type: variable-themed-color
+        title: Note Embed Background Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(39, 39%, 94%, 1)'
+        default-dark: 'hsla(31, 19%, 14%, 1)'
+	-
+		id: nf_note-embed-title
+		type: heading
+		level: 3
+		collapsed: true
+		title: Note Embed Title
+    -
+        id: embed-hide-title
+        type: class-toggle
+        title: Hide Note Embed Title
+        description: Hide the note's title when embedding notes.
+    -
+        id: embed-title-font-size
+        type: variable-text
+        title: Note Embed Title Font Size
+        description: You can use any CSS supported units. By default takes in the editor's font size based in the Obsidian Settings.
+        default: 12px
+    -
+        id: embed-title-font-weight
+        type: variable-number
+        title: Note Embed Title Font Weight
+        default: 500
+    -
+        id: embed-title-text-transform
+        type: variable-text
+        title: Note Embed Title Text Transform
+        description: Based on CSS. If you want the note embed title to be in all uppercase, put uppercase. Other options include capitalize and lowercase.
+        default: none
+    -
+        id: embed-title-letter-spacing
+        type: variable-text
+        title: Note Embed Title Letter Spacing
+        description: You can use numbers and CSS units.
+        default: normal
+    -
+        id: embed-title-color
+        type: variable-themed-color
+        title: Note Embed Title Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(31, 23%, 50%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: embed-title-border-width
+        type: variable-text
+        title: Note Embed Title Bottom Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-title-border-style
+        type: variable-text
+        title: Note Embed Title Bottom Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-title-border-color
+        type: variable-themed-color
+        title: Note Embed Title Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+    -
+        id: embed-title-margin-bottom
+        type: variable-text
+        title: Note Embed Title Bottom Margin Size
+        default: 8px
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 3
+		collapsed: true
+		title: Note Embed Border
+    -
+        id: embed-border-radius
+        type: variable-text
+        title: Note Embed Border Radius
+        description: You can also have different radiuses per side. Just write them in the CSS format of top left, top right, bottom right, bottom left. i.e. 2px, 8px, 12px, 0px.
+        default: 12px
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Top Border
+    -
+        id: embed-border-top-width
+        type: variable-text
+        title: Note Embed Top Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-top-style
+        type: variable-text
+        title: Note Embed Top Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-top-color
+        type: variable-themed-color
+        title: Note Embed Top Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Right Border
+    -
+        id: embed-border-end-width
+        type: variable-text
+        title: Note Embed Right Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-end-style
+        type: variable-text
+        title: Note Embed Right Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-end-color
+        type: variable-themed-color
+        title: Note Embed Right Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Bottom Border
+    -
+        id: embed-border-bottom-width
+        type: variable-text
+        title: Note Embed Bottom Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-bottom-style
+        type: variable-text
+        title: Note Embed Bottom Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-bottom-color
+        type: variable-themed-color
+        title: Note Embed Bottom Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
+	-
+		id: nf_note-embed-border
+		type: heading
+		level: 4
+		collapsed: true
+		title: Note Embed Left Border
+    -
+        id: embed-border-start-width
+        type: variable-text
+        title: Note Embed Left Border Width
+        description: If you'd like to remove the border, set this to 0px.
+        default: 1px
+    -
+        id: embed-border-start-style
+        type: variable-text
+        title: Note Embed Left Border Style
+        description: Other options include dashed, dotted, and double.
+        default: solid
+    -
+        id: embed-border-start-color
+        type: variable-themed-color
+        title: Note Embed Left Border Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(37, 38%, 83%, 1)'
+        default-dark: 'hsla(34, 24%, 40%, 1)'
 	-
 		id: canvas
 		type: heading

@@ -135,8 +135,8 @@ body {
 
     /* Ribbon */
     --ribbon-border-width: 1px;
-    --ribbon-top-right-radius: var(--editor-border-radius);
-    --ribbon-bottom-right-radius: var(--editor-border-radius);
+    --ribbon-radius: var(--editor-border-radius);
+    --ribbon-radius: var(--editor-border-radius);
     --ribbon-margin-bottom: var(--editor-pane-margin);
 
     /* Sidebar */
@@ -150,6 +150,11 @@ body {
                                 var(--size-4-2)
                                 calc(var(--size-4-1) + var(--button-inset-shadow-size))
                                 var(--size-4-6);
+
+    /* Status Bar */
+    --status-bar-floating-opacity: 0.5;
+    --status-bar-floating-opacity-hover: 1;
+    --status-bar-floating-offset: var(--size-2-2);
 
     /* Titlebar */
     --titlebar-text-weight: var(--font-normal);
@@ -231,6 +236,12 @@ body {
 
     /* Pill */
     --pill-tag-weight: var(--component-font-weight);
+
+    /* Progress */
+    --progress-width: 220px;
+    --progress-height: 8px;
+    --progress-border-width: 1px;
+    --progress-value-radius: var(--progress-height);
 
     /* Slider */
     --slider-track-height: 5px;
@@ -321,6 +332,10 @@ body {
     --embed-title-border-width: 1px;
     --embed-title-border-style: solid;
     --embed-title-margin-bottom: var(--size-4-2);
+    --embed-title-font-size: var(--font-text-size);
+    --embed-title-font-weight: var(--font-medium);
+    --embed-title-letter-spacing: normal;
+    --embed-title-text-transform: none;
     
     --embed-media-border-radius: var(--radius-m);
 
@@ -424,6 +439,7 @@ body {
         --clickable-icon-radius: var(--radius-m);
         --button-radius: calc(var(--radius-l) - 2px);
         --input-font-weight: var(--font-normal);
+        --mobile-folder-icon-size: 16px;
     }
 
     /*────────── Core Plugins ──────────*/
@@ -684,12 +700,20 @@ body {
     --divider-color: var(--background-modifier-border);
     --divider-color-hover: var(--background-modifier-border-hover);
 
+    /* Ribbon */
+    --ribbon-slideout-background: var(--color-l-gray-30);
+    --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
+                            0px 5px 5px -5px rgba(0, 0, 0, 0.15);
+
     /* Scrollbar */
     --scrollbar-bg: transparent;
     --scrollbar-thumb-bg: var(--background-modifier-border);
     --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
 
     /* Status Bar */
+    --status-bar-floating-bg: var(--color-l-gray-30);
+    --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
+                                    0px 5px 5px -5px rgba(0, 0, 0, 0.15);
     --status-bar-item-color: var(--color-l-gray-80);
     --status-bar-item-color-hover: var(--color-l-gray-100);
     --status-bar-item-bg-hover: transparent;
@@ -898,6 +922,20 @@ body {
     --pill-background-hover: var(--pill-background);
     --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
     --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+
+    /* Progress */
+    --progress-background: var(--color-l-gray-40);
+    --progress-bar-outline: rgba(0, 0, 0, 0.1);
+    --progress-value-outline: rgba(0, 0, 0, 0.18);
+    --progress-color-1: var(--color-l-red-20);
+    --progress-color-2: var(--color-l-orange-20);
+    --progress-color-3: var(--color-l-yellow-20);
+    --progress-color-4: var(--color-l-green-30);
+
+    --progress-color-5: linear-gradient(45deg, var(--progress-gradient-1), var(--progress-gradient-2), var(--progress-gradient-3));
+    --progress-gradient-1: var(--color-l-red-10);
+    --progress-gradient-2: var(--color-l-yellow-10);
+    --progress-gradient-3: var(--color-l-blue-10);
 
     /* Prompt */
     --prompt-input-background: var(--background-primary);
@@ -1592,8 +1630,8 @@ body {
     --interactive-accent-hover: var(--color-accent-2);
 
     /* Alternating Colors */
-    --color-gray-rgb: 203, 180, 167;
-    --color-gray: rgb(196, 172, 159);
+    --color-gray-rgb: 166, 150, 142;
+    --color-gray: rgb(166, 150, 141);
 
     --color-red-rgb: 228, 87, 78;
     --color-red: rgb(192, 78, 78);
@@ -1717,12 +1755,20 @@ body {
     --divider-color: var(--background-modifier-border);
     --divider-color-hover: var(--background-modifier-border-hover);
 
+    /* Ribbon */
+    --ribbon-slideout-background: var(--color-d-gray-110);
+    --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
+                                0px 5px 5px -5px rgba(0, 0, 0, 0.38);
+
     /* Scrollbar */
     --scrollbar-bg: transparent;
     --scrollbar-thumb-bg: var(--background-modifier-border);
     --scrollbar-active-thumb-bg: var(--background-modifier-border-hover);
 
     /* Status Bar */
+    --status-bar-floating-bg: var(--color-d-gray-110);
+    --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
+                                    0px 5px 5px -5px rgba(0, 0, 0, 0.38);
     --status-bar-item-color: var(--color-d-gray-50);
     --status-bar-item-color-hover: var(--color-d-gray-30);
     --status-bar-item-bg-hover: transparent;
@@ -1933,6 +1979,20 @@ body {
     --pill-background-hover: var(--pill-background);
     --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
     --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+
+    /* Progress */
+    --progress-background: var(--color-d-gray-120);
+    --progress-bar-outline: rgba(255, 255, 255, 0.1);
+    --progress-value-outline: rgba(255, 255, 255, 0.21);
+    --progress-color-1: var(--color-d-red-30);
+    --progress-color-2: var(--color-d-orange-30);
+    --progress-color-3: var(--color-d-yellow-30);
+    --progress-color-4: var(--color-d-green-40);
+
+    --progress-color-5: linear-gradient(45deg, var(--progress-gradient-1), var(--progress-gradient-2), var(--progress-gradient-3));
+    --progress-gradient-1: var(--color-d-red-30);
+    --progress-gradient-2: var(--color-d-yellow-20);
+    --progress-gradient-3: var(--color-d-blue-20);
 
     /* Prompt */
     --prompt-input-background: var(--background-primary);

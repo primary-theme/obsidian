@@ -61,8 +61,7 @@
         border: var(--ribbon-border-width) solid var(--divider-color);
         border-left: none;
 
-        border-top-right-radius: var(--ribbon-top-right-radius);
-        border-bottom-right-radius: var(--ribbon-bottom-right-radius);
+        border-radius: 0px var(--ribbon-radius) var(--ribbon-radius) 0px;
         margin-bottom: var(--ribbon-margin-bottom);
     }
 }
@@ -70,4 +69,47 @@
 // Mobile
 .workspace-drawer-ribbon {
     border-right: 1px solid var(--background-modifier-border);
+}
+
+/*────────── SS: Ribbon Styles ──────────*/
+
+body.ribbon-slideout:not(.is-mobile) {
+    .workspace-ribbon.mod-left:before {
+        visibility: hidden;
+    }
+    
+    .workspace-ribbon.workspace-ribbon {
+        --ribbon-background: var(--ribbon-slideout-background);
+        --titlebar-background-focused: var(--ribbon-background);
+        --ribbon-background-collapsed: var(--ribbon-background);
+        position: absolute;
+        left: calc(-1 * (var(--ribbon-width) / 4));
+        opacity: 0;
+        transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+        box-shadow: var(--ribbon-slideout-shadow);
+    
+        &:hover {
+            left: 0px;
+            opacity: 1;
+            transition: var(--anim-motion-jumpy) var(--anim-duration-moderate);
+        }
+    }
+
+    .sidebar-toggle-button.mod-left {
+        background: var(--ribbon-background);
+        --tab-container-background: var(--ribbon-background);
+    }
+
+    &.is-hidden-frameless:not(.is-fullscreen) {
+        .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+            padding-left: calc(var(--size-4-2) + var(--frame-left-space) + var(--ribbon-width));
+
+        }
+    }
+
+    &:not(.is-hidden-frameless.is-frameless) {
+        .side-dock-actions {
+            margin-top: var(--header-height);
+        }
+    }
 }

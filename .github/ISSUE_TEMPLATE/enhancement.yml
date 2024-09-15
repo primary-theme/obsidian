@@ -1,6 +1,7 @@
 name: Enhancement Suggestion
 description: I want to suggest improvements to Primary
 labels: ["🧞‍♂️ enhancement"]
+projects: ["primary-theme/1"]
 body:
   - type: markdown
     attributes:

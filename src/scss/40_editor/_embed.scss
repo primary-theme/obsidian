@@ -7,7 +7,10 @@
 
 .embed-title {
     text-wrap: wrap;
-    font-weight: var(--font-medium);
+    font-size: var(--embed-title-font-size);
+    font-weight: var(--embed-title-font-weight);
+    letter-spacing: var(--embed-title-letter-spacing);
+    text-transform: var(--embed-title-text-transform);
     color: var(--embed-title-color);
     padding: 0 var(--size-4-3) var(--size-2-2);
     margin-inline-start: calc(-1 * var(--embed-left-right-padding));
@@ -39,3 +42,20 @@ video {
     overflow: scroll;
     width: 100%;
 }
+
+/*────────── SS: Embed Styles ──────────*/
+
+body.embed-hide-title {
+    .embed-title {
+        display: none;
+    }
+}
+
+// .markdown-embed:not(.canvas-node-content) {
+//     --embed-border-radius: 0px;
+//     --embed-background: transparent;
+//     --embed-border-top: 0px;
+//     --embed-border-bottom: 0px;
+//     --embed-border-start: 0px;
+//     --embed-border-end: 0px;
+// }

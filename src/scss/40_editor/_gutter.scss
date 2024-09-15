@@ -1,11 +1,13 @@
 /*────────── Gutter ──────────*/
 
 // Gutter Placement
-.cm-contentContainer {
-    @container (width > 48rem) {
-        .cm-gutters {
-            position: absolute;
-            margin-inline-start: 0.75rem;
+.is-readable-line-width {
+    .cm-contentContainer {
+        @container (width > 48rem) {
+            .cm-gutters {
+                position: absolute;
+                margin-inline-start: 0.75rem;
+            }
         }
     }
 }

@@ -1,6 +1,19 @@
 /*────────── Tabs ──────────*/
 
-// Default Sizing and Alignment
+// Variables for Editor Tab Styles
+body {
+    --tab-header-container-padding: 0 var(--editor-border-radius) var(--size-4-1) var(--editor-border-radius);
+    --tab-header-container-border-bottom: none;
+    --tab-header-container-transition: padding-bottom none;
+
+    --tab-header-container-inner-margin: default;
+    --tab-header-container-inner-padding: var(--button-axis-offset);
+
+    --tab-curves-display: none;
+    --tab-z-index: 1;
+}
+
+// General Default Sizing and Alignment
 body:not(.is-phone) .mod-root .workspace {
     // File
     &-leaf:not(.workspace-tabs.mod-stacked .workspace-leaf) {
@@ -14,37 +27,170 @@ body:not(.is-phone) .mod-root .workspace {
     
     // .mod-root Tabs
     &-tab-header-container {
-        padding-bottom: var(--size-4-1);
-        border-bottom: none;
-        transition: padding-bottom none;
+        padding: var(--tab-header-container-padding);
+        border-bottom: var(--tab-header-container-border-bottom);
+        transition: var(--tab-header-container-transition);
 
         &-inner {
-            padding-bottom: var(--button-axis-offset);
+            padding-bottom: var(--tab-header-container-inner-padding);
+            margin-bottom: var(--tab-header-container-inner-margin);
+            z-index: var(--tab-z-index);
         }
     }
 }
 
-// Default File Tab Styling
-.workspace-tabs:not(.mod-stacked) .workspace {
+// Primary Sidebar Tab Styling
+.mod-left-split .workspace,
+.mod-right-split .workspace {
+    &-tab-header {
+        border-radius: var(--radius-m);
+    
+        &-container-inner {
+            padding-bottom: 6px;
+        }
+
+        // Active Sidebar Tabs
+        &.is-active {    
+            background: var(--tab-active-bg);
+            box-shadow: var(--tab-active-shadow);
+            transition: border, box-shadow, transform var(--button-anim);
+    
+            &:nth-child(3n+1) {
+                border: 1px solid var(--alternating-color-1);
+
+                .workspace-tab-header-inner-icon {
+                    color: var(--alternating-color-1);
+                }
+                
+                .workspace-tab-header-inner-title {
+                    color: var(--alternating-color-1);
+                }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-1);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-1-hover-active);
+                    }
+                }
+            }
+    
+            &:nth-child(3n+2) {
+                border: 1px solid var(--alternating-color-2);
+
+                .workspace-tab-header-inner-icon {
+                    color: var(--alternating-color-2);
+                }
+    
+                .workspace-tab-header-inner-title {
+                    color: var(--alternating-color-2);
+                }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-2);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-2-hover-active);
+                    }
+                }
+            }
+    
+            &:nth-child(3n+3) {
+                border: 1px solid var(--alternating-color-3);
+
+                .workspace-tab-header-inner-icon {
+                    color: var(--alternating-color-3);
+                }
+    
+                .workspace-tab-header-inner-title {
+                    color: var(--alternating-color-3);
+                }
+
+                .workspace-tab-header-inner-close-button,
+                .workspace-tab-header-status-icon {
+                    color: var(--alternating-color-3);
+    
+                    &:hover {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3);
+                    }
+    
+                    &:active {
+                        color: var(--text-on-accent);
+                        background: var(--alternating-color-3-hover-active);
+                    }
+                }
+            }
+        }
+
+        // Non-active Sidebar Tabs
+        &:not(.is-active) {
+            color: var(--icon-color);
+            border: 1px solid transparent;
+            transition: border, border-color, box-shadow, transform var(--button-anim);
+            
+            &:hover {
+                color: var(--icon-color-hover);
+                border-color: transparent;
+                background: var(--tab-bg);
+                transform: translateY(calc(-1 * var(--button-axis-offset)));
+                cursor: var(--cursor);
+
+                .workspace-tab-header-inner {
+                    background: transparent;
+                }
+
+                .workspace-tab-header-inner-title {
+                    color: var(--icon-color-hover);
+                }
+            }
+
+            &:active {
+                color: var(--icon-color-hover);
+                border-color: transparent;
+                background: var(--tab-bg);
+                transform: translateY(var(--button-axis-offset));
+
+                .workspace-tab-header-inner-title {
+                    color: var(--icon-color-hover);
+                }
+            }
+        }
+    }
+}
+
+// Primary Editor Tab Styling
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace {
     &-tab-header {
         --tab-radius-active: var(--radius-m);
 
-        // Aligns content inside Tabs
         .workspace & {
+            // Aligns content inside Tabs
             padding-bottom: 0px;
-        }
-
-        // Removes visibility of tab separator beside Active tab for .mod-root
-        .workspace .mod-root & {
+            // Removes visibility of tab separator beside Active tab for .mod-root
             margin-inline-start: -2px;
         }
 
-        // Active Tabs
+        // Active Editor Tabs
         &.is-active {
             // Tab Curves
             &::before,
             &::after {
-                display: none;
+                display: var(--tab-curves-display);
             }
     
             background: var(--tab-active-bg);
@@ -133,7 +279,7 @@ body:not(.is-phone) .mod-root .workspace {
             }
         }
 
-        // Non-active Tabs
+        // Non-active Editor Tabs
         &:not(.is-active) {
             color: var(--icon-color);
             border: 1px solid transparent;
@@ -330,16 +476,6 @@ body:not(.is-phone) .mod-root .workspace {
             padding-bottom: var(--size-2-2);
             margin-inline-end: var(--size-4-3);
         }
-    }
-}
-
-// Sidebar Tabs
-.mod-left-split .workspace-tab-header,
-.mod-right-split .workspace-tab-header {
-    border-radius: var(--radius-m);
-    
-    &-container-inner {
-        padding-bottom: 6px;
     }
 }
 
