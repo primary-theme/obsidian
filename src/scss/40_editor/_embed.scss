@@ -37,6 +37,11 @@ video {
     --embed-background: var(--background-primary);
 }
 
+.popover.hover-popover.is-editing {
+    outline: 2px var(--popover-border-color-editing) solid;
+    border-color: var(--popover-border-color);
+}
+
 // Mathjax | LaTeX
 .markdown-preview-view .math-block {
     overflow: scroll;
@@ -50,12 +55,3 @@ body.embed-hide-title {
         display: none;
     }
 }
-
-// .markdown-embed:not(.canvas-node-content) {
-//     --embed-border-radius: 0px;
-//     --embed-background: transparent;
-//     --embed-border-top: 0px;
-//     --embed-border-bottom: 0px;
-//     --embed-border-start: 0px;
-//     --embed-border-end: 0px;
-// }

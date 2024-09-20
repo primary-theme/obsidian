@@ -493,7 +493,12 @@ settings:
         type: heading
         level: 2
         collapsed: true
-        title: Progress
+        title: Progress Bar
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 📖 Want to learn how to use Progress Bars in your notes? [Read the full guide](https://primary-theme.github.io/features/progress-bars/).
     -
         id: progress-bar-width
         type: variable-text
@@ -552,7 +557,7 @@ settings:
     -
         id: progress-color-2
         type: variable-themed-color
-        title: Progress Color 1
+        title: Progress Color 2
         description: Color for values 40% to 59%
         format: hsl
         opacity: true
@@ -561,7 +566,7 @@ settings:
     -
         id: progress-color-3
         type: variable-themed-color
-        title: Progress Color 1
+        title: Progress Color 3
         description: Color for values 60% to 79%
         format: hsl
         opacity: true
@@ -570,7 +575,7 @@ settings:
     -
         id: progress-color-4
         type: variable-themed-color
-        title: Progress Color 1
+        title: Progress Color 4
         description: Color for values 80% to 99%
         format: hsl
         opacity: true
@@ -608,6 +613,44 @@ settings:
         opacity: true
         default-light: 'hsla(197, 39%, 56%, 1)'
         default-dark: 'hsla(194, 59%, 56%, 1)'
+    -
+        id: comp_markdown-popover
+        type: heading
+        level: 2
+        collapsed: true
+        title: Markdown Popover
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 💬 Markdown popovers are the popups that show up when you press `Cmd`/`Ctrl` while hovering over a note title or link.
+    -
+        id: popover-width
+        type: variable-number
+        title: Popover Width
+        default: 450
+        format: px
+    -
+        id: popover-height
+        type: variable-number
+        title: Popover Height
+        default: 400
+        format: px
+    -
+        id: popover-max-height
+        type: variable-number
+        title: Popover Height
+        description: Unit is in vh or viewport height. This is the percentage size of your screen - height-wise. The reason why you would want to use this unit is so that whether your window is small or enlarged, the height will relatively adjust.
+        default: 95
+        format: vh
+    -
+        id: popover-border-color-editing
+        type: variable-themed-color
+        title: Popover Border Color when Editing
+        format: hsl
+        opacity: true
+        default-light: 'hsla(36, 37%, 75%, 1)'
+        default-dark: 'hsla(29, 25%, 21%, 1)'
 	-
 		id: notes-files
 		type: heading

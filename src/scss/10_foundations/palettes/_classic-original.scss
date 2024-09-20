@@ -1166,6 +1166,10 @@ body {
                                     inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1),
                                     0px 1px 2px 0px rgba(0, 0, 0, 0.1);
 
+    /* Embed - Popover */
+    --popover-border-color-editing: var(--background-modifier-border-focus);
+    --popover-border-color: var(--background-modifier-border-focus);
+
     /* Emphasis */
     --bold-color: var(--color-l-red-30);
     --italic-color: var(--color-l-blue-30);
@@ -2297,6 +2301,10 @@ body {
     --embed-edit-btn-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
         inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5),
         0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+
+    /* Embed - Popover */
+    --popover-border-color-editing: var(--background-modifier-border-focus);
+    --popover-border-color: var(--background-modifier-border-focus);
 
     /* Emphasis */
     --bold-color: var(--color-d-red-30);
