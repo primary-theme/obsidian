@@ -91,3 +91,43 @@ body {
         }
     }
 }
+
+body.zero_multicolor-formatting {
+    &.theme-light {
+        --bold-color: inherit;
+        --italic-color: inherit;
+        --bold-italic-color: inherit;
+        --underline-color: inherit;
+        --underline-decoration-color: inherit;
+        --strikethrough-color: inherit;
+        --bold-italic-strikethrough-color: inherit;
+    }
+    
+    &.theme-dark {
+        --bold-color: inherit;
+        --italic-color: inherit;
+        --bold-italic-color: inherit;
+        --underline-color: inherit;
+        --underline-decoration-color: inherit;
+        --strikethrough-color: inherit;
+        --bold-italic-strikethrough-color: inherit;
+    }
+}
+
+body.zero_multicolor-highlights {
+    &.theme-light {
+        --normal-highlight-bg: var(--color-l-alpha-yellow);
+        --bold-highlight-bg: var(--normal-highlight-bg);
+        --italic-highlight-bg: var(--normal-highlight-bg);
+        --strikethrough-highlight-bg: var(--normal-highlight-bg);
+        --bold-italic-highlight-bg: var(--normal-highlight-bg);
+    }
+    
+    &.theme-dark {
+        --normal-highlight-bg: var(--color-d-alpha-yellow);
+        --bold-highlight-bg: var(--normal-highlight-bg);
+        --italic-highlight-bg: var(--normal-highlight-bg);
+        --strikethrough-highlight-bg: var(--normal-highlight-bg);
+        --bold-italic-highlight-bg: var(--normal-highlight-bg);
+    }
+}

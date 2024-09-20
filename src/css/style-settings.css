@@ -1499,6 +1499,11 @@ settings:
         opacity: true
         default-light: 'hsla(31, 23%, 50%, 1)'
         default-dark: 'hsla(35, 27%, 55%, 1)'
+    -
+        id: zero_multicolor-formatting
+        type: class-toggle
+        title: Toggle Off Multicolor Emphasis
+        description: If you prefer to have just the editor text color for markdown formatting (instead of red for bold, blue for italics, etc.), turn this on.
 	-
 		id: nf_highlight
 		type: heading
@@ -1585,6 +1590,11 @@ settings:
         opacity: true
         default-light: 'hsla(74, 69%, 44%, 0.2)'
         default-dark: 'hsla(74, 69%, 44%, 0.2)'
+    -
+        id: zero_multicolor-highlights
+        type: class-toggle
+        title: Toggle Off Multicolor Highlights
+        description: If you prefer to have just one color (yellow) for the highlights, toggle this on.
 	-
 		id: nf_link
 		type: heading
