@@ -6278,7 +6278,7 @@ body.colorful-folders_inherit-color .nav-files-container .nav-folder.nav-folder 
   --nav-indentation-guide-color: inherit;
 }
 
-body.alt-folder-icons .is-mobile .nav-folder-collapse-indicator svg.right-triangle {
+body.alt-folder-icons.is-mobile .nav-folder-collapse-indicator svg.right-triangle, body.alt-folder-icons.is-tablet .nav-folder-collapse-indicator svg.right-triangle {
   width: var(--mobile-folder-icon-size);
   height: var(--mobile-folder-icon-size);
 }
