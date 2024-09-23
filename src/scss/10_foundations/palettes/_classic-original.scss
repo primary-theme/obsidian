@@ -671,6 +671,9 @@ body {
     --color-pink: hsla(351, 44%, 61%, 1);
 
     /* Shadow */
+    --shadow-xs: 0px 1px 2px rgba(0, 0, 0, 0.028),
+                 0px 1.4px 3.7px rgba(0, 0, 0, .042),
+                 0px 5px 10px rgba(0, 0, 0, .07);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
                 0px 3.4px 6.7px rgba(0, 0, 0, .042),
                 0px 15px 30px rgba(0, 0, 0, .07);
@@ -1607,6 +1610,32 @@ body {
         --pmr-cal-active-day-color: var(--color-l-gray-140);
         --pmr-cal-active-day-background: rgba(255, 255, 255, 0.25);
         --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
+    }
+
+    /* Day Planner by Ivan Lendev */
+    .workspace-leaf-content[data-type=timeline] .view-content,
+    .workspace-leaf-content[data-type=weekly] .view-content,
+    .workspace-leaf-content[data-type=timeTracker] .view-content {
+        // allows to differentiate colors for timeboxes (current and non-current)
+        .content,
+        .tasks {
+            --color-accent: rgba(0, 0, 0, 0.35);
+            --color-base-50: rgba(0, 0, 0, 0.2);
+        }
+
+        --dp-timebox-font-size: 14px;
+        --dp-time-indicator-color: var(--color-l-red-10);
+        --dp-hours-bg-color: inherit;
+        --dp-scroller-bg-color: inherit;
+        --dp-task-shadow:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
+                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+                            0px 2px 7px -1.6px rgba(0, 0, 0, 0.09);
+
+        --dp-weekday-color: var(--color-l-gray-100);
+        --dp-weekday-bg-color: var(--editor-bg-color);
+        --shadow-right: none;
+        --shadow-bottom:    0px 4px 9px rgba(0, 0, 0, 0.02),
+                            0px 8px 11px rgba(0, 0, 0, 0.04);
     }
 
     /* Kanban by mgmeyers */

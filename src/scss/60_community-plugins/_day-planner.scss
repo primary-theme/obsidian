@@ -1,0 +1,170 @@
+/*────────── [Community Plugin] Day Planner by Ivan Lednev ──────────*/
+
+.workspace-leaf-content {
+    // Timeline View at .mod-left / .mod-right
+    &[data-type=timeline] {
+        // fix so that icons are evenly aligned
+        // and spacing is adjusted relative to width of .mod-*
+        .header.header.header {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .controls {
+            border-bottom: none;
+        }
+
+        .controls .controls {
+            gap: unset;
+        }
+
+        // make header buttons consistent with nav-header-buttons in obsidian
+        .clickable-icon.clickable-icon:not(.header-cell .clickable-icon) {
+            color: var(--icon-color);
+            flex-basis: unset;
+            // remove border around date
+            --control-button-border: none !important;
+
+            &:hover {
+                color: var(--icon-color-hover);
+            }
+
+            &:active {
+                color: var(--icon-color-focused);
+            }
+
+            &.is-active {
+                color: var(--icon-color-active);
+                background: var(--icon-bg-active);
+            }
+        }
+
+
+        .clickable-icon.clickable-icon[aria-label="Go to file"] {
+            font-variant-numeric: tabular-nums;
+            color: var(--nav-item-color-active);
+            background: var(--nav-item-background-active);
+            font-weight: var(--nav-item-weight-active);
+            // box-shadow: var(--nav-item-shadow-active);
+            box-shadow: var(--nav-file-shadow-active);
+            padding: 0.4em 0.75em 0.45em;
+
+            &:active {
+                opacity: 0.5;
+                transition: none;
+            }
+        }
+
+        .stretcher {
+            margin: 8px;
+            border: none;
+            border-radius: var(--radius-l);
+            contain: content;
+        }
+    }
+
+    // Weekly View at .mod-root
+    &[data-type=weekly] {
+        background: var(--editor-bg-color);
+
+        .view-content {
+            margin: var(--size-4-2) var(--size-4-2) 0;
+            width: auto;
+
+            .scroller {
+                padding-bottom: var(--size-4-2);
+            }
+        }
+
+        // Range Date on Note Header
+        .range {
+            font-size: var(--font-ui-small);
+            color: var(--text-faint);
+        }
+
+        // Removes border-right on weekdays row
+        .header-cell {
+            border-right: none;
+        }
+
+        // Recolors current date header
+        .header-row.day-buttons .header-cell.today {
+            background: var(--dp-weekday-bg-color);
+            font-weight: var(--font-semibold);
+        }
+        
+        .today .clickable-icon.clickable-icon {
+            color: var(--dp-weekday-color);
+            padding-bottom: var(--size-4-3);
+        }        
+
+        .corner {
+            border-right: none;
+        }
+
+        .hours-container .hour:last-child,
+        .day-column .column .hour-block:last-child {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+// Timeline and Weekly View
+.workspace-leaf-content[data-type=timeline],
+.workspace-leaf-content[data-type=weekly] {
+    .stretcher:not(.scroller .stretcher) {
+        padding: var(--size-4-3) 0 0;
+    }
+
+    .scroller,
+    .day-column {
+        background-color: var(--dp-scroller-bg-color);
+    }
+
+    // unset time timeboxes
+    .padding {
+        margin-top: var(--size-2-1);
+        margin-bottom: var(--size-2-1);
+    }
+
+    // left column hour number
+    .hours-container {
+        background: var(--dp-hours-bg-color);
+    }
+
+    .hour-number-container {
+        font-size: var(--font-ui-smaller);
+        font-weight: var(--font-medium);
+        font-variant-numeric: tabular-nums;
+        margin: var(--size-2-3) 0;
+    }
+
+    // timeboxes
+    .content {
+        // negative margins ensure that the timebox starts and ends at the grid lines
+        margin-top: -1px;
+        margin-bottom: -1px;
+        border-radius: var(--radius-m);
+        box-shadow: var(--dp-task-shadow);
+    }
+
+    .markdown-block-content {
+        padding: var(--size-2-3);
+        padding-left: 0.85em;
+    }
+            
+    .rendered-markdown {
+        font-size: var(--dp-timebox-font-size);
+        --checkbox-size: var(--dp-timebox-font-size);
+    }
+
+    // ball and needle
+    .ball {
+        background-color: var(--dp-time-indicator-color);
+    }
+
+    .needle {
+        background-color: var(--dp-time-indicator-color);
+        z-index: 1;
+    }
+}

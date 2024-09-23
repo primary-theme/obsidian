@@ -52,6 +52,7 @@
 @use '50_core-plugins/graph';
 @use '50_core-plugins/search';
 
-@use '60_community-plugins/calendar-liam-cain';
-@use '60_community-plugins/kanban-mgmeyers';
-@use '60_community-plugins/style-settings-mgmeyers';
+@use '60_community-plugins/calendar';
+@use '60_community-plugins/day-planner';
+@use '60_community-plugins/kanban';
+@use '60_community-plugins/style-settings';
