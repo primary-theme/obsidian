@@ -1619,23 +1619,24 @@ body {
         // allows to differentiate colors for timeboxes (current and non-current)
         .content,
         .tasks {
-            --color-accent: rgba(0, 0, 0, 0.35);
-            --color-base-50: rgba(0, 0, 0, 0.2);
+            --color-accent: var(--dp-time-indicator-color);
+            --color-base-50: rgba(0, 0, 0, 0.16);
+            --background-primary: var(--color-l-gray-10);
         }
 
         --dp-timebox-font-size: 14px;
         --dp-time-indicator-color: var(--color-l-red-10);
         --dp-hours-bg-color: inherit;
         --dp-scroller-bg-color: inherit;
-        --dp-task-shadow:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
+        --dp-task-shadow:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7),
                             inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
                             0px 2px 7px -1.6px rgba(0, 0, 0, 0.09);
 
-        --dp-weekday-color: var(--color-l-gray-100);
+        --dp-weekday-color: var(--color-l-gray-110);
         --dp-weekday-bg-color: var(--editor-bg-color);
         --shadow-right: none;
-        --shadow-bottom:    0px 4px 9px rgba(0, 0, 0, 0.02),
-                            0px 8px 11px rgba(0, 0, 0, 0.04);
+        --shadow-bottom:    0px 4px 9px rgba(0, 0, 0, 0.025),
+                            0px 8px 11px rgba(0, 0, 0, 0.045);
     }
 
     /* Kanban by mgmeyers */
@@ -2794,6 +2795,33 @@ body {
         --pmr-cal-active-day-color: var(--color-d-gray-10);
         --pmr-cal-active-day-background: rgba(0, 0, 0, 0.15);
         --pmr-cal-active-day-shadow: var(--nav-file-shadow-active);
+    }
+
+    /* Day Planner by Ivan Lendev */
+    .workspace-leaf-content[data-type=timeline] .view-content,
+    .workspace-leaf-content[data-type=weekly] .view-content,
+    .workspace-leaf-content[data-type=timeTracker] .view-content {
+        // allows to differentiate colors for timeboxes (current and non-current)
+        .content,
+        .tasks {
+            --color-accent: var(--dp-time-indicator-color);
+            --color-base-50: rgba(0, 0, 0, 0.35);
+            --background-primary: var(--color-d-gray-90);
+        }
+
+        --dp-timebox-font-size: 14px;
+        --dp-time-indicator-color: var(--color-d-red-30);
+        --dp-hours-bg-color: inherit;
+        --dp-scroller-bg-color: inherit;
+        --dp-task-shadow:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07),
+                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.08),
+                            0px 2px 7px -1.6px rgba(0, 0, 0, 0.3);
+
+        --dp-weekday-color: var(--color-d-gray-30);
+        --dp-weekday-bg-color: var(--editor-bg-color);
+        --shadow-right: none;
+        --shadow-bottom:    0px 4px 9px rgba(0, 0, 0, 0.08),
+                            0px 8px 11px rgba(0, 0, 0, 0.1);
     }
 
     /* Kanban by mgmeyers */
