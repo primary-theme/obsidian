@@ -4616,7 +4616,7 @@ li[data-task]:not([data-task=x], [data-task=X], [data-task="/"]) input[type=chec
 }
 
 input[type=checkbox]:checked[data-task="/"],
-li[data-task="/"] input:checked,
+li[data-task="/"] > input:checked,
 li[data-task="/"] > p > input:checked {
   background: linear-gradient(to right, var(--inprogress-chbx-color) 50%, var(--checklist-bg) 50%);
   background-repeat: no-repeat;
@@ -4624,26 +4624,26 @@ li[data-task="/"] > p > input:checked {
   border-color: var(--inprogress-chbx-border-color);
 }
 input[type=checkbox]:checked[data-task="/"]:after,
-li[data-task="/"] input:checked:after,
+li[data-task="/"] > input:checked:after,
 li[data-task="/"] > p > input:checked:after {
   background-color: transparent;
   -webkit-mask-image: none;
 }
 input[type=checkbox]:checked[data-task="/"]:hover,
-li[data-task="/"] input:checked:hover,
+li[data-task="/"] > input:checked:hover,
 li[data-task="/"] > p > input:checked:hover {
   background: linear-gradient(to right, var(--inprogress-chbx-color-hover) 50%, var(--checklist-bg) 50%);
   border-color: var(--inprogress-chbx-border-color);
 }
 
 input[type=checkbox]:checked[data-task=">"],
-li[data-task=">"] input:checked,
+li[data-task=">"] > input:checked,
 li[data-task=">"] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=">"]:after,
-li[data-task=">"] input:checked:after,
+li[data-task=">"] > input:checked:after,
 li[data-task=">"] > p > input:checked:after {
   background-color: var(--resched-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4653,13 +4653,13 @@ li[data-task=">"] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task="<"],
-li[data-task="<"] input:checked,
+li[data-task="<"] > input:checked,
 li[data-task="<"] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task="<"]:after,
-li[data-task="<"] input:checked:after,
+li[data-task="<"] > input:checked:after,
 li[data-task="<"] > p > input:checked:after {
   background-color: var(--sched-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4668,13 +4668,13 @@ li[data-task="<"] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task="!"],
-li[data-task="!"] input:checked,
+li[data-task="!"] > input:checked,
 li[data-task="!"] > p > input:checked {
   background-color: var(--important-chbx-color);
   border-radius: var(--important-chbx-radius);
 }
 input[type=checkbox]:checked[data-task="!"]:after,
-li[data-task="!"] input:checked:after,
+li[data-task="!"] > input:checked:after,
 li[data-task="!"] > p > input:checked:after {
   background-color: var(--important-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4683,13 +4683,13 @@ li[data-task="!"] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task="-"],
-li[data-task="-"] input:checked,
+li[data-task="-"] > input:checked,
 li[data-task="-"] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task="-"]:after,
-li[data-task="-"] input:checked:after,
+li[data-task="-"] > input:checked:after,
 li[data-task="-"] > p > input:checked:after {
   background-color: var(--cancelled-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4698,13 +4698,13 @@ li[data-task="-"] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task="?"],
-li[data-task="?"] input:checked,
+li[data-task="?"] > input:checked,
 li[data-task="?"] > p > input:checked {
   background-color: var(--question-chbx-color);
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task="?"]:after,
-li[data-task="?"] input:checked:after,
+li[data-task="?"] > input:checked:after,
 li[data-task="?"] > p > input:checked:after {
   background-color: var(--question-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4713,13 +4713,13 @@ li[data-task="?"] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task="*"],
-li[data-task="*"] input:checked,
+li[data-task="*"] > input:checked,
 li[data-task="*"] > p > input:checked {
   background-color: var(--star-chbx-color);
   border-radius: 100%;
 }
 input[type=checkbox]:checked[data-task="*"]:after,
-li[data-task="*"] input:checked:after,
+li[data-task="*"] > input:checked:after,
 li[data-task="*"] > p > input:checked:after {
   background-color: var(--star-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4728,13 +4728,13 @@ li[data-task="*"] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=n],
-li[data-task=n] input:checked,
+li[data-task=n] > input:checked,
 li[data-task=n] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=n]:after,
-li[data-task=n] input:checked:after,
+li[data-task=n] > input:checked:after,
 li[data-task=n] > p > input:checked:after {
   background-color: var(--note-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4744,13 +4744,13 @@ li[data-task=n] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=l],
-li[data-task=l] input:checked,
+li[data-task=l] > input:checked,
 li[data-task=l] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=l]:after,
-li[data-task=l] input:checked:after,
+li[data-task=l] > input:checked:after,
 li[data-task=l] > p > input:checked:after {
   background-color: var(--location-chbox-color);
   -webkit-mask-position: 50% 50%;
@@ -4759,12 +4759,12 @@ li[data-task=l] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=i],
-li[data-task=i] input:checked,
+li[data-task=i] > input:checked,
 li[data-task=i] > p > input:checked {
   background-color: var(--info-chbx-color);
 }
 input[type=checkbox]:checked[data-task=i]:after,
-li[data-task=i] input:checked:after,
+li[data-task=i] > input:checked:after,
 li[data-task=i] > p > input:checked:after {
   background-color: var(--info-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4773,14 +4773,14 @@ li[data-task=i] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=S],
-li[data-task=S] input:checked,
+li[data-task=S] > input:checked,
 li[data-task=S] > p > input:checked {
   background-color: var(--amount-chbx-color);
   border-color: transparent;
   border-radius: var(--amount-chbx-radius);
 }
 input[type=checkbox]:checked[data-task=S]:after,
-li[data-task=S] input:checked:after,
+li[data-task=S] > input:checked:after,
 li[data-task=S] > p > input:checked:after {
   background-color: var(--amount-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4789,12 +4789,12 @@ li[data-task=S] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task='"'],
-li[data-task='"'] input:checked,
+li[data-task='"'] > input:checked,
 li[data-task='"'] > p > input:checked {
   background-color: var(--quote-chbx-color);
 }
 input[type=checkbox]:checked[data-task='"']:after,
-li[data-task='"'] input:checked:after,
+li[data-task='"'] > input:checked:after,
 li[data-task='"'] > p > input:checked:after {
   background-color: var(--quote-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4803,13 +4803,13 @@ li[data-task='"'] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=I],
-li[data-task=I] input:checked,
+li[data-task=I] > input:checked,
 li[data-task=I] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=I]:after,
-li[data-task=I] input:checked:after,
+li[data-task=I] > input:checked:after,
 li[data-task=I] > p > input:checked:after {
   background-color: var(--idea-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4818,13 +4818,13 @@ li[data-task=I] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=p],
-li[data-task=p] input:checked,
+li[data-task=p] > input:checked,
 li[data-task=p] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=p]:after,
-li[data-task=p] input:checked:after,
+li[data-task=p] > input:checked:after,
 li[data-task=p] > p > input:checked:after {
   background-color: var(--pro-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4833,13 +4833,13 @@ li[data-task=p] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=c],
-li[data-task=c] input:checked,
+li[data-task=c] > input:checked,
 li[data-task=c] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=c]:after,
-li[data-task=c] input:checked:after,
+li[data-task=c] > input:checked:after,
 li[data-task=c] > p > input:checked:after {
   background-color: var(--con-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4849,13 +4849,13 @@ li[data-task=c] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=b],
-li[data-task=b] input:checked,
+li[data-task=b] > input:checked,
 li[data-task=b] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=b]:after,
-li[data-task=b] input:checked:after,
+li[data-task=b] > input:checked:after,
 li[data-task=b] > p > input:checked:after {
   background-color: var(--bookmark-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4864,13 +4864,13 @@ li[data-task=b] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=f],
-li[data-task=f] input:checked,
+li[data-task=f] > input:checked,
 li[data-task=f] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=f]:after,
-li[data-task=f] input:checked:after,
+li[data-task=f] > input:checked:after,
 li[data-task=f] > p > input:checked:after {
   background-color: var(--fire-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4879,13 +4879,13 @@ li[data-task=f] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=w],
-li[data-task=w] input:checked,
+li[data-task=w] > input:checked,
 li[data-task=w] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=w]:after,
-li[data-task=w] input:checked:after,
+li[data-task=w] > input:checked:after,
 li[data-task=w] > p > input:checked:after {
   background-color: var(--win-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4894,13 +4894,13 @@ li[data-task=w] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=k],
-li[data-task=k] input:checked,
+li[data-task=k] > input:checked,
 li[data-task=k] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=k]:after,
-li[data-task=k] input:checked:after,
+li[data-task=k] > input:checked:after,
 li[data-task=k] > p > input:checked:after {
   background-color: var(--key-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4909,13 +4909,13 @@ li[data-task=k] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=u],
-li[data-task=u] input:checked,
+li[data-task=u] > input:checked,
 li[data-task=u] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=u]:after,
-li[data-task=u] input:checked:after,
+li[data-task=u] > input:checked:after,
 li[data-task=u] > p > input:checked:after {
   background-color: var(--up-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4924,13 +4924,13 @@ li[data-task=u] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=d],
-li[data-task=d] input:checked,
+li[data-task=d] > input:checked,
 li[data-task=d] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=d]:after,
-li[data-task=d] input:checked:after,
+li[data-task=d] > input:checked:after,
 li[data-task=d] > p > input:checked:after {
   background-color: var(--down-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4939,13 +4939,13 @@ li[data-task=d] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=r],
-li[data-task=r] input:checked,
+li[data-task=r] > input:checked,
 li[data-task=r] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=r]:after,
-li[data-task=r] input:checked:after,
+li[data-task=r] > input:checked:after,
 li[data-task=r] > p > input:checked:after {
   background-color: var(--law-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4954,13 +4954,13 @@ li[data-task=r] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=L],
-li[data-task=L] input:checked,
+li[data-task=L] > input:checked,
 li[data-task=L] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=L]:after,
-li[data-task=L] input:checked:after,
+li[data-task=L] > input:checked:after,
 li[data-task=L] > p > input:checked:after {
   background-color: var(--language-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4969,13 +4969,13 @@ li[data-task=L] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=t],
-li[data-task=t] input:checked,
+li[data-task=t] > input:checked,
 li[data-task=t] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=t]:after,
-li[data-task=t] input:checked:after,
+li[data-task=t] > input:checked:after,
 li[data-task=t] > p > input:checked:after {
   background-color: var(--clock-chbx-color);
   -webkit-mask-position: 100% 100%;
@@ -4984,13 +4984,13 @@ li[data-task=t] > p > input:checked:after {
 }
 
 input[type=checkbox]:checked[data-task=T],
-li[data-task=T] input:checked,
+li[data-task=T] > input:checked,
 li[data-task=T] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 input[type=checkbox]:checked[data-task=T]:after,
-li[data-task=T] input:checked:after,
+li[data-task=T] > input:checked:after,
 li[data-task=T] > p > input:checked:after {
   background-color: var(--telephone-chbx-color);
   -webkit-mask-position: 50% 50%;
