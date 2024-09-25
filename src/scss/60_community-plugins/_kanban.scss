@@ -48,7 +48,7 @@
     &__lane-input {
         color: var(--kanban-title-text-input-color);
         background: transparent;
-        border-radius: calc(var(--radius-m) - 2px);
+        border-radius: var(--radius-sm);
         padding: var(--size-2-1) var(--size-4-2);
     }
 

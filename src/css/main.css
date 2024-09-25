@@ -826,6 +826,7 @@ body {
   --editor-header-icon: var(--icon-s);
   /* Radius */
   --radius-xs: 2px;
+  --radius-sm: 6px;
   /*────────── Window ──────────*/
   /* Divider */
   --divider-width-hover: 4px;
@@ -3402,7 +3403,7 @@ body.sb-style-floating .status-bar {
   right: var(--status-bar-floating-offset);
   bottom: var(--status-bar-floating-offset);
   --status-bar-border-width: 1px;
-  --status-bar-radius: calc(var(--radius-m) - 2px);
+  --status-bar-radius: var(--radius-sm);
   opacity: var(--status-bar-floating-opacity);
   transition: var(--anim-motion-smooth) var(--anim-duration-fast);
   box-shadow: var(--status-bar-floating-shadow);
@@ -7090,7 +7091,7 @@ body.alt-folder-icons .nav-folder-collapse-indicator:not(.is-collapsed) svg.righ
 .search-result-file-match:hover .search-result-file-match-destination-file {
   color: var(--search-result-dest-file-color);
   background: var(--search-result-dest-file-bg);
-  border-radius: calc(var(--radius-m) - 2px);
+  border-radius: var(--radius-sm);
   box-shadow: var(--search-result-dest-file-shadow);
   transition: background, box-shadow var(--anim-duration-superfast) var(--anim-motion-smooth);
 }
@@ -7372,7 +7373,7 @@ body.alt-folder-icons .nav-folder-collapse-indicator:not(.is-collapsed) svg.righ
 .kanban-plugin__grow-wrap .kanban-plugin__lane-input, .kanban-plugin__lane-title-text, .kanban-plugin__lane-input {
   color: var(--kanban-title-text-input-color);
   background: transparent;
-  border-radius: calc(var(--radius-m) - 2px);
+  border-radius: var(--radius-sm);
   padding: var(--size-2-1) var(--size-4-2);
 }
 .kanban-plugin__lane-settings-button.is-enabled {

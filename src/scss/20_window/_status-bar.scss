@@ -129,7 +129,7 @@ body.sb-style-floating {
         right: var(--status-bar-floating-offset);
         bottom: var(--status-bar-floating-offset);
         --status-bar-border-width: 1px;
-        --status-bar-radius: calc(var(--radius-m) - 2px);
+        --status-bar-radius: var(--radius-sm);
         opacity: var(--status-bar-floating-opacity);
         transition: var(--anim-motion-smooth) var(--anim-duration-fast);
         box-shadow: var(--status-bar-floating-shadow);

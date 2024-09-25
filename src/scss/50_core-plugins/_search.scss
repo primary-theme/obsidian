@@ -92,7 +92,7 @@
 .search-result-file-match:hover .search-result-file-match-destination-file {
     color: var(--search-result-dest-file-color);
     background: var(--search-result-dest-file-bg);
-    border-radius: calc(var(--radius-m) - 2px);
+    border-radius: var(--radius-sm);
     box-shadow: var(--search-result-dest-file-shadow);
     transition: background, box-shadow var(--anim-duration-superfast) var(--anim-motion-smooth);
 
