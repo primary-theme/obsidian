@@ -13,7 +13,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 📚 Visit the [Full Guide](https://github.com/primary-theme/obsidian) for the complete documentation including theme features, font guides, customization guide and more
+        description: 📚 Visit the [Full Guide](https://primary-theme.github.io/) for the complete documentation including theme features, font guides, customization guide and more
     -
         id: readme-content
         type: info-text
@@ -23,7 +23,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 📮 Subscribe to [Primary Theme Updates](https://dub.sh/primary/inbox) to get notified of Primary updates, new features, and goodies right in your inbox!
+        description: 📮 Subscribe to [Primary Theme Updates](https://primarytheme.substack.com/subscribe) to get notified of Primary updates, new features, and goodies right in your inbox!
 	-
 		id: interface
 		type: heading
@@ -3692,7 +3692,7 @@ settings:
         type: info-text
         markdown: true
         title: 💗 Make a Donation on Ko-fi
-        description: Support development by subscribing monthly or making a one-time donation at [Primary's Ko-fi Page](https://dub.sh/primary/ko-fi).
+        description: Support development by subscribing monthly or making a one-time donation at [Primary's Ko-fi Page](https://ko-fi.com/ceciliamay).
     -
         id: readme-content
         type: info-text
@@ -3704,5 +3704,5 @@ settings:
         type: info-text
         markdown: true
         title: 🐛 Submit an Issue or Feature Request!
-        description: Visit [Primary's Github Issue Page](https://git.new/primary/obsidian) to submit an issue or feature request. <br> No Github account? Send me a message through [Twitter](https://dub.sh/twitter/mei) or directly via [Email](mailto:contact.ceciliamay@gmail.com)
+        description: Visit [Primary's Github Issue Page](https://git.new/primary/obsidian) to submit an issue or feature request. <br> No Github account? Send me a message through [Twitter](https://x.com/ceciliamay_) or directly via [Email](mailto:contact.ceciliamay@gmail.com)
 */
