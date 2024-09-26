@@ -3600,7 +3600,7 @@ settings:
         description: Color of notes that don't exist (unresolved backlinks)
         default-light: 'hsla(43, 83%, 57%, 1)'
         default-dark: 'hsla(42, 79%, 51%, 1)'
-    - 
+    -
         id: graph-node-unresolved-opacity
         type: variable-number
         title: Unresolved Note Node Opacity
