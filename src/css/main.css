@@ -4870,7 +4870,7 @@ li[data-task]:not([data-task=x], [data-task=X], [data-task="/"]) input[type=chec
 [data-type=timeline] .rendered-markdown li[data-task="/"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="/"] > input:checked,
 input[type=checkbox]:checked[data-task="/"],
-li[data-task="/"] input:checked,
+li[data-task="/"] > input:checked,
 li[data-task="/"] > p > input:checked {
   background: linear-gradient(to right, var(--inprogress-chbx-color) 50%, var(--checklist-bg) 50%);
   background-repeat: no-repeat;
@@ -4880,7 +4880,7 @@ li[data-task="/"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="/"] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task="/"] > input:checked:after,
 input[type=checkbox]:checked[data-task="/"]:after,
-li[data-task="/"] input:checked:after,
+li[data-task="/"] > input:checked:after,
 li[data-task="/"] > p > input:checked:after {
   background-color: transparent;
   -webkit-mask-image: none;
@@ -4888,7 +4888,7 @@ li[data-task="/"] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task="/"] > input:checked:hover,
 [data-type=weekly] .rendered-markdown li[data-task="/"] > input:checked:hover,
 input[type=checkbox]:checked[data-task="/"]:hover,
-li[data-task="/"] input:checked:hover,
+li[data-task="/"] > input:checked:hover,
 li[data-task="/"] > p > input:checked:hover {
   background: linear-gradient(to right, var(--inprogress-chbx-color-hover) 50%, var(--checklist-bg) 50%);
   border-color: var(--inprogress-chbx-border-color);
@@ -4897,7 +4897,7 @@ li[data-task="/"] > p > input:checked:hover {
 [data-type=timeline] .rendered-markdown li[data-task=">"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=">"] > input:checked,
 input[type=checkbox]:checked[data-task=">"],
-li[data-task=">"] input:checked,
+li[data-task=">"] > input:checked,
 li[data-task=">"] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -4905,7 +4905,7 @@ li[data-task=">"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=">"] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=">"] > input:checked:after,
 input[type=checkbox]:checked[data-task=">"]:after,
-li[data-task=">"] input:checked:after,
+li[data-task=">"] > input:checked:after,
 li[data-task=">"] > p > input:checked:after {
   background-color: var(--resched-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4917,7 +4917,7 @@ li[data-task=">"] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task="<"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="<"] > input:checked,
 input[type=checkbox]:checked[data-task="<"],
-li[data-task="<"] input:checked,
+li[data-task="<"] > input:checked,
 li[data-task="<"] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -4925,7 +4925,7 @@ li[data-task="<"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="<"] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task="<"] > input:checked:after,
 input[type=checkbox]:checked[data-task="<"]:after,
-li[data-task="<"] input:checked:after,
+li[data-task="<"] > input:checked:after,
 li[data-task="<"] > p > input:checked:after {
   background-color: var(--sched-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4936,7 +4936,7 @@ li[data-task="<"] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task="!"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="!"] > input:checked,
 input[type=checkbox]:checked[data-task="!"],
-li[data-task="!"] input:checked,
+li[data-task="!"] > input:checked,
 li[data-task="!"] > p > input:checked {
   background-color: var(--important-chbx-color);
   border-color: var(--checked-border-color);
@@ -4945,7 +4945,7 @@ li[data-task="!"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="!"] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task="!"] > input:checked:after,
 input[type=checkbox]:checked[data-task="!"]:after,
-li[data-task="!"] input:checked:after,
+li[data-task="!"] > input:checked:after,
 li[data-task="!"] > p > input:checked:after {
   background-color: var(--important-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4956,7 +4956,7 @@ li[data-task="!"] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task="-"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="-"] > input:checked,
 input[type=checkbox]:checked[data-task="-"],
-li[data-task="-"] input:checked,
+li[data-task="-"] > input:checked,
 li[data-task="-"] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -4964,7 +4964,7 @@ li[data-task="-"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="-"] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task="-"] > input:checked:after,
 input[type=checkbox]:checked[data-task="-"]:after,
-li[data-task="-"] input:checked:after,
+li[data-task="-"] > input:checked:after,
 li[data-task="-"] > p > input:checked:after {
   background-color: var(--cancelled-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -4975,7 +4975,7 @@ li[data-task="-"] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task="?"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="?"] > input:checked,
 input[type=checkbox]:checked[data-task="?"],
-li[data-task="?"] input:checked,
+li[data-task="?"] > input:checked,
 li[data-task="?"] > p > input:checked {
   background-color: var(--question-chbx-color);
   border-color: transparent;
@@ -4983,7 +4983,7 @@ li[data-task="?"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="?"] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task="?"] > input:checked:after,
 input[type=checkbox]:checked[data-task="?"]:after,
-li[data-task="?"] input:checked:after,
+li[data-task="?"] > input:checked:after,
 li[data-task="?"] > p > input:checked:after {
   background-color: var(--question-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -4994,7 +4994,7 @@ li[data-task="?"] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task="*"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="*"] > input:checked,
 input[type=checkbox]:checked[data-task="*"],
-li[data-task="*"] input:checked,
+li[data-task="*"] > input:checked,
 li[data-task="*"] > p > input:checked {
   background-color: var(--star-chbx-color);
   border-color: var(--checked-border-color);
@@ -5003,7 +5003,7 @@ li[data-task="*"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="*"] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task="*"] > input:checked:after,
 input[type=checkbox]:checked[data-task="*"]:after,
-li[data-task="*"] input:checked:after,
+li[data-task="*"] > input:checked:after,
 li[data-task="*"] > p > input:checked:after {
   background-color: var(--star-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -5014,7 +5014,7 @@ li[data-task="*"] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=n] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=n] > input:checked,
 input[type=checkbox]:checked[data-task=n],
-li[data-task=n] input:checked,
+li[data-task=n] > input:checked,
 li[data-task=n] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5022,7 +5022,7 @@ li[data-task=n] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=n] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=n] > input:checked:after,
 input[type=checkbox]:checked[data-task=n]:after,
-li[data-task=n] input:checked:after,
+li[data-task=n] > input:checked:after,
 li[data-task=n] > p > input:checked:after {
   background-color: var(--note-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5034,7 +5034,7 @@ li[data-task=n] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=l] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=l] > input:checked,
 input[type=checkbox]:checked[data-task=l],
-li[data-task=l] input:checked,
+li[data-task=l] > input:checked,
 li[data-task=l] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5042,7 +5042,7 @@ li[data-task=l] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=l] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=l] > input:checked:after,
 input[type=checkbox]:checked[data-task=l]:after,
-li[data-task=l] input:checked:after,
+li[data-task=l] > input:checked:after,
 li[data-task=l] > p > input:checked:after {
   background-color: var(--location-chbox-color);
   -webkit-mask-position: 50% 50%;
@@ -5053,7 +5053,7 @@ li[data-task=l] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=i] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=i] > input:checked,
 input[type=checkbox]:checked[data-task=i],
-li[data-task=i] input:checked,
+li[data-task=i] > input:checked,
 li[data-task=i] > p > input:checked {
   background-color: var(--info-chbx-color);
   border-color: var(--checked-border-color);
@@ -5061,7 +5061,7 @@ li[data-task=i] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=i] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=i] > input:checked:after,
 input[type=checkbox]:checked[data-task=i]:after,
-li[data-task=i] input:checked:after,
+li[data-task=i] > input:checked:after,
 li[data-task=i] > p > input:checked:after {
   background-color: var(--info-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -5072,7 +5072,7 @@ li[data-task=i] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=S] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=S] > input:checked,
 input[type=checkbox]:checked[data-task=S],
-li[data-task=S] input:checked,
+li[data-task=S] > input:checked,
 li[data-task=S] > p > input:checked {
   background-color: var(--amount-chbx-color);
   border-color: transparent;
@@ -5081,7 +5081,7 @@ li[data-task=S] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=S] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=S] > input:checked:after,
 input[type=checkbox]:checked[data-task=S]:after,
-li[data-task=S] input:checked:after,
+li[data-task=S] > input:checked:after,
 li[data-task=S] > p > input:checked:after {
   background-color: var(--amount-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -5092,14 +5092,14 @@ li[data-task=S] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task='"'] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task='"'] > input:checked,
 input[type=checkbox]:checked[data-task='"'],
-li[data-task='"'] input:checked,
+li[data-task='"'] > input:checked,
 li[data-task='"'] > p > input:checked {
   background-color: var(--quote-chbx-color);
 }
 [data-type=timeline] .rendered-markdown li[data-task='"'] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task='"'] > input:checked:after,
 input[type=checkbox]:checked[data-task='"']:after,
-li[data-task='"'] input:checked:after,
+li[data-task='"'] > input:checked:after,
 li[data-task='"'] > p > input:checked:after {
   background-color: var(--quote-chbx-icon-color);
   -webkit-mask-position: 50% 50%;
@@ -5110,7 +5110,7 @@ li[data-task='"'] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=I] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=I] > input:checked,
 input[type=checkbox]:checked[data-task=I],
-li[data-task=I] input:checked,
+li[data-task=I] > input:checked,
 li[data-task=I] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5118,7 +5118,7 @@ li[data-task=I] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=I] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=I] > input:checked:after,
 input[type=checkbox]:checked[data-task=I]:after,
-li[data-task=I] input:checked:after,
+li[data-task=I] > input:checked:after,
 li[data-task=I] > p > input:checked:after {
   background-color: var(--idea-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5129,7 +5129,7 @@ li[data-task=I] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=p] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=p] > input:checked,
 input[type=checkbox]:checked[data-task=p],
-li[data-task=p] input:checked,
+li[data-task=p] > input:checked,
 li[data-task=p] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5137,7 +5137,7 @@ li[data-task=p] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=p] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=p] > input:checked:after,
 input[type=checkbox]:checked[data-task=p]:after,
-li[data-task=p] input:checked:after,
+li[data-task=p] > input:checked:after,
 li[data-task=p] > p > input:checked:after {
   background-color: var(--pro-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5148,7 +5148,7 @@ li[data-task=p] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=c] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=c] > input:checked,
 input[type=checkbox]:checked[data-task=c],
-li[data-task=c] input:checked,
+li[data-task=c] > input:checked,
 li[data-task=c] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5156,7 +5156,7 @@ li[data-task=c] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=c] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=c] > input:checked:after,
 input[type=checkbox]:checked[data-task=c]:after,
-li[data-task=c] input:checked:after,
+li[data-task=c] > input:checked:after,
 li[data-task=c] > p > input:checked:after {
   background-color: var(--con-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5168,7 +5168,7 @@ li[data-task=c] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=b] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=b] > input:checked,
 input[type=checkbox]:checked[data-task=b],
-li[data-task=b] input:checked,
+li[data-task=b] > input:checked,
 li[data-task=b] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5176,7 +5176,7 @@ li[data-task=b] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=b] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=b] > input:checked:after,
 input[type=checkbox]:checked[data-task=b]:after,
-li[data-task=b] input:checked:after,
+li[data-task=b] > input:checked:after,
 li[data-task=b] > p > input:checked:after {
   background-color: var(--bookmark-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5187,7 +5187,7 @@ li[data-task=b] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=f] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=f] > input:checked,
 input[type=checkbox]:checked[data-task=f],
-li[data-task=f] input:checked,
+li[data-task=f] > input:checked,
 li[data-task=f] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5195,7 +5195,7 @@ li[data-task=f] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=f] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=f] > input:checked:after,
 input[type=checkbox]:checked[data-task=f]:after,
-li[data-task=f] input:checked:after,
+li[data-task=f] > input:checked:after,
 li[data-task=f] > p > input:checked:after {
   background-color: var(--fire-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5206,7 +5206,7 @@ li[data-task=f] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=w] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=w] > input:checked,
 input[type=checkbox]:checked[data-task=w],
-li[data-task=w] input:checked,
+li[data-task=w] > input:checked,
 li[data-task=w] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5214,7 +5214,7 @@ li[data-task=w] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=w] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=w] > input:checked:after,
 input[type=checkbox]:checked[data-task=w]:after,
-li[data-task=w] input:checked:after,
+li[data-task=w] > input:checked:after,
 li[data-task=w] > p > input:checked:after {
   background-color: var(--win-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5225,7 +5225,7 @@ li[data-task=w] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=k] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=k] > input:checked,
 input[type=checkbox]:checked[data-task=k],
-li[data-task=k] input:checked,
+li[data-task=k] > input:checked,
 li[data-task=k] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5233,7 +5233,7 @@ li[data-task=k] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=k] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=k] > input:checked:after,
 input[type=checkbox]:checked[data-task=k]:after,
-li[data-task=k] input:checked:after,
+li[data-task=k] > input:checked:after,
 li[data-task=k] > p > input:checked:after {
   background-color: var(--key-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5244,7 +5244,7 @@ li[data-task=k] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=u] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=u] > input:checked,
 input[type=checkbox]:checked[data-task=u],
-li[data-task=u] input:checked,
+li[data-task=u] > input:checked,
 li[data-task=u] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5252,7 +5252,7 @@ li[data-task=u] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=u] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=u] > input:checked:after,
 input[type=checkbox]:checked[data-task=u]:after,
-li[data-task=u] input:checked:after,
+li[data-task=u] > input:checked:after,
 li[data-task=u] > p > input:checked:after {
   background-color: var(--up-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5263,7 +5263,7 @@ li[data-task=u] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=d] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=d] > input:checked,
 input[type=checkbox]:checked[data-task=d],
-li[data-task=d] input:checked,
+li[data-task=d] > input:checked,
 li[data-task=d] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5271,7 +5271,7 @@ li[data-task=d] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=d] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=d] > input:checked:after,
 input[type=checkbox]:checked[data-task=d]:after,
-li[data-task=d] input:checked:after,
+li[data-task=d] > input:checked:after,
 li[data-task=d] > p > input:checked:after {
   background-color: var(--down-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5282,7 +5282,7 @@ li[data-task=d] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=r] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=r] > input:checked,
 input[type=checkbox]:checked[data-task=r],
-li[data-task=r] input:checked,
+li[data-task=r] > input:checked,
 li[data-task=r] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5290,7 +5290,7 @@ li[data-task=r] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=r] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=r] > input:checked:after,
 input[type=checkbox]:checked[data-task=r]:after,
-li[data-task=r] input:checked:after,
+li[data-task=r] > input:checked:after,
 li[data-task=r] > p > input:checked:after {
   background-color: var(--law-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5301,7 +5301,7 @@ li[data-task=r] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=L] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=L] > input:checked,
 input[type=checkbox]:checked[data-task=L],
-li[data-task=L] input:checked,
+li[data-task=L] > input:checked,
 li[data-task=L] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5309,7 +5309,7 @@ li[data-task=L] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=L] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=L] > input:checked:after,
 input[type=checkbox]:checked[data-task=L]:after,
-li[data-task=L] input:checked:after,
+li[data-task=L] > input:checked:after,
 li[data-task=L] > p > input:checked:after {
   background-color: var(--language-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -5320,7 +5320,7 @@ li[data-task=L] > p > input:checked:after {
 [data-type=timeline] .rendered-markdown li[data-task=t] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=t] > input:checked,
 input[type=checkbox]:checked[data-task=t],
-li[data-task=t] input:checked,
+li[data-task=t] > input:checked,
 li[data-task=t] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
@@ -5328,7 +5328,7 @@ li[data-task=t] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=t] > input:checked:after,
 [data-type=weekly] .rendered-markdown li[data-task=t] > input:checked:after,
 input[type=checkbox]:checked[data-task=t]:after,
-li[data-task=t] input:checked:after,
+li[data-task=t] > input:checked:after,
 li[data-task=t] > p > input:checked:after {
   background-color: var(--clock-chbx-color);
   -webkit-mask-position: 100% 100%;
@@ -5338,14 +5338,14 @@ li[data-task=t] > p > input:checked:after {
 
 .rendered-markdown.rendered-markdown li[data-task=T] > input:checked,
 input[type=checkbox]:checked[data-task=T],
-li[data-task=T] input:checked,
+li[data-task=T] > input:checked,
 li[data-task=T] > p > input:checked {
   background-color: transparent;
   border-color: transparent;
 }
 .rendered-markdown.rendered-markdown li[data-task=T] > input:checked:after,
 input[type=checkbox]:checked[data-task=T]:after,
-li[data-task=T] input:checked:after,
+li[data-task=T] > input:checked:after,
 li[data-task=T] > p > input:checked:after {
   background-color: var(--telephone-chbx-color);
   -webkit-mask-position: 50% 50%;
@@ -6745,7 +6745,7 @@ body {
   background: var(--nav-folder-bg-color-hover);
 }
 
-.nav-folder-collapse-indicator svg.svg-icon {
+.nav-folder .tree-item-icon svg.svg-icon {
   color: var(--nav-folder-collapse-color);
 }
 
@@ -6977,21 +6977,21 @@ body.colorful-folders_inherit-color .nav-files-container .nav-folder.nav-folder 
   --nav-indentation-guide-color: inherit;
 }
 
-body.alt-folder-icons .is-mobile .nav-folder-collapse-indicator svg.right-triangle {
+body.alt-folder-icons.is-mobile .nav-folder .tree-item-icon svg.right-triangle, body.alt-folder-icons.is-tablet .nav-folder .tree-item-icon svg.right-triangle {
   width: var(--mobile-folder-icon-size);
   height: var(--mobile-folder-icon-size);
 }
-body.alt-folder-icons .nav-folder-collapse-indicator svg.right-triangle {
+body.alt-folder-icons .nav-folder .tree-item-icon svg.right-triangle {
   width: var(--icon-size);
   height: var(--icon-size);
   stroke-width: var(--icon-stroke);
   background: currentColor;
 }
-body.alt-folder-icons .nav-folder-collapse-indicator.is-collapsed svg.right-triangle {
+body.alt-folder-icons .nav-folder .tree-item-icon.is-collapsed svg.right-triangle {
   transform: unset;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
 }
-body.alt-folder-icons .nav-folder-collapse-indicator:not(.is-collapsed) svg.right-triangle {
+body.alt-folder-icons .nav-folder .tree-item-icon:not(.is-collapsed) svg.right-triangle {
   transform: unset;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder-open'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
 }

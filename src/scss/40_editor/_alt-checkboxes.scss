@@ -99,7 +99,7 @@ li {
 [data-type=timeline] .rendered-markdown li[data-task="/"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="/"] > input:checked,
 input[type=checkbox]:checked[data-task="/"],
-li[data-task="/"] input:checked,
+li[data-task="/"] > input:checked,
 li[data-task="/"] > p > input:checked {
     background: linear-gradient(to right, var(--inprogress-chbx-color) 50%, var(--checklist-bg) 50%);
     background-repeat: no-repeat;
@@ -121,7 +121,7 @@ li[data-task="/"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task=">"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task=">"] > input:checked,
 input[type=checkbox]:checked[data-task=">"],
-li[data-task=">"] input:checked,
+li[data-task=">"] > input:checked,
 li[data-task=">"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -139,7 +139,7 @@ li[data-task=">"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="<"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="<"] > input:checked,
 input[type=checkbox]:checked[data-task="<"],
-li[data-task="<"] input:checked,
+li[data-task="<"] > input:checked,
 li[data-task="<"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -156,7 +156,7 @@ li[data-task="<"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="!"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="!"] > input:checked,
 input[type=checkbox]:checked[data-task="!"],
-li[data-task="!"] input:checked,
+li[data-task="!"] > input:checked,
 li[data-task="!"] > p > input:checked {
     background-color: var(--important-chbx-color);
 border-color: var(--checked-border-color);
@@ -174,7 +174,7 @@ border-color: var(--checked-border-color);
 [data-type=timeline] .rendered-markdown li[data-task="-"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="-"] > input:checked,
 input[type=checkbox]:checked[data-task="-"],
-li[data-task="-"] input:checked,
+li[data-task="-"] > input:checked,
 li[data-task="-"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -191,7 +191,7 @@ li[data-task="-"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="?"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="?"] > input:checked,
 input[type=checkbox]:checked[data-task="?"],
-li[data-task="?"] input:checked,
+li[data-task="?"] > input:checked,
 li[data-task="?"] > p > input:checked {
     background-color: var(--question-chbx-color);
     border-color: transparent;
@@ -208,7 +208,7 @@ li[data-task="?"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="*"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="*"] > input:checked,
 input[type=checkbox]:checked[data-task="*"],
-li[data-task="*"] input:checked,
+li[data-task="*"] > input:checked,
 li[data-task="*"] > p > input:checked {
     background-color: var(--star-chbx-color);
 border-color: var(--checked-border-color);
@@ -226,7 +226,7 @@ border-color: var(--checked-border-color);
 [data-type=timeline] .rendered-markdown li[data-task="n"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="n"] > input:checked,
 input[type=checkbox]:checked[data-task="n"],
-li[data-task="n"] input:checked,
+li[data-task="n"] > input:checked,
 li[data-task="n"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -244,7 +244,7 @@ li[data-task="n"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="l"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="l"] > input:checked,
 input[type=checkbox]:checked[data-task="l"],
-li[data-task="l"] input:checked,
+li[data-task="l"] > input:checked,
 li[data-task="l"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -261,7 +261,7 @@ li[data-task="l"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="i"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="i"] > input:checked,
 input[type=checkbox]:checked[data-task="i"],
-li[data-task="i"] input:checked,
+li[data-task="i"] > input:checked,
 li[data-task="i"] > p > input:checked {
     background-color: var(--info-chbx-color);
     border-color: var(--checked-border-color);
@@ -278,7 +278,7 @@ li[data-task="i"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="S"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="S"] > input:checked,
 input[type=checkbox]:checked[data-task="S"],
-li[data-task="S"] input:checked,
+li[data-task="S"] > input:checked,
 li[data-task="S"] > p > input:checked {
     background-color: var(--amount-chbx-color);
     border-color: transparent;
@@ -296,7 +296,7 @@ li[data-task="S"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task='"'] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task='"'] > input:checked,
 input[type=checkbox]:checked[data-task='"'],
-li[data-task='"'] input:checked,
+li[data-task='"'] > input:checked,
 li[data-task='"'] > p > input:checked {
     background-color: var(--quote-chbx-color);
     
@@ -312,7 +312,7 @@ li[data-task='"'] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="I"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="I"] > input:checked,
 input[type=checkbox]:checked[data-task="I"],
-li[data-task="I"] input:checked,
+li[data-task="I"] > input:checked,
 li[data-task="I"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -329,7 +329,7 @@ li[data-task="I"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="p"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="p"] > input:checked,
 input[type=checkbox]:checked[data-task="p"],
-li[data-task="p"] input:checked,
+li[data-task="p"] > input:checked,
 li[data-task="p"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -346,7 +346,7 @@ li[data-task="p"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="c"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="c"] > input:checked,
 input[type=checkbox]:checked[data-task="c"],
-li[data-task="c"] input:checked,
+li[data-task="c"] > input:checked,
 li[data-task="c"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -364,7 +364,7 @@ li[data-task="c"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="b"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="b"] > input:checked,
 input[type=checkbox]:checked[data-task="b"],
-li[data-task="b"] input:checked,
+li[data-task="b"] > input:checked,
 li[data-task="b"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -381,7 +381,7 @@ li[data-task="b"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="f"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="f"] > input:checked,
 input[type=checkbox]:checked[data-task="f"],
-li[data-task="f"] input:checked,
+li[data-task="f"] > input:checked,
 li[data-task="f"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -398,7 +398,7 @@ li[data-task="f"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="w"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="w"] > input:checked,
 input[type=checkbox]:checked[data-task="w"],
-li[data-task="w"] input:checked,
+li[data-task="w"] > input:checked,
 li[data-task="w"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -415,7 +415,7 @@ li[data-task="w"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="k"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="k"] > input:checked,
 input[type=checkbox]:checked[data-task="k"],
-li[data-task="k"] input:checked,
+li[data-task="k"] > input:checked,
 li[data-task="k"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -432,7 +432,7 @@ li[data-task="k"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="u"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="u"] > input:checked,
 input[type=checkbox]:checked[data-task="u"],
-li[data-task="u"] input:checked,
+li[data-task="u"] > input:checked,
 li[data-task="u"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -449,7 +449,7 @@ li[data-task="u"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="d"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="d"] > input:checked,
 input[type=checkbox]:checked[data-task="d"],
-li[data-task="d"] input:checked,
+li[data-task="d"] > input:checked,
 li[data-task="d"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -466,7 +466,7 @@ li[data-task="d"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="r"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="r"] > input:checked,
 input[type=checkbox]:checked[data-task="r"],
-li[data-task="r"] input:checked,
+li[data-task="r"] > input:checked,
 li[data-task="r"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -483,7 +483,7 @@ li[data-task="r"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="L"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="L"] > input:checked,
 input[type=checkbox]:checked[data-task="L"],
-li[data-task="L"] input:checked,
+li[data-task="L"] > input:checked,
 li[data-task="L"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -500,7 +500,7 @@ li[data-task="L"] > p > input:checked {
 [data-type=timeline] .rendered-markdown li[data-task="t"] > input:checked,
 [data-type=weekly] .rendered-markdown li[data-task="t"] > input:checked,
 input[type=checkbox]:checked[data-task="t"],
-li[data-task="t"] input:checked,
+li[data-task="t"] > input:checked,
 li[data-task="t"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
@@ -516,7 +516,7 @@ li[data-task="t"] > p > input:checked {
 // Telephone
 .rendered-markdown.rendered-markdown li[data-task="T"] > input:checked,
 input[type=checkbox]:checked[data-task="T"],
-li[data-task="T"] input:checked,
+li[data-task="T"] > input:checked,
 li[data-task="T"] > p > input:checked {
     background-color: transparent;
     border-color: transparent;
