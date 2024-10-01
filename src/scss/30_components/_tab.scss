@@ -2,7 +2,8 @@
 
 // Variables for Editor Tab Styles
 body {
-    --tab-header-container-padding: 0 var(--editor-border-radius) var(--size-4-1) var(--editor-border-radius);
+    --tab-header-container-padding: 0 var(--editor-border-radius)
+        var(--size-4-1) var(--editor-border-radius);
     --tab-header-container-border-bottom: none;
     --tab-header-container-transition: padding-bottom none;
 
@@ -24,7 +25,7 @@ body:not(.is-phone) .mod-root .workspace {
         border: var(--editor-border-width) solid var(--editor-border-color);
         border-radius: var(--editor-border-radius);
     }
-    
+
     // .mod-root Tabs
     &-tab-header-container {
         padding: var(--tab-header-container-padding);
@@ -44,24 +45,31 @@ body:not(.is-phone) .mod-root .workspace {
 .mod-right-split .workspace {
     &-tab-header {
         border-radius: var(--radius-m);
-    
+
         &-container-inner {
             padding-bottom: 6px;
         }
 
         // Active Sidebar Tabs
-        &.is-active {    
+        &.is-active {
             background: var(--tab-active-bg);
             box-shadow: var(--tab-active-shadow);
-            transition: border, box-shadow, transform var(--button-anim);
-    
-            &:nth-child(3n+1) {
+            transition:
+                border,
+                box-shadow,
+                transform var(--button-anim);
+
+            &:hover {
+                background: var(--tab-active-bg);
+            }
+
+            &:nth-child(3n + 1) {
                 border: 1px solid var(--alternating-color-1);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-1);
                 }
-                
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-1);
                 }
@@ -69,26 +77,26 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-1);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-1);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-1-hover-active);
                     }
                 }
             }
-    
-            &:nth-child(3n+2) {
+
+            &:nth-child(3n + 2) {
                 border: 1px solid var(--alternating-color-2);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-2);
                 }
-    
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-2);
                 }
@@ -96,26 +104,26 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-2);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-2);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-2-hover-active);
                     }
                 }
             }
-    
-            &:nth-child(3n+3) {
+
+            &:nth-child(3n + 3) {
                 border: 1px solid var(--alternating-color-3);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-3);
                 }
-    
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-3);
                 }
@@ -123,12 +131,12 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-3);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-3);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-3-hover-active);
@@ -141,8 +149,12 @@ body:not(.is-phone) .mod-root .workspace {
         &:not(.is-active) {
             color: var(--icon-color);
             border: 1px solid transparent;
-            transition: border, border-color, box-shadow, transform var(--button-anim);
-            
+            transition:
+                border,
+                border-color,
+                box-shadow,
+                transform var(--button-anim);
+
             &:hover {
                 color: var(--icon-color-hover);
                 border-color: transparent;
@@ -192,18 +204,21 @@ body:not(.is-phone) .mod-root .workspace {
             &::after {
                 display: var(--tab-curves-display);
             }
-    
+
             background: var(--tab-active-bg);
             box-shadow: var(--tab-active-shadow);
-            transition: border, box-shadow, transform var(--button-anim);
-    
-            &:nth-child(3n+1) {
+            transition:
+                border,
+                box-shadow,
+                transform var(--button-anim);
+
+            &:nth-child(3n + 1) {
                 border: 1px solid var(--alternating-color-1);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-1);
                 }
-                
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-1);
                 }
@@ -211,26 +226,26 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-1);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-1);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-1-hover-active);
                     }
                 }
             }
-    
-            &:nth-child(3n+2) {
+
+            &:nth-child(3n + 2) {
                 border: 1px solid var(--alternating-color-2);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-2);
                 }
-    
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-2);
                 }
@@ -238,26 +253,26 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-2);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-2);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-2-hover-active);
                     }
                 }
             }
-    
-            &:nth-child(3n+3) {
+
+            &:nth-child(3n + 3) {
                 border: 1px solid var(--alternating-color-3);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-3);
                 }
-    
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-3);
                 }
@@ -265,12 +280,12 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-3);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-3);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-3-hover-active);
@@ -283,8 +298,12 @@ body:not(.is-phone) .mod-root .workspace {
         &:not(.is-active) {
             color: var(--icon-color);
             border: 1px solid transparent;
-            transition: border, border-color, box-shadow, transform var(--button-anim);
-            
+            transition:
+                border,
+                border-color,
+                box-shadow,
+                transform var(--button-anim);
+
             &:hover {
                 color: var(--icon-color-hover);
                 border-color: transparent;
@@ -338,7 +357,7 @@ body:not(.is-phone) .mod-root .workspace {
             border-bottom-left-radius: var(--editor-border-radius);
         }
     }
-    
+
     // Resets styling from Non-stacked Tab Styling
     .workspace-leaf-content {
         border: unset;
@@ -354,15 +373,17 @@ body:not(.is-phone) .mod-root .workspace {
         // Active Tabs
         &.is-active {
             background: var(--tab-active-bg);
-            transition: border, transform var(--button-anim);
-    
-            &:nth-child(3n+1) {
+            transition:
+                border,
+                transform var(--button-anim);
+
+            &:nth-child(3n + 1) {
                 border-left: 1px solid var(--alternating-color-1);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-1);
                 }
-                
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-1);
                 }
@@ -370,29 +391,29 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-1);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-1);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-1-hover-active);
                     }
                 }
             }
-    
+
             // alternating-color should be 2 (as in blue)
             // but for some reason obsidian renders it switched in stacked tabs
             // so 3n+2 must be alternating-color-3 not 2
-            &:nth-child(3n+2) {
+            &:nth-child(3n + 2) {
                 border-left: 1px solid var(--alternating-color-3);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-3);
                 }
-    
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-3);
                 }
@@ -400,29 +421,29 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-3);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-3);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-3-hover-active);
                     }
                 }
             }
-    
+
             // alternating-color should be 3 (as in red)
             // but for some reason obsidian renders it switched in stacked tabs
             // so 3n+3 must be alternating-color-2 not 3
-            &:nth-child(3n+3) {
+            &:nth-child(3n + 3) {
                 border-left: 1px solid var(--alternating-color-2);
 
                 .workspace-tab-header-inner-icon {
                     color: var(--alternating-color-2);
                 }
-    
+
                 .workspace-tab-header-inner-title {
                     color: var(--alternating-color-2);
                 }
@@ -430,12 +451,12 @@ body:not(.is-phone) .mod-root .workspace {
                 .workspace-tab-header-inner-close-button,
                 .workspace-tab-header-status-icon {
                     color: var(--alternating-color-2);
-    
+
                     &:hover {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-2);
                     }
-    
+
                     &:active {
                         color: var(--text-on-accent);
                         background: var(--alternating-color-2-hover-active);
@@ -447,12 +468,14 @@ body:not(.is-phone) .mod-root .workspace {
         // Non-active Tabs
         &:not(.is-active) {
             color: var(--icon-color);
-            transition: border, border-color var(--anim-duration-fast) var(--anim-motion-swing);
+            transition:
+                border,
+                border-color var(--anim-duration-fast) var(--anim-motion-swing);
 
             &:not(:first-child) {
                 border-left: 1px solid var(--background-modifier-border);
             }
-            
+
             &:hover,
             &:active {
                 color: var(--icon-color-hover);
@@ -494,7 +517,7 @@ body:not(.is-phone) .mod-root .workspace {
             --icon-size: var(--icon-s);
         }
     }
-    
+
     // Note Status Icon Shaping
     .workspace-tab-header-status-icon {
         --icon-size: var(--icon-xs);
