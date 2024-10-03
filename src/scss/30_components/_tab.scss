@@ -185,6 +185,16 @@ body:not(.is-phone) .mod-root .workspace {
     }
 }
 
+// Dark Mode Sidebar Tab on Hover Fix
+@media (hover: hover) {
+    .mod-left-split .workspace-tab-header.has-active-menu:hover,
+    .mod-right-split .workspace-tab-header.has-active-menu:hover,
+    .mod-left-split .workspace-tab-header.is-active:hover,
+    .mod-right-split .workspace-tab-header.is-active:hover {
+        background-color: var(--tab-active-bg);
+    }
+}
+
 // Primary Editor Tab Styling
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace {
     &-tab-header {

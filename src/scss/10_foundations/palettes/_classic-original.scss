@@ -105,19 +105,23 @@ body {
     --anim-popup: 0.3s slideUp forwards;
     --anim-popup-alt: 0.335s slideUpAlt forwards;
     --anim-popdown: 0.4s slideDown forwards;
-    --background-anim: background var(--anim-duration-fast) var(--anim-motion-smooth);
+    --background-anim: background var(--anim-duration-fast)
+        var(--anim-motion-smooth);
 
     /* Cursor */
     --cursor: pointer;
 
     /* Font */
-    --font-interface-theme: 'Inter';
-    --font-text-theme: 'Inter';
-    --font-monospace-theme: 'Cascadia Code';
+    --font-interface-theme: "Inter";
+    --font-text-theme: "Inter";
+    --font-monospace-theme: "Cascadia Code";
 
-    --interface-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
-    --text-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1, "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
-    --monospace-font-feature:  "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1, "ss19" 1, "zero" 1;
+    --interface-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
+        "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+    --text-font-feature: "calt" 1, "case" 0, "ccmp" 1, "ss03" 1, "cv01" 1,
+        "cv05" 1, "cv06" 1, "cv08" 0, "cv11" 1, "cv12" 0, "cv13" 0;
+    --monospace-font-feature: "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss05" 1,
+        "ss19" 1, "zero" 1;
 
     /* Font Sizes */
     // Fixed
@@ -199,14 +203,10 @@ body {
     /* Sidebar */
     --nav-item-white-space: nowrap;
     --nav-item-radius: 6px;
-    --nav-item-padding: calc(var(--size-4-1) + 1px)
-                        var(--size-4-2)
-                        calc(var(--size-4-1) + 1px)
-                        var(--size-4-6);
-    --nav-file-padding-active:  calc(var(--size-4-1))
-                                var(--size-4-2)
-                                calc(var(--size-4-1) + var(--button-inset-shadow-size))
-                                var(--size-4-6);
+    --nav-item-padding: calc(var(--size-4-1) + 1px) var(--size-4-2)
+        calc(var(--size-4-1) + 1px) var(--size-4-6);
+    --nav-file-padding-active: calc(var(--size-4-1)) var(--size-4-2)
+        calc(var(--size-4-1) + var(--button-inset-shadow-size)) var(--size-4-6);
 
     /* Status Bar */
     --status-bar-floating-opacity: 0.5;
@@ -227,32 +227,25 @@ body {
     --component-font-weight: var(--font-medium);
 
     /* Button */
-    --button-padding:   var(--size-4-2)
-                        var(--size-4-3)
-                        calc(var(--size-4-2) + var(--button-inset-shadow-size))
-                        var(--size-4-3);
-    --button-padding-active:    calc(var(--size-4-2) + var(--button-inset-shadow-size))
-                                var(--size-4-3)
-                                var(--size-4-2)
-                                var(--size-4-3);
+    --button-padding: var(--size-4-2) var(--size-4-3)
+        calc(var(--size-4-2) + var(--button-inset-shadow-size)) var(--size-4-3);
+    --button-padding-active: calc(
+            var(--size-4-2) + var(--button-inset-shadow-size)
+        )
+        var(--size-4-3) var(--size-4-2) var(--size-4-3);
     --button-inset-shadow-size: 2px;
     --button-axis-offset: 2px;
     --button-radius: var(--size-4-2);
 
-
-    --button-metadata-padding:  var(--size-2-3)
-                                var(--size-4-2)
-                                calc(var(--size-2-3) + var(--button-inset-shadow-size))
-                                var(--size-2-3);
-    --button-metadata-padding-active:   calc(var(--size-2-2) + var(--button-inset-shadow-size))
-                                        var(--size-4-2)
-                                        var(--size-2-3)                                   
-                                        var(--size-2-3);
+    --button-metadata-padding: var(--size-2-3) var(--size-4-2)
+        calc(var(--size-2-3) + var(--button-inset-shadow-size)) var(--size-2-3);
+    --button-metadata-padding-active: calc(
+            var(--size-2-2) + var(--button-inset-shadow-size)
+        )
+        var(--size-4-2) var(--size-2-3) var(--size-2-3);
     --button-s-radius: calc(var(--button-radius) * 0.8);
-    --button-s-padding: var(--size-2-2)
-                        var(--size-4-2)
-                        var(--size-2-2)
-                        var(--size-4-2);
+    --button-s-padding: var(--size-2-2) var(--size-4-2) var(--size-2-2)
+        var(--size-4-2);
 
     --button-anim: var(--anim-duration-fast) var(--anim-motion-jumpy);
 
@@ -262,10 +255,10 @@ body {
     --button-opacity-active: 0.5;
 
     /* Dropdown */
-    --dropdown-height:  calc(
-                            var(--font-ui-small) + 
-                            calc(var(--size-4-4) + var(--button-inset-shadow-size))
-                        );
+    --dropdown-height: calc(
+        var(--font-ui-small) +
+            calc(var(--size-4-4) + var(--button-inset-shadow-size))
+    );
 
     /* Menu */
     --menu-item-radius: calc(var(--radius-m) - 1px);
@@ -273,18 +266,12 @@ body {
     /* Modal */
     --modal-radius: var(--radius-xl);
     --modal-close-button-size: 20px;
-    --settings-nav-item-padding:    calc(var(--size-2-3) + 1px)
-                                    var(--size-4-3)
-                                    calc(var(--size-2-3) + 1px)
-                                    var(--size-4-3);
-    --settings-nav-item-padding-hover:  calc(var(--size-2-3) + 1px)
-                                        var(--size-4-3)
-                                        calc(var(--size-2-3) + 1px)
-                                        var(--size-4-5);
-    --settings-nav-item-padding-active: var(--size-2-3)
-                                        var(--size-4-3)
-                                        calc(var(--size-2-3) + var(--button-inset-shadow-size))
-                                        var(--size-4-5);
+    --settings-nav-item-padding: calc(var(--size-2-3) + 1px) var(--size-4-3)
+        calc(var(--size-2-3) + 1px) var(--size-4-3);
+    --settings-nav-item-padding-hover: calc(var(--size-2-3) + 1px)
+        var(--size-4-3) calc(var(--size-2-3) + 1px) var(--size-4-5);
+    --settings-nav-item-padding-active: var(--size-2-3) var(--size-4-3)
+        calc(var(--size-2-3) + var(--button-inset-shadow-size)) var(--size-4-5);
     --settings-nav-item-radius: calc(var(--radius-m) - 1px);
 
     /* Navigation */
@@ -335,10 +322,8 @@ body {
     --callout-shadow-offset: 4px;
     --callout-content-shadow-blur: 3px;
     --callout-title-padding: var(--size-4-3) var(--size-4-4);
-    --callout-content-padding:  var(--size-4-1)
-                                var(--size-4-4)
-                                calc(var(--size-4-1) + var(--callout-shadow-offset))
-                                var(--size-4-4);
+    --callout-content-padding: var(--size-4-1) var(--size-4-4)
+        calc(var(--size-4-1) + var(--callout-shadow-offset)) var(--size-4-4);
     --callout-radius: var(--radius-m);
     --callout-blend-mode: unset;
 
@@ -354,38 +339,28 @@ body {
     --embed-padding: var(--size-2-3) var(--embed-left-right-padding) 0px;
     --embed-left-right-padding: var(--size-4-4);
     --embed-border-radius: var(--radius-l);
-    --embed-border-top:
-        var(--embed-border-top-width)
-        var(--embed-border-top-style)
-        var(--embed-border-top-color);
+    --embed-border-top: var(--embed-border-top-width)
+        var(--embed-border-top-style) var(--embed-border-top-color);
     --embed-border-top-width: 1px;
     --embed-border-top-style: solid;
 
-    --embed-border-end:
-        var(--embed-border-end-width)
-        var(--embed-border-end-style)
-        var(--embed-border-end-color);
+    --embed-border-end: var(--embed-border-end-width)
+        var(--embed-border-end-style) var(--embed-border-end-color);
     --embed-border-end-width: 1px;
     --embed-border-end-style: solid;
 
-    --embed-border-bottom:
-        var(--embed-border-bottom-width)
-        var(--embed-border-bottom-style)
-        var(--embed-border-bottom-color);
+    --embed-border-bottom: var(--embed-border-bottom-width)
+        var(--embed-border-bottom-style) var(--embed-border-bottom-color);
     --embed-border-bottom-width: 1px;
     --embed-border-bottom-style: solid;
 
-    --embed-border-start:
-        var(--embed-border-start-width)
-        var(--embed-border-start-style)
-        var(--embed-border-start-color);
+    --embed-border-start: var(--embed-border-start-width)
+        var(--embed-border-start-style) var(--embed-border-start-color);
     --embed-border-start-width: 1px;
     --embed-border-start-style: solid;
 
-    --embed-title-border:
-        var(--embed-title-border-width)
-        var(--embed-title-border-style)
-        var(--embed-title-border-color);
+    --embed-title-border: var(--embed-title-border-width)
+        var(--embed-title-border-style) var(--embed-title-border-color);
     --embed-title-border-width: 1px;
     --embed-title-border-style: solid;
     --embed-title-margin-bottom: var(--size-4-2);
@@ -393,7 +368,7 @@ body {
     --embed-title-font-weight: var(--font-medium);
     --embed-title-letter-spacing: normal;
     --embed-title-text-transform: none;
-    
+
     --embed-media-border-radius: var(--radius-m);
 
     /* Emphasis */
@@ -445,7 +420,7 @@ body {
     --h4-border-width: 0px;
     --h4-border-style: solid;
     --h4-border-radius: 0px;
-    
+
     --h5-weight: var(--font-semibold);
     --h5-text-align: left;
     --h5-letter-spacing: unset;
@@ -504,10 +479,8 @@ body {
     /*────────── Community Plugins ──────────*/
 
     /* Calendar by Liam Cain */
-    --pmr-cal-td-padding:   var(--size-4-1)
-                            var(--size-4-1)
-                            calc(var(--size-4-1) + var(--button-inset-shadow-size))
-                            var(--size-4-1);
+    --pmr-cal-td-padding: var(--size-4-1) var(--size-4-1)
+        calc(var(--size-4-1) + var(--button-inset-shadow-size)) var(--size-4-1);
     --pmr-cal-td-radius: calc(var(--radius-s) + 1px);
 
     /* Kanban by mgmeyers */
@@ -586,7 +559,7 @@ body {
     --color-l-purple-40: hsla(265, 70%, 30%, 1);
 
     --color-l-alpha-purple: hsla(236, 100%, 72%, 0.2);
-    
+
     /*────────── Foundations ──────────*/
 
     /* Base Colors */
@@ -609,25 +582,27 @@ body {
     --accent-s: 23%;
     --accent-l: 50%;
 
-    --color-accent-hsl: var(--accent-h),
-                        var(--accent-s),
-                        var(--accent-l);
+    --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 
     --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1: hsl(
-                        calc(var(--accent-h) - 1),
-                        calc(var(--accent-s) * 1.01),
-                        calc(var(--accent-l) * 1.075)
-                        );
+        calc(var(--accent-h) - 1),
+        calc(var(--accent-s) * 1.01),
+        calc(var(--accent-l) * 1.075)
+    );
     // default for color-accent-2 is - 3, * 1.42, * 1.29
     --color-accent-2: hsl(
-                        calc(var(--accent-h) - 3),
-                        calc(var(--accent-s) * 1.33),
-                        calc(var(--accent-l) * 1.19) 
-                        );
+        calc(var(--accent-h) - 3),
+        calc(var(--accent-s) * 1.33),
+        calc(var(--accent-l) * 1.19)
+    );
 
     --interactive-normal: var(--color-l-gray-30);
-    --interactive-hover: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--interactive-normal));
+    --interactive-hover: color-mix(
+        in hsl,
+        var(--color-l-gray-10) 50%,
+        var(--interactive-normal)
+    );
 
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
@@ -673,14 +648,11 @@ body {
 
     /* Shadow */
     --shadow-xs: 0px 1px 2px rgba(0, 0, 0, 0.028),
-                 0px 1.4px 3.7px rgba(0, 0, 0, .042),
-                 0px 5px 10px rgba(0, 0, 0, .07);
+        0px 1.4px 3.7px rgba(0, 0, 0, 0.042), 0px 5px 10px rgba(0, 0, 0, 0.07);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
-                0px 3.4px 6.7px rgba(0, 0, 0, .042),
-                0px 15px 30px rgba(0, 0, 0, .07);
+        0px 3.4px 6.7px rgba(0, 0, 0, 0.042), 0px 15px 30px rgba(0, 0, 0, 0.07);
     --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.091),
-                0px 6.3px 24.7px rgba(0, 0, 0, 0.132),
-                0px 30px 90px rgba(0, 0, 0, 0.22);
+        0px 6.3px 24.7px rgba(0, 0, 0, 0.132), 0px 30px 90px rgba(0, 0, 0, 0.22);
 
     /* Background */
     --background-primary: var(--color-l-gray-20);
@@ -693,8 +665,16 @@ body {
     --background-modifier-active-hover: var(--color-l-gray-60);
 
     --background-modifier-border: var(--color-l-gray-60);
-    --background-modifier-border-hover: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
-    --background-modifier-border-focus: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
+    --background-modifier-border-hover: color-mix(
+        in hsl,
+        var(--color-l-gray-70) 60%,
+        var(--color-l-gray-60)
+    );
+    --background-modifier-border-focus: color-mix(
+        in hsl,
+        var(--color-l-gray-70) 60%,
+        var(--color-l-gray-60)
+    );
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
@@ -729,8 +709,16 @@ body {
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
 
-    --text-selection-theme-text-color: color-mix(in srgb, currentColor 70%, black);
-    --text-selection-theme-bg: color-mix(in srgb, var(--color-l-gray-70) 30%, transparent);
+    --text-selection-theme-text-color: color-mix(
+        in srgb,
+        currentColor 70%,
+        black
+    );
+    --text-selection-theme-bg: color-mix(
+        in srgb,
+        var(--color-l-gray-70) 30%,
+        transparent
+    );
 
     /* Icon Colors */
     --icon-color: var(--color-l-gray-80);
@@ -753,7 +741,7 @@ body {
     --sync-icon-success: var(--color-l-green-30);
     --sync-icon-success-hover: var(--color-l-green-20);
     --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
-    
+
     /*────────── Window ──────────*/
 
     /* Divider */
@@ -763,7 +751,7 @@ body {
     /* Ribbon */
     --ribbon-slideout-background: var(--color-l-gray-30);
     --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
-                            0px 5px 5px -5px rgba(0, 0, 0, 0.15);
+        0px 5px 5px -5px rgba(0, 0, 0, 0.15);
 
     /* Scrollbar */
     --scrollbar-bg: transparent;
@@ -773,7 +761,7 @@ body {
     /* Status Bar */
     --status-bar-floating-bg: var(--color-l-gray-30);
     --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.12),
-                                    0px 5px 5px -5px rgba(0, 0, 0, 0.15);
+        0px 5px 5px -5px rgba(0, 0, 0, 0.15);
     --status-bar-item-color: var(--color-l-gray-80);
     --status-bar-item-color-hover: var(--color-l-gray-100);
     --status-bar-item-bg-hover: transparent;
@@ -791,8 +779,9 @@ body {
     --vault-name-color: var(--color-l-gray-100);
     --vault-name-color-hover: var(--color-l-gray-120);
     --vault-name-background: var(--color-l-gray-30);
-    --vault-name-border: var(--vault-name-border-width) solid var(--background-modifier-border);
-    
+    --vault-name-border: var(--vault-name-border-width) solid
+        var(--background-modifier-border);
+
     /*────────── Components ──────────*/
 
     --disabled-component-opacity: 0.3;
@@ -801,43 +790,53 @@ body {
     --button-shadow: var(--input-shadow);
     --button-shadow-hover: var(--input-shadow-hover);
     --button-shadow-active: var(--input-shadow-active);
-    --button-shadow-focus:  inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
-                            inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
-                            0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
-                            0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
-                            0px 2px 4px -1px rgba(0, 0, 0, 0.05),
-                            0px 0px 0px 3px var(--color-l-alpha-gray);
+    --button-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.09),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
+        0px 2px 4px -1px rgba(0, 0, 0, 0.05),
+        0px 0px 0px 3px var(--color-l-alpha-gray);
 
     --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.09),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
-                            inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                            0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                            0px 2px 4px -2.7px rgba(0, 0, 0, 0.22),
-                            0px 2px 4px -1px rgba(0, 0, 0, 0.19);
-    --button-accent-shadow-hover:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
-                                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.19),
-                                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
-                                    inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                                    0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                                    0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                                    0px 2px 6px -1px rgba(0, 0, 0, 0.24);
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.15),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.22),
+        0px 2px 4px -1px rgba(0, 0, 0, 0.19);
+    --button-accent-shadow-hover: inset 0px 1px 0px 0px
+            rgba(255, 255, 255, 0.12),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.19),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.15),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+        0px 2px 6px -1px rgba(0, 0, 0, 0.24);
     --button-accent-shadow-active: var(--input-shadow-active);
-    --button-accent-shadow-focus:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
-                                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
-                                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.15),
-                                    inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                                    0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                                    0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                                    0px 2px 6px -1px rgba(0, 0, 0, 0.24),
-                                    0px 0px 0px 3px var(--color-l-alpha-gray);
+    --button-accent-shadow-focus: inset 0px 1px 0px 0px
+            rgba(255, 255, 255, 0.12),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.15),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+        0px 2px 6px -1px rgba(0, 0, 0, 0.24),
+        0px 0px 0px 3px var(--color-l-alpha-gray);
 
-    --empty-state-action-btn-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+    --empty-state-action-btn-bg: color-mix(
+        in srgb,
+        var(--background-primary-alt) 50%,
+        transparent
+    );
 
     --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
-    0px 2px 4px -2px rgba(0, 0, 0, 0.06);
+        0px 2px 4px -2px rgba(0, 0, 0, 0.06);
 
     /* Caret */
     --caret-color: var(--color-l-gray-80);
@@ -864,7 +863,11 @@ body {
     /* Alt Checkboxes */
     --inprogress-chbx-color: hsla(34, 82%, 57%, 1);
     --inprogress-chbx-color-hover: hsla(34, 82%, 64%, 1);
-    --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 65%, var(--color-base-60));
+    --inprogress-chbx-border-color: color-mix(
+        in srgb,
+        var(--inprogress-chbx-color) 65%,
+        var(--color-base-60)
+    );
     --resched-chbx-color: hsla(178, 18%, 59%, 1);
     --sched-chbx-color: hsla(32, 10%, 68%, 1);
     --important-chbx-color: hsla(17, 83%, 52%, 1);
@@ -926,10 +929,10 @@ body {
     --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     --community-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
     --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
-    --community-item-selected-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23),
-                                        0px 1px 3px -2.6px rgba(0, 0, 0, 0.23),
-                                        0px 2px 6px -4.2px rgba(0, 0, 0, 0.19),
-                                        0px 4px 12px -6px rgba(0, 0, 0, 0.9);
+    --community-item-selected-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23),
+        0px 1px 3px -2.6px rgba(0, 0, 0, 0.23),
+        0px 2px 6px -4.2px rgba(0, 0, 0, 0.19),
+        0px 4px 12px -6px rgba(0, 0, 0, 0.9);
 
     /* Navigation */
     --nav-item-color: var(--color-l-gray-110);
@@ -948,10 +951,11 @@ body {
     --nav-heading-color-hover: var(--color-l-gray-100);
     --nav-heading-color-collapsed: var(--color-l-gray-100);
     --nav-heading-color-collapsed-hover: var(--color-l-gray-100);
-    --nav-item-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
-    --nav-file-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
-                                inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.07),
-                                0px 2px 3px 0px rgba(0, 0, 0, 0.05);
+    --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
+    --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+        inset 0px calc(-1 * var(--button-axis-offset)) 0px
+            var(--button-axis-offset) rgba(0, 0, 0, 0.07),
+        0px 2px 3px 0px rgba(0, 0, 0, 0.05);
     --nav-file-tag-color: var(--color-l-gray-90);
     --nav-file-tag-bg: transparent;
 
@@ -968,10 +972,10 @@ body {
     /* Notice */
     --background-modifier-message: var(--color-l-gray-100);
     --notice-color: var(--text-on-accent);
-    --notice-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
-                            0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
-                            0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
-                            0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
+    --notice-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+        0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
+        0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
+        0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
 
     /* Pill */
     --pill-color: var(--color-l-gray-120);
@@ -980,8 +984,16 @@ body {
     --pill-color-remove-hover: var(--color-l-gray-70);
     --pill-background: rgba(255, 255, 255, 0.4);
     --pill-background-hover: var(--pill-background);
-    --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
-    --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+    --pill-border-color: color-mix(
+        in srgb,
+        var(--background-modifier-border) 50%,
+        transparent
+    );
+    --pill-border-color-hover: color-mix(
+        in srgb,
+        var(--background-modifier-border-hover) 50%,
+        transparent
+    );
 
     /* Progress */
     --progress-background: var(--color-l-gray-40);
@@ -992,7 +1004,12 @@ body {
     --progress-color-3: var(--color-l-yellow-20);
     --progress-color-4: var(--color-l-green-30);
 
-    --progress-color-5: linear-gradient(45deg, var(--progress-gradient-1), var(--progress-gradient-2), var(--progress-gradient-3));
+    --progress-color-5: linear-gradient(
+        45deg,
+        var(--progress-gradient-1),
+        var(--progress-gradient-2),
+        var(--progress-gradient-3)
+    );
     --progress-gradient-1: var(--color-l-red-10);
     --progress-gradient-2: var(--color-l-yellow-10);
     --progress-gradient-3: var(--color-l-blue-10);
@@ -1003,14 +1020,23 @@ body {
 
     --prompt-results-background: var(--background-primary);
     --prompt-suggestion-color: var(--color-l-gray-90);
-    --prompt-suggestion-highlight-color: color-mix(in srgb, var(--prompt-suggestion-color) 70%, black);
+    --prompt-suggestion-highlight-color: color-mix(
+        in srgb,
+        var(--prompt-suggestion-color) 70%,
+        black
+    );
     --prompt-suggestion-color-selected: var(--color-l-gray-130);
     --prompt-suggestion-highlight-color-selected: var(--color-l-gray-130);
     --prompt-suggestion-background-selected: rgba(255, 255, 255, 0.35);
-    --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                                         0px 2px 6px 0px rgba(0, 0, 0, 0.03);
+    --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px
+            rgba(0, 0, 0, 0.08),
+        0px 2px 6px 0px rgba(0, 0, 0, 0.03);
 
-    --prompt-instructions-background: color-mix(in hsl, var(--background-primary) 60%, var(--background-secondary));
+    --prompt-instructions-background: color-mix(
+        in hsl,
+        var(--background-primary) 60%,
+        var(--background-secondary)
+    );
 
     --prompt-separator-border: 1px solid var(--color-l-gray-40);
     --prompt-border-color: var(--background-modifier-border-focus);
@@ -1022,21 +1048,20 @@ body {
 
     /* Slider */
     --slider-track-background: var(--color-l-gray-60);
-    --slider-track-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                            0px 0px 0px 1px rgba(255, 255, 255, 0.08);
+    --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+        0px 0px 0px 1px rgba(255, 255, 255, 0.08);
 
     --slider-thumb-bg: var(--color-l-gray-10);
     --slider-thumb-border-width: 0px;
-    --slider-thumb-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                            inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
-                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
-                            0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    --slider-thumb-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+        inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
+        inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.1);
 
     --slider-thumb-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                                 inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
-                                 inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
-                                 0px 1px 2px 0px rgba(0, 0, 0, 0.1),
-                                 0px 0px 0px 6px rgba(0, 0, 0, 0.05);
+        inset 0pc 1px 0px 1px rgba(255, 255, 255, 1),
+        inset 0px -1px 0px 1px rgba(0, 0, 0, 0.09),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 6px rgba(0, 0, 0, 0.05);
 
     /* Tab */
     --tab-background-active: var(--background-primary);
@@ -1053,66 +1078,78 @@ body {
 
     --tab-bg: transparent;
     --tab-active-bg: var(--background-primary);
-    --tab-active-shadow:inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
-                        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.09),
-                        0px 1px 2px -0.1px rgba(0, 0, 0, 0.15);
+    --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px
+            rgba(0, 0, 0, 0.09),
+        0px 1px 2px -0.1px rgba(0, 0, 0, 0.15);
     // Stacked Tab
     --tab-outline-color: transparent;
-    --tab-stacked-shadow:   -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.08),
-                            -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.04),
-                            -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.06);
+    --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.08),
+        -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.04),
+        -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.06);
 
     /* Text Input */
     --background-modifier-form-field: var(--color-l-gray-30);
     --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
-                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
-                    inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
-                    0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
-                    0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
-                    0px 2px 4px -1px rgba(0, 0, 0, 0.05);
-    --input-shadow-hover:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.09),
-                            inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
-                            0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
-                            0px 2px 4px -2.7px rgba(0, 0, 0, 0.15),
-                            0px 2px 6px -1px rgba(0, 0, 0, 0.1);
-    --input-shadow-active:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                            inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.09),
-                            inset 0px 2px 8px 0px rgba(0, 0, 0, 0.2),
-                            0px 0px 0px 1px rgba(255, 255, 255, 0.6);
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.09),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.1),
+        0px 2px 4px -1px rgba(0, 0, 0, 0.05);
+    --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.09),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.1),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.4),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.15),
+        0px 2px 6px -1px rgba(0, 0, 0, 0.1);
+    --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+        inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size))
+            rgba(0, 0, 0, 0.09),
+        inset 0px 2px 8px 0px rgba(0, 0, 0, 0.2),
+        0px 0px 0px 1px rgba(255, 255, 255, 0.6);
 
     --text-input-color: var(--color-l-gray-130);
     --text-input-color-focused: var(--color-l-gray-130);
-    --text-input-bg-active: color-mix(in hsl, var(--background-modifier-form-field) 40%, var(--color-l-gray-10));
+    --text-input-bg-active: color-mix(
+        in hsl,
+        var(--background-modifier-form-field) 40%,
+        var(--color-l-gray-10)
+    );
     --text-input-border-color: var(--color-l-gray-60);
-    --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04), 0px 1px 6px 0px rgba(0, 0, 0, 0.07);
+    --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 1),
+        inset 0px -1px 0px 0px rgba(0, 0, 0, 0.04),
+        0px 1px 6px 0px rgba(0, 0, 0, 0.07);
 
     /* Toggle */
     --toggle-thumb-color: var(--color-l-gray-10);
-    --toggle-bg: color-mix(in hsl, var(--color-l-gray-60) 80%, var(--color-l-gray-70));
+    --toggle-bg: color-mix(
+        in hsl,
+        var(--color-l-gray-60) 80%,
+        var(--color-l-gray-70)
+    );
     --toggle-bg-enabled: var(--color-l-green-30);
-    --toggle-shadow:    inset 0 4px 10px rgba(0, 0, 0, 0.09),
-                        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
-                        inset 0 0 1px rgba(0, 0, 0, 0.28);
-    --toggle-shadow-hover:  inset 0 6px 20px rgba(0, 0, 0, 0.18),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
-                            inset 0 0 1px rgba(0, 0, 0, 0.32);  
-    --toggle-shadow-focus:  inset 0 6px 20px rgba(0, 0, 0, 0.18),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
-                            inset 0 0 1px rgba(0, 0, 0, 0.32),
-                            0px 0px 0px 5px rgba(0, 0, 0, 0.05);
+    --toggle-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.09),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+        inset 0 0 1px rgba(0, 0, 0, 0.28);
+    --toggle-shadow-hover: inset 0 6px 20px rgba(0, 0, 0, 0.18),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+        inset 0 0 1px rgba(0, 0, 0, 0.32);
+    --toggle-shadow-focus: inset 0 6px 20px rgba(0, 0, 0, 0.18),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+        inset 0 0 1px rgba(0, 0, 0, 0.32), 0px 0px 0px 5px rgba(0, 0, 0, 0.05);
 
-    --toggle-thumb-shadow:  inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
-                            0 2px 2px rgba(0, 0, 0, 0.2);
+    --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 1),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.2);
 
     /* Tooltip */
-    --tooltip-shadow:   inset 0px -1px 0px 0px rgba(0, 0, 0, 0.12),
-                        0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
-                        0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
-    
+    --tooltip-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.12),
+        0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
+        0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
+
     /*────────── Editor ──────────*/
 
     /* Active Line */
@@ -1133,25 +1170,26 @@ body {
 
     --callout-title-color: var(--text-normal);
     --callout-content-background: color-mix(
-                                    in srgb, 
-                                    var(--background-primary-alt) 50%, 
-                                    var(--background-primary)
-                                    );
+        in srgb,
+        var(--background-primary-alt) 50%,
+        var(--background-primary)
+    );
 
     --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                                0px 1px 6px 0px rgba(0, 0, 0, 0.12);
+        0px 1px 6px 0px rgba(0, 0, 0, 0.12);
     --callout-title-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.05),
-                            inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2);
-    --callout-content-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                                inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
+        inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2);
+    --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+        inset 0px calc(-1 * var(--callout-shadow-offset))
+            var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
 
     /* Embed */
     --embed-background: var(--embed-bg-color-mix);
     --embed-bg-color-mix: color-mix(
-                                    in srgb, 
-                                    var(--background-primary-alt) 50%, 
-                                    var(--editor-bg-color)
-                                    );
+        in srgb,
+        var(--background-primary-alt) 50%,
+        var(--editor-bg-color)
+    );
     --embed-border-top-color: var(--background-modifier-border);
     --embed-border-end-color: var(--background-modifier-border);
     --embed-border-bottom-color: var(--background-modifier-border);
@@ -1162,13 +1200,21 @@ body {
 
     --embed-block-shadow-hover: none;
 
-    --embed-edit-btn-bg: color-mix(in srgb, var(--color-l-gray-20) 70%, transparent);
-    --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 100%, transparent);
-    --embed-edit-btn-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1);
-    --embed-edit-btn-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                    inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1),
-                                    0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    --embed-edit-btn-bg: color-mix(
+        in srgb,
+        var(--color-l-gray-20) 70%,
+        transparent
+    );
+    --embed-edit-btn-bg-hover: color-mix(
+        in srgb,
+        var(--color-l-gray-20) 100%,
+        transparent
+    );
+    --embed-edit-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1);
+    --embed-edit-btn-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px -2px 1px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.1);
 
     /* Embed - Popover */
     --popover-border-color-editing: var(--background-modifier-border-focus);
@@ -1179,13 +1225,18 @@ body {
     --italic-color: var(--color-l-blue-30);
     --bold-italic-color: var(--color-l-gray-140);
     --underline-color: var(--text-normal);
-    --underline-decoration-color: color-mix(in srgb, currentColor var(--underline-decoration-opacity), transparent);
+    --underline-decoration-color: color-mix(
+        in srgb,
+        currentColor var(--underline-decoration-opacity),
+        transparent
+    );
     --strikethrough-color: var(--color-l-gray-80);
     --bold-italic-strikethrough-color: var(--color-l-gray-90);
 
     /* File */
     --editor-border-color: var(--background-modifier-border);
-    --file-header-border: var(--file-header-border-width) solid var(--file-header-border-color);
+    --file-header-border: var(--file-header-border-width) solid
+        var(--file-header-border-color);
     --file-header-border-color: var(--background-modifier-border);
 
     --breadcrumb-color: var(--color-l-gray-90);
@@ -1198,76 +1249,268 @@ body {
 
     /* File Explorer - Folders */
     --nav-folder-1-color: var(--color-l-red-30);
-    --nav-folder-1-bg-color: color-mix(in srgb, var(--color-l-alpha-red) 60%, transparent);
-    --nav-folder-1-bg-color-hover: color-mix(in srgb, var(--nav-folder-1-bg-color) 70%, transparent);
-    --nav-folder-1-collapse-color: color-mix(in srgb, var(--nav-folder-1-color) 50%, transparent);
-    --nav-folder-1-indent-color: color-mix(in srgb, var(--nav-folder-1-color) 25%, transparent);
+    --nav-folder-1-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-red) 60%,
+        transparent
+    );
+    --nav-folder-1-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-1-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-1-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-1-color) 50%,
+        transparent
+    );
+    --nav-folder-1-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-1-color) 25%,
+        transparent
+    );
 
     --nav-folder-2-color: var(--color-l-orange-30);
-    --nav-folder-2-bg-color: color-mix(in srgb, var(--color-l-alpha-orange) 60%, transparent);
-    --nav-folder-2-bg-color-hover: color-mix(in srgb, var(--nav-folder-2-bg-color) 70%, transparent);
-    --nav-folder-2-collapse-color: color-mix(in srgb, var(--nav-folder-2-color) 50%, transparent);
-    --nav-folder-2-indent-color: color-mix(in srgb, var(--nav-folder-2-color) 25%, transparent);
+    --nav-folder-2-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-orange) 60%,
+        transparent
+    );
+    --nav-folder-2-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-2-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-2-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-2-color) 50%,
+        transparent
+    );
+    --nav-folder-2-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-2-color) 25%,
+        transparent
+    );
 
     --nav-folder-3-color: var(--color-l-yellow-40);
-    --nav-folder-3-bg-color: color-mix(in srgb, var(--color-l-alpha-yellow) 60%, transparent);
-    --nav-folder-3-bg-color-hover: color-mix(in srgb, var(--nav-folder-3-bg-color) 70%, transparent);
-    --nav-folder-3-collapse-color: color-mix(in srgb, var(--nav-folder-3-color) 50%, transparent);
-    --nav-folder-3-indent-color: color-mix(in srgb, var(--nav-folder-3-color) 25%, transparent);
+    --nav-folder-3-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-yellow) 60%,
+        transparent
+    );
+    --nav-folder-3-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-3-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-3-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-3-color) 50%,
+        transparent
+    );
+    --nav-folder-3-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-3-color) 25%,
+        transparent
+    );
 
     --nav-folder-4-color: var(--color-l-green-40);
-    --nav-folder-4-bg-color: color-mix(in srgb, var(--color-l-alpha-green) 60%, transparent);
-    --nav-folder-4-bg-color-hover: color-mix(in srgb, var(--nav-folder-4-bg-color) 70%, transparent);
-    --nav-folder-4-collapse-color: color-mix(in srgb, var(--nav-folder-4-color) 50%, transparent);
-    --nav-folder-4-indent-color: color-mix(in srgb, var(--nav-folder-4-color) 25%, transparent);
+    --nav-folder-4-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-green) 60%,
+        transparent
+    );
+    --nav-folder-4-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-4-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-4-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-4-color) 50%,
+        transparent
+    );
+    --nav-folder-4-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-4-color) 25%,
+        transparent
+    );
 
     --nav-folder-5-color: var(--color-l-blue-30);
-    --nav-folder-5-bg-color: color-mix(in srgb, var(--color-l-alpha-blue) 60%, transparent);
-    --nav-folder-5-bg-color-hover: color-mix(in srgb, var(--nav-folder-5-bg-color) 70%, transparent);
-    --nav-folder-5-collapse-color: color-mix(in srgb, var(--nav-folder-5-color) 50%, transparent);
-    --nav-folder-5-indent-color: color-mix(in srgb, var(--nav-folder-5-color) 25%, transparent);
+    --nav-folder-5-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-blue) 60%,
+        transparent
+    );
+    --nav-folder-5-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-5-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-5-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-5-color) 50%,
+        transparent
+    );
+    --nav-folder-5-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-5-color) 25%,
+        transparent
+    );
 
     --nav-folder-6-color: var(--color-l-purple-30);
-    --nav-folder-6-bg-color: color-mix(in srgb, var(--color-l-alpha-purple) 60%, transparent);
-    --nav-folder-6-bg-color-hover: color-mix(in srgb, var(--nav-folder-6-bg-color) 70%, transparent);
-    --nav-folder-6-collapse-color: color-mix(in srgb, var(--nav-folder-6-color) 50%, transparent);
-    --nav-folder-6-indent-color: color-mix(in srgb, var(--nav-folder-6-color) 25%, transparent);
+    --nav-folder-6-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-purple) 60%,
+        transparent
+    );
+    --nav-folder-6-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-6-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-6-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-6-color) 50%,
+        transparent
+    );
+    --nav-folder-6-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-6-color) 25%,
+        transparent
+    );
 
     --nav-folder-7-color: var(--color-l-red-30);
-    --nav-folder-7-bg-color: color-mix(in srgb, var(--color-l-alpha-red) 60%, transparent);
-    --nav-folder-7-bg-color-hover: color-mix(in srgb, var(--nav-folder-7-bg-color) 70%, transparent);
-    --nav-folder-7-collapse-color: color-mix(in srgb, var(--nav-folder-7-color) 50%, transparent);
-    --nav-folder-7-indent-color: color-mix(in srgb, var(--nav-folder-7-color) 25%, transparent);
+    --nav-folder-7-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-red) 60%,
+        transparent
+    );
+    --nav-folder-7-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-7-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-7-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-7-color) 50%,
+        transparent
+    );
+    --nav-folder-7-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-7-color) 25%,
+        transparent
+    );
 
     --nav-folder-8-color: var(--color-l-orange-30);
-    --nav-folder-8-bg-color: color-mix(in srgb, var(--color-l-alpha-orange) 60%, transparent);
-    --nav-folder-8-bg-color-hover: color-mix(in srgb, var(--nav-folder-8-bg-color) 70%, transparent);
-    --nav-folder-8-collapse-color: color-mix(in srgb, var(--nav-folder-8-color) 50%, transparent);
-    --nav-folder-8-indent-color: color-mix(in srgb, var(--nav-folder-8-color) 25%, transparent);
+    --nav-folder-8-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-orange) 60%,
+        transparent
+    );
+    --nav-folder-8-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-8-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-8-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-8-color) 50%,
+        transparent
+    );
+    --nav-folder-8-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-8-color) 25%,
+        transparent
+    );
 
     --nav-folder-9-color: var(--color-l-yellow-40);
-    --nav-folder-9-bg-color: color-mix(in srgb, var(--color-l-alpha-yellow) 60%, transparent);
-    --nav-folder-9-bg-color-hover: color-mix(in srgb, var(--nav-folder-9-bg-color) 70%, transparent);
-    --nav-folder-9-collapse-color: color-mix(in srgb, var(--nav-folder-9-color) 50%, transparent);
-    --nav-folder-9-indent-color: color-mix(in srgb, var(--nav-folder-9-color) 25%, transparent);
+    --nav-folder-9-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-yellow) 60%,
+        transparent
+    );
+    --nav-folder-9-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-9-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-9-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-9-color) 50%,
+        transparent
+    );
+    --nav-folder-9-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-9-color) 25%,
+        transparent
+    );
 
     --nav-folder-10-color: var(--color-l-green-40);
-    --nav-folder-10-bg-color: color-mix(in srgb, var(--color-l-alpha-green) 60%, transparent);
-    --nav-folder-10-bg-color-hover: color-mix(in srgb, var(--nav-folder-10-bg-color) 70%, transparent);
-    --nav-folder-10-collapse-color: color-mix(in srgb, var(--nav-folder-10-color) 50%, transparent);
-    --nav-folder-10-indent-color: color-mix(in srgb, var(--nav-folder-10-color) 25%, transparent);
+    --nav-folder-10-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-green) 60%,
+        transparent
+    );
+    --nav-folder-10-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-10-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-10-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-10-color) 50%,
+        transparent
+    );
+    --nav-folder-10-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-10-color) 25%,
+        transparent
+    );
 
     --nav-folder-11-color: var(--color-l-blue-30);
-    --nav-folder-11-bg-color: color-mix(in srgb, var(--color-l-alpha-blue) 60%, transparent);
-    --nav-folder-11-bg-color-hover: color-mix(in srgb, var(--nav-folder-11-bg-color) 70%, transparent);
-    --nav-folder-11-collapse-color: color-mix(in srgb, var(--nav-folder-11-color) 50%, transparent);
-    --nav-folder-11-indent-color: color-mix(in srgb, var(--nav-folder-11-color) 25%, transparent);
+    --nav-folder-11-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-blue) 60%,
+        transparent
+    );
+    --nav-folder-11-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-11-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-11-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-11-color) 50%,
+        transparent
+    );
+    --nav-folder-11-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-11-color) 25%,
+        transparent
+    );
 
     --nav-folder-12-color: var(--color-l-purple-30);
-    --nav-folder-12-bg-color: color-mix(in srgb, var(--color-l-alpha-purple) 60%, transparent);
-    --nav-folder-12-bg-color-hover: color-mix(in srgb, var(--nav-folder-12-bg-color) 70%, transparent);
-    --nav-folder-12-collapse-color: color-mix(in srgb, var(--nav-folder-12-color) 50%, transparent);
-    --nav-folder-12-indent-color: color-mix(in srgb, var(--nav-folder-12-color) 25%, transparent);
+    --nav-folder-12-bg-color: color-mix(
+        in srgb,
+        var(--color-l-alpha-purple) 60%,
+        transparent
+    );
+    --nav-folder-12-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-12-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-12-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-12-color) 50%,
+        transparent
+    );
+    --nav-folder-12-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-12-color) 25%,
+        transparent
+    );
 
     /* Bookmarks - Folders */
     --bookmark-folder-1-color: var(--nav-folder-1-color);
@@ -1343,7 +1586,11 @@ body {
     --bookmark-folder-12-indent-color: var(--nav-folder-12-indent-color);
 
     /* Gutter */
-    --gutter-color: color-mix(in hsl, var(--color-l-gray-60) 40%, var(--color-l-gray-70));
+    --gutter-color: color-mix(
+        in hsl,
+        var(--color-l-gray-60) 40%,
+        var(--color-l-gray-70)
+    );
     --gutter-color-active: var(--color-l-gray-90);
 
     /* Headings */
@@ -1413,14 +1660,19 @@ body {
     --inline-title-color: var(--color-l-gray-140);
 
     /* Inline Query */
-    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 20%, var(--editor-bg-color));
+    --inline-query-bg: color-mix(
+        in srgb,
+        var(--background-secondary) 20%,
+        var(--editor-bg-color)
+    );
     --inline-query-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
 
     /* KBD */
     --kbd-color: var(--color-l-red-10);
     --kbd-background: var(--color-l-gray-40);
-    --kbd-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
-                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.06);
+    --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px
+            rgba(0, 0, 0, 0.06);
 
     /* List */
     --list-marker-color: var(--color-l-gray-80);
@@ -1429,28 +1681,63 @@ body {
 
     /* Link */
     --link-ahref-color: var(--color-l-red-20);
-    --link-ahref-decoration-color: color-mix(in srgb, currentColor var(--link-decoration-opacity), transparent);
+    --link-ahref-decoration-color: color-mix(
+        in srgb,
+        currentColor var(--link-decoration-opacity),
+        transparent
+    );
     --link-ahref-color-hover: var(--color-l-red-10);
-    --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) var(--link-decoration-opacity), transparent);
+    --link-ahref-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-ahref-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     --link-unresolved-color: var(--color-l-gray-80);
-    --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) var(--link-decoration-opacity), transparent);
+    --link-unresolved-decoration-color: color-mix(
+        in srgb,
+        var(--link-unresolved-color) var(--link-decoration-opacity),
+        transparent
+    );
     --link-unresolved-color-hover: var(--color-l-gray-70);
-    --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) var(--link-decoration-opacity), transparent);
+    --link-unresolved-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-unresolved-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     --link-color: var(--color-l-yellow-30);
-    --link-decoration-color: color-mix(in srgb, var(--link-color) var(--link-decoration-opacity), transparent);
+    --link-decoration-color: color-mix(
+        in srgb,
+        var(--link-color) var(--link-decoration-opacity),
+        transparent
+    );
     --link-color-hover: var(--color-l-yellow-20);
-    --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) var(--link-decoration-opacity), transparent);
-
+    --link-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     --link-external-color: var(--color-l-green-30);
-    --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) var(--link-decoration-opacity), transparent);
+    --link-external-decoration-color: color-mix(
+        in srgb,
+        var(--link-external-color) var(--link-decoration-opacity),
+        transparent
+    );
     --link-external-color-hover: var(--color-l-green-20);
-    --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) var(--link-decoration-opacity), transparent);
+    --link-external-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-external-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     /* Properties | Metadata */
-    --metadata-background: color-mix(in srgb, var(--editor-bg-color) 50%, var(--background-primary-alt));
+    --metadata-background: color-mix(
+        in srgb,
+        var(--editor-bg-color) 50%,
+        var(--background-primary-alt)
+    );
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-l-gray-70);
     --metadata-properties-title-color-hover: var(--color-l-gray-80);
@@ -1461,8 +1748,9 @@ body {
     --metadata-input-background-active: rgba(255, 255, 255, 0.45);
     --metadata-label-background-active: var(--metadata-input-background-active);
     --metadata-input-shadow-hover: none;
-    --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
-                                    0px 0px 0px 1px var(--background-modifier-border);
+    --metadata-input-shadow-active: inset 0px 0px 0px 1px
+            var(--background-modifier-border),
+        0px 0px 0px 1px var(--background-modifier-border);
     --metadata-key-input-color: var(--color-l-gray-100);
     --metadata-key-input-color-active: var(--color-l-gray-120);
 
@@ -1493,7 +1781,7 @@ body {
     --tag-border-color-hover: rgba(0, 0, 0, 0.25);
     --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
     --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1),
-                        0px 0px 0px 3px rgba(0, 0, 0, 0.03);
+        0px 0px 0px 3px rgba(0, 0, 0, 0.03);
     --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.1);
 
     --pill-tag-color-1: var(--color-l-yellow-40);
@@ -1505,31 +1793,35 @@ body {
     --pill-tag-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
 
     /*────────── Mobile ──────────*/
-    
+
     &.is-mobile {
         --mobile-sidebar-background: var(--background-secondary);
         --nav-item-color: var(--text-muted);
 
-        --mobile-sidebar-left-shadow:   5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
-                                        10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
-        --mobile-sidebar-right-shadow:  -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
-                                        -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+        --mobile-sidebar-left-shadow: 5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+            10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
+        --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.09),
+            -10px 0px 20px -4.9px rgba(0, 0, 0, 0.02);
         --mobile-sidebar-tablet-shadow: 0px 2px 6px -0.3px rgba(0, 0, 0, 0.1),
-                                        0px 5px 14px -0.6px rgba(0, 0, 0, 0.09),
-                                        0px 10px 20px -4.9px rgba(0, 0, 0, 0.02);
+            0px 5px 14px -0.6px rgba(0, 0, 0, 0.09),
+            0px 10px 20px -4.9px rgba(0, 0, 0, 0.02);
 
-        --mobile-toolbar-bg: color-mix(in srgb, var(--background-primary) 50%, var(--background-primary-alt));
+        --mobile-toolbar-bg: color-mix(
+            in srgb,
+            var(--background-primary) 50%,
+            var(--background-primary-alt)
+        );
 
-        --navbar-shadow:    0px 4px 20px 0px rgba(0, 0, 0, 0.1),
-                            0px 1px 4px 0px rgba(0, 0, 0, 0.05);
+        --navbar-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1),
+            0px 1px 4px 0px rgba(0, 0, 0, 0.05);
 
         // Same as Notice
-        --pull-down-action-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
-                                    0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
-                                    0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
-                                    0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
+        --pull-down-action-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+            0px 2px 9px -2.1px rgba(0, 0, 0, 0.38),
+            0px 3px 17px -4.3px rgba(0, 0, 0, 0.12),
+            0px 7px 30px -5.5px rgba(0, 0, 0, 0.09);
     }
-    
+
     /*────────── Core Plugins ──────────*/
 
     /* Canvas */
@@ -1545,12 +1837,16 @@ body {
     --canvas-icon-color: var(--color-l-gray-80);
     --canvas-icon-color-hover: var(--color-l-gray-120);
     --canvas-icon-color-disabled: var(--color-l-gray-60);
-    --canvas-menu-bg: color-mix(in hsl, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
+    --canvas-menu-bg: color-mix(
+        in hsl,
+        var(--color-l-gray-10) 50%,
+        var(--color-l-gray-20)
+    );
     --canvas-menu-bg-hover: var(--color-l-gray-10);
-    --canvas-menu-border:   1px solid var(--background-modifier-border);
-    --canvas-menu-shadow:   0px 1px 2px 1px rgba(0, 0, 0, 0.02),
-                            0px 1px 4px -2.1px rgba(0, 0, 0, 0.1),
-                            0px 2px 8px -1.2px rgba(0, 0, 0, 0.03);
+    --canvas-menu-border: 1px solid var(--background-modifier-border);
+    --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.02),
+        0px 1px 4px -2.1px rgba(0, 0, 0, 0.1),
+        0px 2px 8px -1.2px rgba(0, 0, 0, 0.03);
 
     /* Graph */
     --graph-node: var(--color-l-blue-20);
@@ -1568,21 +1864,30 @@ body {
 
     /* Search */
     --search-result-background: var(--background-primary-alt);
-    --search-result-background-hover: color-mix(in srgb, var(--color-l-gray-10) 50%, var(--color-l-gray-20));
+    --search-result-background-hover: color-mix(
+        in srgb,
+        var(--color-l-gray-10) 50%,
+        var(--color-l-gray-20)
+    );
 
     --search-result-dest-file-color: var(--color-l-gray-100);
     --search-result-dest-file-bg: var(--color-l-gray-20);
     --search-result-dest-file-icon-color: var(--color-l-gray-70);
-    --search-result-dest-file-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
+    --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
 
-    --search-result-dest-file-bg-hover: color-mix(in srgb, var(--color-l-gray-20) 50%, var(--color-l-gray-10));
-    --search-result-dest-file-shadow-hover:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
-                                        0px 2px 3px 0px rgba(0, 0, 0, 0.09);
-    
+    --search-result-dest-file-bg-hover: color-mix(
+        in srgb,
+        var(--color-l-gray-20) 50%,
+        var(--color-l-gray-10)
+    );
+    --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px
+            rgba(0, 0, 0, 0.1),
+        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 2px 3px 0px rgba(0, 0, 0, 0.09);
+
     /*────────── Community Plugins ──────────*/
-    
+
     /* Calendar by Liam Cain */
     #calendar-container {
         --color-dot: var(--color-l-blue-20);
@@ -1590,7 +1895,7 @@ body {
         --color-arrow-hover: var(--color-l-gray-90);
         --color-arrow-active: var(--color-l-gray-100);
         --color-button: var(--color-l-gray-100);
-      
+
         --pmr-cal-month-color: var(--color-l-gray-120);
         --pmr-cal-year-color: var(--color-l-gray-90);
 
@@ -1602,11 +1907,11 @@ body {
         --color-text-weeknum: var(--color-l-gray-80);
 
         --pmr-cal-day-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                    0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+        --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+            0px 0px 4px 0px rgba(0, 0, 0, 0.05);
         --pmr-cal-day-color-active: var(--color-l-gray-80);
         --pmr-cal-day-dot-opacity-active: 0.5;
-        --pmr-cal-day-background-active:  var(--color-l-gray-60);
+        --pmr-cal-day-background-active: var(--color-l-gray-60);
 
         --pmr-cal-active-day-color: var(--color-l-gray-140);
         --pmr-cal-active-day-background: rgba(255, 255, 255, 0.25);
@@ -1614,9 +1919,9 @@ body {
     }
 
     /* Day Planner by Ivan Lendev */
-    .workspace-leaf-content[data-type=timeline] .view-content,
-    .workspace-leaf-content[data-type=weekly] .view-content,
-    .workspace-leaf-content[data-type=timeTracker] .view-content {
+    .workspace-leaf-content[data-type="timeline"] .view-content,
+    .workspace-leaf-content[data-type="weekly"] .view-content,
+    .workspace-leaf-content[data-type="timeTracker"] .view-content {
         // allows to differentiate colors for timeboxes (current and non-current)
         .content,
         .tasks {
@@ -1629,37 +1934,41 @@ body {
         --dp-time-indicator-color: var(--color-l-red-10);
         --dp-hours-bg-color: inherit;
         --dp-scroller-bg-color: inherit;
-        --dp-task-shadow:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7),
-                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
-                            0px 2px 7px -1.6px rgba(0, 0, 0, 0.09);
+        --dp-task-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7),
+            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+            0px 2px 7px -1.6px rgba(0, 0, 0, 0.09);
 
         --dp-weekday-color: var(--color-l-gray-110);
         --dp-weekday-bg-color: var(--editor-bg-color);
         --shadow-right: none;
-        --shadow-bottom:    0px 4px 9px rgba(0, 0, 0, 0.025),
-                            0px 8px 11px rgba(0, 0, 0, 0.045);
+        --shadow-bottom: 0px 4px 9px rgba(0, 0, 0, 0.025),
+            0px 8px 11px rgba(0, 0, 0, 0.045);
     }
 
     /* Kanban by mgmeyers */
-    --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--editor-bg-color));
+    --kanban-lane-bg: color-mix(
+        in srgb,
+        var(--background-primary-alt) 50%,
+        var(--editor-bg-color)
+    );
     --kanban-lane-border: 1px solid var(--color-l-gray-40);
-    --kanban-lane-shadow:   none;
-    
+    --kanban-lane-shadow: none;
+
     --kanban-title-text-input-color: var(--text-normal);
     --kanban-title-count-color: var(--color-l-gray-120);
     --kanban-title-count-bg: var(--color-l-gray-60);
 
     --kanban-item-bg: var(--color-l-gray-10);
     --kanban-item-border: none;
-    --kanban-item-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
-                            inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
-                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
-                            0px 2px 2px 0px rgba(0, 0, 0, 0.03);
+    --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.09),
+        inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6),
+        inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.03);
 
     --kanban-drag-item-border: none;
-    --kanban-drag-item-shadow:  0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.19),
-                                0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.22),
-                                0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.29);
+    --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.19),
+        0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.22),
+        0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.29);
 
     --kanban-new-item-color: var(--text-faint);
     --kanban-new-item-color-hover: var(--text-muted);
@@ -1667,42 +1976,46 @@ body {
     --kanban-new-item-bg-hover: var(--background-primary);
     --kanban-new-item-shadow: none;
     --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12),
-                                    0px 2px 4px 0px rgba(0, 0, 0, 0.04);
+        0px 2px 4px 0px rgba(0, 0, 0, 0.04);
 
     /* Style Settings by mgmeyers */
-    --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+    --style-settings-container-bg: color-mix(
+        in srgb,
+        var(--background-primary-alt) 50%,
+        transparent
+    );
     --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.2);
 }
 
 /*───────────────────────────────────
-            Dark Palette
+                    Dark Palette
 ───────────────────────────────────*/
 .theme-dark {
     /*────────── Color Palette ──────────*/
     color-scheme: dark;
 
     /* Grayscale */
-    --color-d-gray-10: hsla(32, 48%, 85%, 1);
-    --color-d-gray-20: hsla(34, 39%, 74%, 1);
+    --color-d-gray-10: hsla(32, 48%, 89%, 1);
+    --color-d-gray-20: hsla(34, 39%, 78%, 1);
     --color-d-gray-30: hsla(34, 31%, 68%, 1);
-    --color-d-gray-40: hsla(35, 27%, 55%, 1);
+    --color-d-gray-40: hsla(35, 27%, 53%, 1);
     --color-d-gray-50: hsla(34, 24%, 46%, 1);
     --color-d-gray-60: hsla(33, 27%, 33%, 1);
     --color-d-gray-70: hsla(31, 27%, 25%, 1);
-    --color-d-gray-80: hsla(28, 22%, 19%, 1);
-    --color-d-gray-90: hsla(33, 20%, 17%, 1);
-    --color-d-gray-100: hsla(30, 19%, 15%, 1);
-    --color-d-gray-110: hsla(30, 17%, 14%, 1);
-    --color-d-gray-120: hsla(29, 16%, 13%, 1);
-    --color-d-gray-130: hsla(24, 18%, 11%, 1);
-    --color-d-gray-140: hsla(32, 21%, 9%, 1);
+    --color-d-gray-80: hsla(28, 22%, 21%, 1);
+    --color-d-gray-90: hsla(33, 20%, 19%, 1);
+    --color-d-gray-100: hsla(30, 19%, 17%, 1);
+    --color-d-gray-110: hsla(30, 18%, 16%, 1);
+    --color-d-gray-120: hsla(29, 19%, 14%, 1);
+    --color-d-gray-130: hsla(24, 16%, 12%, 1);
+    --color-d-gray-140: hsla(32, 21%, 10%, 1);
 
     --color-d-alpha-gray: hsla(34, 24%, 40%, 0.2);
 
     /* Red */
     --color-d-red-10: hsla(5, 94%, 73%, 1);
     --color-d-red-20: hsla(4, 91%, 67%, 1);
-    --color-d-red-30: hsla(4, 88%, 61%, 1);
+    --color-d-red-30: hsla(4, 90%, 61%, 1);
     --color-d-red-40: hsla(2, 75%, 52%, 1);
 
     --color-d-alpha-red: hsla(350, 84%, 63%, 0.2);
@@ -1716,7 +2029,7 @@ body {
     --color-d-alpha-orange: hsla(27, 100%, 50%, 0.2);
 
     /* Yellow */
-    --color-d-yellow-10: hsla(43, 69%, 63%, 1);
+    --color-d-yellow-10: hsla(43, 69%, 59%, 1);
     --color-d-yellow-20: hsla(42, 79%, 51%, 1);
     --color-d-yellow-30: hsla(40, 78%, 48%, 1);
     --color-d-yellow-40: hsla(38, 76%, 42%, 1);
@@ -1762,32 +2075,34 @@ body {
     --color-base-60: var(--color-d-gray-30);
     --color-base-70: var(--color-d-gray-20);
     --color-base-100: var(--color-d-gray-10);
-    
+
     /* Accent Colors */
     // Primary Classic Dark: color-d-gray-70
     --accent-h: 31;
     --accent-s: 27%;
     --accent-l: 24%;
 
-    --color-accent-hsl: var(--accent-h),
-                        var(--accent-s),
-                        var(--accent-l);
+    --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 
     --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1: hsl(
-                        calc(var(--accent-h) - 3),
-                        calc(var(--accent-s) * 1.02),
-                        calc(var(--accent-l) * 1.15)
-                        );
+        calc(var(--accent-h) - 3),
+        calc(var(--accent-s) * 1.02),
+        calc(var(--accent-l) * 1.15)
+    );
     // default for color-accent-2 is - 5, * 1.13, * 1.31
     --color-accent-2: hsl(
-                        calc(var(--accent-h) - 5),
-                        calc(var(--accent-s) * 1.16),
-                        calc(var(--accent-l) * 1.34)
-                        );
+        calc(var(--accent-h) - 5),
+        calc(var(--accent-s) * 1.16),
+        calc(var(--accent-l) * 1.34)
+    );
 
     --interactive-normal: var(--color-d-gray-120);
-    --interactive-hover: color-mix(in hsl, var(--color-d-gray-100) 50%, var(--interactive-normal));
+    --interactive-hover: color-mix(
+        in hsl,
+        var(--color-d-gray-100) 50%,
+        var(--interactive-normal)
+    );
 
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
@@ -1833,11 +2148,9 @@ body {
 
     /* Shadow */
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.228),
-                0px 3.4px 6.7px rgba(0, 0, 0, .242),
-                0px 15px 30px rgba(0, 0, 0, .27);
+        0px 3.4px 6.7px rgba(0, 0, 0, 0.242), 0px 15px 30px rgba(0, 0, 0, 0.27);
     --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.271),
-                0px 6.3px 24.7px rgba(0, 0, 0, 0.312),
-                0px 30px 90px rgba(0, 0, 0, 0.4);
+        0px 6.3px 24.7px rgba(0, 0, 0, 0.312), 0px 30px 90px rgba(0, 0, 0, 0.4);
 
     /* Background */
     --background-primary: var(--color-d-gray-100);
@@ -1850,8 +2163,16 @@ body {
     --background-modifier-active-hover: var(--color-d-gray-70);
 
     --background-modifier-border: var(--color-d-gray-80);
-    --background-modifier-border-hover: color-mix(in srgb, var(--color-d-gray-70) 40%, var(--color-d-gray-80));
-    --background-modifier-border-focus: color-mix(in srgb, var(--color-d-gray-70) 40%, var(--color-d-gray-80));
+    --background-modifier-border-hover: color-mix(
+        in srgb,
+        var(--color-d-gray-70) 40%,
+        var(--color-d-gray-80)
+    );
+    --background-modifier-border-focus: color-mix(
+        in srgb,
+        var(--color-d-gray-70) 40%,
+        var(--color-d-gray-80)
+    );
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
@@ -1886,14 +2207,22 @@ body {
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
 
-    --text-selection-theme-text-color: color-mix(in srgb, currentColor 70%, white);
-    --text-selection-theme-bg: color-mix(in srgb, var(--color-d-gray-50) 30%, transparent);
+    --text-selection-theme-text-color: color-mix(
+        in srgb,
+        currentColor 70%,
+        white
+    );
+    --text-selection-theme-bg: color-mix(
+        in srgb,
+        var(--color-d-gray-50) 30%,
+        transparent
+    );
 
     /* Icon Colors */
-    --icon-color: color-mix(in srgb, var(--color-d-gray-60) 30%, var(--color-d-gray-50));
+    --icon-color: color-mix(in srgb, var(--color-d-gray-60) 70%, var(--color-d-gray-50));
     --icon-opacity: 1;
     --icon-bg: transparent;
-    --icon-color-hover: color-mix(in srgb, var(--color-d-gray-50) 70%, var(--color-d-gray-40));
+    --icon-color-hover: var(--color-d-gray-40);
     --icon-opacity-hover: 1;
     --icon-bg-hover: transparent;
     --icon-color-focused: var(--color-d-gray-50);
@@ -1912,7 +2241,7 @@ body {
     --sync-icon-success-active: var(--status-bar-item-clickable-color-active);
 
     --search-icon-color: var(--icon-color);
-    
+
     /*────────── Window ──────────*/
 
     /* Divider */
@@ -1922,7 +2251,7 @@ body {
     /* Ribbon */
     --ribbon-slideout-background: var(--color-d-gray-110);
     --ribbon-slideout-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
-                                0px 5px 5px -5px rgba(0, 0, 0, 0.38);
+        0px 5px 5px -5px rgba(0, 0, 0, 0.38);
 
     /* Scrollbar */
     --scrollbar-bg: transparent;
@@ -1932,9 +2261,9 @@ body {
     /* Status Bar */
     --status-bar-floating-bg: var(--color-d-gray-110);
     --status-bar-floating-shadow: 8px 7px 21px -4px rgba(0, 0, 0, 0.35),
-                                    0px 5px 5px -5px rgba(0, 0, 0, 0.38);
-    --status-bar-item-color: var(--color-d-gray-50);
-    --status-bar-item-color-hover: var(--color-d-gray-30);
+        0px 5px 5px -5px rgba(0, 0, 0, 0.38);
+    --status-bar-item-color: var(--color-d-gray-60);
+    --status-bar-item-color-hover: var(--color-d-gray-40);
     --status-bar-item-bg-hover: transparent;
     --status-bar-item-clickable-color-active: var(--color-d-gray-60);
     --status-bar-item-clickable-bg-active: transparent;
@@ -1951,7 +2280,7 @@ body {
     --vault-name-color-hover: var(--color-d-gray-30);
     --vault-name-background: var(--color-d-gray-110);
     --vault-name-border: 1px solid var(--background-modifier-border);
-    
+
     /*────────── Components ──────────*/
 
     --disabled-component-opacity: 0.3;
@@ -1960,49 +2289,55 @@ body {
     --button-shadow: var(--input-shadow);
     --button-shadow-hover: var(--input-shadow-hover);
     --button-shadow-active: var(--input-shadow-active);
-    --button-shadow-focus:  inset 0px 1px 0px 0px rgba(255, 255, 255, 0.05),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.24),
-                            inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
-                            0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
-                            0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
-                            0px 2px 6px -1px rgba(0, 0, 0, 0.25),
-                            0px 0px 0px 3px var(--color-d-alpha-gray);
+    --button-shadow-focus: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.05),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.24),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
+        0px 2px 6px -1px rgba(0, 0, 0, 0.25),
+        0px 0px 0px 3px var(--color-d-alpha-gray);
 
     --button-accent-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
-                            inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
-                            0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
-                            0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                            0px 2px 4px -1px rgba(0, 0, 0, 0.14);
-    --button-accent-shadow-hover:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
-                                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.34),
-                                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.26),
-                                    inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
-                                    0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
-                                    0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
-                                    0px 2px 6px -1px rgba(0, 0, 0, 0.19);
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.26),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+        0px 2px 4px -1px rgba(0, 0, 0, 0.14);
+    --button-accent-shadow-hover: inset 0px 1px 0px 0px
+            rgba(255, 255, 255, 0.15),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.34),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.26),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.35),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.37),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
+        0px 2px 6px -1px rgba(0, 0, 0, 0.19);
     --button-accent-shadow-active: var(--input-shadow-active);
-    --button-accent-shadow-focus:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.12),
-                                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
-                                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.11),
-                                    inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
-                                    0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
-                                    0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
-                                    0px 2px 6px -1px rgba(0, 0, 0, 0.24),
-                                    0px 0px 0px 3px var(--color-d-alpha-gray);
+    --button-accent-shadow-focus: inset 0px 1px 0px 0px
+            rgba(255, 255, 255, 0.12),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.28),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.11),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.52),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.27),
+        0px 2px 6px -1px rgba(0, 0, 0, 0.24),
+        0px 0px 0px 3px var(--color-d-alpha-gray);
 
     --empty-state-action-btn-bg: var(--background-primary-alt);
-    
+
     --copy-code-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.39),
-    0px 2px 4px -2px rgba(0, 0, 0, 0.39);
-    
+        0px 2px 4px -2px rgba(0, 0, 0, 0.39);
+
     /* Caret */
     --caret-color: var(--color-d-gray-50);
 
     /* Color Input */
-    --swatch-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+    --swatch-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
 
     /* Checkbox */
     --checkbox-marker-color: white;
@@ -2023,7 +2358,11 @@ body {
     /* Alt Checkboxes */
     --inprogress-chbx-color: hsla(31, 85%, 59%, 1);
     --inprogress-chbx-color-hover: hsla(32, 95%, 65%, 1);
-    --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 15%, var(--color-base-60));
+    --inprogress-chbx-border-color: color-mix(
+        in srgb,
+        var(--inprogress-chbx-color) 15%,
+        var(--color-base-60)
+    );
     --resched-chbx-color: hsla(178, 19%, 55%, 1);
     --sched-chbx-color: hsla(32, 10%, 58%, 1);
     --important-chbx-color: hsla(17, 83%, 47%);
@@ -2086,11 +2425,13 @@ body {
 
     --community-item-flair-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     --community-item-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03);
-    --community-item-shadow-hover: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
-    --community-item-selected-shadow:   inset 0px 0px 0px 1px rgba(255, 255, 255, 0.18),
-                                        0px 1px 3px -2.6px rgba(0, 0, 0, 0.33),
-                                        0px 2px 6px -4.2px rgba(0, 0, 0, 0.29),
-                                        0px 4px 12px -6px rgba(0, 0, 0, 0.9);
+    --community-item-shadow-hover: inset 0px 0px 0px 1px
+        rgba(255, 255, 255, 0.1);
+    --community-item-selected-shadow: inset 0px 0px 0px 1px
+            rgba(255, 255, 255, 0.18),
+        0px 1px 3px -2.6px rgba(0, 0, 0, 0.33),
+        0px 2px 6px -4.2px rgba(0, 0, 0, 0.29),
+        0px 4px 12px -6px rgba(0, 0, 0, 0.9);
 
     /* Navigation */
     --nav-item-color: var(--color-d-gray-40);
@@ -2109,10 +2450,11 @@ body {
     --nav-heading-color-hover: var(--color-d-gray-50);
     --nav-heading-color-collapsed: var(--color-d-gray-50);
     --nav-heading-color-collapsed-hover: var(--color-d-gray-50);
-    --nav-item-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23);
-    --nav-file-shadow-active:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
-                                inset 0px calc(-1 * var(--button-axis-offset)) 0px var(--button-axis-offset) rgba(0, 0, 0, 0.24),
-                                0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+    --nav-item-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.23);
+    --nav-file-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.27),
+        inset 0px calc(-1 * var(--button-axis-offset)) 0px
+            var(--button-axis-offset) rgba(0, 0, 0, 0.24),
+        0px 2px 3px 0px rgba(0, 0, 0, 0.22);
     --nav-file-tag-color: var(--color-d-gray-60);
     --nav-file-tag-bg: transparent;
 
@@ -2129,10 +2471,10 @@ body {
     /* Notice */
     --background-modifier-message: var(--color-d-gray-70);
     --notice-color: var(--text-normal);
-    --notice-shadow:    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                        0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
-                        0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
-                        0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
+    --notice-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+        0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
+        0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
+        0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
 
     /* Pill */
     --pill-color: var(--color-d-gray-30);
@@ -2141,8 +2483,16 @@ body {
     --pill-color-remove-hover: var(--color-d-gray-60);
     --pill-background: rgba(0, 0, 0, 0.2);
     --pill-background-hover: var(--pill-background);
-    --pill-border-color: color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
-    --pill-border-color-hover: color-mix(in srgb, var(--background-modifier-border-hover) 50%, transparent);
+    --pill-border-color: color-mix(
+        in srgb,
+        var(--background-modifier-border) 50%,
+        transparent
+    );
+    --pill-border-color-hover: color-mix(
+        in srgb,
+        var(--background-modifier-border-hover) 50%,
+        transparent
+    );
 
     /* Progress */
     --progress-background: var(--color-d-gray-120);
@@ -2153,7 +2503,12 @@ body {
     --progress-color-3: var(--color-d-yellow-30);
     --progress-color-4: var(--color-d-green-40);
 
-    --progress-color-5: linear-gradient(45deg, var(--progress-gradient-1), var(--progress-gradient-2), var(--progress-gradient-3));
+    --progress-color-5: linear-gradient(
+        45deg,
+        var(--progress-gradient-1),
+        var(--progress-gradient-2),
+        var(--progress-gradient-3)
+    );
     --progress-gradient-1: var(--color-d-red-30);
     --progress-gradient-2: var(--color-d-yellow-20);
     --progress-gradient-3: var(--color-d-blue-20);
@@ -2163,14 +2518,18 @@ body {
 
     --prompt-results-background: var(--background-primary);
     --prompt-suggestion-color: var(--color-d-gray-40);
-    --prompt-suggestion-highlight-color: color-mix(in srgb, var(--prompt-suggestion-color) 70%, white);
+    --prompt-suggestion-highlight-color: color-mix(
+        in srgb,
+        var(--prompt-suggestion-color) 70%,
+        white
+    );
     --prompt-suggestion-color-selected: var(--color-d-gray-20);
     --prompt-suggestion-highlight-color-selected: var(--color-d-gray-20);
-    --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.1);
+    --prompt-suggestion-background-selected: rgba(0, 0, 0, 0.16);
     --prompt-suggestion-shadow-selected: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.14),
                                          0px 2px 6px 0px rgba(0, 0, 0, 0.12);
 
-    --prompt-instructions-background: color-mix(in hsl, var(--editor-bg-color) 60%, var(--background-secondary));
+    --prompt-instructions-background: color-mix(in hsl, var(--editor-bg-color) 50%, var(--background-secondary));
 
     --prompt-separator-border: 1px solid var(--color-d-gray-90);
     --prompt-border-color: var(--background-modifier-border-focus);
@@ -2183,21 +2542,21 @@ body {
 
     /* Slider */
     --slider-track-background: var(--color-d-gray-120);
-    --slider-track-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2),
-                            0px 0px 0px 1px rgba(255, 255, 255, 0.04);
+    --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2),
+        0px 0px 0px 1px rgba(255, 255, 255, 0.04);
 
     --slider-thumb-bg: var(--color-d-gray-20);
     --slider-thumb-border-width: 0px;
-    --slider-thumb-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
-                            inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
-                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
-                            0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    --slider-thumb-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+        inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
+        inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.5);
 
-    --slider-thumb-shadow-hover:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
-                                    inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
-                                    inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
-                                    0px 1px 2px 0px rgba(0, 0, 0, 0.5),
-                                    0px 0px 0px 6px rgba(255, 255, 255, 0.08);
+    --slider-thumb-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+        inset 0pc 1px 0px 1px rgba(255, 255, 255, 0.3),
+        inset 0px -1px 0px 1px rgba(0, 0, 0, 0.29),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.5),
+        0px 0px 0px 6px rgba(255, 255, 255, 0.08);
 
     /* Tab */
     --tab-background-active: var(--background-primary);
@@ -2214,69 +2573,76 @@ body {
 
     --tab-bg: transparent;
     --tab-active-bg: var(--background-primary);
-    --tab-active-shadow:    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
-                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px rgba(0, 0, 0, 0.25),
-                            0px 1px 2px -0.1px rgba(0, 0, 0, 0.47);
+    --tab-active-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 1px
+            rgba(0, 0, 0, 0.25),
+        0px 1px 2px -0.1px rgba(0, 0, 0, 0.47);
 
     // Stacked Tab
     --tab-outline-color: transparent;
-    --tab-stacked-shadow:   -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.31),
-                            -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.27),
-                            -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.2);
+    --tab-stacked-shadow: -2.9px 0 10.5px -6.2px rgba(0, 0, 0, 0.31),
+        -6.2px 0 3.6px -5.2px rgba(0, 0, 0, 0.27),
+        -9.4px 0 8.4px -4.1px rgba(0, 0, 0, 0.2);
 
     /* Text Input */
     --background-modifier-form-field: var(--color-d-gray-130);
     --input-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.02),
-                    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
-                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
-                    inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
-                    0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
-                    0px 2px 4px -2.7px rgba(0, 0, 0, 0.25),
-                    0px 2px 4px -1px rgba(0, 0, 0, 0.2);
-    --input-shadow-hover:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                            inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px rgba(0, 0, 0, 0.2),
-                            inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
-                            0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
-                            0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
-                            0px 2px 6px -1px rgba(0, 0, 0, 0.25);
-    --input-shadow-active:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
-                            inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size)) rgba(0, 0, 0, 0.15),
-                            inset 0px 2px 8px 0px rgba(0, 0, 0, 0.57),
-                            0px 0px 0px 1px rgba(255, 255, 255, 0.02);
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.2),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.25),
+        0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --input-shadow-hover: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 2px
+            rgba(0, 0, 0, 0.2),
+        inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px -5.6px rgba(0, 0, 0, 0.55),
+        0px 2px 4px -2.7px rgba(0, 0, 0, 0.3),
+        0px 2px 6px -1px rgba(0, 0, 0, 0.25);
+    --input-shadow-active: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45),
+        inset 0px 0px 0px calc(1px + var(--button-inset-shadow-size))
+            rgba(0, 0, 0, 0.15),
+        inset 0px 2px 8px 0px rgba(0, 0, 0, 0.57),
+        0px 0px 0px 1px rgba(255, 255, 255, 0.02);
 
     --text-input-color: var(--color-d-gray-20);
     --text-input-color-focused: var(--color-d-gray-20);
     --text-input-bg-active: var(--color-d-gray-140);
     --text-input-border-color: var(--color-d-gray-140);
     --text-input-shadow-active: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.03),
-                                inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
-                                0px 1px 6px 0px rgba(0, 0, 0, 0.37);
+        inset 0px -1px 0px 0px rgba(0, 0, 0, 0.39),
+        0px 1px 6px 0px rgba(0, 0, 0, 0.37);
 
     /* Toggle */
     --toggle-thumb-color: var(--color-d-gray-10);
-    --toggle-bg: color-mix(in srgb, var(--color-d-gray-70) 50%, var(--color-d-gray-60));
+    --toggle-bg: color-mix(
+        in srgb,
+        var(--color-d-gray-70) 50%,
+        var(--color-d-gray-60)
+    );
     --toggle-bg-enabled: var(--color-d-green-40);
-    --toggle-shadow:    inset 0 4px 10px rgba(0, 0, 0, 0.19),
-                        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                        inset 0 0 1px rgba(0, 0, 0, 0.4);
-    --toggle-shadow-hover:  inset 0 6px 20px rgba(0, 0, 0, 0.28),
-                            inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                            inset 0 0 1px rgba(0, 0, 0, 0.44);
-    --toggle-shadow-focus:  inset 0 6px 20px rgba(0, 0, 0, 0.28),
-                            inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                            inset 0 0 1px rgba(0, 0, 0, 0.44),
-                            0px 0px 0px 5px rgba(255, 255, 255, 0.08);
+    --toggle-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.19),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+        inset 0 0 1px rgba(0, 0, 0, 0.4);
+    --toggle-shadow-hover: inset 0 6px 20px rgba(0, 0, 0, 0.28),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+        inset 0 0 1px rgba(0, 0, 0, 0.44);
+    --toggle-shadow-focus: inset 0 6px 20px rgba(0, 0, 0, 0.28),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
+        inset 0 0 1px rgba(0, 0, 0, 0.44),
+        0px 0px 0px 5px rgba(255, 255, 255, 0.08);
 
-    --toggle-thumb-shadow:  inset 0px 1px 0px 1px rgba(255, 255, 255, 0.5),
-                            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
-                            0 2px 2px rgba(0, 0, 0, 0.35);
+    --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 0.5),
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.35);
 
     /* Tooltip */
-    --tooltip-shadow:   inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3),
-                        0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
-                        0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
-    
+    --tooltip-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3),
+        0px 2px 4px -1.4px rgba(0, 0, 0, 0.3),
+        0px 3px 10px -1.7px rgba(0, 0, 0, 0.14);
+
     /*────────── Editor ──────────*/
 
     /* Active Line */
@@ -2297,25 +2663,26 @@ body {
 
     --callout-title-color: var(--text-normal);
     --callout-content-background: color-mix(
-                                    in srgb, 
-                                    var(--background-primary-alt) 50%, 
-                                    var(--editor-bg-color)
-                                    );
+        in srgb,
+        var(--background-primary-alt) 50%,
+        var(--editor-bg-color)
+    );
 
     --callout-container-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
-                                0px 2px 6px 0px rgba(0, 0, 0, 0.28);
+        0px 2px 6px 0px rgba(0, 0, 0, 0.28);
     --callout-title-shadow: inset 0px -1px 1px 0px rgba(0, 0, 0, 0.25),
-                            inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
-    --callout-content-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
-                                inset 0px calc(-1 * var(--callout-shadow-offset) - 1px) var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
+        inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
+    --callout-content-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
+        inset 0px calc(-1 * var(--callout-shadow-offset) - 1px)
+            var(--callout-content-shadow-blur) 0px rgba(0, 0, 0, 0.3);
 
     /* Embed */
     --embed-background: var(--embed-bg-color-mix);
     --embed-bg-color-mix: color-mix(
-                                    in srgb, 
-                                    var(--background-primary-alt) 50%, 
-                                    var(--editor-bg-color)
-                                    );
+        in srgb,
+        var(--background-primary-alt) 50%,
+        var(--editor-bg-color)
+    );
     --embed-border-top-color: var(--background-modifier-border);
     --embed-border-end-color: var(--background-modifier-border);
     --embed-border-bottom-color: var(--background-modifier-border);
@@ -2325,11 +2692,19 @@ body {
     --embed-title-border-color: var(--background-modifier-border);
     --embed-block-shadow-hover: none;
 
-    --embed-edit-btn-bg: color-mix(in srgb, var(--color-d-gray-130) 70%, transparent);
-    --embed-edit-btn-bg-hover: color-mix(in srgb, var(--color-d-gray-130) 100%, transparent);
-    --embed-edit-btn-shadow:    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
-    inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5);
-    --embed-edit-btn-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
+    --embed-edit-btn-bg: color-mix(
+        in srgb,
+        var(--color-d-gray-130) 70%,
+        transparent
+    );
+    --embed-edit-btn-bg-hover: color-mix(
+        in srgb,
+        var(--color-d-gray-130) 100%,
+        transparent
+    );
+    --embed-edit-btn-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
+        inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5);
+    --embed-edit-btn-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
         inset 0px -2px 1px 1px rgba(0, 0, 0, 0.5),
         0px 1px 2px 0px rgba(0, 0, 0, 0.5);
 
@@ -2341,14 +2716,19 @@ body {
     --bold-color: var(--color-d-red-30);
     --italic-color: var(--color-d-blue-20);
     --underline-color: var(--text-normal);
-    --underline-decoration-color: color-mix(in srgb, currentColor var(--link-decoration-opacity), transparent);
+    --underline-decoration-color: color-mix(
+        in srgb,
+        currentColor var(--link-decoration-opacity),
+        transparent
+    );
     --strikethrough-color: var(--color-d-gray-50);
     --bold-italic-color: var(--color-d-gray-10);
     --bold-italic-strikethrough-color: var(--color-d-gray-40);
 
     /* File */
     --editor-border-color: var(--background-modifier-border);
-    --file-header-border: var(--file-header-border-width) solid var(--file-header-border-color);
+    --file-header-border: var(--file-header-border-width) solid
+        var(--file-header-border-color);
     --file-header-border-color: var(--background-modifier-border);
 
     --breadcrumb-color: var(--color-d-gray-50);
@@ -2361,76 +2741,268 @@ body {
 
     /* File Explorer - Folders */
     --nav-folder-1-color: var(--color-d-red-30);
-    --nav-folder-1-bg-color: color-mix(in srgb, var(--color-d-alpha-red) 60%, transparent);
-    --nav-folder-1-bg-color-hover: color-mix(in srgb, var(--nav-folder-1-bg-color) 70%, transparent);
-    --nav-folder-1-collapse-color: color-mix(in srgb, var(--nav-folder-1-color) 50%, transparent);
-    --nav-folder-1-indent-color: color-mix(in srgb, var(--nav-folder-1-color) 25%, transparent);
+    --nav-folder-1-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-red) 60%,
+        transparent
+    );
+    --nav-folder-1-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-1-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-1-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-1-color) 50%,
+        transparent
+    );
+    --nav-folder-1-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-1-color) 25%,
+        transparent
+    );
 
     --nav-folder-2-color: var(--color-d-orange-20);
-    --nav-folder-2-bg-color: color-mix(in srgb, var(--color-d-alpha-orange) 60%, transparent);
-    --nav-folder-2-bg-color-hover: color-mix(in srgb, var(--nav-folder-2-bg-color) 70%, transparent);
-    --nav-folder-2-collapse-color: color-mix(in srgb, var(--nav-folder-2-color) 50%, transparent);
-    --nav-folder-2-indent-color: color-mix(in srgb, var(--nav-folder-2-color) 25%, transparent);
+    --nav-folder-2-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-orange) 60%,
+        transparent
+    );
+    --nav-folder-2-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-2-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-2-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-2-color) 50%,
+        transparent
+    );
+    --nav-folder-2-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-2-color) 25%,
+        transparent
+    );
 
     --nav-folder-3-color: var(--color-d-yellow-20);
-    --nav-folder-3-bg-color: color-mix(in srgb, var(--color-d-alpha-yellow) 60%, transparent);
-    --nav-folder-3-bg-color-hover: color-mix(in srgb, var(--nav-folder-3-bg-color) 70%, transparent);
-    --nav-folder-3-collapse-color: color-mix(in srgb, var(--nav-folder-3-color) 50%, transparent);
-    --nav-folder-3-indent-color: color-mix(in srgb, var(--nav-folder-3-color) 25%, transparent);
+    --nav-folder-3-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-yellow) 60%,
+        transparent
+    );
+    --nav-folder-3-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-3-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-3-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-3-color) 50%,
+        transparent
+    );
+    --nav-folder-3-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-3-color) 25%,
+        transparent
+    );
 
     --nav-folder-4-color: var(--color-d-green-20);
-    --nav-folder-4-bg-color: color-mix(in srgb, var(--color-d-alpha-green) 60%, transparent);
-    --nav-folder-4-bg-color-hover: color-mix(in srgb, var(--nav-folder-4-bg-color) 70%, transparent);
-    --nav-folder-4-collapse-color: color-mix(in srgb, var(--nav-folder-4-color) 50%, transparent);
-    --nav-folder-4-indent-color: color-mix(in srgb, var(--nav-folder-4-color) 25%, transparent);
+    --nav-folder-4-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-green) 60%,
+        transparent
+    );
+    --nav-folder-4-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-4-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-4-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-4-color) 50%,
+        transparent
+    );
+    --nav-folder-4-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-4-color) 25%,
+        transparent
+    );
 
     --nav-folder-5-color: var(--color-d-blue-20);
-    --nav-folder-5-bg-color: color-mix(in srgb, var(--color-d-alpha-blue) 60%, transparent);
-    --nav-folder-5-bg-color-hover: color-mix(in srgb, var(--nav-folder-5-bg-color) 70%, transparent);
-    --nav-folder-5-collapse-color: color-mix(in srgb, var(--nav-folder-5-color) 50%, transparent);
-    --nav-folder-5-indent-color: color-mix(in srgb, var(--nav-folder-5-color) 25%, transparent);
+    --nav-folder-5-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-blue) 60%,
+        transparent
+    );
+    --nav-folder-5-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-5-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-5-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-5-color) 50%,
+        transparent
+    );
+    --nav-folder-5-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-5-color) 25%,
+        transparent
+    );
 
     --nav-folder-6-color: var(--color-d-purple-10);
-    --nav-folder-6-bg-color: color-mix(in srgb, var(--color-d-alpha-purple) 60%, transparent);
-    --nav-folder-6-bg-color-hover: color-mix(in srgb, var(--nav-folder-6-bg-color) 70%, transparent);
-    --nav-folder-6-collapse-color: color-mix(in srgb, var(--nav-folder-6-color) 50%, transparent);
-    --nav-folder-6-indent-color: color-mix(in srgb, var(--nav-folder-6-color) 25%, transparent);
+    --nav-folder-6-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-purple) 60%,
+        transparent
+    );
+    --nav-folder-6-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-6-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-6-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-6-color) 50%,
+        transparent
+    );
+    --nav-folder-6-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-6-color) 25%,
+        transparent
+    );
 
     --nav-folder-7-color: var(--color-d-red-30);
-    --nav-folder-7-bg-color: color-mix(in srgb, var(--color-d-alpha-red) 60%, transparent);
-    --nav-folder-7-bg-color-hover: color-mix(in srgb, var(--nav-folder-7-bg-color) 70%, transparent);
-    --nav-folder-7-collapse-color: color-mix(in srgb, var(--nav-folder-7-color) 50%, transparent);
-    --nav-folder-7-indent-color: color-mix(in srgb, var(--nav-folder-7-color) 25%, transparent);
+    --nav-folder-7-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-red) 60%,
+        transparent
+    );
+    --nav-folder-7-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-7-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-7-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-7-color) 50%,
+        transparent
+    );
+    --nav-folder-7-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-7-color) 25%,
+        transparent
+    );
 
     --nav-folder-8-color: var(--color-d-orange-20);
-    --nav-folder-8-bg-color: color-mix(in srgb, var(--color-d-alpha-orange) 60%, transparent);
-    --nav-folder-8-bg-color-hover: color-mix(in srgb, var(--nav-folder-8-bg-color) 70%, transparent);
-    --nav-folder-8-collapse-color: color-mix(in srgb, var(--nav-folder-8-color) 50%, transparent);
-    --nav-folder-8-indent-color: color-mix(in srgb, var(--nav-folder-8-color) 25%, transparent);
+    --nav-folder-8-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-orange) 60%,
+        transparent
+    );
+    --nav-folder-8-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-8-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-8-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-8-color) 50%,
+        transparent
+    );
+    --nav-folder-8-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-8-color) 25%,
+        transparent
+    );
 
     --nav-folder-9-color: var(--color-d-yellow-20);
-    --nav-folder-9-bg-color: color-mix(in srgb, var(--color-d-alpha-yellow) 60%, transparent);
-    --nav-folder-9-bg-color-hover: color-mix(in srgb, var(--nav-folder-9-bg-color) 70%, transparent);
-    --nav-folder-9-collapse-color: color-mix(in srgb, var(--nav-folder-9-color) 50%, transparent);
-    --nav-folder-9-indent-color: color-mix(in srgb, var(--nav-folder-9-color) 25%, transparent);
+    --nav-folder-9-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-yellow) 60%,
+        transparent
+    );
+    --nav-folder-9-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-9-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-9-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-9-color) 50%,
+        transparent
+    );
+    --nav-folder-9-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-9-color) 25%,
+        transparent
+    );
 
     --nav-folder-10-color: var(--color-d-green-20);
-    --nav-folder-10-bg-color: color-mix(in srgb, var(--color-d-alpha-green) 60%, transparent);
-    --nav-folder-10-bg-color-hover: color-mix(in srgb, var(--nav-folder-10-bg-color) 70%, transparent);
-    --nav-folder-10-collapse-color: color-mix(in srgb, var(--nav-folder-10-color) 50%, transparent);
-    --nav-folder-10-indent-color: color-mix(in srgb, var(--nav-folder-10-color) 25%, transparent);
+    --nav-folder-10-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-green) 60%,
+        transparent
+    );
+    --nav-folder-10-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-10-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-10-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-10-color) 50%,
+        transparent
+    );
+    --nav-folder-10-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-10-color) 25%,
+        transparent
+    );
 
     --nav-folder-11-color: var(--color-d-blue-20);
-    --nav-folder-11-bg-color: color-mix(in srgb, var(--color-d-alpha-blue) 60%, transparent);
-    --nav-folder-11-bg-color-hover: color-mix(in srgb, var(--nav-folder-11-bg-color) 70%, transparent);
-    --nav-folder-11-collapse-color: color-mix(in srgb, var(--nav-folder-11-color) 50%, transparent);
-    --nav-folder-11-indent-color: color-mix(in srgb, var(--nav-folder-11-color) 25%, transparent);
+    --nav-folder-11-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-blue) 60%,
+        transparent
+    );
+    --nav-folder-11-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-11-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-11-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-11-color) 50%,
+        transparent
+    );
+    --nav-folder-11-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-11-color) 25%,
+        transparent
+    );
 
     --nav-folder-12-color: var(--color-d-purple-10);
-    --nav-folder-12-bg-color: color-mix(in srgb, var(--color-d-alpha-purple) 60%, transparent);
-    --nav-folder-12-bg-color-hover: color-mix(in srgb, var(--nav-folder-12-bg-color) 70%, transparent);
-    --nav-folder-12-collapse-color: color-mix(in srgb, var(--nav-folder-12-color) 50%, transparent);
-    --nav-folder-12-indent-color: color-mix(in srgb, var(--nav-folder-12-color) 25%, transparent);
+    --nav-folder-12-bg-color: color-mix(
+        in srgb,
+        var(--color-d-alpha-purple) 60%,
+        transparent
+    );
+    --nav-folder-12-bg-color-hover: color-mix(
+        in srgb,
+        var(--nav-folder-12-bg-color) 70%,
+        transparent
+    );
+    --nav-folder-12-collapse-color: color-mix(
+        in srgb,
+        var(--nav-folder-12-color) 50%,
+        transparent
+    );
+    --nav-folder-12-indent-color: color-mix(
+        in srgb,
+        var(--nav-folder-12-color) 25%,
+        transparent
+    );
 
     /* Bookmarks - Folders */
     --bookmark-folder-1-color: var(--nav-folder-1-color);
@@ -2506,7 +3078,11 @@ body {
     --bookmark-folder-12-indent-color: var(--nav-folder-12-indent-color);
 
     /* Gutter */
-    --gutter-color: color-mix(in srgb, var(--color-d-gray-60) 40%, var(--color-d-gray-70));
+    --gutter-color: color-mix(
+        in srgb,
+        var(--color-d-gray-60) 40%,
+        var(--color-d-gray-70)
+    );
     --gutter-color-active: var(--color-d-gray-50);
 
     /* Headings */
@@ -2576,14 +3152,19 @@ body {
     --inline-title-color: var(--color-d-gray-10);
 
     /* Inline Query */
-    --inline-query-bg: color-mix(in srgb, var(--background-secondary) 25%, var(--background-primary));
+    --inline-query-bg: color-mix(
+        in srgb,
+        var(--background-secondary) 25%,
+        var(--background-primary)
+    );
     --inline-query-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.26);
 
     /* KBD */
     --kbd-color: var(--color-d-red-20);
     --kbd-background: var(--color-d-gray-110);
-    --kbd-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.17),
-                    inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px rgba(0, 0, 0, 0.2);
+    --kbd-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.17),
+        inset 0px calc(-1 * var(--button-inset-shadow-size)) 0px 0px
+            rgba(0, 0, 0, 0.2);
 
     /* List */
     --list-marker-color: var(--color-d-gray-50);
@@ -2592,27 +3173,63 @@ body {
 
     /* Link */
     --link-ahref-color: var(--color-d-red-20);
-    --link-ahref-decoration-color: color-mix(in srgb, currentColor var(--link-decoration-opacity), transparent);
+    --link-ahref-decoration-color: color-mix(
+        in srgb,
+        currentColor var(--link-decoration-opacity),
+        transparent
+    );
     --link-ahref-color-hover: var(--color-d-red-10);
-    --link-ahref-decoration-color-hover: color-mix(in srgb, var(--link-ahref-color-hover) var(--link-decoration-opacity), transparent);
+    --link-ahref-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-ahref-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     --link-unresolved-color: var(--color-d-gray-50);
-    --link-unresolved-decoration-color: color-mix(in srgb, var(--link-unresolved-color) var(--link-decoration-opacity), transparent);
+    --link-unresolved-decoration-color: color-mix(
+        in srgb,
+        var(--link-unresolved-color) var(--link-decoration-opacity),
+        transparent
+    );
     --link-unresolved-color-hover: var(--color-d-gray-40);
-    --link-unresolved-decoration-color-hover: color-mix(in srgb, var(--link-unresolved-color-hover) var(--link-decoration-opacity), transparent);
+    --link-unresolved-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-unresolved-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     --link-color: var(--color-d-yellow-20);
-    --link-decoration-color: color-mix(in srgb, var(--link-color) var(--link-decoration-opacity), transparent);
+    --link-decoration-color: color-mix(
+        in srgb,
+        var(--link-color) var(--link-decoration-opacity),
+        transparent
+    );
     --link-color-hover: var(--color-d-yellow-10);
-    --link-decoration-color-hover: color-mix(in srgb, var(--link-color-hover) var(--link-decoration-opacity), transparent);
+    --link-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     --link-external-color: var(--color-d-green-20);
-    --link-external-decoration-color: color-mix(in srgb, var(--link-external-color) var(--link-decoration-opacity), transparent);
+    --link-external-decoration-color: color-mix(
+        in srgb,
+        var(--link-external-color) var(--link-decoration-opacity),
+        transparent
+    );
     --link-external-color-hover: var(--color-d-green-10);
-    --link-external-decoration-color-hover: color-mix(in srgb, var(--link-external-color-hover) var(--link-decoration-opacity), transparent);
+    --link-external-decoration-color-hover: color-mix(
+        in srgb,
+        var(--link-external-color-hover) var(--link-decoration-opacity),
+        transparent
+    );
 
     /* Properties | Metadata */
-    --metadata-background: color-mix(in srgb, var(--editor-bg-color) 50%, var(--background-primary-alt));
+    --metadata-background: color-mix(
+        in srgb,
+        var(--editor-bg-color) 50%,
+        var(--background-primary-alt)
+    );
     --metadata-tab-background: var(--background-secondary);
     --metadata-properties-title-color-collapsed: var(--color-d-gray-60);
     --metadata-properties-title-color-hover: var(--color-d-gray-50);
@@ -2623,8 +3240,9 @@ body {
     --metadata-input-background-active: rgba(0, 0, 0, 0.2);
     --metadata-label-background-active: var(--metadata-input-background-active);
     --metadata-input-shadow-hover: none;
-    --metadata-input-shadow-active: inset 0px 0px 0px 1px var(--background-modifier-border),
-                                    0px 0px 0px 1px var(--background-modifier-border);
+    --metadata-input-shadow-active: inset 0px 0px 0px 1px
+            var(--background-modifier-border),
+        0px 0px 0px 1px var(--background-modifier-border);
     --metadata-key-input-color: var(--color-d-gray-50);
     --metadata-key-input-color-active: var(--color-d-gray-30);
 
@@ -2663,7 +3281,7 @@ body {
     --tag-border-color-hover: rgba(0, 0, 0, 0.35);
     --tag-shadow: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
     --tag-shadow-hover: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2),
-                        0px 0px 0px 3px rgba(0, 0, 0, 0.15);
+        0px 0px 0px 3px rgba(0, 0, 0, 0.15);
     --tag-shadow-active: inset 0px -0.1em 0px 0px rgba(0, 0, 0, 0.2);
 
     /*────────── Mobile ──────────*/
@@ -2683,34 +3301,43 @@ body {
         --mobile-sidebar-background: var(--background-secondary);
         --nav-item-color: var(--text-muted);
 
-        --mobile-sidebar-left-shadow:   5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
-                                        10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
-        --mobile-sidebar-right-shadow:  -5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
-                                        -10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
+        --mobile-sidebar-left-shadow: 5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
+            10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
+        --mobile-sidebar-right-shadow: -5px 0px 14px -0.6px rgba(0, 0, 0, 0.29),
+            -10px 0px 20px -4.9px rgba(0, 0, 0, 0.22);
         --mobile-sidebar-tablet-shadow: 0px 2px 6px -0.3px rgba(0, 0, 0, 0.2),
-                                        0px 5px 14px -0.6px rgba(0, 0, 0, 0.19),
-                                        0px 10px 20px -4.9px rgba(0, 0, 0, 0.12);
+            0px 5px 14px -0.6px rgba(0, 0, 0, 0.19),
+            0px 10px 20px -4.9px rgba(0, 0, 0, 0.12);
 
-        --mobile-toolbar-bg: color-mix(in srgb, var(--editor-bg-color) 50%, var(--background-primary-alt));
+        --mobile-toolbar-bg: color-mix(
+            in srgb,
+            var(--editor-bg-color) 50%,
+            var(--background-primary-alt)
+        );
 
-        --navbar-shadow:    0px 4px 20px 0px rgba(0, 0, 0, 0.4),
-                            0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+        --navbar-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.4),
+            0px 1px 4px 0px rgba(0, 0, 0, 0.3);
 
         // Same as Notice
-        --pull-down-action-shadow:  inset 0px 0px 0px 1px rgba(255, 255, 255, 0.09),
-                                    0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
-                                    0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
-                                    0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
+        --pull-down-action-shadow: inset 0px 0px 0px 1px
+                rgba(255, 255, 255, 0.09),
+            0px 2px 9px -2.1px rgba(0, 0, 0, 0.4),
+            0px 3px 17px -4.3px rgba(0, 0, 0, 0.3),
+            0px 7px 30px -5.5px rgba(0, 0, 0, 0.2);
     }
 
     &.is-tablet {
         --titlebar-background: var(--background-secondary);
         --titlebar-background-focused: var(--background-secondary);
         --interactive-normal: var(--color-d-gray-120);
-        --interactive-hover: color-mix(in hsl, var(--color-d-gray-100) 50%, var(--interactive-normal));
+        --interactive-hover: color-mix(
+            in hsl,
+            var(--color-d-gray-100) 50%,
+            var(--interactive-normal)
+        );
         --modal-background: var(--background-primary);
     }
-    
+
     /*────────── Core Plugins ──────────*/
 
     /* Canvas */
@@ -2730,12 +3357,20 @@ body {
     --canvas-icon-color: var(--color-d-gray-50);
     --canvas-icon-color-hover: var(--color-d-gray-30);
     --canvas-icon-color-disabled: var(--color-d-gray-70);
-    --canvas-menu-bg: color-mix(in srgb, var(--color-d-gray-90) 60%, var(--color-d-gray-100));
-    --canvas-menu-bg-hover: color-mix(in srgb, var(--color-d-gray-90) 10%, var(--color-d-gray-100));
+    --canvas-menu-bg: color-mix(
+        in srgb,
+        var(--color-d-gray-90) 60%,
+        var(--color-d-gray-100)
+    );
+    --canvas-menu-bg-hover: color-mix(
+        in srgb,
+        var(--color-d-gray-90) 10%,
+        var(--color-d-gray-100)
+    );
     --canvas-menu-border: 1px solid var(--background-modifier-border);
-    --canvas-menu-shadow:   0px 1px 2px 1px rgba(0, 0, 0, 0.14),
-                            0px 1px 4px -2.1px rgba(0, 0, 0, 0.22),
-                            0px 2px 8px -1.2px rgba(0, 0, 0, 0.15);
+    --canvas-menu-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 4px -2.1px rgba(0, 0, 0, 0.22),
+        0px 2px 8px -1.2px rgba(0, 0, 0, 0.15);
 
     /* Graph */
     --graph-node: var(--color-d-blue-30);
@@ -2753,19 +3388,24 @@ body {
 
     /* Search */
     --search-result-background: var(--background-primary-alt);
-    --search-result-background-hover: color-mix(in srgb, var(--color-d-gray-130) 50%, var(--color-d-gray-140));
+    --search-result-background-hover: color-mix(
+        in srgb,
+        var(--color-d-gray-130) 50%,
+        var(--color-d-gray-140)
+    );
 
     --search-result-dest-file-color: var(--color-d-gray-50);
     --search-result-dest-file-bg: var(--color-d-gray-120);
     --search-result-dest-file-icon-color: var(--color-d-gray-70);
-    --search-result-dest-file-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25);
+    --search-result-dest-file-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25);
 
     --search-result-dest-file-bg-hover: var(--color-d-gray-140);
-    --search-result-dest-file-shadow-hover:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
-                                        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25),
-                                        0px 2px 3px 0px rgba(0, 0, 0, 0.29);
-    
+    --search-result-dest-file-shadow-hover: inset 0px 0px 0px 1px
+            rgba(0, 0, 0, 0.3),
+        inset 0px -2px 0px 0px rgba(0, 0, 0, 0.25),
+        0px 2px 3px 0px rgba(0, 0, 0, 0.29);
+
     /*────────── Community Plugins ──────────*/
 
     /* Calendar by Liam Cain */
@@ -2775,7 +3415,7 @@ body {
         --color-arrow-hover: var(--color-d-gray-40);
         --color-arrow-active: var(--color-d-gray-30);
         --color-button: var(--color-l-gray-30);
-      
+
         --pmr-cal-month-color: var(--color-d-gray-30);
         --pmr-cal-year-color: var(--color-d-gray-50);
 
@@ -2786,12 +3426,12 @@ body {
 
         --color-text-weeknum: var(--color-d-gray-60);
 
-        --pmr-cal-day-shadow:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
-        --pmr-cal-day-shadow-hover:  inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
-                                    0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+        --pmr-cal-day-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+        --pmr-cal-day-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+            0px 0px 4px 0px rgba(0, 0, 0, 0.2);
         --pmr-cal-day-color-active: var(--color-d-gray-50);
         --pmr-cal-day-dot-opacity-active: 0.5;
-        --pmr-cal-day-background-active:  var(--color-d-gray-140);
+        --pmr-cal-day-background-active: var(--color-d-gray-140);
 
         --pmr-cal-active-day-color: var(--color-d-gray-10);
         --pmr-cal-active-day-background: rgba(0, 0, 0, 0.15);
@@ -2799,9 +3439,9 @@ body {
     }
 
     /* Day Planner by Ivan Lendev */
-    .workspace-leaf-content[data-type=timeline] .view-content,
-    .workspace-leaf-content[data-type=weekly] .view-content,
-    .workspace-leaf-content[data-type=timeTracker] .view-content {
+    .workspace-leaf-content[data-type="timeline"] .view-content,
+    .workspace-leaf-content[data-type="weekly"] .view-content,
+    .workspace-leaf-content[data-type="timeTracker"] .view-content {
         // allows to differentiate colors for timeboxes (current and non-current)
         .content,
         .tasks {
@@ -2814,37 +3454,42 @@ body {
         --dp-time-indicator-color: var(--color-d-red-30);
         --dp-hours-bg-color: inherit;
         --dp-scroller-bg-color: inherit;
-        --dp-task-shadow:   inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07),
-                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.08),
-                            0px 2px 7px -1.6px rgba(0, 0, 0, 0.3);
+        --dp-task-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07),
+            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.08),
+            0px 2px 7px -1.6px rgba(0, 0, 0, 0.3);
 
         --dp-weekday-color: var(--color-d-gray-30);
         --dp-weekday-bg-color: var(--editor-bg-color);
         --shadow-right: none;
-        --shadow-bottom:    0px 4px 9px rgba(0, 0, 0, 0.08),
-                            0px 8px 11px rgba(0, 0, 0, 0.1);
+        --shadow-bottom: 0px 4px 9px rgba(0, 0, 0, 0.08),
+            0px 8px 11px rgba(0, 0, 0, 0.1);
     }
 
     /* Kanban by mgmeyers */
-    --kanban-lane-bg: color-mix(in srgb, var(--background-primary-alt) 50%, var(--background-secondary));
-    --kanban-lane-border: 1px solid color-mix(in srgb, var(--color-d-gray-90) 40%, var(--color-d-gray-100));
-    --kanban-lane-shadow:   none;
-    
+    --kanban-lane-bg: color-mix(
+        in srgb,
+        var(--background-primary-alt) 50%,
+        var(--background-secondary)
+    );
+    --kanban-lane-border: 1px solid
+        color-mix(in srgb, var(--color-d-gray-90) 40%, var(--color-d-gray-100));
+    --kanban-lane-shadow: none;
+
     --kanban-title-text-input-color: var(--text-normal);
     --kanban-title-count-color: var(--color-d-gray-40);
     --kanban-title-count-bg: var(--color-d-gray-80);
 
     --kanban-item-bg: var(--color-d-gray-90);
     --kanban-item-border: none;
-    --kanban-item-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.4),
-                            inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
-                            inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
-                            0px 2px 2px 0px rgba(0, 0, 0, 0.13);
+    --kanban-item-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.4),
+        inset 0px 1px 0px 0px rgba(255, 255, 255, 0.19),
+        inset 0px -1px 0px 1px rgba(0, 0, 0, 0.06),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.13);
 
     --kanban-drag-item-border: none;
-    --kanban-drag-item-shadow:  0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.49),
-                                0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.52),
-                                0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.59);
+    --kanban-drag-item-shadow: 0px 8.3px 22.8px -9px rgba(0, 0, 0, 0.49),
+        0px 6.2px 10.1px -4.2px rgba(0, 0, 0, 0.52),
+        0px 2.1px 6.8px -3.2px rgba(0, 0, 0, 0.59);
 
     --kanban-new-item-color: var(--text-faint);
     --kanban-new-item-color-hover: var(--text-muted);
@@ -2852,9 +3497,13 @@ body {
     --kanban-new-item-bg-hover: var(--color-d-gray-100);
     --kanban-new-item-shadow: none;
     --kanban-new-item-shadow-hover: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.22),
-                                    0px 2px 4px 0px rgba(0, 0, 0, 0.14);
-                            
+        0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+
     /* Style Settings by mgmeyers */
-    --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
+    --style-settings-container-bg: color-mix(
+        in srgb,
+        var(--background-primary-alt) 50%,
+        transparent
+    );
     --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(255, 255, 255, 0.2);
 }
