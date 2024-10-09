@@ -1164,9 +1164,11 @@ body {
     --blockquote-background-color: var(--color-l-gray-10);
 
     /* Callout */
+    --callout-border-width: 0px;
     --callout-color-opacity: 32.5%;
     --callout-border-opacity: 0.2;
     --callout-icon-fold-filter: brightness(0.8);
+    --callout-title-filter: brightness(0.6);
 
     --callout-title-color: var(--text-normal);
     --callout-content-background: color-mix(
