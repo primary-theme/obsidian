@@ -6074,14 +6074,12 @@ li.task-list-item[data-task="-"] {
 }
 
 body.callout-flat .callout {
-  --callout-border-width: 1px;
   --callout-title-shadow: none;
   --callout-content-shadow: none;
   --callout-container-shadow: none;
 }
 
 body.callout-fullcolor .callout {
-  --callout-border-width: 1px;
   --callout-content-background: color-mix(
                                       in srgb,
                                       rgba(var(--callout-color)) var(--callout-color-opacity),
@@ -6091,38 +6089,13 @@ body.callout-fullcolor .callout {
   --callout-title-shadow: none;
   --callout-content-shadow: none;
   --callout-container-shadow: none;
-}
-.theme-light body.callout-fullcolor .callout {
-  outline: none;
-}
-.theme-dark body.callout-fullcolor .callout {
-  outline: none;
 }
 
-body.callout-fullcolor-leftborder .callout {
-  --callout-border-width: 1px;
-  --callout-content-background: color-mix(
-                                      in srgb,
-                                      rgba(var(--callout-color)) var(--callout-color-opacity),
-                                      var(--editor-bg-color)
-                                      );
-  --callout-color-opacity: 16.5%;
-  --callout-title-shadow: none;
-  --callout-content-shadow: none;
-  --callout-container-shadow: none;
-  --callout-radius: 3px;
+body.callout-colored-title .callout {
   --callout-title-color: rgba(var(--callout-color) 100%);
 }
-body.callout-fullcolor-leftborder .callout-title-inner {
+body.callout-colored-title .callout-title-inner {
   filter: var(--callout-title-filter);
-}
-.theme-light body.callout-fullcolor-leftborder .callout {
-  border-left: var(--callout-border-width) solid color-mix(in srgb, rgb(var(--callout-color), 0.85) 90%, black);
-  outline: none;
-}
-.theme-dark body.callout-fullcolor-leftborder .callout {
-  border-left: var(--callout-border-width) solid color-mix(in srgb, rgb(var(--callout-color), 0.85) 90%, white);
-  outline: none;
 }
 
 body {

@@ -68,7 +68,6 @@
 // Primary Flat
 body.callout-flat {
     .callout {
-        --callout-border-width: 1px;
         --callout-title-shadow: none;
         --callout-content-shadow: none;
         --callout-container-shadow: none;
@@ -78,7 +77,6 @@ body.callout-flat {
 // Full Color
 body.callout-fullcolor {
     .callout {
-        --callout-border-width: 1px;
         --callout-content-background: color-mix(
                                             in srgb,
                                             rgba(var(--callout-color)) var(--callout-color-opacity), 
@@ -88,45 +86,16 @@ body.callout-fullcolor {
         --callout-title-shadow: none;
         --callout-content-shadow: none;
         --callout-container-shadow: none;
-    
-        .theme-light & {
-            outline: none;
-        }
-        
-        .theme-dark & {
-            outline: none;
-        }
     }
 }
 
-// Full Color with Left Border
-body.callout-fullcolor-leftborder {
+// Color Callout Title
+body.callout-colored-title {
     .callout {
-        --callout-border-width: 1px;
-        --callout-content-background: color-mix(
-                                            in srgb,
-                                            rgba(var(--callout-color)) var(--callout-color-opacity), 
-                                            var(--editor-bg-color)
-                                            );
-        --callout-color-opacity: 16.5%;
-        --callout-title-shadow: none;
-        --callout-content-shadow: none;
-        --callout-container-shadow: none;
-        --callout-radius: 3px;
         --callout-title-color: rgba(var(--callout-color) 100%);
     
         &-title-inner {
             filter: var(--callout-title-filter);
-        }
-        
-        .theme-light & {
-            border-left: var(--callout-border-width) solid color-mix(in srgb, rgb(var(--callout-color), 0.85) 90%, black);
-            outline: none;
-        }
-        
-        .theme-dark & {
-            border-left: var(--callout-border-width) solid color-mix(in srgb, rgb(var(--callout-color), 0.85) 90%, white);
-            outline: none;
         }
     }
 }

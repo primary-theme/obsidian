@@ -2386,6 +2386,56 @@ settings:
         default-light: 'hsla(37, 38%, 83%, 1)'
         default-dark: 'hsla(34, 24%, 40%, 1)'
 	-
+		id: nf_callout
+		type: heading
+		level: 2
+		collapsed: true
+		title: Callout
+    -
+        id: readme-content
+        type: info-text
+        markdown: true
+        description: 🎨 Visit the [Callout Presets](https://primary-theme.github.io/) section for some Callout styling presets!
+    -
+        id: nf_callout-style
+        type: class-select
+        title: Callout Style
+        allowEmpty: false
+        default: callout-default
+        options:
+            -
+                label: Default
+                value: callout-default
+            -
+                label: Flat Default
+                value: callout-flat
+            -
+                label: Full Color
+                value: callout-fullcolor
+    -
+        id: callout-colored-title
+        type: class-toggle
+        title: Toggle Colored Callout Title
+        description: Color Callout Titles according to their Callout Color instead of Editor Text Color.
+    -
+        id: callout-radius
+        type: variable-text
+        title: Callout Roundness
+        description: The roundness value's order goes top left, top right, bottom right, bottom left.
+        default: 3px 3px 3px 3px
+    -
+        id: callout-border-width
+        type: variable-text
+        title: Callout Border Width
+        description: The border width's value order goes top left, top right, bottom right, bottom left. If you want a soft outlining, try 1px 1px 1px 1px. If you want an intense left border, try 0px 0px 0px 4px.
+        default: 0px 0px 0px 0px
+    -
+        id: callout-border-opacity
+        type: variable-number
+        title: Callout Border Opacity
+        description: Intensity of Callout Border's color. Choose any value from 0 to 1. If you have an intense left border, try 0.6.
+        default: 0.2
+	-
 		id: canvas
 		type: heading
 		level: 1
