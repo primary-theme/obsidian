@@ -1,480 +1,481 @@
 /*────────── Primary: Alternative Checkboxes ──────────*/
+body.enable-alternative-checkboxes {
+    input[type=checkbox]:checked {
+        border-color: var(--checked-border-color);
 
-input[type=checkbox]:checked {
-    border-color: var(--checked-border-color);
-
-    &:hover {
-        border-color: var(--checked-border-color-hover);
-    }
-
-    &[data-task=">"],
-    &[data-task="<"],
-    &[data-task="!"],
-    &[data-task="-"],
-    &[data-task="?"],
-    &[data-task="*"],
-    &[data-task="n"],
-    &[data-task="l"],
-    &[data-task="i"],
-    &[data-task="S"],
-    &[data-task='"'],
-    &[data-task="I"],
-    &[data-task="p"],
-    &[data-task="c"],
-    &[data-task="b"],
-    &[data-task="f"],
-    &[data-task="w"],
-    &[data-task="k"],
-    &[data-task="u"],
-    &[data-task="d"],
-    &[data-task="r"],
-    &[data-task="L"],
-    &[data-task="t"],
-    &[data-task="T"] {
         &:hover {
-            box-shadow: none;
+            border-color: var(--checked-border-color-hover);
         }
-    }
-}
 
-.HyperMD-task-line input:not([data-task="x"], [data-task="X"], [data-task="/"])[type="checkbox"]:checked {
-    cursor: default;
-}
-
-li {
-    &[data-task=">"],
-    &[data-task="<"],
-    &[data-task="-"],
-    &[data-task="n"],
-    &[data-task="l"],
-    &[data-task="I"],
-    &[data-task="p"],
-    &[data-task="c"],
-    &[data-task="b"],
-    &[data-task="f"],
-    &[data-task="w"],
-    &[data-task="k"],
-    &[data-task="u"],
-    &[data-task="d"],
-    &[data-task="r"],
-    &[data-task="L"],
-    &[data-task="t"],
-    &[data-task="T"] {
-        input[type=checkbox]:checked:hover {
-            background-color: transparent;
-            border-color: transparent;
-            box-shadow: none;
-        }
-    }
-    
-    &[data-task="!"],
-    &[data-task="?"],
-    &[data-task="*"],
-    &[data-task="i"],
-    &[data-task='"'],
-    &[data-task="S"] {
-        input[type=checkbox]:checked:hover {
-            background-color: var(--interactive-accent);
-            box-shadow: none;
+        &[data-task=">"],
+        &[data-task="<"],
+        &[data-task="!"],
+        &[data-task="-"],
+        &[data-task="?"],
+        &[data-task="*"],
+        &[data-task="n"],
+        &[data-task="l"],
+        &[data-task="i"],
+        &[data-task="S"],
+        &[data-task='"'],
+        &[data-task="I"],
+        &[data-task="p"],
+        &[data-task="c"],
+        &[data-task="b"],
+        &[data-task="f"],
+        &[data-task="w"],
+        &[data-task="k"],
+        &[data-task="u"],
+        &[data-task="d"],
+        &[data-task="r"],
+        &[data-task="L"],
+        &[data-task="t"],
+        &[data-task="T"] {
+            &:hover {
+                box-shadow: none;
+            }
         }
     }
 
-    &[data-task]:not([data-task="x"], [data-task="X"], [data-task="/"]) {
-        input[type=checkbox]:checked:hover {
-            cursor: default;
+    .HyperMD-task-line input:not([data-task="x"], [data-task="X"], [data-task="/"])[type="checkbox"]:checked {
+        cursor: default;
+    }
+
+    li {
+        &[data-task=">"],
+        &[data-task="<"],
+        &[data-task="-"],
+        &[data-task="n"],
+        &[data-task="l"],
+        &[data-task="I"],
+        &[data-task="p"],
+        &[data-task="c"],
+        &[data-task="b"],
+        &[data-task="f"],
+        &[data-task="w"],
+        &[data-task="k"],
+        &[data-task="u"],
+        &[data-task="d"],
+        &[data-task="r"],
+        &[data-task="L"],
+        &[data-task="t"],
+        &[data-task="T"] {
+            input[type=checkbox]:checked:hover {
+                background-color: transparent;
+                border-color: transparent;
+                box-shadow: none;
+            }
+        }
+        
+        &[data-task="!"],
+        &[data-task="?"],
+        &[data-task="*"],
+        &[data-task="i"],
+        &[data-task='"'],
+        &[data-task="S"] {
+            input[type=checkbox]:checked:hover {
+                background-color: var(--interactive-accent);
+                box-shadow: none;
+            }
+        }
+
+        &[data-task]:not([data-task="x"], [data-task="X"], [data-task="/"]) {
+            input[type=checkbox]:checked:hover {
+                cursor: default;
+            }
         }
     }
-}
 
-// In Progress
-input[type=checkbox]:checked[data-task="/"],
-li[data-task="/"] > input:checked,
-li[data-task="/"] > p > input:checked {
-    background: linear-gradient(to right, var(--inprogress-chbx-color) 50%, var(--checklist-bg) 50%);
-    background-repeat: no-repeat;
-    background-clip: padding-box;
-    border-color: var(--inprogress-chbx-border-color);
-    
-    &:after {
-        background-color: transparent;
-        -webkit-mask-image: none;
-    }
-
-    &:hover {
-        background: linear-gradient(to right, var(--inprogress-chbx-color-hover) 50%, var(--checklist-bg) 50%);
+    // In Progress
+    input[type=checkbox]:checked[data-task="/"],
+    li[data-task="/"] > input:checked,
+    li[data-task="/"] > p > input:checked {
+        background: linear-gradient(to right, var(--inprogress-chbx-color) 50%, var(--checklist-bg) 50%);
+        background-repeat: no-repeat;
+        background-clip: padding-box;
         border-color: var(--inprogress-chbx-border-color);
-    }
-}
+        
+        &:after {
+            background-color: transparent;
+            -webkit-mask-image: none;
+        }
 
-// Rescheduled
-input[type=checkbox]:checked[data-task=">"],
-li[data-task=">"] > input:checked,
-li[data-task=">"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--resched-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 110%;
-        transform: rotate(90deg);
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z' /%3E%3C/svg%3E");
+        &:hover {
+            background: linear-gradient(to right, var(--inprogress-chbx-color-hover) 50%, var(--checklist-bg) 50%);
+            border-color: var(--inprogress-chbx-border-color);
+        }
     }
-}
 
-// Scheduled
-input[type=checkbox]:checked[data-task="<"],
-li[data-task="<"] > input:checked,
-li[data-task="<"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--sched-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 120%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    // Rescheduled
+    input[type=checkbox]:checked[data-task=">"],
+    li[data-task=">"] > input:checked,
+    li[data-task=">"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--resched-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 110%;
+            transform: rotate(90deg);
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z' /%3E%3C/svg%3E");
+        }
     }
-}
 
-// Important
-input[type=checkbox]:checked[data-task="!"],
-li[data-task="!"] > input:checked,
-li[data-task="!"] > p > input:checked {
-    background-color: var(--important-chbx-color);
-    // border-color: transparent;
-    border-radius: var(--important-chbx-radius);
-    
-    &:after {
-        background-color: var(--important-chbx-icon-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 80%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' viewBox='0 0 24 24' class='humbleicons hi-exclamation'%3E%3Cpath xmlns='http://www.w3.org/2000/svg' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M13.253 5.98L12 13.5l-1.253-7.52a1.27 1.27 0 112.506 0z'/%3E%3Ccircle xmlns='http://www.w3.org/2000/svg' cx='12' cy='19' r='1' stroke='currentColor' stroke-width='2'/%3E%3C/svg%3E");
+    // Scheduled
+    input[type=checkbox]:checked[data-task="<"],
+    li[data-task="<"] > input:checked,
+    li[data-task="<"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--sched-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 120%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd' /%3E%3C/svg%3E");
+        }
     }
-}
 
-// Cancelled
-input[type=checkbox]:checked[data-task="-"],
-li[data-task="-"] > input:checked,
-li[data-task="-"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--cancelled-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 120%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    // Important
+    input[type=checkbox]:checked[data-task="!"],
+    li[data-task="!"] > input:checked,
+    li[data-task="!"] > p > input:checked {
+        background-color: var(--important-chbx-color);
+        // border-color: transparent;
+        border-radius: var(--important-chbx-radius);
+        
+        &:after {
+            background-color: var(--important-chbx-icon-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 80%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' viewBox='0 0 24 24' class='humbleicons hi-exclamation'%3E%3Cpath xmlns='http://www.w3.org/2000/svg' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M13.253 5.98L12 13.5l-1.253-7.52a1.27 1.27 0 112.506 0z'/%3E%3Ccircle xmlns='http://www.w3.org/2000/svg' cx='12' cy='19' r='1' stroke='currentColor' stroke-width='2'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Question
-input[type=checkbox]:checked[data-task="?"],
-li[data-task="?"] > input:checked,
-li[data-task="?"] > p > input:checked {
-    background-color: var(--question-chbx-color);
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--question-chbx-icon-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 80%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg height='100%25' viewBox='0 0 32 32' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m13.774 26.028a2.06 2.06 1080 1 0 4.12 0 2.06 2.06 1080 1 0 -4.12 0zm5.69-7.776c2.898-1.596 4.37-3.91 4.37-6.876 0-5.094-4.018-7.376-8-7.376-3.878 0-8 2.818-8 8.042 0 1.104.894 2 2 2s2-.896 2-2c0-2.778 2.074-4.042 4-4.042 1.494 0 4 .438 4 3.376 0 1.042-.274 2.258-2.298 3.374-1.376.754-3.702 2.712-3.702 5.25 0 1.104.894 2 2 2s2-.896 2-2c0-.372.79-1.286 1.63-1.748z'/%3E%3C/svg%3E");
+    // Cancelled
+    input[type=checkbox]:checked[data-task="-"],
+    li[data-task="-"] > input:checked,
+    li[data-task="-"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--cancelled-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 120%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E");
+        }
     }
-}
 
-// Star
-input[type=checkbox]:checked[data-task="*"],
-li[data-task="*"] > input:checked,
-li[data-task="*"] > p > input:checked {
-    background-color: var(--star-chbx-color);
-    // border-color: transparent;
-    border-radius: 100%;
-    
-    &:after {
-        background-color: var(--star-chbx-icon-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 70%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='currentColor' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-star'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/%3E%3C/svg%3E");
+    // Question
+    input[type=checkbox]:checked[data-task="?"],
+    li[data-task="?"] > input:checked,
+    li[data-task="?"] > p > input:checked {
+        background-color: var(--question-chbx-color);
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--question-chbx-icon-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 80%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg height='100%25' viewBox='0 0 32 32' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m13.774 26.028a2.06 2.06 1080 1 0 4.12 0 2.06 2.06 1080 1 0 -4.12 0zm5.69-7.776c2.898-1.596 4.37-3.91 4.37-6.876 0-5.094-4.018-7.376-8-7.376-3.878 0-8 2.818-8 8.042 0 1.104.894 2 2 2s2-.896 2-2c0-2.778 2.074-4.042 4-4.042 1.494 0 4 .438 4 3.376 0 1.042-.274 2.258-2.298 3.374-1.376.754-3.702 2.712-3.702 5.25 0 1.104.894 2 2 2s2-.896 2-2c0-.372.79-1.286 1.63-1.748z'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Note
-input[type=checkbox]:checked[data-task="n"],
-li[data-task="n"] > input:checked,
-li[data-task="n"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--note-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 90%;
-        transform: rotate(45deg);
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='currentColor' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-pin'%3E%3Cpath d='M12 17v5'/%3E%3Cpath d='M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z'/%3E%3C/svg%3E");
+    // Star
+    input[type=checkbox]:checked[data-task="*"],
+    li[data-task="*"] > input:checked,
+    li[data-task="*"] > p > input:checked {
+        background-color: var(--star-chbx-color);
+        // border-color: transparent;
+        border-radius: 100%;
+        
+        &:after {
+            background-color: var(--star-chbx-icon-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 70%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='currentColor' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-star'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Location
-input[type=checkbox]:checked[data-task="l"],
-li[data-task="l"] > input:checked,
-li[data-task="l"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--location-chbox-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 100%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg fill='none' height='100%25' viewBox='0 0 20 20' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m5.05025 4.05025c2.73367-2.73367 7.16585-2.73367 9.89945 0 2.7337 2.73367 2.7337 7.16585 0 9.89945l-4.9497 4.9498-4.94975-4.9498c-2.73367-2.7336-2.73367-7.16578 0-9.89945zm4.94975 6.94975c1.1046 0 2-.8954 2-2 0-1.10457-.8954-2-2-2-1.10457 0-2 .89543-2 2 0 1.1046.89543 2 2 2z' fill='currentColor' fill-rule='evenodd'/%3E%3C/svg%3E");
+    // Note
+    input[type=checkbox]:checked[data-task="n"],
+    li[data-task="n"] > input:checked,
+    li[data-task="n"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--note-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 90%;
+            transform: rotate(45deg);
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='currentColor' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-pin'%3E%3Cpath d='M12 17v5'/%3E%3Cpath d='M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Info
-input[type=checkbox]:checked[data-task="i"],
-li[data-task="i"] > input:checked,
-li[data-task="i"] > p > input:checked {
-    background-color: var(--info-chbx-color);
-    // border-color: transparent;
-    
-    &:after {
-        background-color: var(--info-chbx-icon-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 92%;
-        -webkit-mask-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="40" d="M196 220h64v172"%2F%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="40" d="M187 396h138"%2F%3E%3Cpath fill="white" d="M256 160a32 32 0 1 1 32-32a32 32 0 0 1-32 32Z"%2F%3E%3C%2Fsvg%3E');
+    // Location
+    input[type=checkbox]:checked[data-task="l"],
+    li[data-task="l"] > input:checked,
+    li[data-task="l"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--location-chbox-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 100%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg fill='none' height='100%25' viewBox='0 0 20 20' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m5.05025 4.05025c2.73367-2.73367 7.16585-2.73367 9.89945 0 2.7337 2.73367 2.7337 7.16585 0 9.89945l-4.9497 4.9498-4.94975-4.9498c-2.73367-2.7336-2.73367-7.16578 0-9.89945zm4.94975 6.94975c1.1046 0 2-.8954 2-2 0-1.10457-.8954-2-2-2-1.10457 0-2 .89543-2 2 0 1.1046.89543 2 2 2z' fill='currentColor' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Amount / Money
-input[type=checkbox]:checked[data-task="S"],
-li[data-task="S"] > input:checked,
-li[data-task="S"] > p > input:checked {
-    background-color: var(--amount-chbx-color);
-    border-color: transparent;
-    border-radius: var(--amount-chbx-radius);
-    
-    &:after {
-        background-color: var(--amount-chbx-icon-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 80%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg fill='none' height='100%25' viewBox='0 0 32 32' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m22.7875 20.56c-.04-2.6-1.91-6.46-6.89-6.46-2.85 0-3.24-1.74-3.27-2.39.03-.81.4-2.69 3.23-2.69 2.94 0 3.28 2.07 3.31 2.71.03.99.88 1.84 1.85 1.75 1-.02 1.79-.85 1.76-1.85-.05-2.17-1.49-5.24-5.1-6.03l.03-1.77c.01-1-.79-1.82-1.79-1.83-.01 0-.01 0-.02 0-.99 0-1.8.8-1.81 1.79l-.02 1.8c-3.64.77-5.04 3.88-5.06 6.11.04 2.42 1.91 6.02 6.89 6.02 2.81 0 3.21 2.04 3.27 2.8-.08.49-.54 2.28-3.27 2.28-2.77 0-3.21-1.86-3.28-2.41-.09-1-.95-1.72-1.97-1.64-1 .09-1.73.97-1.64 1.96.15 1.71 1.44 4.75 5.07 5.52v2.07c0 1 .81 1.81 1.81 1.81s1.82-.81 1.82-1.81v-2.07c3.63-.76 4.92-3.78 5.07-5.48l.01-.1z' fill='currentColor'/%3E%3C/svg%3E");
+    // Info
+    input[type=checkbox]:checked[data-task="i"],
+    li[data-task="i"] > input:checked,
+    li[data-task="i"] > p > input:checked {
+        background-color: var(--info-chbx-color);
+        // border-color: transparent;
+        
+        &:after {
+            background-color: var(--info-chbx-icon-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 92%;
+            -webkit-mask-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="40" d="M196 220h64v172"%2F%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="40" d="M187 396h138"%2F%3E%3Cpath fill="white" d="M256 160a32 32 0 1 1 32-32a32 32 0 0 1-32 32Z"%2F%3E%3C%2Fsvg%3E');
+        }
     }
-}
 
-// Quote
-input[type=checkbox]:checked[data-task='"'],
-li[data-task='"'] > input:checked,
-li[data-task='"'] > p > input:checked {
-    background-color: var(--quote-chbx-color);
-    
-    &:after {
-        background-color: var(--quote-chbx-icon-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 68%;
-        -webkit-mask-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="white" d="M6.5 10c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.318.142-.686.238-1.028.466c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.945c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.317.143-.686.238-1.028.467c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.944c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 17.5 10z"%2F%3E%3C%2Fsvg%3E');
+    // Amount / Money
+    input[type=checkbox]:checked[data-task="S"],
+    li[data-task="S"] > input:checked,
+    li[data-task="S"] > p > input:checked {
+        background-color: var(--amount-chbx-color);
+        border-color: transparent;
+        border-radius: var(--amount-chbx-radius);
+        
+        &:after {
+            background-color: var(--amount-chbx-icon-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 80%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg fill='none' height='100%25' viewBox='0 0 32 32' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m22.7875 20.56c-.04-2.6-1.91-6.46-6.89-6.46-2.85 0-3.24-1.74-3.27-2.39.03-.81.4-2.69 3.23-2.69 2.94 0 3.28 2.07 3.31 2.71.03.99.88 1.84 1.85 1.75 1-.02 1.79-.85 1.76-1.85-.05-2.17-1.49-5.24-5.1-6.03l.03-1.77c.01-1-.79-1.82-1.79-1.83-.01 0-.01 0-.02 0-.99 0-1.8.8-1.81 1.79l-.02 1.8c-3.64.77-5.04 3.88-5.06 6.11.04 2.42 1.91 6.02 6.89 6.02 2.81 0 3.21 2.04 3.27 2.8-.08.49-.54 2.28-3.27 2.28-2.77 0-3.21-1.86-3.28-2.41-.09-1-.95-1.72-1.97-1.64-1 .09-1.73.97-1.64 1.96.15 1.71 1.44 4.75 5.07 5.52v2.07c0 1 .81 1.81 1.81 1.81s1.82-.81 1.82-1.81v-2.07c3.63-.76 4.92-3.78 5.07-5.48l.01-.1z' fill='currentColor'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Idea
-input[type=checkbox]:checked[data-task="I"],
-li[data-task="I"] > input:checked,
-li[data-task="I"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--idea-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 120%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.922,7.113A5,5,0,0,1,14,16.578V20a2,2,0,0,1-4,0V16.578a5,5,0,0,1,.922-9.465ZM13,4V3a1,1,0,0,0-2,0V4a1,1,0,0,0,2,0Zm5.707,1.293a1,1,0,0,0-1.414,0L16.586,6A1,1,0,1,0,18,7.414l.707-.707A1,1,0,0,0,18.707,5.293ZM5.293,18.707a1,1,0,0,0,1.414,0L7.414,18A1,1,0,0,0,6,16.586l-.707.707A1,1,0,0,0,5.293,18.707ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2ZM4,11H3a1,1,0,0,0,0,2H4a1,1,0,0,0,0-2Zm14,5.586A1,1,0,0,0,16.586,18l.707.707a1,1,0,0,0,1.414-1.414ZM6.707,5.293A1,1,0,0,0,5.293,6.707L6,7.414A1,1,0,0,0,7.414,6Z'/%3E%3C/svg%3E");
+    // Quote
+    input[type=checkbox]:checked[data-task='"'],
+    li[data-task='"'] > input:checked,
+    li[data-task='"'] > p > input:checked {
+        background-color: var(--quote-chbx-color);
+        
+        &:after {
+            background-color: var(--quote-chbx-icon-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 68%;
+            -webkit-mask-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="white" d="M6.5 10c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.318.142-.686.238-1.028.466c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.945c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.317.143-.686.238-1.028.467c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.944c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 17.5 10z"%2F%3E%3C%2Fsvg%3E');
+        }
     }
-}
 
-// Pro
-input[type=checkbox]:checked[data-task="p"],
-li[data-task="p"] > input:checked,
-li[data-task="p"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--pro-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 80%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'%3E%3Cpath fill='currentColor' d='M3.008 6.684H1.003a.99.99 0 0 0-.71.301A1.043 1.043 0 0 0 0 7.713v8.23c0 .545.211 1.069.587 1.454A1.98 1.98 0 0 0 2.005 18a1.98 1.98 0 0 0 1.418-.603c.376-.385.587-.909.587-1.454v-8.23c0-.273-.105-.535-.293-.728a.99.99 0 0 0-.71-.301Zm12.987 0H12.03l1.562-4.63a1.868 1.868 0 0 0-.268-1.211 1.79 1.79 0 0 0-.96-.757 1.74 1.74 0 0 0-1.21.048 1.8 1.8 0 0 0-.902.83 25.486 25.486 0 0 1-4.238 5.514v9.862h.115c2.114.6 4.913 1.66 7.505 1.66 1.403 0 1.596-.541 1.885-1.355l2.36-7.201a2.109 2.109 0 0 0-.243-1.883 2.022 2.022 0 0 0-.717-.645 1.964 1.964 0 0 0-.925-.232Z'/%3E%3C/svg%3E%0A");
+    // Idea
+    input[type=checkbox]:checked[data-task="I"],
+    li[data-task="I"] > input:checked,
+    li[data-task="I"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--idea-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 120%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.922,7.113A5,5,0,0,1,14,16.578V20a2,2,0,0,1-4,0V16.578a5,5,0,0,1,.922-9.465ZM13,4V3a1,1,0,0,0-2,0V4a1,1,0,0,0,2,0Zm5.707,1.293a1,1,0,0,0-1.414,0L16.586,6A1,1,0,1,0,18,7.414l.707-.707A1,1,0,0,0,18.707,5.293ZM5.293,18.707a1,1,0,0,0,1.414,0L7.414,18A1,1,0,0,0,6,16.586l-.707.707A1,1,0,0,0,5.293,18.707ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2ZM4,11H3a1,1,0,0,0,0,2H4a1,1,0,0,0,0-2Zm14,5.586A1,1,0,0,0,16.586,18l.707.707a1,1,0,0,0,1.414-1.414ZM6.707,5.293A1,1,0,0,0,5.293,6.707L6,7.414A1,1,0,0,0,7.414,6Z'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Con
-input[type=checkbox]:checked[data-task="c"],
-li[data-task="c"] > input:checked,
-li[data-task="c"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--con-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 80%;
-        transform: rotate(180deg);
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'%3E%3Cpath fill='currentColor' d='M3.008 6.684H1.003a.99.99 0 0 0-.71.301A1.043 1.043 0 0 0 0 7.713v8.23c0 .545.211 1.069.587 1.454A1.98 1.98 0 0 0 2.005 18a1.98 1.98 0 0 0 1.418-.603c.376-.385.587-.909.587-1.454v-8.23c0-.273-.105-.535-.293-.728a.99.99 0 0 0-.71-.301Zm12.987 0H12.03l1.562-4.63a1.868 1.868 0 0 0-.268-1.211 1.79 1.79 0 0 0-.96-.757 1.74 1.74 0 0 0-1.21.048 1.8 1.8 0 0 0-.902.83 25.486 25.486 0 0 1-4.238 5.514v9.862h.115c2.114.6 4.913 1.66 7.505 1.66 1.403 0 1.596-.541 1.885-1.355l2.36-7.201a2.109 2.109 0 0 0-.243-1.883 2.022 2.022 0 0 0-.717-.645 1.964 1.964 0 0 0-.925-.232Z'/%3E%3C/svg%3E%0A");
+    // Pro
+    input[type=checkbox]:checked[data-task="p"],
+    li[data-task="p"] > input:checked,
+    li[data-task="p"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--pro-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 80%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'%3E%3Cpath fill='currentColor' d='M3.008 6.684H1.003a.99.99 0 0 0-.71.301A1.043 1.043 0 0 0 0 7.713v8.23c0 .545.211 1.069.587 1.454A1.98 1.98 0 0 0 2.005 18a1.98 1.98 0 0 0 1.418-.603c.376-.385.587-.909.587-1.454v-8.23c0-.273-.105-.535-.293-.728a.99.99 0 0 0-.71-.301Zm12.987 0H12.03l1.562-4.63a1.868 1.868 0 0 0-.268-1.211 1.79 1.79 0 0 0-.96-.757 1.74 1.74 0 0 0-1.21.048 1.8 1.8 0 0 0-.902.83 25.486 25.486 0 0 1-4.238 5.514v9.862h.115c2.114.6 4.913 1.66 7.505 1.66 1.403 0 1.596-.541 1.885-1.355l2.36-7.201a2.109 2.109 0 0 0-.243-1.883 2.022 2.022 0 0 0-.717-.645 1.964 1.964 0 0 0-.925-.232Z'/%3E%3C/svg%3E%0A");
+        }
     }
-}
 
-// Bookmark
-input[type=checkbox]:checked[data-task="b"],
-li[data-task="b"] > input:checked,
-li[data-task="b"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--bookmark-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 120%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m15.75 3.25h-7.5a2.75 2.75 0 0 0 -2.75 2.75v14a.75.75 0 0 0 1.18.62l5.32-3.71 5.32 3.71a.75.75 0 0 0 .43.13.85.85 0 0 0 .35-.08.77.77 0 0 0 .4-.67v-14a2.75 2.75 0 0 0 -2.75-2.75z'/%3E%3C/svg%3E");
+    // Con
+    input[type=checkbox]:checked[data-task="c"],
+    li[data-task="c"] > input:checked,
+    li[data-task="c"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--con-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 80%;
+            transform: rotate(180deg);
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'%3E%3Cpath fill='currentColor' d='M3.008 6.684H1.003a.99.99 0 0 0-.71.301A1.043 1.043 0 0 0 0 7.713v8.23c0 .545.211 1.069.587 1.454A1.98 1.98 0 0 0 2.005 18a1.98 1.98 0 0 0 1.418-.603c.376-.385.587-.909.587-1.454v-8.23c0-.273-.105-.535-.293-.728a.99.99 0 0 0-.71-.301Zm12.987 0H12.03l1.562-4.63a1.868 1.868 0 0 0-.268-1.211 1.79 1.79 0 0 0-.96-.757 1.74 1.74 0 0 0-1.21.048 1.8 1.8 0 0 0-.902.83 25.486 25.486 0 0 1-4.238 5.514v9.862h.115c2.114.6 4.913 1.66 7.505 1.66 1.403 0 1.596-.541 1.885-1.355l2.36-7.201a2.109 2.109 0 0 0-.243-1.883 2.022 2.022 0 0 0-.717-.645 1.964 1.964 0 0 0-.925-.232Z'/%3E%3C/svg%3E%0A");
+        }
     }
-}
 
-// Fire
-input[type=checkbox]:checked[data-task="f"],
-li[data-task="f"] > input:checked,
-li[data-task="f"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--fire-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 120%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg fill='none' height='100%25' viewBox='0 0 20 20' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m12.3945 2.55279c-.1283-.25655-.3605-.44566-.6377-.51928-.2773-.07363-.5728-.02466-.8114.13444-.3459.23063-.614.55813-.8225.87996-.21435.33063-.40304.71357-.5699 1.11575-.33361.80407-.61389 1.76829-.83925 2.73412-.28623 1.2267-.49807 2.51909-.61371 3.57982-.48419-.3264-.76513-.69233-.94523-1.06656-.32752-.68058-.39745-1.53384-.39745-2.65365 0-.40447-.24364-.7691-.61732-.92388-.37367-.15479-.80379-.06923-1.08979.21677-1.36664 1.36664-2.05025 3.15985-2.05025 4.94972 0 1.7899.68361 3.5831 2.05025 4.9498 2.73367 2.7336 7.16585 2.7336 9.89945 0 1.3667-1.3667 2.0503-3.1599 2.0503-4.9498 0-1.78987-.6836-3.58308-2.0503-4.94972-.5913-.59139-.9801-.98575-1.3476-1.46748-.3631-.47592-.724-1.06289-1.2076-2.03001zm-.2732 12.56851c-1.1716 1.1716-3.07105 1.1716-4.24262 0-.58579-.5858-.87868-1.3535-.87868-2.1213 0 0 .87868.5 2.50005.5 0-1 .49995-4 1.24995-4.5.5 1 .7855 1.2929 1.3713 1.8787s.8787 1.3535.8787 2.1213-.2929 1.5355-.8787 2.1213z' fill='currentColor' fill-rule='evenodd'/%3E%3C/svg%3E");
+    // Bookmark
+    input[type=checkbox]:checked[data-task="b"],
+    li[data-task="b"] > input:checked,
+    li[data-task="b"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--bookmark-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 120%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m15.75 3.25h-7.5a2.75 2.75 0 0 0 -2.75 2.75v14a.75.75 0 0 0 1.18.62l5.32-3.71 5.32 3.71a.75.75 0 0 0 .43.13.85.85 0 0 0 .35-.08.77.77 0 0 0 .4-.67v-14a2.75 2.75 0 0 0 -2.75-2.75z'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Win
-input[type=checkbox]:checked[data-task="w"],
-li[data-task="w"] > input:checked,
-li[data-task="w"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--win-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 120%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg height='32' viewBox='0 0 32 32' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m26 7h-2v-1a2.0023 2.0023 0 0 0 -2-2h-12a2.0023 2.0023 0 0 0 -2 2v1h-2a2.0023 2.0023 0 0 0 -2 2v3a4.0045 4.0045 0 0 0 4 4h.322a8.1689 8.1689 0 0 0 6.678 5.9341v4.0659h-5v2h12v-2h-5v-4.0689a7.9661 7.9661 0 0 0 6.74-5.9311h.26a4.0045 4.0045 0 0 0 4-4v-3a2.0023 2.0023 0 0 0 -2-2zm-18 7a2.0023 2.0023 0 0 1 -2-2v-3h2zm18-2a2.0023 2.0023 0 0 1 -2 2v-5h2z'/%3E%3Cpath d='m0 0h32v32h-32z' fill='none'/%3E%3C/svg%3E");
+    // Fire
+    input[type=checkbox]:checked[data-task="f"],
+    li[data-task="f"] > input:checked,
+    li[data-task="f"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--fire-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 120%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg fill='none' height='100%25' viewBox='0 0 20 20' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m12.3945 2.55279c-.1283-.25655-.3605-.44566-.6377-.51928-.2773-.07363-.5728-.02466-.8114.13444-.3459.23063-.614.55813-.8225.87996-.21435.33063-.40304.71357-.5699 1.11575-.33361.80407-.61389 1.76829-.83925 2.73412-.28623 1.2267-.49807 2.51909-.61371 3.57982-.48419-.3264-.76513-.69233-.94523-1.06656-.32752-.68058-.39745-1.53384-.39745-2.65365 0-.40447-.24364-.7691-.61732-.92388-.37367-.15479-.80379-.06923-1.08979.21677-1.36664 1.36664-2.05025 3.15985-2.05025 4.94972 0 1.7899.68361 3.5831 2.05025 4.9498 2.73367 2.7336 7.16585 2.7336 9.89945 0 1.3667-1.3667 2.0503-3.1599 2.0503-4.9498 0-1.78987-.6836-3.58308-2.0503-4.94972-.5913-.59139-.9801-.98575-1.3476-1.46748-.3631-.47592-.724-1.06289-1.2076-2.03001zm-.2732 12.56851c-1.1716 1.1716-3.07105 1.1716-4.24262 0-.58579-.5858-.87868-1.3535-.87868-2.1213 0 0 .87868.5 2.50005.5 0-1 .49995-4 1.24995-4.5.5 1 .7855 1.2929 1.3713 1.8787s.8787 1.3535.8787 2.1213-.2929 1.5355-.8787 2.1213z' fill='currentColor' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Key
-input[type=checkbox]:checked[data-task="k"],
-li[data-task="k"] > input:checked,
-li[data-task="k"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--key-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 100%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    // Win
+    input[type=checkbox]:checked[data-task="w"],
+    li[data-task="w"] > input:checked,
+    li[data-task="w"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--win-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 120%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg height='32' viewBox='0 0 32 32' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m26 7h-2v-1a2.0023 2.0023 0 0 0 -2-2h-12a2.0023 2.0023 0 0 0 -2 2v1h-2a2.0023 2.0023 0 0 0 -2 2v3a4.0045 4.0045 0 0 0 4 4h.322a8.1689 8.1689 0 0 0 6.678 5.9341v4.0659h-5v2h12v-2h-5v-4.0689a7.9661 7.9661 0 0 0 6.74-5.9311h.26a4.0045 4.0045 0 0 0 4-4v-3a2.0023 2.0023 0 0 0 -2-2zm-18 7a2.0023 2.0023 0 0 1 -2-2v-3h2zm18-2a2.0023 2.0023 0 0 1 -2 2v-5h2z'/%3E%3Cpath d='m0 0h32v32h-32z' fill='none'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Up
-input[type=checkbox]:checked[data-task="u"],
-li[data-task="u"] > input:checked,
-li[data-task="u"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--up-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 100%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trending-up'%3E%3Cpolyline points='22 7 13.5 15.5 8.5 10.5 2 17'/%3E%3Cpolyline points='16 7 22 7 22 13'/%3E%3C/svg%3E");
+    // Key
+    input[type=checkbox]:checked[data-task="k"],
+    li[data-task="k"] > input:checked,
+    li[data-task="k"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--key-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 100%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z' clip-rule='evenodd' /%3E%3C/svg%3E");
+        }
     }
-}
 
-// Down
-input[type=checkbox]:checked[data-task="d"],
-li[data-task="d"] > input:checked,
-li[data-task="d"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--down-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 100%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trending-down'%3E%3Cpolyline points='22 17 13.5 8.5 8.5 13.5 2 7'/%3E%3Cpolyline points='16 17 22 17 22 11'/%3E%3C/svg%3E");
+    // Up
+    input[type=checkbox]:checked[data-task="u"],
+    li[data-task="u"] > input:checked,
+    li[data-task="u"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--up-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 100%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trending-up'%3E%3Cpolyline points='22 7 13.5 15.5 8.5 10.5 2 17'/%3E%3Cpolyline points='16 7 22 7 22 13'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Rule / Law
-input[type=checkbox]:checked[data-task="r"],
-li[data-task="r"] > input:checked,
-li[data-task="r"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--law-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 110%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.9,11.553l-3-6a.846.846,0,0,0-.164-.225A.987.987,0,0,0,18,5H13V3a1,1,0,0,0-2,0V5H6a.987.987,0,0,0-.731.328.846.846,0,0,0-.164.225l-3,6a.982.982,0,0,0-.1.447H2a4,4,0,0,0,8,0H9.99a.982.982,0,0,0-.1-.447L7.618,7H11V20H6a1,1,0,0,0,0,2H18a1,1,0,0,0,0-2H13V7h3.382l-2.277,4.553a.982.982,0,0,0-.1.447H14a4,4,0,0,0,8,0h-.01A.982.982,0,0,0,21.9,11.553ZM7.882,12H4.118L6,8.236Zm8.236,0L18,8.236,19.882,12Z'/%3E%3C/svg%3E");
+    // Down
+    input[type=checkbox]:checked[data-task="d"],
+    li[data-task="d"] > input:checked,
+    li[data-task="d"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--down-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 100%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trending-down'%3E%3Cpolyline points='22 17 13.5 8.5 8.5 13.5 2 7'/%3E%3Cpolyline points='16 17 22 17 22 11'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Language / Translate
-input[type=checkbox]:checked[data-task="L"],
-li[data-task="L"] > input:checked,
-li[data-task="L"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--language-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 120%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-language' width='100%25' height='100%25' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 7h7m-2 -2v2a5 8 0 0 1 -5 8m1 -4a7 4 0 0 0 6.7 4' /%3E%3Cpath d='M11 19l4 -9l4 9m-.9 -2h-6.2' /%3E%3C/svg%3E");
+    // Rule / Law
+    input[type=checkbox]:checked[data-task="r"],
+    li[data-task="r"] > input:checked,
+    li[data-task="r"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--law-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 110%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.9,11.553l-3-6a.846.846,0,0,0-.164-.225A.987.987,0,0,0,18,5H13V3a1,1,0,0,0-2,0V5H6a.987.987,0,0,0-.731.328.846.846,0,0,0-.164.225l-3,6a.982.982,0,0,0-.1.447H2a4,4,0,0,0,8,0H9.99a.982.982,0,0,0-.1-.447L7.618,7H11V20H6a1,1,0,0,0,0,2H18a1,1,0,0,0,0-2H13V7h3.382l-2.277,4.553a.982.982,0,0,0-.1.447H14a4,4,0,0,0,8,0h-.01A.982.982,0,0,0,21.9,11.553ZM7.882,12H4.118L6,8.236Zm8.236,0L18,8.236,19.882,12Z'/%3E%3C/svg%3E");
+        }
     }
-}
 
-// Clock
-input[type=checkbox]:checked[data-task="t"],
-li[data-task="t"] > input:checked,
-li[data-task="t"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--clock-chbx-color);
-        -webkit-mask-position: 100% 100%;
-        -webkit-mask-size: 100%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm11-5a1 1 0 10-2 0v3.764a3 3 0 001.658 2.683l2.895 1.447a1 1 0 10.894-1.788l-2.894-1.448a1 1 0 01-.553-.894V7z' fill='currentColor'/%3E%3C/svg%3E%0A");
+    // Language / Translate
+    input[type=checkbox]:checked[data-task="L"],
+    li[data-task="L"] > input:checked,
+    li[data-task="L"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--language-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 120%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-language' width='100%25' height='100%25' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 7h7m-2 -2v2a5 8 0 0 1 -5 8m1 -4a7 4 0 0 0 6.7 4' /%3E%3Cpath d='M11 19l4 -9l4 9m-.9 -2h-6.2' /%3E%3C/svg%3E");
+        }
     }
-}
 
-// Telephone
-input[type=checkbox]:checked[data-task="T"],
-li[data-task="T"] > input:checked,
-li[data-task="T"] > p > input:checked {
-    background-color: transparent;
-    border-color: transparent;
-    
-    &:after {
-        background-color: var(--telephone-chbx-color);
-        -webkit-mask-position: 50% 50%;
-        -webkit-mask-size: 80%;
-        -webkit-mask-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m497.39 361.8-112-48a24 24 0 0 0 -28 6.9l-49.6 60.6a370.66 370.66 0 0 1 -177.19-177.19l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112a24.16 24.16 0 0 0 -27.5-13.9l-104 24a24 24 0 0 0 -18.6 23.39c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0 -14.01-27.6z'/%3E%3C/svg%3E");
+    // Clock
+    input[type=checkbox]:checked[data-task="t"],
+    li[data-task="t"] > input:checked,
+    li[data-task="t"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--clock-chbx-color);
+            -webkit-mask-position: 100% 100%;
+            -webkit-mask-size: 100%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm11-5a1 1 0 10-2 0v3.764a3 3 0 001.658 2.683l2.895 1.447a1 1 0 10.894-1.788l-2.894-1.448a1 1 0 01-.553-.894V7z' fill='currentColor'/%3E%3C/svg%3E%0A");
+        }
     }
-}
 
-// Checkbox Text
-// Cancelled
-.HyperMD-task-line[data-task="-"],
-li.task-list-item[data-task="-"] {
-    color: var(--cancelled-chbx-text-color);
-    text-decoration: var(--cancelled-chbx-text-decoration);
+    // Telephone
+    input[type=checkbox]:checked[data-task="T"],
+    li[data-task="T"] > input:checked,
+    li[data-task="T"] > p > input:checked {
+        background-color: transparent;
+        border-color: transparent;
+        
+        &:after {
+            background-color: var(--telephone-chbx-color);
+            -webkit-mask-position: 50% 50%;
+            -webkit-mask-size: 80%;
+            -webkit-mask-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m497.39 361.8-112-48a24 24 0 0 0 -28 6.9l-49.6 60.6a370.66 370.66 0 0 1 -177.19-177.19l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112a24.16 24.16 0 0 0 -27.5-13.9l-104 24a24 24 0 0 0 -18.6 23.39c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0 -14.01-27.6z'/%3E%3C/svg%3E");
+        }
+    }
+
+    // Checkbox Text
+    // Cancelled
+    .HyperMD-task-line[data-task="-"],
+    li.task-list-item[data-task="-"] {
+        color: var(--cancelled-chbx-text-color);
+        text-decoration: var(--cancelled-chbx-text-decoration);
+    }
 }
