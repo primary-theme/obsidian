@@ -178,7 +178,7 @@ This option will give you access to public releases.
 
 This option is exclusive to monthly subscribers of Primary.
 
-1. Head on over to [Primary's Ko-fi](https://ko-fi.com/ceciliamay) page.Under Buy a Coffee, choose Membership and subscribe to get access to member exclusive posts.
+1. Head on over to [Primary's Ko-fi](https://ko-fi.com/ceciliamay) page. Under Buy a Coffee, choose Membership and subscribe to get access to member exclusive posts.
 2. After subscribing, head over to the `Posts` tab. This is under the header, just below my name and ko-fi link.
 3. Once in the Posts tab, you should be able to find posts usually titled along the lines of `Primary x.x.x-beta (Monthly Subscriber Exclusive)`. Click on the latest post.
 4. The post includes the full Release Notes so you're fully informed what new features or fixes you get for that release! To get the a copy of that beta, scroll down a bit until you find the `Click here to download the CSS file.` link. This should take you to a GitHub gist page.
