@@ -8,7 +8,7 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report! Before proceeding, please check the [Issues](https://github.com/primary-theme/obsidian/issues) page and check if your bug is already posted to avoid duplication.
   - type: dropdown
-    id: default-theme
+    id: hardware-acceleration
     attributes:
       label: Is Hardware Acceleration turned on?
       description: You can find this in Obsidian's `Settings`. Inside the `Appearance` tab, under `Advanced`, `Hardware Acceleration`. Please ensure that it is turned on. If it is already turned on, turn it off and on again for good measure.
@@ -30,7 +30,7 @@ body:
   - type: dropdown
     id: snippets-plugin-off
     attributes:
-      label: Is the bug present in when all Snippets and Community Plugins are turned off?
+      label: Is the bug present when all Snippets and Community Plugins are turned off?
       description: Try turning off all snippets and community plugins to check if the bug still persists in the theme.
       options:
         - "Yes"
@@ -41,7 +41,7 @@ body:
     id: primary-version
     attributes:
       label: Primary Theme Version
-      description: What version of Primary are you using? To check, open up `Settings` in Obsidian. Then go to the `Appearance` tab and under `Themes`, press `Manage`. Look for Primary and click it. It should open up the info page for Primary and at top, you will find `Version`. Any version below v2.0.0 will not be entertained as these versions are no longer supported.
+      description: What version of Primary are you using? To check, open up `Settings` in Obsidian. Then go to the `Appearance` tab and under `Themes`, press `Manage`. Look for Primary and click it. It should open up the info page for Primary and at top, you will find `Version`. (Only versions above v2.0.0 will be addressed).
       placeholder: v2.7.0
     validations:
       required: true
@@ -63,3 +63,4 @@ body:
     id: bug-info-additional
     attributes:
       label: Additional Info
+      description: "Any extra details that might help debug this issue."
